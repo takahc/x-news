@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+  <title>Xまとめ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrap">
+    <header class="top">
+      <h1>Xまとめ</h1>
+      <input id="q" type="search" placeholder="検索" autocomplete="off" enterkeyhint="search" aria-label="検索">
+    </header>
+    <main id="feed"></main>
+    <p id="empty" class="empty" hidden>該当なし</p>
+    <p id="error" class="empty" hidden>読み込めませんでした</p>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
