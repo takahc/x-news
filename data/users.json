@@ -1,5 +1,10 @@
 [
   {
+    "handle": "0123tato",
+    "name": "たと",
+    "avatarUrl": "https://pbs.twimg.com/profile_images/1645048144630288385/P7x16pU1_normal.jpg"
+  },
+  {
     "handle": "0xkeenz",
     "name": "KeenZ😶‍🌫️",
     "avatarUrl": "https://pbs.twimg.com/profile_images/1555415418571214850/mSMgBUiH_normal.png"
@@ -185,6 +190,11 @@
     "avatarUrl": "https://pbs.twimg.com/profile_images/1202741558543413248/peoyz82V_normal.png"
   },
   {
+    "handle": "alexandr_wang",
+    "name": "Alexandr Wang",
+    "avatarUrl": "https://pbs.twimg.com/profile_images/1631421210205749248/uohbT_40_normal.jpg"
+  },
+  {
     "handle": "Alibaba_Qwen",
     "name": "Qwen",
     "avatarUrl": "https://pbs.twimg.com/profile_images/2064231947149377536/Ab70PxT5_normal.jpg"
@@ -348,6 +358,11 @@
     "handle": "binance",
     "name": "Binance",
     "avatarUrl": "https://pbs.twimg.com/profile_images/1940131561103347712/f5y2qENu_normal.jpg"
+  },
+  {
+    "handle": "birdabo",
+    "name": "sui",
+    "avatarUrl": "https://pbs.twimg.com/profile_images/2060589895706652672/xA9gyIr__normal.jpg"
   },
   {
     "handle": "BitcoinNewsCom",
@@ -1430,6 +1445,11 @@
     "avatarUrl": "https://pbs.twimg.com/profile_images/1693272996830728192/NeqJIyfA_normal.jpg"
   },
   {
+    "handle": "manywind2009",
+    "name": "メニーｳｨﾝﾄﾞ.ORF",
+    "avatarUrl": "https://pbs.twimg.com/profile_images/2116871346290561024/WyFd7zhD_normal.jpg"
+  },
+  {
     "handle": "marclou",
     "name": "Marc Lou",
     "avatarUrl": "https://pbs.twimg.com/profile_images/2081903460199641088/YZJqLn39_normal.jpg"
@@ -1590,6 +1610,11 @@
     "avatarUrl": "https://pbs.twimg.com/profile_images/2034239213487681536/2gjQXlXx_normal.jpg"
   },
   {
+    "handle": "nakachi_1225",
+    "name": "なかちー",
+    "avatarUrl": "https://pbs.twimg.com/profile_images/1918336393048408070/hDy4n_OQ_normal.jpg"
+  },
+  {
     "handle": "naoki",
     "name": "Naoki Aoyagi | newmo",
     "avatarUrl": "https://pbs.twimg.com/profile_images/1758310783627472896/8Pk0cgL0_normal.jpg"
@@ -1633,6 +1658,11 @@
     "handle": "nhk_news",
     "name": "NHKニュース",
     "avatarUrl": "https://pbs.twimg.com/profile_images/2114599786104139776/fAQgJhey_normal.jpg"
+  },
+  {
+    "handle": "NHK_PR",
+    "name": "NHK PR",
+    "avatarUrl": "https://pbs.twimg.com/profile_images/1612997406441996288/WF-4c-7D_normal.png"
   },
   {
     "handle": "nikkei",
@@ -1708,6 +1738,11 @@
     "handle": "NVIDIAAIJP",
     "name": "NVIDIA AI Japan",
     "avatarUrl": "https://pbs.twimg.com/profile_images/1862300808299040768/CRGUYXSf_normal.jpg"
+  },
+  {
+    "handle": "NWLab_jp",
+    "name": "NW-Lab",
+    "avatarUrl": "https://pbs.twimg.com/profile_images/1268522058419507203/6O9YrpRG_normal.jpg"
   },
   {
     "handle": "nwnwnyo",
@@ -1788,6 +1823,11 @@
     "handle": "oss4fun",
     "name": "oss4fun",
     "avatarUrl": "https://pbs.twimg.com/profile_images/1840002964188262400/hT7F7yuE_normal.jpg"
+  },
+  {
+    "handle": "otani_ai_memo",
+    "name": "オータニ@AI駆動開発",
+    "avatarUrl": "https://pbs.twimg.com/profile_images/2085737294255017984/PKIV79Qt_normal.jpg"
   },
   {
     "handle": "otomir23",
@@ -1925,6 +1965,11 @@
     "avatarUrl": "https://pbs.twimg.com/profile_images/1522346479515406336/W5tbfTEw_normal.jpg"
   },
   {
+    "handle": "recat_125",
+    "name": "れにゃ。",
+    "avatarUrl": "https://pbs.twimg.com/profile_images/1072532938242383874/r14VHaTN_normal.jpg"
+  },
+  {
     "handle": "Ref_Reco",
     "name": "kyo1M | continova代表",
     "avatarUrl": "https://pbs.twimg.com/profile_images/2008167509346934784/wDCQV_B0_normal.jpg"
@@ -1938,6 +1983,11 @@
     "handle": "ridvanyagli",
     "name": "Rıdvan Yağlı",
     "avatarUrl": "https://pbs.twimg.com/profile_images/767446518748024832/nCOVLCXr_normal.jpg"
+  },
+  {
+    "handle": "rikarends",
+    "name": "Rik Arends",
+    "avatarUrl": "https://pbs.twimg.com/profile_images/563726395403014145/C2XOSm9R_normal.png"
   },
   {
     "handle": "rikiyatakehi",
@@ -2065,6 +2115,11 @@
     "avatarUrl": "https://pbs.twimg.com/profile_images/2075873753930887168/lxl0CWEP_normal.jpg"
   },
   {
+    "handle": "shadowaguy",
+    "name": "ShadowAguy",
+    "avatarUrl": "https://pbs.twimg.com/profile_images/1730969934518525952/VY7YthT8_normal.png"
+  },
+  {
     "handle": "shenmacro",
     "name": "Shen",
     "avatarUrl": "https://pbs.twimg.com/profile_images/1760338696593936384/YhsBGop-_normal.jpg"
@@ -2095,9 +2150,19 @@
     "avatarUrl": "https://pbs.twimg.com/profile_images/1560868547340800000/EH-wvXby_normal.jpg"
   },
   {
+    "handle": "shiromamono",
+    "name": "白まもの",
+    "avatarUrl": "https://pbs.twimg.com/profile_images/1886560815953928194/fMNy1EWF_normal.jpg"
+  },
+  {
     "handle": "shirouzu",
     "name": "Shirouzu Hiroaki（白水啓章）",
     "avatarUrl": "https://pbs.twimg.com/profile_images/378800000082450158/58fceb4ccb2e5404e163c4c2017945ac_normal.png"
+  },
+  {
+    "handle": "shoei05",
+    "name": "Shoei",
+    "avatarUrl": "https://pbs.twimg.com/profile_images/2005842723144884224/4K18gf-0_normal.jpg"
   },
   {
     "handle": "shokai",
@@ -2528,6 +2593,11 @@
     "handle": "vista8",
     "name": "向阳乔木",
     "avatarUrl": "https://pbs.twimg.com/profile_images/1960882043249942533/h4J39ERy_normal.jpg"
+  },
+  {
+    "handle": "VisualStudio",
+    "name": "Visual Studio",
+    "avatarUrl": "https://pbs.twimg.com/profile_images/1976425918278279169/mfENGgHp_normal.jpg"
   },
   {
     "handle": "Wakeupsloth",

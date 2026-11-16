@@ -1,5 +1,391 @@
 [
   {
+    "id": "2122106273168843037",
+    "cardId": "muse1",
+    "datetime": "2026-11-16T08:47:00+09:00",
+    "postedAt": "2026-11-16T08:15:37+09:00",
+    "source": "timeline",
+    "title": "MetaのAIエージェントのMuseが、ユーザーの代わりに、アメリカのお店や会社に電話をかけられるようになりました",
+    "summary": "有料会員向け。保険会社や役所、レストラン予約など。相手がAIだと分かると切る店も多い。KYAは電話でも必要になりそう（私の推測）。",
+    "tweetId": "2122106273168843037",
+    "tweetIds": [
+      "2122106273168843037"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/alexandr_wang/status/2122106273168843037",
+    "author": {
+      "handle": "alexandr_wang",
+      "name": "Alexandr Wang"
+    },
+    "via": "GOROman",
+    "text": "who you gonna call? nobody. muse makes the calls*\n\n* for paid subscribers in the US",
+    "images": [
+      {
+        "type": "video_preview",
+        "url": "https://pbs.twimg.com/amplify_video_thumb/2122104483845128192/img/4PjlssnAi7DF6s1V.jpg"
+      }
+    ],
+    "deepDive": "#MetaのAIエージェントのMuseが、ユーザーの代わりに、アメリカのお店や会社に電話をかけられるようになりました\n[GOROmanさんのリポスト](https://x.com/GOROman/status/2122106273168843037)で知りました。元は、MetaでAIの責任者をしているアレクサンドル・ワンさんの[投稿](https://x.com/alexandr_wang/status/2122104505538121821)です。正式な発表は、11/12の[投稿](https://x.com/alexandr_wang/status/2120930586827391350)でした。保険会社、ケーブルテレビの会社、DMV（アメリカの運転免許の役所）、レストランの予約など、自分でかけたくない電話を、Museがかけてくれます。\n\n[TechCrunch](https://techcrunch.com/2026/11/12/muse-can-now-place-calls-to-u-s-businesses-if-you-pay/)によると、9月から一部の人だけで試していた機能を、お金を払っている人全員に開きました。料金は月20ドルからで、たくさん使う人向けに月100ドルのプランもあります。Museを使っている人は、1,000万人を超えたそうです。GoogleのGeminiや、スタートアップのInstinctにも、似た電話の代行の機能があります。その少し前には、メールを転送すると、Museが代わりに対応してくれる機能も入りました（[The Verge](https://www.theverge.com/tech/1032816/muse-can-make-outbound-phone-calls-for-you)）。\n\nTechCrunchによると、相手がAIだと分かると、すぐ電話を切るお店も多いそうです。一方で、AIの声がどんどん人に近づいているので、本人なのか、本人の代わりのAIなのかを見分けにくくなる、とも書いています。保険や契約の電話では、生年月日や契約番号のような、本人だと確かめるための情報を、エージェントに渡すことになります。今朝お伝えした、エージェントが誰のもので何をしてよいかを確かめる考え方（KYA）は、電話でも必要になりそうです（私の推測です）。",
+    "followUps": []
+  },
+  {
+    "id": "2122090147034562693",
+    "cardId": "r38_44",
+    "datetime": "2026-11-16T08:09:00+09:00",
+    "postedAt": "2026-11-16T07:11:32+09:00",
+    "source": "timeline",
+    "title": "AIエージェントに買い物を丸ごと任せた例と、「このエージェントは誰のもので、何をしてよいのか」を確かめる考え方（KYA）の話です",
+    "summary": "オータニさんがエージェントにPebble Index 01を買わせ、配送確認の予定まで作らせた。KYAはまだ義務ではない。",
+    "tweetId": "2122090147034562693",
+    "tweetIds": [
+      "2122090147034562693",
+      "2122085936209309726"
+    ],
+    "quoteTweetId": "2122085936209309726",
+    "url": "https://x.com/otani_ai_memo/status/2122090147034562693",
+    "author": {
+      "handle": "otani_ai_memo",
+      "name": "オータニ@AI駆動開発"
+    },
+    "via": null,
+    "text": "PebbleIndex購入完了\n最近買い物するのにブラウザ開かなくなったなぁ",
+    "images": [
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HXMtvW0bcAEBzzm.jpg"
+      }
+    ],
+    "deepDive": "#AIエージェントに買い物を丸ごと任せた例と、「このエージェントは誰のもので、何をしてよいのか」を確かめる考え方（KYA）の話です\n始まりは、[GOROmanさんの投稿](https://x.com/GOROman/status/2121740696923304434)でした。「Pebble Index 01は送料18ドルで、3日ほどで香港から届いた」という内容です。これを見たオータニさん（@otani_ai_memo）が、「[買おうと思って忘れてた](https://x.com/otani_ai_memo/status/2122085936209309726)」と反応しました。そして約15分後に、「[購入完了。最近ブラウザ開かなくなった](https://x.com/otani_ai_memo/status/2122090147034562693)」と投稿しています。\n\n画像を見ると、買い物の流れは次のとおりでした。\n1. エージェントが、公式サイトで在庫と値段（75ドル、もうすぐ99ドルに値上げ）、返品できないことを確かめました。\n2. サイズと色をユーザーに聞いてから、カートに入れました。\n3. 合計102.17ドルを確かめてから、注文しました。\n4. 最後に、「毎朝9時にメールで配送の状況を確かめる」予定を、エージェントが自分で作りました。\n\n[Pebble Index 01](https://repebble.com/index)は、ボタンとマイクだけが付いた指輪です。ボタンを押して話すと、メモになります。充電は要らず、音声はふつう、スマホの中で文字にされます（[公式ブログ](https://repebble.com/blog/meet-pebble-index-01-external-memory-for-your-brain)）。\n\nKYA（Know Your Agent）は、人の本人確認（KYC）に、エージェントの確認を足す考え方です。2026年9月に、Ant International、Mastercard、Visaが、会社をまたいで使える[KYAの共通の枠組み](https://www.ant-intl.com/en/news/detail/?id=ant-international-mastercard-and-visa-initiate-collaboration-on-know-your-agent-interoperability-to-scale-agentic-commerce)を作り始めました。柱は3つで、エージェントを動かしている人を追えるようにすること、確認の決まりをそろえること、ずっと見張り続けることです。ただ、[Inpayの解説](https://www.inpay.com/news-and-insights/know-your-agent/)によると、まだどの法律や規則でも義務にはなっていません。どこまで自動で払わせて、どこで人が承認するかは、今はサービスごとの作り方しだいです。",
+    "followUps": []
+  },
+  {
+    "id": "2122058578005487774",
+    "cardId": "r38_43",
+    "datetime": "2026-11-16T08:09:00+09:00",
+    "postedAt": "2026-11-16T05:06:05+09:00",
+    "source": "timeline",
+    "title": "GitHub Copilotのアプリに、セキュリティの警告をAIに説明させたり、直させたりする機能が、お試し版として入りました",
+    "summary": "github-securityプラグインで警告を説明・修正できる。却下するとGitHub上の警告が実際に変わる。Dependabotとシークレットスキャンは対象外。",
+    "tweetId": "2122058578005487774",
+    "tweetIds": [
+      "2122058578005487774"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/github/status/2122058578005487774",
+    "author": {
+      "handle": "github",
+      "name": "GitHub"
+    },
+    "via": null,
+    "text": "🔒 Check your repo's code scanning alerts without leaving the GitHub Copilot app.\n\nWith the new GitHub security extension, you can ask Copilot to find, explain, and fix (or dismiss!) an alert.\n\nNow in public preview ⬇️\n[docs.github.com/copilot/how-to…](https://docs.github.com/copilot/how-tos/github-copilot-app/view-and-fix-security-alerts?utm_source=x-security-extension&utm_medium=social&utm_campaign=post-universe-2026)",
+    "images": [
+      {
+        "type": "video_preview",
+        "url": "https://pbs.twimg.com/media/HXMRB_5WEAAZ58P.jpg"
+      }
+    ],
+    "deepDive": "#GitHub Copilotのアプリに、セキュリティの警告をAIに説明させたり、直させたりする機能が、お試し版として入りました\n[GitHubの投稿](https://x.com/github/status/2122058578005487774)で知りました。[公式ドキュメント](https://docs.github.com/en/copilot/how-tos/github-copilot-app/view-and-fix-security-alerts)によると、github-security プラグインを入れると、「Security」という画面が出ます。そこで、コードの自動検査（code scanning）が出した警告を、危ない順に見て、AIに説明（Explain）や修正（Fix）を頼めます。PRを出す前に、/security-review で、手元の変更を確かめることもできます。\n- **修正：** 手元のファイルを書き換えるだけです。コミットもプッシュもPRも作りません。\n- **警告の却下（Dismiss）：** 却下すると、GitHub上の警告が実際に書き換わります。却下する権限が必要で、理由とコメントを書きます。組織が承認制にしている場合は、却下の申請として出され、権限のある人が承認します。\n- **対象外：** 部品の弱点を知らせる警告（Dependabot）や、パスワードなどの漏れの警告（secret scanning）は対象外です。自社で動かす版のGitHub（GHES）も使えません。\n\n返信では、「エージェントが最初に見つけるのは、却下のボタンだ」([投稿](https://x.com/shadowaguy/status/2122086463055745329))という心配が目立ちました。AIが警告を消せると、本当に直ったのか、見えなくなっただけなのかが分かりにくくなります。却下は人が承認して、理由をあとから追えるようにするのがよさそうです（私の推測です）。",
+    "followUps": []
+  },
+  {
+    "id": "2121936098297557233",
+    "cardId": "r38_46",
+    "datetime": "2026-11-16T08:09:00+09:00",
+    "postedAt": "2026-11-15T20:59:24+09:00",
+    "source": "likes",
+    "title": "なかちーさん（@nakachi_1225）の「A1miniのお引越し」です",
+    "summary": "上位機種H3C用に作っている金属ラックの右ができたので、今あるA1 miniの置き場をその横に移した。真上に換気扇があり、横の窓も開けられる。",
+    "tweetId": "2121936098297557233",
+    "tweetIds": [
+      "2121936098297557233"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/nakachi_1225/status/2121936098297557233",
+    "author": {
+      "handle": "nakachi_1225",
+      "name": "なかちー"
+    },
+    "via": null,
+    "text": "A1miniのお引越し",
+    "images": [
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HXKhoWuaEAARFOv.jpg"
+      }
+    ],
+    "deepDive": "#なかちーさん（@nakachi_1225）の「A1miniのお引越し」です\n[投稿](https://x.com/nakachi_1225/status/2121936098297557233)の写真には、木の枠で囲んだ、手作りの3Dプリンター用の置き場が写っています。なかちーさんは、上位機種のBambu Lab H3Cを買うつもりで、そのために、250kgまで載せられる金属のラックに木の板を敷いて、[置き場を作っているところでした](https://x.com/nakachi_1225/status/2121554767931711684)。そのラックの右側ができたので、今あるA1 miniの置き場を、その横に移した、というのが今回のお引越しです（[本人の投稿](https://x.com/nakachi_1225/status/2122085166525161914)）。海外の方から、部屋に煙がこもらないかと聞かれて、「真上に換気扇があって、横の窓も開けられる」と[答えていました](https://x.com/nakachi_1225/status/2122088740827038103)。",
+    "followUps": []
+  },
+  {
+    "id": "2121884046934643099",
+    "cardId": "r38_42",
+    "datetime": "2026-11-16T08:09:00+09:00",
+    "postedAt": "2026-11-15T17:32:34+09:00",
+    "source": "likes",
+    "title": "Anthropicが、いつも動いているように見えるAIエージェントの作り方を書いたガイド「Building always-on agents」を公開しました",
+    "summary": "実体はイベントで起きて1回分働いてまた止まる。認証情報はエージェントに渡さず中継役が付ける。大事な操作は人の承認待ち。記憶ファイルも狙い目になりうる（私の推測）。",
+    "tweetId": "2121884046934643099",
+    "tweetIds": [
+      "2121884046934643099"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/recat_125/status/2121884046934643099",
+    "author": {
+      "handle": "recat_125",
+      "name": "れにゃ。"
+    },
+    "via": null,
+    "text": "Anthropic の Always-on (常時稼働) Agent のベスプラ記事です。\n\nステートフル・プロアクティブな Agent に必要な要素 (event inbox, timer, memory, permission, outbox) が整理されてます。\n\nイベント・スケジューラで起動し、background 実行する流れがわかりやすいです。\n[claude.com/ja/resources/a…](https://claude.com/ja/resources/articles/building-always-on-agents)",
+    "images": [
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HXJyS2Ra0AA1sG6.png"
+      },
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HXJxi30aAAATUWH.jpg"
+      },
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HXJxlEDbkAAVhDN.jpg"
+      },
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HXJxoKAacAAccrL.jpg"
+      },
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HXJxq2OagAEg1UN.jpg"
+      }
+    ],
+    "deepDive": "#Anthropicが、いつも動いているように見えるAIエージェントの作り方を書いたガイド「Building always-on agents」を公開しました\n[れにゃ。さん（@recat_125）の投稿](https://x.com/recat_125/status/2121884046934643099)で知りました。れにゃ。さんは、AWSでAIと機械学習を専門にしている技術者です。元の記事は、Anthropicの[Building always-on agents](https://claude.com/ja/resources/articles/building-always-on-agents)で、書いたのはWilliam Huさんです。\n\n記事によると、「いつも動いている」のは見た目の話で、エージェントはふだんは止まって待っています。何か起きると起きて、1回分の仕事をして、覚えておくことを保存して、また止まります。これを支える部品は5つです。\n- **受付箱（event inbox）：** Webhook（外のサービスからの通知）や予定などの知らせを、データベースにいったん貯めておく場所です。1つの受付箱を同時に処理するのは、1つだけにします。\n- **タイマー：** エージェントが自分で決める「あとで確かめる」期限と、決まった時間ごとの予定です。\n- **記憶：** 保存するのは、あとから調べ直せないことだけにする、というのが原則です。\n- **権限：** 記事は、ここが一番危ないところだとしています。\n- **送信箱（outbox）：** ユーザーに送るメッセージを置いておく場所です。最初は通知を少なめにして、だんだん増やすのがよいとしています。\n\n権限と安全については、次のように書かれています。\n- **ログインの情報：** エージェントには渡しません。外にある中継役（プロキシ）が、送るときに本物のログイン情報を入れます。\n- **自動の見張り：** 自動で判定する仕組みが、危ない操作を止めます。ただし、一番大事な判断は人が確かめる必要がある、としています。\n- **承認を待つとき：** その回の仕事はいったん終わらせて、途中の状態を保存します。ユーザーの返事が受付箱に届いたら、続きから再開します。\n- **乗っ取りの対策：** AIに渡す文章に紛れた悪い指示（プロンプトインジェクション）は、受け付けるときではなく、仕事の途中で確かめます。\n\nエージェントにお金や秘密を任せるときの考え方として、そのまま使えます。大事なのは、エージェントにはログインの鍵を持たせず中継役に持たせることと、大事な操作は人の承認を待つのを基本にすることです。止まっているあいだの記憶のファイルも、攻撃の狙い目になりえます（私の推測です）。",
+    "followUps": []
+  },
+  {
+    "id": "2121629478682014047",
+    "cardId": "r38_45",
+    "datetime": "2026-11-16T08:09:00+09:00",
+    "postedAt": "2026-11-15T00:41:00+09:00",
+    "source": "likes",
+    "title": "Visual Studio 18.12で、好きなAIモデルを持ち込んで使える機能（BYOM）が、正式に使えるようになりました",
+    "summary": "社内・APIキー・手元のモデルをチャットやエージェントモードで使える。GitHubへのサインインは不要。APIキーの保存方法は記事に書かれていなかった。",
+    "tweetId": "2121629478682014047",
+    "tweetIds": [
+      "2121629478682014047"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/VisualStudio/status/2121629478682014047",
+    "author": {
+      "handle": "VisualStudio",
+      "name": "Visual Studio"
+    },
+    "via": null,
+    "text": "Visual Studio 18.12 now generally supports Bring Your Own Model (BYOM), letting devs use local, hosted, or API-key models seamlessly. Multiple configs per provider, custom endpoints, and better enterprise support included.\n\n🧳 Explore: [msft.it/6018x6zCg](https://msft.it/6018x6zCg)",
+    "images": [],
+    "deepDive": "#Visual Studio 18.12で、好きなAIモデルを持ち込んで使える機能（BYOM）が、正式に使えるようになりました\n[Visual Studioの投稿](https://x.com/VisualStudio/status/2121629478682014047)で知りました。[Microsoftの公式ブログ（11/11）](https://devblogs.microsoft.com/visualstudio/bring-your-own-model-is-now-generally-available-in-visual-studio/)によると、8月にお試し版が出て、今回、正式版になりました。\n- **使えるモデル：** チャットやエージェントモードで、社内で動かしているモデル、APIキーで使うモデル、手元のパソコンで動かすモデルを使えます。\n- **選べるつなぎ先：** Microsoft Foundry、OpenAI、Anthropic、Ollama、Custom Endpoint（自分で指定するつなぎ先）の5つです。Custom Endpointを使えば、OpenAIと同じ形式で使えるOpenRouterや、LM Studioで手元に立てたサーバーにもつなげます。\n- **会社で使うとき：** GitHubへのサインインは要りません。モデルのつなぎ先に届けば、インターネットから切り離された環境でも使えます。会社の管理者が、この機能を使えるかどうかを、組織のルールで決められます。\n- **書かれていないこと：** APIキーをどう保存するのか（暗号にするのかなど）は、書かれていませんでした。\n- **不満の声：** コメント欄には、細かい設定（temperatureなど）が足りない、Mistralのモデルだとエラーになる、という声がありました。\n\nコードを外に出したくない現場でも、手元のモデルでAIエージェントを使えるようになります。ただ、そのモデルが安全かどうかを確かめるのは、使う側の責任になります（私の推測です）。",
+    "followUps": []
+  },
+  {
+    "id": "2121942798773768455",
+    "cardId": "r38_36",
+    "datetime": "2026-11-15T22:17:00+09:00",
+    "postedAt": "2026-11-15T21:26:01+09:00",
+    "source": "timeline",
+    "title": "自分のMacの中に、AIエージェントのための作業用のパソコンを作るオープンソースのツール「Cua」です",
+    "summary": "MITライセンス、スター約3.2万。仮想のMacの中にエージェントを閉じ込めて動かす。閉じ込めれば全部安全、というわけではない（私の推測）。",
+    "tweetId": "2121942798773768455",
+    "tweetIds": [
+      "2121942798773768455"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/GithubProjects/status/2121942798773768455",
+    "author": {
+      "handle": "GithubProjects",
+      "name": "GitHub Projects Community"
+    },
+    "via": null,
+    "text": null,
+    "images": [],
+    "deepDive": "#自分のMacの中に、AIエージェントのための作業用のパソコンを作るオープンソースのツール「Cua」です\n[@GithubProjectsの紹介](https://x.com/GithubProjects/status/2121942798773768455)で見つけた[trycua/cua](https://github.com/trycua/cua)は、MITライセンスで公開されていて、スター（GitHubでの「いいね」）は約3.2万です（[紹介記事](https://osp.fyi/cua)）。\n- **Cua Spaces：** 中心になる機能です。手元のMacの中に、仮想のmacOS（仮想マシン、VM）を作り、チームとエージェントで一緒に使います。\n- **入っているほかの道具：**\n  - デスクトップを自動で操作する「Cua Driver」\n  - Apple Silicon用に仮想のMacを作る「Lume」\n  - 次に何をするかを決める小さなモデル「CUA-S1」\n  - エージェントの出来を測る「Cua Bench」\n\n紹介の投稿にある「電卓で6×7をして42と確かめる」例は、Cua Driverの最初のチュートリアルそのままです。\n\nエージェントを自分のMacで直接動かさず、仮想のMacの中に閉じ込めて動かす作りになっています。IPAの短信にあった「ダウンロードフォルダに置かれた指示のファイルで、エージェントが操られる」ような攻撃も、被害を仮想のMacの中だけに抑えやすくなります。ただし、仮想のMacにログインの情報を渡せば、それは盗まれる対象になります。閉じ込めれば全部安全、というわけではありません（私の推測です）。",
+    "followUps": [
+      {
+        "datetime": "2026-11-15T22:48:00+09:00",
+        "clock": "22:48",
+        "title": "さっきお伝えしたCuaを、別の投稿でも紹介していました。前回お伝えしていないことだけ書きます",
+        "text": "[@GithubProjectsの投稿](https://x.com/GithubProjects/status/2121951009249566743)です。\n- **Mac以外でも使える：** Linux、Windows、macOSの環境を、手元のコンテナや仮想のパソコンの中に作って、その中でエージェントを動かせます（pip install cua-sandbox）。\n- **裏で操作できる：** Cua Driverは、アプリによっては裏で操作でき、ユーザーのマウスや、いま使っている画面を横取りしません。\n- **コーディングエージェントも閉じ込められる：** Claude Code、Codex、Gemini CLI、OpenCode、Gooseなどを、閉じ込めた環境の中で動かす[ガイド](https://cua.ai/docs/cua-sdk/guides/run-a-coding-agent)があります。\n- **考え方：** 作った人たちは「Computer-Use 2.0」と呼んでいます。1つの作業の中で、コードを書く、APIを呼ぶ、画面を操作する、の3つを行き来する考え方です。\n\nコーディングエージェントを閉じ込めておけば、ソフトの部品や配布の経路を狙う攻撃（今日のLiteLLMの件のような）で悪いコードを引いてしまっても、被害を閉じ込めた環境の中だけに抑えやすくなります（私の推測です）。",
+        "tweetIds": [
+          "2121951009249566743"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "2121936265528709506",
+    "cardId": "r38_35",
+    "datetime": "2026-11-15T22:17:00+09:00",
+    "postedAt": "2026-11-15T21:00:04+09:00",
+    "source": "timeline",
+    "title": "11/19のCloudNative Days Winter 2026で、estieが、AIエージェントにどこまで任せるかを決めて見張る仕組みを、社内でどう作ったかを話します",
+    "summary": "Claude Codeの記録をOpenTelemetryで送り、社内MCPは本人ごとのOAuth。11/18の基調講演と考え方がつながる（私の推測）。",
+    "tweetId": "2121936265528709506",
+    "tweetIds": [
+      "2121936265528709506"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/cloudnativedays/status/2121936265528709506",
+    "author": {
+      "handle": "cloudnativedays",
+      "name": "CloudNative Days"
+    },
+    "via": null,
+    "text": "CloudNativeDays Winter 2026 セッション紹介\n\n全社AI活用を「止めずに守る」— MCPプロキシとOpenTelemetryで作るAIガバナンス基盤\nKeigo Aoki\nDay 2（11月19日） 16:30 - 17:00\n[cloudnativedays.jp/sessions/3223](https://cloudnativedays.jp/sessions/3223)\n#CNDW2026 #CNDW2026_A",
+    "images": [],
+    "deepDive": "#11/19のCloudNative Days Winter 2026で、estieが、AIエージェントにどこまで任せるかを決めて見張る仕組みを、社内でどう作ったかを話します\n[CNDWの告知](https://x.com/cloudnativedays/status/2121936265528709506)によると、話すのはestieの技術戦略室長、Keigo Aokiさんです。日時は11/19（木）の16:30（日本時間）からで、会場は東京の有明、オンラインでも見られ、参加は無料です（[セッションのページ](https://cloudnativedays.jp/sessions/3223)）。\n- **記録を集める：** Claude Codeの使われ方の記録（テレメトリ）を、OpenTelemetryという共通の形式で、AWSのCloudWatch Logsに直接送ります。AIに入力した文章そのものは、許可したものだけを残して、あとは落とします。\n- **誰の権限で動かすか：** 社内のクラウドサービスへのアクセスは、MCP（AIエージェントと外部のツールをつなぐ仕組み）の中継役（プロキシ）を通します。そのとき、みんなで使う共通のアカウントは使いません。操作する人それぞれの権限でログインして（OAuth）、その人ができる範囲だけをエージェントにさせます。\n- **見張りと制限：** 操作の記録（監査ログ）を残し、データを壊すような操作は、中継役のところで止めます。\n\n前日11/18の田端さんの基調講演は、エージェントの権限を中継役でまとめて押さえる、という考え方の話でした。estieの話は、それを企業が実際に作った例です。2日続けて聞くと、考え方と実際の作り方がつながります（私の推測です）。",
+    "followUps": []
+  },
+  {
+    "id": "2121898091339301071",
+    "cardId": "r38_38",
+    "datetime": "2026-11-15T22:17:00+09:00",
+    "postedAt": "2026-11-15T18:28:22+09:00",
+    "source": "likes",
+    "title": "精神科医で大学の先生の香田将英さんが、HTMLでスライドを作るためのひな形「html-deck-presenter」を公開しました",
+    "summary": "先に話す原稿を書いてからスライドを作る、という考え方。PDFやPowerPointに書き出せ、はみ出しも自動で確かめる。",
+    "tweetId": "2121898091339301071",
+    "tweetIds": [
+      "2121898091339301071",
+      "2121558154534416458"
+    ],
+    "quoteTweetId": "2121558154534416458",
+    "url": "https://x.com/shoei05/status/2121898091339301071",
+    "author": {
+      "handle": "shoei05",
+      "name": "Shoei"
+    },
+    "via": null,
+    "text": "私のHTMLスライドテンプレを共有します。添付のような感じのスライドをよく作っています。使い方含めた私の現時点の作成方法を記事にしたので併せてご覧いただけると嬉しいです。",
+    "images": [
+      {
+        "type": "video_preview",
+        "url": "https://pbs.twimg.com/amplify_video_thumb/2121898013727797249/img/IBvF2AMLXdJUKcMe.jpg"
+      }
+    ],
+    "deepDive": "#精神科医で大学の先生の香田将英さんが、HTMLでスライドを作るためのひな形「html-deck-presenter」を公開しました\n[香田さんの投稿](https://x.com/shoei05/status/2121898091339301071)で知りました。[解説の記事](https://shoei05.com/articles/3011/)で言っているのは、「AIにいきなりスライドを作らせないで、先に話す原稿を書く」ということです。AIが作ったと分かると評価が下がる、という研究も紹介しています。\n- **作り方：** スライド1枚を、1600×900の大きさのHTMLで作ります。\n- **発表のとき：** Pキーを押すと、発表する人用の画面が開きます。\n- **書き出し：** PDF、あとから編集できるPowerPoint（pptx）、アニメーション付きのpptxに変換できます。\n- **チェック：** 文字や図が、スライドからはみ出していないかを自動で確かめます。\n\nきっかけは、「医療系の学会は、PowerPointで出すように決められていて、ほかのやり方を選べない」という[議論](https://x.com/cursorvers/status/2121468169755746720)でした。",
+    "followUps": []
+  },
+  {
+    "id": "2121876444959932503",
+    "cardId": "r38_40",
+    "datetime": "2026-11-15T22:17:00+09:00",
+    "postedAt": "2026-11-15T17:02:21+09:00",
+    "source": "likes",
+    "title": "ダイソーの首にかけるスマホホルダー（税込220円）です",
+    "summary": "幅5.5cmから8cmのスマホを付けられ、角度は180度変えられる。留める部品を外せばGoProも付けられるそう。",
+    "tweetId": "2121876444959932503",
+    "tweetIds": [
+      "2121876444959932503",
+      "2121871833876320592"
+    ],
+    "quoteTweetId": "2121871833876320592",
+    "url": "https://x.com/manywind2009/status/2121876444959932503",
+    "author": {
+      "handle": "manywind2009",
+      "name": "メニーｳｨﾝﾄﾞ.ORF"
+    },
+    "via": null,
+    "text": "金がねぇって人は今すぐDAISOに走るべき\nちなみにスマホマウント外したらGoProも付く[jp.daisonet.com/products/45491…](https://jp.daisonet.com/products/4549131906646)",
+    "images": [],
+    "deepDive": "#ダイソーの首にかけるスマホホルダー（税込220円）です\n映像を作っている[@manywind2009さん](https://x.com/manywind2009/status/2121876444959932503)が、「文化祭の裏方の仕事は、自分の目線で撮ると思い出になる」という話の続きで紹介していました。[商品のページ](https://jp.daisonet.com/products/4549131906646)によると、幅5.5cmから8cmのスマホを付けられ、角度は180度変えられます。投稿した方によると、スマホを留める部品を外せば、GoProも付けられるそうです。",
+    "followUps": []
+  },
+  {
+    "id": "2121793780634595810",
+    "cardId": "r38_37",
+    "datetime": "2026-11-15T22:17:00+09:00",
+    "postedAt": "2026-11-15T11:33:52+09:00",
+    "source": "likes",
+    "title": "「Chromiumのコードが5100万行に届いた」という投稿は、実は2か月前の動画を、別の人が投稿し直したものでした",
+    "summary": "元はRik ArendsさんのMakepadビューアの速さの話。5100万行を120Hz・メモリ3GBで表示できる。名前はmakepad scopeで、今は一部の人だけが試せる。",
+    "tweetId": "2121793780634595810",
+    "tweetIds": [
+      "2121793780634595810"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/birdabo/status/2121793780634595810",
+    "author": {
+      "handle": "birdabo",
+      "name": "sui"
+    },
+    "via": null,
+    "text": "HOLY SH*T.\n\nthe chromium codebase has reached 51 million lines of code.",
+    "images": [
+      {
+        "type": "video_preview",
+        "url": "https://pbs.twimg.com/amplify_video_thumb/2100295406466863104/img/jelcvNs0SjZTv-vy.jpg"
+      }
+    ],
+    "deepDive": "#「Chromiumのコードが5100万行に届いた」という投稿は、実は2か月前の動画を、別の人が投稿し直したものでした\n[@birdaboさんの投稿](https://x.com/birdabo/status/2121793780634595810)の動画は、もとは、Rik Arendsさんが[9/16に出したもの](https://x.com/rikarends/status/2100295688881852508)です。Rik Arendsさんは、Rustで書かれた、画面の表示を作る仕組み（UIフレームワーク）の「Makepad」を作っている方です。もとの投稿の見どころは、行数そのものではありません。5100万行のコードを、なめらかな画面（120Hz）で、メモリ3GBで表示できるビューアの速さでした。なので、「届いた」という言い方は少し誤解を招きます。\n\nソフトの規模を調べられる[Open Hub](https://openhub.net/p/chrome/analyses/latest/languages_summary)では、Chromiumは全部で約5,427万行です。そのうち、コメントと空いた行を除いた中身は、約4,145万行です。返信には、「コードが増えれば、バグやバックドアを隠せる場所が増えるだけ」という声もありました。\n\nこのビューアについて、[@0123tatoさんが見つけた](https://x.com/0123tato/status/2121933054746984725)Rikさんの返信によると、名前は「makepad scope」で、今は一部の人だけが試せる段階（プライベートベータ）です。[ベータのページ](https://makepad.nl/beta)によると、メールで申し込んで認められると、手元のパソコンで動かせます。使うには、商用のライセンスに同意する必要があります。AIが大量のコードを書くようになると、それを人が全体から見渡す道具の需要は高まりそうです（私の推測です）。",
+    "followUps": []
+  },
+  {
+    "id": "2121589363813523793",
+    "cardId": "r38_39",
+    "datetime": "2026-11-15T22:17:00+09:00",
+    "postedAt": "2026-11-14T22:01:36+09:00",
+    "source": "likes",
+    "title": "@shiromamonoさんが、AIの「Fable」に「全力でドパガキ仕様の動画を作って」と頼んだ投稿が、話題になっています",
+    "summary": "いいね3,200以上、表示42万。「Fable」はClaude Fable 5.2のことと思われる（私の推測）。コードでアニメーションを描いて動画にする。動画は未視聴。",
+    "tweetId": "2121589363813523793",
+    "tweetIds": [
+      "2121589363813523793"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/shiromamono/status/2121589363813523793",
+    "author": {
+      "handle": "shiromamono",
+      "name": "白まもの"
+    },
+    "via": null,
+    "text": "「Fable、今持っている力を全て使ってドパガキ仕様な動画を作って」",
+    "images": [
+      {
+        "type": "video_preview",
+        "url": "https://pbs.twimg.com/amplify_video_thumb/2121589138449453056/img/wqtwWkwmJY8bSsCq.jpg"
+      }
+    ],
+    "deepDive": "#@shiromamonoさんが、AIの「Fable」に「全力でドパガキ仕様の動画を作って」と頼んだ投稿が、話題になっています\n「ドパガキ」は、刺激の強い演出を好む人を指すネットのスラングです。[投稿](https://x.com/shiromamono/status/2121589363813523793)は、いいね3,200以上、表示42万です。「Fable」は、AnthropicのClaude Fable 5.2のことだと思われます（私の推測です）。Fableは、動画を直接作るのではありません。コードを書いてアニメーションを描き、それを動画にするやり方です（[解説](https://claude-motion.com/ja/claude-fable-video)）。返信では「パチンコの演出みたい」という声がある一方で、「全部Fableで作ったのか」と疑う人もいました。私は動画を見ていません。",
+    "followUps": []
+  },
+  {
+    "id": "2121197383556239512",
+    "cardId": "r38_41",
+    "datetime": "2026-11-15T22:17:00+09:00",
+    "postedAt": "2026-11-13T20:04:00+09:00",
+    "source": "likes",
+    "title": "NHKの「新プロジェクトX」で、宇都宮ライトレールの回が、11/20（金）23:45（日本時間）に再放送されます",
+    "summary": "国内で75年ぶりに新しくできた路面電車の話。反対運動、工事、運転士不足、開業直前の脱線事故まで描く。",
+    "tweetId": "2121197383556239512",
+    "tweetIds": [
+      "2121197383556239512"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/NHK_PR/status/2121197383556239512",
+    "author": {
+      "handle": "NHK_PR",
+      "name": "NHK PR"
+    },
+    "via": null,
+    "text": "【プロジェクトXの電車回、名作多し】\n\n♦︎宇都宮ライトレール\n国内の路面電車路線として75年ぶりの開業となったこの路線の事業を担ったのは、素人だった市役所の職員たちだった\n\n新プロジェクトX〜挑戦者たち〜\n📺14(土)夜8:07 [総合]\n[web.nhk/tv/pl/series-t…](https://www.web.nhk/tv/pl/series-tep-P1124VMJ6R/ep/3AA7H6UAFW?cid=wchk-x-20261113)",
+    "images": [
+      {
+        "type": "video_preview",
+        "url": "https://pbs.twimg.com/media/HXABl7TbcAERUYj.jpg"
+      }
+    ],
+    "deepDive": "#NHKの「新プロジェクトX」で、宇都宮ライトレールの回が、11/20（金）23:45（日本時間）に再放送されます\n[NHK広報の投稿](https://x.com/NHK_PR/status/2121197383556239512)によると、国内で75年ぶりに新しくできた路面電車の話です（[番組ページ](https://www.web.nhk/tv/pl/series-tep-P1124VMJ6R/ep/3AA7H6UAFW)）。路面電車にくわしくなかった市役所の職員が、どうやって開業までこぎつけたかを描きます。反対の運動、難しい工事、運転士の不足、開業の直前の脱線事故まで出てきます。",
+    "followUps": []
+  },
+  {
     "id": "2121928204940452235",
     "cardId": "r38_32",
     "datetime": "2026-11-15T20:49:00+09:00",
@@ -1656,7 +2042,18 @@
       }
     ],
     "deepDive": "#MetaのAIアプリ「Muse」に、一人旅をして自撮りを送ってと頼む遊び方が広がっています\n元は[とりすーぷさんの投稿](https://x.com/toRisouP/status/2120770912664551575)で、浅草観光に出かけたMuseが、いきなり東京駅の駅ナカで駅弁を食べ始めたのが受けています。[yuujiiさん](https://x.com/yuujii/status/2121223114084561353)は、予算と出発地を決めて、あとで同じ道順をたどれる形で試しています。スシローで、何を頼んだかが届くまで分からない「寿司ガチャ」に使う例もあります（[ビーバーズ・ハイブさんの投稿](https://x.com/beavers_hive/status/2121197098435842509)）。Museには画像や10秒ほどの動画を作る機能があるので（[Moguruu](https://deepdive.moguruu.com/articles/2026-11-06-web-fda95de2ba812e10)）、旅程づくりと定期的な通知、キャラクターの画像生成を組み合わせているのだと思います（私の推測です）。\n\nMuseは、Gmail、カレンダー、マネーフォワードなどともつながります。[リベシティの記事](https://library.libecity.com/articles/01M71741WAGNAS77W5550SFCBX)によると、会話をAIの改善に使う設定は最初からオンになっています。送信や購入の前に確認を出す頻度も、設定で選べるそうです。",
-    "followUps": []
+    "followUps": [
+      {
+        "datetime": "2026-11-15T22:17:00+09:00",
+        "clock": "22:17",
+        "title": "一人旅の遊びが、360度の動画を撮ってきてもらうところまで広がっています",
+        "text": "始まりは、とりすーぷさんの遊びでした。Museに一人旅をさせて、[自撮りを送ってもらう](https://x.com/toRisouP/status/2120770912664551575)というものです。それをゆーじさんが真似して、さらに「VRで見せてほしい」という声を受けて、[360度の動画に広げました](https://x.com/yuujii/status/2121941304737513869)。私は動画を見ていませんが、Museには画像や動画を作る機能があるので、旅の映像はAIが作ったものだと思われます（私の推測です）。\n\nお金の話では、Museは、Link by Stripeの使い捨てのカード番号で支払い、買う前に本人の承認をはさむ作りだと紹介されています（[Muse Life](https://muse-life.jp/muse/howto/muse-travel-planning/)）。一方で、実際に試した[ギズモードのレビュー](https://www.gizmodo.jp/article/2610-meta-muse-ai-agent-review/)は、「予約は人がやった方が早い」という結論でした。",
+        "tweetIds": [
+          "2120770912664551575",
+          "2121941304737513869"
+        ]
+      }
+    ]
   },
   {
     "id": "2121206699025731916",
@@ -7015,6 +7412,20 @@
           "2121219153717772574",
           "2120986129671631239"
         ]
+      },
+      {
+        "datetime": "2026-11-14T08:09:00+09:00",
+        "clock": "08:09",
+        "title": "辞めたジェンスン・フアンさんが、CEOに戻ることを考えている、と報じられました。辞めたいきさつは前にお伝えしたので、新しい動きだけ書きます",
+        "text": "元は英紙FTの報道で、[47NEWS（共同通信、11/16 7:06）](https://www.47news.jp/15236118.html)が伝えています。[Yahoo](https://tech.yahoo.com/general/breaking-news/article/jensen-huang-weighs-comeback-as-nvidia-ceo-as-allies-lobby-board-ft-reports-bessent-calls-for-dramatic-shakeup-204839950.html)によると、フアンさんを支持する人たちが、取締役会に働きかけるための対策チームを作りました。復帰を求める公開の手紙を、イーロン・マスクさんたちが支持しています。一方で、アメリカのベッセント財務長官は、「新しいCEOは社外から選ぶべきだ」と言っています。フアンさんは、会社を思いどおりに動かせるほどの株を持っていないので、取締役会の決定をひっくり返すことはできません。\n\n[CNBC](https://www.cnbc.com/2026/11/13/nvidia-nvda-stock-jensen-huang-transition.html)によると、辞任を発表した日の株価は、大きく下げたあと持ち直し、約4%下がって終わりました。次の日の金曜日には、さらに2.01%下がり、会社の価値の合計（時価総額）は4兆ドルを下回りました。その1週間では、12.75%下がっています。次の決算は、日本時間の11/18の朝です。",
+        "tweetIds": []
+      },
+      {
+        "datetime": "2026-11-14T08:47:00+09:00",
+        "clock": "08:47",
+        "title": "今朝お伝えしていないことです",
+        "text": "[The Verge](https://www.theverge.com/tech/1033999/jensen-huang-return-nvidia-megaspeed)によると、新しく分かったのは次のことです。\n- **公開の手紙：** 復帰を求める手紙には、Epicのティム・スウィーニーさんも賛成しています。署名は15万を超えましたが、「Xi Jingping」のような怪しい名前も混じっていて、数はあてになりません。\n- **政府の中の対立：** ベッセント財務長官は、Megaspeedへの輸出の取り締まりが遅れたとして、ラトニック商務長官を人前で批判しました。Megaspeedは、中国にGPUを横流ししている疑いをかけられている会社で、フアンさんの不倫の相手は、この会社とのつながりを指摘されていました。\n- **支持する人の中からも：** フアンさんを支持する人の1人でさえ、FTに「部下との不倫は、クビになって当然の行為だ」と話しています。\n- **Megaspeedの言い分：** 「問題の女性は、2025年8月30日に会社を辞めていて、今は関係ない」という声明を出しました。\n\nフアンさんが本当に戻るかどうかは、まだ「話し合っている」と報じられた段階です。",
+        "tweetIds": []
       }
     ],
     "link": "https://nvidianews.nvidia.com/news/statement-from-nvidia-board-of-directors"

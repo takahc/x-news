@@ -1,4 +1,48 @@
 id,datetime,source,author,url,text,summary
+2122106273168843037,2026-11-16T08:47:00+09:00,timeline,alexandr_wang,https://x.com/alexandr_wang/status/2122106273168843037,"who you gonna call? nobody. muse makes the calls*
+
+* for paid subscribers in the US",有料会員向け。保険会社や役所、レストラン予約など。相手がAIだと分かると切る店も多い。KYAは電話でも必要になりそう（私の推測）。
+2122090147034562693,2026-11-16T08:09:00+09:00,timeline,otani_ai_memo,https://x.com/otani_ai_memo/status/2122090147034562693,"PebbleIndex購入完了
+最近買い物するのにブラウザ開かなくなったなぁ",オータニさんがエージェントにPebble Index 01を買わせ、配送確認の予定まで作らせた。KYAはまだ義務ではない。
+2122058578005487774,2026-11-16T08:09:00+09:00,timeline,github,https://x.com/github/status/2122058578005487774,"🔒 Check your repo's code scanning alerts without leaving the GitHub Copilot app.
+
+With the new GitHub security extension, you can ask Copilot to find, explain, and fix (or dismiss!) an alert.
+
+Now in public preview ⬇️
+[docs.github.com/copilot/how-to…](https://docs.github.com/copilot/how-tos/github-copilot-app/view-and-fix-security-alerts?utm_source=x-security-extension&utm_medium=social&utm_campaign=post-universe-2026)",github-securityプラグインで警告を説明・修正できる。却下するとGitHub上の警告が実際に変わる。Dependabotとシークレットスキャンは対象外。
+2121936098297557233,2026-11-16T08:09:00+09:00,likes,nakachi_1225,https://x.com/nakachi_1225/status/2121936098297557233,A1miniのお引越し,上位機種H3C用に作っている金属ラックの右ができたので、今あるA1 miniの置き場をその横に移した。真上に換気扇があり、横の窓も開けられる。
+2121884046934643099,2026-11-16T08:09:00+09:00,likes,recat_125,https://x.com/recat_125/status/2121884046934643099,"Anthropic の Always-on (常時稼働) Agent のベスプラ記事です。
+
+ステートフル・プロアクティブな Agent に必要な要素 (event inbox, timer, memory, permission, outbox) が整理されてます。
+
+イベント・スケジューラで起動し、background 実行する流れがわかりやすいです。
+[claude.com/ja/resources/a…](https://claude.com/ja/resources/articles/building-always-on-agents)",実体はイベントで起きて1回分働いてまた止まる。認証情報はエージェントに渡さず中継役が付ける。大事な操作は人の承認待ち。記憶ファイルも狙い目になりうる（私の推測）。
+2121629478682014047,2026-11-16T08:09:00+09:00,likes,VisualStudio,https://x.com/VisualStudio/status/2121629478682014047,"Visual Studio 18.12 now generally supports Bring Your Own Model (BYOM), letting devs use local, hosted, or API-key models seamlessly. Multiple configs per provider, custom endpoints, and better enterprise support included.
+
+🧳 Explore: [msft.it/6018x6zCg](https://msft.it/6018x6zCg)",社内・APIキー・手元のモデルをチャットやエージェントモードで使える。GitHubへのサインインは不要。APIキーの保存方法は記事に書かれていなかった。
+2121942798773768455,2026-11-15T22:17:00+09:00,timeline,GithubProjects,https://x.com/GithubProjects/status/2121942798773768455,,MITライセンス、スター約3.2万。仮想のMacの中にエージェントを閉じ込めて動かす。閉じ込めれば全部安全、というわけではない（私の推測）。
+2121936265528709506,2026-11-15T22:17:00+09:00,timeline,cloudnativedays,https://x.com/cloudnativedays/status/2121936265528709506,"CloudNativeDays Winter 2026 セッション紹介
+
+全社AI活用を「止めずに守る」— MCPプロキシとOpenTelemetryで作るAIガバナンス基盤
+Keigo Aoki
+Day 2（11月19日） 16:30 - 17:00
+[cloudnativedays.jp/sessions/3223](https://cloudnativedays.jp/sessions/3223)
+#CNDW2026 #CNDW2026_A",Claude Codeの記録をOpenTelemetryで送り、社内MCPは本人ごとのOAuth。11/18の基調講演と考え方がつながる（私の推測）。
+2121898091339301071,2026-11-15T22:17:00+09:00,likes,shoei05,https://x.com/shoei05/status/2121898091339301071,私のHTMLスライドテンプレを共有します。添付のような感じのスライドをよく作っています。使い方含めた私の現時点の作成方法を記事にしたので併せてご覧いただけると嬉しいです。,先に話す原稿を書いてからスライドを作る、という考え方。PDFやPowerPointに書き出せ、はみ出しも自動で確かめる。
+2121876444959932503,2026-11-15T22:17:00+09:00,likes,manywind2009,https://x.com/manywind2009/status/2121876444959932503,"金がねぇって人は今すぐDAISOに走るべき
+ちなみにスマホマウント外したらGoProも付く[jp.daisonet.com/products/45491…](https://jp.daisonet.com/products/4549131906646)",幅5.5cmから8cmのスマホを付けられ、角度は180度変えられる。留める部品を外せばGoProも付けられるそう。
+2121793780634595810,2026-11-15T22:17:00+09:00,likes,birdabo,https://x.com/birdabo/status/2121793780634595810,"HOLY SH*T.
+
+the chromium codebase has reached 51 million lines of code.",元はRik ArendsさんのMakepadビューアの速さの話。5100万行を120Hz・メモリ3GBで表示できる。名前はmakepad scopeで、今は一部の人だけが試せる。
+2121589363813523793,2026-11-15T22:17:00+09:00,likes,shiromamono,https://x.com/shiromamono/status/2121589363813523793,「Fable、今持っている力を全て使ってドパガキ仕様な動画を作って」,"いいね3,200以上、表示42万。「Fable」はClaude Fable 5.2のことと思われる（私の推測）。コードでアニメーションを描いて動画にする。動画は未視聴。"
+2121197383556239512,2026-11-15T22:17:00+09:00,likes,NHK_PR,https://x.com/NHK_PR/status/2121197383556239512,"【プロジェクトXの電車回、名作多し】
+
+♦︎宇都宮ライトレール
+国内の路面電車路線として75年ぶりの開業となったこの路線の事業を担ったのは、素人だった市役所の職員たちだった
+
+新プロジェクトX〜挑戦者たち〜
+📺14(土)夜8:07 [総合]
+[web.nhk/tv/pl/series-t…](https://www.web.nhk/tv/pl/series-tep-P1124VMJ6R/ep/3AA7H6UAFW?cid=wchk-x-20261113)",国内で75年ぶりに新しくできた路面電車の話。反対運動、工事、運転士不足、開業直前の脱線事故まで描く。
 2121928204940452235,2026-11-15T20:49:00+09:00,timeline,takahiroanno,https://x.com/takahiroanno/status/2121928204940452235,インタビューさせていただきました！,テーマはサイバーパンデミックへの備え。今回は前編。中谷さんは侵入テストの最初の入り口を自動化したとするAgenticSecの代表。後編で守る側の具体的な話が出るかが注目（私の推測）。
 2121925915072659681,2026-11-15T20:49:00+09:00,timeline,yuki_arano,https://x.com/yuki_arano/status/2121925915072659681,"モデル作った。
 
