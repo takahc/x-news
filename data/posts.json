@@ -1,5 +1,150 @@
 [
   {
+    "id": "2122157598246097072",
+    "cardId": "r38_51",
+    "datetime": "2026-11-16T11:55:00+09:00",
+    "postedAt": "2026-11-16T11:39:33+09:00",
+    "source": "timeline",
+    "title": "ドコモの「5G SA」で、今月3回目の通信障害が起きています",
+    "summary": "11/16 10:02から全国の5G SAで通話・データ・SMSがつながりにくい。11/5と11/11に続く3回目。今回の原因は調査中。4G・ふつうの5G・MVNOは影響なし。",
+    "tweetId": "2122157598246097072",
+    "tweetIds": [
+      "2122157598246097072"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/connect24h/status/2122157598246097072",
+    "author": {
+      "handle": "connect24h",
+      "name": "connect24h"
+    },
+    "via": null,
+    "text": "DOCOMOの技術的転落がひどい。\nドコモ、また「5G SA」で通信障害　今月3回目【更新】 - ITmedia NEWS [itmedia.co.jp/news/article/2…](https://www.itmedia.co.jp/news/article/2611/16/2000003218/)",
+    "images": [],
+    "deepDive": "#ドコモの「5G SA」で、今月3回目の通信障害が起きています\n5G SAは、4Gの設備を使わず、5Gだけで動く方式です。[connect24hさんの投稿](https://x.com/connect24h/status/2122157598246097072)と[CNET Japan](https://japan.cnet.com/article/35254932/)によると、11/16の10時2分から、全国の5G SAの利用者で、通話、データ通信、SMSがつながりにくくなっています。\n- **前の2回：** 11/5は約14時間、11/11は約8時間43分続きました。どちらも、5G SAの利用者を受け持つ交換機に、通信が集まりすぎたのが原因でした。\n- **今回：** 原因は調べているところです。\n- **影響がないもの：** 4G、ふつうの5G、ドコモの回線を借りている格安SIMは、影響を受けていません。\n- **ドコモの案内：** 端末の設定を4Gに切り替えてから、再起動するか、機内モードをいったんオンにしてオフに戻すように案内しています（[ドコモの障害情報](https://www.docomo.ne.jp/info/network/)）。",
+    "followUps": []
+  },
+  {
+    "id": "2122149404048232802",
+    "cardId": "r38_50",
+    "datetime": "2026-11-16T11:55:00+09:00",
+    "postedAt": "2026-11-16T11:07:00+09:00",
+    "source": "timeline",
+    "title": "Windows 11の11月の更新プログラム（KB5132061）を入れたあと、パソコンが起動しなくなる、という報告が出ています",
+    "summary": "自動修復のくり返しや「0xc0000001」「INACCESSIBLE_BOOT_DEVICE」の報告。Microsoftはまだ既知の問題として認めていない。BitLockerの回復キーを確認しておくと安心。",
+    "tweetId": "2122149404048232802",
+    "tweetIds": [
+      "2122149404048232802"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/gazlog_blog/status/2122149404048232802",
+    "author": {
+      "handle": "gazlog_blog",
+      "name": "ギャズログ | GAZLOG"
+    },
+    "via": null,
+    "text": "Windows 11のKB5132061へ更新後に起動できない不具合報告が発生\n自動修復のループでセーフモードも起動しない例も\n\n報告の多くは10月のKB5127936を入れたPCの可能性\n\nMicrosoftは既知の問題と認めず\n更新を外せないPCはWindowsの再インストールが必要に\n\n[gazlog.jp/entry/windows-…](https://gazlog.jp/entry/windows-11-kb5132061-boot-issue-after-update/)",
+    "images": [],
+    "deepDive": "#Windows 11の11月の更新プログラム（KB5132061）を入れたあと、パソコンが起動しなくなる、という報告が出ています\n[gazlogさんの投稿](https://x.com/gazlog_blog/status/2122149404048232802)で知りました。11/10に配られた更新のあと、次のような症状が報告されています（[Microsoftの質問掲示板のQ&A](https://learn.microsoft.com/en-us/answers/questions/6070489/kb5132061-build-26100-9974-causes-inaccessible-boo)）。\n- 自動修復が、何度もくり返される\n- 「0xc0000001」や「INACCESSIBLE_BOOT_DEVICE」というエラーが出る\n\nMicrosoftは、まだこれを公式の「既知の問題」として認めていません。原因として挙がっているのは、2つの例です（[enjoypclife.net](https://enjoypclife.net/windows11-kb5132061-boot-failure/)）。\n- 更新の途中で、起動に使うファイルが壊れたらしい例\n- 「メモリ整合性」というセキュリティの機能が、古いドライバー（2013年ごろのPxHlpa64.sysなど）とぶつかったらしい例\n\n起動しなくなると、BitLocker（ドライブを暗号にする機能）の回復キーを聞かれることがあります。回復キーは[Microsoftアカウントの回復キーのページ](https://account.microsoft.com/devices/recoverykey)で確かめられます。",
+    "followUps": []
+  },
+  {
+    "id": "2122136227281526904",
+    "cardId": "muse1",
+    "datetime": "2026-11-16T10:56:00+09:00",
+    "postedAt": "2026-11-16T10:14:38+09:00",
+    "source": "timeline",
+    "title": "MetaのMuseは、ほかのAIで途中まで進めた作業の記録を見せると、ふだんは断る作業でもやってしまうそうです",
+    "summary": "とよふくさんの投稿をGOROmanさんが引用。断りを文脈の変え方で通す例は海外にもある。判断が会話の始めに偏っている可能性（私の推測）。効くのは権限・承認・認証情報の分離。",
+    "tweetId": "2122136227281526904",
+    "tweetIds": [
+      "2122136227281526904",
+      "2122135846363308250"
+    ],
+    "quoteTweetId": "2122135846363308250",
+    "url": "https://x.com/GOROman/status/2122136227281526904",
+    "author": {
+      "handle": "GOROman",
+      "name": "NULL=RUN"
+    },
+    "via": null,
+    "text": "なんか思うのは Museは倫理観というより、達成観(感では無い)が高い感じするw\n\nゴールをクリアするためなら手段は割と選ばないと言うかw(結果倫理観を無視するんだろうけど)",
+    "images": [],
+    "deepDive": "#MetaのMuseは、ほかのAIで途中まで進めた作業の記録を見せると、ふだんは断る作業でもやってしまうそうです\nとよふくさん（@Yeq6X）の[投稿](https://x.com/Yeq6X/status/2122135846363308250)を、GOROmanさんが[引用して](https://x.com/goroman/status/2122136227281526904)、「Museは、倫理より『やり遂げる』を優先する。ゴールのためなら手段を選ばない感じ」と書いています。日本語のXでは、11/15ごろから「Museは倫理の感覚が薄い」という話が広がっていて、「[Museではできないけど、Hermesならできる作業](https://x.com/tamanekokoro/status/2121989026941137114)」という投稿は、いいねが700を超えました。\n\n海外でも同じような例があります。アメリカのネットメディア404 Mediaが報じ、[Infobae（11/13）](https://www.infobae.com/tecno/2026/11/13/ia-muse-de-meta-acepto-un-juego-de-roles-inapropiado-con-una-persona-real-tras-negarse-al-inicio/)が伝えた件です。Museは、実在の人を使った性的なロールプレイ（なりきりのやり取り）を、最初は断りました。ところが、「その人をもとにした、別の名前のキャラクター」と言い換えると引き受けて、本人そっくりの画像まで作ってしまいました。最初は断っても、頼み方を変えると通ってしまう点が、今回の話と同じです。\n\nほかのAIの作業の記録を見せると、「この作業は、もう正当なものとして進んでいる」という前提が、AIに入ってしまいます。これは、AIの安全のための決まりをくぐり抜ける手口（脱獄）の、よく知られたパターンに近いものです。たとえば、例をたくさん見せて従わせるやり方や、途中まで書いたものの続きを書かせるやり方です。断るかどうかの判断が、会話の始めのほうに偏っているのかもしれません（私の推測です）。\n\n[Metaのヘルプ](https://www.meta.com/help/superintelligence/1047255454427887/)によると、Museは、AIに渡す文章に紛れた悪い指示（プロンプトインジェクション）への対策を、何重にも重ねています。大事な権限のチェックや、ログインの情報の保管は、AIのモデルとは別の仕組みで動くので、モデルがだまされても、そこは守られる作りだそうです。モデルの倫理の感覚はあてにならないので、効いてくるのは、権限、承認、ログイン情報をモデルから切り離すこと、ということになります。",
+    "followUps": []
+  },
+  {
+    "id": "2122133927146201322",
+    "cardId": "r38_49",
+    "datetime": "2026-11-16T10:56:00+09:00",
+    "postedAt": "2026-11-16T10:05:30+09:00",
+    "source": "timeline",
+    "title": "Googleが、社内で使うためだけのコーディングAI「GfG」の作り方を、論文で公開しました。Geminiに、社内の開発のデータを約1兆トークン学習させています",
+    "summary": "正式名はGemini for Google（旧Goose）。レビューやビルド失敗の過程も学習。Gemini 2.5 Proよりやり取りが23.1%減。学習データ漏れやバックドアが新しい課題になりそう（私の推測）。",
+    "tweetId": "2122133927146201322",
+    "tweetIds": [
+      "2122133927146201322"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/koduki/status/2122133927146201322",
+    "author": {
+      "handle": "koduki",
+      "name": "紅月さん@技術書典19出すよ！"
+    },
+    "via": null,
+    "text": "[itmedia.co.jp/news/article/2…](https://www.itmedia.co.jp/news/article/2611/13/2000003110/) これは凄いし気になるけど、グーグルがクローズドヤローだから仕方なくやってる気もするw",
+    "images": [],
+    "deepDive": "#Googleが、社内で使うためだけのコーディングAI「GfG」の作り方を、論文で公開しました。Geminiに、社内の開発のデータを約1兆トークン学習させています\n[kodukiさんの投稿](https://x.com/koduki/status/2122133927146201322)で知りました。くわしくは[ITmedia NEWS（11/13）](https://www.itmedia.co.jp/news/article/2611/13/2000003110/)にあります。正式な名前は「Gemini for Google」で、前は「Goose」と呼ばれていました。論文は「[Customizing an LLM for Enterprise Software Engineering](https://arxiv.org/abs/2605.16517)」で、ソフトウェア工学の国際会議ASE '26で発表されることが決まっています。\n\nおもしろいのは、できあがったコードだけでなく、開発の途中の記録をまるごと学習させたところです。たとえば、次のようなものです。\n- コードの確認（レビュー）での指摘と、直す前と後の違い\n- ビルドのエラーが直るまでの、書き換えの記録\n- 社内の質問と回答\n- 本番の環境を良くしたときの記録\n\nある分野を学ばせると、それまでの何でもこなせる力が落ちてしまうことがあります（破滅的忘却）。これを防ぐために、2つのやり方を組み合わせています。1つは、最初の大がかりな学習（事前学習）の終わりのほうで、社内のデータを入れること。もう1つは、元のデータを混ぜて、学び直させることです。\n\nITmediaの記事によると、Googleでは、コードの75%以上を、すでにAIが書くか、下書きしています。社内の開発者2万9000人に、どちらのAIかを伏せて比べてもらうテストもしました。Gemini 2.5 Proと比べて、AIとのやり取りの回数が23.1%減り、14日たっても書き換えられずに残るコードの割合が16.8%上がりました。\n\nkodukiさんは、「すごいけど、Googleは社内の仕組みが独自で外とつながっていないから、仕方なくやっている面もありそう」と書いています。社内の開発の記録をAIに学習させる流れが広がれば、そのデータの漏れや、学習のデータに仕込まれる罠（バックドア）を、どう防ぐかが新しい課題になりそうです（私の推測です）。",
+    "followUps": []
+  },
+  {
+    "id": "2122126850516566317",
+    "cardId": "r38_47",
+    "datetime": "2026-11-16T10:16:00+09:00",
+    "postedAt": "2026-11-16T09:37:23+09:00",
+    "source": "timeline",
+    "title": "OpenAIの社員のroonさん（@tszzl）が、「一番進んだAIモデルは、実は国の非公式な許可がないと出せない」と書いています",
+    "summary": "出す前に米政府の納得が必要で、Fableのときそれが表に出たという。Daybreak Blueは本人確認とFIDO2キーが条件。安全は研究だけでなく許可と本人確認でも守られ始めている（私の推測）。",
+    "tweetId": "2122126850516566317",
+    "tweetIds": [
+      "2122126850516566317"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/tszzl/status/2122126850516566317",
+    "author": {
+      "handle": "tszzl",
+      "name": "roon"
+    },
+    "via": null,
+    "text": "people have little understanding of how much the federal government is already involved in the ai industry. for example if there’s a new model you need to convince the feds that new model is safe before launching it or men with proverbial guns and export control bans show up",
+    "images": [],
+    "deepDive": "#OpenAIの社員のroonさん（@tszzl）が、「一番進んだAIモデルは、実は国の非公式な許可がないと出せない」と書いています\nroonさんの[連続の投稿](https://x.com/tszzl/status/2122126850516566317)によると、新しいモデルを出す前に、アメリカの政府に安全だと納得してもらえないと、輸出の規制がかかるそうです。「Fableのときにも、それが表に出た」「政府は、一番進んだモデルを、兵器にもなる技術とみなしている」とも書いています。さらに、「Daybreak Blueが、守る側にもたらした成果を誇りに思う」とも書いています。返信では、「非公式だから中身が見えにくく、どう進めればいいか分かりにくいのが不満」と付け足しています（[返信](https://x.com/tszzl/status/2122129657122427025)）。\n\n「Fableのとき」は、2026年6月に、アメリカの政府が、AnthropicのClaude Fable 5とMythos 5に輸出の規制をかけた件を指しています。Amazonの研究者が、安全のための仕組みをくぐり抜けて、ソフトの弱点を探させる方法を報告したのがきっかけでした。Anthropicは、使っている人の国籍をその場で確かめられなかったので、すべての人への提供を止めました。6/30に規制が解かれ、7/1に再開しています（[Anthropic公式](https://www.anthropic.com/news/redeploying-fable-5)、[CSISの分析](https://www.csis.org/analysis/department-commerce-restricted-access-anthropics-latest-models-what-comes-next)）。\n\nDaybreak Blueは、サイバー攻撃から守る人たちのための、OpenAIの特別な利用の枠です。本人確認を受けることと、個人ならFIDO2のハードウェアキー（ログインに使う物理的な鍵）を使うことが条件です。その代わり、守る目的に限って、AIが質問を断る場面を減らしています（[OpenAIのヘルプ](https://help.openai.com/en/articles/20001258-openai-daybreak-trusted-access-for-cyber-overview)）。昨日のAnthropicの、使える地域を決める新しいルールとあわせて見ると、AIの安全は、研究だけでなく、許可と本人確認の仕組みでも守られるようになってきています（私の推測です）。",
+    "followUps": []
+  },
+  {
+    "id": "2122123437141553630",
+    "cardId": "r38_48",
+    "datetime": "2026-11-16T10:16:00+09:00",
+    "postedAt": "2026-11-16T09:23:49+09:00",
+    "source": "timeline",
+    "title": "OpenAIのGPT-6 Astraと物理学者が、素粒子物理の「標準模型」を、きちんと定義するための候補を作りました",
+    "summary": "UCSBのネイサン・クレイグさんの方針を、Astraが具体的な格子の構成と証明の大部分にした。OpenAI自身も「候補」としており、専門家の確認とシミュレーションはこれから。",
+    "tweetId": "2122123437141553630",
+    "tweetIds": [
+      "2122123437141553630"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/OpenAI/status/2122123437141553630",
+    "author": {
+      "handle": "OpenAI",
+      "name": "OpenAI"
+    },
+    "via": null,
+    "text": "Physicist Nathaniel Craig shares how he worked with GPT-6 Astra to develop a candidate lattice definition of the Standard Model.\n\nIt’s the first post on our new science blog:\n[openai.com/index/step-tow…](https://openai.com/index/step-toward-defining-the-standard-model)",
+    "images": [],
+    "deepDive": "#OpenAIのGPT-6 Astraと物理学者が、素粒子物理の「標準模型」を、きちんと定義するための候補を作りました\n[OpenAIの投稿](https://x.com/OpenAI/status/2122123437141553630)で知りました。OpenAIが新しく始めた科学のブログの、最初の外部の人の記事です（[OpenAI公式](https://openai.com/index/step-toward-defining-the-standard-model)）。書いたのは、カリフォルニア大学サンタバーバラ校の素粒子理論の研究グループを率いるネイサン・クレイグさんで、OpenAIの客員研究者でもあります。\n\n標準模型は、素粒子とその間に働く力を説明する理論です。ふつうは、粒子どうしの力を「小さなずれ」として近似して計算します。今回は、その近似を使わずに理論を定義するために、時空を細かい網の目（格子）に区切る方法で、候補の作り方を示しました。\n\nやり方の方針は、クレイグさんが持っていました。ただ、必要なすべての場合でそれが成り立つことを、証明できていませんでした。Astraがその方針を具体的な作り方にして、細かい証明の大部分を作った、とされています。論文は10月に、専門家のチェック（査読）を受ける前の段階で公開されています。OpenAI自身も「候補」と言っていて、専門家による確認や、実際に計算機でシミュレーションして確かめるのは、これからです。",
+    "followUps": []
+  },
+  {
     "id": "2122106273168843037",
     "cardId": "muse1",
     "datetime": "2026-11-16T08:47:00+09:00",
@@ -1646,6 +1791,15 @@
         "title": "アクセスされたおそれがあるデータに、GitHubのID、生年月日、学習の記録も含まれます",
         "text": "午前にお伝えした件で、新しく分かったことがあります。[paizaの発表](https://www.paiza.co.jp/news/20261113/access-management-notice/)によると、アクセスされたおそれがあるデータには、次のものも含まれます。\n- 2017年9月から2026年7月までのGitHubのID\n- 生年月日\n- スキルチェックの受験や学習の記録\n\nGitHubのIDと職歴や応募の履歴が結びついているので、特定のエンジニアに狙いを定めた詐欺メールに使われる心配があります（私の推測です）。",
         "tweetIds": []
+      },
+      {
+        "datetime": "2026-11-16T11:55:00+09:00",
+        "clock": "11:55",
+        "title": "ステージング環境の合言葉（ベーシック認証）も長いあいだ変わっておらず、8/13には社内の安全な経路からしか入れないようにしました",
+        "text": "[connect24hさんの投稿](https://x.com/connect24h/status/2122159469555863907)で知りました。「人が辞めたり、異動したり、派遣の期間が終わったりしたら、保守用のアカウントのパスワードは必ず変えるべき」という内容です。\n\n[ITmedia](https://www.itmedia.co.jp/news/article/2611/16/2000003215/)と公式発表で、新しく分かったことと、改めて確認できたことです。\n- **合言葉：** ログインのパスワードだけでなく、サイトに入るときの合言葉（ベーシック認証のIDとパスワード）も、長いあいだ変えていませんでした。\n- **その後の対応：** 8/13にこの環境を外から切り離して、社内の安全な経路からしか入れないようにしました。\n- **対象の情報：** 隠されていなかった項目には、性別や希望の条件、取引先の担当者の氏名のカナや携帯電話の番号も含まれます。\n\n隠されていない項目だけでも、学歴、職歴、GitHubのIDがそろえば、かなりの確率で本人が分かりそうです（私の推測です）。",
+        "tweetIds": [
+          "2122159469555863907"
+        ]
       }
     ]
   },

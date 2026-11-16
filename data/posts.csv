@@ -1,4 +1,24 @@
 id,datetime,source,author,url,text,summary
+2122157598246097072,2026-11-16T11:55:00+09:00,timeline,connect24h,https://x.com/connect24h/status/2122157598246097072,"DOCOMOの技術的転落がひどい。
+ドコモ、また「5G SA」で通信障害　今月3回目【更新】 - ITmedia NEWS [itmedia.co.jp/news/article/2…](https://www.itmedia.co.jp/news/article/2611/16/2000003218/)",11/16 10:02から全国の5G SAで通話・データ・SMSがつながりにくい。11/5と11/11に続く3回目。今回の原因は調査中。4G・ふつうの5G・MVNOは影響なし。
+2122149404048232802,2026-11-16T11:55:00+09:00,timeline,gazlog_blog,https://x.com/gazlog_blog/status/2122149404048232802,"Windows 11のKB5132061へ更新後に起動できない不具合報告が発生
+自動修復のループでセーフモードも起動しない例も
+
+報告の多くは10月のKB5127936を入れたPCの可能性
+
+Microsoftは既知の問題と認めず
+更新を外せないPCはWindowsの再インストールが必要に
+
+[gazlog.jp/entry/windows-…](https://gazlog.jp/entry/windows-11-kb5132061-boot-issue-after-update/)",自動修復のくり返しや「0xc0000001」「INACCESSIBLE_BOOT_DEVICE」の報告。Microsoftはまだ既知の問題として認めていない。BitLockerの回復キーを確認しておくと安心。
+2122136227281526904,2026-11-16T10:56:00+09:00,timeline,GOROman,https://x.com/GOROman/status/2122136227281526904,"なんか思うのは Museは倫理観というより、達成観(感では無い)が高い感じするw
+
+ゴールをクリアするためなら手段は割と選ばないと言うかw(結果倫理観を無視するんだろうけど)",とよふくさんの投稿をGOROmanさんが引用。断りを文脈の変え方で通す例は海外にもある。判断が会話の始めに偏っている可能性（私の推測）。効くのは権限・承認・認証情報の分離。
+2122133927146201322,2026-11-16T10:56:00+09:00,timeline,koduki,https://x.com/koduki/status/2122133927146201322,[itmedia.co.jp/news/article/2…](https://www.itmedia.co.jp/news/article/2611/13/2000003110/) これは凄いし気になるけど、グーグルがクローズドヤローだから仕方なくやってる気もするw,正式名はGemini for Google（旧Goose）。レビューやビルド失敗の過程も学習。Gemini 2.5 Proよりやり取りが23.1%減。学習データ漏れやバックドアが新しい課題になりそう（私の推測）。
+2122126850516566317,2026-11-16T10:16:00+09:00,timeline,tszzl,https://x.com/tszzl/status/2122126850516566317,people have little understanding of how much the federal government is already involved in the ai industry. for example if there’s a new model you need to convince the feds that new model is safe before launching it or men with proverbial guns and export control bans show up,出す前に米政府の納得が必要で、Fableのときそれが表に出たという。Daybreak Blueは本人確認とFIDO2キーが条件。安全は研究だけでなく許可と本人確認でも守られ始めている（私の推測）。
+2122123437141553630,2026-11-16T10:16:00+09:00,timeline,OpenAI,https://x.com/OpenAI/status/2122123437141553630,"Physicist Nathaniel Craig shares how he worked with GPT-6 Astra to develop a candidate lattice definition of the Standard Model.
+
+It’s the first post on our new science blog:
+[openai.com/index/step-tow…](https://openai.com/index/step-toward-defining-the-standard-model)",UCSBのネイサン・クレイグさんの方針を、Astraが具体的な格子の構成と証明の大部分にした。OpenAI自身も「候補」としており、専門家の確認とシミュレーションはこれから。
 2122106273168843037,2026-11-16T08:47:00+09:00,timeline,alexandr_wang,https://x.com/alexandr_wang/status/2122106273168843037,"who you gonna call? nobody. muse makes the calls*
 
 * for paid subscribers in the US",有料会員向け。保険会社や役所、レストラン予約など。相手がAIだと分かると切る店も多い。KYAは電話でも必要になりそう（私の推測）。
