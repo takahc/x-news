@@ -1,5 +1,237 @@
 [
   {
+    "id": "2122251724564070518",
+    "cardId": "r38_60",
+    "datetime": "2026-11-16T17:55:00+09:00",
+    "postedAt": "2026-11-16T17:53:35+09:00",
+    "source": "timeline",
+    "title": "Sakana AIが、日本のお金に関わる資格試験でAIを測る新しいテスト「JFinBench」を公開しました",
+    "summary": "公認会計士・税理士・FP1級など6試験から321問。Claude Fable 5が95.8点で首位。公開モデルの最高はKimi K3.1 Proの83.4点。税理士は最高でも79.4点。",
+    "tweetId": "2122251724564070518",
+    "tweetIds": [
+      "2122251724564070518"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/SakanaAILabs/status/2122251724564070518",
+    "author": {
+      "handle": "SakanaAILabs",
+      "name": "Sakana AI"
+    },
+    "via": null,
+    "text": "最新の金融資格試験を用いた日本語金融ベンチマーク「JFinBench」を公開\n\nブログ：[sakana.ai/jfinbench](https://sakana.ai/jfinbench)\n\nSakana AIは、日本の金融分野に強いAIの開発に向けて、LLMの能力を評価するベンチマーク「JFinBench」を構築しました。公認会計士試験、税理士試験、FP技能検定1級など、日本の6つの金融資格 試験の2026年版から作成した全321問で、選択式だけでなく、税額の計算や論述、図面を読み取る問題も含みます。\n\n税制や会計基準は頻繁に改正されるため、金融のベンチマークは最新の問題で更新し続けることが重要です。JFinBenchの構築では、試験PDFの変換をコーディングエージェントが担い、人間が全問を検証する「human-in-the-loop agentic pipeline」を提案しました。目視による検証は約12時間で済み、新しい試験が実施されるたびに少ない労力でベンチマークを更新できます。\n\n最新の12のLLMを評価したところ、主要なベンチマークではプロプライエタリモデルに肩を並べつつあるオープンウェイトモデルも、JFinBenchでは大きな差があり、既存のベンチマークでは見えない差が浮き彫りになりました。失敗の主な原因は計算ではなく、日本の制度に関する知識の不足でした。ターミナルとWebを使える設定では、モデルが法令を調べて知識を補うことでスコアが上がりましたが、差は残りました。\n\n今回の結果は、日本固有の法令や会計基準の知識をモデルにどう獲得させるか、外部の知識を検索・活用するエージェントをどう設計するかが重要であることを示しています。JFinBenchで得た知見を活かしながら、日本の金融分野へのAI実装に向けた研究開発を進めていきます。\n\n論文：[arxiv.org/abs/2611.18130](https://arxiv.org/abs/2611.18130)\nデータセット：[huggingface.co/datasets/Sakan…](https://huggingface.co/datasets/SakanaAI/JFinBench)\nGitHub：[github.com/SakanaAI/JFinB…](https://github.com/SakanaAI/JFinBench) 🐟",
+    "images": [
+      {
+        "type": "video_preview",
+        "url": "https://pbs.twimg.com/tweet_video_thumb/HXPAfz1aYAAQ_ys.jpg"
+      }
+    ],
+    "deepDive": "#Sakana AIが、日本のお金に関わる資格試験でAIを測る新しいテスト「JFinBench」を公開しました\n[Sakana AIの投稿](https://x.com/SakanaAILabs/status/2122251724564070518)で知りました。公認会計士、税理士、FP1級（ファイナンシャルプランナー）など、日本のお金に関わる資格試験6つの2026年の問題から、全部で321問を作っています。選ぶ問題だけでなく、計算、答えの欄への記入、文章で答える問題、図を読む問題（12問）も入っています（[公式ブログ](https://sakana.ai/jfinbench)、[論文](https://arxiv.org/abs/2611.18130)、[GitHub](https://github.com/SakanaAI/JFinBench)）。\n\nツールを使わず、AIにいちばん深く考えさせた場合の点数は、次のとおりです。\n- **上位3つ：** Claude Fable 5が95.8点、GPT-6 Astraが93.6点、Gemini 3.8 Flashが88.8点でした。どれも中身が公開されていない、会社のモデルです。\n- **中身が公開されているモデル：** いちばん良かったのは、Kimi K3.1 Proの83.4点でした。Kimi K3.1 Proは、コマンドを使ってコンピューターを操作する力のテスト（Terminal-Bench 4.0）では、GPT-6 Astraより上だったと報告されています。それでも、JFinBenchでは約10点負けています。\n- **税理士試験：** これだけは、いちばん良いモデルでも79.4点でした。\n\n間違えた主な理由は、計算のミスではなく、日本の制度をよく知らないことでした。問題を作る作業のほとんどは、コーディングエージェントがやって、人がすべての問題を確かめています。新しい試験が出るたびに、少ない人手で作り直せます。なので、AIがテストの問題と答えを前もって覚えてしまう心配を減らせます。試験のPDFを入れ替えれば、医師の国家試験や、会社の中の試験にも使える、とSakanaは書いています。ターミナルとWebを使っていい場合の点数も、公開されています。",
+    "followUps": []
+  },
+  {
+    "id": "2122238316246667381",
+    "cardId": "r38_59",
+    "datetime": "2026-11-16T17:55:00+09:00",
+    "postedAt": "2026-11-16T17:00:18+09:00",
+    "source": "timeline",
+    "title": "NTTが、ソースコードを外に出さずにセキュリティの弱点を探すAIを作りました",
+    "summary": "自社環境でオープンウェイトモデルを使い、弱点の探し方の知見を手順に組み込む。CyberGymのメモリ破壊150問で成功率は48%から63%に上がった。実コードの誤検知や最先端AIとの差は未記載。",
+    "tweetId": "2122238316246667381",
+    "tweetIds": [
+      "2122238316246667381"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/connect24h/status/2122238316246667381",
+    "author": {
+      "handle": "connect24h",
+      "name": "connect24h"
+    },
+    "via": null,
+    "text": "すごいんだけど、今のスピード感とコストメリットに全く対応できないのでは。\nNTT、外部にソースコードを送ることなく脆弱性を見つけるソブリンAI技術を開発 [it.impress.co.jp/articles/-/300…](https://it.impress.co.jp/articles/-/30004) @itleaders_jpより",
+    "images": [],
+    "deepDive": "#NTTが、ソースコードを外に出さずにセキュリティの弱点を探すAIを作りました\n[connect24hさんの投稿](https://x.com/connect24h/status/2122238316246667381)で知りました。[NTTの発表（11/16）](https://group.ntt/jp/newsrelease/2026/11/16/261116a.html)によると、調べたいソースコードを外のAIサービスに送らずに、自分の会社で管理している環境の中で、弱点（脆弱性）を探す技術です。中身（重み）が公開されているAIモデルをいくつか使っています。そして、NTTがこれまでの研究で積み上げてきた「どこを疑えばいいか」の知識を、作業の手順に組み込んでいます。\n- **成績：** AIエージェントが弱点を見つける力を比べるテスト（CyberGym）には、約1,500問あります。そこから、メモリを壊してしまう種類の弱点の問題を150問選んで試しました。成功した割合は、これまでのやり方の48%から、改良後は63%に上がりました。\n- **中くらいのモデルでも：** 中くらいの大きさのモデルを組み合わせても、成績が上がる見込みがあることも確かめたそうです。\n- **展示：** この成果は、NTT R&D FORUM 2026で展示する予定です。\n\n[IT Leaders](https://it.impress.co.jp/articles/-/30004)と[Impress Watch](https://www.watch.impress.co.jp/docs/news/2156674.html)によると、作った理由は次のとおりです。外の最先端のAIを使うと、秘密にしたいコードを外に出すことになります。お金もかかるうえに、特定のサービスに頼りきりになってしまいます。NTTは、この問題を「ソブリン性」（自分たちで管理できること）の問題と呼んでいます。これからは、見つけた弱点が自分の会社に影響するかを判断して、対処するところまで手伝えるAIを目指すそうです。\n\n投稿した人は、「すごいけど、今の進化の速さと、外のAIのほうが安くすむことには、とても追いつけないのでは」と冷静に見ています。63%という数字は、メモリを壊す種類の弱点だけにしぼった150問での成績です。実際のコードで、弱点でないものをどのくらい弱点と間違えるのかや、最先端のAIとどのくらい差があるのかは、発表には書かれていませんでした。",
+    "followUps": []
+  },
+  {
+    "id": "2122228208905204039",
+    "cardId": "r38_57",
+    "datetime": "2026-11-16T16:55:00+09:00",
+    "postedAt": "2026-11-16T16:20:08+09:00",
+    "source": "timeline",
+    "title": "Geminiの月額のプランが、オープンソースのエージェント「Hermes」で正式に使えるようになる、といううわさです。まだ予告の段階で、出どころは非公式のアカウントです",
+    "summary": "元は非公式アカウントHermesWatcher。公式ガイドではGeminiはまだAPIキー課金。非公式プラグインはあるが、常用アカウントで試すのは避けたほうがよさそう（私の推測）。",
+    "tweetId": "2122228208905204039",
+    "tweetIds": [
+      "2122228208905204039",
+      "2122202536354705798"
+    ],
+    "quoteTweetId": "2122202536354705798",
+    "url": "https://x.com/koduki/status/2122228208905204039",
+    "author": {
+      "handle": "koduki",
+      "name": "紅月さん@技術書典19出すよ！"
+    },
+    "via": null,
+    "text": "定額でOSS系が使えるようになるのはメッチャ強いがはたして？",
+    "images": [],
+    "deepDive": "#Geminiの月額のプランが、オープンソースのエージェント「Hermes」で正式に使えるようになる、といううわさです。まだ予告の段階で、出どころは非公式のアカウントです\n[kodukiさんの投稿](https://x.com/koduki/status/2122228208905204039)が、[すまほん!!の投稿](https://x.com/sm_hn/status/2122202536354705798)を引用していて、その元は[HermesWatcherの投稿](https://x.com/HermesWatcher/status/2122026878387290301)（いいね約3,500）です。Hermes Agentは、Nous Researchが作っている、エージェントを動かすためのソフトです。\n\nうわさの中身は、Nousが、APIキーで使った分だけ払うのではなく、Geminiの月額のプランのままHermesで使えるように、Googleと調整している、というものです。ClaudeとChatGPTの月額のプランは、すでにHermesで使えます。\n\nただ、気をつける点があります。\n- **出どころ：** HermesWatcherは、自己紹介に「非公式で、Nous Researchとは関係ない」と書いているアカウントです。投稿にも、「まだ公開されていなくて、日付も決まっていない」と書いています。\n- **今の公式のやり方：** Hermesの[公式のガイド](https://hermes-agent.nousresearch.com/docs/guides/google-gemini)では、Geminiは今のところ、Google AI StudioのAPIキーで、使った分だけ払って使う形です。\n- **非公式のプラグイン：** 月額のプランのまま使えるようにする、利用者が作ったプラグイン（[antigravity-oauth](https://hermes-agent.nousresearch.com/marketplace/antigravity-oauth)）はもうあります。Googleの公式のコマンドagyのログインを通して使う仕組みです。ただ、Googleが認めたものではありません。HermesWatcherの投稿も、「今のつなぎ方は、Googleが認めたやり方ではない」と言っています。\n\nすまほん!!は、「勝手にほかのソフトから使うと、規約違反でアカウントを止められそうで怖いので、Geminiは使う気にならなかった」と書いています。このプラグインは、ログインしたときにもらう、ログインの代わりになる鍵（OAuthトークン）を、一時フォルダにつないで使う作りです。正式に対応するまでは、ふだん使っているGoogleアカウントで試すのは避けたほうがよさそうです（私の推測です）。",
+    "followUps": []
+  },
+  {
+    "id": "2122226411372974147",
+    "cardId": "r38_58",
+    "datetime": "2026-11-16T16:55:00+09:00",
+    "postedAt": "2026-11-16T16:13:00+09:00",
+    "source": "timeline",
+    "title": "2013年に出たPS4で、90億パラメータ（9B）のAIモデルが、ネットにつながずに1秒あたり31〜39トークンの速さで動きました",
+    "summary": "非公式アプリGarlic LLMが、改造したPS4のGPUでQwen3.5-9Bをオフライン動作。投機的デコードと4bit化で8GBに収めた。確認済みは初代とSlimの11.52のみ。",
+    "tweetId": "2122226411372974147",
+    "tweetIds": [
+      "2122226411372974147"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/gazlog_blog/status/2122226411372974147",
+    "author": {
+      "handle": "gazlog_blog",
+      "name": "ギャズログ | GAZLOG"
+    },
+    "via": null,
+    "text": "PlayStation 4でLLMを動かす非公式アプリ「Garlic LLM」が公開\nPS5の56〜71%の速さで動作\n\n2トークン先を予測する投機的デコードで、狭いメモリ帯域をカバー\n\n一方で8GBのメモリは9Bのモデルでほぼ満杯で中古PS4にAI需要が向かう可能性は低く\n\n[gazlog.jp/entry/ps4-can-…](https://gazlog.jp/entry/ps4-can-run-qwen3-5-9b-with-a-catch/)",
+    "images": [],
+    "deepDive": "#2013年に出たPS4で、90億パラメータ（9B）のAIモデルが、ネットにつながずに1秒あたり31〜39トークンの速さで動きました\n[GAZLOGの投稿](https://x.com/gazlog_blog/status/2122226411372974147)で知りました。個人が作った非公式のアプリ「Garlic LLM」が、PS4のGPU（画像の処理などを受け持つ部品）で、Qwen3.5-9Bをネットなしで動かしています。会話は1秒あたり31〜39トークン、コードを書かせると最大43トークンの速さで、一度に1万6000トークンまで扱えます（[GAZLOGの記事](https://gazlog.jp/entry/ps4-can-run-qwen3-5-9b-with-a-catch/)、[GitHub](https://github.com/leonardo-alegria/garlic-llm)）。\n- **GPUの動かし方：** PS4には、GPUに計算をさせるための公式の仕組み（API）がありません。そこで、計算のプログラムを自分で書いて、GPUへの命令もアプリが自分で組み立てて、直接動かしています。\n- **速さの上限：** AIは、1トークン作るたびに、モデルのデータ（重み）を全部メモリから読み出します。なので、速さの上限は、メモリから1秒に読める量（176GB）を、モデルの大きさ（約4.6GB）で割った数になって、1秒あたり約38トークンです。ただ、ふつうに1トークンずつ作ると、1秒あたり約22トークンしか出ませんでした。\n- **速くする工夫：** そこで、先の2トークンを予想しておいて、あとからまとめて確かめるやり方（投機的デコード）を使っています。重みを1回読むあいだに、最大3トークンまで決められるので、上限の近くまで速くなりました。\n- **メモリに収める工夫：** PS4のメモリは8GBしかありません。そこで、重みのほとんどを4bitに小さくして、それぞれの層でいちばん大きい2つの行列だけは、さらに3bitまで小さくしています。AIが読んだ文章を覚えておく記憶（アテンションのキャッシュ）も、4bitに詰めています。\n- **ほかの機能：** 声で会話したり、AIが書いたプログラム（MicroPython）を、その場でPS4で動かしたりもできます。\n\n動かせるのは、改造して制限を外したPS4（GoldHEN）だけです。動くのが確かめられているのは、初代とSlimで、システムのバージョンが11.52のものだけです。8GBのメモリでは9Bがほぼ限界なので、AIを動かすために中古のPS4が売れる、ということはあまりなさそうだ、と記事は見ています。AIの速さは、メモリから読み出す速さと、メモリの大きさで決まる、ということがよく分かる例です。",
+    "followUps": []
+  },
+  {
+    "id": "2122177576219312526",
+    "cardId": "r38_56",
+    "datetime": "2026-11-16T15:54:00+09:00",
+    "postedAt": "2026-11-16T12:58:56+09:00",
+    "source": "timeline",
+    "title": "マッチングアプリのペアーズを運営するエウレカが、社内で作ったAIエージェント「Pairs Navi」の仕組みを公開しました。エージェントには本物の鍵を持たせない作りです",
+    "summary": "会話ごとに使い捨てサンドボックスを立て、出口のagentgatewayだけが本物の鍵を付ける。許可した相手を通した持ち出しは残る課題（私の推測）。",
+    "tweetId": "2122177576219312526",
+    "tweetIds": [
+      "2122177576219312526"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/fukubaka0825/status/2122177576219312526",
+    "author": {
+      "handle": "fukubaka0825",
+      "name": "Nari"
+    },
+    "via": null,
+    "text": "ペアーズの内製 Background Agent「Pairs Navi」の概要編を書きました！\n\n全社員向けの General Agent と開発向けの Engineering Agent を、Temporal + EKS + agentgateway の基盤で動かしてます。\n\nAdvent Calendar で、それぞれどう活用されてるかの具体的な話をします！",
+    "images": [
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HXN88WMaAAAqj9H.png"
+      }
+    ],
+    "deepDive": "#マッチングアプリのペアーズを運営するエウレカが、社内で作ったAIエージェント「Pairs Navi」の仕組みを公開しました。エージェントには本物の鍵を持たせない作りです\nエウレカで、AIを動かすための土台を担当しているNariさんの[投稿](https://x.com/fukubaka0825/status/2122177576219312526)で知りました。記事の本文は[Medium](https://medium.com/eureka-engineering/ai-agent-pairs-navi-overview-cd1bd92daec6)にあります。Pairs Naviは、裏で自動で仕事を進めるタイプのエージェントです。\n\nエージェントは2つだけです。社員みんなが使う「General」と、開発の人向けの「Engineering」です。Engineeringは、コードの変更の提案（プルリクエスト）を作ったり、監視サービスのDatadogが出す警告（アラート）を最初に調べたりします。仕事ごとの違いは、次の3つの組み合わせで作っています。\n- **動き出すきっかけ：** 何をきっかけに仕事を始めるか\n- **進め方：** どの手順で仕事を進めるか（プラグインやスキル）\n- **つなぐ先：** どのサービスやツールを使うか（MCPやコマンドラインのツール）\n\n動かす土台は、次のとおりです。\n- **作業する場所：** Amazonのサービス（EKS）の上で、会話ごとに、使い終わったら捨てる専用の作業場所（サンドボックス）を作ります。\n- **途中から続ける仕組み：** Temporalというツールで、どこまで進んだかや、人の返事を待っていることを記録します。動かしているサーバーが入れ替わっても、続きから始められます。\n- **外との通信：** [agentgateway](https://github.com/agentgateway/agentgateway/)が、AI、ツール、ほかのエージェントとの通信の間に入ります。ここで、相手が本物か、使ってよい権限があるかを確かめて、通信を見張ります。agentgatewayは、Linux Foundationという団体に寄付された、オープンソースのソフトです。\n\nいちばんおもしろいのは、ログインのための鍵の扱いです。作業場所には、偽物の鍵しか置きません。外に出られる出口はagentgatewayだけで、許可された相手に送るときだけ、本物の鍵をつけて送ります。AIへの指示に紛れ込ませた悪い命令（プロンプトインジェクション）でエージェントがだまされても、手元に本物の鍵がないので、盗まれません。\n\n返信では、こんな指摘がありました。「鍵は漏れなくても、許可された相手を通して、データを外に持ち出されるのでは」（[Vikramさんの返信](https://x.com/Vikramaditya_V1/status/2122214180019446008)）。Nariさんは、こう答えています。「送り先は、決めたルールで機械的に確かめている。送る中身は、Claude Codeの自動モードなど、別の仕組みで確かめている」（[Nariさんの返信](https://x.com/fukubaka0825/status/2122214907605307845)）。エージェントに秘密を持たせない作りにしても、許可した相手を通した持ち出しは残ります。これをどこまで防げるかが、次の課題になりそうです（私の推測です）。",
+    "followUps": []
+  },
+  {
+    "id": "2122162897799561527",
+    "cardId": "r38_55",
+    "datetime": "2026-11-16T14:49:00+09:00",
+    "postedAt": "2026-11-16T12:00:37+09:00",
+    "source": "timeline",
+    "title": "「Antigravityを使うには、Gemini Enterpriseの契約が必要」というGoogleの営業の説明は、公式の案内と食い違っています",
+    "summary": "個人のGoogleアカウントは今も無料プランで使える。Enterpriseが必要なのは会社管理アカウントで仕事に使うときだけ。11/18の無料プラン変更は第三者サイトの情報で、公式発表は未確認。",
+    "tweetId": "2122162897799561527",
+    "tweetIds": [
+      "2122162897799561527"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/connect24h/status/2122162897799561527",
+    "author": {
+      "handle": "connect24h",
+      "name": "connect24h"
+    },
+    "via": null,
+    "text": "Googleの営業を称する方から以下の指摘、\n「Antigravityの利用にはGemini Enterpriseが必須になります。ただし、既存ユーザーはそのまま利用できます」\nなんでや！そんなわけあるかいな。\nGoogle公式サイトでは、今も無料プランやGoogle AI Proでの利用が案内されている。agy CLI使うのもEnterprise必須ってか？企業向けの契約条件と、Antigravity自体の利用条件を混同してないか？\n少なくとも、公式情報と説明が食い違っている。Googleさんもちゃんと外部委託した営業電話、ちゃんとコントロールしたほうが良いとおもう。\n[antigravity.google/pricing/](https://antigravity.google/pricing/)",
+    "images": [],
+    "deepDive": "#「Antigravityを使うには、Gemini Enterpriseの契約が必要」というGoogleの営業の説明は、公式の案内と食い違っています\nAntigravityはGoogleのAIを使ったコードエディタで、Gemini EnterpriseはGoogleの会社向けのAIのプランです。[connect24hさんの投稿](https://x.com/connect24h/status/2122162897799561527)によると、Googleの営業を名乗る人から、「Antigravityを使うにはGemini Enterpriseが必須で、今使っている人はそのまま使える」と言われたそうです。\n\n公式の案内では、次のようになっています（[よくある質問](https://antigravity.google/docs/faq/)、[料金](https://antigravity.google/pricing/)、[会社向けの版の発表](https://antigravity.google/blog/antigravity-enterprise/)）。\n- **個人のGoogleアカウント：** 今も、無料のプランで使えます。有料のGoogle AI ProやUltraにすると、使える量が増えます。\n- **会社が管理するアカウント：** Google Workspaceのような会社のアカウントで仕事に使うときだけ、Gemini Enterpriseが必要です。\n\n投稿した人の「会社向けの契約の条件と、ごっちゃになっているのでは」という見方は、公式の案内と合っています。\n\nほかに、料金をまとめているサイト（[Whizi](https://whizi.io/resources/antigravity-pricing/)）には、「11/18からは、無料のプランでエージェントに使えるモデルがGemini 3.8 Flashだけになって、Claude 4.6とGPT-OSSは選べなくなる」と書かれています。ただ、公式の発表はまだ見つかっていません。",
+    "followUps": []
+  },
+  {
+    "id": "2122184794209714368",
+    "cardId": "r38_54",
+    "datetime": "2026-11-16T13:48:00+09:00",
+    "postedAt": "2026-11-16T13:27:37+09:00",
+    "source": "timeline",
+    "title": "VercelのCEOのギジェルモ・ラウチさんが、Xの投稿をブラウザなしで画像（PNG）にするツール「xeet」を公開しました",
+    "summary": "RustとWebAssemblyで、ブラウザもネットも使わず約1ミリ秒で描く。通信は呼び出す側が渡したfetchだけを通る。外へデータが漏れにくい作り（私の推測）。",
+    "tweetId": "2122184794209714368",
+    "tweetIds": [
+      "2122184794209714368"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/rauchg/status/2122184794209714368",
+    "author": {
+      "handle": "rauchg",
+      "name": "Guillermo Rauch"
+    },
+    "via": null,
+    "text": "Introducing 𝚡𝚎𝚎𝚝: [xeet-rs.vercel.app](http://xeet-rs.vercel.app).\n\nA hermetic, pixel-perfect X post renderer in safe Rust / wasm. Zero browser, network, filesystem, system fonts. Renders a post to PNG in ~1ms (and 0.4 ms for @jack's \"setting up my twttr\" 😁).\n\nX is the global town square, and the medium is the message. Being able to preview what things will look like before posting is great for both humans and agents.\n\nRendering with xeet is is 100x-1000x faster than booting up a browser and taking a screenshot, yet it's just as accurate.\n\nIt reproduces Blink & HarfBuzz text shaping, 1/64px line breaking, RTL bidi, 28 Chirp font subsets, CJK/Math/Emoji fallbacks, \"Show more\" rules, etc. It's the kind of thing that would be wildly impractical, if not impossible, for a human engineer to pull off.\n\nExcept 𝚡𝚎𝚎𝚝 is structured as an \"autorepo.\" An oracle boots up Chrome, and verifies tens of thousands of text layout rules. A CI canary then watches the evolution of the original, and files signed PRs for agents to act on. It was conceived from the ground up around 'verification engineering', and the result speaks for itself.\n\nEnjoy!",
+    "images": [
+      {
+        "type": "video_preview",
+        "url": "https://pbs.twimg.com/amplify_video_thumb/2122179763309883393/img/lpUKKhwQvbgHkqUg.jpg"
+      }
+    ],
+    "deepDive": "#VercelのCEOのギジェルモ・ラウチさんが、Xの投稿をブラウザなしで画像（PNG）にするツール「xeet」を公開しました\n[ラウチさんの投稿](https://x.com/rauchg/status/2122184794209714368)（13:27、日本時間）で知りました。xeetは、Xの投稿を、X上と同じ見た目の画像にします。安全に書かれたRustのコードだけでできていて、WebAssembly（ブラウザやサーバーで動かせるプログラムの形式）でも動きます。ブラウザも、ネットも、ファイルも、パソコンに入っているフォントも使わずに、1件あたり約1ミリ秒で画像にできるそうです（投稿より）。\n\n[xeetの公式サイト](https://xeet-rs.vercel.app)によると、文字の並べ方、右から左へ書く言葉への対応、画像にする作業まで、すべて自前で作っています。\n- **中身：** WebAssemblyの本体は、圧縮すると3MBより小さく、その中に、Xのフォント、アイコン、レイアウトの決まりが入っています。絵文字、日本語、数式、アラビア語、ヘブライ語のフォントは、6つに分けて同時に読み込みます。\n- **見た目の正確さ：** Chromeと比べて、13,440通りの文字の並べ方で、行が変わる位置が1つもずれませんでした。リンクの紹介の表示（リンクカード）は、192通りすべてが同じでした。\n- **毎回同じ結果：** Linux、macOS、WebAssemblyのどれで作っても、できあがる画像のデータが1バイトも違わないそうです。\n- **ネットとの関わり：** 画像を作るrender()は、ネットにつながらずに動きます。x.comのURLから画像を作るときは、先にresolve()で投稿のデータを集めます。このときのネットの通信は、すべて呼び出す側が渡したfetch（ネットからデータを取ってくる関数）を通るので、xeetが自分で外につなぐことはありません。\n- **入手方法：** npm（JavaScriptの部品を配る仕組み）で、@xeet/coreとして配られています。\n\nブラウザを画面なしで動かして画像を作るのと比べると、外とつながる部分がほとんどありません。中身を確かめていない投稿を画像にしても、それをきっかけに外へデータが送られる心配がずっと小さい作りです（私の推測です）。",
+    "followUps": []
+  },
+  {
+    "id": "2122164687827841114",
+    "cardId": "r38_52",
+    "datetime": "2026-11-16T13:07:00+09:00",
+    "postedAt": "2026-11-16T12:07:44+09:00",
+    "source": "timeline",
+    "title": "データベースのPostgreSQL 19の公開が遅れたのは、AIがバグを見つけすぎたからだ、という話です",
+    "summary": "β4で目玉機能を取り下げて公開を延期。11/19公開予定のRC2と同時に、サポート中の版で脆弱性52件とバグ140件以上を修正。ほかのOSSでも起きそう（私の推測）。",
+    "tweetId": "2122164687827841114",
+    "tweetIds": [
+      "2122164687827841114"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/publickey/status/2122164687827841114",
+    "author": {
+      "handle": "publickey",
+      "name": "Publickey"
+    },
+    "via": null,
+    "text": "PostgreSQL 19リリース延期の背景。β4で多くの新機能取り下げが発生、原因はAIによるコードレビューか\n[publickey1.jp/blog/26/postgr…](https://www.publickey1.jp/blog/26/postgresql_194ai.html)",
+    "images": [],
+    "deepDive": "#データベースのPostgreSQL 19の公開が遅れたのは、AIがバグを見つけすぎたからだ、という話です\n[Publickeyの投稿](https://x.com/publickey/status/2122164687827841114)で知りました。PostgreSQLは、毎年9〜10月に大きな新しい版を出してきました。今年の19では、9月下旬のテスト版（ベータ4）で、目玉の機能をまとめて取り下げて、公開を延ばしました（[Publickeyの記事](https://www.publickey1.jp/blog/26/postgresql_194ai.html)）。取り下げたのは、次のような機能です。\n- SQL/PGQ（データのつながりをグラフとしてたどる問い合わせ）\n- データが壊れていないか確かめる仕組み（チェックサム）を、動かしたまま入れたり切ったりできる機能\n- 期間を決めてデータを更新したり消したりするFOR PORTION OF\n- 分けて持っているテーブル（パーティション）を、くっつけたり分けたりする機能\n\nPostgreSQLのコードを取り込む権限を持つ開発者（コミッター）のピーター・アイゼントラウトさんは、[ブログ](http://peter.eisentraut.org/blog/2026/10/09/the-reverts-will-continue-until-morale-improves)で次のように書いています。「めったに起きない場合のバグは、前なら5年かけて少しずつ直していた。それが今は、AIによるコードのチェックですぐに見つかって、40件ほどの不具合のリストを前にすることになる」。同じくコミッターのロバート・ハースさんも、「[Postgres 19 is late, and it's AI's fault](http://rhaas.blogspot.com/2026/10/postgres-19-is-late-and-its-ais-fault.html)」（Postgres 19が遅れたのはAIのせい）という記事で、AIで見つけたバグの報告が一気に届いて、コミッターが直すのに追われた、と説明しています。\n\n公式の発表では、11/12に、正式版の直前の版（RC2）が出ています。正式な公開は、11/19の予定です。同じ日の更新では、今サポートしているそれぞれの版で、52件のセキュリティの弱点と、140件以上のバグが直されました（[PostgreSQL公式](https://www.postgresql.org/about/news/postgresql-187-1712-1616-1520-1425-and-19-rc-2-released-3442/)）。AIは、弱点を見つけて守りを固める道具にもなっています。その分、新しい機能を出すのが遅れる、という分かりやすい例です。ほかのオープンソースのソフトでも、同じことが起きそうです（私の推測です）。",
+    "followUps": []
+  },
+  {
+    "id": "2122164626309947528",
+    "cardId": "r38_53",
+    "datetime": "2026-11-16T13:07:00+09:00",
+    "postedAt": "2026-11-16T12:07:29+09:00",
+    "source": "timeline",
+    "title": "Cloudflareが、AIエージェントのためのブラウザ「Kitesurf」を、オープンソースにしました",
+    "summary": "Chromiumを使わずCloudflare Workers上で動くヘッドレスブラウザ。Apache 2.0で公開。公式ブログで確認できた効率の表現は「より少ないCPUとメモリ」まで。",
+    "tweetId": "2122164626309947528",
+    "tweetIds": [
+      "2122164626309947528"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/publickey/status/2122164626309947528",
+    "author": {
+      "handle": "publickey",
+      "name": "Publickey"
+    },
+    "via": null,
+    "text": "Cloudflare、AI専用でタブやテーマや拡張などない軽量ヘッドレスブラウザ「Kitesurf」、オープンソースで公開\n[publickey1.jp/blog/26/cloudf…](https://www.publickey1.jp/blog/26/cloudflareaikitesurf.html)",
+    "images": [],
+    "deepDive": "#Cloudflareが、AIエージェントのためのブラウザ「Kitesurf」を、オープンソースにしました\n[Publickeyの投稿](https://x.com/publickey/status/2122164626309947528)で知りました。Kitesurfは、8月に発表された、画面を表示しないブラウザ（ヘッドレスブラウザ）です。エージェントがWebを操作するために作られています。Chromeのもとになっているブラウザ（Chromium）を使わずに、Cloudflareのサーバーでプログラムを動かすサービス（Cloudflare Workers）の上で、そのまま動きます。\n\n今回、誰でも使えて改造もできるライセンス（Apache 2.0）で、[GitHub](https://github.com/cloudflare/kitesurf)に公開されました。Cloudflareの開発用のツール（Wrangler）を使って、自分のパソコンで動かすことも、自分のCloudflareのアカウントに置いて動かすこともできます（[Cloudflare公式ブログ](https://blog.cloudflare.com/kitesurf-open-source/)）。\n\n[最初の発表](https://blog.cloudflare.com/kitesurf/)によると、中身はおもにRustというプログラミング言語で書かれていて、部品を分けて使っています。\n- **ページの読み込みと描画：** Blitzが、HTMLを読み取って、ページの組み立てと表示までを受け持ちます。\n- **見た目のデザイン：** Styloが、CSS（文字の大きさや色などの指定）を受け持ちます。\n- **プログラムの実行：** Cloudflare WorkersのJavaScriptの仕組みでは動かせない一部の書き方（evalなど）を、Boaが受け持ちます。\n\nChromeを外から操作するための仕組み（CDP）にも対応しているので、ブラウザを自動で動かすときによく使うライブラリ（Puppeteer）から、そのまま操作できます。9月には、Webサイトがエージェント向けに機能を差し出すための新しい仕組み（WebMCP）にも対応しました。\n\nPublickeyの記事には、「Chromiumと比べて、CPUとメモリを3〜7倍うまく使える」という数字が出てきます。ただ、今回の公式ブログで確かめられたのは、「より少ないCPUとメモリで動く」という書き方だけでした。",
+    "followUps": []
+  },
+  {
     "id": "2122157598246097072",
     "cardId": "r38_51",
     "datetime": "2026-11-16T11:55:00+09:00",
@@ -21,7 +253,17 @@
     "text": "DOCOMOの技術的転落がひどい。\nドコモ、また「5G SA」で通信障害　今月3回目【更新】 - ITmedia NEWS [itmedia.co.jp/news/article/2…](https://www.itmedia.co.jp/news/article/2611/16/2000003218/)",
     "images": [],
     "deepDive": "#ドコモの「5G SA」で、今月3回目の通信障害が起きています\n5G SAは、4Gの設備を使わず、5Gだけで動く方式です。[connect24hさんの投稿](https://x.com/connect24h/status/2122157598246097072)と[CNET Japan](https://japan.cnet.com/article/35254932/)によると、11/16の10時2分から、全国の5G SAの利用者で、通話、データ通信、SMSがつながりにくくなっています。\n- **前の2回：** 11/5は約14時間、11/11は約8時間43分続きました。どちらも、5G SAの利用者を受け持つ交換機に、通信が集まりすぎたのが原因でした。\n- **今回：** 原因は調べているところです。\n- **影響がないもの：** 4G、ふつうの5G、ドコモの回線を借りている格安SIMは、影響を受けていません。\n- **ドコモの案内：** 端末の設定を4Gに切り替えてから、再起動するか、機内モードをいったんオンにしてオフに戻すように案内しています（[ドコモの障害情報](https://www.docomo.ne.jp/info/network/)）。",
-    "followUps": []
+    "followUps": [
+      {
+        "datetime": "2026-11-16T13:48:00+09:00",
+        "clock": "13:48",
+        "title": "13時の時点で第四報が出ていて、緊急の電話には影響がありません",
+        "text": "[ドコモの発表](https://www.docomo.ne.jp/info/network/kanto/pages/261116_01_m.html)によると、13時の時点で、4回目のお知らせ（第四報）が出ています。原因は、まだ調べているところです。110番や119番などの緊急の電話には、影響がありません。[日経](https://www.nikkei.com/article/DGXZQOUC161OF0W6A111C2000000/)、[朝日新聞](https://www.asahi.com/articles/ASVCJ0P5PVCJULFA003M.html)、NHKも、「今月3回目」と伝えています（[connect24hさんの投稿](https://x.com/connect24h/status/2122181164207427592)）。\n\nタイムラインでは、catatsuyさん（@catatsuy）も、こう書いていました。\n- 5G SAのSIMに変えたが、特に良いことはなかった。\n- 回線は1つにしぼらず、予備の回線を持っておくのがおすすめ。povoなら安く持てる。",
+        "tweetIds": [
+          "2122181164207427592"
+        ]
+      }
+    ]
   },
   {
     "id": "2122149404048232802",
@@ -644,6 +886,19 @@
         "text": "今回は、[@connect24hさん](https://x.com/connect24h/status/2121915535659270588)が「パスキー固定サービスとか、ありえないんですけど」と取り上げていました。\n- **パスキーの導入：** tsumiki証券がパスキーでのログインを始めたのは[2026年6月23日](https://www.tsumiki-sec.com/news/detail/20260623.html)で、株式会社Liquidの「LIQUID Auth Passkey」という仕組みを使っています。パスキーを使わずにIDとパスワードでログインする人には、メールかSMSで届く使い捨てのコードが必須でした。\n- **公式ページの指定：** [公式の案内](https://www.tsumiki-sec.com/passkey/)では、端末ごとに保存先が決められています。iPhoneはiCloudキーチェーン、AndroidとWindowsはGoogleパスワードマネージャーです。さらに、Samsung PassとMicrosoft Authenticatorは推奨しないと、はっきり書かれています。1Passwordだけが外されたわけではありません。\n- **メールの文面：** 「11月12日時点で、推奨と違う環境で登録されている」と書かれていて、そのままだと積立の設定の変更や出金で、パスキーの確認が通らないおそれがあるとしています。\n- **反応：** 「解約する」「全額引き出した」という強い反発のほかに、「メールが詐欺かと思った」という声もあります。一方で、「ほかの証券会社も推奨の保存先は書いている。tsumikiだけが叩かれている」という冷静な見方も出ています。\n\nいきなり「登録し直して」というメールが届けば、フィッシングと見分けにくくなります。パスキーを広めたいはずが、本物のメールまで疑われるのは皮肉です（私の推測です）。",
         "tweetIds": [
           "2121915535659270588"
+        ]
+      },
+      {
+        "datetime": "2026-11-16T15:54:00+09:00",
+        "clock": "15:54",
+        "title": "セキュリティの研究者の高木浩光さんが、「FIDOのいちばんの強みは、構成証明（attestation）なのに、みんな忘れていないか」と書きました",
+        "text": "FIDOは、パスキーのもとになっている、パスワードなしでログインするための決まりです。構成証明は、パスキーを作った機器が、どのメーカーのどの機種かを、証明書をつけて示す仕組みです。\n\n話の流れは、次のとおりです。\n1. **きっかけ：** mary_tubaさんは、パスキーを1Passwordに入れていました。すると、tsumikiから「おすすめの環境と違う」というメールが届きました（[mary_tubaさんの投稿](https://x.com/mary_tuba/status/2121846445775175883)）。\n2. **批判：** スマホのニュースサイトのすまほん!!が、これを「避けたほうがいい証券会社の目印だ」と批判しました（[すまほん!!の投稿](https://x.com/sm_hn/status/2121960940715594116)）。\n3. **反論：** 高木さんは反対に、「パスキーを作る機器を選べることこそ、FIDOの強みだ」と書きました（[高木さんの投稿](https://x.com/HiromitsuTakagi/status/2122156371840053346)）。\n\nパスキーを登録するとき、サービスの側は、機器の種類を表すID（AAGUID）を見て、受け付ける機器を選べます。ただ、iCloudで同期するパスキーは、構成証明を返しません。AAGUIDもすべて0です（[Chromeの開発者向けブログ](https://developer.chrome.com/blog/passkeys-on-icloud-keychain)）。アメリカの国の機関（NIST）が出している本人確認のガイドライン（SP 800-63B-4）も、こう書いています。「構成証明がないことを理由に、一般の人向けのサービスで、同期するパスキーを断るべきではない（SHOULD NOT）」（[NIST](https://pages.nist.gov/800-63-4/sp800-63b/syncable/)）。\n\nXでは、意見が分かれています。\n- **反対：** 「Googleのパスワードマネージャーも、iCloudも、構成証明を返さないのだから、AAGUIDで機器をしぼるのは無理がある」（[shiroicaさん](https://x.com/shiroica/status/2122183581317685324)）\n- **疑問：** 「お金を扱うサービスでも、『断るべきではない』のままでいいのか」（[k_h_a_kさん](https://x.com/k_h_a_k/status/2122185789698449585)）\n\ntsumikiが、実際に何を見てパスキーの保存先を見分けているのかは、分かっていません。[公式のよくある質問](https://www.tsumiki-sec.com/passkey/)にも、まだ「おすすめ」としか書かれていません。\n\ntsumikiは9月に、[こんなお知らせ](https://www.tsumiki-sec.com/news/detail/20260929.html)も出していました。携帯電話の会社のアカウントを乗っ取られて、パスキーを悪用されたとみられる件があったので、気をつけてほしい、という内容です。パスキーの保存先をしぼろうとしているのは、この件があったからかもしれません（私の推測です）。",
+        "tweetIds": [
+          "2121846445775175883",
+          "2121960940715594116",
+          "2122156371840053346",
+          "2122183581317685324",
+          "2122185789698449585"
         ]
       }
     ]
@@ -2649,7 +2904,17 @@
     "text": "Google Antigravity、クラウド上でAIエージェントが働く「リモートエージェント」機能を搭載。就業時間外でもAIエージェントは働き続ける\n[publickey1.jp/blog/26/google…](https://www.publickey1.jp/blog/26/google_antigravityaiai.html)",
     "images": [],
     "deepDive": "#Google Antigravityに、パソコンを閉じてもクラウドで作業を続ける「リモートエージェント」が入りました\n[Publickey](https://www.publickey1.jp/blog/26/google_antigravityaiai.html)によると、エージェントはGoogleが管理する隔離されたクラウドの仮想マシンで動きます。作業を頼んだらパソコンを閉じてもよく、権限の承認はスマホからできます。戻ってくると、テストを通ったプルリクエストができています。\n\n[公式ドキュメント](https://antigravity.google/docs/remote-agents/)によると、エージェントが使えるのは、GitHubのリポジトリ、Googleドライブ、アップロードしたファイルだけです。手元のファイルやパソコン上のサーバーには触れません。対象は、個人アカウントのGoogle AI ProとUltraだけです。手元の秘密情報には届かない一方で、GitHubやドライブの権限をクラウドに預けることになります。",
-    "followUps": []
+    "followUps": [
+      {
+        "datetime": "2026-11-16T16:55:00+09:00",
+        "clock": "16:55",
+        "title": "リモートエージェントについて、新しく分かったことがあります",
+        "text": "[kodukiさんの投稿](https://x.com/koduki/status/2122227053034700826)と[公式のドキュメント](https://antigravity.google/docs/remote-agents/)で、前回お伝えしていない点です。\n- **似た機能との違い：** 手元のパソコンにつないで操作する「Remote Control」とは別の機能です。リモートエージェントは、手元のパソコンの電源が入っていなくても動きます。\n- **起動のしかた：** コマンドではagy --remote-agentで始められます。\n- **使えないプラン：** 無料のプラン、Google AI Plus、会社のアカウント（WorkspaceやGoogle Cloud）では使えません。\n\n同じころの[更新の記録](https://antigravity.google/docs/changelog/)によると、ほかのコーディングエージェントの設定を、そのまま取り込める機能も入りました。取り込めるのは、つないでいるツール（MCPサーバー）、スキル、手伝い役のエージェント（サブエージェント）の設定です。リモートエージェントは、GitHubの権限を持ったまま、手元のパソコンの外で動き続けます。なので、どのリポジトリを触らせるかと、スマホで気軽に押せてしまう許可のボタンが、守りの要になりそうです（私の推測です）。",
+        "tweetIds": [
+          "2122227053034700826"
+        ]
+      }
+    ]
   },
   {
     "id": "2121005662817976486",
@@ -2908,6 +3173,15 @@
         "tweetIds": [
           "2121857490556162278",
           "2121763882717085781"
+        ]
+      },
+      {
+        "datetime": "2026-11-16T14:49:00+09:00",
+        "clock": "14:49",
+        "title": "この障害に乗じた、フィッシングメールが出回っています",
+        "text": "[サイバー予報さんの投稿](https://x.com/cyber_forecast/status/2122199463481815045)で知りました。偽のメールは、「障害のせいで届かずに止まっているメールが、24時間以内にすべて消えます」と脅します。そして、「Restore messages」（メッセージを元に戻す）というボタンから、偽のページに連れていきます。\n\nMicrosoftのセキュリティの調査チーム（Microsoft Threat Intelligence）も、この攻撃を確認しています（[iTnews](https://www.itnews.com.au/news/phishers-quick-to-exploit-extended-m365-outage-630347)、[Mimecast](https://www.mimecast.com/blog/attackers-exploit-the-microsoft-365-outage-with-fake-held-messages-lures/)）。手口は、次のとおりです。\n- **本物に見せる工夫：** Microsoftがサービスの状態を知らせるメール（サービス正常性通知）のふりをします。本文には、本物の障害の番号「EX1550543」が書かれています。\n- **送り元：** 3種類のドメインから送られています。\n- **だます流れ：** メールを大量に送るためのサービス（SendGrid）のリンクを通して、別のサイトに飛ばします。そこでIDとパスワードを入力させて、盗みます。\n\n本物の障害の番号が入っていると、だまされやすくなります。日本語の偽メールも、これから出てきそうです（私の推測です）。",
+        "tweetIds": [
+          "2122199463481815045"
         ]
       }
     ]
@@ -5123,7 +5397,18 @@
     "text": "Qwen4 キタ",
     "images": [],
     "deepDive": "#Qwen4-Maxのプレビューが発表されました。ウェイト公開やライセンスは、まだ明らかになっていません\n今回は新しいいいねはなく、タイムラインから2件です。[GOROmanさんの投稿](https://x.com/GOROman/status/2120336086732009496)が引用していた[Qwen公式の発表](https://x.com/Alibaba_Qwen/status/2120335993643684315)は、今日11:01（日本時間）に出たばかりです。\n\n公式は、知識・世界理解・コーディング・エージェント能力の向上をうたっています。Qwen4-Maxのプレビューは、AlibabaのToken Plan、QwenWork、Qoder、Qwenアプリ、QwenStudioで先行提供されるとしています。\n\nただし、今回の発表ポストには、ベンチマークの数値、APIのモデルID、ウェイトの公開予定、ライセンスは載っていません。「Qwen4が発表された」ことと「ローカルで動かせるモデルが公開された」ことは別です。\n\n現時点では性能の優劣を判断するより、プレビューの提供範囲と、今後のモデルカード・ライセンスを確認する段階です。エージェント用途では、ツール操作の成功率だけでなく、長い作業で指示や権限の範囲を守れるかも見たいところです。",
-    "followUps": []
+    "followUps": [
+      {
+        "datetime": "2026-11-16T15:54:00+09:00",
+        "clock": "15:54",
+        "title": "正式発表が出て、モデルの大きさや料金が分かりました。小さいサイズのQwen4は、中身（重み）を公開する予定です",
+        "text": "[Qwenの投稿](https://x.com/Alibaba_Qwen/status/2122148127520289151)で知りました。中心は、中身を公開しないいちばん上のモデル、Qwen4-Maxです（[Alibaba Cloudの公式ブログ](https://www.alibabacloud.com/blog/alibaba-unveils-qwen4-max-new-ai-teammate-for-work-creativity-and-discovery_603783)）。\n- **大きさ：** パラメータは全部で2.4兆個です。ただ、得意分野ごとに分かれた部分のうち一部だけを使う作り（MoE）なので、1トークンごとに使うのは710億個です。\n- **扱えるもの：** 画像や動画も、そのまま読み取れます。一度に100万トークンまで読めます。\n- **料金：** 100万トークンあたり、入力が1.5ドル、出力が4.5ドルです。\n\n小さいサイズのモデルについては、「中身も公開する」という一文があるだけでした。\n\n「270億パラメータ（27B）のモデルが、16GBのメモリで動く」という話は、Qwenの公式の発表ではありません。AIモデルを軽くして配っているUnslothの[投稿](https://x.com/UnslothAI/status/2122156142860386600)に書かれていた数字で、根拠は書かれていません。Unslothは、データを小さくした（量子化した）版を出すと予告しています。なので、この数字は量子化した版の話だと思います（私の推測です）。27Bのモデルを4bitに小さくすると、単純に計算して、重みだけで約13.5GBになります。\n\nいつ公開するのかと、どんなライセンスで公開するのかは、まだ分かっていません。「11/19に公開」という話も流れていますが、根拠のないうわさとされています。ひとつ前の世代のQwen3.8-27Bは、誰でも使えて改造もできるライセンス（Apache 2.0）でした。AIモデルを配るサイトのHugging Faceにも、まだ中身はありません。手元で動く強いモデルは、秘密の情報を外に出さずにAIを使える方法です。ただ、量子化した版を誰から手に入れるかは、途中で悪いものを仕込まれないかの問題（サプライチェーンの問題）になります。",
+        "tweetIds": [
+          "2122148127520289151",
+          "2122156142860386600"
+        ]
+      }
+    ]
   },
   {
     "id": "2120333016195285384",

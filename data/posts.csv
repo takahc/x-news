@@ -1,4 +1,58 @@
 id,datetime,source,author,url,text,summary
+2122251724564070518,2026-11-16T17:55:00+09:00,timeline,SakanaAILabs,https://x.com/SakanaAILabs/status/2122251724564070518,"最新の金融資格試験を用いた日本語金融ベンチマーク「JFinBench」を公開
+
+ブログ：[sakana.ai/jfinbench](https://sakana.ai/jfinbench)
+
+Sakana AIは、日本の金融分野に強いAIの開発に向けて、LLMの能力を評価するベンチマーク「JFinBench」を構築しました。公認会計士試験、税理士試験、FP技能検定1級など、日本の6つの金融資格 試験の2026年版から作成した全321問で、選択式だけでなく、税額の計算や論述、図面を読み取る問題も含みます。
+
+税制や会計基準は頻繁に改正されるため、金融のベンチマークは最新の問題で更新し続けることが重要です。JFinBenchの構築では、試験PDFの変換をコーディングエージェントが担い、人間が全問を検証する「human-in-the-loop agentic pipeline」を提案しました。目視による検証は約12時間で済み、新しい試験が実施されるたびに少ない労力でベンチマークを更新できます。
+
+最新の12のLLMを評価したところ、主要なベンチマークではプロプライエタリモデルに肩を並べつつあるオープンウェイトモデルも、JFinBenchでは大きな差があり、既存のベンチマークでは見えない差が浮き彫りになりました。失敗の主な原因は計算ではなく、日本の制度に関する知識の不足でした。ターミナルとWebを使える設定では、モデルが法令を調べて知識を補うことでスコアが上がりましたが、差は残りました。
+
+今回の結果は、日本固有の法令や会計基準の知識をモデルにどう獲得させるか、外部の知識を検索・活用するエージェントをどう設計するかが重要であることを示しています。JFinBenchで得た知見を活かしながら、日本の金融分野へのAI実装に向けた研究開発を進めていきます。
+
+論文：[arxiv.org/abs/2611.18130](https://arxiv.org/abs/2611.18130)
+データセット：[huggingface.co/datasets/Sakan…](https://huggingface.co/datasets/SakanaAI/JFinBench)
+GitHub：[github.com/SakanaAI/JFinB…](https://github.com/SakanaAI/JFinBench) 🐟",公認会計士・税理士・FP1級など6試験から321問。Claude Fable 5が95.8点で首位。公開モデルの最高はKimi K3.1 Proの83.4点。税理士は最高でも79.4点。
+2122238316246667381,2026-11-16T17:55:00+09:00,timeline,connect24h,https://x.com/connect24h/status/2122238316246667381,"すごいんだけど、今のスピード感とコストメリットに全く対応できないのでは。
+NTT、外部にソースコードを送ることなく脆弱性を見つけるソブリンAI技術を開発 [it.impress.co.jp/articles/-/300…](https://it.impress.co.jp/articles/-/30004) @itleaders_jpより",自社環境でオープンウェイトモデルを使い、弱点の探し方の知見を手順に組み込む。CyberGymのメモリ破壊150問で成功率は48%から63%に上がった。実コードの誤検知や最先端AIとの差は未記載。
+2122228208905204039,2026-11-16T16:55:00+09:00,timeline,koduki,https://x.com/koduki/status/2122228208905204039,定額でOSS系が使えるようになるのはメッチャ強いがはたして？,元は非公式アカウントHermesWatcher。公式ガイドではGeminiはまだAPIキー課金。非公式プラグインはあるが、常用アカウントで試すのは避けたほうがよさそう（私の推測）。
+2122226411372974147,2026-11-16T16:55:00+09:00,timeline,gazlog_blog,https://x.com/gazlog_blog/status/2122226411372974147,"PlayStation 4でLLMを動かす非公式アプリ「Garlic LLM」が公開
+PS5の56〜71%の速さで動作
+
+2トークン先を予測する投機的デコードで、狭いメモリ帯域をカバー
+
+一方で8GBのメモリは9Bのモデルでほぼ満杯で中古PS4にAI需要が向かう可能性は低く
+
+[gazlog.jp/entry/ps4-can-…](https://gazlog.jp/entry/ps4-can-run-qwen3-5-9b-with-a-catch/)",非公式アプリGarlic LLMが、改造したPS4のGPUでQwen3.5-9Bをオフライン動作。投機的デコードと4bit化で8GBに収めた。確認済みは初代とSlimの11.52のみ。
+2122177576219312526,2026-11-16T15:54:00+09:00,timeline,fukubaka0825,https://x.com/fukubaka0825/status/2122177576219312526,"ペアーズの内製 Background Agent「Pairs Navi」の概要編を書きました！
+
+全社員向けの General Agent と開発向けの Engineering Agent を、Temporal + EKS + agentgateway の基盤で動かしてます。
+
+Advent Calendar で、それぞれどう活用されてるかの具体的な話をします！",会話ごとに使い捨てサンドボックスを立て、出口のagentgatewayだけが本物の鍵を付ける。許可した相手を通した持ち出しは残る課題（私の推測）。
+2122162897799561527,2026-11-16T14:49:00+09:00,timeline,connect24h,https://x.com/connect24h/status/2122162897799561527,"Googleの営業を称する方から以下の指摘、
+「Antigravityの利用にはGemini Enterpriseが必須になります。ただし、既存ユーザーはそのまま利用できます」
+なんでや！そんなわけあるかいな。
+Google公式サイトでは、今も無料プランやGoogle AI Proでの利用が案内されている。agy CLI使うのもEnterprise必須ってか？企業向けの契約条件と、Antigravity自体の利用条件を混同してないか？
+少なくとも、公式情報と説明が食い違っている。Googleさんもちゃんと外部委託した営業電話、ちゃんとコントロールしたほうが良いとおもう。
+[antigravity.google/pricing/](https://antigravity.google/pricing/)",個人のGoogleアカウントは今も無料プランで使える。Enterpriseが必要なのは会社管理アカウントで仕事に使うときだけ。11/18の無料プラン変更は第三者サイトの情報で、公式発表は未確認。
+2122184794209714368,2026-11-16T13:48:00+09:00,timeline,rauchg,https://x.com/rauchg/status/2122184794209714368,"Introducing 𝚡𝚎𝚎𝚝: [xeet-rs.vercel.app](http://xeet-rs.vercel.app).
+
+A hermetic, pixel-perfect X post renderer in safe Rust / wasm. Zero browser, network, filesystem, system fonts. Renders a post to PNG in ~1ms (and 0.4 ms for @jack's ""setting up my twttr"" 😁).
+
+X is the global town square, and the medium is the message. Being able to preview what things will look like before posting is great for both humans and agents.
+
+Rendering with xeet is is 100x-1000x faster than booting up a browser and taking a screenshot, yet it's just as accurate.
+
+It reproduces Blink & HarfBuzz text shaping, 1/64px line breaking, RTL bidi, 28 Chirp font subsets, CJK/Math/Emoji fallbacks, ""Show more"" rules, etc. It's the kind of thing that would be wildly impractical, if not impossible, for a human engineer to pull off.
+
+Except 𝚡𝚎𝚎𝚝 is structured as an ""autorepo."" An oracle boots up Chrome, and verifies tens of thousands of text layout rules. A CI canary then watches the evolution of the original, and files signed PRs for agents to act on. It was conceived from the ground up around 'verification engineering', and the result speaks for itself.
+
+Enjoy!",RustとWebAssemblyで、ブラウザもネットも使わず約1ミリ秒で描く。通信は呼び出す側が渡したfetchだけを通る。外へデータが漏れにくい作り（私の推測）。
+2122164687827841114,2026-11-16T13:07:00+09:00,timeline,publickey,https://x.com/publickey/status/2122164687827841114,"PostgreSQL 19リリース延期の背景。β4で多くの新機能取り下げが発生、原因はAIによるコードレビューか
+[publickey1.jp/blog/26/postgr…](https://www.publickey1.jp/blog/26/postgresql_194ai.html)",β4で目玉機能を取り下げて公開を延期。11/19公開予定のRC2と同時に、サポート中の版で脆弱性52件とバグ140件以上を修正。ほかのOSSでも起きそう（私の推測）。
+2122164626309947528,2026-11-16T13:07:00+09:00,timeline,publickey,https://x.com/publickey/status/2122164626309947528,"Cloudflare、AI専用でタブやテーマや拡張などない軽量ヘッドレスブラウザ「Kitesurf」、オープンソースで公開
+[publickey1.jp/blog/26/cloudf…](https://www.publickey1.jp/blog/26/cloudflareaikitesurf.html)",Chromiumを使わずCloudflare Workers上で動くヘッドレスブラウザ。Apache 2.0で公開。公式ブログで確認できた効率の表現は「より少ないCPUとメモリ」まで。
 2122157598246097072,2026-11-16T11:55:00+09:00,timeline,connect24h,https://x.com/connect24h/status/2122157598246097072,"DOCOMOの技術的転落がひどい。
 ドコモ、また「5G SA」で通信障害　今月3回目【更新】 - ITmedia NEWS [itmedia.co.jp/news/article/2…](https://www.itmedia.co.jp/news/article/2611/16/2000003218/)",11/16 10:02から全国の5G SAで通話・データ・SMSがつながりにくい。11/5と11/11に続く3回目。今回の原因は調査中。4G・ふつうの5G・MVNOは影響なし。
 2122149404048232802,2026-11-16T11:55:00+09:00,timeline,gazlog_blog,https://x.com/gazlog_blog/status/2122149404048232802,"Windows 11のKB5132061へ更新後に起動できない不具合報告が発生
