@@ -85,6 +85,11 @@
     "avatarUrl": "https://pbs.twimg.com/profile_images/1778783034940211200/mpfCJa-k_normal.jpg"
   },
   {
+    "handle": "_lewtun",
+    "name": "Lewis Tunstall",
+    "avatarUrl": "https://pbs.twimg.com/profile_images/2095515242839064576/eWnrVJP7_normal.jpg"
+  },
+  {
     "handle": "_NathanCalvin",
     "name": "Nathan Calvin",
     "avatarUrl": "https://pbs.twimg.com/profile_images/1976484090426634240/YFgYic9h_normal.jpg"
@@ -758,6 +763,11 @@
     "handle": "ftnext",
     "name": "nikkie(にっきー) / にっP",
     "avatarUrl": "https://pbs.twimg.com/profile_images/1870842025689612288/A7d_vwV-_normal.png"
+  },
+  {
+    "handle": "Fugaku_hpci",
+    "name": "スーパーコンピュータ「富岳」(公式)",
+    "avatarUrl": "https://pbs.twimg.com/profile_images/1509691139225391106/eZb93w0O_normal.jpg"
   },
   {
     "handle": "fukku_ai_BD",
@@ -2088,6 +2098,16 @@
     "handle": "rikarends",
     "name": "Rik Arends",
     "avatarUrl": "https://pbs.twimg.com/profile_images/563726395403014145/C2XOSm9R_normal.png"
+  },
+  {
+    "handle": "RIKEN_JP",
+    "name": "理化学研究所（理研）",
+    "avatarUrl": "https://pbs.twimg.com/profile_images/1842751188/riken02_normal.jpg"
+  },
+  {
+    "handle": "RIKEN_RCCS",
+    "name": "理研 計算科学研究センター",
+    "avatarUrl": "https://pbs.twimg.com/profile_images/1556801111863857152/5fOsHiwb_normal.jpg"
   },
   {
     "handle": "rikiyatakehi",

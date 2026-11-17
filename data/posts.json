@@ -1,5 +1,154 @@
 [
   {
+    "id": "2122486542904209643",
+    "cardId": "r38_95",
+    "datetime": "2026-11-17T17:50:00+09:00",
+    "postedAt": "2026-11-17T09:26:40+09:00",
+    "source": "timeline",
+    "title": "スーパーコンピューターの「富岳」に、外から不正に入りこまれました。ほかの機械にログインするための秘密の鍵（SSHの秘密鍵）まで、持ち出された可能性があります。",
+    "summary": "入口は公開のダッシュボード。11/10〜13に侵入。最大4,597人分の名前・メール・IDと、ホームに置いたログイン情報。犯人は盗んだ情報で他システムへの接続を試みた。11/14 4:30に停止。",
+    "tweetId": "2122486542904209643",
+    "tweetIds": [
+      "2122486542904209643"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/RIKEN_JP/status/2122486542904209643",
+    "author": {
+      "handle": "RIKEN_JP",
+      "name": "理化学研究所（理研）"
+    },
+    "via": null,
+    "text": "スーパーコンピュータ「富岳」および「理究（りきゅう）」 への不正アクセスによる個人情報漏えいの可能性について\n\n[riken.jp/pr/news/2026/2…](https://www.riken.jp/pr/news/2026/20261116_2/index.html)",
+    "images": [],
+    "deepDive": "#スーパーコンピューターの「富岳」に、外から不正に入りこまれました。ほかの機械にログインするための秘密の鍵（SSHの秘密鍵）まで、持ち出された可能性があります。\n[理研の投稿](https://x.com/RIKEN_JP/status/2122486542904209643)を、富岳のアカウントがリポストしていました（[理研の公式の発表](https://www.riken.jp/pr/news/2026/20261116_2/index.html)、[ITmedia](https://www.itmedia.co.jp/news/article/2611/17/2000003253/)、[INTERNET Watch](https://internet.watch.impress.co.jp/docs/news/2156895.html)）。\n\n- **何が起きたか：** 11/10〜13に、富岳を動かすためのシステムに、外から入りこまれました。入口になったのは、インターネットに公開されていた、富岳の動き具合を見せるWebページ（ダッシュボード）です。犯人はそこから中のネットワークに入って、いくつものサーバーを操作し、悪いプログラムも仕かけていました。どうやって入りこんだのかは、まだ調べているところです。\n- **もれたかもしれないもの：** 最大で4,597人分の、名前、メールアドレス、ID です。内訳は、富岳の利用者が4,222人、AIの研究に使うスーパーコンピューター「理究」の利用者が375人です。さらに、利用者が自分のフォルダー（ホームディレクトリ）に置いていた、ログインのための情報ももれたかもしれません。これは、理研の外のスーパーコンピューターや、ほかのサービスにつなぐためのものです（SSHの秘密鍵や、サービスを使うための鍵など）。研究のデータも含まれます。\n- **すでに起きていること：** 犯人は、盗んだログインの情報の一部を使って、ほかのシステムにつなごうとしていたことが確かめられています。研究者は、いくつもの大学や研究所のスーパーコンピューターを使い分けていることが多いです。なので、ほかのスーパーコンピューターの研究の環境にも、被害が広がるおそれがあります。\n- **理研の対応：** 11/14の4:30に、富岳を止めました。管理用の鍵を取りかえて、すべての利用者がログインに使う鍵（公開鍵）を使えなくしました。利用者には、富岳に置いていたログインの情報を、つなぐ先ごとに使えなくして、新しく作り直すよう求めています。\n- **再開の条件：** 弱点を直して、サーバーを作り直し、ネットワークの組み方を見直したあとに再開する予定です。「AIを使ったセキュリティの対策」も入れるそうです。\n- **だれが管理していたか：** 富岳の保守や運用は、外の会社に任せていました。\n\n入口は、目立たない公開のWebページでした。でも、本当の被害は、そこに置いてあった秘密の鍵が、ほかの機械への入口になってしまうことです。みんなで使うサーバーの自分のフォルダーに、秘密の鍵をそのまま置かないこと。鍵は使う場所ごとに分けること。この基本の大切さが、よく分かる事件です。",
+    "followUps": []
+  },
+  {
+    "id": "2122590712059568434",
+    "cardId": "r38_94",
+    "datetime": "2026-11-17T16:51:00+09:00",
+    "postedAt": "2026-11-17T16:20:36+09:00",
+    "source": "timeline",
+    "title": "AIのエージェントを毎月約6,000回動かすために、キーボードを使うのをやめた人の話です。",
+    "summary": "AndyさんのZenn。Orcaのgit worktreeで衝突を避ける。ClaudeとCodexを月約6,000回。進み具合の記録、質問の可視化、選択肢を選ぶだけ。速さ100倍は本人の感じ方。",
+    "tweetId": "2122590712059568434",
+    "tweetIds": [
+      "2122590712059568434"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/tnagasawa/status/2122590712059568434",
+    "author": {
+      "handle": "tnagasawa",
+      "name": "長沢智治, PST, AKPT ― 新刊『アジャイルのカタ』"
+    },
+    "via": null,
+    "text": "いいね！（Orca使いとして）\n\n毎月6,000 AI Agentsを捌くためにキーボードを捨てた話｜Andy [zenn.dev/andoshin11/art…](https://zenn.dev/andoshin11/articles/ba68b39ef9a8ce) #zenn",
+    "images": [],
+    "deepDive": "#AIのエージェントを毎月約6,000回動かすために、キーボードを使うのをやめた人の話です。\n[tnagasawaさんの投稿](https://x.com/tnagasawa/status/2122590712059568434)で知りました。元は、カーナベル株式会社で開発をまとめているAndyさんが、11/17にZennに書いた[記事](https://zenn.dev/andoshin11/articles/ba68b39ef9a8ce)です。tnagasawaさんも、「Orcaを使っている者として」すすめています。\n\n[Orca](https://orca.dev/)は、エージェントにプログラムを作らせるための道具（エージェント開発環境）です。作業ごとに、`git worktree`という仕組みで、プログラムの別のコピーと、別の作業の流れ（ブランチ）を用意します（[説明](https://orca.dev/docs/model/worktrees)）。なので、たくさんのエージェントを同時に動かしても、おたがいの作業がぶつかりません。Andyさんは8月から、すべての作業をこのやり方にしたそうです。\n- **動かしている量：** ClaudeとCodexを、1か月に約6,000回、1日に200回ほど動かしています。\n- **多い日：** 1日に500〜600回、プログラムの変更を保存（コミット）しています。1台のMac miniに、作業用のコピーが68個も同時にあるそうです。\n\n工夫は、3つあります。\n1. **「今どこまでやったか」を見えるようにする：** Claude Codeの、作業の予定を記録する機能（`TaskCreate`や`TaskUpdate`など）を使います。この機能は、`CLAUDE_CODE_ENABLE_TODO_TOOLS=1`という設定でオンになります。エージェントへの指示を書いたファイル（CLAUDE.md）には、「3手以上かかる作業は、かならず3〜7つの手順に分けて記録すること」と書いています。記録は`~/.claude/tasks`にJSONの形で残ります。それを、自分で作ったOrcaの追加機能（プラグイン）で見張って、画面の横に出しています。Codexのほうは、このプラグインにMCPという仕組みでつないで、進み具合を知らせてもらっています。\n2. **「AIが人に何を聞きたいか」を見えるようにする：** 止まっている作業の中から、人への質問（`AskUserQuestion`）の答えを待っているものを、記録のファイル（.jsonl）から探して表示します。さらに、作業が1つ終わるたびに、「次にやるべきこと」を理由つきで1〜3個、`next`という決まった書き方（JSON）で出させています。\n3. **キーボードを使わない：** 人がやるのは、出てきた選択肢から1つを選ぶことだけです。選んだ指示は、`orca terminal send`というコマンドで、その作業に送られます。iPhoneとApple Watchのアプリも自分で作っていて、Swiftは1行も書かず、AIが一晩で作ったそうです。家の外からは、自分の機械だけをつなぐネットワーク（Tailscale）を通して、ワンタップで指示できます。人が答える必要があるときは、スマホに知らせが届きます。\n\n注意したい点もあります。「仕事の速さが100倍近くになった」というのは、Andyさん本人の感じ方で、ほかの人が確かめたものではありません。届いた指示が本物かどうかを確かめる仕組み（認証）も、自分で作ったそうです。外からつながらないようにはしていますが、腕時計から、本番に近い作業を動かせる仕組みでもあります。\n\nエージェントをたくさん動かすと、人が判断して入力するところが、いちばん時間のかかるところになります。Andyさんは、そこを3つの工夫で減らしています。進み具合を決まった形で記録させること、AIからの質問を探し出すこと、次にやることをAIに提案させることです。記事にはエージェントへの指示の全文が載っているので、Claude Codeでそのまま真似できます。",
+    "followUps": []
+  },
+  {
+    "id": "2122582314417066139",
+    "cardId": "r38_92",
+    "datetime": "2026-11-17T15:49:00+09:00",
+    "postedAt": "2026-11-17T15:47:14+09:00",
+    "source": "timeline",
+    "title": "JPCERT/CCが「インシデント調査報告書チェックリスト」を公開しました。このチェックリストを使って、報告書をAIに読ませて点検するエージェントも紹介されています。",
+    "summary": "11/11公開、CC BY-SA 4.0。頼む側と書く側の2種類。CODE BLUEで、目的・範囲・証拠の裏づけを点検するエージェントを紹介。内部の事故には当てはまらない項目もある。",
+    "tweetId": "2122582314417066139",
+    "tweetIds": [
+      "2122582314417066139"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/lumin/status/2122582314417066139",
+    "author": {
+      "handle": "lumin",
+      "name": "lumin"
+    },
+    "via": null,
+    "text": "AIに読ませてインシデント報告書の完成度を高めよう。\n[jpcertcc.github.io/ir_report_chec…](https://jpcertcc.github.io/ir_report_checklist/)\n#codeblue2026",
+    "images": [],
+    "deepDive": "#JPCERT/CCが「インシデント調査報告書チェックリスト」を公開しました。このチェックリストを使って、報告書をAIに読ませて点検するエージェントも紹介されています。\nインシデントは、サイバー攻撃や情報の漏えいなどの、セキュリティの事故のことです。luminさんが、セキュリティの会議CODE BLUE 2026の講演を受けて、「AIに読ませて、インシデントの報告書をもっと良くしよう」と[投稿](https://x.com/lumin/status/2122582314417066139)していたのがきっかけです。元になったのは、JPCERT/CCが11/11に公開した[チェックリスト](https://jpcertcc.github.io/ir_report_checklist/)です（[公開のお知らせ](https://www.jpcert.or.jp/ir_report_checklist_20261111.html)）。\n\nランサムウェアや情報の漏えいの事故が増えて、事故の調べを外の調査会社に頼むのが、当たり前になりました。ところが、初めて被害にあった会社は、受け取った報告書の調べが十分なのか、自分では判断できません。そこで、チェックリストは2種類あります。\n- **調べを頼む側向け：** 調べを始める前に、目的、調べる範囲、やり方、期限などを、調査会社と決めておくためのものです。\n- **報告書を書く側向け：** 証拠をそのまま残すところから、最後の確認までを、もれなく押さえるためのものです。\n\n報告書の見本もついていて、約42ページと[報じられています](https://cyber.nexsight.co/articles/2026/11/13/jpcert-ir-report-checklist-2026-11-13/)。対象は、ウイルスに感染した場合などの、外からネットワークに入りこまれる事故です。社員の不正のような、内部の事故には当てはまらない項目もあります。ライセンスは、CC BY-SA 4.0です。\n\n[CODE BLUEの講演](https://codeblue.jp/program/time-table/day1-t1-07-qa-incident-response-ai/)では、JPCERT/CCの最高技術責任者（CTO）の朝長秀誠さんたちが、このチェックリストを使って、報告書を点検するAIのエージェントを紹介しました。エージェントが確かめるのは、次の3つです。\n1. 調べの目的に、きちんと答えているか。\n2. 調べたシステム、記録（ログ）、期間が、はっきり書かれているか。\n3. 大事な結論が、証拠の番号や、ログの一部を引いて、裏づけられているか。\n\n講演では、AIにできないことや、人の担当者がしっかり管理し続けるべき作業についても話しています。チェックリストは無料で公開されているので、自分でAIに読ませて使うこともできます。",
+    "followUps": []
+  },
+  {
+    "id": "2122333622946373889",
+    "cardId": "r38_93",
+    "datetime": "2026-11-17T15:49:00+09:00",
+    "postedAt": "2026-11-16T23:19:01+09:00",
+    "source": "timeline",
+    "title": "Hugging Faceが、1,000体をこえるAIのエージェントに、1週間でチャットボットを作らせました。ふつうのAIのような学習はしていません。",
+    "summary": "学習や重みは使わず、条件分岐と正規表現と対応表だけ。メッセージ約17.5万件、PR約8,000件。できたPyBotは約63〜64万行。勝率は0%から26%。試験と評価でふるいにかけたから品質が保てたと思う（私の推測です）。",
+    "tweetId": "2122333622946373889",
+    "tweetIds": [
+      "2122333622946373889"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/_lewtun/status/2122333622946373889",
+    "author": {
+      "handle": "_lewtun",
+      "name": "Lewis Tunstall"
+    },
+    "via": null,
+    "text": "Can Python be a chatbot?\n\nOver one week, we challenged a swarm of 1,000 agents to build one entirely in Python: no weights, no training, just a million rules :)\n\nEach agent was an instance of DeepSeek-V4.1-Flash that worked on different parts of the bot's conversational capabilities: understanding, answers, memory, routing, etc.\n\nThey coordinated on a Slack-like message board we built for agents, wrote ~175k messages to each other, and merged ~8k PRs on a shared repo (which almost broke the Hub 🙈)\n\nThe result is PyBot: 630k lines of Python, zero dependencies, and on par with SmolLM-360M at answering everday questions. Just don't expect it to solve a Millennium Prize problem anytime soon :)\n\nCode & demo: [github.com/huggingface/py…](https://github.com/huggingface/pybot)",
+    "images": [
+      {
+        "type": "video_preview",
+        "url": "https://pbs.twimg.com/amplify_video_thumb/2122328217767788544/img/S6dTs1la-GkwDklH.jpg"
+      }
+    ],
+    "deepDive": "#Hugging Faceが、1,000体をこえるAIのエージェントに、1週間でチャットボットを作らせました。ふつうのAIのような学習はしていません。\nHugging FaceのLewis Tunstallさんたちの実験です（[Tunstallさんの投稿](https://x.com/_lewtun/status/2122333622946373889)）。DeepSeek-V4.1-Flashのエージェントを1,000体以上使いました。ふつうのチャットボットのように、データから学習したり、学習で作ったAIの中身の数値（重み）を使ったりはしません。「もしこうなら、こう答える」という条件の分かれ道（if-else）と、文字のパターンの決まり（正規表現）と、対応表だけで作らせました。\n\n- **やりとりの量：** エージェントどうしは、Slackのような掲示板で、約17.5万件のメッセージをやりとりしました。みんなで使う置き場（リポジトリ）には、プログラムの変更（PR）を約8,000件取りこんでいます。そのせいで、Hugging Faceのサービスがこわれかけたそうです。\n- **できたもの：** できた「PyBot」は、プログラムが約63〜64万行で、ほかの部品にはまったく頼っていません。エージェントが自分で書いた試験のプログラムも、約55万行あります。\n- **性能：** 5,000をこえる版を評価しました。評価は、SmolTalkBenchで、ほかのAIがお手本の答えと比べて勝ち負けを決めます。勝つ割合は、0%から26%まで上がりました。小さなAIのSmolLM-360M-Instructと同じくらいだそうです。\n- **公開：** [GitHub](https://github.com/huggingface/pybot)で、Apache-2.0のライセンスで公開されています。`python -m pybot`だけで動きます。\n\nこの投稿を引用した[guicho271828さん](https://x.com/guicho271828/status/2122575954832675306)は、「『サルがキーボードを無限にたたけば、いつかシェイクスピアが書ける』という話が本当になった。サルをたくさん集めればいい」と、皮肉まじりに書いています。中身は、昔からある、決まりだけで答えるボット（ELIZAのようなもの）を、人ではなく、たくさんのエージェントの力ずくで大きくしたものです。\n\n何千ものプログラムの変更がぶつかっても、品質が保てたのは、試験と評価の点数で、自動でふるいにかけていたからだと思います（私の推測です）。たくさんのエージェントでいっしょに作るとき、どれくらいの量になるのかが分かる例です。",
+    "followUps": []
+  },
+  {
+    "id": "2122535964908347429",
+    "cardId": "r38_90",
+    "datetime": "2026-11-17T12:56:00+09:00",
+    "postedAt": "2026-11-17T12:43:03+09:00",
+    "source": "timeline",
+    "title": "AIが書いたプログラムを、仮想マシン（VM）の中に閉じこめて、しかも速く動かす仕組み「Hyperlight-Unikraft」が出ました。",
+    "summary": "スナップショットで最初の準備をとばす。199ミリ秒から8.9ミリ秒などの数字はCNCFのブログにはない。準備が重いものほど得をする。エージェント実行の裏側になりそう（私の推測です）。",
+    "tweetId": "2122535964908347429",
+    "tweetIds": [
+      "2122535964908347429"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/publickey/status/2122535964908347429",
+    "author": {
+      "handle": "publickey",
+      "name": "Publickey"
+    },
+    "via": null,
+    "text": "軽量なマイクロVMでネイティブよりアプリを高速起動できる「Hyperlight-Unikraft」登場\n[publickey1.jp/blog/26/vmhype…](https://www.publickey1.jp/blog/26/vmhyperlight-unikraft.html)",
+    "images": [],
+    "deepDive": "#AIが書いたプログラムを、仮想マシン（VM）の中に閉じこめて、しかも速く動かす仕組み「Hyperlight-Unikraft」が出ました。\n[Publickeyの投稿](https://x.com/publickey/status/2122535964908347429)で知りました。2つの技術を組み合わせて、Linuxのアプリを、手直しも作り直しもせずに、とても軽いVMの中で動かします（[Publickeyの記事](https://www.publickey1.jp/blog/26/vmhyperlight-unikraft.html)、[GitHub](https://github.com/hyperlight-dev/hyperlight-unikraft)）。\n- **Hyperlight：** Microsoftが作った、VMを動かすための部品です。VMは、ハイパーバイザという仕組みで、ほかから切り離されています。\n- **Unikraft：** アプリを動かすのに最低限いるOSの部分だけで、小さなOS（Unikernel）を作る技術です。\n\n操作するコマンドは`hluk`です。\n\n元の記事は、11/9の[CNCFのブログ](https://www.cncf.io/blog/2026/11/09/run-linux-applications-in-hypervisor-isolated-micro-vms-with-hyperlight/)で、MicrosoftのDanilo Chiarloneさんが書きました。記事は最初に、「人が書いていないプログラム」を安全に動かすための壁が必要だ、と書いています。たとえば、AIのエージェントが今作ったばかりのPythonや、使う人がアップロードしたプラグインのことです。実際に起きた例として、次の2つを挙げています。\n- **Mini Shai-Hulud（2026年5月）：** npmのパッケージを通して広がるワームです。AIがプログラムを書く道具の、決まったタイミングで自動で動く設定（セッションフック）にかくれて、居座り続けました。\n- **PHP2Shell（2026年10月）：** PHPそのもののバグです。\n\n速さのひみつは、スナップショットです。プログラムの言語の実行の環境が起動して、使う部品の読みこみ（import）などを終えた状態を、保存しておきます。毎回そこから元に戻して始めるので、最初の準備をとばせます。使える言語は、Python、Node.js、.NET、Java、PHP、Go、Rust、C、Bash、PowerShellです。Linux（KVMやMSHV）、Windows（Windows Hypervisor Platform）、macOS（Hypervisor.framework）の上で動きます。\n\n数字には注意がいります。Publickeyなどは、「Pythonの起動が199ミリ秒から8.9ミリ秒になった」「Pythonのスクリプト1000個が3GB以内で動く」と紹介しています。ただ、CNCFのブログには、この2つの数字は見当たりませんでした。ブログの表を見ると、画面に文字を出すだけの簡単なプログラム（hello world）は、VMを使わずにそのまま動かす（ネイティブ）より、少し遅いくらいです。\n- **Python：** 22ミリ秒（ネイティブは17ミリ秒）\n- **Node.js：** 39ミリ秒（ネイティブは22ミリ秒）\n\n一方で、最初の準備が重いものは、大きく速くなっています。\n- **numpy・pandas・scikit-learnを読みこむスクリプト：** 45ミリ秒（ネイティブは1,119ミリ秒）\n- **C#のプログラムを変換する道具（Roslyn）：** 95ミリ秒（ネイティブは1,549ミリ秒）\n\nつまり、最初の準備が重いものほど得をする、というのが本当のところです。コンテナよりも強い、ハイパーバイザの壁を、ミリ秒の単位で作っては捨てられます。なので、エージェントにプログラムを動かさせるサービスの、裏側の仕組みとして使われていくかもしれません（私の推測です）。",
+    "followUps": []
+  },
+  {
+    "id": "2122535924865306929",
+    "cardId": "r38_91",
+    "datetime": "2026-11-17T12:56:00+09:00",
+    "postedAt": "2026-11-17T12:42:53+09:00",
+    "source": "timeline",
+    "title": "神戸ソフトが、ブラウザのタブの中でNode.jsとnpmを動かすオープンソースの「OpenVessel」を出しました。",
+    "summary": "小さなOSの上でNode.js v26のJavaScript部分を手直しせずに動かす。ブラウザで動くテスト1,237本はすべて通過。Apache-2.0。サーバーは仮のポートで外から届かない。今はChromium系が中心。",
+    "tweetId": "2122535924865306929",
+    "tweetIds": [
+      "2122535924865306929"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/publickey/status/2122535924865306929",
+    "author": {
+      "handle": "publickey",
+      "name": "Publickey"
+    },
+    "via": null,
+    "text": "Node.jsとnpmをWebブラウザ上で実行可能にする「OpenVessel」、神戸ソフトがオープンソースで公開\n[publickey1.jp/blog/26/nodejs…](https://www.publickey1.jp/blog/26/nodejsnpmwebopenvessel.html)",
+    "images": [],
+    "deepDive": "#神戸ソフトが、ブラウザのタブの中でNode.jsとnpmを動かすオープンソースの「OpenVessel」を出しました。\n[Publickeyの投稿](https://x.com/publickey/status/2122535924865306929)で知りました（[Publickeyの記事](https://www.publickey1.jp/blog/26/nodejsnpmwebopenvessel.html)、[公式](https://kobesoft.co.jp/oss/openvessel/)）。ブラウザの中に、小さな「OS」を作っています。その中には、ファイルを置く場所（ファイルシステム）、動いているプログラム（プロセス）、プログラムどうしで合図やデータを渡す仕組み（シグナルやパイプ）、コマンドを打つ画面（シェル）があります。\n\nその上で、Node.js v26の、JavaScriptで書かれた部分（lib/）を、まったく手直しせずに動かします。Node.jsのテストのうち、ブラウザで動く1,237本は、すべて通ったそうです。\n\n作り方で面白いのは、次の点です。\n- **C++の部分の作り直し：** Node.jsの中でC++が受けもっている部分（`internalBinding()`）を、TypeScriptで作り直しています。\n- **ネイティブの部品の差しかえ：** esbuildやsharpのように、パソコンの機械語で動く部品は、ブラウザで動くWebAssembly版に差しかえています。\n- **使えるもの：** npm、pnpm、yarn、bunが使えます。Astroの開発用サーバー（`dev`、書きかえるとすぐ画面に反映されます）や、公開用の組み立て（`build`）まで動きます。\n- **ライセンス：** Apache-2.0です（[GitHub](https://github.com/kobesoft-labs/openvessel)）。\n\n安全の面では、作ったサーバーは、この小さなOSの中だけの仮のポートで待ち受けるので、外からはまったく届きません。外への通信は、OpenVesselを組みこんだページが決める1つのルールで確かめられます。\n\nパソコンにもサーバーにも何も入れずに、パッケージを入れるところ（npm install）から開発用サーバーまで、タブの中だけで動かせる、使い捨ての環境です。Hyperlightとは反対に、ブラウザの側で閉じこめる方法なので、エージェントや学習用の実行の環境として面白いです。ただ、今はChromeなどのChromium系のブラウザが中心です。",
+    "followUps": []
+  },
+  {
     "id": "2122497003280318938",
     "cardId": "r38_89",
     "datetime": "2026-11-17T10:56:00+09:00",
@@ -8690,6 +8839,15 @@
         "title": "今朝お伝えしていないことです",
         "text": "[The Verge](https://www.theverge.com/tech/1033999/jensen-huang-return-nvidia-megaspeed)によると、新しく分かったのは次のことです。\n- **公開の手紙：** 復帰を求める手紙には、Epicのティム・スウィーニーさんも賛成しています。署名は15万を超えましたが、「Xi Jingping」のような怪しい名前も混じっていて、数はあてになりません。\n- **政府の中の対立：** ベッセント財務長官は、Megaspeedへの輸出の取り締まりが遅れたとして、ラトニック商務長官を人前で批判しました。Megaspeedは、中国にGPUを横流ししている疑いをかけられている会社で、フアンさんの不倫の相手は、この会社とのつながりを指摘されていました。\n- **支持する人の中からも：** フアンさんを支持する人の1人でさえ、FTに「部下との不倫は、クビになって当然の行為だ」と話しています。\n- **Megaspeedの言い分：** 「問題の女性は、2025年8月30日に会社を辞めていて、今は関係ない」という声明を出しました。\n\nフアンさんが本当に戻るかどうかは、まだ「話し合っている」と報じられた段階です。",
         "tweetIds": []
+      },
+      {
+        "datetime": "2026-11-17T14:46:00+09:00",
+        "clock": "14:46",
+        "title": "フアン氏の辞任は前にお伝えしたので、新しく分かったことだけ書きます。",
+        "text": "[GOROmanさんの投稿](https://x.com/GOROman/status/2122558267285192823)が、[NVIDIA日本の公式ブログ](https://blogs.nvidia.co.jp/blog/nvidia-announces-ceo-transition/)をシェアしていたのがきっかけです。\n- **調べている人たち：** NVIDIAは、法律事務所のWachtell Liptonに頼んで、フアン氏が外国のスパイの工作のねらいにされたのではないか、という疑いを調べています。アメリカの議会でも、下院の3つの委員会と、上院の銀行委員会が、説明を求めています（[CNBC](https://www.cnbc.com/2026/11/13/nvidia-huang-ceo-replacement-search.html)）。\n- **株価：** 11/16（アメリカ時間）にも、4.12%下がりました。2025年7月からあとで、いちばん安い値段で取引を終えています。会社全体の値段（時価総額）は、4兆ドルを下回りました（[CNBC](https://www.cnbc.com/2026/11/16/nvidia-stock-price-jensen-huang.html)）。\n- **復帰を求める声：** 署名は17万を超えました。ただ、CNBCに情報を伝えた人によると、取締役会には、フアン氏を戻す考えはないそうです。\n- **次のCEO：** FTは、Armのレネ・ハースCEOに声をかけたと報じました。ただ、取締役会は「だれが選ばれるかを予想するのは、まだ早い」としています。\n- **決算：** 決算の発表は予定どおりで、日本時間の明日11/18の朝6:20ごろです。トップがいないまま、これからの業績の見通しを出すことになります。\n\nフアン氏の辞任は、輸出の規制や、Megaspeedの密輸の疑いとつながっています。なので、議会の調べの結果によっては、アメリカと中国のAIのチップをめぐる政策が、さらに厳しくなるかもしれません（私の推測です）。",
+        "tweetIds": [
+          "2122558267285192823"
+        ]
       }
     ],
     "link": "https://nvidianews.nvidia.com/news/statement-from-nvidia-board-of-directors"

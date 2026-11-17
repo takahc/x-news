@@ -1,4 +1,28 @@
 id,datetime,source,author,url,text,summary
+2122486542904209643,2026-11-17T17:50:00+09:00,timeline,RIKEN_JP,https://x.com/RIKEN_JP/status/2122486542904209643,"スーパーコンピュータ「富岳」および「理究（りきゅう）」 への不正アクセスによる個人情報漏えいの可能性について
+
+[riken.jp/pr/news/2026/2…](https://www.riken.jp/pr/news/2026/20261116_2/index.html)","入口は公開のダッシュボード。11/10〜13に侵入。最大4,597人分の名前・メール・IDと、ホームに置いたログイン情報。犯人は盗んだ情報で他システムへの接続を試みた。11/14 4:30に停止。"
+2122590712059568434,2026-11-17T16:51:00+09:00,timeline,tnagasawa,https://x.com/tnagasawa/status/2122590712059568434,"いいね！（Orca使いとして）
+
+毎月6,000 AI Agentsを捌くためにキーボードを捨てた話｜Andy [zenn.dev/andoshin11/art…](https://zenn.dev/andoshin11/articles/ba68b39ef9a8ce) #zenn","AndyさんのZenn。Orcaのgit worktreeで衝突を避ける。ClaudeとCodexを月約6,000回。進み具合の記録、質問の可視化、選択肢を選ぶだけ。速さ100倍は本人の感じ方。"
+2122582314417066139,2026-11-17T15:49:00+09:00,timeline,lumin,https://x.com/lumin/status/2122582314417066139,"AIに読ませてインシデント報告書の完成度を高めよう。
+[jpcertcc.github.io/ir_report_chec…](https://jpcertcc.github.io/ir_report_checklist/)
+#codeblue2026",11/11公開、CC BY-SA 4.0。頼む側と書く側の2種類。CODE BLUEで、目的・範囲・証拠の裏づけを点検するエージェントを紹介。内部の事故には当てはまらない項目もある。
+2122333622946373889,2026-11-17T15:49:00+09:00,timeline,_lewtun,https://x.com/_lewtun/status/2122333622946373889,"Can Python be a chatbot?
+
+Over one week, we challenged a swarm of 1,000 agents to build one entirely in Python: no weights, no training, just a million rules :)
+
+Each agent was an instance of DeepSeek-V4.1-Flash that worked on different parts of the bot's conversational capabilities: understanding, answers, memory, routing, etc.
+
+They coordinated on a Slack-like message board we built for agents, wrote ~175k messages to each other, and merged ~8k PRs on a shared repo (which almost broke the Hub 🙈)
+
+The result is PyBot: 630k lines of Python, zero dependencies, and on par with SmolLM-360M at answering everday questions. Just don't expect it to solve a Millennium Prize problem anytime soon :)
+
+Code & demo: [github.com/huggingface/py…](https://github.com/huggingface/pybot)","学習や重みは使わず、条件分岐と正規表現と対応表だけ。メッセージ約17.5万件、PR約8,000件。できたPyBotは約63〜64万行。勝率は0%から26%。試験と評価でふるいにかけたから品質が保てたと思う（私の推測です）。"
+2122535964908347429,2026-11-17T12:56:00+09:00,timeline,publickey,https://x.com/publickey/status/2122535964908347429,"軽量なマイクロVMでネイティブよりアプリを高速起動できる「Hyperlight-Unikraft」登場
+[publickey1.jp/blog/26/vmhype…](https://www.publickey1.jp/blog/26/vmhyperlight-unikraft.html)",スナップショットで最初の準備をとばす。199ミリ秒から8.9ミリ秒などの数字はCNCFのブログにはない。準備が重いものほど得をする。エージェント実行の裏側になりそう（私の推測です）。
+2122535924865306929,2026-11-17T12:56:00+09:00,timeline,publickey,https://x.com/publickey/status/2122535924865306929,"Node.jsとnpmをWebブラウザ上で実行可能にする「OpenVessel」、神戸ソフトがオープンソースで公開
+[publickey1.jp/blog/26/nodejs…](https://www.publickey1.jp/blog/26/nodejsnpmwebopenvessel.html)","小さなOSの上でNode.js v26のJavaScript部分を手直しせずに動かす。ブラウザで動くテスト1,237本はすべて通過。Apache-2.0。サーバーは仮のポートで外から届かない。今はChromium系が中心。"
 2122497003280318938,2026-11-17T10:56:00+09:00,timeline,connect24h,https://x.com/connect24h/status/2122497003280318938,"最悪で草wwww EDRベンダーに問い合わせるか・・・
 
 >emp3r0rの作成者が、AI駆動の自律型回避ループを統合（ARTEXのハーネスとMCPサーバーを採用）することで、状況を一変させました：  このシステムはペイロードを生成し、実世界のテレメトリに対してテストを行い、人間の介入なしに何度も書き換えを繰り返し、検知率をゼロにまで低下させます。",v5.9.0のdetect_loop。使っているのはARTEX本体ではなく土台のNorma。回数の初期値は3回で、検知ゼロは安全の証明ではない。動きとメモリの両方を見る検知が大事になりそう（私の推測です）。
