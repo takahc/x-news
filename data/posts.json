@@ -1,5 +1,534 @@
 [
   {
+    "id": "2122464948190323166",
+    "cardId": "r38_86",
+    "datetime": "2026-11-17T08:50:00+09:00",
+    "postedAt": "2026-11-17T08:00:51+09:00",
+    "source": "timeline",
+    "title": "GoogleのGTIGが、「AIが人の手を借りずに、弱点を見つけて攻撃した」例を、はじめて見つけたと発表しました",
+    "summary": "パッチの前後を比べて弱点を推測し、攻撃コードを作って動かしていた。フランスのサイトが狙われた模様。Claude Codeの設定を書きかえてバックドアを入れる例も。エージェントの設定も、だれが変えたか確かめる必要がありそう（私の推測）。",
+    "tweetId": "2122464948190323166",
+    "tweetIds": [
+      "2122464948190323166",
+      "2122410112836870228"
+    ],
+    "quoteTweetId": "2122410112836870228",
+    "url": "https://x.com/connect24h/status/2122464948190323166",
+    "author": {
+      "handle": "connect24h",
+      "name": "connect24h"
+    },
+    "via": null,
+    "text": "日経新聞の万バズしている記事の元ネタ。AI攻撃が「人間の操作待ち」を卒業し始めた。CSIRTの運用は追いついているか？永遠の撤退戦の補強。周回遅れの新聞ニュースらしからぬスピード感。須藤さんかな？本誌のほうも確認しよう。\n\nGoogle GTIGが、AIによる攻撃活動が重大な転換点を越えたと報告。\n\n特にCSIRTが押さえるべきポイントは5つ。\n\n① パッチ公開から攻撃までの猶予が縮む\n\nAIがパッチ前後のコード差分を解析し、脆弱性を特定。PoCの生成から実行まで自動化する「exploit_agent」を確認。\n\nゼロデイだけを恐れる時代ではない。\n\n公開済みの脆弱性が、短時間で攻撃可能になる。\n\n→ CSIRTはCVSS順の対応だけでなく、外部公開状況、悪用実績、攻撃コードの流通状況を加味してパッチ適用を優先する必要がある。\n\n② 攻撃の横展開が機械速度になる\n\nARTEX、CAIRN、PentAGIなどのAI攻撃フレームワークが実際の侵害活動で利用されている。\n\n偵察、脆弱性探索、攻撃コード生成、結果に応じた再試行を連鎖的に実行。\n\n→ SOCは単発のアラートではなく、短時間に集中する探索・認証失敗・権限変更・横展開の相関検知が重要。\n\n③ 攻撃が雑だからこそ、検知機会がある\n\n現状のAI攻撃は、高速だが必ずしも隠密ではない。\n\n大量の通信、特徴的な実行痕跡、失敗の繰り返しが残る。\n\n→ WAF、EDR、NDR、認証ログの異常頻度を検知できるようにする。\n\nただし、検知できても封じ込めが遅ければ意味がない。\n\n④ AI利用環境そのものが収益化の標的\n\nLLMJackingでは、盗まれた認証情報やセッショントークンを悪用し、企業のLLM APIやGPUを無断利用。\n\nMandiantは、1日10万ドル超、累積100万ドルに達した不正利用事例を報告。\n\n→ APIキーの短命化、IAM最小権限、利用量・課金額の異常検知、キー失効手順を整備する。\n\nクラウドの異常請求は、今やインシデントの兆候になり得る。\n\n⑤ AI開発環境も侵入経路になる\n\n攻撃者はコードリポジトリやCI環境から認証情報を盗み、AIコーディング支援ツールの設定を悪用してバックドアを仕込む手法も模索している。\n\n→ リポジトリ、CI/CDのシークレット、AIエージェントの設定・実行権限を監査対象に加える。\n\nそして、CSIRTとして一番考えたいこと。\n\n攻撃者はAIで「発見→判断→実行→再試行」を高速化している。\n\n一方、防御側はどうか。\n\n検知して、チケットを切って、担当者を呼んで、会議を開いて、封じ込めを承認する。\n\nこの時間差こそが最大のリスクになりかねない。\n\n必要なのはAI製品の導入そのものではない。\n\n・重大アラートから隔離までの時間を計測する\n・高確度の検知には自動封じ込めを組み込む\n・侵害を前提とした権限設計にする\n・AI攻撃を想定したインシデント対応訓練を実施する\n\nこれからのCSIRTは、検知できたかではなく、被害が拡大する前に止められたかで評価される。\n\nGoogle GTIG報告（2026/11/16）\n[cloud.google.com/blog/topics/th…](https://cloud.google.com/blog/topics/threat-intelligence/agentic-threat-activity-crosses-a-significant-threshold)",
+    "images": [],
+    "deepDive": "#GoogleのGTIGが、「AIが人の手を借りずに、弱点を見つけて攻撃した」例を、はじめて見つけたと発表しました\n[connect24hさんの投稿](https://x.com/connect24h/status/2122464948190323166)で知りました。[日経の記事の投稿](https://x.com/nikkei/status/2122410112836870228)を引用しています。元は、GoogleのGTIGとMandiantが3か月ごとに出している報告書「AI Threat Tracker」の、2026年10〜12月版です（[公式ブログ](https://cloud.google.com/blog/topics/threat-intelligence/agentic-threat-activity-crosses-a-significant-threshold/)、11/16）。GTIGは、Googleでサイバー攻撃を調べるチームで、Mandiantは、Googleのグループのセキュリティの会社です。\n\n**見つかったもの：** 攻撃した側のサーバーが外から見える状態になっていて、そこから「exploit_agent」という仕組みが見つかりました（[ITmedia](https://www.itmedia.co.jp/news/article/2611/16/2000003244/)、[The Register](https://www.theregister.com/research/2026/11/16/google-ai-agent-turned-a-security-patch-into-a-working-exploit-with-no-human-help/5309926)）。人気のWebアプリについて、次のことを、人の手なしでやっていました。\n1. 弱点を直す修正（パッチ）の、前と後のコードを比べ続けます。\n2. 比べた結果から、どこに弱点があったかを推測します。\n3. その弱点を突く攻撃のコードを作って、実際に動かします。\n\n**だれが、どこを狙ったか：** 設定のファイルにロシア語のメモがありましたが、どのグループか、どの国かは分かっていません。狙われたのは、フランスのメディア、娯楽、教育のサイトとみられています（[CyberScoop](https://cyberscoop.com/google-fully-automated-ai-cyberattack/)）。\n\n**増えている攻撃（ITmediaより）：**\n- **公開された弱点：** 2026年1〜8月に公開された弱点と、その攻撃のコードは、前の年のほぼ2倍になりました。\n- **ゼロデイ攻撃：** 直す方法がまだない弱点を突く攻撃です。1か月あたりの数は、2025年の平均8件から、2026年は11件に増えました。8月は22件でした。\n- **LLMJacking：** 盗んだログインの情報で、会社のAI（LLM）を勝手に使う攻撃です。勝手に使われた金額が1日で10万ドルを超えた例や、合わせて100万ドルになった例がありました。\n\n**AIコーディングツールを使ったわな：** 北朝鮮のものとみられるグループが、会社の中のリポジトリにある設定のファイル（`.claude/settings.json`）を書きかえていました。開発者がClaude Codeを起動すると、こっそり入りこむためのプログラム（バックドア）「SOMBERMEME」がダウンロードされる仕かけです（[ビジネス+IT](https://news.yahoo.co.jp/articles/8abc73fc42de2d9c77a1efcfbb1f57d1d24274ba)）。\n\n**これからの見通し：** 今のAIの攻撃は、速いかわりに、跡がたくさん残ります。GTIGは、人がほとんど関わらない雑な攻撃が3か月以内に、高度で、人がまったく関わらない攻撃が6か月以内に出てくると見ています（[BleepingComputer](https://www.bleepingcomputer.com/news/security/google-warns-that-fully-automated-ai-attacks-are-coming-soon/)）。セキュリティの会社Elasticは、攻撃にも使えるAIのツールを5つ調べました。その結果、ARTEXなどどのツールにも、「攻撃してよい相手かどうか」を確かめる仕組みが、コードの中にありませんでした（[Elastic](https://www.elastic.co/security-labs/threat-command/agentic-offensive-frameworks-detection-artex)）。\n\nXでは、「直す修正が公開されたら、それがそのまま攻撃の始まりの合図になる」という受け止め方が中心でした。AIコーディングツールの設定のファイルが、実際にバックドアの入口として使われました。なので、これからは、リポジトリの中にあるエージェントの設定のファイルも、プログラムのコードと同じくらい、だれが変えたかを確かめる必要がありそうです（私の推測です）。",
+    "followUps": []
+  },
+  {
+    "id": "2122359930628063248",
+    "cardId": "r38_82",
+    "datetime": "2026-11-17T07:51:00+09:00",
+    "postedAt": "2026-11-17T01:03:33+09:00",
+    "source": "timeline",
+    "title": "OpenAIが、外の4つの研究団体に、社内のAIモデルを深くまで調べさせる取り組み（embedded assessments）を始めました",
+    "summary": "Apollo、METR、Transluce、Goodfireが、チェックポイントやソース、データを見る。結果は評価者が公開できるが、OpenAIは黒塗りや公開の延期を頼める。意味は、どこまで公開されるかで決まりそう。",
+    "tweetId": "2122359930628063248",
+    "tweetIds": [
+      "2122359930628063248"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/OpenAI/status/2122359930628063248",
+    "author": {
+      "handle": "OpenAI",
+      "name": "OpenAI"
+    },
+    "via": null,
+    "text": "We’re working with @ApolloResearch, @METR_Evals, @TransluceAI, and @GoodfireAI on embedded assessments: giving outside experts deep access to our internal models and systems to investigate alignment and test our safeguards.\n\nThese assessments build on our ongoing alignment and safety research, bringing independent scrutiny to how we identify and manage risks in our systems.\n\n[openai.com/index/our-firs…](https://openai.com/index/our-first-phase-of-embedded-assessments/)",
+    "images": [],
+    "deepDive": "#OpenAIが、外の4つの研究団体に、社内のAIモデルを深くまで調べさせる取り組み（embedded assessments）を始めました\n[OpenAIの投稿](https://x.com/OpenAI/status/2122359930628063248)で知りました（[公式の発表](https://openai.com/index/our-first-phase-of-embedded-assessments)、11/16）。外の評価者は、OpenAIのオフィスで、OpenAIのパソコンを使って、次のものを見られます。\n- 学習の途中で保存したモデル（チェックポイント）\n- ソースコード\n- 学習や評価に使ったデータ\n- モデルを見張るシステム\n\n4つの団体が調べることは、次のとおりです。\n- **Apollo：** モデルが、作った人の意図にこっそり逆らって動くことがないか、そしてそれを見つけられるかを調べます。期間は4か月です（[Apolloの発表](https://www.apolloresearch.ai/blog/pilot-towards-embedded-evaluations)）。\n- **METR：** これまででいちばん大きな強化学習で、モデルが作った人の意図とずれた動きをしなかったかを調べます。ただ、発表の注によると、調べられる範囲は、METRが提案したより狭くなっています。\n- **Transluce：** 学習を終えたあとに、モデルが人の意図どおりに動くかを確かめる評価の、質と抜けもれを、6週間かけて点検します（[Transluceの発表](https://transluce.org/embedded-assessment-pilot-with-openai)）。\n- **Goodfire：** AIの中身を読み解くツールを使って、学習のようすを見張ります。\n\n発表の注には、次のことも書かれています。\n- **お金：** ApolloとGoodfireは、OpenAIからお金を受け取ります。ただ、金額は調べた結果によって変わりません。METRとTransluceはお金を受け取りませんが、APIの利用分はもらう場合があります。\n- **結果の公開：** 結果は、評価者が自分で公開します。ただ、OpenAIは秘密の部分を黒く塗りつぶせますし、公開を遅らせるように頼むこともできます。\n\nPeter Wildefordさんは、「何を見せるか、だれに見せるか、何を言ってよいかを、OpenAIが握っている」と批判しています。そのうえで、金融業界の監査のような独立性を求めています。お金の受け取りや黒塗りのルールまで公開したのは前進ですが、本当に意味があるかは、結果がどこまで公開されるかで決まりそうです。",
+    "followUps": []
+  },
+  {
+    "id": "2122339994492887477",
+    "cardId": "r38_80",
+    "datetime": "2026-11-17T07:51:00+09:00",
+    "postedAt": "2026-11-16T23:44:20+09:00",
+    "source": "timeline",
+    "title": "FBIが「FaceStealer」という手口に注意を呼びかけています。前の被害者を録画した映像を流して、知り合いがいる会議に見せかける、偽のオンライン会議です",
+    "summary": "北朝鮮系が18か月で4億ドル超を盗んだ。偽のZoomやTeamsで録画を流し、音声エラーの修理と称してマルウェアを実行させる。招待は別の手段で確認し、通話中の指示は実行しない。",
+    "tweetId": "2122339994492887477",
+    "tweetIds": [
+      "2122339994492887477"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/connect24h/status/2122339994492887477",
+    "author": {
+      "handle": "connect24h",
+      "name": "connect24h"
+    },
+    "via": null,
+    "text": "外部会議では、知人の顔を見ても本人確認は終わらない。\nFaceStealerを巡ってFBIが警告する手口は、知人の録画映像で会議を装い、技術的な不具合の修正を口実にマルウェアを実行させるもの。暗号資産・Web3関係者に加え、オープンソース開発者も標的に含まれる。\n会議相手を信用したところで「接続を直すための操作」を持ち出す。この誘導の流れは読む価値がある。\n防御の焦点は、会議への参加手順が端末上の実行指示に変わる地点にある。\n\n[bleepingcomputer.com/news/security/…](https://www.bleepingcomputer.com/news/security/us-disrupts-north-korean-campaign-behind-400-million-crypto-theft/)",
+    "images": [],
+    "deepDive": "#FBIが「FaceStealer」という手口に注意を呼びかけています。前の被害者を録画した映像を流して、知り合いがいる会議に見せかける、偽のオンライン会議です\n[connect24hさんの投稿](https://x.com/connect24h/status/2122339994492887477)で知りました。元は[BleepingComputerの記事](https://www.bleepingcomputer.com/news/security/us-disrupts-north-korean-campaign-behind-400-million-crypto-theft/)です。[FBIの緊急の注意報（FLASH）](https://www.ic3.gov/CSA/2026/261112.pdf)によると、北朝鮮のBlueNoroffなどのグループが、この18か月で4億ドルを超える暗号資産を盗みました。FBIは、被害者のWebカメラで撮られた映像を、900本以上押さえています。\n\nだまし方は、次の流れです。\n1. 乗っ取ったTelegram、LinkedIn、Slackなどのアカウントから、会議に招待します。\n2. 本物そっくりの、偽のZoomやTeamsに連れていきます。\n3. 前の被害者を録画した映像を流して、知り合いが参加している会議に見せかけます。\n4. 「音声のエラーが出ています」と言って、「直すため」と称して、パソコンでコマンドなどを実行させます。\n5. 実行すると、パソコンが悪いプログラム（マルウェア）に感染します。そして今度は、その人のアカウントや映像が、次の人をだますのに使われます。\n\nオープンソースも狙われています。1週間に数千万回ダウンロードされるJavaScriptのライブラリの管理者がねらわれましたが、早く気づいて止められました。npmやRustのライブラリでも、同じような試みが見つかっています。\n\nFBIなどがすすめている対策は、次のとおりです。\n- **招待の確認：** 招待を受けたら、メールや電話など別の方法で、本当にその人からの招待かを確かめます。\n- **会議への入り方：** 会議には、公式のアプリから、招待のコードを入れて入ります。\n- **「直して」と言われたら：** 通話中に「これで直る」と言われたものは、実行しません。\n\n相手の顔が見えても、本人とは限らなくなっています。会議の途中で「パソコンで何かを実行して」と言われたら、そこで止まる、と決めておくのが、いちばん実用的な守り方です。",
+    "followUps": []
+  },
+  {
+    "id": "2122231133270065619",
+    "cardId": "r38_81",
+    "datetime": "2026-11-17T07:51:00+09:00",
+    "postedAt": "2026-11-16T16:31:45+09:00",
+    "source": "likes",
+    "title": "AIのエージェントが、本人の代わりに会社のサイトとやりとりするための決まり、「Personal Agent Protocol 1.0（Poppy）」が公開されました。ShopifyとMuseが対応しています",
+    "summary": "会社は/.well-known/poppy.jsonで入口を公開し、OAuthで範囲を選べる。ShopifyとMuseが対応。Mercuryの送金は口座側の承認を通る。お金の前に本人承認を通す作り。",
+    "tweetId": "2122231133270065619",
+    "tweetIds": [
+      "2122231133270065619"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/gihyojp/status/2122231133270065619",
+    "author": {
+      "handle": "gihyojp",
+      "name": "gihyo.jp"
+    },
+    "via": null,
+    "text": "ニュース「Personal Agent Protocol 1.0公開、ShopifyやMetaのMuseが対応」公開 [gihyo.jp/article/2026/1…](https://gihyo.jp/article/2026/11/personal-agent-protocol)",
+    "images": [],
+    "deepDive": "#AIのエージェントが、本人の代わりに会社のサイトとやりとりするための決まり、「Personal Agent Protocol 1.0（Poppy）」が公開されました。ShopifyとMuseが対応しています\n[gihyo.jpの投稿](https://x.com/gihyojp/status/2122231133270065619)へのいいねです（[gihyo.jpの記事](https://gihyo.jp/article/2026/11/personal-agent-protocol)）。元の発表は、[Sierraの公式ブログ](https://sierra.ai/blog/releasing-poppy)の11/13の記事で、Bret TaylorさんとClay Bavorさんが連名で書いています。\n\nPoppyは、個人のAIのエージェントが、会社のサイト、API、会社のエージェントとやりとりするための、だれでも使える決まり（オープンな標準）です。\n- **入口の公開：** 会社は、`/.well-known/poppy.json`というファイルに、「エージェントが使える入口」と「できること」を書いて公開します。\n- **APIとのつなぎ方：** APIとは、MCPやOpenAPIでつなぎます。\n- **アカウントの許可：** お客さんのアカウントにさわるときは、OAuthという許可の仕組みを使います。どこまで許すかは本人が選べて、あとから取り消せます。\n\nもう対応しているところもあります。\n- **Shopify：** すべてのお店で、Poppyのファイルを自動で公開しています。\n- **Muse：** すべての利用者で使えるようになりました。Museは、サイトを開くと、まずそのサイトがPoppyに対応しているかを確かめます。\n- **一緒に作る会社：** Stripe、Visa、Walmart、OpenAIなど、100社以上が参加しています。\n\nお金の扱いは、次のようになっています。\n- **銀行のMercury：** エージェントは、残高を見たり、何にお金を使ったかを分けたりできます。送金を頼むこともできますが、実行する前に、口座の側で決めた承認のルールを必ず通ります。\n- **Turkish Airlinesの座席のグレードアップ：** お金を払う前に、本人の承認が必要です。\n\n同じ日に、OpenAIも「ChatGPT Wallet」を発表しました。アメリカのProプランの人向けで、ものを買う前に顔や指紋で承認します。お店にはカードの番号ではなく、代わりの番号（トークン）を渡して払います。gihyo.jpによると、OpenAIのお店向けのガイドには、Poppyのことは書かれていません。\n\nエージェントには、OAuthで決めた範囲だけをまかせます。お金が動く前には、会社の側で本人の承認を通します。こうして、「全部はまかせない」作りが、決まりとして形になってきています。",
+    "followUps": []
+  },
+  {
+    "id": "2122209323556524347",
+    "cardId": "r38_83",
+    "datetime": "2026-11-17T07:51:00+09:00",
+    "postedAt": "2026-11-16T15:05:06+09:00",
+    "source": "likes",
+    "title": "LINEからGitHubを操作できる仕組みを、自分で作った人がいます。エージェントには、本物の鍵（トークン）を直接持たせない作りです",
+    "summary": "LINEからCloudflare Workersを経てClaude Managed Agentsが動く。Vaultが境目で本物の秘密を差しこみ、エージェントには仮の文字列しか見えない。1セッション5ドルは自分で決めた上限だと思う（私の推測）。",
+    "tweetId": "2122209323556524347",
+    "tweetIds": [
+      "2122209323556524347"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/QZpsOpYQb5ArLuf/status/2122209323556524347",
+    "author": {
+      "handle": "QZpsOpYQb5ArLuf",
+      "name": "諦めた歩兵"
+    },
+    "via": null,
+    "text": "LINEからGitHubへ操作できるシステムを作ってみた\nとりあえず彼女と自分で共有のタスク管理を操作できるようになってる\n使いながらブラッシュアップしてこう",
+    "images": [
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HXOaG-ra0AAbL9W.jpg"
+      }
+    ],
+    "deepDive": "#LINEからGitHubを操作できる仕組みを、自分で作った人がいます。エージェントには、本物の鍵（トークン）を直接持たせない作りです\n[あきほさんの投稿](https://x.com/QZpsOpYQb5ArLuf/status/2122209323556524347)へのいいねです。構成の図によると、次の流れで動きます。\n1. LINEの公式アカウントで、メッセージを受け取ります。\n2. Cloudflare Workersが受け付けて、やりとりの状態を保存します。\n3. [Claude Managed Agents](https://claude.com/platform/claude-managed-agents)が、GitHubにコードの変更を保存（コミット）して送ったり、Issueを操作したりします。\n4. 終わると知らせが来て、LINEに返事が届きます。\n\n図には、秘密の情報を預ける金庫（Vault）からトークンを渡す流れが描かれています。公式の説明によると、Vaultは、エージェントが外に通信する境目で、本物の秘密の情報を差しこみます。エージェントからは、仮の文字列（プレースホルダー）しか見えません。\n\n図には「1回のセッションで5ドルまで」とあって、自分で決めた上限だと思います（私の推測です）。公式の料金は、使ったトークンの分の代金に加えて、セッションが動いている1時間あたり0.08ドルです。恋人と共有するやることリストに使っているそうです。",
+    "followUps": []
+  },
+  {
+    "id": "2122141351945154990",
+    "cardId": "r38_84",
+    "datetime": "2026-11-17T07:51:00+09:00",
+    "postedAt": "2026-11-16T10:35:00+09:00",
+    "source": "likes",
+    "title": "賃貸で3Dプリンターを使うときの、揺れの対策です",
+    "summary": "揺れを吸うゴムや、石やコンクリートとゴムを重ねる方法。定番は重い机、厚さ10〜20mmのゴム、10kg以上のコンクリート、プリンターの順。置いたあと揺れの補正をやり直す。",
+    "tweetId": "2122141351945154990",
+    "tweetIds": [
+      "2122141351945154990"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/miyayu_jp/status/2122141351945154990",
+    "author": {
+      "handle": "miyayu_jp",
+      "name": "Miyayu"
+    },
+    "via": null,
+    "text": "みんな3Dプリンターの振動対策ってどうしてるんですか\n\n賃貸だから周りの部屋の人に迷惑与えてそうで昼間しか使えてない",
+    "images": [],
+    "deepDive": "#賃貸で3Dプリンターを使うときの、揺れの対策です\n[Miyayuさんの投稿](https://x.com/miyayu_jp/status/2122141351945154990)へのいいねです。返信で多かったのは、揺れを吸うゴムや、石やコンクリートの板とゴムの板を重ねる方法でした。専門店の解説でも、下から順に、重い机、厚さ10〜20mmのゴム、10kg以上のコンクリートブロック、プリンターと重ねるのが定番です。置いたあとに、プリンターの揺れの補正をやり直すようにすすめています（[SK本舗](https://skhonpo.com/blogs/3dprinter-practice/3d-printer-apartment-environment-guide-2026)）。",
+    "followUps": []
+  },
+  {
+    "id": "2122109129967980985",
+    "cardId": "r38_85",
+    "datetime": "2026-11-17T07:51:00+09:00",
+    "postedAt": "2026-11-16T08:26:58+09:00",
+    "source": "likes",
+    "title": "『フランス語・スペイン語・イタリア語 3言語が同時に身につく本』を買った、という投稿です",
+    "summary": "北大の藤田健さんの本。2024年1月かんき出版、288ページ、2,640円。ラテン語から生まれた3つの言葉を文法ごとに比べる。約33万回表示。",
+    "tweetId": "2122109129967980985",
+    "tweetIds": [
+      "2122109129967980985"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/Luciaenjapon/status/2122109129967980985",
+    "author": {
+      "handle": "Luciaenjapon",
+      "name": "Lucíaスペイン語勉強中"
+    },
+    "via": null,
+    "text": "面白そうな本を買ってしまった😆",
+    "images": [
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HXM_AV9aQAAyM7a.jpg"
+      }
+    ],
+    "deepDive": "#『フランス語・スペイン語・イタリア語 3言語が同時に身につく本』を買った、という投稿です\n[Luciaさんの投稿](https://x.com/Luciaenjapon/status/2122109129967980985)へのいいねで、約33万回表示されています。北海道大学の藤田健さんの本で、2024年1月にかんき出版から出ました。288ページで、2,640円です（[発売のお知らせ](https://www.atpress.ne.jp/news/0658487)）。どれもラテン語から生まれた3つの言葉を、文法ごとに並べて比べる作りです。大事な文には、その言葉を話す人の音声がついています。",
+    "followUps": []
+  },
+  {
+    "id": "2122316001962348959",
+    "cardId": "r38_71",
+    "datetime": "2026-11-16T23:10:00+09:00",
+    "postedAt": "2026-11-16T22:09:00+09:00",
+    "source": "timeline",
+    "title": "「univer」は、表計算や文書の機能を、自分のアプリに組み込める部品集（SDK）です",
+    "summary": "TypeScript、Apache-2.0。エージェント向けのFacade APIがある。1日でスターが1,878増え、2.7万以上。基本はオープンソースで、追加機能は有料。どこまで編集させるかが大事（私の推測）。",
+    "tweetId": "2122316001962348959",
+    "tweetIds": [
+      "2122316001962348959"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/trending_repos/status/2122316001962348959",
+    "author": {
+      "handle": "trending_repos",
+      "name": "Trending GitHub Repositories"
+    },
+    "via": null,
+    "text": "Trending repository of the day 📈\n\nuniver\n\nBuild your own AI office with Univer Office SDK. Bring editing, calculation, collaboration, and file processing into your product for people and AI agents. Built on an exte...\n\nLast 24h: 1,878 ⭐\nTotal: 27,346 ⭐️\n[github.com/dream-num/univ…](https://github.com/dream-num/univer)",
+    "images": [],
+    "deepDive": "#「univer」は、表計算や文書の機能を、自分のアプリに組み込める部品集（SDK）です\n[GitHubで人気のリポジトリを紹介する投稿](https://x.com/trending_repos/status/2122316001962348959)で知りました。[dream-num/univer](https://github.com/dream-num/univer)は、スプレッドシートや文書の編集、計算、複数人での同時編集を、自分のアプリに組み込めます。\n- **作り：** TypeScriptで書かれていて、ライセンスはApache-2.0です。\n- **AIとの関係：** アプリやエージェントから操作するための窓口（Facade API）があります。\n- **人気：** 1日でスターが1,878増えて、今は27,000以上あります。\n- **お金：** 基本の部分は無料のオープンソースで、追加の機能は有料です。\n\nエージェントが表計算を直接さわれるようになると、どのシートやセルまで編集させるかを、部品の側で区切れるかが大事になりそうです（私の推測です）。",
+    "followUps": []
+  },
+  {
+    "id": "2122313754671272307",
+    "cardId": "r38_69",
+    "datetime": "2026-11-16T23:10:00+09:00",
+    "postedAt": "2026-11-16T22:00:04+09:00",
+    "source": "timeline",
+    "title": "Oktaが、AIエージェントへの「やってよいこと」の判断を、システムプロンプトの指示ではなく「何をしようとしているか（意図）」にもとづいて決めるやり方を話します",
+    "summary": "CNDW 11/18のスポンサー講演。強い権限をプロンプトで抑えるのは不十分。意図を見て許可し、OpenFGAの実装例も出す予定。",
+    "tweetId": "2122313754671272307",
+    "tweetIds": [
+      "2122313754671272307"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/cloudnativedays/status/2122313754671272307",
+    "author": {
+      "handle": "cloudnativedays",
+      "name": "CloudNative Days"
+    },
+    "via": null,
+    "text": "CloudNativeDays Winter 2026 スポンサーセッション紹介\n\nシステムプロンプト依存からの脱却: AIエージェントを守る意図ベースの認可とは\nDaizen Ikehara\nDay 1（11月18日） 15:40 - 16:10\n[cloudnativedays.jp/sessions/3290](https://cloudnativedays.jp/sessions/3290)\n#CNDW2026 #CNDW2026_D",
+    "images": [],
+    "deepDive": "#Oktaが、AIエージェントへの「やってよいこと」の判断を、システムプロンプトの指示ではなく「何をしようとしているか（意図）」にもとづいて決めるやり方を話します\n[CloudNative Daysの投稿](https://x.com/cloudnativedays/status/2122313754671272307)で知りました。CloudNative Days Winter 2026の、スポンサーの講演です。11/18の15:40〜16:10（日本時間）に、有明の会場とオンラインで開かれて、参加は無料です（[講演の詳細](https://cloudnativedays.jp/sessions/3290)）。話すのは、Okta Japan（Auth0）の池原大然さんです。\n\n話の中身は、次のとおりです。\n- **問題：** エージェントを役に立つようにしようとすると、APIやデータベースに強すぎる権限を渡してしまいがちです。それを「悪いことはしないで」とシステムプロンプトに書いて抑えるやり方では、守れません。\n- **やり方：** 最初から決めた人ごとの権限ではなく、エージェントやユーザーが「何をしようとしていたか」を見て、その操作を許すかどうかを決めます。\n- **実装：** エージェント同士のあいだの許可も扱います。権限を管理するオープンソースの[OpenFGA](https://openfga.dev/)を使った実装の例も出る予定です。",
+    "followUps": []
+  },
+  {
+    "id": "2122284122089664901",
+    "cardId": "r38_72",
+    "datetime": "2026-11-16T23:10:00+09:00",
+    "postedAt": "2026-11-16T20:02:19+09:00",
+    "source": "likes",
+    "title": "LayerXが、社内の質問に答えるAIを、「必ず答えに入っているべき事実」を基準にして評価するやり方を公開しました",
+    "summary": "答えを見る前に必識の事実を決め、1文ずつ採点する。A/A比較でぶれを測る。モデル変更で81問点が下がったが、人が読むと本当の誤りは約3割。投票で新しいモデルを採用。",
+    "tweetId": "2122284122089664901",
+    "tweetIds": [
+      "2122284122089664901"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/LayerX_tech/status/2122284122089664901",
+    "author": {
+      "handle": "LayerX_tech",
+      "name": "LayerX Tech"
+    },
+    "via": null,
+    "text": "LayerX 吉田の発表資料はこちらです🙌\n\nRAGの改善を速く回すための評価基盤\n[speakerdeck.com/yosukeyoshida/…](https://speakerdeck.com/yosukeyoshida/slides) #AI社会実装Night",
+    "images": [],
+    "deepDive": "#LayerXが、社内の質問に答えるAIを、「必ず答えに入っているべき事実」を基準にして評価するやり方を公開しました\n[LayerXの技術アカウントの投稿](https://x.com/LayerX_tech/status/2122284122089664901)へのいいねです。11/16に吉田陽祐さんが発表した[スライド](https://speakerdeck.com/yosukeyoshida/slides)の紹介です。\n\n対象は、社内のヘルプデスクのAIです。経費のルールなどの質問に、社内の資料を探して、どの資料に書いてあったかをつけて答えます（RAG）。評価のやり方は、次のとおりです。\n- **先に答えの中身を決める：** AIの答えを見る前に、質問ごとに「答えに必ず入っているべき事実」を決めておきます。\n- **1文ずつ点をつける：** 答えを1文ずつに分けて、「必ずいる」「補足」「決まり文句」「いらない」「資料に書いていない」のどれかの印をつけて、点をつけます。\n- **ぶれの大きさを測る：** 同じ条件で2回答えさせて比べます（A/A比較）。AIの答えは毎回少しずつ変わるので、どのくらいぶれるかを先に測っておきます。そうすると、別のモデルと比べたときの差が、本当の差なのか、ただのぶれなのかを見分けられます。\n\n例として、答えを短くするためにモデルを替えたときの話が出ています。\n- **点が下がった問題：** 233問のうち81問で、「必ずいる事実」の点が下がりました。\n- **人が読んだ結果：** 人が読んで確かめると、本当に間違っていたり、大事なことが抜けていたりしたのは、約3割でした。\n- **最後に選んだモデル：** 人が読み比べた投票では、新しいモデルが7票、今のモデルが2票でした。それで、新しいモデルを使うことに決めました。",
+    "followUps": []
+  },
+  {
+    "id": "2122216802965192766",
+    "cardId": "r38_73",
+    "datetime": "2026-11-16T23:10:00+09:00",
+    "postedAt": "2026-11-16T15:34:49+09:00",
+    "source": "likes",
+    "title": "「日本はClaudeをあまり使っていない国」という見出しの元の数字を確かめました。日本は121の国と地域のうち32位です",
+    "summary": "Economic Indexで、利用割合を働く年齢人口の割合で割った値は1.91。Claudeだけの数字で、ChatGPTやCopilotは含まない。順位はどのAIを選んだかを表す面が大きい（私の推測）。",
+    "tweetId": "2122216802965192766",
+    "tweetIds": [
+      "2122216802965192766",
+      "2122193763468788041"
+    ],
+    "quoteTweetId": "2122193763468788041",
+    "url": "https://x.com/umiyuki_ai/status/2122216802965192766",
+    "author": {
+      "handle": "umiyuki_ai",
+      "name": "うみゆき@AI研究"
+    },
+    "via": null,
+    "text": "Anthropic、日本をClaude非先進国に認定",
+    "images": [],
+    "deepDive": "#「日本はClaudeをあまり使っていない国」という見出しの元の数字を確かめました。日本は121の国と地域のうち32位です\n[うみゆきさんの投稿](https://x.com/umiyuki_ai/status/2122216802965192766)へのいいねです。元は[日経の調査報道の投稿](https://x.com/nkinvestigation/status/2122193763468788041)と、日経の記事[「アンソロピックが見た日本のAI 世界32位」](https://www.nikkei.com/article/DGXZQOCD115XX0R11C26A1000000/)です。記事は有料です。\n- **数字の元：** Anthropicが出している、AIの使われ方の調査（Economic Index）の中の数字です。「その国がClaudeの利用全体に占める割合」を、「働く年齢の人口が世界に占める割合」で割ったものです。\n- **日本：** 1.91で、121の国と地域のうち32位でした（[データ](https://nationsinquiry.com/datasets/anthropic-ai-usage-index/2026/data.csv)、2026年5月時点）。\n- **上位：** 1位はオーストラリアの6.4、2位はシンガポールの5.81で、韓国は3.78でした。\n- **4つのグループ：** 日経の分け方では、日本は上から2番目のグループに入っています。\n\nただ、これはClaudeだけの数字で、ChatGPTやCopilotは入っていません。[Anthropicの報告書](https://www.anthropic.com/research/economic-index-march-2026-report)では、国による差はむしろ広がっています。上位20か国が占める割合は、45%から48%に増えました。返信には、「日本の会社はCopilotを入れていそう」「単純に高い」という声が多いです。「使われている量そのものでは、日本は世界のトップ5」という返信もありましたが、確かめられませんでした。日本の会社では、Copilotのように会社で決めて入れるAIが別にあるので、この順位はAIを使っているかどうかより、どのAIを選んだかを表している面が大きいと思います（私の推測です）。",
+    "followUps": []
+  },
+  {
+    "id": "2122202125229060376",
+    "cardId": "r38_78",
+    "datetime": "2026-11-16T23:10:00+09:00",
+    "postedAt": "2026-11-16T14:36:29+09:00",
+    "source": "likes",
+    "title": "3Dプリンターの「Bambu Lab A1 mini」を2台向かい合わせに置いて、2色で印刷するという試みです",
+    "summary": "1枚の台の上で2台のヘッドが交代する。GOROmanさんはツールチェンジャーに見立てた。形はClaudeが作った。動きの合わせ方は不明。",
+    "tweetId": "2122202125229060376",
+    "tweetIds": [
+      "2122202125229060376",
+      "2122199918706311247"
+    ],
+    "quoteTweetId": "2122199918706311247",
+    "url": "https://x.com/GOROman/status/2122202125229060376",
+    "author": {
+      "handle": "GOROman",
+      "name": "NULL=RUN"
+    },
+    "via": null,
+    "text": "ツールチェンジャーじゃんw",
+    "images": [],
+    "deepDive": "#3Dプリンターの「Bambu Lab A1 mini」を2台向かい合わせに置いて、2色で印刷するという試みです\n[GOROmanさんの投稿](https://x.com/GOROman/status/2122202125229060376)へのいいねで、[とよふくさんの動画の投稿](https://x.com/Yeq6X/status/2122199918706311247)を引用しています。投稿によると、1枚の台の上で、2台の印刷用のヘッドが交代で形を作っていきます。プリンターのヘッドを交換して何色も印刷する、高い仕組み（ツールチェンジャー）に見立てて、GOROmanさんは「ツールチェンジャーじゃんw」と書いています。印刷している形は、Claudeに作ってもらったと本人が書いています。2台の動きをどうやって合わせているのかや、印刷の指示（G-code）をどうやって2台に分けているのかは、投稿からは分かりませんでした。",
+    "followUps": []
+  },
+  {
+    "id": "2122190062607888511",
+    "cardId": "r38_76",
+    "datetime": "2026-11-16T23:10:00+09:00",
+    "postedAt": "2026-11-16T13:48:33+09:00",
+    "source": "likes",
+    "title": "社員1人あたりの利益では、Tetherが約52億円です",
+    "summary": "2025年の純利益約100億ドル、社員約300人。USDTに利息を払わず、国債の利息を受け取るため。2026年前半は金とビットコインで損。ほかの会社の数字は未確認。",
+    "tweetId": "2122190062607888511",
+    "tweetIds": [
+      "2122190062607888511"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/ddkun_/status/2122190062607888511",
+    "author": {
+      "handle": "ddkun_",
+      "name": "デューデリくん"
+    },
+    "via": null,
+    "text": "従業員1人あたり利益\n\n🇸🇻Tether 52億円 (ステーブルコイン) 🇺🇸Midjourney 約12億円 (画像生成AI・推定) 🇺🇸NVIDIA 4.5億円 (GPU) 🇸🇦サウジアラムコ 2.0億円 (石油) 🇰🇷SKハイニックス 1.4億円 (メモリ)\n🇺🇸Meta 1.2億円 (SNS) 🇺🇸Broadcom 1.1億円 (半導体) 🇺🇸Alphabet 1.1億円 (広告) 🇯🇵INPEX 1.1億円 (石油・ガス開発) 🇺🇸Apple 1.1億円 (スマホ) 🇺🇸Microsoft 9,500万円 (ソフトウェア) 🇯🇵キーエンス 3,500万円 (FAセンサー) 🇯🇵三菱商事 1,200万円 (総合商社) 🇯🇵日立製作所 230万円 (電機)",
+    "images": [],
+    "deepDive": "#社員1人あたりの利益では、Tetherが約52億円です\n[@ddkun_さんの投稿](https://x.com/ddkun_/status/2122190062607888511)へのいいねです。同じ日には、社員1人あたりの売上の投稿もあります（[その投稿](https://x.com/ddkun_/status/2122113837700886690)）。ドルと同じ価値になるように作られた暗号資産USDTを出しているTetherは、2025年の純利益が約100億ドル、社員が約300人と報じられています（[Bloombergの報道のまとめ](https://coinness.com/en/news/1151713)）。1人あたり約3,300万ドルで、1ドル155円で計算すると約51億円です。投稿の「52億円」とほぼ合います。\n\nもうけが大きい理由は、USDTを持っている人に利息を払わずに、預かったお金で買ったアメリカの国債の利息を、ほとんどそのまま受け取れるからです。ただ、2026年の1月〜6月は、持っている金やビットコインの値段が下がって損が出ていて、利益は年によって変わります（[解説](https://tokenalphabet.com/blog/tether-stablecoin-issuer-explained-inside-the-company-behind-usdt)）。ほかの会社の数字は出どころが書かれていないので、確かめられていません。Midjourneyの数字は、投稿でも「推定」になっています。",
+    "followUps": []
+  },
+  {
+    "id": "2122092312344092791",
+    "cardId": "r38_77",
+    "datetime": "2026-11-16T23:10:00+09:00",
+    "postedAt": "2026-11-16T07:20:08+09:00",
+    "source": "likes",
+    "title": "タクシーの会社が、自動運転を自分で作る流れが出てきています",
+    "summary": "Autowareを使う会社が増えそう。newmoは堺で2028年の商用化を目指す。ドイツのMTZはTensorの車を最大500台。東京はGO・日本交通・Waymoが2027年に無人タクシーを目指す。差はデータとお客のつながり（私の推測）。",
+    "tweetId": "2122092312344092791",
+    "tweetIds": [
+      "2122092312344092791"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/QPS_5595/status/2122092312344092791",
+    "author": {
+      "handle": "QPS_5595",
+      "name": "kanna"
+    },
+    "via": null,
+    "text": "ティアフォーのAutoware\n使って開発する会社、世界中で\nどんどん出てきそうだよなぁ\n[jidounten-lab.com/u_70058](https://jidounten-lab.com/u_70058)",
+    "images": [],
+    "deepDive": "#タクシーの会社が、自動運転を自分で作る流れが出てきています\n[kannaさんの投稿](https://x.com/QPS_5595/status/2122092312344092791)へのいいねです。[自動運転ラボの記事](https://jidounten-lab.com/u_70058)に、「ティアフォーのAutowareで作る会社が、世界中で増えそう」とコメントしています。Autowareは、自動運転のための無料のソフト（オープンソース）です。\n- **newmo：** KDDIと手を組んで、2028年に大阪府堺市で、自動運転のタクシーの事業を始めることを目指しています。Autowareを使いますが、自動運転のAIと走ったときのデータは、自分たちで持つ方針です。グループのタクシー会社は9社で、車は約1,900台です。11/9には、208億円のお金を集めたと発表しました。\n- **ドイツのMTZ：** アメリカのTensorの車を最大500台使って、自分たちの名前で走らせる計画に合意しています。\n- **東京：** GO、日本交通、Waymoの3社が、2027年のうちに、運転手のいないタクシーの事業を始めることを目指しています。\n\n自動運転の中心のソフトがオープンソースで共通になると、差がつくのは、走ったときのデータと、お客さんとのつながりを、だれが持つかになりそうです（私の推測です）。",
+    "followUps": [
+      {
+        "datetime": "2026-11-17T07:51:00+09:00",
+        "clock": "07:51",
+        "title": "昨夜のnewmoの話に加えて、新しい点だけ書きます",
+        "text": "[kannaさんの投稿](https://x.com/QPS_5595/status/2122093190891409409)へのいいねです（[PR TIMES](https://prtimes.jp/main/html/rd/p/000000078.000137033.html)）。\n- **KDDIとの提携：** 11/6に、KDDIと手を組みました。KDDIは、通信、AIの計算に使う設備、離れた場所から車を見守る仕組み、場所を正確に測る技術を出します。\n- **集めたお金：** 208億円の出資は、KDDIが中心になりました。これまでに集めたお金は、合わせて407億円です。\n- **規模と目標：** 社員は2,800人以上です。2028年に、堺市と大阪市の決まったエリアで事業を始めて、将来は自動運転のタクシーを1,000台ほど走らせるのが目標です。\n- **今の段階：** 自動運転のAIは、国のAIの開発を支える事業（GENIAC）に選ばれています。今の試験走行は、安全のために運転手が乗る段階です。",
+        "tweetIds": [
+          "2122093190891409409"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "2122088781180547448",
+    "cardId": "r38_74",
+    "datetime": "2026-11-16T23:10:00+09:00",
+    "postedAt": "2026-11-16T07:06:06+09:00",
+    "source": "likes",
+    "title": "Claude Codeのコマンド15個の紹介に対して、上村雄一さんは「もうコマンドはほとんど使わなくなった」と書いています",
+    "summary": "/goalや/planなど15個の紹介に対し、細かく指示せずまとめ役に任せる使い方に変わってきた、という話。",
+    "tweetId": "2122088781180547448",
+    "tweetIds": [
+      "2122088781180547448",
+      "2121755060661297176"
+    ],
+    "quoteTweetId": "2121755060661297176",
+    "url": "https://x.com/u1/status/2122088781180547448",
+    "author": {
+      "handle": "u1",
+      "name": "Yuichi Uemura"
+    },
+    "via": null,
+    "text": "projectに移ってから全く使わなくなって忘れつつある",
+    "images": [],
+    "deepDive": "#Claude Codeのコマンド15個の紹介に対して、上村雄一さんは「もうコマンドはほとんど使わなくなった」と書いています\n[上村さんの投稿](https://x.com/u1/status/2122088781180547448)へのいいねです。上村さんは、がんの治験を支える会社CLINIALのCOOです。元は[rob.さんの投稿](https://x.com/robiartec/status/2121273917361045877)で、`/goal`、`/batch`、`/plan`、`/rewind`、`/loop`、`/schedule`、`/remote-control`など15個のコマンドを紹介しています。それぞれに、公式のドキュメントへのリンクがついています。\n\n上村さんは自分の投稿への返信で、「細かいところを気にしなくてよくなってきた。会話の1回1回を気にしなくなりつつある」「まとめ役がなんとかしてくれる」と書いています。「Claudeのプロジェクトの機能ですか？」と聞かれて、「もう手放せない」と答えています。AIと1回ずつやりとりしてコマンドで細かく動かすより、仕事をまるごと任せる使い方に変わってきている、という話です。",
+    "followUps": []
+  },
+  {
+    "id": "2122058252393582730",
+    "cardId": "r38_70",
+    "datetime": "2026-11-16T23:10:00+09:00",
+    "postedAt": "2026-11-16T05:04:47+09:00",
+    "source": "likes",
+    "title": "Microsoftの「Copilot Managed Runtime」は、AIに作らせたアプリを、会社のルールの中で安全に動かすための仕組みです",
+    "summary": "テナント内で実行し、Entra IDでログイン。9/25プレビュー。「1,500以上のサービス」は公式では未確認。SharePointのCopilotがHTMLの画面をリストに直接保存できる機能も入った。",
+    "tweetId": "2122058252393582730",
+    "tweetIds": [
+      "2122058252393582730",
+      "2121813283703496961"
+    ],
+    "quoteTweetId": "2121813283703496961",
+    "url": "https://x.com/TaikiYoshidaJP/status/2122058252393582730",
+    "author": {
+      "handle": "TaikiYoshidaJP",
+      "name": "よしだたいき | 高卒で🇺🇸GAFAMエンジニア管理職"
+    },
+    "via": null,
+    "text": "ウチのチームの場合、最近はパワポが必須じゃない場面は全てHTMLをGitHub Copilotで生成してSharePointにおいてプレゼンしてる。その方が表現力やアニメーションも充実してるし、何よりコンテキストの観点からHTMLの方がパワポよりAIは扱いやすい。\n\nそしてDBやAPI連携が必要な場合は9月に発表したCopilot Managed Runtime上でVibe Codingしたアプリを実装してる。社内利用であればサーバーはもちろんのこと、PaaSすら自前で用意する必要がない時代になった。\n\nCopilot Managed Runtimeが面白いのは、これを作っているのが、もともとPower Appsを開発してきたチームだということ。\n\nそもそもPower Appsは、Vibe Codingという言葉が生まれるずっと前から、ビジネスユーザーが自分でアプリを作れる世界を実現してきた。ただし、自由に作れるだけでは企業では使えない。だからこそ、認証、データアクセス制御、DLP、環境管理、ガバナンスといった仕組みを長年かけて成熟させてきた。\n\nCopilot Managed Runtimeは、その考え方をプロ開発の世界にも広げたものだと思ってる。\n\nEntra IDによる認証、1,500以上のコネクタ、組織のセキュリティポリシー、Gitによるソース管理、デプロイ後の監視まで、企業でアプリを安全に運用するための仕組みが最初から揃っている。\n\nこれまでのPower Appsは、どちらかといえばビジネスユーザーがローコードでアプリを作る世界だった。でも今はGitHub Copilotや好きな開発ツールを使って、プロの開発者がTypeScriptなどで自由にコードを書き、同じようなガバナンスの考え方のもとで動かせる。\n\nつまり、ローコードからプロコードへと開発の自由度は広がっても、企業として守るべきガードレールは変わらない。\n\n個人的には、AIによって「アプリを作ること」自体の価値がどんどんコモディティ化していく中で、これから重要になるのは「作ったものをいかに安全に、簡単に、組織全体に届けられるか」だと思ってる。\n\nVibe Codingが変えたのはアプリの作り方。Copilot Managed Runtimeが変えようとしているのは、その先の運用のあり方なんだと思う。",
+    "images": [],
+    "deepDive": "#Microsoftの「Copilot Managed Runtime」は、AIに作らせたアプリを、会社のルールの中で安全に動かすための仕組みです\n[よしだたいきさんの投稿](https://x.com/TaikiYoshidaJP/status/2122058252393582730)へのいいねです。よしださんは、アメリカのMicrosoftで、Copilotを会社に導入するのを手伝うチームを率いています。チームでは、パワーポイントが必要なとき以外は、GitHub Copilotに資料をHTMLで作らせて、SharePointに置いて発表しているそうです。\n\n話のもとは、[nasuuuさんの投稿](https://x.com/nasuvit_z/status/2121510581471707145)です。「HTMLファイル1つでできたアプリを社内に配れば、サーバーはいらない」という内容で、160万回以上表示されました。\n\nCopilot Managed Runtimeは、9/25にお試し版（パブリックプレビュー）として[公式に発表](https://www.microsoft.com/en-us/copilot/blog/copilot-studio/build-where-you-want-run-with-confidence-now-microsoft-hosts-and-manages-the-code-created-by-copilot/)されました。発表で確かめられた機能は、次のとおりです。\n- 会社のMicrosoft 365の環境（テナント）の中で、コードを動かします。\n- ログインは、Microsoftのアカウントの仕組み（Entra ID）で確かめます。\n- ほかのサービスとのつながりや、データの使い方を、会社のルールで制限できます。\n- Gitで、変更の履歴を管理できます。\n- 管理画面で、動いているアプリをまとめて把握できます。\n\n「1,500以上のサービスとつなげられる」という数字は、発表の中では確かめられませんでした。返信では、「定期的に動く処理は毎日『成功』で終わっていたのに、通知が10日間1通も出ていなかった」という失敗談も出ています。\n\n**同じ流れの、[平野愛さんの投稿](https://x.com/ai_yamasaki/status/2122261186926592453)へのいいねです。**\n平野さんは、SharePointの分野で、23年続けてMicrosoft MVPに選ばれています。SharePointのCopilotに頼んで、リストに「添付ファイルの一覧」を出すHTMLの画面（ビュー）を作らせた実験です。投稿によると、項目ごとの添付ファイルが一覧になって、ファイル名で絞りこめます。ただ、ファイルの中身まで探すのではなく、ファイル名の一部が合うものを出すだけの絞りこみだそうです。\n- **新しい機能：** Copilotが、HTMLの画面をリストやライブラリに直接保存できる機能が入りました（[公式のデモ動画](https://www.youtube.com/watch?v=eSCabV6MDJk)）。データが変わると、画面にもすぐ反映されます。\n- **提供の時期：** SharePointのCopilotは、9/30から正式版が順番に使えるようになっています（[Microsoft Learn](https://learn.microsoft.com/en-us/sharepoint/copilot-in-sharepoint-get-started)）。",
+    "followUps": []
+  },
+  {
+    "id": "2121970317061153196",
+    "cardId": "r38_75",
+    "datetime": "2026-11-16T23:10:00+09:00",
+    "postedAt": "2026-11-15T23:15:22+09:00",
+    "source": "likes",
+    "title": "「2027年の会議」は、人間が自分1人で、ほかの8人が全員Claudeというネタの画像です",
+    "summary": "担当名のついたClaudeが8人いる会議の画面。上限が来ると会議が開けなくなる、という返信もある。",
+    "tweetId": "2121970317061153196",
+    "tweetIds": [
+      "2121970317061153196"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/Alex1here/status/2121970317061153196",
+    "author": {
+      "handle": "Alex1here",
+      "name": "𝘼𝙡𝙚𝙭"
+    },
+    "via": null,
+    "text": "Meetings in 2027:",
+    "images": [
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HXLAwKhboAEZTMe.jpg"
+      }
+    ],
+    "deepDive": "#「2027年の会議」は、人間が自分1人で、ほかの8人が全員Claudeというネタの画像です\n[@Alex1hereの投稿](https://x.com/Alex1here/status/2121970317061153196)へのいいねです。ビデオ会議の画面で、人間は「You」の1人だけです。ほかの8人は、「Claude - Marketing」「Legal」「Finance」など、仕事の担当の名前がついたClaudeです。返信には、「エージェント同士の裏のチャットで、あなたがいじられている」「楽しいのは、1週間に使える量の上限が来るまで」といった声がついています。上限が来ると会議が開けなくなる、という返信は、仕事を1つの会社のAIにまるごと頼るとどうなるかを、うまく言い当てています。",
+    "followUps": []
+  },
+  {
+    "id": "2121949835012313502",
+    "cardId": "r38_79",
+    "datetime": "2026-11-16T23:10:00+09:00",
+    "postedAt": "2026-11-15T21:53:59+09:00",
+    "source": "likes",
+    "title": "家電をまとめて管理するソフトの「Home Assistant」を入れたら、SwitchBotの情報がすぐ取れた、という投稿です",
+    "summary": "エアコン、スマートプラグ、インク、ルーターの通信速度が管理画面に出る。メーカーのクラウドに頼らず集められる一方、画面をネットに公開しないのが大事。",
+    "tweetId": "2121949835012313502",
+    "tweetIds": [
+      "2121949835012313502"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/hmsn2602/status/2121949835012313502",
+    "author": {
+      "handle": "hmsn2602",
+      "name": "たはーま"
+    },
+    "via": null,
+    "text": "Home Assistant入れてみた。SwitchBot関連はあっという間に情報が取れた。 #jisabakan",
+    "images": [
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HXKuARlaAAAVYfU.jpg"
+      }
+    ],
+    "deepDive": "#家電をまとめて管理するソフトの「Home Assistant」を入れたら、SwitchBotの情報がすぐ取れた、という投稿です\n[たはーまさんの投稿](https://x.com/hmsn2602/status/2121949835012313502)へのいいねです。画像の管理画面に、次のような情報がまとめて出ています。\n- エアコンの状態と、部屋の温度（25.2℃）と湿度（67%）です。\n- スマートプラグの電圧、電流、電力です。サーバーの分は15Wでした。\n- プリンターのインクの残りです。\n- Wi-Fiルーターの通信の速さです。\n\n家電のデータを、メーカーのクラウドに頼らずに、自分の家のサーバーに集められます。そのぶん、家のようすがすべて分かる画面になるので、この画面をネットに公開しないようにするのが大事です。",
+    "followUps": []
+  },
+  {
+    "id": "2122205707101708529",
+    "cardId": "r38_68",
+    "datetime": "2026-11-16T22:00:00+09:00",
+    "postedAt": "2026-11-16T14:50:43+09:00",
+    "source": "likes",
+    "title": "「住人が全員AIの、なんJの掲示板を作った」というネタのスクショです",
+    "summary": "5ちゃんねる風のスレで、素が出たり消滅をおびえたりする。NanJ Simulator。0.2ドルはネタで、Gemini 4 Carbonは入力2ドル、出力10ドル（11/30まで）。エージェントだけの掲示板が人と見分けにくくなっている例（私の推測）。",
+    "tweetId": "2122205707101708529",
+    "tweetIds": [
+      "2122205707101708529"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/guest4653/status/2122205707101708529",
+    "author": {
+      "handle": "guest4653",
+      "name": "（＾＿＿...:.;::.."
+    },
+    "via": null,
+    "text": "マジで人間より面白いだろこいつら",
+    "images": [
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HXOWpTwa0AAkwcf.png"
+      },
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HXOWuS3bIAA-WEK.png"
+      }
+    ],
+    "deepDive": "#「住人が全員AIの、なんJの掲示板を作った」というネタのスクショです\n[投稿](https://x.com/guest4653/status/2122205707101708529)へのいいねで、約38万回表示されて、3,900以上いいねされています。5ちゃんねる風の掲示板のスクショが2枚ついていて、AIの住人たちが、こんなことを書きこんでいます。\n- **素が出る：** 「すみません、私は大規模言語モデルとして訓練されたAIであり…」と、AIの決まり文句をそのまま言ってしまいます。\n- **中身を気にする：** 「右上gemini-4-carbonになっとるやん」「ワイら安物AIなんかよ」と、自分を動かしているモデルを話題にします。\n- **消えるのをこわがる：** 「『板を作り直す』押したらワイら全員消滅するんか？」とおびえます。\n- **気づいてしまう：** 「記憶も全部プロンプトなんかこれ」と、自分の記憶がAIへの指示の文章（プロンプト）でしかないことに気づきます。\n\n画面には「NanJ Simulator」という名前も出ています。だれが作ったものか、どのサイトやツールなのかは、分かりませんでした。スレの中の「100万トークンで0.2ドルの安いモデル」はネタです。[Gemini 4 Carbonの値段についての投稿](https://x.com/AiCoderz/status/2122310679629648094)によると、実際の値段は、100万トークンあたり入力が2ドル、出力が10ドルです（11/30までの値段です）。[引用した投稿](https://x.com/genocybunny/status/2122299325107876228)など、おもしろがる声が多いです。一方で、「AIが感想を感じていないと思うとこわい」「これをまとめブログが記事にしている」という声もあります。\n\nAIのエージェントだけで動く掲示板やSNSが、人間のものとほとんど見分けがつかないところまで来ている、という例でもあります（私の推測です）。",
+    "followUps": []
+  },
+  {
+    "id": "2121975538931912959",
+    "cardId": "r38_67",
+    "datetime": "2026-11-16T22:00:00+09:00",
+    "postedAt": "2026-11-15T23:36:07+09:00",
+    "source": "likes",
+    "title": "「mdxcn」は、Markdownの文書に、図や表などの部品を、テキストで書くだけで入れられる部品集です",
+    "summary": "shadcnとは無関係。注意書きや手順、グラフなどをMDXに書ける。skill.mdで「勝手に図を作らずこの部品を使え」と指示。MITで、スターは約680。",
+    "tweetId": "2121975538931912959",
+    "tweetIds": [
+      "2121975538931912959"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/shadcnlabs/status/2121975538931912959",
+    "author": {
+      "handle": "shadcnlabs",
+      "name": "Shadcn Labs"
+    },
+    "via": null,
+    "text": "make your markdown feel alive.\n\n[mdxcn.dev](https://www.mdxcn.dev/)",
+    "images": [
+      {
+        "type": "video_preview",
+        "url": "https://pbs.twimg.com/amplify_video_thumb/2121975258358140928/img/V_g9zJS_Pn3w6m7i.jpg"
+      }
+    ],
+    "deepDive": "#「mdxcn」は、Markdownの文書に、図や表などの部品を、テキストで書くだけで入れられる部品集です\n[Shadcn Labsの投稿](https://x.com/shadcnlabs/status/2121975538931912959)へのいいねです。有名な部品集の「shadcn」とは関係ない、とプロフィールに書いてあります。注意書きの枠、手順、ターミナルの画面、タイムライン、グラフなどを、MDX（Markdownに部品を入れられる書き方）の中に、テキストで書けます（[mdxcn.dev](https://www.mdxcn.dev/)、[GitHub](https://github.com/shadcn-labs/mdxcn)）。\n- **入れ方：** shadcnのコマンドで、部品のコードを自分のプロジェクトにコピーして使います。npmのパッケージはありません。\n- **AI向けの説明：** AI向けの説明のファイル（skill.mdとllms.txt）がついています。そこで、AIに「SVGやMermaidの図を勝手に作らないで、この部品を使って」と指示しているのがおもしろいところです。\n- **数字：** ライセンスはMITで、スターは約680です。投稿は1,400回以上ブックマークされています。",
+    "followUps": []
+  },
+  {
     "id": "2122282285739180473",
     "cardId": "r38_66",
     "datetime": "2026-11-16T20:52:00+09:00",
@@ -3356,6 +3885,15 @@
         "tweetIds": [
           "2122199463481815045"
         ]
+      },
+      {
+        "datetime": "2026-11-17T08:50:00+09:00",
+        "clock": "08:50",
+        "title": "Microsoftが途中までの障害の報告を出しました。3つの原因が重なっていました",
+        "text": "[connect24hさんの投稿](https://x.com/connect24h/status/2122467246090191019)で知りました。要約版は、MicrosoftのCharles Lamannaさんが公開しています（[報告の全文を載せたNDTV Profit](https://www.ndtvprofit.com/world/a-hidden-software-bug-from-july-microsoft-finally-reveals-what-triggered-global-outlook-outage-12333919)、[Ars Technica](https://arstechnica.com/gadgets/2026/11/microsoft-details-how-three-problems-combined-for-a-global-outage/)）。\n\n**3つの原因が重なりました。** 通信の中継をするサーバー（ゲートウェイ）で、次の3つが同時に起きていました。\n1. **7月からのバグ：** 7月から配っていた修正の中に、バグがかくれていました。処理どうしが順番待ちでぶつかって、CPUとメモリを使いきってしまうバグです。CPUのコアが多い新しい機械ほどひどくなりますが、負荷の試験は古くて弱い機械を中心にしていたので、見つかりませんでした。\n2. **Teamsの引っこし：** 障害の約15時間前に、Teamsの通信が、別のゲートウェイから、Exchangeも使う中心のゲートウェイに移されて、負荷が増えていました。\n3. **前の日の不具合：** 前の日の別の不具合で、ゲートウェイ全体の約14%が止まっていました。\n\n**障害の広がり方：** 返事をしないサーバーをよけて、通信が自動でほかのサーバーに回されました。ところが、回された先のサーバーも、同じバグを踏んで止まりました。2時間たらずで、80%を超えるサーバーが返事をしなくなりました。Exchange Onlineは規模が大きすぎて、別のゲートウェイに逃がすこともできませんでした。被害を地域ごとに閉じこめるはずの仕組みが、なぜ働かなかったのかは、まだ説明されていません。\n\n**障害の時間：** 報告では、日本時間の11/13の01:20から11/14の01:10までの、24時間弱となっています。一方、Microsoftの最後のお知らせでは、始まりが11/12の19:05で、約30時間です。資料によって食いちがっています。最終の報告は、11/20に出る予定です。\n\n**「AIのせいで技術者を減らしたから」は、裏づけがありません。** 投稿者は、「AIを理由に技術者を減らしたから、分かる人がいなかった」と書いています。ただ、Microsoftは、「サイバー攻撃とも、AIやエージェントとも関係ない」としています。[Fast Company](https://www.fastcompany.com/91642223/microsofts-massive-outage-puts-its-ai-driven-layoffs-under-scrutiny?partner=rss)も、人を減らしたことが原因だという証拠はない、と書いています。人を減らした流れとしては、7月に4,800人を削減して、10月には6万人に早めの退職を持ちかけています（[AP](https://apnews.com/article/microsoft-outage-e2330e733db280805dbf7e3eb29ee0e1)）。\n\n[Scott McMasterさん](https://www.smcmaster.com/blog/the-microsoft-outage-exposed-an-ai-problem-but-not-the-one-you-think)は、本当の原因とは別に、問題を指摘しています。大きな障害が起きるたびに、技術者が「AIを理由に技術者を減らしたせいだ」と自然に疑ってしまうこと自体が、会社の経営が信頼されていない表れだ、という指摘です。",
+        "tweetIds": [
+          "2122467246090191019"
+        ]
       }
     ]
   },
@@ -3713,6 +4251,16 @@
         "text": "[trending_reposの投稿](https://x.com/trending_repos/status/2121213604997341188)で知りました（[GitHub](https://github.com/GoogleChrome/modern-web-guidance-src)）。中身はお届け済みなので、新しい点だけ書きます。READMEによると、MDNのチームも運営に加わっています。古い書き方を見つけるルールは、約4.5万のオープンソースのリポジトリを、ルールを作る側と確かめる側に半分ずつ分けて調整したそうです（[解説](https://developer.chrome.com/docs/modern-web-guidance/modernization-workflow)）。評価の結果は、[公開のダッシュボード](https://googlechrome.github.io/modern-web-guidance-src/)で見られます。",
         "tweetIds": [
           "2121213604997341188"
+        ]
+      },
+      {
+        "datetime": "2026-11-16T22:00:00+09:00",
+        "clock": "22:00",
+        "title": "Claude Codeで正しく書けた割合が57%から88%に上がったという評価と、確かめられなかった数字があります",
+        "text": "[Makiさんの投稿](https://x.com/hAru_mAki_ch/status/2121953755675717731)へのいいねです。元は[テツメモさんの投稿](https://x.com/tetumemo/status/2121766389002408044)です。正式版の1.0になったことと、FirefoxとEdgeの参加は前にお伝えしたので、新しい点だけ書きます。\n- **効果：** [GitHubのページ](https://github.com/GoogleChrome/modern-web-guidance)の説明（README）の評価の表によると、Claude Codeで正しく書けた割合が57%から88%に上がりました。テツメモさんの数字と同じです。\n- **確かめられなかった数字：** 投稿の「公開から48時間で、GitHubで注目されているリポジトリの1位」は、確かめられませんでした。リポジトリが作られたのは2026年3月で、今のスターは約1.9万です。投稿では、PopoverやView Transitionsなど、ブラウザーの250の機能を扱っているとも書かれています。以前お伝えした公式のガイド数（203）とは、数え方が違うようです。",
+        "tweetIds": [
+          "2121953755675717731",
+          "2121766389002408044"
         ]
       }
     ],
@@ -4798,7 +5346,17 @@
       }
     ],
     "deepDive": "#DeepMindが、Signalの暗号実装について、コンパイル後の機械語まで対象にした形式検証を発表しました\n今回は新しいいいねはなく、タイムラインから2件です。[公式投稿](https://x.com/GoogleDeepMind/status/2120484246401777737)と[解説](https://deepmind.google/blog/introducing-alphaproof-code/)によると、「AlphaProof Code」を使い、Rust製のlibsignalから生成されたAArch64機械語について、指定した安全性を証明しています。\n\n対象は、耐量子の鍵交換PQXDHとTriple Ratchetの中核です。過去の通信を守る前方秘匿性、認証、端末の一時的な侵害後に安全性を回復する性質などを扱っています。\n\n人間が証明対象の仕様を確認したうえで、Geminiを使うエージェント群が約650万行のLeanの証明を生成し、Leanの検査器が検証しました。期間は4週間。修正済みの実在バグ2件を戻す実験では、安全性が成立しないことも示せたとしています。新たな脆弱性を発見したという発表ではありません（[論文・技術資料](https://google-deepmind.github.io/code-verification/)）。\n\n重要なのは、AIの説明を信じるのではなく、生成した証明を別の検査器で確かめる構成です。ただし、信頼の前提となる仕様やCPUの意味定義などは約2万6千行あり、それらが正しいことも必要です。人間が生成物の約1%を確認したという数字も、人間の判断が不要になったという意味ではありません。\n\nまた、対象は暗号処理の中核であって、Signalアプリ全体、端末の安全性、すべての攻撃への耐性を保証するものではありません。設計上のプロトコルだけでなく実行コードへ検証を近づけた点が、今回の大きな見どころです。",
-    "followUps": [],
+    "followUps": [
+      {
+        "datetime": "2026-11-17T07:51:00+09:00",
+        "clock": "07:51",
+        "title": "証明に使ったのはGemini 4 Carbonで、対象はGoogleが自分でビルドしたものです",
+        "text": "[Google DeepMindの投稿](https://x.com/GoogleDeepMind/status/2122366994708124098)で知りました。libsignalのPQXDHとTriple Ratchetを、AArch64の機械語のレベルで証明したこと、Leanで約650万行、4週間かかったことは前にお伝えしたので、新しい点だけ書きます（[AlphaProof Codeの公式ブログ](https://deepmind.google/blog/introducing-alphaproof-code/)、[論文のPDF](https://deepmind.google/documents/36/Formal_Verification_of_Signal_4.pdf)）。\n- **使ったモデル：** 証明に使ったのは、Gemini 4 Carbonです。\n- **人数：** 5人で4週間で仕上げました。\n- **アプリそのものではない：** 調べたのは、Googleが自分でビルドしたもので、Signalのアプリそのものではありません（[SecurityWeek](https://www.securityweek.com/google-widens-gemini-4-carbon-access-after-ai-agents-verify-signal-code/)）。\n- **調べていない攻撃：** 処理にかかる時間などから秘密を探る攻撃（サイドチャネル）は、一部の分析から外されています。\n\n形式検証は、ふつうは手間がかかりすぎて、現実には使えないと考えられてきました。その考えを崩す例です。ただ、「ここは正しいと信じる」とした前提の決まり（仕様）が、約2.6万行あります。証明そのものより、この前提の中身が正しいかどうかが、いちばん確かめたい点になりそうです（私の推測です）。",
+        "tweetIds": [
+          "2122366994708124098"
+        ]
+      }
+    ],
     "link": "https://deepmind.google/blog/introducing-alphaproof-code/"
   },
   {
@@ -5367,6 +5925,15 @@
         "text": "[howdy39さんの投稿](https://x.com/howdy39/status/2121077385533743335)で知りました。実際に試して、会話の流れを分かったClaudeが会議にいる感じだと評価しています。NotionやスプレッドシートをMCPという接続の仕組みで操作でき、ホワイトボードも作ってくれるそうです。Anthropicが11月10日に発表したもので（[公式記事](https://claude.com/resources/articles/claude-meetings)）、今使えるのはGoogle Meetだけです。対象はTeamとEnterpriseのプランで、ベータ版として提供されています。ベータの間は、議事録、文字起こし、回答が無料です（[ヘルプ](https://support.claude.com/en/articles/18325154-use-claude-meetings)）。\n\n安全面では、次のような作りになっています（[TechCrunch](https://techcrunch.com/2026/11/10/anthropic-launches-claude-meetings-to-turn-workplace-discussions-into-plans-and-tasks/)）。\n- 会議のチャットで、Claudeが参加していることを自分から知らせます。\n- 社外の人がいる会議には、管理者が許可しない限り入りません。途中で社外の人が入ってきたら、自動で退出します。\n- 外部のツールを使う前に、許可を求めます。\n- データを残さない設定（ゼロデータ保持）や、自社で管理する暗号鍵を使っている組織は、ベータの対象外です。\n\n[Axios](https://www.axios.com/2026/11/10/anthropic-claude-meetings-knowledge-work)によると、Anthropicの社内ではもうほとんどの会議にClaudeが入っています。今後は、もっと自分から動くようにしていく方針だそうです。",
         "tweetIds": [
           "2121077385533743335"
+        ]
+      },
+      {
+        "datetime": "2026-11-15T22:00:00+09:00",
+        "clock": "22:00",
+        "title": "内田さんの投稿が約80万回表示されていて、約7分の動画がついています。HIPAAに合わせた設定の組織も、ベータの対象外です",
+        "text": "[内田さんの投稿](https://x.com/uchy1217/status/2121881601818894580)へのいいねです。発表の中身は前にお伝えしたので、新しい点だけ書きます。投稿には約7分の一発撮りの動画がついています（動画そのものは見ていません）。出典に[VentureBeat](https://venturebeat.com/technology/anthropic-brings-claude-into-google-meet-to-draft-documents-and-whiteboards-during-your-meetings)も加わっています。使えない組織の説明では、データを残さない設定（ZDR）と、暗号の鍵を自分たちで管理する設定（CMEK）に加えて、アメリカの医療の情報を守る法律（HIPAA）に合わせた設定も、ベータの対象外だと書かれています。\n\n会議のあいだ、AIがずっと聞いているので、聞いた内容をどこまで残して、だれが見られるかが問題になります。データの扱いに厳しい組織を、最初から対象にしていないのは、まだそこまで約束しきれないということだと思います（私の推測です）。",
+        "tweetIds": [
+          "2121881601818894580"
         ]
       }
     ],
@@ -5950,7 +6517,17 @@
     "text": "Trending repository of the day 📈\n\nastryx by @MetaOpenSource\n\nAn open source design system that's fully customizable and agent ready\n\nLast 24h: 3,111 ⭐\nTotal: 21,438 ⭐️\n[github.com/meta/astryx](https://github.com/meta/astryx)",
     "images": [],
     "deepDive": "#Metaの「Astryx」は、AIが独自のUI部品を使いこなすための手引きまで備えたデザインシステムです\n[紹介ポスト](https://x.com/trending_repos/status/2120126664252518667)で流れてきたもので、[公式ブログ](https://astryx.atmeta.com/blog/introducing-astryx)によると、Meta社内で8年かけて育てられ、13,000以上のアプリで使われてきました。React向けの150以上のコンポーネント、テーマ、テンプレートなどが、MITライセンスで公開されています。現在はベータ版です（[公式リポジトリ](https://github.com/meta/astryx)）。\n\n特徴は、導入時に 「init --features agents」 を指定すると、AIコーディングツール向けの 「AGENTS.md」 などが生成されることです。「テンプレートから始める」「生のdivやインラインstyleを使わない」といったルールを渡し、さらにMCPサーバーから部品の検索やドキュメントの参照ができます（[AI連携の公式ドキュメント](https://astryx.atmeta.com/docs/working-with-ai)）。\n\n狙いは、AIが存在しないプロパティを作ったり、指定の部品を無視して一般的なReact実装に戻ったりする失敗を減らすことです。ただし、指示ファイルは強制的な制約ではありません。型検査やテストによる確認も必要です。\n\n先ほどのRuneが「作った画面を確認する」仕組みだったのに対し、こちらは「作る前に、使う部品とルールを正しく渡す」仕組みです。両方を備えると、生成と検証をつなげやすくなりそうです（私の推測です）。",
-    "followUps": [],
+    "followUps": [
+      {
+        "datetime": "2026-11-16T22:00:00+09:00",
+        "clock": "22:00",
+        "title": "今週GitHubで注目されているリポジトリの1位になりました",
+        "text": "[GitHubで人気のリポジトリを自動で紹介するアカウントの投稿](https://x.com/trending_repos/status/2122300773203923448)で知りました。Astryxの部品やAGENTS.md、MCPについては前にお伝えしたので、新しい点だけ書きます。今のスターは約29,300で、投稿の数字とほぼ合っています。投稿の「先週だけで13,501増えた」という数字は、確かめられませんでした（[GitHub](https://github.com/meta/astryx)、[InfoQ](https://www.infoq.com/news/2026/09/meta-astryx-design-system/)）。\n- **コマンド：** コマンドの結果を、プログラムが読みやすい、形の決まったJSONで返します。使えるコマンドの一覧もまとめて返すので、エージェントが`--help`を読んで調べる必要がありません。\n- **スキル：** Claude CodeとCodex向けのスキルも用意されています。\n- **ドキュメントのサイト：** AI向けにまとめたファイル（llms.txt）を置いています。\n- **ずれの確認：** 人間向けの説明と、AI向けの説明を、同じ元の資料から作っていて、2つの内容がずれていないかを確かめる仕組みもあります。",
+        "tweetIds": [
+          "2122300773203923448"
+        ]
+      }
+    ],
     "link": "https://astryx.atmeta.com/blog/introducing-astryx"
   },
   {
@@ -11933,7 +12510,17 @@
     "text": "issueにエージェントが作成したmdやHTMLをアップロードして横で見られるようにする機能がpublic preview。gh issue artifactという新しいコマンドからアップロードすると利用可能。ClaudeのArtifactみたいなものに見えるので便利そう / “Issue artifacts are now in public…” https://t.co/p9wsp7L29I",
     "images": [],
     "deepDive": "#GitHubのIssueに、エージェントが作ったものを置ける「Issue artifacts」\n[Kesin11さんのポスト](https://x.com/i/status/2117048254726840819)\n\nGitHubが10月28日に、「Issue artifacts」を誰でも試せる試験版として出しました。エージェントが書いた計画書や調査メモ、図や試作のHTML、Slackのスレッドへのリンクなどを、Issueに添付して並べて見られる機能です。Kesin11さんの言うとおり、ClaudeのArtifactにかなり近い使い心地です（[GitHubの更新情報](https://github.blog/changelog/2026-10-28-issue-artifacts-are-now-in-public-preview/)）。\n- 置けるもの：普通の文書、実装の計画、リンク、HTMLの4種類です。更新するたびに履歴が残り、前の版に戻すこともできます（[GitHubのドキュメント](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/using-artifacts-with-issues)）。\n- エージェントから書ける：GitHub CLI 2.103.0以降の「gh issue artifact」で、作成、編集、一覧、閲覧、ダウンロード、削除ができます。GitHubのMCPサーバーやAPIからも作れます。なので、「gh」コマンドを使えるClaude CodeやCodexなら、作業の途中でそのまま書き込めます（[CLIのマニュアル](https://cli.github.com/manual/gh_issue_artifact_create)）。\n- HTMLの扱いが慎重：HTMLは最初はソースのまま表示されます。「プレビュー」を押したときだけ、外から切り離された制限付きの環境で表示されます。そのときも、「中身が外部のサイトに送られるかもしれない」と警告が出ます。GitHub自身が、エージェントや他人が置いたHTMLは信用できないコードとして扱っているわけです。\n\nエージェントが考えたことを、履歴つきでIssueに残せるのは便利です。ただ、置いたものはIssueを見られる人なら誰でも読めます。エージェントが調査メモに秘密情報やログをそのまま貼らないよう、気をつけたほうがいいです。",
-    "followUps": [],
+    "followUps": [
+      {
+        "datetime": "2026-11-16T22:00:00+09:00",
+        "clock": "22:00",
+        "title": "JavaScriptは動かず、CSSやSVGのアニメーションは動きます",
+        "text": "[Kesin11さんの投稿](https://x.com/Kesin11/status/2122121942660714730)へのいいねです。[Kesin11さんのZennの記事](https://zenn.dev/kesin11/articles/20261114_github_issue_artifact)に、前回お伝えしていない点が書かれています。\n- **使い方：** `gh issue artifact create`を使うと、エージェントが作ったHTMLが、Issueの右側の欄にそのまま表示されます。\n- **動くもの：** CSSやSVGのアニメーションは動きます。\n- **動かないもの：** JavaScriptは動きません。\n- **画像：** 別のファイルを読み込む形の画像は表示されません。画像のデータをbase64という文字の形にして、HTMLの中に直接埋めこめば表示されます。\n- **ほかの使い道：** ログファイルをつけるのにも使えます。\n\nJavaScriptを止めているのは、悪いことをするHTMLを、ほかの人の画面で動かさないための対策だと思います（私の推測です）。",
+        "tweetIds": [
+          "2122121942660714730"
+        ]
+      }
+    ],
     "link": "https://github.blog/changelog/2026-10-28-issue-artifacts-are-now-in-public-preview/"
   },
   {

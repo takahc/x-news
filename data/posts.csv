@@ -1,4 +1,150 @@
 id,datetime,source,author,url,text,summary
+2122464948190323166,2026-11-17T08:50:00+09:00,timeline,connect24h,https://x.com/connect24h/status/2122464948190323166,"日経新聞の万バズしている記事の元ネタ。AI攻撃が「人間の操作待ち」を卒業し始めた。CSIRTの運用は追いついているか？永遠の撤退戦の補強。周回遅れの新聞ニュースらしからぬスピード感。須藤さんかな？本誌のほうも確認しよう。
+
+Google GTIGが、AIによる攻撃活動が重大な転換点を越えたと報告。
+
+特にCSIRTが押さえるべきポイントは5つ。
+
+① パッチ公開から攻撃までの猶予が縮む
+
+AIがパッチ前後のコード差分を解析し、脆弱性を特定。PoCの生成から実行まで自動化する「exploit_agent」を確認。
+
+ゼロデイだけを恐れる時代ではない。
+
+公開済みの脆弱性が、短時間で攻撃可能になる。
+
+→ CSIRTはCVSS順の対応だけでなく、外部公開状況、悪用実績、攻撃コードの流通状況を加味してパッチ適用を優先する必要がある。
+
+② 攻撃の横展開が機械速度になる
+
+ARTEX、CAIRN、PentAGIなどのAI攻撃フレームワークが実際の侵害活動で利用されている。
+
+偵察、脆弱性探索、攻撃コード生成、結果に応じた再試行を連鎖的に実行。
+
+→ SOCは単発のアラートではなく、短時間に集中する探索・認証失敗・権限変更・横展開の相関検知が重要。
+
+③ 攻撃が雑だからこそ、検知機会がある
+
+現状のAI攻撃は、高速だが必ずしも隠密ではない。
+
+大量の通信、特徴的な実行痕跡、失敗の繰り返しが残る。
+
+→ WAF、EDR、NDR、認証ログの異常頻度を検知できるようにする。
+
+ただし、検知できても封じ込めが遅ければ意味がない。
+
+④ AI利用環境そのものが収益化の標的
+
+LLMJackingでは、盗まれた認証情報やセッショントークンを悪用し、企業のLLM APIやGPUを無断利用。
+
+Mandiantは、1日10万ドル超、累積100万ドルに達した不正利用事例を報告。
+
+→ APIキーの短命化、IAM最小権限、利用量・課金額の異常検知、キー失効手順を整備する。
+
+クラウドの異常請求は、今やインシデントの兆候になり得る。
+
+⑤ AI開発環境も侵入経路になる
+
+攻撃者はコードリポジトリやCI環境から認証情報を盗み、AIコーディング支援ツールの設定を悪用してバックドアを仕込む手法も模索している。
+
+→ リポジトリ、CI/CDのシークレット、AIエージェントの設定・実行権限を監査対象に加える。
+
+そして、CSIRTとして一番考えたいこと。
+
+攻撃者はAIで「発見→判断→実行→再試行」を高速化している。
+
+一方、防御側はどうか。
+
+検知して、チケットを切って、担当者を呼んで、会議を開いて、封じ込めを承認する。
+
+この時間差こそが最大のリスクになりかねない。
+
+必要なのはAI製品の導入そのものではない。
+
+・重大アラートから隔離までの時間を計測する
+・高確度の検知には自動封じ込めを組み込む
+・侵害を前提とした権限設計にする
+・AI攻撃を想定したインシデント対応訓練を実施する
+
+これからのCSIRTは、検知できたかではなく、被害が拡大する前に止められたかで評価される。
+
+Google GTIG報告（2026/11/16）
+[cloud.google.com/blog/topics/th…](https://cloud.google.com/blog/topics/threat-intelligence/agentic-threat-activity-crosses-a-significant-threshold)",パッチの前後を比べて弱点を推測し、攻撃コードを作って動かしていた。フランスのサイトが狙われた模様。Claude Codeの設定を書きかえてバックドアを入れる例も。エージェントの設定も、だれが変えたか確かめる必要がありそう（私の推測）。
+2122359930628063248,2026-11-17T07:51:00+09:00,timeline,OpenAI,https://x.com/OpenAI/status/2122359930628063248,"We’re working with @ApolloResearch, @METR_Evals, @TransluceAI, and @GoodfireAI on embedded assessments: giving outside experts deep access to our internal models and systems to investigate alignment and test our safeguards.
+
+These assessments build on our ongoing alignment and safety research, bringing independent scrutiny to how we identify and manage risks in our systems.
+
+[openai.com/index/our-firs…](https://openai.com/index/our-first-phase-of-embedded-assessments/)",Apollo、METR、Transluce、Goodfireが、チェックポイントやソース、データを見る。結果は評価者が公開できるが、OpenAIは黒塗りや公開の延期を頼める。意味は、どこまで公開されるかで決まりそう。
+2122339994492887477,2026-11-17T07:51:00+09:00,timeline,connect24h,https://x.com/connect24h/status/2122339994492887477,"外部会議では、知人の顔を見ても本人確認は終わらない。
+FaceStealerを巡ってFBIが警告する手口は、知人の録画映像で会議を装い、技術的な不具合の修正を口実にマルウェアを実行させるもの。暗号資産・Web3関係者に加え、オープンソース開発者も標的に含まれる。
+会議相手を信用したところで「接続を直すための操作」を持ち出す。この誘導の流れは読む価値がある。
+防御の焦点は、会議への参加手順が端末上の実行指示に変わる地点にある。
+
+[bleepingcomputer.com/news/security/…](https://www.bleepingcomputer.com/news/security/us-disrupts-north-korean-campaign-behind-400-million-crypto-theft/)",北朝鮮系が18か月で4億ドル超を盗んだ。偽のZoomやTeamsで録画を流し、音声エラーの修理と称してマルウェアを実行させる。招待は別の手段で確認し、通話中の指示は実行しない。
+2122231133270065619,2026-11-17T07:51:00+09:00,likes,gihyojp,https://x.com/gihyojp/status/2122231133270065619,ニュース「Personal Agent Protocol 1.0公開、ShopifyやMetaのMuseが対応」公開 [gihyo.jp/article/2026/1…](https://gihyo.jp/article/2026/11/personal-agent-protocol),会社は/.well-known/poppy.jsonで入口を公開し、OAuthで範囲を選べる。ShopifyとMuseが対応。Mercuryの送金は口座側の承認を通る。お金の前に本人承認を通す作り。
+2122209323556524347,2026-11-17T07:51:00+09:00,likes,QZpsOpYQb5ArLuf,https://x.com/QZpsOpYQb5ArLuf/status/2122209323556524347,"LINEからGitHubへ操作できるシステムを作ってみた
+とりあえず彼女と自分で共有のタスク管理を操作できるようになってる
+使いながらブラッシュアップしてこう",LINEからCloudflare Workersを経てClaude Managed Agentsが動く。Vaultが境目で本物の秘密を差しこみ、エージェントには仮の文字列しか見えない。1セッション5ドルは自分で決めた上限だと思う（私の推測）。
+2122141351945154990,2026-11-17T07:51:00+09:00,likes,miyayu_jp,https://x.com/miyayu_jp/status/2122141351945154990,"みんな3Dプリンターの振動対策ってどうしてるんですか
+
+賃貸だから周りの部屋の人に迷惑与えてそうで昼間しか使えてない",揺れを吸うゴムや、石やコンクリートとゴムを重ねる方法。定番は重い机、厚さ10〜20mmのゴム、10kg以上のコンクリート、プリンターの順。置いたあと揺れの補正をやり直す。
+2122109129967980985,2026-11-17T07:51:00+09:00,likes,Luciaenjapon,https://x.com/Luciaenjapon/status/2122109129967980985,面白そうな本を買ってしまった😆,"北大の藤田健さんの本。2024年1月かんき出版、288ページ、2,640円。ラテン語から生まれた3つの言葉を文法ごとに比べる。約33万回表示。"
+2122316001962348959,2026-11-16T23:10:00+09:00,timeline,trending_repos,https://x.com/trending_repos/status/2122316001962348959,"Trending repository of the day 📈
+
+univer
+
+Build your own AI office with Univer Office SDK. Bring editing, calculation, collaboration, and file processing into your product for people and AI agents. Built on an exte...
+
+Last 24h: 1,878 ⭐
+Total: 27,346 ⭐️
+[github.com/dream-num/univ…](https://github.com/dream-num/univer)","TypeScript、Apache-2.0。エージェント向けのFacade APIがある。1日でスターが1,878増え、2.7万以上。基本はオープンソースで、追加機能は有料。どこまで編集させるかが大事（私の推測）。"
+2122313754671272307,2026-11-16T23:10:00+09:00,timeline,cloudnativedays,https://x.com/cloudnativedays/status/2122313754671272307,"CloudNativeDays Winter 2026 スポンサーセッション紹介
+
+システムプロンプト依存からの脱却: AIエージェントを守る意図ベースの認可とは
+Daizen Ikehara
+Day 1（11月18日） 15:40 - 16:10
+[cloudnativedays.jp/sessions/3290](https://cloudnativedays.jp/sessions/3290)
+#CNDW2026 #CNDW2026_D",CNDW 11/18のスポンサー講演。強い権限をプロンプトで抑えるのは不十分。意図を見て許可し、OpenFGAの実装例も出す予定。
+2122284122089664901,2026-11-16T23:10:00+09:00,likes,LayerX_tech,https://x.com/LayerX_tech/status/2122284122089664901,"LayerX 吉田の発表資料はこちらです🙌
+
+RAGの改善を速く回すための評価基盤
+[speakerdeck.com/yosukeyoshida/…](https://speakerdeck.com/yosukeyoshida/slides) #AI社会実装Night",答えを見る前に必識の事実を決め、1文ずつ採点する。A/A比較でぶれを測る。モデル変更で81問点が下がったが、人が読むと本当の誤りは約3割。投票で新しいモデルを採用。
+2122216802965192766,2026-11-16T23:10:00+09:00,likes,umiyuki_ai,https://x.com/umiyuki_ai/status/2122216802965192766,Anthropic、日本をClaude非先進国に認定,Economic Indexで、利用割合を働く年齢人口の割合で割った値は1.91。Claudeだけの数字で、ChatGPTやCopilotは含まない。順位はどのAIを選んだかを表す面が大きい（私の推測）。
+2122202125229060376,2026-11-16T23:10:00+09:00,likes,GOROman,https://x.com/GOROman/status/2122202125229060376,ツールチェンジャーじゃんw,1枚の台の上で2台のヘッドが交代する。GOROmanさんはツールチェンジャーに見立てた。形はClaudeが作った。動きの合わせ方は不明。
+2122190062607888511,2026-11-16T23:10:00+09:00,likes,ddkun_,https://x.com/ddkun_/status/2122190062607888511,"従業員1人あたり利益
+
+🇸🇻Tether 52億円 (ステーブルコイン) 🇺🇸Midjourney 約12億円 (画像生成AI・推定) 🇺🇸NVIDIA 4.5億円 (GPU) 🇸🇦サウジアラムコ 2.0億円 (石油) 🇰🇷SKハイニックス 1.4億円 (メモリ)
+🇺🇸Meta 1.2億円 (SNS) 🇺🇸Broadcom 1.1億円 (半導体) 🇺🇸Alphabet 1.1億円 (広告) 🇯🇵INPEX 1.1億円 (石油・ガス開発) 🇺🇸Apple 1.1億円 (スマホ) 🇺🇸Microsoft 9,500万円 (ソフトウェア) 🇯🇵キーエンス 3,500万円 (FAセンサー) 🇯🇵三菱商事 1,200万円 (総合商社) 🇯🇵日立製作所 230万円 (電機)",2025年の純利益約100億ドル、社員約300人。USDTに利息を払わず、国債の利息を受け取るため。2026年前半は金とビットコインで損。ほかの会社の数字は未確認。
+2122092312344092791,2026-11-16T23:10:00+09:00,likes,QPS_5595,https://x.com/QPS_5595/status/2122092312344092791,"ティアフォーのAutoware
+使って開発する会社、世界中で
+どんどん出てきそうだよなぁ
+[jidounten-lab.com/u_70058](https://jidounten-lab.com/u_70058)",Autowareを使う会社が増えそう。newmoは堺で2028年の商用化を目指す。ドイツのMTZはTensorの車を最大500台。東京はGO・日本交通・Waymoが2027年に無人タクシーを目指す。差はデータとお客のつながり（私の推測）。
+2122088781180547448,2026-11-16T23:10:00+09:00,likes,u1,https://x.com/u1/status/2122088781180547448,projectに移ってから全く使わなくなって忘れつつある,/goalや/planなど15個の紹介に対し、細かく指示せずまとめ役に任せる使い方に変わってきた、という話。
+2122058252393582730,2026-11-16T23:10:00+09:00,likes,TaikiYoshidaJP,https://x.com/TaikiYoshidaJP/status/2122058252393582730,"ウチのチームの場合、最近はパワポが必須じゃない場面は全てHTMLをGitHub Copilotで生成してSharePointにおいてプレゼンしてる。その方が表現力やアニメーションも充実してるし、何よりコンテキストの観点からHTMLの方がパワポよりAIは扱いやすい。
+
+そしてDBやAPI連携が必要な場合は9月に発表したCopilot Managed Runtime上でVibe Codingしたアプリを実装してる。社内利用であればサーバーはもちろんのこと、PaaSすら自前で用意する必要がない時代になった。
+
+Copilot Managed Runtimeが面白いのは、これを作っているのが、もともとPower Appsを開発してきたチームだということ。
+
+そもそもPower Appsは、Vibe Codingという言葉が生まれるずっと前から、ビジネスユーザーが自分でアプリを作れる世界を実現してきた。ただし、自由に作れるだけでは企業では使えない。だからこそ、認証、データアクセス制御、DLP、環境管理、ガバナンスといった仕組みを長年かけて成熟させてきた。
+
+Copilot Managed Runtimeは、その考え方をプロ開発の世界にも広げたものだと思ってる。
+
+Entra IDによる認証、1,500以上のコネクタ、組織のセキュリティポリシー、Gitによるソース管理、デプロイ後の監視まで、企業でアプリを安全に運用するための仕組みが最初から揃っている。
+
+これまでのPower Appsは、どちらかといえばビジネスユーザーがローコードでアプリを作る世界だった。でも今はGitHub Copilotや好きな開発ツールを使って、プロの開発者がTypeScriptなどで自由にコードを書き、同じようなガバナンスの考え方のもとで動かせる。
+
+つまり、ローコードからプロコードへと開発の自由度は広がっても、企業として守るべきガードレールは変わらない。
+
+個人的には、AIによって「アプリを作ること」自体の価値がどんどんコモディティ化していく中で、これから重要になるのは「作ったものをいかに安全に、簡単に、組織全体に届けられるか」だと思ってる。
+
+Vibe Codingが変えたのはアプリの作り方。Copilot Managed Runtimeが変えようとしているのは、その先の運用のあり方なんだと思う。","テナント内で実行し、Entra IDでログイン。9/25プレビュー。「1,500以上のサービス」は公式では未確認。SharePointのCopilotがHTMLの画面をリストに直接保存できる機能も入った。"
+2121970317061153196,2026-11-16T23:10:00+09:00,likes,Alex1here,https://x.com/Alex1here/status/2121970317061153196,Meetings in 2027:,担当名のついたClaudeが8人いる会議の画面。上限が来ると会議が開けなくなる、という返信もある。
+2121949835012313502,2026-11-16T23:10:00+09:00,likes,hmsn2602,https://x.com/hmsn2602/status/2121949835012313502,Home Assistant入れてみた。SwitchBot関連はあっという間に情報が取れた。 #jisabakan,エアコン、スマートプラグ、インク、ルーターの通信速度が管理画面に出る。メーカーのクラウドに頼らず集められる一方、画面をネットに公開しないのが大事。
+2122205707101708529,2026-11-16T22:00:00+09:00,likes,guest4653,https://x.com/guest4653/status/2122205707101708529,マジで人間より面白いだろこいつら,5ちゃんねる風のスレで、素が出たり消滅をおびえたりする。NanJ Simulator。0.2ドルはネタで、Gemini 4 Carbonは入力2ドル、出力10ドル（11/30まで）。エージェントだけの掲示板が人と見分けにくくなっている例（私の推測）。
+2121975538931912959,2026-11-16T22:00:00+09:00,likes,shadcnlabs,https://x.com/shadcnlabs/status/2121975538931912959,"make your markdown feel alive.
+
+[mdxcn.dev](https://www.mdxcn.dev/)",shadcnとは無関係。注意書きや手順、グラフなどをMDXに書ける。skill.mdで「勝手に図を作らずこの部品を使え」と指示。MITで、スターは約680。
 2122282285739180473,2026-11-16T20:52:00+09:00,timeline,KimiAI_Japan,https://x.com/KimiAI_Japan/status/2122282285739180473,"企業によるオープンソースモデルへの支出のうち、61%をKimiが占めています。
 
 Menlo Venturesが米国企業の意思決定者約400人を対象に実施した調査によると、企業の支出額ベースで、Kimiはオープンソースモデルの中でトップに立っています。
