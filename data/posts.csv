@@ -1,4 +1,26 @@
 id,datetime,source,author,url,text,summary
+2124112629157470658,2026-11-21T21:52:00+09:00,timeline,trending_repos,https://x.com/trending_repos/status/2124112629157470658,"Trending repository of the day 📈
+
+Claude-BugHunter
+
+A Claude Code skill bundle for bug hunting and external red-team work - 82 skills, 15 slash commands, 681 disclosed-report patterns curated across 24 core vulnera...
+
+Last 24h: 1,794 ⭐
+Total: 15,125 ⭐️
+[github.com/elementalsouls…](https://github.com/elementalsouls/Claude-BugHunter)","Sachin Sharmaさん作、MIT。83スキルと15スラッシュコマンド。HackerOneの681件から攻撃パターンをまとめた。投稿時は24時間で1,794スター、合計約15,125。許可範囲とサプライチェーンが心配（私の推測です）。"
+2124100318434890197,2026-11-21T20:57:00+09:00,timeline,ZappyZappy7,https://x.com/ZappyZappy7/status/2124100318434890197,"『”せーの”で運ぶヒューマノイドたち』
+[heaveho-humanoid.github.io](https://heaveho-humanoid.github.io/)
+
+リーダーの音声で動きを同期し、各機体が全身を制御。
+2台で学んだ制御を再学習なしで実機4台・シミュレーション10台へ展開。
+
+#humanoidrobot #PhysicalAI #MultiRobot #collaboration #locomotion #manipulation #HeaveHo",USCなどの論文（arXiv:2611.22275）。ロボット同士の通信はなく、リーダーの声で合図する。2台学習を実機4台・シミュレーション10台に拡大。HH-Bench平均94.41%。声のなりすましが気になる（私の推測です）。既存のAstra噂とは別件。
+2123733086974431549,2026-11-21T19:55:00+09:00,likes,supezen,https://x.com/supezen/status/2123733086974431549,一个看板查看全部 Agent 的任务太舒服了！,ZENさん作の todos.dev。Chiefがtodoに分け、git worktreeで並行。20種類以上のCLIを裏で動かす。外の実行環境では承認なし。セッションはサーバにもコピー。専用マシンかサンドボックスが無難（私の推測です）。既存 r38_94 とは別件。
+2123811977436999999,2026-11-21T18:49:00+09:00,likes,saku_2610,https://x.com/saku_2610/status/2123811977436999999,"えーと....
+自作ソフトにGitHubから自動的にダウンロードしてアップデートできる機能を実装したらアカウント停止された....
+
+これ、利用規約違反なのか....？",フォロワー約70人の学生の投稿が約28万回表示。原因は未判明。規約9条の帯域の使いすぎが話題だが、自動アップデート自体は違反ではない。自分のトークンを埋め込むと検知に引っかかりやすい（私の推測です）。既存 r26_2 とは別件。
+2123756074134278500,2026-11-21T18:49:00+09:00,likes,ikuo00uk,https://x.com/ikuo00uk/status/2123756074134278500,人類に3Dのタスク管理は早すぎた…,ikuo00ukさんが suh_sunaneko さんの3Dの仕事の流れの動画を引用。地下鉄の路線図のような見た目で、詰まりや停止の影響を確かめられる。3Dだと人には見づらい、という落ち。
 2123975963583328656,2026-11-21T12:50:00+09:00,timeline,connect24h,https://x.com/connect24h/status/2123975963583328656,"業務チャットを開けば、表示された画面も保護の対象になる。
 Signalは、iOS 27と、AIアシスタントによる画面取得を検知できるAndroid環境で、OS標準AIの画面取得を制限する方針を示した。macOSでは対策を実装できないとしている。同じアプリでも、OSが用意する仕組みで保護の範囲が変わる。
 業務スマホの画面取得ポリシーは、OS標準AIにも制限が効くかまでが点検範囲だ。
