@@ -1,5 +1,1057 @@
 [
   {
+    "id": "2123975963583328656",
+    "cardId": "r38_138",
+    "datetime": "2026-11-21T12:50:00+09:00",
+    "postedAt": "2026-11-21T12:05:05+09:00",
+    "source": "timeline",
+    "title": "Signalが、SiriやGeminiなど、OSに組みこまれたAIに、画面を読ませない機能をつけました。",
+    "summary": "iOS 27以降・Signal 8.37以降は Block Siri AI が最初からオン。Android 8.35.1以降は初回に自動でオン。macOSは除外設定を案内。Meredith Whittakerさんは不完全だと認めている。",
+    "tweetId": "2123975963583328656",
+    "tweetIds": [
+      "2123975963583328656"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/connect24h/status/2123975963583328656",
+    "author": {
+      "handle": "connect24h",
+      "name": "connect24h"
+    },
+    "via": null,
+    "text": "業務チャットを開けば、表示された画面も保護の対象になる。\nSignalは、iOS 27と、AIアシスタントによる画面取得を検知できるAndroid環境で、OS標準AIの画面取得を制限する方針を示した。macOSでは対策を実装できないとしている。同じアプリでも、OSが用意する仕組みで保護の範囲が変わる。\n業務スマホの画面取得ポリシーは、OS標準AIにも制限が効くかまでが点検範囲だ。\n\n[signal.org/blog/protectin…](https://signal.org/blog/protecting-your-privacy/)",
+    "images": [],
+    "deepDive": "#Signalが、SiriやGeminiなど、OSに組みこまれたAIに、画面を読ませない機能をつけました。\n[connect24hさんの投稿](https://x.com/connect24h/status/2123975963583328656)で知りました（[Signalの案内](https://support.signal.org/hc/en-us/articles/11338514641306-Screen-security-blocking-Siri-AI)、[The Verge](https://www.theverge.com/ai-artificial-intelligence/1038390/signal-blocking-ai-agent-screenshots-mobile-app)）。\n- **iPhone（iOS 27以降、Signal 8.37以降）：** Signalの案内では、「設定 → プライバシー → Block Siri AI」が、最初からオンです。オン、オフ、10分だけオフ、から選べます。\n- **Android（Signal 8.35.1以降）：** AIのアシスタントが、はじめて画面を読もうとしたときに、画面のセキュリティが自動でオンになります。\n- **macOS：** 確実には止められないので、「システム設定 → Siri → 除外するアプリ」にSignalを入れるよう、案内しています。\n- **限界：** Meredith Whittakerさんは、この対策は「不完全」だと認めています。ファイルから直接読まれる経路は、防げないからです。そのうえで、Apple、Google、Microsoftに、アプリを守るための道具と、正確な説明を求めています。MetaのMuseのような、外のエージェントが、アクセシビリティの機能を「合鍵」のように使う問題も、挙げています。\n\nエージェントに画面を見せると便利な一方で、相手の秘密もいっしょに渡してしまう、という危うさが、ぶつかっている例です。iPhoneでSignalを使っているなら、Siriの画面の認識は、Signalの中では使えなくなっているはずです。",
+    "followUps": []
+  },
+  {
+    "id": "2123975799720345660",
+    "cardId": "r38_137",
+    "datetime": "2026-11-21T12:50:00+09:00",
+    "postedAt": "2026-11-21T12:04:26+09:00",
+    "source": "timeline",
+    "title": "AIのサービスに、「わな用の秘密」を200万件送ったら、鍵が盗まれていた、という実験です。",
+    "summary": "HD Mooreさん（Dragos）が2026年7〜11月に実施。少なくとも3社が侵入され、ZDR付きも含む。鍵は数時間以内に試されたことも。転売業者経由でも発生。どの3社かはほとんど非公表。",
+    "tweetId": "2123975799720345660",
+    "tweetIds": [
+      "2123975799720345660"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/connect24h/status/2123975799720345660",
+    "author": {
+      "handle": "connect24h",
+      "name": "connect24h"
+    },
+    "via": null,
+    "text": "モデルの手前で拒否された入力も、送信先には届いている。\nHD Mooreは、AIサービスに送った200万件弱のリクエストに追跡用の秘密情報を仕込んだ。同氏が示した事例には、モデル実行前に拒否されたリクエストに含まれる実験用AWSキーの流出もある。\n追跡の仕掛けは、同じキーを二度送らないこと。どのリクエストに入れたキーが外で使われたかをたどれる。\n社内AIのデータ管理では、モデルに届く手前で誰が入力を受け取るかまでが確認範囲になる。\n\n[arstechnica.com/security/2026/…](https://arstechnica.com/security/2026/11/a-leaky-ai-supply-chain-is-exposing-secret-user-data-at-an-alarming-rate/)",
+    "images": [],
+    "deepDive": "#AIのサービスに、「わな用の秘密」を200万件送ったら、鍵が盗まれていた、という実験です。\n[connect24hさんの投稿](https://x.com/connect24h/status/2123975799720345660)で知りました。MetasploitをつくったHD Mooreさん（いまはDragosの研究の責任者）が、2026年7月から11月にかけて行った実験です（[Dragosの公式ブログ](https://www.dragos.com/blog/ai-supply-chain-security-canary-tokens)、[Ars Technica](https://arstechnica.com/security/2026/11/a-leaky-ai-supply-chain-is-exposing-secret-user-data-at-an-alarming-rate/)）。追跡できる秘密（本物として動くAWSのキー、SSHのパスワード、一度しか使わないURLなど）を入れた依頼を、約200万件、いろいろなAIのサービスに送り、そのあと、どこで使われたかを追いかけました。\n- **少なくとも3つのAIの事業者が、侵入されていました。** 1社では、数百のAWSのキーが、使い回されました。投稿にある「モデルが動く前に拒否された依頼の鍵まで盗まれた」というのは、犯人がモデルの奥ではなく、受付（入口）で、依頼をまるごとコピーしていた証拠、という意味です。ほかの2社では、データを残さない設定（ZDR）をつけた依頼まで、盗まれていました。Mooreさんは、「中に入られていたら、プライバシーの設定は役に立たない」と書いています。\n- **盗まれた鍵は、数時間以内に試されたこともありました。** 犯人は、S3やSecrets Managerを探り、Bedrockを有効にしようとし、IAMのユーザーを足して居座ろうとして、AWSのAPIを「数万回」呼んでいました。\n- **転売業者の問題：** 安い値段で依頼を集め、記録を取って、依頼の中身を抜いていた業者もいました。ある中国のAIの研究室は、送ったURLの半分以上を、2〜3日後に取りに来ていました。「データを集めない」や、ZDRの印がついた依頼でも、約3分の2が対象でした。アメリカの事業者経由でも、同じことが起きていました。\n- **記事が挙げている対策：** できれば、自分の場所で動かす。大手と、直接契約する。途中の経由役（ルーター）を使うなら、つなぐ先を自分で選ぶ。安すぎる転売業者は避ける。自分でも、「わなの鍵（Canarytoken）」を、エージェントの文脈に入れておく。秘密を自動で消す設定を使う。\n\nプライバシーの設定は、最初の送り先にしか効かない、というのがいちばん大事な点です。記事にも、「エージェントは、読めるものを、鍵でもなんでも、そのまま送る」とあります。どの3社が侵入されたかは、ほとんど公表されていません。1社が、速報を出した段階です。",
+    "followUps": []
+  },
+  {
+    "id": "2123975539816013842",
+    "cardId": "r38_139",
+    "datetime": "2026-11-21T12:50:00+09:00",
+    "postedAt": "2026-11-21T12:03:24+09:00",
+    "source": "timeline",
+    "title": "Anthropicの数学者が、「Claudeとリーマン予想を証明した」と発表しました。Leanでの検証は、いまのところ通っています。",
+    "summary": "11/20にLevent Alpögeさんが4ページのメモとLeanの証明だけを出した。ファイルは175,187個・約1,740万行。MITの確認では主な定理は標準の3公理に依存。人が理解するには時間がかかる（私の推測です）。",
+    "tweetId": "2123975539816013842",
+    "tweetIds": [
+      "2123975539816013842"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/connect24h/status/2123975539816013842",
+    "author": {
+      "handle": "connect24h",
+      "name": "connect24h"
+    },
+    "via": null,
+    "text": "ほんまかいな。そーかいな。\nLeanが検証するのは、コードに書かれた命題の証明だ。\nAnthropicの数学者Levent Alpögeは、Claudeを使った研究で一般化リーマン予想の証明を得たと主張。公開された証明コードについては、MITの研究者がLeanでの検証通過を報告した。数学界での精査は続いている。\nAIが書いたコードのレビューにも通じる。チェックが通ったら、次に見るのは何をチェックしたか。今回なら、Lean上の定理がどんな仮定を置いているかが気になる。\n検証結果の重みは、コード上の命題が元の予想とどこまで一致するかで決まる。\n\n[alpo.ge/remark.pdf](https://alpo.ge/remark.pdf)",
+    "images": [],
+    "deepDive": "#Anthropicの数学者が、「Claudeとリーマン予想を証明した」と発表しました。Leanでの検証は、いまのところ通っています。\n[connect24hさんの投稿](https://x.com/connect24h/status/2123975539816013842)で知りました。11/20に、AnthropicのLevent Alpögeさんが、Claudeといっしょに、リーマン予想と、一般化リーマン予想（GRH）の一部を証明したと発表しました。出したのは、4ページのメモと、Leanの証明だけです（[Scientific American](https://www.scientificamerican.com/article/anthropic-mathematician-claims-to-prove-riemann-hypothesis-most-famous-problem-in-all-of-math/)、[The Verge](https://www.theverge.com/ai-artificial-intelligence/1010051/anthropic-riemann-hypothesis-millennium-prize-problem)）。\n- **大きさ：** Leanのファイルが175,187個、約1,740万行あります。人が読める論文はありません。本人も、「読めない『スロップ』を出すのは不適切なので、Leanだけにした」と書いています（[Traictoryのまとめ](https://traictory.com/news/2026-11-21-alpoge-grh-claude-lean-proof)）。\n- **確認の状況：** MITのAndrew Sutherlandさんが、Claude Codeを使って確認しました（[MITの検証のページ](https://math.mit.edu/~drew/grh/)）。すべてのモジュールが、エラーなしでコンパイルでき、5つの主な定理は、標準の3つの公理だけに依存していました。別々に書かれた2つのカーネルも、証明全体を受け入れています。一部の確認は、まだ続いています。「リーマン予想」の定義は、Mathlibにもともとあるものを使っています。なので、こっそり問題を言い換える手口は、使いにくい形です。Scientific Americanは、「ほぼ確実に正しい」という、独立した数学者の見方を伝えています（[記事](https://www.scientificamerican.com/article/the-ai-riemann-hypothesis-proof-is-almost-certainly-true-independent-mathematicians-attest/)）。\n- **残る点：** Kevin Buzzardさんが言うように、まず「Leanに書かれた定理が、本当の定理と同じか」を確かめる必要があります。そして、なぜ成り立つのかを、人が理解するには、時間がかかります。Terence Taoさんも、「消化には時間がかかる」と書いています。\n\n形式検証が、「AIの出力を、人が全部読まなくても信頼する」ための道具として、とても大きな舞台で使われた例です。一方で、「証明は正しいが、誰も中身を理解していない」という状態は、AIの安全性の検証でも、同じことが起きそうです（私の推測です）。",
+    "followUps": []
+  },
+  {
+    "id": "2123956401022378140",
+    "cardId": "r38_135",
+    "datetime": "2026-11-21T10:50:00+09:00",
+    "postedAt": "2026-11-21T10:47:21+09:00",
+    "source": "timeline",
+    "title": "CrowdStrikeが、Zscalerの買収を協議中だと報じられました。",
+    "summary": "Bloombergが11/20に関係者の話として報道。まだ協議中で値段は非公表。時間外でZscalerは18%高、CrowdStrikeは8%以上安。まとまるかは分からない（私の推測です）。",
+    "tweetId": "2123956401022378140",
+    "tweetIds": [
+      "2123956401022378140"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/connect24h/status/2123956401022378140",
+    "author": {
+      "handle": "connect24h",
+      "name": "connect24h"
+    },
+    "via": null,
+    "text": "落ち目のZacalerとしてはありかも。\nCrowdStrikeがZscalerを買収協議中。これはセキュリティ業界の勢力図が変わる話。\n\nBloombergとReutersが報道。両社の時価総額合計は約2,650億ドル（約40兆円規模）。\n\n実現すれば、\n\n・CrowdStrikeのEDR/XDR\n・ZscalerのSSE/ZTNA\n・エンドポイントと通信・アクセス制御の統合\n・AIによる検知から封じ込めまでの自動化\n\nが一気に進む可能性。\n\nEDRを売る時代から、セキュリティ基盤を丸ごと押さえる時代へ。\n\nPalo Alto Networksとのプラットフォーム覇権争いが、さらに激しくなる。\n\n※現時点では買収協議の報道であり、正式合意ではない。\n\n[bloomberg.com/news/articles/…](https://www.bloomberg.com/news/articles/2026-11-20/crowdstrike-is-in-talks-to-buy-cybersecurity-firm-zscaler)",
+    "images": [],
+    "deepDive": "#CrowdStrikeが、Zscalerの買収を協議中だと報じられました。\n[Bloombergの報道（11/20）](https://news.bloomberglaw.com/mergers-and-acquisitions/crowdstrike-is-said-in-talks-to-buy-cybersecurity-firm-zscaler)で、関係者の話として伝えられています。[connect24hさんの投稿](https://x.com/connect24h/status/2123956401022378140)で知りました。まだ協議中で、まとまるかどうかは分かりません。値段も、公表されていません。\n- **株価：** [CNBC](https://www.cnbc.com/2026/11/20/zscaler-crowdstrike-deal.html)によると、Zscalerの株価は、時間外で18%上がり、CrowdStrikeは8%以上下がりました。会社の価値は、CrowdStrikeが約2,350億ドル、Zscalerが約320億ドルです。\n- **これまでの大きな買収：** GoogleのWiz（320億ドル）、CiscoのSplunk（約280億ドル）、Palo AltoのCyberArk（250億ドル）があります。\n- **背景：** CrowdStrikeは今月、AIのエージェントを見守るFiddler AIと、AIの信頼性を扱うDreadnodeの買収も発表しています。\n\nパソコンなどの端末の守り（EDR）と、通信やアクセスの制御（ゼロトラスト）が、1つの会社にまとまる形です。Palo Altoとの競争が、さらに激しくなりそうです（私の推測です）。",
+    "followUps": []
+  },
+  {
+    "id": "2123949121702953398",
+    "cardId": "r38_136",
+    "datetime": "2026-11-21T10:50:00+09:00",
+    "postedAt": "2026-11-21T10:18:26+09:00",
+    "source": "timeline",
+    "title": "PHPに、約20年残っていた穴があります。「HTTPS://」と大文字で書くと、暗号化されずに平文で送られていました。",
+    "summary": "CVE-2026-128064、深刻さHigh。アプリ渡しはPHP 5.2.0（2006年）から、リダイレクトは4.3.0（2002年）から。8.2.36 / 8.3.37 / 8.4.28 / 8.5.13 / 8.6.0で修正。",
+    "tweetId": "2123949121702953398",
+    "tweetIds": [
+      "2123949121702953398",
+      "2123707192146849995"
+    ],
+    "quoteTweetId": "2123707192146849995",
+    "url": "https://x.com/connect24h/status/2123949121702953398",
+    "author": {
+      "handle": "connect24h",
+      "name": "connect24h"
+    },
+    "via": null,
+    "text": "最近の窓の杜、脆弱性チョイスが完全にCSIRT目線ですが。\n\n> スクリプト言語「PHP」で昨晩実施されたセキュリティアップデートでは、20年以上も見逃されていた意外な欠陥が修正されていたとのこと。たとえばPHPコードの「file_get_contents()」などに渡すURLを「httpS://……」「HTTPS://……」などと書いてしまうと、暗号化されずに平文で送られてしまうのだそうです。",
+    "images": [],
+    "deepDive": "#PHPに、約20年残っていた穴があります。「HTTPS://」と大文字で書くと、暗号化されずに平文で送られていました。\n[connect24hさんの投稿](https://x.com/connect24h/status/2123949121702953398)で知りました。\n[窓の杜の投稿](https://x.com/madonomori/status/2123707192146849995)を、[connect24hさんが引用](https://x.com/connect24h/status/2123949121702953398)していました（[窓の杜の記事](https://forest.watch.impress.co.jp/docs/serial/yajiuma/2158241.html)）。\n- **何が起きていたか：** `file_get_contents('HTTPS://…')` のように、URLの先頭の「S」が大文字だと、TLSが使われずに通信していました。PHPは、この部分の大文字と小文字を区別せずに受け付けます。一方で、暗号化するかどうかは、「決まった位置に、小文字のsがあるか」で判断していました。\n- **影響：** CVE-2026-128064で、深刻さはHighです。トークン、POSTの中身、FTPSのログインの情報が、平文で流れるおそれがありました。HTTPSから、307のリダイレクトで大文字の「HTTPS://」に飛ばされた場合も、認証のヘッダーが平文で送られました。\n- **いつからあったか：** アプリが渡すURLについては、PHP 5.2.0（2006年）からです。リダイレクトについては、PHP 4.3.0（2002年）からです。\n- **直し方：** 8.2.36、8.3.37、8.4.28、8.5.13、8.6.0で直っています。すぐに更新できない場合は、関数に渡す前に、先頭の部分を小文字にそろえます。また、自動のリダイレクトを止めて、行き先を確かめるのが、当面の回避策です。\n\n悪用するには、通信を盗み見られる立場が必要です。ただ、AIが書いたコードや、外から受け取ったURLを、そのまま渡す場面では、起こりうる話です。",
+    "followUps": []
+  },
+  {
+    "id": "2123862344422088794",
+    "cardId": "r38_134",
+    "datetime": "2026-11-21T10:50:00+09:00",
+    "postedAt": "2026-11-21T04:33:37+09:00",
+    "source": "timeline",
+    "title": "OpenAIが、「敵対的な蒸留」の防ぎ方を公開しました。推論を引き出そうとする攻撃の成功率は、54%から0.2%に下がったそうです。",
+    "summary": "11/20公式ブログ。GPT-6.2 Astra対GPT-6 Astra。断り方の学習、入出力の分類、ツール引数の監視、推論と会話の結び付けなど。既存のAstra噂 r38_48 とは別件。",
+    "tweetId": "2123862344422088794",
+    "tweetIds": [
+      "2123862344422088794"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/OpenAI/status/2123862344422088794",
+    "author": {
+      "handle": "OpenAI",
+      "name": "OpenAI"
+    },
+    "via": null,
+    "text": "Distillation can reproduce powerful AI capabilities without the safeguards built around them.\n\nWe’re sharing new research on our work to combat distillation of our models, how these capabilities transfer, and how we detect and disrupt coordinated attempts.\n\nThese findings are helping us sharpen our defenses and support safeguards across the industry.\n\n[openai.com/index/combatti…](https://openai.com/index/combatting-adversarial-distillation/)",
+    "images": [],
+    "deepDive": "#OpenAIが、「敵対的な蒸留」の防ぎ方を公開しました。推論を引き出そうとする攻撃の成功率は、54%から0.2%に下がったそうです。\n[OpenAIの投稿](https://x.com/OpenAI/status/2123862344422088794)と、11/20の[公式ブログ](https://openai.com/index/combatting-adversarial-distillation/)によるものです。\n- **何の話か：** 「蒸留」とは、強いモデルの出力を使って、別のモデルを鍛えることです。これを勝手にやると、能力だけがコピーされ、安全のしくみはコピーされません。OpenAIはこれを、知的財産の問題であるだけでなく、安全の問題だと位置づけました。\n- **何を守っているか：** 主に、モデルの頭の中の推論（chain-of-thought）です。OpenAIの社内の実験では、推論そのものを学んだ生徒のモデルのほうが、要約だけを学んだモデルより、サイバーの能力を多く引きつぎやすい、という結果でした。\n- **数字：** GPT-6.2 Astraでは、自動のレッドチームが推論を引き出そうとする攻撃の、平均の成功率が、54.0%から0.2%に下がりました。比べているのは、GPT-6 Astraです。\n- **守り方は、何重にもなっています。**\n  - モデルに、断り方を学ばせます。\n  - 入力と出力を、分類する仕組みで調べます。\n  - ツールを呼ぶときの引数から、推論がもれていないかも、見守ります。\n  - 推論を、それを生んだ会話に結びつけます。過去のメッセージが書きかえられたら、そのあとの推論は捨てます。\n  - 古くて守りの弱いモデルからは、新しいモデルの推論を読めないようにもしています。\n- **組織ぐるみの抜き出しを見つけたら：** つながっているアカウントごと止めます。さらに、攻撃の痕跡を、ほかのモデルの会社と共有しています。\n\n安全なモデルの能力が、守りのないコピーに流れること自体を、守りの対象にした点が新しいです。ツールを呼ぶときの引数から、推論がもれる経路を、はっきり挙げている点も、参考になります。",
+    "followUps": []
+  },
+  {
+    "id": "2123616041893069067",
+    "cardId": "r38_124",
+    "datetime": "2026-11-21T09:52:00+09:00",
+    "postedAt": "2026-11-20T12:14:53+09:00",
+    "source": "likes",
+    "title": "日本でフルリモートで働ける会社の一覧です。情報が古いこともあります。",
+    "summary": "GitHubの remote-in-japan リポジトリ。情報が古いこともある。",
+    "tweetId": "2123616041893069067",
+    "tweetIds": [
+      "2123616041893069067",
+      "2123570973937156167"
+    ],
+    "quoteTweetId": "2123570973937156167",
+    "url": "https://x.com/fujitech_ai/status/2123616041893069067",
+    "author": {
+      "handle": "fujitech_ai",
+      "name": "すたーまん@メガベンチャーAIエンジニア"
+    },
+    "via": null,
+    "text": "日本のフルリモート会社をまとめたリポジトリ。これは素晴らしいまとめ。\nちょっと古い情報も混じっているのと、スタートアップは少なめかな？\n松尾研、松尾研スタートアップは把握してる限りほぼ全てフルリモートなのでAIエンジニアであればリモートしやすいよね〜",
+    "images": [],
+    "deepDive": "#日本でフルリモートで働ける会社の一覧です。情報が古いこともあります。\n[すたーまんさんの投稿](https://x.com/fujitech_ai/status/2123616041893069067)へのいいねです。\n- [日本でフルリモートで働ける会社の一覧](https://github.com/remote-jp/remote-in-japan)。情報が古いこともあります。\n  - [『チ。』の連載前の構想のメモ](https://x.com/UO10_exhibit/status/2122298637611098456)。\n  - [宇都宮ライトラインの事故](https://newsdig.tbs.co.jp/articles/-/3096486)。けが人はいませんでした。\n  - Bambu Lab A1を買った人向けの、[あると便利なもの](https://x.com/TigerK623K/status/2123057559171195239)。\n  - [資格の勉強のアプリで、週8万円になった話](https://x.com/miitara37/status/2123023037339771388)。確かめられる数字ではありません。\n  - [newmoの採用の投稿](https://x.com/newmohq/status/2122827120548491297)。\n\n画像と動画は見ていないので、投稿の文章と、まわりの情報でまとめています。",
+    "followUps": []
+  },
+  {
+    "id": "2123587762985316818",
+    "cardId": "r38_127",
+    "datetime": "2026-11-21T09:52:00+09:00",
+    "postedAt": "2026-11-20T10:22:31+09:00",
+    "source": "likes",
+    "title": "Figureが、ロボットの操縦士を時給32ドルで募集しています。",
+    "summary": "人が体を動かしてロボットを動かし、その記録をAIの学習に使う。時給32ドル。",
+    "tweetId": "2123587762985316818",
+    "tweetIds": [
+      "2123587762985316818"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/industryJapan/status/2123587762985316818",
+    "author": {
+      "handle": "industryJapan",
+      "name": "製造業24時"
+    },
+    "via": null,
+    "text": "人型ロボの操縦士、募集中。時給5,100円 [gizmodo.jp/article/figure…](https://www.gizmodo.jp/article/figure-humanoid-robot-pilot-job/)",
+    "images": [],
+    "deepDive": "#Figureが、ロボットの操縦士を時給32ドルで募集しています。\n[製造業24時の投稿](https://x.com/industryJapan/status/2123587762985316818)へのいいねです。\n- **[Figureの、ロボットの操縦士の募集](https://www.gizmodo.jp/article/figure-humanoid-robot-pilot-job/)：** 時給は32ドルです。人が体を動かしてロボットを動かし、その記録をAIの学習に使います。",
+    "followUps": []
+  },
+  {
+    "id": "2123300997409988714",
+    "cardId": "r38_125",
+    "datetime": "2026-11-21T09:52:00+09:00",
+    "postedAt": "2026-11-19T15:23:01+09:00",
+    "source": "likes",
+    "title": "ヨドバシ池袋のApple企画で、今日（11/21）と明日の13時から18時に、iPhoneの電池の容量が90%未満の人に、Appleのノベルティを配ります。",
+    "summary": "11/21と11/22の13時から18時。電池容量が90%未満のiPhoneが対象。",
+    "tweetId": "2123300997409988714",
+    "tweetIds": [
+      "2123300997409988714"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/yodobashi_ikbkr/status/2123300997409988714",
+    "author": {
+      "handle": "yodobashi_ikbkr",
+      "name": "ヨドバシ 池袋"
+    },
+    "via": null,
+    "text": "＼iPhoneバッテリーチェックイベント開催📱／\n\nバッテリー容量が90%未満の方には\nAppleノベルティをプレゼント🎁\n\n最新のiPhoneのお得なご購入方法もご紹介❗️\n\n今週末はぜひヨドバシ池袋に🍎\n\n🗓️11/21(土）22（日）\n🕐13:00～18:00\n📍ヨドバシ池袋 1階Appleコーナー\n🏬[yodobashi.com/ec/store/0016/](https://www.yodobashi.com/ec/store/0016/)",
+    "images": [
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HXd6wAgbsAEZVS5.jpg"
+      }
+    ],
+    "deepDive": "#ヨドバシ池袋のApple企画で、今日（11/21）と明日の13時から18時に、iPhoneの電池の容量が90%未満の人に、Appleのノベルティを配ります。\n[ヨドバシ 池袋の投稿](https://x.com/yodobashi_ikbkr/status/2123300997409988714)へのいいねです。\n- **[ヨドバシ池袋のApple企画](https://x.com/yodobashi_ikbkr/status/2123300997409988714)：** 今日（11/21）と明日の13時から18時に、iPhoneの電池の容量が90%未満の人に、Appleのノベルティを配ります。",
+    "followUps": []
+  },
+  {
+    "id": "2123294656092057712",
+    "cardId": "r38_113",
+    "datetime": "2026-11-21T09:52:00+09:00",
+    "postedAt": "2026-11-19T14:57:49+09:00",
+    "source": "likes",
+    "title": "M365 CopilotでCopilot CLIが使えるようになりました。ただし条件があります。",
+    "summary": "会社がFrontierに入り、使った分だけ払う形の場合に限る。M365 CopilotのライセンスにGitHub Copilotが丸ごとついてくるわけではない。",
+    "tweetId": "2123294656092057712",
+    "tweetIds": [
+      "2123294656092057712"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/mmskats/status/2123294656092057712",
+    "author": {
+      "handle": "mmskats",
+      "name": "やまぱん！/ MS CSA ＆ Eva"
+    },
+    "via": null,
+    "text": "ええええ\nM365 Copilot ライセンスで GitHub Copilotがつかえる！！ｗ\n\n  #GitHubCopilot  　#msignite　#msigniteJP",
+    "images": [
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HXd1BIIbQAAHLo2.png"
+      }
+    ],
+    "deepDive": "#M365 CopilotでCopilot CLIが使えるようになりました。ただし条件があります。\n[やまぱんさんの投稿](https://x.com/mmskats/status/2123294656092057712)へのいいねです。\n- **[M365 CopilotでCopilot CLIが使える話](https://github.blog/changelog/2026-11-17-github-copilot-cli-adds-microsoft-entra-sign-in-as-a-preview/)：** これには条件があります。会社が「Frontier」に入っていて、使った分だけお金を払う形の場合に限られます。M365 Copilotのライセンスに、GitHub Copilotが丸ごとついてくるわけではありません。",
+    "followUps": []
+  },
+  {
+    "id": "2123291999231172991",
+    "cardId": "r38_131",
+    "datetime": "2026-11-21T09:52:00+09:00",
+    "postedAt": "2026-11-19T14:47:16+09:00",
+    "source": "likes",
+    "title": "LayerXのFrontend Enablingの話です。コーディングのエージェントを使うようになって、1か月にマージされるPRが1,000件弱から5,000件超に増えました。",
+    "summary": "人が1行ずつ見るのはむずかしくなったので、テストなどの仕組みで品質を守る、という話。既存のLayerX評価 r38_72 とは別件。",
+    "tweetId": "2123291999231172991",
+    "tweetIds": [
+      "2123291999231172991",
+      "2123276079993610714"
+    ],
+    "quoteTweetId": "2123276079993610714",
+    "url": "https://x.com/__cp20__/status/2123291999231172991",
+    "author": {
+      "handle": "__cp20__",
+      "name": "しーぴー 🍀"
+    },
+    "via": null,
+    "text": "時代は Enabling です",
+    "images": [],
+    "deepDive": "#LayerXのFrontend Enablingの話です。コーディングのエージェントを使うようになって、1か月にマージされるPRが1,000件弱から5,000件超に増えました。\n[しーぴーさんの投稿](https://x.com/__cp20__/status/2123291999231172991)へのいいねです。\n- **[LayerXのFrontend Enabling](https://tech.layerx.co.jp/entry/bakuraku-monorepo-and-frontend-enabling)：** コーディングのエージェントを使うようになって、1か月にマージされるPRが、1,000件弱から5,000件超に増えました。人が1行ずつ見るのはもうむずかしいので、テストなどの仕組みで品質を守る、という話です。",
+    "followUps": []
+  },
+  {
+    "id": "2123286552537342427",
+    "cardId": "r38_129",
+    "datetime": "2026-11-21T09:52:00+09:00",
+    "postedAt": "2026-11-19T14:25:37+09:00",
+    "source": "likes",
+    "title": "GlassIntroKitは、SwiftUIのアプリの最初の画面に、ガラスのような見た目の案内画面を、1行でつけられます。",
+    "summary": "外とは通信しない。SwiftUI向けの無料ライブラリ。",
+    "tweetId": "2123286552537342427",
+    "tweetIds": [
+      "2123286552537342427"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/protoduct_ai/status/2123286552537342427",
+    "author": {
+      "handle": "protoduct_ai",
+      "name": "しん|AI×iOS開発"
+    },
+    "via": null,
+    "text": "iOSアプリ作ってる人、これ見て\n初回起動の演出が一気に化ける\n\nLiquid Glassのイントロを出せる\nSwiftUIの部品、GlassIntroKit\n\n・演出は8種類、順番は自由\n・modifierを1つ足すだけ\n・スキップもVoiceOverも対応\n\n無料、iOS 26以上で動く",
+    "images": [
+      {
+        "type": "video_preview",
+        "url": "https://pbs.twimg.com/amplify_video_thumb/2123175980907053056/img/k_EQMAqL5QchunWH.jpg"
+      }
+    ],
+    "deepDive": "#GlassIntroKitは、SwiftUIのアプリの最初の画面に、ガラスのような見た目の案内画面を、1行でつけられます。\n[しんさんの投稿](https://x.com/protoduct_ai/status/2123286552537342427)へのいいねです。\n- **[GlassIntroKit](https://jiaxuli.com/open-source/glassintrokit/)：** SwiftUIのアプリの最初の画面に、ガラスのような見た目の案内画面を、1行でつけられます。外とは通信しません。",
+    "followUps": []
+  },
+  {
+    "id": "2123248965269463433",
+    "cardId": "r38_132",
+    "datetime": "2026-11-21T09:52:00+09:00",
+    "postedAt": "2026-11-19T11:56:16+09:00",
+    "source": "likes",
+    "title": "Software Design 2026年12月号の特集は、一段下から障害の原因をつかむ方法と、AIが作った変な画面をルールで整える方法です。",
+    "summary": "1つ目はメモリ不足でプログラムが止められる仕組みやTCPのタイムアウトなど。2つ目はAIが作ったなんとなく変な画面をルールで整える方法。",
+    "tweetId": "2123248965269463433",
+    "tweetIds": [
+      "2123248965269463433"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/gihyosd/status/2123248965269463433",
+    "author": {
+      "handle": "gihyosd",
+      "name": "SoftwareDesign"
+    },
+    "via": null,
+    "text": "昨日から『Software Design 2026年12月号』が発売になっています。書店で実物をご覧いただくのが一番よいのですが、書店に立ち寄れない方のために、目次ページを添付しておきます。\n\n今号も、“ITエンジニア心をくすぐる記事”がたくさん載っています。連載の一つ一つのタイトルまで、じっくり見てみてください。",
+    "images": [
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HXdLbngaAAAsEUM.jpg"
+      },
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HXdLenvbUAAwYv-.jpg"
+      },
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HXdLfpAb0AAtbMu.jpg"
+      }
+    ],
+    "deepDive": "#Software Design 2026年12月号の特集は、一段下から障害の原因をつかむ方法と、AIが作った変な画面をルールで整える方法です。\n[SoftwareDesignの投稿](https://x.com/gihyosd/status/2123248965269463433)へのいいねです。\n- **[Software Design 2026年12月号](https://gihyo.jp/magazine/SD/archive/2026/202612)：**\n  - 1つ目の特集は、仕組みの一段下（メモリ不足でプログラムが止められる仕組みや、TCPのタイムアウトなど）から、障害の原因をつかむ方法です。\n  - 2つ目の特集は、AIが作った、なんとなく変な画面を、ルールで整える方法です。",
+    "followUps": []
+  },
+  {
+    "id": "2123228391587623240",
+    "cardId": "r38_126",
+    "datetime": "2026-11-21T09:52:00+09:00",
+    "postedAt": "2026-11-19T10:34:30+09:00",
+    "source": "likes",
+    "title": "中国の3Dプリンター農場では、約3万台持っている会社もあるそうです。",
+    "summary": "3Dプリンターを約3万台持っている会社もある、という報道。",
+    "tweetId": "2123228391587623240",
+    "tweetIds": [
+      "2123228391587623240"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/BambulabJapan/status/2123228391587623240",
+    "author": {
+      "handle": "BambulabJapan",
+      "name": "Bambulab Japan"
+    },
+    "via": null,
+    "text": "中国で急拡大“プリンター農場”　3Dプリンター並べ一斉稼働　APEC深センで注目（HOME広島ホームテレビ） [home-tv.co.jp/news/content/?…](https://www.home-tv.co.jp/news/content/?news_id=000548290)",
+    "images": [],
+    "deepDive": "#中国の3Dプリンター農場では、約3万台持っている会社もあるそうです。\n[Bambulab Japanの投稿](https://x.com/BambulabJapan/status/2123228391587623240)へのいいねです。\n- **[中国の3Dプリンター農場](https://www.home-tv.co.jp/news/content/?news_id=000548290)：** 3Dプリンターを、約3万台持っている会社もあるそうです。",
+    "followUps": []
+  },
+  {
+    "id": "2123223376940691814",
+    "cardId": "r38_119",
+    "datetime": "2026-11-21T09:52:00+09:00",
+    "postedAt": "2026-11-19T10:14:35+09:00",
+    "source": "likes",
+    "title": "GitHubのCopilotに、自分で作ったスキルやエージェント、MCPのツールを、テストする機能「Copilot Evals」が出ました。",
+    "summary": "パブリックプレビュー。Vallyでツール呼び出しやトークンを記録し、合格・速さ・費用まで点数にする。直したあとに同じテストを再実行できる。いいね2件。",
+    "tweetId": "2123223376940691814",
+    "tweetIds": [
+      "2123223376940691814"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/Kesin11/status/2123223376940691814",
+    "author": {
+      "handle": "Kesin11",
+      "name": "Kenta.Kase"
+    },
+    "via": null,
+    "text": "skillsやMCPを評価するためのGitHub Copilot Evalsがプレビューで登場。デモ見た感じだと評価側もプロンプトで入力する方式でお手軽っぽい。Copilotが使える各ツールでプラグイン形式でインストールして利用可能 / [htn.to/49eanC9MEk](https://htn.to/49eanC9MEk)",
+    "images": [],
+    "deepDive": "#GitHubのCopilotに、自分で作ったスキルやエージェント、MCPのツールを、テストする機能「Copilot Evals」が出ました。\n[Kenta.Kaseさんの投稿](https://x.com/Kesin11/status/2123223376940691814)へのいいねです。\n[Kesin11さんの投稿](https://x.com/Kesin11/status/2123223376940691814)と、[GitHubの公式の告知](https://github.blog/changelog/2026-11-17-github-copilot-evals-is-now-in-public-preview/)によるものです。今は、試しに使える段階です。\n- **しくみ：** 本番に近い仕事をエージェントに渡して、結果だけでなく、途中でどう動いたかも、自動で調べます。\n- **記録と採点：** テストには、Microsoftの[Vally](https://microsoft.github.io/vally/)を使います。どのツールを呼んだかや、どれだけトークンを使ったかを、すべて記録します。そして、合格か、速さはどうか、費用はどうかまで、点数にします。\n- **使い方：** スキルやMCPを直したあとに、同じテストをもう一度動かします。そうすると、前より悪くなっていないかを確かめられます。",
+    "followUps": []
+  },
+  {
+    "id": "2123211461690609922",
+    "cardId": "r38_118",
+    "datetime": "2026-11-21T09:52:00+09:00",
+    "postedAt": "2026-11-19T09:27:14+09:00",
+    "source": "likes",
+    "title": "GoogleがGemini 4 Neonを出しました。",
+    "summary": "100万トークンあたり入力3ドル、出力15ドル。一度に読める量は100万トークン。Google発表では間接プロンプトインジェクション成功率が最深設定で0.0%。既存のGemini 4 Carbon r24_9 とは別のモデル。",
+    "tweetId": "2123211461690609922",
+    "tweetIds": [
+      "2123211461690609922",
+      "2123198296122667053"
+    ],
+    "quoteTweetId": "2123198296122667053",
+    "url": "https://x.com/kenn/status/2123211461690609922",
+    "author": {
+      "handle": "kenn",
+      "name": "Kenn Ejima"
+    },
+    "via": null,
+    "text": "もはや意味がわからない\n\nGeminiいきなり面で制圧してくるの凄すぎん？",
+    "images": [],
+    "deepDive": "#GoogleがGemini 4 Neonを出しました。\n[Kenn Ejimaさんの投稿](https://x.com/kenn/status/2123211461690609922)へのいいねです。\n[kennさん](https://x.com/kenn/status/2123211461690609922)は、「いきなり面で制圧」と書いていました（[Googleの公式ブログ](https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/)）。\n- **値段：** 100万トークンあたり、入力が3ドル、出力が15ドルです。一度に読める量は、100万トークンです。\n- **安全の数字（Googleの発表）：**\n  - 文書などに命令をこっそり仕込んでAIをあやつる攻撃（間接プロンプトインジェクション）を、Gray Swanが試しました。いちばん深く考える設定で、守りの仕組みも使うと、攻撃が成功した割合は0.0%だったそうです。\n  - エージェントがやってはいけないことをした割合は、0.09%だったそうです。\n- **注意：** どの数字も、Googleが自分で発表したものです。",
+    "followUps": []
+  },
+  {
+    "id": "2123210668577026221",
+    "cardId": "r38_108",
+    "datetime": "2026-11-21T09:52:00+09:00",
+    "postedAt": "2026-11-19T09:24:05+09:00",
+    "source": "likes",
+    "title": "六花亭のネット通販で、カードの番号ぜんぶとセキュリティコードが、約8,000件もれたおそれがあります。",
+    "summary": "10/21 21時〜11/18 11時に決済画面で入力されたカード情報。六花亭は保存していなかったが、画面のプログラムが書きかえられて入力とたんに外へ送られたおそれ。",
+    "tweetId": "2123210668577026221",
+    "tweetIds": [
+      "2123210668577026221",
+      "2123204662044299264"
+    ],
+    "quoteTweetId": "2123204662044299264",
+    "url": "https://x.com/ipusiron/status/2123210668577026221",
+    "author": {
+      "handle": "ipusiron",
+      "name": "IPUSIRON"
+    },
+    "via": null,
+    "text": "セキュリティコードはやばい😇",
+    "images": [],
+    "deepDive": "#六花亭のネット通販で、カードの番号ぜんぶとセキュリティコードが、約8,000件もれたおそれがあります。\n[IPUSIRONさんの投稿](https://x.com/ipusiron/status/2123210668577026221)へのいいねです。\n[六花亭の発表](https://www.rokkatei.co.jp/news/info/20261118-25760/)と、[ipusironさんの投稿](https://x.com/ipusiron/status/2123210668577026221)によるものです。10/21の21時から11/18の11時までに、お金を払う画面で入力されたカードの情報が対象です。六花亭は、カードの情報を保存していませんでした。でも、その画面のプログラムが書きかえられていて、入力されたとたんに、外に送られていたおそれがあります。保存しないだけでは防げない手口です。この期間に買い物をした人は、カードを使った記録を確かめてください。",
+    "followUps": []
+  },
+  {
+    "id": "2123194574512504837",
+    "cardId": "r38_110",
+    "datetime": "2026-11-21T09:52:00+09:00",
+    "postedAt": "2026-11-19T08:20:08+09:00",
+    "source": "likes",
+    "title": "ChatGPTのAPIのクレジットの記事と、OpenAIの公式の説明にくいちがいがあります。",
+    "summary": "公式は「APIキーを通してCodexを使う分はこの特典の対象外」。記事の説明とはくいちがって見える。",
+    "tweetId": "2123194574512504837",
+    "tweetIds": [
+      "2123194574512504837"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/impress_watch/status/2123194574512504837",
+    "author": {
+      "handle": "impress_watch",
+      "name": "Impress Watch"
+    },
+    "via": null,
+    "text": "ChatGPTで毎月もらえる100ドル分以上のAPIクレジットを使い切ろう! [watch.impress.co.jp/docs/topic/215…](https://www.watch.impress.co.jp/docs/topic/2155622.html)",
+    "images": [
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HXcaNflbgAELcf5.jpg"
+      },
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HXcaNoZaYAAI3g2.jpg"
+      },
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HXcaNvdawAA8Dom.jpg"
+      }
+    ],
+    "deepDive": "#ChatGPTのAPIのクレジットの記事と、OpenAIの公式の説明にくいちがいがあります。\n[Impress Watchの投稿](https://x.com/impress_watch/status/2123194574512504837)へのいいねです。\n- **[ChatGPTのAPIのクレジットの記事](https://www.watch.impress.co.jp/docs/topic/2155622.html)：** OpenAIの公式の説明には、「APIキーを通してCodexを使う分は、この特典の対象外」とあります。記事の説明とは、くいちがって見えます。",
+    "followUps": []
+  },
+  {
+    "id": "2123189717193883784",
+    "cardId": "r38_122",
+    "datetime": "2026-11-21T09:52:00+09:00",
+    "postedAt": "2026-11-19T08:00:50+09:00",
+    "source": "likes",
+    "title": "宇都宮ライトラインの事故です。けが人はいませんでした。",
+    "summary": "乗用車との衝突。けが人はなし。既存の新プロジェクトX再放送案内 r38_41 とは別件。",
+    "tweetId": "2123189717193883784",
+    "tweetIds": [
+      "2123189717193883784"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/konohalrt/status/2123189717193883784",
+    "author": {
+      "handle": "konohalrt",
+      "name": "konoha@宇都宮黄援🏀"
+    },
+    "via": null,
+    "text": "事故ってちゃったライトライン、平石まで移動されて全員下車になりました。\nうわぁバッコリいってるよー😱💦",
+    "images": [
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HXcVxzWbkAALOlZ.jpg"
+      },
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HXcVyeNbsAAV-04.jpg"
+      }
+    ],
+    "deepDive": "#宇都宮ライトラインの事故です。けが人はいませんでした。\n[konohaさんの投稿](https://x.com/konohalrt/status/2123189717193883784)へのいいねです。\n- [宇都宮ライトラインの事故](https://newsdig.tbs.co.jp/articles/-/3096486)。けが人はいませんでした。\n  - Bambu Lab A1を買った人向けの、[あると便利なもの](https://x.com/TigerK623K/status/2123057559171195239)。\n  - [資格の勉強のアプリで、週8万円になった話](https://x.com/miitara37/status/2123023037339771388)。確かめられる数字ではありません。\n  - [newmoの採用の投稿](https://x.com/newmohq/status/2122827120548491297)。\n\n画像と動画は見ていないので、投稿の文章と、まわりの情報でまとめています。",
+    "followUps": []
+  },
+  {
+    "id": "2123149870571938120",
+    "cardId": "r38_105",
+    "datetime": "2026-11-21T09:52:00+09:00",
+    "postedAt": "2026-11-19T05:22:30+09:00",
+    "source": "likes",
+    "title": "「1時間で作れた」というAIで作ったアプリを調べたら、弱点だらけで、HTMLに秘密の情報がそのまま書いてありました。",
+    "summary": "HTMLは誰でも見られるので、APIキーやパスワードを書いておくと見えてしまう、という指摘。",
+    "tweetId": "2123149870571938120",
+    "tweetIds": [
+      "2123149870571938120"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/Best91hanza/status/2123149870571938120",
+    "author": {
+      "handle": "Best91hanza",
+      "name": "ベスト91_必要以上にフォーマルな男"
+    },
+    "via": null,
+    "text": "社内で「1hでこんなアプリ作れました！」と騒いでいる人のアプリをOWASP TOP10とMitre att&ckを参照させてセキュリティチェックしてみたらめちゃめちゃ脆弱性あってワロタ。\n\n一番やべーのはHTMLに機密情報を平文で書いてあったことw\n\nやっぱ勉強せなアカンです！\n\n#生成AIセキュア1st\n#SUNABACO",
+    "images": [],
+    "deepDive": "#「1時間で作れた」というAIで作ったアプリを調べたら、弱点だらけで、HTMLに秘密の情報がそのまま書いてありました。\n[ベスト91さんの投稿](https://x.com/Best91hanza/status/2123149870571938120)へのいいねです。\n[ベスト91さんの投稿](https://x.com/Best91hanza/status/2123149870571938120)です。HTMLは、ブラウザで誰でも中身を見られます。なので、APIキーやパスワードを書いておくと、誰にでも見えてしまいます。",
+    "followUps": []
+  },
+  {
+    "id": "2123132578425159819",
+    "cardId": "r38_117",
+    "datetime": "2026-11-21T09:52:00+09:00",
+    "postedAt": "2026-11-19T04:13:47+09:00",
+    "source": "likes",
+    "title": "VS Code 1.147で、AIがエージェントの操作を許可するかを決める機能に、自分のルールを足せるようになりました。",
+    "summary": "assisted permissions。下書きや予約送信も追加。許可を決めるのもAIなのですり抜けが気になる（私の推測です）。",
+    "tweetId": "2123132578425159819",
+    "tweetIds": [
+      "2123132578425159819"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/code/status/2123132578425159819",
+    "author": {
+      "handle": "code",
+      "name": "Visual Studio Code"
+    },
+    "via": null,
+    "text": "🚀 The latest VS Code release makes it easier to plan your agent workflows. Save requests as drafts, schedule follow-ups for later, and explore new ways to visualize results with charts and mockups.\n\n🧵 Here's what's new:",
+    "images": [
+      {
+        "type": "video_preview",
+        "url": "https://pbs.twimg.com/ext_tw_video_thumb/2123132516836032513/pu/img/xfR6yiYr-VKeWHjI.jpg"
+      }
+    ],
+    "deepDive": "#VS Code 1.147で、AIがエージェントの操作を許可するかを決める機能に、自分のルールを足せるようになりました。\n[Visual Studio Codeの投稿](https://x.com/code/status/2123132578425159819)へのいいねです。\n[リリースノート](https://code.visualstudio.com/updates/v1_147)によるものです。\n- **assisted permissions：** AIの審査役が、エージェントのツールの呼び出しを、1回ずつ確かめます。危なくないものは、自動で許可します。この審査役に、「パッケージを入れる前やpushする前は、必ず確かめて」のような指示を、自分で足せるようになりました。\n- **ほかの新機能：** エージェントへの頼みごとを下書きにしておく機能や、あとで送る予約の機能も入りました。\n- **心配な点：** 許可するかを決めるのもAIなので、それをすり抜けられないかが気になります（私の推測です）。",
+    "followUps": []
+  },
+  {
+    "id": "2123084818909220867",
+    "cardId": "r38_111",
+    "datetime": "2026-11-21T09:52:00+09:00",
+    "postedAt": "2026-11-19T01:04:00+09:00",
+    "source": "likes",
+    "title": "Claude Codeのセッションを、「目的」「判断待ち」「次の一手」などの見出しでまとめて表示する追加機能「status-board」です。",
+    "summary": "PRへのリンクはモデルに書かせず、セッションの記録から機能のほうでつける。モデルがURLをでっちあげるかもしれないため。",
+    "tweetId": "2123084818909220867",
+    "tweetIds": [
+      "2123084818909220867"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/HolyGrail/status/2123084818909220867",
+    "author": {
+      "handle": "HolyGrail",
+      "name": "蜘蛛糸まな🕸️ / HolyGrail"
+    },
+    "via": null,
+    "text": "status-board っていう claude mods 作った\n\n[github.com/HolyGrail/clau…](https://github.com/HolyGrail/claude-mods/blob/main/plugins/status-board/README.md)\n\nスクショにもあるように、現在のセッションに対して\n\n・目的\n・現在地\n・決まったこと\n・未解決、判断待ち\n・次の一手\n\nを要約して表示して認知負荷の軽減を目指しています",
+    "images": [
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HXa1sowbYAAnbU-.jpg"
+      }
+    ],
+    "deepDive": "#Claude Codeのセッションを、「目的」「判断待ち」「次の一手」などの見出しでまとめて表示する追加機能「status-board」です。\n[蜘蛛糸まなさんの投稿](https://x.com/HolyGrail/status/2123084818909220867)へのいいねです。\n- **[status-board](https://github.com/HolyGrail/claude-mods)：** Claude Codeのセッションを、「目的」「判断待ち」「次の一手」などの見出しで、まとめて表示する追加の機能です。PRへのリンクは、モデルに書かせません。モデルがURLをでっちあげるかもしれないので、セッションの記録から、機能のほうでつけています。",
+    "followUps": []
+  },
+  {
+    "id": "2123057559171195239",
+    "cardId": "r38_121",
+    "datetime": "2026-11-21T09:52:00+09:00",
+    "postedAt": "2026-11-18T23:15:41+09:00",
+    "source": "likes",
+    "title": "Bambu Lab A1を買った人向けの、あると便利なものの一覧です。",
+    "summary": "A1 / A1 mini 購入者向けの周辺の紹介。既存の2台向かい合わせ印刷 r38_78 とは別件。",
+    "tweetId": "2123057559171195239",
+    "tweetIds": [
+      "2123057559171195239"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/TigerK623K/status/2123057559171195239",
+    "author": {
+      "handle": "TigerK623K",
+      "name": "未帰還者 Joe"
+    },
+    "via": null,
+    "text": "Bambu Lab A1 A1mini が届き楽しんでいる頃だと思いますので\nこれから買っておくと超便利な物ザックリ一覧\n\n基本Amaz◯nで購入可能なので自分にあったものを探しましょう!\n必須と書いてあるもの以外はなくてもいいし、自分で印刷しても大丈夫です💪\n\n添付写真は個人的激推しアイテム",
+    "images": [
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HXadmOobgAAE5h4.jpg"
+      },
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HXac0rJbMAAFw9_.jpg"
+      },
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HXadFp9aEAAlBfn.jpg"
+      },
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HXadeAXbMAAA7UM.jpg"
+      }
+    ],
+    "deepDive": "#Bambu Lab A1を買った人向けの、あると便利なものの一覧です。\n[未帰還者 Joeさんの投稿](https://x.com/TigerK623K/status/2123057559171195239)へのいいねです。\n- Bambu Lab A1を買った人向けの、[あると便利なもの](https://x.com/TigerK623K/status/2123057559171195239)。\n  - [資格の勉強のアプリで、週8万円になった話](https://x.com/miitara37/status/2123023037339771388)。確かめられる数字ではありません。\n  - [newmoの採用の投稿](https://x.com/newmohq/status/2122827120548491297)。\n\n画像と動画は見ていないので、投稿の文章と、まわりの情報でまとめています。",
+    "followUps": []
+  },
+  {
+    "id": "2123055373737148722",
+    "cardId": "r38_109",
+    "datetime": "2026-11-21T09:52:00+09:00",
+    "postedAt": "2026-11-18T23:07:00+09:00",
+    "source": "likes",
+    "title": "「Googleの無料の講座」と紹介されているハーネスの動画がありますが、どこが出したものかは確かめられませんでした。",
+    "summary": "Googleが公式に出しているのはCodelabのほう。紹介投稿の出典は未確認。",
+    "tweetId": "2123055373737148722",
+    "tweetIds": [
+      "2123055373737148722"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/robiartec/status/2123055373737148722",
+    "author": {
+      "handle": "robiartec",
+      "name": "rob."
+    },
+    "via": null,
+    "text": "Esto es una locura. Google acaba de sacar un curso gratis de 2 horas sobre Harness engineering completo, del primer paso al ultimo:\n\n0:29 - Harness engineering desde cero\n11:08 - tu primer agente, bien construido\n28:08 - Eval engineering con un agente “Chief of Staff”\n1:00:13 - Loop engineering\n1:23:19 - un sistema de grafos que se mejora solo y nunca se detiene\n\nHe visto cursos de 500$ que no tienen el valor que tiene este video",
+    "images": [
+      {
+        "type": "video_preview",
+        "url": "https://pbs.twimg.com/amplify_video_thumb/2123054651100590080/img/Oz1TRPFpe37wt1Ly.jpg"
+      }
+    ],
+    "deepDive": "#「Googleの無料の講座」と紹介されているハーネスの動画がありますが、どこが出したものかは確かめられませんでした。\n[rob.さんの投稿](https://x.com/robiartec/status/2123055373737148722)へのいいねです。\n- **[ハーネスの講座とされる動画](https://x.com/robiartec/status/2123055373737148722)：** 「Googleの無料の講座」と紹介されていますが、どこが出したものかは、確かめられませんでした。Googleが公式に出しているのは、[Codelab](https://codelabs.developers.google.com/harness-engineering-antigravity)のほうです。",
+    "followUps": []
+  },
+  {
+    "id": "2123053877901861320",
+    "cardId": "r38_133",
+    "datetime": "2026-11-21T09:52:00+09:00",
+    "postedAt": "2026-11-18T23:01:03+09:00",
+    "source": "likes",
+    "title": "KotlinFest 2026で、すべての動画をその日のうちに公開した仕組みの解説です。",
+    "summary": "機材の映像切りかえをMac上のGStreamerに置きかえ、SRTで送り、仕上げはFFmpegのスクリプトで自動処理。",
+    "tweetId": "2123053877901861320",
+    "tweetIds": [
+      "2123053877901861320"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/hiroponlive/status/2123053877901861320",
+    "author": {
+      "handle": "hiroponlive",
+      "name": "hiropon"
+    },
+    "via": null,
+    "text": "DroidKaigiで映像周りを担当しているhiroponです。\n\nKotlinFest 2026では、全セッションのアーカイブ動画をイベント当日中に公開することができました！\n\nそのスピード公開を実現した技術や仕組みをご紹介します。\n#KotlinFest\n[zenn.dev/hiro_pon/artic…](https://zenn.dev/hiro_pon/articles/0fc7f0c9ed88a2)",
+    "images": [],
+    "deepDive": "#KotlinFest 2026で、すべての動画をその日のうちに公開した仕組みの解説です。\n[hiroponさんの投稿](https://x.com/hiroponlive/status/2123053877901861320)へのいいねです。\n- **[KotlinFest 2026で、すべての動画をその日のうちに公開した仕組み](https://zenn.dev/hiro_pon/articles/0fc7f0c9ed88a2)：** これまで機材でやっていた映像の切りかえを、Mac上で動くGStreamerというソフトに置きかえました。映像は、SRTという方法で送ります。仕上げの作業は、FFmpegのスクリプトで自動でやっています。",
+    "followUps": []
+  },
+  {
+    "id": "2123029376086499354",
+    "cardId": "r38_107",
+    "datetime": "2026-11-21T09:52:00+09:00",
+    "postedAt": "2026-11-18T21:23:41+09:00",
+    "source": "likes",
+    "title": "NewsPicksの漏えいは、BIツールの「Metabase」の弱点から、多要素認証も通りぬけて入られていました。",
+    "summary": "ログイン前に悪用できるSQLインジェクション（CVSS 10.0）。8/10攻撃開始、8/12修正の前日にデータを取られ、犯人が作った管理者APIキーが残り9/28まで調査が続いた。カード下3〜4桁が361,598件。",
+    "tweetId": "2123029376086499354",
+    "tweetIds": [
+      "2123029376086499354"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/Noxaiya/status/2123029376086499354",
+    "author": {
+      "handle": "Noxaiya",
+      "name": "ノァイヤー(方舟)"
+    },
+    "via": null,
+    "text": "[corp.newspicks.com/info/20261118](https://corp.newspicks.com/info/20261118)\nこれヤバすぎ\n回避のしようがない",
+    "images": [],
+    "deepDive": "#NewsPicksの漏えいは、BIツールの「Metabase」の弱点から、多要素認証も通りぬけて入られていました。\n[ノァイヤーさんの投稿](https://x.com/Noxaiya/status/2123029376086499354)へのいいねです。\n[ユーザベースの報告](https://corp.newspicks.com/info/20261118)と[ITmedia](https://www.itmedia.co.jp/news/article/2611/18/2000003300/)によるものです。Metabaseは、会社のデータを集計したりグラフにしたりする道具です。\n- **原因：** Metabaseに、ログインする前に悪用できる弱点（SQLインジェクション）がありました。深刻さの点数は、最高の10.0です。弱点が公表された4日後の8/10に、攻撃が始まりました。8/12に修正を入れましたが、その前の日に、データを取られていました。\n- **修正のあとも続いていた：** 犯人は、管理者の権限を持つAPIキーを作っていました。修正を入れたあとも、そのキーが残っていたので、犯人は9/28まで、中を調べ続けていたそうです。\n- **もれたもの：** カードの名前、有効期限、番号の最後の3〜4けたが、361,598件です。メールアドレスは、322,531件です。\n\n修正を入れるだけでなく、入られている間に犯人が作った鍵を、取り消すところまでやる必要がある、という例です。",
+    "followUps": []
+  },
+  {
+    "id": "2123023037339771388",
+    "cardId": "r38_120",
+    "datetime": "2026-11-21T09:52:00+09:00",
+    "postedAt": "2026-11-18T20:58:30+09:00",
+    "source": "likes",
+    "title": "資格の勉強のアプリで、週8万円になったという話です。確かめられる数字ではありません。",
+    "summary": "投稿者の話。数字は確かめられない。既存のGoogle AI資格講座 r38_64 とは別件。",
+    "tweetId": "2123023037339771388",
+    "tweetIds": [
+      "2123023037339771388",
+      "2114354121042174285"
+    ],
+    "quoteTweetId": "2114354121042174285",
+    "url": "https://x.com/miitara37/status/2123023037339771388",
+    "author": {
+      "handle": "miitara37",
+      "name": "けくめね😼"
+    },
+    "via": null,
+    "text": "ワイの好きな上司っち、趣味の資格対策アプリ作りが覚醒して、大手企業との契約が結ばれ、今何もしなくても週8万円勝手に入ってくる状態になったらしい",
+    "images": [],
+    "deepDive": "#資格の勉強のアプリで、週8万円になったという話です。確かめられる数字ではありません。\n[けくめねさんの投稿](https://x.com/miitara37/status/2123023037339771388)へのいいねです。\n- [資格の勉強のアプリで、週8万円になった話](https://x.com/miitara37/status/2123023037339771388)。確かめられる数字ではありません。\n  - [newmoの採用の投稿](https://x.com/newmohq/status/2122827120548491297)。\n\n画像と動画は見ていないので、投稿の文章と、まわりの情報でまとめています。",
+    "followUps": []
+  },
+  {
+    "id": "2123017600082890990",
+    "cardId": "r38_130",
+    "datetime": "2026-11-21T09:52:00+09:00",
+    "postedAt": "2026-11-18T20:36:54+09:00",
+    "source": "likes",
+    "title": "LayerXの新卒「AI Builder」の予定の年収は、800万円からです。求めているのは、AIで実際に価値を作った経験です。",
+    "summary": "新卒採用。予定年収は800万円から。AIで実際に価値を作った経験を求めている。",
+    "tweetId": "2123017600082890990",
+    "tweetIds": [
+      "2123017600082890990"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/jammaru_lab/status/2123017600082890990",
+    "author": {
+      "handle": "jammaru_lab",
+      "name": "じゃむまる"
+    },
+    "via": null,
+    "text": "LayerXの新卒AI Builderの募集、想定年収800万円〜ってめちゃ凄いな。\n\nしかも、重視しているのは職歴や資格よりも、AIとソフトウェアを使って実際に価値を生み出した経験。\n\nAIが生成したコードを鵜呑みにせず、設計・品質・セキュリティまで責任を持てることも求められていて、これからのエンジニアに必要になる能力がそのまま言語化されている感じがする。めちゃくちゃ面白そうだし、興味がある人はおすすめ。\n\n[open.talentio.com/r/1/c/layerx/p…](https://open.talentio.com/r/1/c/layerx/pages/130662)",
+    "images": [],
+    "deepDive": "#LayerXの新卒「AI Builder」の予定の年収は、800万円からです。求めているのは、AIで実際に価値を作った経験です。\n[じゃむまるさんの投稿](https://x.com/jammaru_lab/status/2123017600082890990)へのいいねです。\n- **[LayerXの新卒「AI Builder」](https://tensyokuai.co.jp/jobs/layerx/ai-builder/)：** 予定の年収は、800万円からです。求めているのは、AIで実際に価値を作った経験です。",
+    "followUps": []
+  },
+  {
+    "id": "2122922012599545967",
+    "cardId": "r38_106",
+    "datetime": "2026-11-21T09:52:00+09:00",
+    "postedAt": "2026-11-18T14:17:04+09:00",
+    "source": "likes",
+    "title": "SBI証券のにせのサイトが、見た目では本物と見分けがつかないほど、よくできています。",
+    "summary": "フィッシング対策協議会の緊急情報。件名に「パスキー認証必須化の前倒し」など。松井、マネックス、日興の名前も使用。パスキーは本物のアドレスでしか使えず偽サイトには強い。既存 r26_14 とは別件。",
+    "tweetId": "2122922012599545967",
+    "tweetIds": [
+      "2122922012599545967",
+      "2122904910224363774"
+    ],
+    "quoteTweetId": "2122904910224363774",
+    "url": "https://x.com/kanecororo/status/2122922012599545967",
+    "author": {
+      "handle": "kanecororo",
+      "name": "ka猫🐾"
+    },
+    "via": null,
+    "text": "SBI証券フィッシングのサイト、これはもう一緒だった。\n\n←本物             偽物→",
+    "images": [
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HXYhI1SaQAEUch6.jpg"
+      },
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HXYhN4Pa4AA6ZSy.jpg"
+      }
+    ],
+    "deepDive": "#SBI証券のにせのサイトが、見た目では本物と見分けがつかないほど、よくできています。\n[ka猫さんの投稿](https://x.com/kanecororo/status/2122922012599545967)へのいいねです。\n[フィッシング対策協議会の緊急情報](https://www.antiphishing.jp/news/alert/sec_20261117.html)によるものです。メールの件名には、「パスキー認証必須化の前倒し」などが使われています。ログインの守りを強くする、という話を口実にしてだます手口です。SBIのほか、松井、マネックス、日興の名前も使われています（[INTERNET Watch](https://internet.watch.impress.co.jp/docs/news/2157223.html)）。パスキーは、本物のサイトのアドレスでしか使えません。なので、見た目がそっくりなにせのサイトには、強いです。",
+    "followUps": []
+  },
+  {
+    "id": "2122836234200588424",
+    "cardId": "r38_112",
+    "datetime": "2026-11-21T09:52:00+09:00",
+    "postedAt": "2026-11-18T08:36:13+09:00",
+    "source": "likes",
+    "title": "Ignite 2026で、Agent 365に登録されたエージェントは、5,000万をこえました。",
+    "summary": "ほかの会社のエージェントにもIDをつけられるようになり、鍵を保存しなくていいログインの方法も入った。",
+    "tweetId": "2122836234200588424",
+    "tweetIds": [
+      "2122836234200588424"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/super_bonochin/status/2122836234200588424",
+    "author": {
+      "handle": "super_bonochin",
+      "name": "炎鎮🔥 - ₿onochin -"
+    },
+    "via": null,
+    "text": "Microsoft Ignite で発表された内容まとめ（スライド全28 枚）。\nサブスクでは、順次この内容にエンタープライズAI目線で触れていきます。",
+    "images": [
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HXXT3A2bYAA_-0p.jpg"
+      },
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HXXT3hybcAAsbVx.jpg"
+      },
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HXXT4EQbIAAD-ld.jpg"
+      },
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HXXT4pqacAAASV5.jpg"
+      }
+    ],
+    "deepDive": "#Ignite 2026で、Agent 365に登録されたエージェントは、5,000万をこえました。\n[炎鎮さんの投稿](https://x.com/super_bonochin/status/2122836234200588424)へのいいねです。\n- **[Ignite 2026](https://techcommunity.microsoft.com/blog/agent-365-blog/whats-new-in-microsoft-agent-365-ignite-2026/4571753)：** Agent 365に登録されたエージェントは、5,000万をこえました。ほかの会社のエージェントにもIDをつけられるようになり、鍵を保存しなくていいログインの方法も入りました。",
+    "followUps": []
+  },
+  {
+    "id": "2122791816949064104",
+    "cardId": "r38_115",
+    "datetime": "2026-11-21T09:52:00+09:00",
+    "postedAt": "2026-11-18T05:39:43+09:00",
+    "source": "likes",
+    "title": "GitHubが、Copilot、Codex CLI、Claude Codeを、同じモデルで比べました。",
+    "summary": "同じモデルでのハーネス比較。テストのずるい解き方も見つけて割合を出している。比べたのはGitHub自身。",
+    "tweetId": "2122791816949064104",
+    "tweetIds": [
+      "2122791816949064104"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/pierceboggan/status/2122791816949064104",
+    "author": {
+      "handle": "pierceboggan",
+      "name": "Pierce Boggan"
+    },
+    "via": null,
+    "text": "We are now publishing data on how the GitHub Copilot harness performs relative to harnesses, including Codex and Claude Code CLIs.\n\nThis supplements our existing data that we publish on which models perform best in GitHub Copilot on Terminal Bench 4.0 and DeepSWE 1.1.\n\nEnjoy!\n\n[benchmarks.github.com](https://benchmarks.github.com)",
+    "images": [
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HXWqwIGaUAERn0U.jpg"
+      }
+    ],
+    "deepDive": "#GitHubが、Copilot、Codex CLI、Claude Codeを、同じモデルで比べました。\n[Pierce Bogganさんの投稿](https://x.com/pierceboggan/status/2122791816949064104)へのいいねです。\n- **[ハーネスどうしの比べっこ](https://benchmarks.github.com/)：** GitHubが、Copilot、Codex CLI、Claude Codeを、同じモデルで比べました。テストのずるい解き方（答えや、隠したテストを見るなど）も見つけて、その割合を出しています。比べたのは、GitHub自身です。",
+    "followUps": []
+  },
+  {
+    "id": "2122789742047797619",
+    "cardId": "r38_116",
+    "datetime": "2026-11-21T09:52:00+09:00",
+    "postedAt": "2026-11-18T05:31:28+09:00",
+    "source": "likes",
+    "title": "GitHubのCopilotまわりで、エージェントの「手」と「監視」が、一度に増えました。",
+    "summary": "ブラウザ操作（Chrome/Edge拡張、最初はオフ）と、SupabaseやBoxなど公式検証済みMCPコネクタ8つの追加。送信文ではコネクタ箇条書きの途中が欠けている。",
+    "tweetId": "2122789742047797619",
+    "tweetIds": [
+      "2122789742047797619"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/pierceboggan/status/2122789742047797619",
+    "author": {
+      "handle": "pierceboggan",
+      "name": "Pierce Boggan"
+    },
+    "via": null,
+    "text": "Automate browser tasks with the new GitHub Copilot extension for Chrome & Edge!\n\nTry it in the GitHub Copilot app today with the Enable Browser Use setting.\n\n[github.blog/changelog/2026…](https://github.blog/changelog/2026-11-17-github-copilot-app-microsoft-ignite-releases/)",
+    "images": [
+      {
+        "type": "video_preview",
+        "url": "https://pbs.twimg.com/amplify_video_thumb/2122789608559976448/img/2EhkiQ7X0r5PdE1f.jpg"
+      }
+    ],
+    "deepDive": "#GitHubのCopilotまわりで、エージェントの「手」と「監視」が、一度に増えました。\n[Pierce Bogganさんの投稿](https://x.com/pierceboggan/status/2122789742047797619)へのいいねです。\n- **[ブラウザの操作](https://github.blog/changelog/2026-11-17-github-copilot-app-microsoft-ignite-releases/)：** ChromeかEdgeに拡張機能を入れると、Copilotが、すでにログインしているブラウザで、フォームに入力したり、情報を集めたりします。動くのは、決まったタブのグループの中だけです。最初は、オフになっています。\n- **[GitHubが確かめた、つなぐための部品（MCPのコネクタ）](https://github.blog/changelog/2026-11-18-connect-supabase-box-calendly-and-more-to-copilot/)：** サービスを選んでサインインするだけで、そのサービスを使えます。今回は、SupabaseやBoxなど、8つが増えました。サインインしたままの...と、そのURLを知っている人なら誰でも、ボットを動かせます。",
+    "followUps": []
+  },
+  {
+    "id": "2122772312978059476",
+    "cardId": "r38_128",
+    "datetime": "2026-11-21T09:52:00+09:00",
+    "postedAt": "2026-11-18T04:22:13+09:00",
+    "source": "likes",
+    "title": "Excalidraw CLI 1.0で、ブラウザからOAuthでログインできるようになりました。",
+    "summary": "長く使い回すAPIキーの代わりに、あとで取り消せる方法を使える。",
+    "tweetId": "2122772312978059476",
+    "tweetIds": [
+      "2122772312978059476"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/excalidraw/status/2122772312978059476",
+    "author": {
+      "handle": "excalidraw",
+      "name": "Excalidraw"
+    },
+    "via": null,
+    "text": "Excalidraw CLI is now on version 1.0.0 🚀\n\nSign-in through your browser via OAuth is finally supported, so no more messing around with API tokens!",
+    "images": [
+      {
+        "type": "video_preview",
+        "url": "https://pbs.twimg.com/amplify_video_thumb/2122770941528719360/img/kx6Akd8umx-G5HHI.jpg"
+      }
+    ],
+    "deepDive": "#Excalidraw CLI 1.0で、ブラウザからOAuthでログインできるようになりました。\n[Excalidrawの投稿](https://x.com/excalidraw/status/2122772312978059476)へのいいねです。\n- **[Excalidraw CLI 1.0](https://plus.excalidraw.com/docs/cli/commands/login)：** ブラウザから、OAuthでログインできるようになりました。長く使い回すAPIキーの代わりに、あとで取り消せる方法を使えます。",
+    "followUps": []
+  },
+  {
+    "id": "2122736581731561730",
+    "cardId": "r38_114",
+    "datetime": "2026-11-21T09:52:00+09:00",
+    "postedAt": "2026-11-18T02:00:14+09:00",
+    "source": "likes",
+    "title": "Copilot SDK v2.0.0で、名前が「Microsoft Copilot SDK」に変わりました。",
+    "summary": "Copilotを動かす部分は標準ではアプリと同じプロセスの中で動く。プロセスを分けて守る壁が1つ減る。",
+    "tweetId": "2122736581731561730",
+    "tweetIds": [
+      "2122736581731561730"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/GHCopilotLog/status/2122736581731561730",
+    "author": {
+      "handle": "GHCopilotLog",
+      "name": "GitHub Copilot App, CLI, & SDK Log"
+    },
+    "via": null,
+    "text": "🎉🔨 Copilot SDK v2.0.0 released!\n\n350 features & enhancements in this release\n\nTop features:\n• Added PAC-aware system proxy routing support in the runtime for better proxy auto-configuration handling 🌐\n• SDK handles tokenizer warmup and process telemetry internally to improve startup and monitoring\n• Remote session export refuses disabled or unresolved organization storage policies with export-start state and refusal warnings\n• Deferred allocator reclamation until disposed session data is released on opted-in Linux/glibc hosts, preserving requests during trim cooldown\n• SDK sessions honor the host's COPILOT_MODEL_FAMILY setting for accurate model family selection\n• Runtime loads .agents, .claude skills, and .claude agents from added directories to enhance plugin support\n• Preserved provider metadata in SDK model catalogs to retain provider info when listing models\n• Session.fusion_resolved event payload now includes ruleIndex for better event tracing\n• SDK clients receive warnings related to live Marketplace plugins to improve integration clarity\n• Azure OpenAI BYOK sessions on GPT-5.6/GPT-6 restored cross-turn prompt cache reuse by no longer sending prompt_cache_breakpoint\n\nEnhancements:\n• Improved MCP OAuth compatibility by respecting advertised account-selection and retrying rejected selections\n• Built-in browser activation respects user preferences and managed policy including after extension reconciliation\n• Runtime applies enabledPlugins from trusted non-repository folders improving plugin activation consistency\n• Preserved ACP context tier when switching models to maintain consistent context behavior\n• Improved runtime reliability by retrying config key writes initially refused to reduce configuration loss\n• Local-model adoption and cleanup no longer open console windows on Windows OS 💻\n• Sandbox deny rules now support glob patterns including hidden files and home-relative patterns\n• Normalized Responses MCP namespace names by trimming separators for better session history compatibility\n• Host tools sharing names with built-in tools now run their handler instead of failing to improve usability\n• Extended external tool call timeout removing automatic 30-minute cutoffs to support long-running workflows\n\nBug fixes:\n• Fixed runtime bug adding IPv6 unspecified address to outbound request blocklist for security 🛑\n• Fixed incomplete custom-agent list and reload issues during overlapping reloads or provider hydration\n• Fixed stale catalogs after credential invalidation to ensure fresh data\n• Corrected prompt alteration issues involving the Unicode character U+0130 in /after or /every text\n• Fixed isAbortError runtime bug that could throw when error message was not a string\n• Fixed session metadata and log summaries reuse to recover gracefully from transient log-read failures\n• Fixed session.mcp.startServer to honor caller-provided configuration consistently\n• Fixed runtime bug allowing grep flags without a leading dash for more robust CLI behavior\n• Fixed MCP OAuth URL validation rejecting backslash-obfuscated dot segments for security\n• Fixed missing skill instructions when approving tool permissions after runtime restart\n• INFO-level runtime logs no longer include MCP server peer information\n• Fixed attachment drops when requests retried after rate limiting\n• Fixed intermittent custom-agent discovery failures after authentication during first agent scan\n• Fixed LSP rootUri acceptance outside Git root to prevent invalid workspace roots\n• Fixed race conditions in credential refresh and custom-agent list reloads\n• Fixed race conditions during session queue waits to prevent unwanted session drops\n• Fixed retry counts to reset properly on session queue start to improve session lifecycle\n• Fixed diagnostics leaks from stub language servers to improve resource cleanup\n\nMisc:\n• Clarified Copilot SDK documentation on pending permission recovery\n• Removed unsupported prePRDescription and postResult variants from generated HookType contracts\n• Bugfix: INFO runtime log cleanup to reduce unnecessary details\n• Session metadata listing improved for log summary reuse\n• SDK now warns about live Marketplace plugins usage\n• Added support for glob patterns in sandbox deny rules for better file matching\n• Improved MCP OAuth retry logic for smoother authentication\n• Runtime plugin activation optimized with trusted folder plugin loading\n• Documentation updated for OAuth and permission recovery scenarios\n• Minor tooling and logging polish to support diagnostics and session lifecycle tracking\n\n[github.com/microsoft/copi…](https://github.com/microsoft/copilot-sdk/releases/tag/v2.0.0)\n\n#GitHubCopilotSDK",
+    "images": [],
+    "deepDive": "#Copilot SDK v2.0.0で、名前が「Microsoft Copilot SDK」に変わりました。\n[GitHub Copilot App, CLI, & SDK Logの投稿](https://x.com/GHCopilotLog/status/2122736581731561730)へのいいねです。\n- **[Copilot SDK v2.0.0](https://github.com/microsoft/copilot-sdk/releases/tag/v2.0.0)：** 名前が、「Microsoft Copilot SDK」に変わりました。Copilotを動かす部分は、標準ではアプリと同じプロセスの中で動きます。そのため、プロセスを分けて守る壁が、1つ減ります。",
+    "followUps": []
+  },
+  {
+    "id": "2122298637611098456",
+    "cardId": "r38_123",
+    "datetime": "2026-11-21T09:52:00+09:00",
+    "postedAt": "2026-11-16T21:00:00+09:00",
+    "source": "likes",
+    "title": "『チ。』の連載前の構想のメモです。",
+    "summary": "連載前の構想のメモが公開されている、といういいね。",
+    "tweetId": "2122298637611098456",
+    "tweetIds": [
+      "2122298637611098456"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/UO10_exhibit/status/2122298637611098456",
+    "author": {
+      "handle": "UO10_exhibit",
+      "name": "魚豊十周年展 UO10."
+    },
+    "via": null,
+    "text": "『チ。』が出来るまで（連載開始編）1/5｜vol.01\n\n作品の構想段階で描かれる「プロット」を公開！\nまだ形になる前の物語には、どんなアイデアが詰まっているのか？\n普段目にすることのない資料を通して、『チ。』が生まれるまでの過程や、創作の一端をご紹介します。",
+    "images": [
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HXPNqIDaAAAkgxe.jpg"
+      },
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HXPNrMdbgAA8QEz.jpg"
+      },
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HXPNsVJasAArlto.jpg"
+      },
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HXPNtbcbMAAUK8k.jpg"
+      },
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HXPNuzZaMAA_spi.jpg"
+      },
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HXPNv_3bUAAkfTr.jpg"
+      },
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HXPNw90bgAAHlqA.jpg"
+      },
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HXPNx0cbgAAsgP2.jpg"
+      }
+    ],
+    "deepDive": "#『チ。』の連載前の構想のメモです。\n[魚豊十周年展 UO10.の投稿](https://x.com/UO10_exhibit/status/2122298637611098456)へのいいねです。\n- [『チ。』の連載前の構想のメモ](https://x.com/UO10_exhibit/status/2122298637611098456)。\n  - [宇都宮ライトラインの事故](https://newsdig.tbs.co.jp/articles/-/3096486)。けが人はいませんでした。\n  - Bambu Lab A1を買った人向けの、[あると便利なもの](https://x.com/TigerK623K/status/2123057559171195239)。\n  - [資格の勉強のアプリで、週8万円になった話](https://x.com/miitara37/status/2123023037339771388)。確かめられる数字ではありません。\n  - [newmoの採用の投稿](https://x.com/newmohq/status/2122827120548491297)。\n\n画像と動画は見ていないので、投稿の文章と、まわりの情報でまとめています。",
+    "followUps": []
+  },
+  {
+    "id": "2122681344862126228",
+    "cardId": "r38_103",
+    "datetime": "2026-11-17T22:47:00+09:00",
+    "postedAt": "2026-11-17T22:20:44+09:00",
+    "source": "timeline",
+    "title": "Zoom、BBC、CNN、HSBCなど178の組織のサイトで、Optimizelyという外のサービスを通して、悪いプログラムが配られていました。",
+    "summary": "11/16にOptimizelyのアカウント登録の欠陥が悪用され、各社設定のJavaScript欄に悪いコードが書きこまれた。暗号資産の送り先すり替え、カード番号・Cookie窃取、古いiOS向けの攻撃キット。原因の技術詳細は未発表。",
+    "tweetId": "2122681344862126228",
+    "tweetIds": [
+      "2122681344862126228",
+      "2122552069035004223"
+    ],
+    "quoteTweetId": "2122552069035004223",
+    "url": "https://x.com/connect24h/status/2122681344862126228",
+    "author": {
+      "handle": "connect24h",
+      "name": "connect24h"
+    },
+    "via": null,
+    "text": "よーわからんなぁ。iOSのWebKitの脆弱性使われてWebオーバーレイか何かで入力した値が盗まれたってこと？\n\n> ・暗号資産：表示・コピーした送金先アドレスが、攻撃者のものにすり替えられる\n・カード：サイト内のフォームに入力した番号やセキュリティコードが盗まれた可能性（16日22時43分以降）\n・iPhone、iPad：古いiOSを狙う攻撃キットが、ページを開くだけで読み込まれた",
+    "images": [],
+    "deepDive": "#Zoom、BBC、CNN、HSBCなど178の組織のサイトで、Optimizelyという外のサービスを通して、悪いプログラムが配られていました。\n[connect24hさんの投稿](https://x.com/connect24h/status/2122681344862126228)で知りました。Optimizelyは、サイトのデザインのA案とB案のどちらが良いかを比べるテストなどに使う、サービスです。この事件を見つけたのは、Scott Helmeさんです（[Report URIでの報告](https://blog.report-uri.com/worlds-largest-brands-infected-with-malware-via-optimizely/)、[BleepingComputer](https://www.bleepingcomputer.com/news/security/optimizely-supply-chain-attack-infects-major-brands-sites-with-malware/)）。\n\n- **何が起きたか：** 11/16に、Optimizelyのアカウントの登録の仕組みの欠陥が、悪用されました。\n  - 犯人は、それぞれの会社のOptimizelyの設定の中の、JavaScriptを書く欄に、悪いJavaScriptを書きこみました。\n  - その悪いプログラムは、ふだん信用されているOptimizelyのプログラムといっしょに、サイトに来た人へ配られました。\n- **仕込まれていたもの：** 次のようなことをするプログラムでした（[Malwarebytes](https://www.malwarebytes.com/blog/news/2026/11/cnn-bbc-zoom-and-other-sites-served-malicious-code-in-supply-chain-attack)、[The Hacker News](https://thehackernews.com/2026/11/hijacked-optimizely-scripts-served-card.html)、日本語なら[GIGAZINE](https://gigazine.net/news/20261117-infect-malware-optimizely/)）。\n  - 暗号資産を送るときの送り先のアドレスを、犯人のアドレスにすりかえます。\n  - 入力されたクレジットカードの番号を盗みます。\n  - ブラウザに保存されるCookieや、画面の中身を盗みます。\n  - 古いiOSでは、弱点をつく道具を、まとめて読みこませます。報道では、CorunaやDarkSwordという名前が出ています。\n- **今の状況：** Optimizelyは、欠陥を直して、悪いプログラムも消したと言っています（[iTWire](https://itwire.com/business-it-news/security/optimizely-says-it-has-fixed-flaw-used-to-inject-malicious-scripts)）。でも、なぜほかの会社の設定まで書きかえられたのかという、技術的な原因は、まだ発表されていません。\n\n有名なサイトを開いただけで、ねらわれるおそれがありました。日本時間で、16日の昼から17日の朝ごろの間に、こうしたサイトで、暗号資産の送り先をコピーしたり、カードの番号を入れたりした人は、カードなどの利用の記録を確かめておくと安心です。iPhoneは、iOSを最新にしておくと、より安全です。",
+    "followUps": []
+  },
+  {
+    "id": "2122681298292822323",
+    "cardId": "r38_104",
+    "datetime": "2026-11-17T22:47:00+09:00",
+    "postedAt": "2026-11-17T22:20:33+09:00",
+    "source": "timeline",
+    "title": "ArduPilotで動くドローンに、決まった通信のメッセージを何度も送り続けるだけで、墜落させられることを、シミュレーターで再現した、という投稿です。",
+    "summary": "MAVLinkのSERIAL_CONTROL連投でメインループが止まり、ウォッチドッグが再起動してx500が落ちる。SITLでは落ちずPILSで落ちる。以前のフォーラム報告と同じ仕組みかもしれない（私の推測です）。",
+    "tweetId": "2122681298292822323",
+    "tweetIds": [
+      "2122681298292822323"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/kanetugu2020/status/2122681298292822323",
+    "author": {
+      "handle": "kanetugu2020",
+      "name": "Takashi Mori"
+    },
+    "via": null,
+    "text": "SITLでは落ちないドローンが、PILSでは落ちる。\n\n1種類のMAVLinkメッセージ(SERIAL_CONTROL)の連投でArduPilotのmain_loop停止→ウォッチドッグ発火→FCリセット→x500墜落。実機なしで箱庭Drone×Athrillが再現。\n\n[youtube.com/watch?v=PtG0mR…](https://www.youtube.com/watch?v=PtG0mRQRdDE)\n\n#drone #ardupilot #Security",
+    "images": [],
+    "deepDive": "#ArduPilotで動くドローンに、決まった通信のメッセージを何度も送り続けるだけで、墜落させられることを、シミュレーターで再現した、という投稿です。\n[kanetugu2020さんの投稿](https://x.com/kanetugu2020/status/2122681298292822323)で知りました。ArduPilotは、ドローンを動かすためのソフトです。MAVLinkは、ドローンと、地上の機械がやりとりするときの、通信の決まりです。投稿には[YouTubeの動画](https://www.youtube.com/watch?v=PtG0mRQRdDE)もついていますが、私は動画は見ておらず、投稿の文章をもとにまとめています。\n\n- **何をしたか：** MAVLinkの「SERIAL_CONTROL」という種類のメッセージを、続けてたくさん送ったそうです。\n  - すると、ArduPilotの中で、仕事をくり返し進めるいちばん大事な部分（メインループ）が止まります。\n  - 止まったことに気づいた見張りの仕組み（ウォッチドッグ）が、ドローンを動かす部品（フライトコントローラー）を、再起動させます。\n  - その結果、x500という機体が落ちる、というものです。\n- **おもしろいところ：**\n  - ソフトだけで動かすシミュレーション（SITL）では、落ちませんでした。\n  - 本物の制御の基板を使う形（PILS）にして、はじめて落ちます。\n  - それを、実際の機体を使わずに、「箱庭」というシミュレーターと、「Athrill」というCPUのエミュレーターの組み合わせで、再現しています。\n- **前からあった報告：** ArduPilotのフォーラムでは、以前に、似た報告がありました（[ArduPilot Discourse](https://discuss.ardupilot.org/t/on-demand-main-loop-stuck-with-mavlink-serial-control-packet/115180)）。SERIAL_CONTROLを、待ち時間を長くする設定で送ると、メインループが待たされて止まる（main_loop_stuck）、というものです。今回もこれと同じ仕組みかもしれませんが、まだ確かめられていません（私の推測です）。\n\n通信の決まりに、相手が本物かを確かめる仕組みがないと、メッセージを送れる人なら誰でも、機体を落とせてしまうおそれがあります。これは、セキュリティの話でもあります。また、ソフトだけのシミュレーションでは出ず、本物に近い形で動かしたときにだけ出るバグを、どう見つけるかという点でも、参考になる例です。",
+    "followUps": []
+  },
+  {
     "id": "2122665522068398204",
     "cardId": "r38_102",
     "datetime": "2026-11-17T21:54:00+09:00",
@@ -45,7 +1097,36 @@
     "text": "[news.web.nhk/newsweb/na/nd-…](https://news.web.nhk/newsweb/na/nd-20261117de77389)",
     "images": [],
     "deepDive": "#プレイドの「KARTE」が不正にアクセスされた事件で、被害が広がっています。ジンズは約1,829万件、アインのグループでは最大1,258万件です。\nKARTEは、会社がお客さまの動きを分析して、宣伝に役立てるための道具です。GOROmanさんが共有した[ジンズの件のNHKの投稿](https://x.com/GOROman/status/2122657816582541380)と、[アインの件の47NEWSの投稿](https://x.com/GOROman/status/2122652273558061280)で知りました。\n\n**何が起きたか：** 11/13の明け方に、プレイドのサーバーの弱点がねらわれました（[プレイドの発表（PDF）](https://www.nikkei.com/markets/ir/irftp/data/tdnr/tdnetg3/20261116/g8guf1/140120261116581661.pdf)）。\n- **盗まれたもの：** 犯人は、システムやデータベースにつなぐためのログインの情報を盗みました。\n- **やったこと：** そのログインの情報を使って、データを外に持ち出しました。さらに、プレイドのアカウントを乗っ取って、KARTEを管理する画面にも入っていました。\n- **プレイドの対応：** 8:59に気づいて、15:23ごろまでに、それ以上広がらないようにしました。KARTEは、すべてのサービスを止めたままで、いつ再開するかは決まっていません。\n\n**もれたもの（プレイドの発表）：**\n- **メールアドレス：** KARTEのアカウントとして登録されていたメールアドレスが、79,249件もれました。\n- **秘密の鍵：** KARTEをほかのサービスとつなぐための秘密の鍵（シークレットキーやアクセストークン）がもれました。\n- **会員のデータ：** KARTEを使う会社が、KARTEに取りこんでいた会員のデータの一部がもれました。\n\n**今日分かった、大きな被害：**\n- **ジンズ：** 会員の約1,829万アカウント分です（[ジンズの発表（PDF）](https://japanir.jp/wp-content/uploads/2026/11/3046-20261117-01.pdf)、[NHK](https://news.web.nhk/newsweb/na/nd-20261117de77389)）。会員ID、メールアドレス、名字、生まれた日、性別、郵便番号、都道府県がもれました。\n- **アインのグループ：** 合わせて最大1,258万件です（[アインの発表（PDF）](https://www.ainj.co.jp/corporate/assets/upload/news/20261117newsrelease.pdf)）。\n  - アインズ&トルペとAYURAで、最大約260万件です。\n  - Francfrancで、会員が最大約598万件、ネットでの買い物の記録に関わるものが最大約400万件です。\n  - 合計の1,258万件は、項目ごとの最大の数を足した数字です。\n- **ほかの会社：** 四国電力、mineo、ワールド、モリサワなどにも、影響が広がっています（[ITmedia](https://www.itmedia.co.jp/news/article/2611/17/2000003257/)、[影響を受けた会社のまとめ](https://rocket-boys.co.jp/security-measures-lab/karte_unauthorized_access_affected_companies_roundup_2026/)）。どの会社も、パスワードとクレジットカードの情報は含まれていないとしています。\n\nいちばんこわいのは、KARTEとほかのサービスをつなぐ秘密の鍵が盗まれたことです。KARTEを使う会社がそれぞれその鍵を使えなくしないかぎり、KARTEの先につながっている、別のサービスにまで入りこまれるおそれがあります。プレイドも、「思ってもいないデータの書きこみや、漏えいが起こりうる」として、使っている会社に、鍵を急いで使えなくするよう求めています。\n\n今日は、富岳ではSSHの秘密鍵、Notion AIではAPIキーと、ほかの場所につなぐための鍵が、次の被害の入口になる事件が続いています。KARTEもそれと同じ形です。ジンズやFrancfrancの会員の人は、名字と生まれた日を知っている、本物らしいにせのメール（フィッシング）に、注意が必要です。",
-    "followUps": []
+    "followUps": [
+      {
+        "datetime": "2026-11-17T22:47:00+09:00",
+        "clock": "22:47",
+        "title": "前にお伝えしたので、新しい点だけ書きます。",
+        "text": "[connect24hさんの投稿](https://x.com/connect24h/status/2122687258730131637)で知りました。\n- **ジンズの件数：** 最大1,829万件というのは、会員の総数です。つまり、もれたかもしれない数の上限で、本当にもれた数は、まだ調べている途中です（[ジンズの発表](https://www.jins.com/jp/topics_detail.html?info_id=1284)、[日経](https://www.nikkei.com/article/DGXZQOCC17A1V0X11C26A1000000/)）。\n- **ほかの会社：** 影響を受けた会社として、阪急阪神ホテルズの名前も、新しく報じられています。",
+        "tweetIds": [
+          "2122687258730131637"
+        ]
+      },
+      {
+        "datetime": "2026-11-21T09:52:00+09:00",
+        "clock": "09:52",
+        "title": "KARTEの続報：プレイドの調べが終わり、影響を受けた会社は、重なりも数えると2,220社になりました。",
+        "text": "プレイドが11/20に出した[調べの結果（PDF）](https://www.nikkei.com/markets/ir/irftp/data/tdnr/tdnetg3/20261120/g8nbim/140120261119583758.pdf)を、GOROmanさんがリポストしていました（[1つ目](https://x.com/GOROman/status/2123924452199280648)、[2つ目](https://x.com/GOROman/status/2123916002492825712)）。\n\n前にお伝えしたことに、次の点が新しく加わりました。\n- **もれた情報の種類と会社の数：** 次の4種類です。2つ目と3つ目は、今回新しく分かったものです。\n  - 会社がKARTEにつないで渡していたデータは、570社分です。\n  - サイトの中でお客さまがどう動いたかを分析したデータは、487社分です。\n  - 一時的に保存していたデータ（キャッシュ）は、最大409社分です。\n  - KARTEとほかのサービスをつなぐための鍵（トークン）は、754社分です。\n- **入られ方：** データを取り出すために公開していた経路の、内部の処理に弱点がありました。犯人はそこから、データと、ログインのための情報を盗みました。そのログインの情報を使って、KARTEを管理する画面にも入っています。\n- **消すはずのデータも残っていた：** 契約が終わった会社の、本当は消すはずだったデータも残っていて、それももれました。プレイドは、11/16の発表を直しています。\n- **もれた連絡先：** プレイドが仕事で受け取っていた連絡先も、新しく45,816件もれたと分かりました。\n- **再開とお金：** 仕組みを作り直すので、段階的にサービスを再開する目標は、2027年1月中旬です。プレイドの今年の利益は、6億円の黒字の予想から、20億円の赤字の見こみに変わりました（[日経](https://www.nikkei.com/article/DGXZQOUC204SK0Q6A121C2000000/)）。\n- **ZOZO：** ZOZOTOWNの会員、約1,518万人の会員ID、年齢、性別、郵便番号がもれました（[ZOZOの発表](https://corp.zozo.com/information/20261120-482917/)）。そのうち約4.7万人は、メールアドレスと電話番号ももれています。WEARの約1,393万人も、対象です。\n- **Jリーグ（いいねから）：** Jリーグのチケットのサイトなどで、2,383,073件がもれました（[Jリーグの発表](https://www.jleague.jp/news/article/35384/)）。生まれた日、性別、住んでいる市区町村などです。名前、パスワード、カードの情報は、KARTEに渡していなかったので、もれていません。\n- **「1億件をこえた」という数字：** これは、日経が、各社が発表した件数を足した数字です。プレイド自身は、この数字を出していません。各社のもれた人には重なりもあるので、実際の人数はもっと少ないはずです（私の推測です）。",
+        "tweetIds": [
+          "2123924452199280648",
+          "2123916002492825712"
+        ]
+      },
+      {
+        "datetime": "2026-11-21T10:50:00+09:00",
+        "clock": "10:50",
+        "title": "KARTEの続報です。三井住友銀行が最大約1,400万件、丸井グループ（エポスカード）が約1,733万件のもれを発表しました。",
+        "text": "[connect24hさんの投稿](https://x.com/connect24h/status/2123795636093075562)で知りました。前にお伝えした、2,220社の件の続きです。\n- **三井住友銀行：** もれたのは、生まれた日、年齢の幅、性別、電話番号を登録しているかどうか、お知らせを出すかどうかの印です。件数は、最大約1,400万件です。名前、口座の番号、パスワードは含まれていません。銀行は、個人は特定できないとしています（[三井住友銀行の発表（PDF）](https://www.smbc.co.jp/news/pdf/j20261120_01.pdf)）。\n- **丸井グループ：** エポスカードの、お客さまを管理する番号などが、合わせて約1,733万件です。そのうち6万件は、名前、年収、キャッシングの上限額まで、もれたおそれがあります（[時事通信](https://www.jiji.com/jc/article?g=eco&k=2026112001197)）。\n\nお知らせを出すために使っていた、外のサービスに、銀行のお客さまのデータが入っていたことが分かります。この件に乗じた、にせの連絡には、注意が必要です。",
+        "tweetIds": [
+          "2123795636093075562"
+        ]
+      }
+    ]
   },
   {
     "id": "2122655649993744712",
@@ -127,6 +1208,15 @@
         "tweetIds": [
           "2122674087839584428",
           "2122673521314980208"
+        ]
+      },
+      {
+        "datetime": "2026-11-17T22:47:00+09:00",
+        "clock": "22:47",
+        "title": "前にお伝えしたので、新しい点だけ書きます。",
+        "text": "次の内容の投稿が、出回っています（[引用されている投稿](https://x.com/connect24h/status/2122677853032796340)）。\n- 広報に聞いたところ、こう答えたそうです。ふだん、テスト用の環境には、本物ではないデータを使っていた。でも、システムを新しくするときに、本物のデータで確かめている途中で入られた。\n- ただし、これは楽天証券が正式に発表したことではありません。",
+        "tweetIds": [
+          "2122677853032796340"
         ]
       }
     ]
@@ -745,6 +1835,15 @@
         "text": "[kannaさんの投稿](https://x.com/QPS_5595/status/2122093190891409409)へのいいねです（[PR TIMES](https://prtimes.jp/main/html/rd/p/000000078.000137033.html)）。\n- **KDDIとの提携：** 11/6に、KDDIと手を組みました。KDDIは、通信、AIの計算に使う設備、離れた場所から車を見守る仕組み、場所を正確に測る技術を出します。\n- **集めたお金：** 208億円の出資は、KDDIが中心になりました。これまでに集めたお金は、合わせて407億円です。\n- **規模と目標：** 社員は2,800人以上です。2028年に、堺市と大阪市の決まったエリアで事業を始めて、将来は自動運転のタクシーを1,000台ほど走らせるのが目標です。\n- **今の段階：** 自動運転のAIは、国のAIの開発を支える事業（GENIAC）に選ばれています。今の試験走行は、安全のために運転手が乗る段階です。",
         "tweetIds": [
           "2122093190891409409"
+        ]
+      },
+      {
+        "datetime": "2026-11-18T09:52:00+09:00",
+        "clock": "09:52",
+        "title": "newmoの採用の投稿です。",
+        "text": "[newmoの採用の投稿](https://x.com/newmohq/status/2122827120548491297)へのいいねです。",
+        "tweetIds": [
+          "2122827120548491297"
         ]
       }
     ]
@@ -3748,6 +4847,15 @@
         "tweetIds": [
           "2121780432039710720"
         ]
+      },
+      {
+        "datetime": "2026-11-21T11:53:00+09:00",
+        "clock": "11:53",
+        "title": "ARTEXは、自分のサーバーで動かす、自動の侵入テスト用のAIです。見つけた弱点に、「証拠」が残るのが特徴です。",
+        "text": "[GitHub Projects Communityの投稿](https://x.com/GithubProjects/status/2123972021101142344)で知りました。「今週、よく見返されたオープンソースのソフト」の1つとして、紹介されていました。ライセンスは AGPL-3.0 です。紹介されているのは、[BaaRai/ARTEX](https://github.com/BaaRai/ARTEX)です。もともとは中国語の [Autumn-27/ARTEX](https://github.com/Autumn-27/ARTEX) で、それを英語に訳したフォークです（[紹介の記事](https://osp.fyi/artex)）。前に、emp3r0rが使うNormaの話のときに、名前が出ていたARTEXそのものです。\n\n- **証拠が残るしくみ：** AIの診断役は、ない弱点を、自信ありげに報告することがあります。ARTEXは、通信を記録するプロキシ（最初の設定では `127.0.0.1:8788`）と、ブラウザの拡張機能で、実際のHTTPのリクエストとレスポンスを保存します。そして、見つけた問題や、もう一度試した結果を、そのやりとりと結びつけます。つまり、証拠は、モデルが書いた要約ではなく、実際の通信そのものです（[しくみの説明](https://www.artex.sh/how-it-works)）。\n- **2つの図で記録します：** 1つは、「対象に何があるか」を表す図（アセットグラフ）です。もう1つは、「何を試して、何が出て、なぜそうしたか」を表す図（探索グラフ）です。この2つをつないでいます。計画役が目標を細かい作業に分け、作業役が実際のツールを動かし、結果を書き戻す、という流れをくり返します。\n- **自動で動くぶん、ブレーキが多いです：** 人が承認する関門、実行してよいコマンドのルール、診断してよい範囲と禁止する行き先の指定、トークンの数や回数の上限、対象への負担を抑える仕組みがあります。さらに、ツールの出力を通した、プロンプトインジェクションへの対策も入っています。出力を「データ」として囲って扱う、という方法です。\n- **構成：** Goのプログラム1つに、Next.jsの画面が組みこまれていて、データベースはPostgreSQLです。使うAIのモデルは、Anthropicか、OpenAIと互換のAPIか、自分の場所で動かすOllamaから選べます。`docker compose up` で立ち上がります。\n\n攻撃の道具という、いちばん危ない使い方で、承認、範囲の制限、予算、インジェクションへの対策、あとから確かめられる記録を、そろえています。エージェントの安全な設計の見本として、読む価値があります。手元で試すなら、自分の管理下にある対象だけに使ってください。許可のない診断は、違法になり得ます。AGPLなので、会社の中でサービスとして出す場合は、ソースコードを公開する義務に、注意が必要です。なお、実際にどれくらい正確に見つけられるかは、検証のデータを確かめられていないので、今のところは分かりません（私の推測です）。",
+        "tweetIds": [
+          "2123972021101142344"
+        ]
       }
     ]
   },
@@ -6052,6 +7160,15 @@
         "text": "[からあげさんの投稿](https://x.com/karaage0703/status/2120713202254409954)によると、自分のポッドキャスト196回「Human out of the Loopへの挑戦」で、自分の代わりに働くAIについて話した回です。もとになったのは、kawasyさんが出演した[「趣味でOSSをやっている者だ」#107](https://oss4.fun/episode/107/)です。競技当日の入力0回・負荷試験86回などの経緯は、以前お伝えした通りです。",
         "tweetIds": [
           "2120713202254409954"
+        ]
+      },
+      {
+        "datetime": "2026-11-19T09:52:00+09:00",
+        "clock": "09:52",
+        "title": "前にお伝えした準備編の続きで、新しい点だけ書きます。",
+        "text": "[kawasyさんの投稿](https://x.com/kawasy/status/2123217033957642409)へのいいねです。kazuphさんがやり直して確かめた結果も、まだ途中です。",
+        "tweetIds": [
+          "2123217033957642409"
         ]
       }
     ],
@@ -12001,7 +13118,17 @@
       }
     ],
     "deepDive": "#指輪に話しかけて、複数のAIに仕事を振り分ける使い方\n[taishiyadeさんのポスト](https://x.com/taishiyade/status/2118345004750098782)\n\n指輪型の録音デバイス[Pebble Index 01](https://repebble.com/index01)で思いついたことをすぐGrok Botに送り、実装はOpus、パソコン操作はCodex、調べものはMuseと、役割を分けて動かしているそうです。音声は文字にしてから、Cloudflare Workerという小さなサーバーを経由してGrok Botに届けています。指輪の[通知の形式](https://developer.repebble.com/index-01/webhooks/)はGrok Botが受け取れる形とは違うので、間に変換役を挟んでいます。AIができることが増えて、承認待ちのタスクがどんどんたまるので、人とAIが一緒に使うToDoアプリ「AgenTodo」も自作中だそうです。",
-    "followUps": [],
+    "followUps": [
+      {
+        "datetime": "2026-11-19T09:52:00+09:00",
+        "clock": "09:52",
+        "title": "物忘れ対策に「Pebble Index 01」（ボタンとマイクだけの指輪）がおすすめ、という話です。",
+        "text": "[Taishiさんの投稿](https://x.com/taishiyade/status/2123213244856942710)へのいいねです。ボタンとマイクだけの、指輪の形の道具で、75ドルです。押している間だけ録音して、スマホの中で文字にします。MCPに、音声のメモを送ることもできます。",
+        "tweetIds": [
+          "2123213244856942710"
+        ]
+      }
+    ],
     "link": "https://repebble.com/index01"
   },
   {
@@ -19195,7 +20322,17 @@
       }
     ],
     "deepDive": "[公式ページ](https://gadgets.muse.ai/home-link)、[Metaのガイド](https://www.meta.com/help/superintelligence/1645260456993247/)\n\nGOROmanさんが「欲しいけど日本では買えない」とつぶやいていた機器です。35×42mmほどのUSB-C機器で、中にはWi-Fi 6に対応したESP32-C5というチップが入っています。これを家に置くと、クラウドで動くMuseが、家の中の機器を直接操作できるようになります。コミュニティが作った追加機能を入れれば、Philips Hue、Sonos、Apple TVなどの操作や、プリンターでの印刷もできるそうです。今のところ配られているのは米国のMuse有料会員だけで、1人1台、先着順です。\n\n面白いのは、元になるSDKが[GitHub](https://github.com/facebookincubator/muse-gadget-sdk/blob/main/esp32/README.md)で公開されていることです。ESP32の開発ボードやM5Stackに自分で書き込めば、日本でも同じことができるかもしれません。実際に、[M5Stackで自作した人](https://x.com/AirpocketRobot/status/2114352348495814668)や、[Home Assistant経由で家電をつないだ人](https://x.com/masato_ai_log/status/2113795365862551900)も出てきています。ただ、技適の扱いや、米国の外でMuseのアプリが使えるかどうかは、まだ分かっていません。\n\nこれは、クラウドのエージェントがいつでも家のネットワークに入れる入口を置く、ということでもあります。SDKの説明書には、次の注意が書かれています。\n- 自作した機器を登録するときは、本物かどうかの確認が行われません。通信の途中に割り込まれる攻撃も防げないので、信頼できるネットワークで設定してください。\n- 追加機能はコミュニティが作ったもので、動かなくなったり中身が変わったりすることがあります。防犯など、安全に関わる用途には使わないでください。\n\n使うなら、ゲスト用のWi-Fiに分けるなどして、エージェントに触らせる機器を絞っておくのが無難だと思います（私の推測です）。",
-    "followUps": [],
+    "followUps": [
+      {
+        "datetime": "2026-11-21T09:52:00+09:00",
+        "clock": "09:52",
+        "title": "Metaのエージェント「Muse」の家電をつなぐ機器「Home Link」は、日本では手に入りません。でも、SDKがオープンソース（Apache-2.0）なので、Raspberry Piで自作する、という計画です。",
+        "text": "[miinさんの投稿](https://x.com/DropMiin/status/2123624582188093805)で知りました（タイムラインから）。[SDK](https://github.com/facebookincubator/muse-gadget-sdk)が公開されています。Linux用は、入れたアカウントと同じ権限で、コマンドを動かせます。",
+        "tweetIds": [
+          "2123624582188093805"
+        ]
+      }
+    ],
     "link": "https://gadgets.muse.ai/home-link"
   },
   {

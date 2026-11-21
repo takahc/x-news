@@ -1,4 +1,256 @@
 id,datetime,source,author,url,text,summary
+2123975963583328656,2026-11-21T12:50:00+09:00,timeline,connect24h,https://x.com/connect24h/status/2123975963583328656,"業務チャットを開けば、表示された画面も保護の対象になる。
+Signalは、iOS 27と、AIアシスタントによる画面取得を検知できるAndroid環境で、OS標準AIの画面取得を制限する方針を示した。macOSでは対策を実装できないとしている。同じアプリでも、OSが用意する仕組みで保護の範囲が変わる。
+業務スマホの画面取得ポリシーは、OS標準AIにも制限が効くかまでが点検範囲だ。
+
+[signal.org/blog/protectin…](https://signal.org/blog/protecting-your-privacy/)",iOS 27以降・Signal 8.37以降は Block Siri AI が最初からオン。Android 8.35.1以降は初回に自動でオン。macOSは除外設定を案内。Meredith Whittakerさんは不完全だと認めている。
+2123975799720345660,2026-11-21T12:50:00+09:00,timeline,connect24h,https://x.com/connect24h/status/2123975799720345660,"モデルの手前で拒否された入力も、送信先には届いている。
+HD Mooreは、AIサービスに送った200万件弱のリクエストに追跡用の秘密情報を仕込んだ。同氏が示した事例には、モデル実行前に拒否されたリクエストに含まれる実験用AWSキーの流出もある。
+追跡の仕掛けは、同じキーを二度送らないこと。どのリクエストに入れたキーが外で使われたかをたどれる。
+社内AIのデータ管理では、モデルに届く手前で誰が入力を受け取るかまでが確認範囲になる。
+
+[arstechnica.com/security/2026/…](https://arstechnica.com/security/2026/11/a-leaky-ai-supply-chain-is-exposing-secret-user-data-at-an-alarming-rate/)",HD Mooreさん（Dragos）が2026年7〜11月に実施。少なくとも3社が侵入され、ZDR付きも含む。鍵は数時間以内に試されたことも。転売業者経由でも発生。どの3社かはほとんど非公表。
+2123975539816013842,2026-11-21T12:50:00+09:00,timeline,connect24h,https://x.com/connect24h/status/2123975539816013842,"ほんまかいな。そーかいな。
+Leanが検証するのは、コードに書かれた命題の証明だ。
+Anthropicの数学者Levent Alpögeは、Claudeを使った研究で一般化リーマン予想の証明を得たと主張。公開された証明コードについては、MITの研究者がLeanでの検証通過を報告した。数学界での精査は続いている。
+AIが書いたコードのレビューにも通じる。チェックが通ったら、次に見るのは何をチェックしたか。今回なら、Lean上の定理がどんな仮定を置いているかが気になる。
+検証結果の重みは、コード上の命題が元の予想とどこまで一致するかで決まる。
+
+[alpo.ge/remark.pdf](https://alpo.ge/remark.pdf)","11/20にLevent Alpögeさんが4ページのメモとLeanの証明だけを出した。ファイルは175,187個・約1,740万行。MITの確認では主な定理は標準の3公理に依存。人が理解するには時間がかかる（私の推測です）。"
+2123956401022378140,2026-11-21T10:50:00+09:00,timeline,connect24h,https://x.com/connect24h/status/2123956401022378140,"落ち目のZacalerとしてはありかも。
+CrowdStrikeがZscalerを買収協議中。これはセキュリティ業界の勢力図が変わる話。
+
+BloombergとReutersが報道。両社の時価総額合計は約2,650億ドル（約40兆円規模）。
+
+実現すれば、
+
+・CrowdStrikeのEDR/XDR
+・ZscalerのSSE/ZTNA
+・エンドポイントと通信・アクセス制御の統合
+・AIによる検知から封じ込めまでの自動化
+
+が一気に進む可能性。
+
+EDRを売る時代から、セキュリティ基盤を丸ごと押さえる時代へ。
+
+Palo Alto Networksとのプラットフォーム覇権争いが、さらに激しくなる。
+
+※現時点では買収協議の報道であり、正式合意ではない。
+
+[bloomberg.com/news/articles/…](https://www.bloomberg.com/news/articles/2026-11-20/crowdstrike-is-in-talks-to-buy-cybersecurity-firm-zscaler)",Bloombergが11/20に関係者の話として報道。まだ協議中で値段は非公表。時間外でZscalerは18%高、CrowdStrikeは8%以上安。まとまるかは分からない（私の推測です）。
+2123949121702953398,2026-11-21T10:50:00+09:00,timeline,connect24h,https://x.com/connect24h/status/2123949121702953398,"最近の窓の杜、脆弱性チョイスが完全にCSIRT目線ですが。
+
+> スクリプト言語「PHP」で昨晩実施されたセキュリティアップデートでは、20年以上も見逃されていた意外な欠陥が修正されていたとのこと。たとえばPHPコードの「file_get_contents()」などに渡すURLを「httpS://……」「HTTPS://……」などと書いてしまうと、暗号化されずに平文で送られてしまうのだそうです。",CVE-2026-128064、深刻さHigh。アプリ渡しはPHP 5.2.0（2006年）から、リダイレクトは4.3.0（2002年）から。8.2.36 / 8.3.37 / 8.4.28 / 8.5.13 / 8.6.0で修正。
+2123862344422088794,2026-11-21T10:50:00+09:00,timeline,OpenAI,https://x.com/OpenAI/status/2123862344422088794,"Distillation can reproduce powerful AI capabilities without the safeguards built around them.
+
+We’re sharing new research on our work to combat distillation of our models, how these capabilities transfer, and how we detect and disrupt coordinated attempts.
+
+These findings are helping us sharpen our defenses and support safeguards across the industry.
+
+[openai.com/index/combatti…](https://openai.com/index/combatting-adversarial-distillation/)",11/20公式ブログ。GPT-6.2 Astra対GPT-6 Astra。断り方の学習、入出力の分類、ツール引数の監視、推論と会話の結び付けなど。既存のAstra噂 r38_48 とは別件。
+2123616041893069067,2026-11-21T09:52:00+09:00,likes,fujitech_ai,https://x.com/fujitech_ai/status/2123616041893069067,"日本のフルリモート会社をまとめたリポジトリ。これは素晴らしいまとめ。
+ちょっと古い情報も混じっているのと、スタートアップは少なめかな？
+松尾研、松尾研スタートアップは把握してる限りほぼ全てフルリモートなのでAIエンジニアであればリモートしやすいよね〜",GitHubの remote-in-japan リポジトリ。情報が古いこともある。
+2123587762985316818,2026-11-21T09:52:00+09:00,likes,industryJapan,https://x.com/industryJapan/status/2123587762985316818,"人型ロボの操縦士、募集中。時給5,100円 [gizmodo.jp/article/figure…](https://www.gizmodo.jp/article/figure-humanoid-robot-pilot-job/)",人が体を動かしてロボットを動かし、その記録をAIの学習に使う。時給32ドル。
+2123300997409988714,2026-11-21T09:52:00+09:00,likes,yodobashi_ikbkr,https://x.com/yodobashi_ikbkr/status/2123300997409988714,"＼iPhoneバッテリーチェックイベント開催📱／
+
+バッテリー容量が90%未満の方には
+Appleノベルティをプレゼント🎁
+
+最新のiPhoneのお得なご購入方法もご紹介❗️
+
+今週末はぜひヨドバシ池袋に🍎
+
+🗓️11/21(土）22（日）
+🕐13:00～18:00
+📍ヨドバシ池袋 1階Appleコーナー
+🏬[yodobashi.com/ec/store/0016/](https://www.yodobashi.com/ec/store/0016/)",11/21と11/22の13時から18時。電池容量が90%未満のiPhoneが対象。
+2123294656092057712,2026-11-21T09:52:00+09:00,likes,mmskats,https://x.com/mmskats/status/2123294656092057712,"ええええ
+M365 Copilot ライセンスで GitHub Copilotがつかえる！！ｗ
+
+  #GitHubCopilot  　#msignite　#msigniteJP",会社がFrontierに入り、使った分だけ払う形の場合に限る。M365 CopilotのライセンスにGitHub Copilotが丸ごとついてくるわけではない。
+2123291999231172991,2026-11-21T09:52:00+09:00,likes,__cp20__,https://x.com/__cp20__/status/2123291999231172991,時代は Enabling です,人が1行ずつ見るのはむずかしくなったので、テストなどの仕組みで品質を守る、という話。既存のLayerX評価 r38_72 とは別件。
+2123286552537342427,2026-11-21T09:52:00+09:00,likes,protoduct_ai,https://x.com/protoduct_ai/status/2123286552537342427,"iOSアプリ作ってる人、これ見て
+初回起動の演出が一気に化ける
+
+Liquid Glassのイントロを出せる
+SwiftUIの部品、GlassIntroKit
+
+・演出は8種類、順番は自由
+・modifierを1つ足すだけ
+・スキップもVoiceOverも対応
+
+無料、iOS 26以上で動く",外とは通信しない。SwiftUI向けの無料ライブラリ。
+2123248965269463433,2026-11-21T09:52:00+09:00,likes,gihyosd,https://x.com/gihyosd/status/2123248965269463433,"昨日から『Software Design 2026年12月号』が発売になっています。書店で実物をご覧いただくのが一番よいのですが、書店に立ち寄れない方のために、目次ページを添付しておきます。
+
+今号も、“ITエンジニア心をくすぐる記事”がたくさん載っています。連載の一つ一つのタイトルまで、じっくり見てみてください。",1つ目はメモリ不足でプログラムが止められる仕組みやTCPのタイムアウトなど。2つ目はAIが作ったなんとなく変な画面をルールで整える方法。
+2123228391587623240,2026-11-21T09:52:00+09:00,likes,BambulabJapan,https://x.com/BambulabJapan/status/2123228391587623240,中国で急拡大“プリンター農場”　3Dプリンター並べ一斉稼働　APEC深センで注目（HOME広島ホームテレビ） [home-tv.co.jp/news/content/?…](https://www.home-tv.co.jp/news/content/?news_id=000548290),3Dプリンターを約3万台持っている会社もある、という報道。
+2123223376940691814,2026-11-21T09:52:00+09:00,likes,Kesin11,https://x.com/Kesin11/status/2123223376940691814,skillsやMCPを評価するためのGitHub Copilot Evalsがプレビューで登場。デモ見た感じだと評価側もプロンプトで入力する方式でお手軽っぽい。Copilotが使える各ツールでプラグイン形式でインストールして利用可能 / [htn.to/49eanC9MEk](https://htn.to/49eanC9MEk),パブリックプレビュー。Vallyでツール呼び出しやトークンを記録し、合格・速さ・費用まで点数にする。直したあとに同じテストを再実行できる。いいね2件。
+2123211461690609922,2026-11-21T09:52:00+09:00,likes,kenn,https://x.com/kenn/status/2123211461690609922,"もはや意味がわからない
+
+Geminiいきなり面で制圧してくるの凄すぎん？",100万トークンあたり入力3ドル、出力15ドル。一度に読める量は100万トークン。Google発表では間接プロンプトインジェクション成功率が最深設定で0.0%。既存のGemini 4 Carbon r24_9 とは別のモデル。
+2123210668577026221,2026-11-21T09:52:00+09:00,likes,ipusiron,https://x.com/ipusiron/status/2123210668577026221,セキュリティコードはやばい😇,10/21 21時〜11/18 11時に決済画面で入力されたカード情報。六花亭は保存していなかったが、画面のプログラムが書きかえられて入力とたんに外へ送られたおそれ。
+2123194574512504837,2026-11-21T09:52:00+09:00,likes,impress_watch,https://x.com/impress_watch/status/2123194574512504837,ChatGPTで毎月もらえる100ドル分以上のAPIクレジットを使い切ろう! [watch.impress.co.jp/docs/topic/215…](https://www.watch.impress.co.jp/docs/topic/2155622.html),公式は「APIキーを通してCodexを使う分はこの特典の対象外」。記事の説明とはくいちがって見える。
+2123189717193883784,2026-11-21T09:52:00+09:00,likes,konohalrt,https://x.com/konohalrt/status/2123189717193883784,"事故ってちゃったライトライン、平石まで移動されて全員下車になりました。
+うわぁバッコリいってるよー😱💦",乗用車との衝突。けが人はなし。既存の新プロジェクトX再放送案内 r38_41 とは別件。
+2123149870571938120,2026-11-21T09:52:00+09:00,likes,Best91hanza,https://x.com/Best91hanza/status/2123149870571938120,"社内で「1hでこんなアプリ作れました！」と騒いでいる人のアプリをOWASP TOP10とMitre att&ckを参照させてセキュリティチェックしてみたらめちゃめちゃ脆弱性あってワロタ。
+
+一番やべーのはHTMLに機密情報を平文で書いてあったことw
+
+やっぱ勉強せなアカンです！
+
+#生成AIセキュア1st
+#SUNABACO",HTMLは誰でも見られるので、APIキーやパスワードを書いておくと見えてしまう、という指摘。
+2123132578425159819,2026-11-21T09:52:00+09:00,likes,code,https://x.com/code/status/2123132578425159819,"🚀 The latest VS Code release makes it easier to plan your agent workflows. Save requests as drafts, schedule follow-ups for later, and explore new ways to visualize results with charts and mockups.
+
+🧵 Here's what's new:",assisted permissions。下書きや予約送信も追加。許可を決めるのもAIなのですり抜けが気になる（私の推測です）。
+2123084818909220867,2026-11-21T09:52:00+09:00,likes,HolyGrail,https://x.com/HolyGrail/status/2123084818909220867,"status-board っていう claude mods 作った
+
+[github.com/HolyGrail/clau…](https://github.com/HolyGrail/claude-mods/blob/main/plugins/status-board/README.md)
+
+スクショにもあるように、現在のセッションに対して
+
+・目的
+・現在地
+・決まったこと
+・未解決、判断待ち
+・次の一手
+
+を要約して表示して認知負荷の軽減を目指しています",PRへのリンクはモデルに書かせず、セッションの記録から機能のほうでつける。モデルがURLをでっちあげるかもしれないため。
+2123057559171195239,2026-11-21T09:52:00+09:00,likes,TigerK623K,https://x.com/TigerK623K/status/2123057559171195239,"Bambu Lab A1 A1mini が届き楽しんでいる頃だと思いますので
+これから買っておくと超便利な物ザックリ一覧
+
+基本Amaz◯nで購入可能なので自分にあったものを探しましょう!
+必須と書いてあるもの以外はなくてもいいし、自分で印刷しても大丈夫です💪
+
+添付写真は個人的激推しアイテム",A1 / A1 mini 購入者向けの周辺の紹介。既存の2台向かい合わせ印刷 r38_78 とは別件。
+2123055373737148722,2026-11-21T09:52:00+09:00,likes,robiartec,https://x.com/robiartec/status/2123055373737148722,"Esto es una locura. Google acaba de sacar un curso gratis de 2 horas sobre Harness engineering completo, del primer paso al ultimo:
+
+0:29 - Harness engineering desde cero
+11:08 - tu primer agente, bien construido
+28:08 - Eval engineering con un agente “Chief of Staff”
+1:00:13 - Loop engineering
+1:23:19 - un sistema de grafos que se mejora solo y nunca se detiene
+
+He visto cursos de 500$ que no tienen el valor que tiene este video",Googleが公式に出しているのはCodelabのほう。紹介投稿の出典は未確認。
+2123053877901861320,2026-11-21T09:52:00+09:00,likes,hiroponlive,https://x.com/hiroponlive/status/2123053877901861320,"DroidKaigiで映像周りを担当しているhiroponです。
+
+KotlinFest 2026では、全セッションのアーカイブ動画をイベント当日中に公開することができました！
+
+そのスピード公開を実現した技術や仕組みをご紹介します。
+#KotlinFest
+[zenn.dev/hiro_pon/artic…](https://zenn.dev/hiro_pon/articles/0fc7f0c9ed88a2)",機材の映像切りかえをMac上のGStreamerに置きかえ、SRTで送り、仕上げはFFmpegのスクリプトで自動処理。
+2123029376086499354,2026-11-21T09:52:00+09:00,likes,Noxaiya,https://x.com/Noxaiya/status/2123029376086499354,"[corp.newspicks.com/info/20261118](https://corp.newspicks.com/info/20261118)
+これヤバすぎ
+回避のしようがない","ログイン前に悪用できるSQLインジェクション（CVSS 10.0）。8/10攻撃開始、8/12修正の前日にデータを取られ、犯人が作った管理者APIキーが残り9/28まで調査が続いた。カード下3〜4桁が361,598件。"
+2123023037339771388,2026-11-21T09:52:00+09:00,likes,miitara37,https://x.com/miitara37/status/2123023037339771388,ワイの好きな上司っち、趣味の資格対策アプリ作りが覚醒して、大手企業との契約が結ばれ、今何もしなくても週8万円勝手に入ってくる状態になったらしい,投稿者の話。数字は確かめられない。既存のGoogle AI資格講座 r38_64 とは別件。
+2123017600082890990,2026-11-21T09:52:00+09:00,likes,jammaru_lab,https://x.com/jammaru_lab/status/2123017600082890990,"LayerXの新卒AI Builderの募集、想定年収800万円〜ってめちゃ凄いな。
+
+しかも、重視しているのは職歴や資格よりも、AIとソフトウェアを使って実際に価値を生み出した経験。
+
+AIが生成したコードを鵜呑みにせず、設計・品質・セキュリティまで責任を持てることも求められていて、これからのエンジニアに必要になる能力がそのまま言語化されている感じがする。めちゃくちゃ面白そうだし、興味がある人はおすすめ。
+
+[open.talentio.com/r/1/c/layerx/p…](https://open.talentio.com/r/1/c/layerx/pages/130662)",新卒採用。予定年収は800万円から。AIで実際に価値を作った経験を求めている。
+2122922012599545967,2026-11-21T09:52:00+09:00,likes,kanecororo,https://x.com/kanecororo/status/2122922012599545967,"SBI証券フィッシングのサイト、これはもう一緒だった。
+
+←本物             偽物→",フィッシング対策協議会の緊急情報。件名に「パスキー認証必須化の前倒し」など。松井、マネックス、日興の名前も使用。パスキーは本物のアドレスでしか使えず偽サイトには強い。既存 r26_14 とは別件。
+2122836234200588424,2026-11-21T09:52:00+09:00,likes,super_bonochin,https://x.com/super_bonochin/status/2122836234200588424,"Microsoft Ignite で発表された内容まとめ（スライド全28 枚）。
+サブスクでは、順次この内容にエンタープライズAI目線で触れていきます。",ほかの会社のエージェントにもIDをつけられるようになり、鍵を保存しなくていいログインの方法も入った。
+2122791816949064104,2026-11-21T09:52:00+09:00,likes,pierceboggan,https://x.com/pierceboggan/status/2122791816949064104,"We are now publishing data on how the GitHub Copilot harness performs relative to harnesses, including Codex and Claude Code CLIs.
+
+This supplements our existing data that we publish on which models perform best in GitHub Copilot on Terminal Bench 4.0 and DeepSWE 1.1.
+
+Enjoy!
+
+[benchmarks.github.com](https://benchmarks.github.com)",同じモデルでのハーネス比較。テストのずるい解き方も見つけて割合を出している。比べたのはGitHub自身。
+2122789742047797619,2026-11-21T09:52:00+09:00,likes,pierceboggan,https://x.com/pierceboggan/status/2122789742047797619,"Automate browser tasks with the new GitHub Copilot extension for Chrome & Edge!
+
+Try it in the GitHub Copilot app today with the Enable Browser Use setting.
+
+[github.blog/changelog/2026…](https://github.blog/changelog/2026-11-17-github-copilot-app-microsoft-ignite-releases/)",ブラウザ操作（Chrome/Edge拡張、最初はオフ）と、SupabaseやBoxなど公式検証済みMCPコネクタ8つの追加。送信文ではコネクタ箇条書きの途中が欠けている。
+2122772312978059476,2026-11-21T09:52:00+09:00,likes,excalidraw,https://x.com/excalidraw/status/2122772312978059476,"Excalidraw CLI is now on version 1.0.0 🚀
+
+Sign-in through your browser via OAuth is finally supported, so no more messing around with API tokens!",長く使い回すAPIキーの代わりに、あとで取り消せる方法を使える。
+2122736581731561730,2026-11-21T09:52:00+09:00,likes,GHCopilotLog,https://x.com/GHCopilotLog/status/2122736581731561730,"🎉🔨 Copilot SDK v2.0.0 released!
+
+350 features & enhancements in this release
+
+Top features:
+• Added PAC-aware system proxy routing support in the runtime for better proxy auto-configuration handling 🌐
+• SDK handles tokenizer warmup and process telemetry internally to improve startup and monitoring
+• Remote session export refuses disabled or unresolved organization storage policies with export-start state and refusal warnings
+• Deferred allocator reclamation until disposed session data is released on opted-in Linux/glibc hosts, preserving requests during trim cooldown
+• SDK sessions honor the host's COPILOT_MODEL_FAMILY setting for accurate model family selection
+• Runtime loads .agents, .claude skills, and .claude agents from added directories to enhance plugin support
+• Preserved provider metadata in SDK model catalogs to retain provider info when listing models
+• Session.fusion_resolved event payload now includes ruleIndex for better event tracing
+• SDK clients receive warnings related to live Marketplace plugins to improve integration clarity
+• Azure OpenAI BYOK sessions on GPT-5.6/GPT-6 restored cross-turn prompt cache reuse by no longer sending prompt_cache_breakpoint
+
+Enhancements:
+• Improved MCP OAuth compatibility by respecting advertised account-selection and retrying rejected selections
+• Built-in browser activation respects user preferences and managed policy including after extension reconciliation
+• Runtime applies enabledPlugins from trusted non-repository folders improving plugin activation consistency
+• Preserved ACP context tier when switching models to maintain consistent context behavior
+• Improved runtime reliability by retrying config key writes initially refused to reduce configuration loss
+• Local-model adoption and cleanup no longer open console windows on Windows OS 💻
+• Sandbox deny rules now support glob patterns including hidden files and home-relative patterns
+• Normalized Responses MCP namespace names by trimming separators for better session history compatibility
+• Host tools sharing names with built-in tools now run their handler instead of failing to improve usability
+• Extended external tool call timeout removing automatic 30-minute cutoffs to support long-running workflows
+
+Bug fixes:
+• Fixed runtime bug adding IPv6 unspecified address to outbound request blocklist for security 🛑
+• Fixed incomplete custom-agent list and reload issues during overlapping reloads or provider hydration
+• Fixed stale catalogs after credential invalidation to ensure fresh data
+• Corrected prompt alteration issues involving the Unicode character U+0130 in /after or /every text
+• Fixed isAbortError runtime bug that could throw when error message was not a string
+• Fixed session metadata and log summaries reuse to recover gracefully from transient log-read failures
+• Fixed session.mcp.startServer to honor caller-provided configuration consistently
+• Fixed runtime bug allowing grep flags without a leading dash for more robust CLI behavior
+• Fixed MCP OAuth URL validation rejecting backslash-obfuscated dot segments for security
+• Fixed missing skill instructions when approving tool permissions after runtime restart
+• INFO-level runtime logs no longer include MCP server peer information
+• Fixed attachment drops when requests retried after rate limiting
+• Fixed intermittent custom-agent discovery failures after authentication during first agent scan
+• Fixed LSP rootUri acceptance outside Git root to prevent invalid workspace roots
+• Fixed race conditions in credential refresh and custom-agent list reloads
+• Fixed race conditions during session queue waits to prevent unwanted session drops
+• Fixed retry counts to reset properly on session queue start to improve session lifecycle
+• Fixed diagnostics leaks from stub language servers to improve resource cleanup
+
+Misc:
+• Clarified Copilot SDK documentation on pending permission recovery
+• Removed unsupported prePRDescription and postResult variants from generated HookType contracts
+• Bugfix: INFO runtime log cleanup to reduce unnecessary details
+• Session metadata listing improved for log summary reuse
+• SDK now warns about live Marketplace plugins usage
+• Added support for glob patterns in sandbox deny rules for better file matching
+• Improved MCP OAuth retry logic for smoother authentication
+• Runtime plugin activation optimized with trusted folder plugin loading
+• Documentation updated for OAuth and permission recovery scenarios
+• Minor tooling and logging polish to support diagnostics and session lifecycle tracking
+
+[github.com/microsoft/copi…](https://github.com/microsoft/copilot-sdk/releases/tag/v2.0.0)
+
+#GitHubCopilotSDK",Copilotを動かす部分は標準ではアプリと同じプロセスの中で動く。プロセスを分けて守る壁が1つ減る。
+2122298637611098456,2026-11-21T09:52:00+09:00,likes,UO10_exhibit,https://x.com/UO10_exhibit/status/2122298637611098456,"『チ。』が出来るまで（連載開始編）1/5｜vol.01
+
+作品の構想段階で描かれる「プロット」を公開！
+まだ形になる前の物語には、どんなアイデアが詰まっているのか？
+普段目にすることのない資料を通して、『チ。』が生まれるまでの過程や、創作の一端をご紹介します。",連載前の構想のメモが公開されている、といういいね。
+2122681344862126228,2026-11-17T22:47:00+09:00,timeline,connect24h,https://x.com/connect24h/status/2122681344862126228,"よーわからんなぁ。iOSのWebKitの脆弱性使われてWebオーバーレイか何かで入力した値が盗まれたってこと？
+
+> ・暗号資産：表示・コピーした送金先アドレスが、攻撃者のものにすり替えられる
+・カード：サイト内のフォームに入力した番号やセキュリティコードが盗まれた可能性（16日22時43分以降）
+・iPhone、iPad：古いiOSを狙う攻撃キットが、ページを開くだけで読み込まれた",11/16にOptimizelyのアカウント登録の欠陥が悪用され、各社設定のJavaScript欄に悪いコードが書きこまれた。暗号資産の送り先すり替え、カード番号・Cookie窃取、古いiOS向けの攻撃キット。原因の技術詳細は未発表。
+2122681298292822323,2026-11-17T22:47:00+09:00,timeline,kanetugu2020,https://x.com/kanetugu2020/status/2122681298292822323,"SITLでは落ちないドローンが、PILSでは落ちる。
+
+1種類のMAVLinkメッセージ(SERIAL_CONTROL)の連投でArduPilotのmain_loop停止→ウォッチドッグ発火→FCリセット→x500墜落。実機なしで箱庭Drone×Athrillが再現。
+
+[youtube.com/watch?v=PtG0mR…](https://www.youtube.com/watch?v=PtG0mRQRdDE)
+
+#drone #ardupilot #Security",MAVLinkのSERIAL_CONTROL連投でメインループが止まり、ウォッチドッグが再起動してx500が落ちる。SITLでは落ちずPILSで落ちる。以前のフォーラム報告と同じ仕組みかもしれない（私の推測です）。
 2122665522068398204,2026-11-17T21:54:00+09:00,timeline,lumin,https://x.com/lumin/status/2122665522068398204,"AIに雑にまとめさせた。Javaの脆弱性。
 CVE-2026-114938 は、2026年11月17日時点で報告されている Java / OpenJDK の未認証リモートコード実行（Pre-Auth RCE）脆弱性です。
 概要
