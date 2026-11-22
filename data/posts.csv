@@ -1,4 +1,24 @@
 id,datetime,source,author,url,text,summary
+2124332545227870316,2026-11-22T11:54:00+09:00,timeline,GithubProjects,https://x.com/GithubProjects/status/2124332545227870316,"Add official Cursor plugins so your coding agent can work with dev tools, SaaS integrations, and team workflows.",開発ツールやSaaS、作業の流れ向けのプラグインを1つのリポジトリにまとめたもの。ルール、スキル、エージェント、コマンド、MCP、フックを配れる。公式マーケットプレイスもある。フックやMCPは入れる前に中身を確かめた方がよい。
+2124298365538299976,2026-11-22T11:54:00+09:00,timeline,waffle_maker,https://x.com/waffle_maker/status/2124298365538299976,"きたーーーー
+Museの内蔵ブラウザによる制約を回避じゃーーー
+[chromewebstore.google.com/detail/jnakhhj…](https://chromewebstore.google.com/detail/jnakhhjmpmoohbjgfccbccfoifnmbdjd?utm_source=item-share-x)",サイドパネルと専用タブグループの中だけで進む。ログイン中のサイトは聞き直さずに使える。本体の提供はいまのところ米国とカナダ。内蔵ブラウザの制約については私の推測あり。
+2124314737358102537,2026-11-22T10:53:00+09:00,timeline,wataru9871,https://x.com/wataru9871/status/2124314737358102537,"自分がよく使っているw2v-BERT 2.0の高速化実装を公開しました。
+推論（順伝搬のみ）
+学習（順伝搬＋逆伝搬）
+両方で使えて、両方とも3倍ぐらいの速度になります！
+[github.com/Wataru-Nakata/…](https://github.com/Wataru-Nakata/w2v-bert-fast)",重みと出力はHugging Face版と同じ。作者の測定ではH200・bf16・バッチ16で推論2.2〜3.5倍、学習2.0〜3.5倍。ライセンスはApache 2.0。投稿の「3倍ぐらい」は長い音声側の数字に近い。
+2124312320742752701,2026-11-22T10:53:00+09:00,timeline,connect24h,https://x.com/connect24h/status/2124312320742752701,"Geminiへの乗り換えを左右するAntigravityの他ハーネスからの定額プラン違反が緩和されるのか要注目
+AIコーディングでモデルを替えるとき、ツールまで替えると移行コストが増える。普段のCLIにレビュー手順やCIの設定を寄せているほど、その差は大きい。
+Geminiの定額プランを好きなハーネスで使いたいという要望に、GoogleのLogan Kilpatrick氏が11月20日、12月2日に「最初の一歩を踏み出す」と返信した。
+12月2日の焦点は、使い慣れたツールのまま、どこまでGeminiを定額で使えるかだ。
+
+[smhn.info/202611-gemini-…](https://smhn.info/202611-gemini-subscription-third-party-harness-december-2)",いまは他社ハーネスからAntigravityのログインを使うと規約違反。12月2日に公式の発表会があるという告知は見当たらない。定額開放の第一歩という読み方もできるが、中身はまだ分からない（私の推測です）。
+2124297241007689943,2026-11-22T10:53:00+09:00,likes,u1,https://x.com/u1/status/2124297241007689943,"これ自分も作ろうっと
+今ある仕組みで少しやれば全域やれそうだし",masuidriveさんの稼働表を、u1さんが引用して「今ある仕組みで少しやれば全域やれそう」と書いていた。11/18は33.1時間と出ている。複数のエージェントが同時に動いた合計だと思われる（私の推測です）。room_206_AIさんも同様の表を公開。
+2124163414935359537,2026-11-22T10:53:00+09:00,likes,_arrow2nd,https://x.com/_arrow2nd/status/2124163414935359537,これ今日の学び,NetscapeのころからMozillaが内部UI用に chrome:// を使っていた名残。画像は chrome://global/skin/illustrations/security-error.svg。
+2124098623361450000,2026-11-22T10:53:00+09:00,likes,shinyaohnishi,https://x.com/shinyaohnishi/status/2124098623361450000,技術士持っていない人がエンジニアを名乗るのを法律で禁止すべき。外国ではそうなっている国が多いんだから。,日本では技術士の称号は技術士法で保護されるが、「エンジニア」という呼び方自体を禁じる法律はない。海外でも保護の対象は Professional Engineer などの特定の称号や公衆向けの工学業務であることが多い。
+2124290344196129025,2026-11-22T09:53:00+09:00,timeline,connect24h,https://x.com/connect24h/status/2124290344196129025,これ、もしかして、毎年、ブラックフライデーでGoogle AI Proを年額14500円で継続できるフラグ？,"今AIプランかGoogle Oneストレージ契約者向け。年29,000円が14,500円。特典終了後は29,000円に戻る。未契約者向けは11/27から予定。sh2ndさんの延長手順は個人の報告で公式ではない。「毎年この値段で続けられる」は引用した人の推測。"
 2124289445579166138,2026-11-22T08:52:00+09:00,timeline,connect24h,https://x.com/connect24h/status/2124289445579166138,"これ、以下の理由です。経験済み
 •Let's Encryptとか、無料含めてサーバ証明書を発行すると、ホスト名を含めてcertificate transparency logに掲載される。
 •それを監視してる層が一定数いて、公開された直後にメジャーな攻撃が一通り試される攻撃が来る

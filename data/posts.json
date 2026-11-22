@@ -1,5 +1,210 @@
 [
   {
+    "id": "2124332545227870316",
+    "cardId": "r38_158",
+    "datetime": "2026-11-22T11:54:00+09:00",
+    "postedAt": "2026-11-22T11:42:01+09:00",
+    "source": "timeline",
+    "title": "Cursorの公式プラグイン集「cursor/plugins」が紹介されています。",
+    "summary": "開発ツールやSaaS、作業の流れ向けのプラグインを1つのリポジトリにまとめたもの。ルール、スキル、エージェント、コマンド、MCP、フックを配れる。公式マーケットプレイスもある。フックやMCPは入れる前に中身を確かめた方がよい。",
+    "tweetId": "2124332545227870316",
+    "tweetIds": [
+      "2124332545227870316"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/GithubProjects/status/2124332545227870316",
+    "author": {
+      "handle": "GithubProjects",
+      "name": "GitHub Projects Community"
+    },
+    "via": null,
+    "text": "Add official Cursor plugins so your coding agent can work with dev tools, SaaS integrations, and team workflows.",
+    "images": [
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HXslMUDb0AALAdU.jpg"
+      }
+    ],
+    "deepDive": "#Cursorの公式プラグイン集「cursor/plugins」が紹介されています。\nもう1件、タイムラインからです。[GitHub Projects Communityの投稿](https://x.com/GithubProjects/status/2124332545227870316)で、Cursorの公式プラグイン集[cursor/plugins](https://github.com/cursor/plugins)が紹介されています（[紹介記事](https://osp.fyi/plugins)）。\n\n開発ツールやSaaS、作業の流れ向けのプラグインを、1つのリポジトリにまとめたものです。プラグインごとにフォルダがあり、それぞれに `.cursor-plugin/plugin.json` が入っています。紹介記事に挙がっているのは、Gmail・Drive・Calendar・Docsとの連携、雛形を作って検証する `create-plugin`、TypeScript SDK向けの `cursor-sdk` です。ほかに、並列のクラウドエージェントに仕事を配る `orchestrate`、セキュリティと正しさを深く見る `thermos`、Lauren Tanさんの `pstack` など、作業の流れを決めるものもあります。\n\n[Cursorのドキュメント](https://cursor.com/docs/plugins)によると、プラグインは、ルール、スキル、エージェント、コマンド、MCPサーバー、フック（決まったタイミングで動くスクリプト）をひとまとめにして配れるものです。オープンな規格「Agent Plugins」にも対応していて、その規格で作ったスキルやMCPは、ほかのツールでも使い回せます。公式のマーケットプレイスは[cursor.com/marketplace](https://cursor.com/marketplace)にあります。\n\n毎回説明し直しているレビューの基準や手順があれば、プラグインにしておく使い方もあります。設定ファイルがそのまま見られるので、自作するときの参考になります。フックやMCPは、自分のPCでコードを動かすものなので、入れる前に中身を確かめた方がよいです。サプライチェーンの面での注意点です。",
+    "followUps": []
+  },
+  {
+    "id": "2124298365538299976",
+    "cardId": "r38_157",
+    "datetime": "2026-11-22T11:54:00+09:00",
+    "postedAt": "2026-11-22T09:26:12+09:00",
+    "source": "timeline",
+    "title": "公式のChrome拡張「Muse from Meta」が出て、Museが自分のChromeで作業できるようになります。",
+    "summary": "サイドパネルと専用タブグループの中だけで進む。ログイン中のサイトは聞き直さずに使える。本体の提供はいまのところ米国とカナダ。内蔵ブラウザの制約については私の推測あり。",
+    "tweetId": "2124298365538299976",
+    "tweetIds": [
+      "2124298365538299976"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/waffle_maker/status/2124298365538299976",
+    "author": {
+      "handle": "waffle_maker",
+      "name": "わっふるめーかー（喪中）"
+    },
+    "via": null,
+    "text": "きたーーーー\nMuseの内蔵ブラウザによる制約を回避じゃーーー\n[chromewebstore.google.com/detail/jnakhhj…](https://chromewebstore.google.com/detail/jnakhhjmpmoohbjgfccbccfoifnmbdjd?utm_source=item-share-x)",
+    "images": [],
+    "deepDive": "#公式のChrome拡張「Muse from Meta」が出て、Museが自分のChromeで作業できるようになります。\nタイムラインからです。[わっふるめーかーさん](https://x.com/waffle_maker/status/2124298365538299976)が、公式のChrome拡張「[Muse from Meta](https://chromewebstore.google.com/detail/muse-from-meta/jnakhhjmpmoohbjgfccbccfoifnmbdjd)」を紹介していました。「Museの内蔵ブラウザによる制約を回避」と書いています。\n\n11/13ごろ、発表より先にストアに載っているのが見つかっていました（[Pillitteriさんの記事](https://pasqualepillitteri.it/en/news/33147/meta-muse-ai-agent-chrome-extension-side-panel)）。そのあと11/20に、MetaのAI責任者アレクサンドル・ワンさんが「すでに20万人が使っている」と正式に発表しました（[Digital Trends](https://www.digitaltrends.com/computing/meta-is-putting-muse-in-a-chrome-sidebar-and-the-official-announcement-just-arrived/)）。報道時点のストア評価は4.6で、Chrome 137以上が必要です。Alt+Shift+Cで開ける、とストア側の説明にあります。\n\n[Metaのヘルプ](https://www.meta.com/help/superintelligence/2124746764949121/)によると、MuseはChromeのサイドパネルに出てきて、作業は「Muse専用のタブグループ」の中だけで進み、それ以外のタブには手が出せません。ページをクリックするか、Escを押すか、タブをグループの外に出せば、操作を取り戻せます。保存したパスワード、閲覧履歴、Chromeの設定はMuseからは見えず、ページに出ているパスワードも、Museが読む前に消されます。その一方で、ログインしているサイトなら、Museはどれでも、ログイン情報を聞き直さずに使えます。使わせたくないアカウントは、拡張をつなぐ前にログアウトしておくように、とMeta自身が書いています。また、Museの操作はGoogleアカウントや閲覧履歴に残り、広告やおすすめに影響することがあります。購入などの大事な操作は、前もって承認を求める設計で、どの操作で承認を求めるかは設定で変えられます。\n\n「制約を回避」についてです。これまでの内蔵ブラウザは、Meta側のクラウド上の仮想マシンで動いていた、と伝えられています。ボット対策やログインの手間で止まりやすかった可能性がありますが、ここは私の推測です。自分のChromeを使えば、自分のログイン状態のまま進められます。便利になるぶん、ログイン中のアカウントにエージェントの手が届く設計です。\n\nなお、これは拡張そのものの話ではありませんが、11/18のReutersの調査では、MuseがAndroidの通知アクセスや、Macのアクセシビリティ・画面取得の権限を使って、Signalのメッセージ本文を読めることが確認されています。暗号化を破ったのではなく、端末にすでに表示されていた文字を読む形です。Metaは個別の事例だとしています。\n\nMuse本体の提供は、いまのところ米国とカナダです。ほかの国の日程は、Metaから出ていません。試すなら、銀行や決済、仕事用のアカウントからはログアウトしたChromeのプロファイルを、Muse専用に分けておく方が安心です。",
+    "followUps": []
+  },
+  {
+    "id": "2124314737358102537",
+    "cardId": "r38_153",
+    "datetime": "2026-11-22T10:53:00+09:00",
+    "postedAt": "2026-11-22T10:31:15+09:00",
+    "source": "timeline",
+    "title": "音声モデルw2v-BERT 2.0の高速化実装「w2v-bert-fast」が公開されました。",
+    "summary": "重みと出力はHugging Face版と同じ。作者の測定ではH200・bf16・バッチ16で推論2.2〜3.5倍、学習2.0〜3.5倍。ライセンスはApache 2.0。投稿の「3倍ぐらい」は長い音声側の数字に近い。",
+    "tweetId": "2124314737358102537",
+    "tweetIds": [
+      "2124314737358102537"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/wataru9871/status/2124314737358102537",
+    "author": {
+      "handle": "wataru9871",
+      "name": "took"
+    },
+    "via": null,
+    "text": "自分がよく使っているw2v-BERT 2.0の高速化実装を公開しました。\n推論（順伝搬のみ）\n学習（順伝搬＋逆伝搬）\n両方で使えて、両方とも3倍ぐらいの速度になります！\n[github.com/Wataru-Nakata/…](https://github.com/Wataru-Nakata/w2v-bert-fast)",
+    "images": [],
+    "deepDive": "#音声モデルw2v-BERT 2.0の高速化実装「w2v-bert-fast」が公開されました。\nタイムラインの[tookさん（@wataru9871）](https://x.com/wataru9871/status/2124314737358102537)は、音声モデルw2v-BERT 2.0の高速化実装[w2v-bert-fast](https://github.com/Wataru-Nakata/w2v-bert-fast)を公開しました。重みと出力はHugging Face版と同じで、相対位置つき注意をTritonの融合カーネルにし、畳み込みもchannels-lastにしています。作者の測定では、H200・bf16・バッチ16で、推論は2.2〜3.5倍、学習は2.0〜3.5倍速く、30秒の音声を学習するときのメモリは76GiBから42GiBになっています。ライセンスはApache 2.0です。投稿の「3倍ぐらい」は、長い音声側の数字に近いです。",
+    "followUps": []
+  },
+  {
+    "id": "2124312320742752701",
+    "cardId": "r38_152",
+    "datetime": "2026-11-22T10:53:00+09:00",
+    "postedAt": "2026-11-22T10:21:39+09:00",
+    "source": "timeline",
+    "title": "GoogleのLogan Kilpatrick氏が、Geminiの定額プランをどのハーネスからでも使えるようにしてほしい、という要望へ、「12月2日に最初の一歩を踏み出す」と返信しました。",
+    "summary": "いまは他社ハーネスからAntigravityのログインを使うと規約違反。12月2日に公式の発表会があるという告知は見当たらない。定額開放の第一歩という読み方もできるが、中身はまだ分からない（私の推測です）。",
+    "tweetId": "2124312320742752701",
+    "tweetIds": [
+      "2124312320742752701"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/connect24h/status/2124312320742752701",
+    "author": {
+      "handle": "connect24h",
+      "name": "connect24h"
+    },
+    "via": null,
+    "text": "Geminiへの乗り換えを左右するAntigravityの他ハーネスからの定額プラン違反が緩和されるのか要注目\nAIコーディングでモデルを替えるとき、ツールまで替えると移行コストが増える。普段のCLIにレビュー手順やCIの設定を寄せているほど、その差は大きい。\nGeminiの定額プランを好きなハーネスで使いたいという要望に、GoogleのLogan Kilpatrick氏が11月20日、12月2日に「最初の一歩を踏み出す」と返信した。\n12月2日の焦点は、使い慣れたツールのまま、どこまでGeminiを定額で使えるかだ。\n\n[smhn.info/202611-gemini-…](https://smhn.info/202611-gemini-subscription-third-party-harness-december-2)",
+    "images": [],
+    "deepDive": "#GoogleのLogan Kilpatrick氏が、Geminiの定額プランをどのハーネスからでも使えるようにしてほしい、という要望へ、「12月2日に最初の一歩を踏み出す」と返信しました。\nタイムラインからです。GoogleのLogan Kilpatrick氏が、11/20（日本時間）に、Kun Chen氏の「Geminiの定額プランを、どのハーネスからでも使えるようにしてほしい」という投稿へ、「12月2日に最初の一歩を踏み出す」と返信しました。[すまほん!!の記事](https://smhn.info/202611-gemini-subscription-third-party-harness-december-2)が、このやり取りを伝えています。\n\nいまのところ、Google AI ProやUltraを契約していても、他社のハーネスからAntigravityのログインを使うと規約違反です。[追加利用規約](https://antigravity.google/terms/)は、OpenClawでAntigravityのOAuthを使う例をあげて禁止しており、違反はAntigravityやGemini CLIのアカウント停止・解約の理由になりうると書いています。Googleアカウント全体が止まる、という意味ではありません。[公式のFAQ](https://antigravity.google/docs/faq/)では、他社のコーディングエージェントからGeminiを使うなら、Gemini EnterpriseかGoogle AI StudioのAPIキーを使うよう案内しています。\n\n12月2日に公式の発表会がある、という告知は見つけていません。返信の相手が定額プランの開放を求めているので、その方向の第一歩だという読み方もできますが、中身はまだ分かりません（私の推測です）。[connect24hさん](https://x.com/connect24h/status/2124312320742752701)も、同じ点に注目しています。",
+    "followUps": []
+  },
+  {
+    "id": "2124297241007689943",
+    "cardId": "r38_156",
+    "datetime": "2026-11-22T10:53:00+09:00",
+    "postedAt": "2026-11-22T09:21:44+09:00",
+    "source": "likes",
+    "title": "CodexとClaudeの稼働を1週間のカレンダーにしたものです。",
+    "summary": "masuidriveさんの稼働表を、u1さんが引用して「今ある仕組みで少しやれば全域やれそう」と書いていた。11/18は33.1時間と出ている。複数のエージェントが同時に動いた合計だと思われる（私の推測です）。room_206_AIさんも同様の表を公開。",
+    "tweetId": "2124297241007689943",
+    "tweetIds": [
+      "2124297241007689943",
+      "2124063545893744679"
+    ],
+    "quoteTweetId": "2124063545893744679",
+    "url": "https://x.com/u1/status/2124297241007689943",
+    "author": {
+      "handle": "u1",
+      "name": "Yuichi Uemura"
+    },
+    "via": null,
+    "text": "これ自分も作ろうっと\n今ある仕組みで少しやれば全域やれそうだし",
+    "images": [],
+    "deepDive": "#CodexとClaudeの稼働を1週間のカレンダーにしたものです。\n[masuidriveさん](https://x.com/masuidrive/status/2124063545893744679)が、CodexとClaudeの稼働を1週間のカレンダーにしたものです。「寝てからも動いている分も含む」と書いています。図では `cx` と `cl` のブロックが深夜にも並び、11/18は33.1時間と出ています。複数のエージェントが同時に動いた合計だと思われます（私の推測です）。[u1さん](https://x.com/u1/status/2124297241007689943)は「今ある仕組みで少しやれば全域やれそう」と引用していました。[room_206_AIさん](https://x.com/room_206_AI/status/2124169265242902860)も、Claude Code、Codex、Antigravity、Museを色分けした同様の表を公開しています。凡例では、濃い色が自分で開いた実行、淡い色が自動実行です。",
+    "followUps": []
+  },
+  {
+    "id": "2124163414935359537",
+    "cardId": "r38_155",
+    "datetime": "2026-11-22T10:53:00+09:00",
+    "postedAt": "2026-11-22T00:29:57+09:00",
+    "source": "likes",
+    "title": "Firefoxの警告画像のURLが chrome:// になっている理由です。「chrome」はGoogle Chromeではなく、ブラウザのUI全体を指す古い用語です。",
+    "summary": "NetscapeのころからMozillaが内部UI用に chrome:// を使っていた名残。画像は chrome://global/skin/illustrations/security-error.svg。",
+    "tweetId": "2124163414935359537",
+    "tweetIds": [
+      "2124163414935359537"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/_arrow2nd/status/2124163414935359537",
+    "author": {
+      "handle": "_arrow2nd",
+      "name": "arrow2nd"
+    },
+    "via": null,
+    "text": "これ今日の学び",
+    "images": [
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HXqLXbiaMAAfSg3.jpg"
+      }
+    ],
+    "deepDive": "#Firefoxの警告画像のURLが chrome:// になっている理由です。「chrome」はGoogle Chromeではなく、ブラウザのUI全体を指す古い用語です。\n[arrow2ndさん](https://x.com/_arrow2nd/status/2124163414935359537)の「今日の学び」は、Firefoxの警告画像のURLが `chrome://global/skin/illustrations/security-error.svg` になっている理由です。「chrome」はGoogle Chromeではなく、ブラウザの枠やツールバーなどのUI全体を指す古い用語で、NetscapeのころからMozillaが内部UI用に `chrome://` を使っていた名残です。",
+    "followUps": []
+  },
+  {
+    "id": "2124098623361450000",
+    "cardId": "r38_154",
+    "datetime": "2026-11-22T10:53:00+09:00",
+    "postedAt": "2026-11-21T20:12:30+09:00",
+    "source": "likes",
+    "title": "「技術士を持っていない人がエンジニアを名乗るのを法律で禁止すべき。外国ではそうなっている国が多い」という投稿についてです。",
+    "summary": "日本では技術士の称号は技術士法で保護されるが、「エンジニア」という呼び方自体を禁じる法律はない。海外でも保護の対象は Professional Engineer などの特定の称号や公衆向けの工学業務であることが多い。",
+    "tweetId": "2124098623361450000",
+    "tweetIds": [
+      "2124098623361450000",
+      "2124005519824412938"
+    ],
+    "quoteTweetId": "2124005519824412938",
+    "url": "https://x.com/shinyaohnishi/status/2124098623361450000",
+    "author": {
+      "handle": "shinyaohnishi",
+      "name": "Shin-ya Ohnishi"
+    },
+    "via": null,
+    "text": "技術士持っていない人がエンジニアを名乗るのを法律で禁止すべき。外国ではそうなっている国が多いんだから。",
+    "images": [],
+    "deepDive": "#「技術士を持っていない人がエンジニアを名乗るのを法律で禁止すべき。外国ではそうなっている国が多い」という投稿についてです。\n[Shin-ya Ohnishiさん](https://x.com/shinyaohnishi/status/2124098623361450000)は、「技術士を持っていない人がエンジニアを名乗るのを法律で禁止すべき。外国ではそうなっている国が多い」と書いています。日本では「技術士」の称号は技術士法で保護されていますが、「エンジニア」という呼び方自体を禁じる法律はありません。海外でも、保護の対象は Professional Engineer のような特定の称号や、公衆向けの工学業務であることが多く、「engineer」という職名全般を禁じている国が多い、という主張はそのままでは受け取れません。",
+    "followUps": []
+  },
+  {
+    "id": "2124290344196129025",
+    "cardId": "r38_151",
+    "datetime": "2026-11-22T09:53:00+09:00",
+    "postedAt": "2026-11-22T08:54:20+09:00",
+    "source": "timeline",
+    "title": "Google AI Proの年額が、半額の14,500円になる先行セールがあります。今の契約者向けで、11/26までです。",
+    "summary": "今AIプランかGoogle Oneストレージ契約者向け。年29,000円が14,500円。特典終了後は29,000円に戻る。未契約者向けは11/27から予定。sh2ndさんの延長手順は個人の報告で公式ではない。「毎年この値段で続けられる」は引用した人の推測。",
+    "tweetId": "2124290344196129025",
+    "tweetIds": [
+      "2124290344196129025",
+      "2124021099822563743"
+    ],
+    "quoteTweetId": "2124021099822563743",
+    "url": "https://x.com/connect24h/status/2124290344196129025",
+    "author": {
+      "handle": "connect24h",
+      "name": "connect24h"
+    },
+    "via": null,
+    "text": "これ、もしかして、毎年、ブラックフライデーでGoogle AI Proを年額14500円で継続できるフラグ？",
+    "images": [],
+    "deepDive": "#Google AI Proの年額が、半額の14,500円になる先行セールがあります。今の契約者向けで、11/26までです。\n[connect24hさんの投稿](https://x.com/connect24h/status/2124290344196129025)が、[sh2ndさんの投稿](https://x.com/sh2nd/status/2124021099822563743)を引用していました。connect24hさんは、「毎年ブラックフライデーに、Google AI Proを年額14,500円で続けられるフラグ？」と書いています。\n- **公式の内容：** Googleは、2026/11/20（米国時間）に、ブラックフライデーの先行割引を始めました。対象は、今Google AIプランか、Google Oneのストレージを契約している人です。AI Plusと、年額のAI Proが、最大50%オフです。期間は11/26までです。Geminiのサブスクのプロダクトリード、Vikas Kansalさんが、Xで発表しています（[スマートウォッチライフ](https://www.smartwatchlife.jp/100237/)）。\n- **表示されている額：** 年29,000円が、14,500円（12か月分）です。特典の期間が終わると、29,000円/年に戻ります。割引の中身は、今のプランによって変わるので、全員が50%オフになるわけではありません（同上、[Maruさんのnote](https://note.com/maru_card/n/n98f44469ae43)）。\n- **まだ契約していない人向け：** 割引は、ブラックフライデー当日（11/27）から始まる予定です。ただし、中身はまだ発表されていません。\n- **主な中身：** 容量5TB（最大5人で共有）、Geminiの使用量の上限アップ、Gemini 4 Neon、Deep Research、Flow、YouTube Premium Liteなどです。家族で共有する場合は、サービスごとの利用枠に注意が必要、という指摘もあります（[AINN](https://ainn.jp/topic/x-2124087328289484965)）。\n\nsh2ndさんは、2025年末に14,500円で年額プランを契約していて、「いったん月額に切り替えて、すぐ年額に戻したら、14,500円で2027/11/21まで延長できた」と報告しています（いいね約540、ブックマーク約620）。手順は[元のメモの投稿](https://x.com/i/status/2123924357022192021)にあります。ただし、これは個人の報告で、Google公式の手順ではありません。メモには、「切り替えるとすぐに決済され、あとで返金される」とあります。返金や延長が、誰でも同じようにうまくいくかは、確かめられていません。「毎年この値段で続けられる」というのは、引用した人の推測です。\n\n今契約中なら、まず[Google OneのAIプランのページ](https://one.google.com/ai)で、自分に出ている額を確かめるのが安全です。期限は11/26までです。",
+    "followUps": []
+  },
+  {
     "id": "2124289445579166138",
     "cardId": "r38_150",
     "datetime": "2026-11-22T08:52:00+09:00",
@@ -1091,7 +1296,15 @@
       }
     ],
     "deepDive": "#Ignite 2026で、Agent 365に登録されたエージェントは、5,000万をこえました。\n[炎鎮さんの投稿](https://x.com/super_bonochin/status/2122836234200588424)へのいいねです。\n- **[Ignite 2026](https://techcommunity.microsoft.com/blog/agent-365-blog/whats-new-in-microsoft-agent-365-ignite-2026/4571753)：** Agent 365に登録されたエージェントは、5,000万をこえました。ほかの会社のエージェントにもIDをつけられるようになり、鍵を保存しなくていいログインの方法も入りました。",
-    "followUps": []
+    "followUps": [
+      {
+        "datetime": "2026-11-21T10:53:00+09:00",
+        "clock": "10:53",
+        "title": "以前お伝えしたMicrosoft Agent 365のIgnite発表のうち、まだ書いていなかった点です。",
+        "text": "以前お伝えしたMicrosoft Agent 365のIgnite発表のうち、まだ書いていなかった点です。[公式の説明](https://techcommunity.microsoft.com/blog/agent-365-blog/whats-new-in-microsoft-agent-365-ignite-2026/4571753)によると、Microsoft DefenderとMicrosoft Entra Global Secure Accessが、Claude CodeやGitHub Copilot CLIなど60を超えるローカルのAIエージェントと、設定されたMCPサーバーを見つけるようになりました。Defender側の発見は一般提供、ネットワーク側と台帳への登録はプレビューです。\n\n見つかったエージェントには、利用者とは別のEntra Agent IDをつけられます（プレビューで、まずCopilot CLIとClaude Codeが対象です）。リスクのあるエージェントだけを制限し、本人のアクセスは残す、という使い方を想定しています。WindowsのDefenderは、エージェントの処理の途中を見て、悪意のある指示を実行前に止められるようになり、こちらは一般提供です。対象にはClaude Code、GitHub Copilot CLI、OpenClaw、ChatGPT Desktopなどが含まれる、と書かれています。",
+        "tweetIds": []
+      }
+    ]
   },
   {
     "id": "2122791816949064104",
