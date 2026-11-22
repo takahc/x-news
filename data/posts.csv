@@ -1,4 +1,18 @@
 id,datetime,source,author,url,text,summary
+2124454677374988434,2026-11-22T19:50:00+09:00,timeline,kanetugu2020,https://x.com/kanetugu2020/status/2124454677374988434,"We checked Hakoniwa (rotor vibration fitted from logs + unmodified PX4 on an emulated Pixhawk 6X) against public PX4 logs of an X500 and an S500.
+
+What matched, and what didn't (yaw, another flight), is all in the report.
+
+[github.com/hakoniwalab/ha…](https://github.com/hakoniwalab/hakoniwa-sensor-adapter/blob/main/docs/evaluation/imu-real-flight/README.md)
+
+#PX4",振動のIMUへの届き方を飛行ログに合わせ、Pixhawk 6XをAthrillで再現して改造なしのPX4を動かす。X500で差は最大5%、S500で最大13%。別フライトやヨーはずれる。既存の ArduPilot 不具合再現 r38_104 とは別件。
+2124449566636511607,2026-11-22T19:50:00+09:00,timeline,GithubProjects,https://x.com/GithubProjects/status/2124449566636511607,An open-source tool that turns a reference video into editable motion graphics with your own brand kit.,Claude MotionとCapCutの代わりをうたう。構成は Motion.md。Node.js 22.18以上、ライセンスはApache 2.0。エージェントとAPIキーは自分のもの（BYOA/BYOK）。元の動画の権利には注意（私の補足です）。
+2124435220598325686,2026-11-22T18:53:00+09:00,timeline,MacopeninSUTABA,https://x.com/MacopeninSUTABA/status/2124435220598325686,"Anthropic公式ブログで公開された「How the Claude Code team thinks about verification」が有益。
+
+Claude Codeチーム自身が語る検証の考え方。E2Eテスト、プロパティテスト、旧システムを正解とする差分テストの3つに投資すべき理由を解説している。
+
+こちら👉
+[claude.dev/blog/how-the-c…](https://claude.dev/blog/how-the-claude-code-team-thinks-about-verification/)",11/16のAddy Osmaniさんの記事。力を入れるべきなのはE2E、プロパティテスト、差分テスト。verify skill、39項目のチェックリスト、REVIEW.mdは元のブランチから読む。既存のコードレビュー記事 anthro_dev とは別件。
 2124411072425943374,2026-11-22T17:53:00+09:00,timeline,taishiyade,https://x.com/taishiyade/status/2124411072425943374,さすがにTesla、このアプデはヤバくね？,車の真上から見たような写真に近い映像を、運転と同じモデルがリアルタイムで描く。矢印やピンで次の動作が分かる。HW4で新しいAMD Ryzenの車に限られる見込み。「25倍」はTesla自身の発表で、外部の検証は未確認。Supervised版。
 2123770925300806120,2026-11-22T17:53:00+09:00,timeline,meganetaaan,https://x.com/meganetaaan/status/2123770925300806120,"OpenAIのESP32 SDKのサンプルにｽﾀｯｸﾁｬﾝがある
 [github.com/openai/openai-…](https://github.com/openai/openai-live-esp32/tree/main/examples/stackchan)
