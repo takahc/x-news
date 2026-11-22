@@ -1,4 +1,41 @@
 id,datetime,source,author,url,text,summary
+2124411072425943374,2026-11-22T17:53:00+09:00,timeline,taishiyade,https://x.com/taishiyade/status/2124411072425943374,さすがにTesla、このアプデはヤバくね？,車の真上から見たような写真に近い映像を、運転と同じモデルがリアルタイムで描く。矢印やピンで次の動作が分かる。HW4で新しいAMD Ryzenの車に限られる見込み。「25倍」はTesla自身の発表で、外部の検証は未確認。Supervised版。
+2123770925300806120,2026-11-22T17:53:00+09:00,timeline,meganetaaan,https://x.com/meganetaaan/status/2123770925300806120,"OpenAIのESP32 SDKのサンプルにｽﾀｯｸﾁｬﾝがある
+[github.com/openai/openai-…](https://github.com/openai/openai-live-esp32/tree/main/examples/stackchan)
+OpenAIのESP32 SDKのサンプルにｽﾀｯｸﾁｬﾝがある？？？？？？？？",ESP32-S3でLive APIの音声アシスタントを作る実験的なSDK。公式サポートはない。サンプルファームウェアにはAPIキーとWi-Fiパスワードが埋め込まれる。製品にするなら短い寿命のトークンが必要、というのは私の推測です。
+2123824683862855898,2026-11-22T14:54:00+09:00,likes,poteto,https://x.com/poteto/status/2123824683862855898,"small updates in pstack v0.15.46
+
+• lots of pruning, skills are now much shorter
+• gemini 4 neon is added as a panel reviewer
+
+it's autoupdated for grok bot / cursor users! if you want to change any of the model routing, just run /setup-pstack again
+
+[x.ai/bot/plugin/971…](https://x.ai/bot/plugin/9717366)",使っている人には自動で更新が届く。割り当てを変えたいときは /setup-pstack を再実行。スキルが短くなった分、使う文脈（トークン）も減るかもしれない（私の推測です）。既存の cursor/plugins 紹介 r38_158 や Neon 発表 r38_118 とは別件。
+2124293174504099998,2026-11-22T13:57:00+09:00,likes,Suryman_2,https://x.com/Suryman_2/status/2124293174504099998,若手コンサルの資料レビュー。またAIか…と頭を抱えがち,"「論点」になっていない、同じ見出しの繰り返し、太字の多用など。表示約70万回、いいね1,957、ブックマーク1,637。チェック用に保存する人が多かったように見える（私の推測です）。"
+2123608249710915966,2026-11-22T13:57:00+09:00,timeline,SakanaAILabs,https://x.com/SakanaAILabs/status/2123608249710915966,"Sakana AI、AIセキュリティ専門の研究開発チーム「Security Research Group」始動 🐙
+
+ブログ：[sakana.ai/security-resea…](https://sakana.ai/security-research-group/#Japanese)
+Careers：[sakana.ai/careers/member…](https://sakana.ai/careers/member-of-technical-staff-security-research-group/#Japanese)
+
+AIを活用した集合的なサイバー防御と、AIシステム自体の安全性とセキュリティの確保を研究する研究開発チーム「Security Research Group」を 立ち上げました。
+
+AIによってソフトウェアの欠陥が見つかりインシデントが増加している中、セキュリティを品質の問題として捉え、設計や開発の段階から欠陥を作り込まないことを目的とした本質的なセキュリティの向上等の調査・研究開発に取り組みます。品質の作り込みは、日本が長く強みとしてきた分野でもあります。
+
+本グループは事業活動とは切り離して運営し、研究成果や再現可能なベンチマーク、実践的なガイドラインを公開しながら、政府、産業界、学術界と連携していきます。
+
+⎯⎯⎯
+
+Introducing the Sakana AI Security Research Group 🐡
+
+Blog: [sakana.ai/security-resea…](https://sakana.ai/security-research-group/)
+
+The Security Research Group is a R&D team studying collective, AI-driven cyber defense and the security and safety of AI itself.
+
+As the use of AI leads to the discovery of more software flaws and an increase in security incidents, we are engaging in research and development aimed at fundamentally enhancing security, defining it as a quality issue and focusing on preventing the introduction of defects from the stages of design and development. Building quality into products is an area that has long been a key strength of Japan.
+
+The group operates independently of our commercial business. We will share research, reproducible benchmarks, and practical guidelines openly, and work with government, industry, and academia.
+
+Join us: [sakana.ai/careers/member…](https://sakana.ai/careers/member-of-technical-staff-security-research-group/) 🐟",柱はAIを使った集団でのサイバー防御と、AIそのものの安全性。CEO直轄。見つける速さに直す速さが追いつかないので、設計段階で弱点を作らない方針。既存の JFinBench や Sawara とは別件。
 2124332545227870316,2026-11-22T11:54:00+09:00,timeline,GithubProjects,https://x.com/GithubProjects/status/2124332545227870316,"Add official Cursor plugins so your coding agent can work with dev tools, SaaS integrations, and team workflows.",開発ツールやSaaS、作業の流れ向けのプラグインを1つのリポジトリにまとめたもの。ルール、スキル、エージェント、コマンド、MCP、フックを配れる。公式マーケットプレイスもある。フックやMCPは入れる前に中身を確かめた方がよい。
 2124298365538299976,2026-11-22T11:54:00+09:00,timeline,waffle_maker,https://x.com/waffle_maker/status/2124298365538299976,"きたーーーー
 Museの内蔵ブラウザによる制約を回避じゃーーー

@@ -1,5 +1,140 @@
 [
   {
+    "id": "2124411072425943374",
+    "cardId": "r38_163",
+    "datetime": "2026-11-22T17:53:00+09:00",
+    "postedAt": "2026-11-22T16:54:03+09:00",
+    "source": "timeline",
+    "title": "11/21に配信が始まったTeslaのFSD v15に入った「Reality View」です。",
+    "summary": "車の真上から見たような写真に近い映像を、運転と同じモデルがリアルタイムで描く。矢印やピンで次の動作が分かる。HW4で新しいAMD Ryzenの車に限られる見込み。「25倍」はTesla自身の発表で、外部の検証は未確認。Supervised版。",
+    "tweetId": "2124411072425943374",
+    "tweetIds": [
+      "2124411072425943374"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/taishiyade/status/2124411072425943374",
+    "author": {
+      "handle": "taishiyade",
+      "name": "Taishi | AI Language Learning App 🧞‍♂️"
+    },
+    "via": null,
+    "text": "さすがにTesla、このアプデはヤバくね？",
+    "images": [
+      {
+        "type": "video_preview",
+        "url": "https://pbs.twimg.com/amplify_video_thumb/2124354330807373824/img/5kXxQ-tBQID4wg9M.jpg"
+      }
+    ],
+    "deepDive": "#11/21に配信が始まったTeslaのFSD v15に入った「Reality View」です。\nもう1件、タイムラインからです。[taishiyadeさん](https://x.com/taishiyade/status/2124411072425943374)が紹介していたのは、11/21に配信が始まったTeslaのFSD v15に入った「Reality View」です。元は[Nic Cruz Pataneさん](https://x.com/niccruzpatane/status/2124354639399370872)の投稿で、市街地での走行映像が付いており、表示は約15万回です。\n\n[Drive Tesla](https://driveteslacanada.ca/news/tesla-reality-view/)によると、車の真上に置いた仮想カメラから見たような、写真に近い映像をリアルタイムで描く機能です。TeslaのAI担当VP、Ashok Elluswamyさんによれば、運転しているのと同じエンドツーエンドのモデルが、この映像も描いています。曲がる予定の矢印や、駐車しようとしている場所のピンも出して、「車が次に何をするつもりか」が分かるようになっている、と説明しています。同社は、2020年の古い線画の表示より計算が軽い、とも述べています。HW4で、新しいAMD Ryzenプロセッサの車に限られる見込みだ、とも報じられています。\n\n[Digital Trends](https://www.digitaltrends.com/cars/tesla-fsd-v15-rollout/)によると、Teslaは「危険な場面への対応が25倍よくなった」としています。これは、大量のネット動画で学習した新しい画像処理部分による、重大な介入の頻度の比較だそうです。ほかに、標識・穴・水たまりの検出の改善、速度取締カメラの手前での自動減速、サイクルラック用のモードも追加されています。ただし、引き続き人が見ている前提の「Supervised」版です。\n\nAIが「何をしようとしているか」を人に見せるのは、AIの安全性研究でいう説明可能性に近い取り組みです。一方で、描かれた映像が現実と本当に合っているか、つまり生成した絵がもっともらしいだけでズレていないかを確かめる方法は、まだ公開されていません。25倍という数字もTesla自身の発表で、外部の検証はまだ見つけていません。",
+    "followUps": []
+  },
+  {
+    "id": "2123770925300806120",
+    "cardId": "r38_162",
+    "datetime": "2026-11-22T17:53:00+09:00",
+    "postedAt": "2026-11-20T22:30:21+09:00",
+    "source": "timeline",
+    "title": "OpenAIのGitHubに公開された音声SDK「openai-live-esp32」のサンプルに、ｽﾀｯｸﾁｬﾝが入っています。",
+    "summary": "ESP32-S3でLive APIの音声アシスタントを作る実験的なSDK。公式サポートはない。サンプルファームウェアにはAPIキーとWi-Fiパスワードが埋め込まれる。製品にするなら短い寿命のトークンが必要、というのは私の推測です。",
+    "tweetId": "2123770925300806120",
+    "tweetIds": [
+      "2123770925300806120"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/meganetaaan/status/2123770925300806120",
+    "author": {
+      "handle": "meganetaaan",
+      "name": "ししかわ/Shinya Ishikawa"
+    },
+    "via": null,
+    "text": "OpenAIのESP32 SDKのサンプルにｽﾀｯｸﾁｬﾝがある\n[github.com/openai/openai-…](https://github.com/openai/openai-live-esp32/tree/main/examples/stackchan)\nOpenAIのESP32 SDKのサンプルにｽﾀｯｸﾁｬﾝがある？？？？？？？？",
+    "images": [],
+    "deepDive": "#OpenAIのGitHubに公開された音声SDK「openai-live-esp32」のサンプルに、ｽﾀｯｸﾁｬﾝが入っています。\nタイムラインからです。[ししかわさん（@meganetaaan）](https://x.com/meganetaaan/status/2123770925300806120)が、OpenAIのGitHubに公開された[openai-live-esp32](https://github.com/openai/openai-live-esp32)のサンプルに、ｽﾀｯｸﾁｬﾝが入っていると書いて「？？？？」と驚いていました。tksさんのリポストで流れています。\n\nこれは、ESP32-S3のマイコンでOpenAIの「Live API」を使った音声アシスタントを作るための、実験的なSDKです。READMEには、公式サポートはない、と書かれています。中身は、ボードに依存しないC言語のライブラリと、ESP-IDF用のアダプタに分かれています。`POST /v1/live/sessions` でWebRTCの接続を始め、音声はRTPとOpusで流し、イベントはデータチャネル上のJSONでやり取りします。音声の形式は24kHz・16bitモノラルのPCMです。Realtime APIとは別の「Live API」向けだとはっきり書かれています。\n\nサンプルは、Waveshareの丸いAMOLEDボード、M5Stack CoreS3 LITE、画面のないヘッドセットのほか、カメラとサーボを使う[M5Stack StackChanの例](https://github.com/openai/openai-live-esp32/tree/main/examples/stackchan)もあります。\n\nサンプルのファームウェアには、APIキーとWi-Fiのパスワードがそのまま埋め込まれます。[SECURITY.md](https://github.com/openai/openai-live-esp32/blob/main/SECURITY.md)でも、これは開発用の都合であり、ファームウェアやフラッシュのバックアップを公開しないよう注意しています。手元で試すぶんには手軽です。配る製品にするなら、キーを端末に持たせず、サーバー側で短い寿命のトークンを発行する形が必要だと思います（私の推測です）。WebRTCの部分には、別途セキュリティレビューの文書が付いています。ただし、本番向けの認証ではない、とも書かれています。",
+    "followUps": []
+  },
+  {
+    "id": "2123824683862855898",
+    "cardId": "r38_161",
+    "datetime": "2026-11-22T14:54:00+09:00",
+    "postedAt": "2026-11-21T02:03:58+09:00",
+    "source": "likes",
+    "title": "エージェント用の作業手順集「pstack」の小さな更新（v0.15.46）です。スキルが短くなり、Gemini 4 Neonがレビュー役に入りました。",
+    "summary": "使っている人には自動で更新が届く。割り当てを変えたいときは /setup-pstack を再実行。スキルが短くなった分、使う文脈（トークン）も減るかもしれない（私の推測です）。既存の cursor/plugins 紹介 r38_158 や Neon 発表 r38_118 とは別件。",
+    "tweetId": "2123824683862855898",
+    "tweetIds": [
+      "2123824683862855898"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/poteto/status/2123824683862855898",
+    "author": {
+      "handle": "poteto",
+      "name": "lauren"
+    },
+    "via": null,
+    "text": "small updates in pstack v0.15.46\n\n• lots of pruning, skills are now much shorter\n• gemini 4 neon is added as a panel reviewer\n\nit's autoupdated for grok bot / cursor users! if you want to change any of the model routing, just run /setup-pstack again\n\n[x.ai/bot/plugin/971…](https://x.ai/bot/plugin/9717366)",
+    "images": [],
+    "deepDive": "#エージェント用の作業手順集「pstack」の小さな更新（v0.15.46）です。スキルが短くなり、Gemini 4 Neonがレビュー役に入りました。\nいいねからです。[Lauren Tanさん（@poteto）](https://x.com/poteto/status/2123824683862855898)が、エージェント用の作業手順集「pstack」の小さな更新（v0.15.46）を案内していました。TanさんはSpaceX AIにいて、React Compilerのコアチームで、以前はCursorにいた方です。今回の要点は2つで、いらない部分を削ってスキルの本文がかなり短くなったことと、複数のモデルで見比べるレビュー役にGemini 4 Neonが加わったことです。投稿では、使っている人には自動で更新が届き、モデルの割り当てを変えたいときは `/setup-pstack` を再実行する、と書いています。\n\n[公式のsetup-pstackの手順](https://raw.githubusercontent.com/cursor/plugins/main/pstack/skills/setup-pstack/SKILL.md)によると、設定は `~/.cursor/rules/pstack-models.mdc` に書き込まれます。見比べる係は `arena runners`（同じ課題を複数モデルに解かせる）、`arena cross-judge pool`（その結果を判定する）、`interrogate reviewers`（レビューする）の3つです。ここに古いGeminiが入っていれば `gemini-4-neon-xhigh` に置き換わり、自分でNeonの別の強さを選んでいた場合はそのまま残ります。手順に書かれている初期値では、コードや文章、判断は `claude-opus-5-5-xhigh-fast` で、見比べる係にはFable 5.2、Opus 5.5、Gemini 4 Neonが並びます。どの役もxhighより上では動かず、以前あった「unlimited」の予算はなくなっています。古い設定ファイルは、`/setup-pstack` を実行し直すまで前の割り当てのままです。\n\n表示は約42万回、いいねは3,883件、ブックマークは1,389件です。すでに使っているなら、`/setup-pstack` を一度実行すると、割り当てにNeonが入ったかを確認できます。スキルが短くなった分、使う文脈（トークン）も減るかもしれません（私の推測です）。",
+    "followUps": []
+  },
+  {
+    "id": "2124293174504099998",
+    "cardId": "r38_160",
+    "datetime": "2026-11-22T13:57:00+09:00",
+    "postedAt": "2026-11-22T09:05:34+09:00",
+    "source": "likes",
+    "title": "若手コンサルの「AIまかせ資料」を赤ペンで添削した1枚です。",
+    "summary": "「論点」になっていない、同じ見出しの繰り返し、太字の多用など。表示約70万回、いいね1,957、ブックマーク1,637。チェック用に保存する人が多かったように見える（私の推測です）。",
+    "tweetId": "2124293174504099998",
+    "tweetIds": [
+      "2124293174504099998"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/Suryman_2/status/2124293174504099998",
+    "author": {
+      "handle": "Suryman_2",
+      "name": "2代目スリマン"
+    },
+    "via": null,
+    "text": "若手コンサルの資料レビュー。またAIか…と頭を抱えがち",
+    "images": [
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HXsAWdDa8AA8_nl.jpg"
+      }
+    ],
+    "deepDive": "#若手コンサルの「AIまかせ資料」を赤ペンで添削した1枚です。\nいいねからです。[2代目スリマンさん](https://x.com/Suryman_2/status/2124293174504099998)（プロフィールは「外資ITで『会議に出る係』をやっています」）が、「論点4：生成AI活用の推進方針とご判断事項」というスライドに、赤ペンでたくさんツッコミを入れた画像を投稿していました。「論点」と書いてあるのに論点になっていない、「リスク」と「ご判断いただきたい点」が3回ずつ繰り返されている、カギカッコや太字が多すぎる、「でた、一発で分かる注釈。絶対自分で読んでないでしょ」、最後は「またか。AIおまかせ全部盛りセット」といった書き込みです。表示は約70万回、いいねは1,957件、ブックマークは1,637件です。いいねに近い数のブックマークがあるので、自分の資料チェック用に取っておく人が多かったようです（私の推測です）。AIが作った資料は、見た目が整っていても、同じ型の繰り返しや中身のない強調ですぐ分かります。LPやストアの説明文をAIで作るときも、最後に自分の目で見直す価値がありそうです。",
+    "followUps": []
+  },
+  {
+    "id": "2123608249710915966",
+    "cardId": "r38_159",
+    "datetime": "2026-11-22T13:57:00+09:00",
+    "postedAt": "2026-11-20T11:43:56+09:00",
+    "source": "timeline",
+    "title": "Sakana AIが、AIセキュリティ専門の研究チーム「Security Research Group」を始動しました。",
+    "summary": "柱はAIを使った集団でのサイバー防御と、AIそのものの安全性。CEO直轄。見つける速さに直す速さが追いつかないので、設計段階で弱点を作らない方針。既存の JFinBench や Sawara とは別件。",
+    "tweetId": "2123608249710915966",
+    "tweetIds": [
+      "2123608249710915966"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/SakanaAILabs/status/2123608249710915966",
+    "author": {
+      "handle": "SakanaAILabs",
+      "name": "Sakana AI"
+    },
+    "via": null,
+    "text": "Sakana AI、AIセキュリティ専門の研究開発チーム「Security Research Group」始動 🐙\n\nブログ：[sakana.ai/security-resea…](https://sakana.ai/security-research-group/#Japanese)\nCareers：[sakana.ai/careers/member…](https://sakana.ai/careers/member-of-technical-staff-security-research-group/#Japanese)\n\nAIを活用した集合的なサイバー防御と、AIシステム自体の安全性とセキュリティの確保を研究する研究開発チーム「Security Research Group」を 立ち上げました。\n\nAIによってソフトウェアの欠陥が見つかりインシデントが増加している中、セキュリティを品質の問題として捉え、設計や開発の段階から欠陥を作り込まないことを目的とした本質的なセキュリティの向上等の調査・研究開発に取り組みます。品質の作り込みは、日本が長く強みとしてきた分野でもあります。\n\n本グループは事業活動とは切り離して運営し、研究成果や再現可能なベンチマーク、実践的なガイドラインを公開しながら、政府、産業界、学術界と連携していきます。\n\n⎯⎯⎯\n\nIntroducing the Sakana AI Security Research Group 🐡\n\nBlog: [sakana.ai/security-resea…](https://sakana.ai/security-research-group/)\n\nThe Security Research Group is a R&D team studying collective, AI-driven cyber defense and the security and safety of AI itself.\n\nAs the use of AI leads to the discovery of more software flaws and an increase in security incidents, we are engaging in research and development aimed at fundamentally enhancing security, defining it as a quality issue and focusing on preventing the introduction of defects from the stages of design and development. Building quality into products is an area that has long been a key strength of Japan.\n\nThe group operates independently of our commercial business. We will share research, reproducible benchmarks, and practical guidelines openly, and work with government, industry, and academia.\n\nJoin us: [sakana.ai/careers/member…](https://sakana.ai/careers/member-of-technical-staff-security-research-group/) 🐟",
+    "images": [
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HXiSZnsaAAAm882.png"
+      }
+    ],
+    "deepDive": "#Sakana AIが、AIセキュリティ専門の研究チーム「Security Research Group」を始動しました。\nタイムラインからです。Sakana AIが11/20に、AIセキュリティ専門の研究チーム「Security Research Group」を始動しました（[公式の投稿](https://x.com/SakanaAILabs/status/2123608249710915966)、[公式ブログ](https://sakana.ai/security-research-group/)）。研究の柱は、「AIを使った集団でのサイバー防御」と「AIそのものの安全性・セキュリティ」の2つです。事業活動とは切り離して運営し、研究成果や再現可能なベンチマーク、実践的なガイドラインを公開し、政府・産業界・学術界とも連携する、と書いています。[日経](https://www.nikkei.com/article/DGXZQOUC2077P0Q6A121C2000000/)は、チームをCEO直轄とし、デビッド・ハCEOらが率いる、と報じています。\n\nブログが挙げる背景は次のとおりです。NISTによると、CVEの登録は2020年から2025年で263%増え、2026年初めは前年の同じ時期より約3割多いペースです。日本語の脆弱性情報を集めるJVN iPediaも、直近の四半期の登録が前年の約2倍でした。FBIの報告として、攻撃者がAIエージェントで多くの相手を同時に攻め、使われている弱点はSSRF、IDOR、APIの認証もれ、インジェクションだった、とも書いています。\n\n主張は、「AIで脆弱性を見つける速さに、組織の直す速さが追いつかない」ので、作ったあとに直すより、設計・開発の段階で弱点を作らないこと（セキュア・バイ・デザイン）に力を入れる、という方針です。セキュリティを狩野モデルの「当たり前品質」として扱い、日本のものづくりが培ってきた品質の伝統で勝負する、という見せ方をしています。FBIや、ブログが引用するNICTの注意喚起が挙げる「認可チェックもれ」や「入力チェックなし」は、アプリのサーバー側でもよくある穴です。ガイドラインやベンチマークが公開されたら、すぐ使えそうです。",
+    "followUps": []
+  },
+  {
     "id": "2124332545227870316",
     "cardId": "r38_158",
     "datetime": "2026-11-22T11:54:00+09:00",
@@ -50,7 +185,18 @@
     "text": "きたーーーー\nMuseの内蔵ブラウザによる制約を回避じゃーーー\n[chromewebstore.google.com/detail/jnakhhj…](https://chromewebstore.google.com/detail/jnakhhjmpmoohbjgfccbccfoifnmbdjd?utm_source=item-share-x)",
     "images": [],
     "deepDive": "#公式のChrome拡張「Muse from Meta」が出て、Museが自分のChromeで作業できるようになります。\nタイムラインからです。[わっふるめーかーさん](https://x.com/waffle_maker/status/2124298365538299976)が、公式のChrome拡張「[Muse from Meta](https://chromewebstore.google.com/detail/muse-from-meta/jnakhhjmpmoohbjgfccbccfoifnmbdjd)」を紹介していました。「Museの内蔵ブラウザによる制約を回避」と書いています。\n\n11/13ごろ、発表より先にストアに載っているのが見つかっていました（[Pillitteriさんの記事](https://pasqualepillitteri.it/en/news/33147/meta-muse-ai-agent-chrome-extension-side-panel)）。そのあと11/20に、MetaのAI責任者アレクサンドル・ワンさんが「すでに20万人が使っている」と正式に発表しました（[Digital Trends](https://www.digitaltrends.com/computing/meta-is-putting-muse-in-a-chrome-sidebar-and-the-official-announcement-just-arrived/)）。報道時点のストア評価は4.6で、Chrome 137以上が必要です。Alt+Shift+Cで開ける、とストア側の説明にあります。\n\n[Metaのヘルプ](https://www.meta.com/help/superintelligence/2124746764949121/)によると、MuseはChromeのサイドパネルに出てきて、作業は「Muse専用のタブグループ」の中だけで進み、それ以外のタブには手が出せません。ページをクリックするか、Escを押すか、タブをグループの外に出せば、操作を取り戻せます。保存したパスワード、閲覧履歴、Chromeの設定はMuseからは見えず、ページに出ているパスワードも、Museが読む前に消されます。その一方で、ログインしているサイトなら、Museはどれでも、ログイン情報を聞き直さずに使えます。使わせたくないアカウントは、拡張をつなぐ前にログアウトしておくように、とMeta自身が書いています。また、Museの操作はGoogleアカウントや閲覧履歴に残り、広告やおすすめに影響することがあります。購入などの大事な操作は、前もって承認を求める設計で、どの操作で承認を求めるかは設定で変えられます。\n\n「制約を回避」についてです。これまでの内蔵ブラウザは、Meta側のクラウド上の仮想マシンで動いていた、と伝えられています。ボット対策やログインの手間で止まりやすかった可能性がありますが、ここは私の推測です。自分のChromeを使えば、自分のログイン状態のまま進められます。便利になるぶん、ログイン中のアカウントにエージェントの手が届く設計です。\n\nなお、これは拡張そのものの話ではありませんが、11/18のReutersの調査では、MuseがAndroidの通知アクセスや、Macのアクセシビリティ・画面取得の権限を使って、Signalのメッセージ本文を読めることが確認されています。暗号化を破ったのではなく、端末にすでに表示されていた文字を読む形です。Metaは個別の事例だとしています。\n\nMuse本体の提供は、いまのところ米国とカナダです。ほかの国の日程は、Metaから出ていません。試すなら、銀行や決済、仕事用のアカウントからはログアウトしたChromeのプロファイルを、Muse専用に分けておく方が安心です。",
-    "followUps": []
+    "followUps": [
+      {
+        "datetime": "2026-11-22T13:57:00+09:00",
+        "clock": "13:57",
+        "title": "Museの話の続きです。MetaのMuseに、イベント管理サービスのLuma（lu.ma）のコネクタが追加されました。",
+        "text": "Museの話の続きです。[ふくやんさん](https://x.com/pkdnyn/status/2124321851791061073)によると、MetaのMuseに、イベント管理サービスのLuma（lu.ma）のコネクタが追加されました。[GOROmanさん](https://x.com/GOROman/status/2124357164282294750)は実際につないでみて、「個別の権限の量が多すぎるだろwww」と書いています。投稿には、権限の一覧をスクロールする短い画面録画が付いています。\n\nエージェントに何をどこまで任せるかを、項目ごとに細かく決められる作りです。安全には良い一方で、全部を自分で見直すのは現実的ではない、というのがGOROmanさんの指摘です。送信や管理者の変更のような強い権限は、最初から広く許可せず、使うときだけ確認する設定のままにしておく方が安心です。",
+        "tweetIds": [
+          "2124321851791061073",
+          "2124357164282294750"
+        ]
+      }
+    ]
   },
   {
     "id": "2124314737358102537",
@@ -10631,6 +10777,16 @@
         "text": "[NVIDIAの公式の発表](https://nvidianews.nvidia.com/news/nvidia-board-of-directors-establishes-national-security-and-export-control-oversight-committee)を、GOROmanさんが[リポスト](https://x.com/GOROman/status/2122657676559863843)していました。\n- **委員会のしくみ：** 取締役会にずっと置かれる委員会です。委員長はSuzanne Nora Johnsonさんで、少なくとも3か月に1回開きます。\n- **外の専門家：** 会社の外から、法律、国の安全、貿易のルールの専門家をやといます。\n- **報告の流れ：** 社内の、国の安全を担当するチームと、貿易のルールを守るチームが、この委員会と、仮のCEOのColette Kressさんに、直接報告します。\n\nTom's Hardwareは、委員会を作ったことを、「馬が逃げてから、馬小屋の扉を閉めるようなもの」と皮肉っています（[Tom's Hardware](https://www.tomshardware.com/tech-industry/policy/nvidia-board-establishes-national-security-and-export-control-oversight-committee-in-wake-of-jensen-huang-scandal-group-to-work-with-independent-law-national-security-and-trade-compliance-experts)）。",
         "tweetIds": [
           "2122657676559863843"
+        ]
+      },
+      {
+        "datetime": "2026-11-22T13:57:00+09:00",
+        "clock": "13:57",
+        "title": "フアン氏の件はこれまでにもお伝えしているので、新しい点だけです。",
+        "text": "フアン氏の件はこれまでにもお伝えしているので、新しい点だけです。[GOROmanさん](https://x.com/GOROman/status/2124360590026277170)がリポストしていた[WSJ日本版の投稿](https://x.com/WSJJapan/status/2124359731221299546)によると、暫定CEOになったCFOのコレット・クレス氏は、もともとフアン氏の一部の取引に懐疑的でした。AI業界への資金支援を絞るとみられています（[The Next Web](https://thenextweb.com/news/nvidia-financing-kress-neoclouds-upfront-payments)によるWSJの要約）。引き締めはフアン氏の在任中から始まっており、8月にはOpenAIのオハイオ州データセンターへの関わりを縮め、ネオクラウド（GPU専門のクラウド会社）には顧客から前払いを取るように伝えていたそうです。\n\n[TechCrunch](https://techcrunch.com/2026/11/17/nvidias-startup-stakes-ballooned-to-65b-but-huangs-exit-puts-future-deals-in-doubt/)は、NVIDIAのスタートアップなどへの出資の評価額が655億ドルまで膨らんでいたと報じています。これには既存出資の評価の上昇も含まれます。[Axios](https://www.axios.com/2026/11/17/nvidia-ai-startup-investment-discipline-kress)によると、クレス氏は決算説明で、ネオクラウドなどへの支援を「規律正しく、選別的に」行うと述べています。NVIDIAのお金に頼っていたGPUクラウドやAIスタートアップが縮むと、GPUの値段やAI APIの値段・無料枠に、少し遅れて響くかもしれません（私の推測です）。",
+        "tweetIds": [
+          "2124360590026277170",
+          "2124359731221299546"
         ]
       }
     ],
