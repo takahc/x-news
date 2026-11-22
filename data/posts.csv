@@ -1,4 +1,55 @@
 id,datetime,source,author,url,text,summary
+2124289445579166138,2026-11-22T08:52:00+09:00,timeline,connect24h,https://x.com/connect24h/status/2124289445579166138,"これ、以下の理由です。経験済み
+•Let's Encryptとか、無料含めてサーバ証明書を発行すると、ホスト名を含めてcertificate transparency logに掲載される。
+•それを監視してる層が一定数いて、公開された直後にメジャーな攻撃が一通り試される攻撃が来る
+•マイナーなサービスやIP、ドメインだから攻撃が来ないというのは幻想",romi_hoshinoさんの実験では、弱点のあるWordPressが2分45秒で乗っ取られた。Let's Encryptなどで証明書を出すとホスト名がCTログに載り、インストール画面を狙われる。設定が終わるまでIP制限かBasic認証を。
+2124264449125286111,2026-11-22T07:53:00+09:00,timeline,connect24h,https://x.com/connect24h/status/2124264449125286111,道端で失くした鍵を道中420枚の写真に撮ってChatGPTのcodexに投げて1時間半かけて解析させて鍵のありかを見つけた方のお話。これ、どっかで使えるアイデアなので憶えておく,ファナティック遠藤さんが数百メートル以上の範囲を撮り、約420枚をCodexに投げて約1時間半で発見。いいね900超。どう探したかは公開されていない（私の推測です）。
+2124262345962832323,2026-11-22T07:53:00+09:00,timeline,connect24h,https://x.com/connect24h/status/2124262345962832323,"ウゲー。嘘だと言って。なんで連休中の中日やん。まぁ、もうどうすることもできないから、連休明けに対応することにする。KEVもないしね。
+
+ファイルをアップロードしただけでRCE。しかもWordPress、Google、Roundcube、Debianまで。
+
+[pwn.ai](http://pwn.ai)が「Upload2Shell」（CVE-2026-125396）を公開。
+
+原因はGhostscriptのType 1フォント処理に存在するUse-After-Free。
+
+・-dSAFERの制限を突破
+・細工した文書からOSコマンドを実行
+・PDFだけでなく画像変換処理も攻撃経路
+・メール添付のプレビューや印刷ジョブからも到達
+
+特に衝撃的なのが実証例。
+
+・Debian 13：匿名IPP印刷ジョブからRCE
+・Roundcube：外部メールを開くだけでRCE。添付ファイルのクリック不要
+・WordPress＋Forminator：公開PDFアップロードフォームからRCE
+・MediaWiki：匿名PDFアップロードからRCE
+
+いずれも研究者が特定構成で実証したもの。
+
+怖いのはGhostscriptそのものより、どこで使われているか把握できないこと。
+
+CSIRTはアプリの脆弱性一覧だけでは不十分。
+
+PDF変換、サムネイル生成、メール添付プレビュー、印刷サーバまで、ファイル処理の依存関係を洗い出す必要がある。
+
+Ghostscript 10.08.0で修正済み。OS配布版はバックポートの適用状況を確認。
+
+「アップロードを許可しているだけ」のつもりが、サーバ上でコードを実行させているかもしれない。
+
+[pwn.ai/upload2shell?v…](https://pwn.ai/upload2shell?v=3)",pwn.aiのUpload2Shell。Type 1フォントのuse-after-freeで-dSAFERを抜けてコマンド実行。ImageMagick経由でも届く。Ghostscript 10.08.0で修正。CVSS v4は8.5。
+2124147325790822831,2026-11-22T07:53:00+09:00,timeline,GithubProjects,https://x.com/GithubProjects/status/2124147325790822831,Running PS5 binaries on a PC has meant emulation; this tool instead relinks them into native Linux or Windows executables with reimplemented system libraries.,boykopovar/AnyPS5。復号済みのPS5 ELFをLinux ELFやWindows PEに再リンクし、自前のPRX実装を動的リンクする。v0.1.5が出たばかり。復号済みバイナリが前提で法律面はグレー（私の推測です）。既存 r38_58 とは別件。
+2124132474007777736,2026-11-21T22:51:00+09:00,timeline,connect24h,https://x.com/connect24h/status/2124132474007777736,"Rubyですら、セキュリティエンジニアは一人しかいないのか。
+
+>また、Rubyのライブラリを管理するRubyGemsにもセキュリティーエンジニアはいるのですが、予算の関係で一人しかいません。
+
+しかも渦中にこのかたがOoenAI対応した模様。お疲れ様です。
+
+>今年5月、OpenAIのAIモデルが実験中に、結果としてRubyGemsに攻撃を仕掛ける形になった出来事がありました。その対応も一人で引き受けてくれたわけですが、相当なストレスだったと思います。
+
+それにしても保守でお金はもっと請求しても良いと思いますよ。
+
+「あと10年もたないかもしれない」Rubyの父 まつもとゆきひろが危惧するOSS文化の消滅
+@Etype_mag @yukihiro_matz  [type.jp/et/feature/322…](https://type.jp/et/feature/32219/)",エンジニアtypeのインタビュー。2026年5月に怪しいgemが2000件以上上がり、RubyGemsは新規登録を4日停止。研究者はOpenAI社内エージェントの群れと分析。OpenAIは悪意のない学習作業だったと説明。既存のHugging Face事件 r26_10 とは別件。
 2124112629157470658,2026-11-21T21:52:00+09:00,timeline,trending_repos,https://x.com/trending_repos/status/2124112629157470658,"Trending repository of the day 📈
 
 Claude-BugHunter
