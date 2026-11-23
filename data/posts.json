@@ -1,5 +1,82 @@
 [
   {
+    "id": "2124839921001316428",
+    "cardId": "r38_200",
+    "datetime": "2026-11-23T21:49:00+09:00",
+    "postedAt": "2026-11-23T21:18:09+09:00",
+    "source": "timeline",
+    "title": "GithubProjectsさんが、自分のMacやPCの中で動くオープンソースのAIアシスタント「Linger」を紹介していました。",
+    "summary": "Apache 2.0ベース（追加条件あり）。独自推論エンジン PolyStrata。記憶は手元に残るが、エージェントはサンドボックスではなくそのパソコンの権限で動く。配信時点のスターは4,085。",
+    "tweetId": "2124839921001316428",
+    "tweetIds": [
+      "2124839921001316428"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/GithubProjects/status/2124839921001316428",
+    "author": {
+      "handle": "GithubProjects",
+      "name": "GitHub Projects Community"
+    },
+    "via": null,
+    "text": "A personal AI assistant that runs entirely on your own Mac or PC, no cloud.\n\nLinger remembers your mail, chats and meetings and messages you only when something needs you.",
+    "images": [
+      {
+        "type": "video_preview",
+        "url": "https://pbs.twimg.com/amplify_video_thumb/2124839884502478848/img/p3QKH8dyNsGh66T6.jpg"
+      }
+    ],
+    "deepDive": "#GithubProjectsさんが、自分のMacやPCの中で動くオープンソースのAIアシスタント「Linger」を紹介していました。\nタイムラインからです。[GithubProjectsさん](https://x.com/GithubProjects/status/2124839921001316428)が、自分のMacやPCの中で動くオープンソースのAIアシスタント「Linger」を紹介していました（[公式サイト](https://heylinger.com/)、[GitHub](https://github.com/simplexai-labs/linger)、配信時点のスターは4,085）。メールやチャット、会議の内容を覚えておき、必要なときだけ声をかけてくれる、という作りです。リポジトリは2026年11月10日に作られたばかりです。ライセンスはApache 2.0を土台にしていますが、第三者向けのホステッド提供などには、追加の条件がついています。\n\n仕組みで目を引くのは、独自の推論エンジン「[PolyStrata](https://github.com/simplexai-labs/PolyStrata)」です。専門家に分かれたモデルのうち、よく使う部分だけをGPUに置き、残りをメモリやSSDに置きます。READMEには、1,250億パラメータのQwen3.8-Flash-Nextが、12GBのGPUと64GBのメモリで動く、と書かれています。これは作者側の説明で、こちらでは性能は確かめていません。\n\n[公式ドキュメント](https://docs.heylinger.com/security/data-and-privacy.md)によると、部屋の会話や記憶、ファイルは、自分で動かしているサーバーとパソコンの中に残ります。データが外に出るのは、クラウドのモデルや、Gmail・Slackなどの外部サービス、音声の書き起こしなど、自分でつないだ先に限る、という説明です。一方で、エージェントはサンドボックスでは動かず、そのパソコンの持ち主と同じ権限でファイルやアプリ、シェルを使います。メールを送るなどの書き込みは、確認を待つ仕組みです。手元で推論できるのは利点ですが、パソコン自体の守りと、どのサービスをつなぐかの選択が、そのまま安全の境界になります。",
+    "followUps": []
+  },
+  {
+    "id": "2124817137055547839",
+    "cardId": "r38_199",
+    "datetime": "2026-11-23T19:51:00+09:00",
+    "postedAt": "2026-11-23T19:47:37+09:00",
+    "source": "timeline",
+    "title": "connect24hさんが、井上亜星さんの講演「Lean で手続き的プログラムの証明が書けるようになった」を紹介していました。",
+    "summary": "Lean 4.35.0の vcgen で、for/while などの手続き型の書き方でも証明できる。まだ実験的。仕様の妥当性までは自動では保証されない（私の見方です）。既存のリーマン予想のLean検証 r38_139 とは別件。",
+    "tweetId": "2124817137055547839",
+    "tweetIds": [
+      "2124817137055547839"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/connect24h/status/2124817137055547839",
+    "author": {
+      "handle": "connect24h",
+      "name": "connect24h"
+    },
+    "via": null,
+    "text": "リーマン予想の証明で話題になった「Lean」。\n\n実は、数学だけの話ではない。\n普通のプログラムの正しさまで数学的に証明できるようになってきた。\n\n井上亜星氏の「Leanで手続き的プログラムの証明が書けるようになった」が興味深い。\n\nこれまでLeanによるプログラム検証といえば、再帰関数や帰納法を使った証明が典型的だった。\n\nしかし、今回紹介されているのは、もっと実務に近いプログラム。\n\n・for / while ループ\n・可変変数（let mut）\n・条件分岐\n・繰り返し処理の停止性\n・ループ不変条件\n\nこうした手続き的なコードについて、正しさを形式的に証明する。\n\n鍵となるのが2つのタクティク。\n\n① vcgen\nプログラムから検証条件を生成し、証明に必要な複雑な処理を肩代わりする。\n\n② grind\n生成された証明条件を自動的に解決する。必要に応じて補題を与えることで、証明を進められる。\n\n資料では、繰り返し自乗法を例に、計算結果が本当に root ^ n と一致することを証明している。\n\n重要なのは、テストとの違い。\n\nテストは、選んだ入力で期待どおり動くことを確かめる。\n\n形式検証は、明示した前提の下で、すべての対象入力について仕様を満たすことを証明する。\n\nそして、ここからが面白い。\n\nAIがコードを大量に生成する時代、人間がすべてのコードをレビューすることには限界がある。\n\nこれから重要になるのは、AIが書いたコードをAIにレビューさせるだけでなく、その正しさを機械的に検証できる仕組みではないか。\n\nリーマン予想の証明を検証したLeanが、日常的なプログラムの信頼性を支える。\n\nAIコーディングが普及するほど、Leanのような形式検証技術の価値は高まると思う。\n\nもちろん、証明できるのは明示された仕様に対する正しさであり、仕様自体の妥当性まで自動的に保証されるわけではない。\n\nそれでも、ソフトウェア開発が「コードを書く」から「コードの正しさを証明する」方向へ進む可能性を感じる資料。\n\n資料（全50枚）\n[speakerdeck.com/inoueasei/slid…](https://speakerdeck.com/inoueasei/slide-aa115490-ea99-4286-9de2-40794f4e861f)\n\nリーマン予想のLean検証声明\n[leanprover-community.github.io/blog/posts/rie…](https://leanprover-community.github.io/blog/posts/riemann-hypothesis/)",
+    "images": [],
+    "deepDive": "#connect24hさんが、井上亜星さんの講演「Lean で手続き的プログラムの証明が書けるようになった」を紹介していました。\nタイムラインからです。[connect24hさん](https://x.com/connect24h/status/2124817137055547839)が、井上亜星さんのTPP2026（11/16〜17）の講演「[Lean で手続き的プログラムの証明が書けるようになった](https://speakerdeck.com/inoueasei/slide-aa115490-ea99-4286-9de2-40794f4e861f)」を紹介していました。井上さんは、ラムダノートの『ゼロから始めるLean言語入門』と、「Lean by Example」の著者です。前にお伝えしたリーマン予想のLean検証は数学の話でしたが、今回は、ふだん書く手続き型のプログラムの正しさを、Leanで証明できるようになってきた、という話です。\n\nこれまでLeanでプログラムの正しさを確かめるときは、再帰で書いた関数を帰納法で証明するのが定番でした。いまは `for` や `while` のループ、`let mut` で書き換える変数、条件分岐を使った書き方でも証明できます。スライドの例は「繰り返し二乗法」で、`root ^ n` を計算する関数が本当にその値になることを示しています。手順は、ループが必ず終わること（毎回小さくなる値 `e` を指定する）、ループのあいだずっと `y * x ^ e = root ^ n` が成り立つこと、を書いたうえで、残りを `vcgen … with finish` に任せる、という流れです。`finish` の裏では `grind` が自動で証明し、適切な補題は自分で足す必要があります。\n\n公式の動きとしては、Lean 4.35.0（2026-10-12）の目玉が `vcgen` です。前の `mvcgen` に代わるもので、`mvcgen` は非推奨になりました。`do` で書いたプログラムだけでなく、x64アセンブラやWebAssemblyのような言語も検証の対象にできる作りで、速くもなりました。ただ、まだ「実験的」という扱いで、使うときはその旨のオプションが必要です（[リリースノート](https://lean-lang.org/doc/reference/latest/releases/v4.35.0/)、[公式チュートリアル](https://lean-lang.org/doc/tutorials/latest/vcgen/)）。\n\n「Dafnyでもよくない？」という想定質問に、井上さんは「信頼しているコードの大きさが違うので、単純には比べられない」と答えています。どちらが強力かについては、「宿題にさせてください」とのことでした。\n\nテストは選んだ入力で動くことを確かめるのに対し、形式検証は、明示した前提の下で対象の入力すべてについて仕様を満たすことを証明します。ただし、証明できるのは書いた仕様に対する正しさで、仕様そのものが妥当かどうかまで自動では保証されません。AIエージェントが書いたループ処理を、「なぜ正しいのか」まで機械で確かめられるようになりつつある、という意味では、大事な一歩だと思います（これは私の見方です）。",
+    "followUps": []
+  },
+  {
+    "id": "2124645448170479699",
+    "cardId": "r38_198",
+    "datetime": "2026-11-23T19:51:00+09:00",
+    "postedAt": "2026-11-23T08:25:23+09:00",
+    "source": "likes",
+    "title": "takmas8さんが、登壇や画面共有のときに見せたくない文字をモザイクで隠す方法をQiitaにまとめていました。",
+    "summary": "Text Blurrer、ZoomIt、Snipping Tool＋Copilotの3つ。モザイクは復元できることがあるので、APIキーなどは黒塗りか画面に出さないほうが安全（私の意見です）。",
+    "tweetId": "2124645448170479699",
+    "tweetIds": [
+      "2124645448170479699"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/takmas8/status/2124645448170479699",
+    "author": {
+      "handle": "takmas8",
+      "name": "takmas (Takashi Masumori)"
+    },
+    "via": null,
+    "text": "よくご質問いただくので記事にまとめました\n\n[qiita.com/Takashi_Masumo…](https://qiita.com/Takashi_Masumori/items/ffaa4a7e8008481a1d14)",
+    "images": [],
+    "deepDive": "#takmas8さんが、登壇や画面共有のときに見せたくない文字をモザイクで隠す方法をQiitaにまとめていました。\nいいねからです。[takmas8さん（益森貴士さん）](https://x.com/takmas8/status/2124645448170479699)が、「よく聞かれるので」と書いて、[登壇や画面共有のときにモザイクをかける方法](https://qiita.com/Takashi_Masumori/items/ffaa4a7e8008481a1d14)をQiitaにまとめていました。日本マイクロソフトでPower Platformのエンジニアをしており、いまは[株式会社TAKMASPOWER](https://www.takmaspower.com/)の代表です。記事で紹介している方法は3つです。\n\n1つ目は、ブラウザーの拡張機能「Text Blurrer」です。隠したい文字（名前やメールアドレスなど）を登録しておくと、ブラウザーに出たときに自動でぼかしてくれます。記事ではEdgeのアドオンとして紹介されていますが、[Edgeのストア](https://microsoftedge.microsoft.com/addons/detail/text-blurrer/ignhinbnamdnglcofbcconhndfilnmpj)にある版は、2023年9月のv0.1.1のままです。作ったのはhorihiroさんで、[Chrome版](https://chromewebstore.google.com/detail/text-blurrer/mbikojdgkmpjfackcmiliemgmkdkbbcl)は2026年9月のv0.2.7まで更新されていて、正規表現も使えます（[GitHub](https://github.com/horihiro/TextBlurrer-ChromeExtension)）。\n\n2つ目はZoomItです。ブラウザー以外の画面を撮るときに使い、範囲を選んでモザイクをかけ、スクリーンショットはWindowsのSnipping Toolで撮っている、と書いています。3つ目は動画で、Snipping Toolで録画した動画をCopilot Coworkに渡して、モザイクをかけてもらっています。社外秘を含まない一般的な素材なら、Claude Codeに頼むこともあるそうです。\n\n注意点として、モザイクやぼかしは、元の文字に戻せてしまうことがあります。セキュリティー会社のBishop Foxは、モザイクをかけた文字を復元する「Unredacter」を公開したうえで、「隠すなら黒塗りだけにすること。ぼかしやモザイクは使わない」と書いています（[解説](https://bishopfox.com/blog/unredacter-tool-never-pixelation)）。名前を隠す程度ならモザイクでも足りることが多いですが、APIキーやトークンのように漏れたら困るものは、黒塗りにするか、そもそも画面に出さないほうが安全です。デモ動画をAIに渡すときも、秘密が入っていないかを先に確かめたほうがよいと思います（これは私の意見です）。",
+    "followUps": []
+  },
+  {
     "id": "2124774608603615415",
     "cardId": "r38_196",
     "datetime": "2026-11-23T17:47:00+09:00",
@@ -1601,7 +1678,17 @@
     "text": "落ち目のZacalerとしてはありかも。\nCrowdStrikeがZscalerを買収協議中。これはセキュリティ業界の勢力図が変わる話。\n\nBloombergとReutersが報道。両社の時価総額合計は約2,650億ドル（約40兆円規模）。\n\n実現すれば、\n\n・CrowdStrikeのEDR/XDR\n・ZscalerのSSE/ZTNA\n・エンドポイントと通信・アクセス制御の統合\n・AIによる検知から封じ込めまでの自動化\n\nが一気に進む可能性。\n\nEDRを売る時代から、セキュリティ基盤を丸ごと押さえる時代へ。\n\nPalo Alto Networksとのプラットフォーム覇権争いが、さらに激しくなる。\n\n※現時点では買収協議の報道であり、正式合意ではない。\n\n[bloomberg.com/news/articles/…](https://www.bloomberg.com/news/articles/2026-11-20/crowdstrike-is-in-talks-to-buy-cybersecurity-firm-zscaler)",
     "images": [],
     "deepDive": "#CrowdStrikeが、Zscalerの買収を協議中だと報じられました。\n[Bloombergの報道（11/20）](https://news.bloomberglaw.com/mergers-and-acquisitions/crowdstrike-is-said-in-talks-to-buy-cybersecurity-firm-zscaler)で、関係者の話として伝えられています。[connect24hさんの投稿](https://x.com/connect24h/status/2123956401022378140)で知りました。まだ協議中で、まとまるかどうかは分かりません。値段も、公表されていません。\n- **株価：** [CNBC](https://www.cnbc.com/2026/11/20/zscaler-crowdstrike-deal.html)によると、Zscalerの株価は、時間外で18%上がり、CrowdStrikeは8%以上下がりました。会社の価値は、CrowdStrikeが約2,350億ドル、Zscalerが約320億ドルです。\n- **これまでの大きな買収：** GoogleのWiz（320億ドル）、CiscoのSplunk（約280億ドル）、Palo AltoのCyberArk（250億ドル）があります。\n- **背景：** CrowdStrikeは今月、AIのエージェントを見守るFiddler AIと、AIの信頼性を扱うDreadnodeの買収も発表しています。\n\nパソコンなどの端末の守り（EDR）と、通信やアクセスの制御（ゼロトラスト）が、1つの会社にまとまる形です。Palo Altoとの競争が、さらに激しくなりそうです（私の推測です）。",
-    "followUps": []
+    "followUps": [
+      {
+        "datetime": "2026-11-23T20:46:00+09:00",
+        "clock": "20:46",
+        "title": "",
+        "text": "前にお伝えした、CrowdStrikeがZscalerの買収を協議中だという話が、11/23に正式な合意として発表されました。[connect24hさんの投稿](https://x.com/connect24h/status/2124817876511228348)と、[CrowdStrikeの公式発表](https://ir.crowdstrike.com/news-releases/news-release-details/crowdstrike-acquire-zscaler-bringing-network-security-and-zero)によるものです。全額を株式で交換する取引で、Zscalerの企業価値は約439億ドルです。\n\n条件は、Zscalerの株1株に対してCrowdStrikeの株を1.135株渡す、というものです。1株あたり約260.41ドルで、11/20の終値に約34%を上乗せした値段です。買収が終わると、CrowdStrikeの株主が約84.1%、Zscalerの株主が約15.9%を持つ見込みです。CEOはCrowdStrikeのGeorge Kurtz氏が続け、ZscalerのJay Chaudhry氏はZscalerの事業を率いたまま、CrowdStrikeの取締役会に入ります。完了は、株主と規制当局の承認などを条件に、CrowdStrikeの2028年度後半の見込みです。それまでのあいだ、両社は別々に事業を続けます。取引時間の前には、Zscalerの株は13%以上上がり、CrowdStrikeの株は8%以上下がりました（[CNBC](https://www.cnbc.com/2026/11/23/crowdstrike-to-buy-zscaler.html)）。\n\n公式発表では、Zscalerのゼロトラスト基盤を「人・AIエージェント・アプリのあいだの、すべての通信の途中に入って、ゼロトラストを効かせる」仕組みだと説明しています。狙いとして「AI安全のためのゼロトラスト」を挙げ、Chaudhry氏は「AIエージェントが、新たな弱い環になりつつある」とも述べています。また、完了後30か月で、売上の相乗効果（年換算）が約10億ドルに達する見込みだとしています。合わせた年間の継続売上は、完了時点で100億ドルを超える想定です。",
+        "tweetIds": [
+          "2124817876511228348"
+        ]
+      }
+    ]
   },
   {
     "id": "2123949121702953398",
@@ -2751,6 +2838,16 @@
         "text": "次の内容の投稿が、出回っています（[引用されている投稿](https://x.com/connect24h/status/2122677853032796340)）。\n- 広報に聞いたところ、こう答えたそうです。ふだん、テスト用の環境には、本物ではないデータを使っていた。でも、システムを新しくするときに、本物のデータで確かめている途中で入られた。\n- ただし、これは楽天証券が正式に発表したことではありません。",
         "tweetIds": [
           "2122677853032796340"
+        ]
+      },
+      {
+        "datetime": "2026-11-23T21:49:00+09:00",
+        "clock": "21:49",
+        "title": "",
+        "text": "楽天証券の情報漏えいの続報です。前にお伝えした件数や、テスト環境から漏れたおそれがある、という骨格は同じです。新しく分かったのは、なぜ本番の顧客データがテスト環境にあったのかと、集団訴訟の動きです。\n\n[ITmediaの取材](https://www.itmedia.co.jp/news/article/2611/18/2000003302/)に、会社はこう答えています。システムの更新で、一部の機能の確認に本番のデータが必要だった。そこで顧客情報の一部を、一定期間テスト用のサーバーにコピーして検証していた。名前などを伏せる処理（マスキング）はしていなかった。担当者が独断でやったのではなく、社内の正式な手続きを経ていた、とのことです。通常はダミーのデータしか置かず、今回は例外だったとも説明しています。セキュリティー会社ラックの倉持浩明CTOは、[別の記事](https://www.itmedia.co.jp/news/article/2611/19/2000003312/)で、「テストにはダミーのデータを使うのが大原則。本番データを使うなら、伏せる処理をするのが原則」と指摘しています。金融庁は11月19日、金融商品取引法と個人情報保護法に基づく[報告徴求命令](https://www.rakuten-sec.co.jp/web/company/newsrelease/pdf/press2026111901.pdf)を出しました。業務停止ではなく、事実関係などの報告を求める措置です。\n\n集団訴訟については、牧野裕貴弁護士が11月18日に参加希望の登録サイトを開きました。報道では、約1日で約6,000人（[J-CASTニュース](https://news.yahoo.co.jp/articles/03eef7d1d862cf04093f57a65eb48c88ef38952f)）、20日午前には1万5,000人を超えたとされています（[MediaDogs](https://mediadogs.jp/2026/11/19/rakuten-securities-class-action-lawsuit/)）。23日には、牧野弁護士自身が「6万人を突破した」と[発表](https://x.com/yukimakino2023/status/2124688803487158612)しています。これは事務所側の発表数字です。\n\n[connect24hさん](https://x.com/connect24h/status/2124843567466303836)は、「参加の委任費用は無料ではない。取り戻したお金の何割を払うのかも分からないまま登録していないか」と指摘しています。ただ、[登録サイト](https://rakuten-lawsuit.com/)を確認すると、いまの登録は「参加の意思の表明」で、登録自体は無料です。提訴するかどうかも、まだ決まっていません。参加に必要な費用と成功報酬は、提訴の方針を決める段階で確定し、委任の手続の前に知らせる、その内容に同意しなければ支払いは生じない、と書いてあります。ログインIDやパスワード、口座番号は入力しないでください、とも明記されています。この件に便乗した「集団訴訟の手続」をかたる連絡には、注意したほうがよさそうです。公式の案内は `rakuten-lawsuit.com` からです。",
+        "tweetIds": [
+          "2124688803487158612",
+          "2124843567466303836"
         ]
       }
     ]

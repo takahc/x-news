@@ -1,4 +1,64 @@
 id,datetime,source,author,url,text,summary
+2124839921001316428,2026-11-23T21:49:00+09:00,timeline,GithubProjects,https://x.com/GithubProjects/status/2124839921001316428,"A personal AI assistant that runs entirely on your own Mac or PC, no cloud.
+
+Linger remembers your mail, chats and meetings and messages you only when something needs you.","Apache 2.0ベース（追加条件あり）。独自推論エンジン PolyStrata。記憶は手元に残るが、エージェントはサンドボックスではなくそのパソコンの権限で動く。配信時点のスターは4,085。"
+2124817137055547839,2026-11-23T19:51:00+09:00,timeline,connect24h,https://x.com/connect24h/status/2124817137055547839,"リーマン予想の証明で話題になった「Lean」。
+
+実は、数学だけの話ではない。
+普通のプログラムの正しさまで数学的に証明できるようになってきた。
+
+井上亜星氏の「Leanで手続き的プログラムの証明が書けるようになった」が興味深い。
+
+これまでLeanによるプログラム検証といえば、再帰関数や帰納法を使った証明が典型的だった。
+
+しかし、今回紹介されているのは、もっと実務に近いプログラム。
+
+・for / while ループ
+・可変変数（let mut）
+・条件分岐
+・繰り返し処理の停止性
+・ループ不変条件
+
+こうした手続き的なコードについて、正しさを形式的に証明する。
+
+鍵となるのが2つのタクティク。
+
+① vcgen
+プログラムから検証条件を生成し、証明に必要な複雑な処理を肩代わりする。
+
+② grind
+生成された証明条件を自動的に解決する。必要に応じて補題を与えることで、証明を進められる。
+
+資料では、繰り返し自乗法を例に、計算結果が本当に root ^ n と一致することを証明している。
+
+重要なのは、テストとの違い。
+
+テストは、選んだ入力で期待どおり動くことを確かめる。
+
+形式検証は、明示した前提の下で、すべての対象入力について仕様を満たすことを証明する。
+
+そして、ここからが面白い。
+
+AIがコードを大量に生成する時代、人間がすべてのコードをレビューすることには限界がある。
+
+これから重要になるのは、AIが書いたコードをAIにレビューさせるだけでなく、その正しさを機械的に検証できる仕組みではないか。
+
+リーマン予想の証明を検証したLeanが、日常的なプログラムの信頼性を支える。
+
+AIコーディングが普及するほど、Leanのような形式検証技術の価値は高まると思う。
+
+もちろん、証明できるのは明示された仕様に対する正しさであり、仕様自体の妥当性まで自動的に保証されるわけではない。
+
+それでも、ソフトウェア開発が「コードを書く」から「コードの正しさを証明する」方向へ進む可能性を感じる資料。
+
+資料（全50枚）
+[speakerdeck.com/inoueasei/slid…](https://speakerdeck.com/inoueasei/slide-aa115490-ea99-4286-9de2-40794f4e861f)
+
+リーマン予想のLean検証声明
+[leanprover-community.github.io/blog/posts/rie…](https://leanprover-community.github.io/blog/posts/riemann-hypothesis/)",Lean 4.35.0の vcgen で、for/while などの手続き型の書き方でも証明できる。まだ実験的。仕様の妥当性までは自動では保証されない（私の見方です）。既存のリーマン予想のLean検証 r38_139 とは別件。
+2124645448170479699,2026-11-23T19:51:00+09:00,likes,takmas8,https://x.com/takmas8/status/2124645448170479699,"よくご質問いただくので記事にまとめました
+
+[qiita.com/Takashi_Masumo…](https://qiita.com/Takashi_Masumori/items/ffaa4a7e8008481a1d14)",Text Blurrer、ZoomIt、Snipping Tool＋Copilotの3つ。モザイクは復元できることがあるので、APIキーなどは黒塗りか画面に出さないほうが安全（私の意見です）。
 2124774608603615415,2026-11-23T17:47:00+09:00,timeline,connect24h,https://x.com/connect24h/status/2124774608603615415,"流石のまとめ。個別企業のセキュリティ対策から、社会全体のサプライチェーンリスク管理へ議論を広げている点に脱帽。あと、ニュースの一次情報集めて、点と点を繋げて面での攻撃受動面を類推されている点が素晴らしい。データを見させていただいて、自分でも研究してみようと思う。何か見落としが見つかるかもしれない
 
 ホワイトハッカー、ダサぃ。 — [buymeacoffee.com/elkentaro/leye…](http://buymeacoffee.com/elkentaro/leyebimeji)","AI攻撃は既存の穴を速く大量に突くだけだ、として、影響の大きいサービス事業者へのセキュリティー義務やCSIRT整備を提案。背景にアララの11/6発表（重複除く約8,100万件）がある。既存のアララ流出 arara / r16_15 / r37_6 とは別件。委託先対策は私の意見です。"
