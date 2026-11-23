@@ -3460,6 +3460,11 @@
     "avatarUrl": "https://pbs.twimg.com/profile_images/1654103397371641857/M0NYGlY1_normal.jpg"
   },
   {
+    "handle": "Zai_org",
+    "name": "Z.ai",
+    "avatarUrl": "https://pbs.twimg.com/profile_images/1970775077181411328/W8XKaUIh_normal.jpg"
+  },
+  {
     "handle": "ZanEngineer",
     "name": "お侍さん",
     "avatarUrl": "https://pbs.twimg.com/profile_images/2112347496643231744/OH546zxU_normal.jpg"
@@ -3478,5 +3483,10 @@
     "handle": "ZimingLiu11",
     "name": "Ziming Liu",
     "avatarUrl": "https://pbs.twimg.com/profile_images/2088080015732924416/0MTpjyPT_normal.jpg"
+  },
+  {
+    "handle": "ZixuanLi_",
+    "name": "Zixuan Li",
+    "avatarUrl": "https://pbs.twimg.com/profile_images/2063659642111332353/jaPleXSN_normal.jpg"
   }
 ]

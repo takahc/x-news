@@ -1,4 +1,18 @@
 id,datetime,source,author,url,text,summary
+2124774608603615415,2026-11-23T17:47:00+09:00,timeline,connect24h,https://x.com/connect24h/status/2124774608603615415,"流石のまとめ。個別企業のセキュリティ対策から、社会全体のサプライチェーンリスク管理へ議論を広げている点に脱帽。あと、ニュースの一次情報集めて、点と点を繋げて面での攻撃受動面を類推されている点が素晴らしい。データを見させていただいて、自分でも研究してみようと思う。何か見落としが見つかるかもしれない
+
+ホワイトハッカー、ダサぃ。 — [buymeacoffee.com/elkentaro/leye…](http://buymeacoffee.com/elkentaro/leyebimeji)","AI攻撃は既存の穴を速く大量に突くだけだ、として、影響の大きいサービス事業者へのセキュリティー義務やCSIRT整備を提案。背景にアララの11/6発表（重複除く約8,100万件）がある。既存のアララ流出 arara / r16_15 / r37_6 とは別件。委託先対策は私の意見です。"
+2124773876173545714,2026-11-23T17:47:00+09:00,timeline,GOROman,https://x.com/GOROman/status/2124773876173545714,iPhoneのケースを SolidCraft で作ってみた。,"Rust製のパラメトリック3D CAD。MCPでAIエージェントが直接操作できる。GitHubで17,823スター、ダウンロード約220万。既存の Bambu CLI r38_193 とは別件。"
+2124719275864670681,2026-11-23T15:55:00+09:00,timeline,ZixuanLi_,https://x.com/ZixuanLi_/status/2124719275864670681,"GLM-5.4 is now available to all GLM Coding Plan users.
+
+New vision capabilities and stronger all-round coding performance.
+
+For users with weekly quotas, GLM-5.4 now comes with 50% more quota compared to GLM-5.3.",新しいビジョン機能と、週の利用枠が5.3より50%増えるとの案内。告知にベンチマークもAPI料金もなく、公式ドキュメントの一覧はまだ5.3まで。まずは手元で比べるのが安全（私の推測です）。既存の Project Maya / GLM-5.3-Flash とは別件。
+2124721630283026466,2026-11-23T13:54:00+09:00,timeline,GOROman,https://x.com/GOROman/status/2124721630283026466,"BambuのプリンタにCLIでファイル転送するのはできた。
+
+[github.com/GOROman/null-b…](https://github.com/GOROman/null-bambu-cli)",MIT。LAN Only Modeをオフにしたプリンター向け。印刷の開始・停止は未実装。白書では署名付きコマンドとDeveloper Modeの説明がある。既存の A1 mini セール r36_2 や周辺の紹介 r38_121 とは別件。
+2124715060295811194,2026-11-23T13:54:00+09:00,timeline,GOROman,https://x.com/GOROman/status/2124715060295811194,"HeyPCB 試してる
+[heypcb.ai](https://heypcb.ai/)",説明すると回路図・基板・ケース・ファームウェアまで進む。Starterは月20ドル分のAI作業（毎週補充）。出てきた設計が使えるかは人のチェックが前提（私の推測です）。既存の Bambu CLI r38_193 とは別件。
 2124698217619321016,2026-11-23T12:53:00+09:00,timeline,GithubProjects,https://x.com/GithubProjects/status/2124698217619321016,"An open-source tool that records what your app does, then checks a piece-by-piece Rust rewrite against it.
 
 Explore it here:

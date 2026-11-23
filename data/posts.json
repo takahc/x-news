@@ -1,5 +1,135 @@
 [
   {
+    "id": "2124774608603615415",
+    "cardId": "r38_196",
+    "datetime": "2026-11-23T17:47:00+09:00",
+    "postedAt": "2026-11-23T16:58:37+09:00",
+    "source": "timeline",
+    "title": "connect24hさんが、El Kentaroさんのエッセイ「ホワイトハッカー、ダサぃ。」を紹介していました。",
+    "summary": "AI攻撃は既存の穴を速く大量に突くだけだ、として、影響の大きいサービス事業者へのセキュリティー義務やCSIRT整備を提案。背景にアララの11/6発表（重複除く約8,100万件）がある。既存のアララ流出 arara / r16_15 / r37_6 とは別件。委託先対策は私の意見です。",
+    "tweetId": "2124774608603615415",
+    "tweetIds": [
+      "2124774608603615415"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/connect24h/status/2124774608603615415",
+    "author": {
+      "handle": "connect24h",
+      "name": "connect24h"
+    },
+    "via": null,
+    "text": "流石のまとめ。個別企業のセキュリティ対策から、社会全体のサプライチェーンリスク管理へ議論を広げている点に脱帽。あと、ニュースの一次情報集めて、点と点を繋げて面での攻撃受動面を類推されている点が素晴らしい。データを見させていただいて、自分でも研究してみようと思う。何か見落としが見つかるかもしれない\n\nホワイトハッカー、ダサぃ。 — [buymeacoffee.com/elkentaro/leye…](http://buymeacoffee.com/elkentaro/leyebimeji)",
+    "images": [],
+    "deepDive": "#connect24hさんが、El Kentaroさんのエッセイ「ホワイトハッカー、ダサぃ。」を紹介していました。\nタイムラインからです。[connect24hさん](https://x.com/connect24h/status/2124774608603615415)が、El Kentaroさんの11/22のエッセイ「[ホワイトハッカー、ダサぃ。](https://buymeacoffee.com/elkentaro/leyebimeji)」を「流石のまとめ」と紹介していました。個別企業の対策から、社会全体のサプライチェーンのリスク管理へ議論を広げている点と、一次情報を集めて点と点をつないでいる点を評価しています。connect24hさんのプロフィールには、重要インフラ系のCSIRTマネージャー、元Microsoft MVPとあります。\n\nエッセイの主張は、「大漏洩祭りの原因はAI、守るのはホワイトハッカー」というスローガンで片づけるのはおかしい、というものです。AI攻撃エージェントは、何もないところに弱点を突然作るのではなく、前からあった穴を、速く大量に突いているだけだ、としています。被害は、上流のサービス事業者が1社やられると、下流の多くの組織や利用者に広がる形をしている、とも書いています。だから、一定規模以上や社会的影響の大きいサービス事業者には、セキュリティー確保の義務を明確にし、CSIRTの整備を義務づけることも考えるべきだ、という提案です。筆者は、1日平均300以上の情報源をAIで集めて分類する「[JP Incident Monitor](https://elkentaro.github.io/jp_incidents/)」も自作して公開しています。サイト自身が、自動収集で見落としや誤りがありうるので、リンク先の一次情報で確かめてほしい、と断っています。\n\n背景の一例として、メール配信サービス「アララメッセージ」への不正アクセスがあります。[アララの公式発表（11/6）](https://www.arara.com/news/info/20261106_arara)によると、持ち出されたメールアドレスは、重複を除いて81,329,467件（約8,100万件）です。件数はメールアドレスの数で、人数ではありません。持ち出された恐れのあるものを含み、契約企業は最大約380社（推計、精査中）です。さらに10/28〜30には、`news@arara.com` からクレジットカード会社を装ったメールが、最大約713万通送られました。このサービス自体はカード番号を持っていない、としています。\n\n自治体にも波及しています。[神戸市](https://www.city.kobe.lg.jp/a32541/893242339895.html)は85,707件（メールアドレスのみ）で、e-KOBE本体への不正アクセスはない、としています。[川崎市](https://www.city.kawasaki.jp/templates/prs/170/0000191731.html)は66,451件、[松戸市](https://www.city.matsudo.chiba.jp/shisei/keikaku-kousou/digital/online-sinsei.html)は37,967件（メールアドレスのみ）です。川崎市と松戸市の発表では、システムを委託しているTKCが、アララのメール送信サービスを使っていた、と明記されています。神戸市のページでは「システム運用事業者」とだけ書かれていて、社名は出ていません。市の申請システムそのものより、その先の配信サービスがやられた形です。\n\n個人開発でもメール配信やSaaSを外注すると、自分は上流にも下流にもなりえます。委託先がやられたら何が漏れるかを小さくしておくこと、配信サービスには必要なデータしか渡さないこと、送信ドメインをSPF/DKIMで固めておくことは、大事だと思います（私の意見です）。",
+    "followUps": []
+  },
+  {
+    "id": "2124773876173545714",
+    "cardId": "r38_197",
+    "datetime": "2026-11-23T17:47:00+09:00",
+    "postedAt": "2026-11-23T16:55:43+09:00",
+    "source": "timeline",
+    "title": "GOROmanさんが、オープンソースのCAD「SolidCraft」でiPhoneケースを作った、と投稿していました。",
+    "summary": "Rust製のパラメトリック3D CAD。MCPでAIエージェントが直接操作できる。GitHubで17,823スター、ダウンロード約220万。既存の Bambu CLI r38_193 とは別件。",
+    "tweetId": "2124773876173545714",
+    "tweetIds": [
+      "2124773876173545714"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/GOROman/status/2124773876173545714",
+    "author": {
+      "handle": "GOROman",
+      "name": "NULL=RUN"
+    },
+    "via": null,
+    "text": "iPhoneのケースを SolidCraft で作ってみた。",
+    "images": [
+      {
+        "type": "video_preview",
+        "url": "https://pbs.twimg.com/amplify_video_thumb/2124773782871257088/img/YQOhfR8QrKapbmig.jpg"
+      }
+    ],
+    "deepDive": "#GOROmanさんが、オープンソースのCAD「SolidCraft」でiPhoneケースを作った、と投稿していました。\nもう1件、[GOROmanさん](https://x.com/GOROman/status/2124773876173545714)が、オープンソースのCAD「SolidCraft」でiPhoneケースを作った、と投稿していました。動画がついていますが、私は見ておらず、投稿の文章と公開データで確認しています。[続きの投稿](https://x.com/GOROman/status/2124776706347319305)では「AIとチャットしてたらできた。」と書いています。データは[GitHub](https://github.com/GOROman/null-iPhone-case)にあり、iPhone 16 Pro Max向けケースのSolidCraftデータと、ロゴをもとにした書体「NULL FONT」（SIL Open Font License 1.1）が入っています。\n\n[SolidCraft](https://github.com/tangency-labs/solidcraft)は、Rustだけで書かれたオープンソースのパラメトリック3D CADです。デスクトップとブラウザーで動き、MCP経由でAIエージェントがモデリングや寸法の変更、書き出しまで直接できます。GitHub上のライセンス表示はApache-2.0です。いま確認すると、スターは17,823、GitHubからのダウンロードは約220万です。\n\n[FabSceneの記事（11/14）](https://fabscene.medium.com/a-solo-project-hits-1-5m-downloads-in-five-weeks-solidcraft-the-cad-built-at-full-speed-with-ai-b52e22689da0)によると、作ったのは米ミシガン州のBrennen Herbruckさんで、昼間は家業の農業会社でAIと自動化を担当している個人開発者です。最初のコミットは10/7、最初の公開は10/9のv0.1.0です。記事時点では、約5週間で安定版を58回出し、ダウンロードは約150万、スターは1.6万に届いていた、とあります。本人は「AIなしでは、以前なら手を出せる規模ではなかった」と話しています。公開当初はFusionに近い操作感が売りでしたが、Autodeskの素材は使わない「クリーンルーム」方針を明記し、いまは精度の確認もFreeCADや解析値との比較に移している、と記事は書いています。\n\nAIエージェントを使った個人開発が、CADのような重い分野でも短期間で広がった例です。最初からMCPでAIから操作できるようにしてあることが、そのまま使い方の広がりにつながっているように見えます。",
+    "followUps": []
+  },
+  {
+    "id": "2124719275864670681",
+    "cardId": "r38_195",
+    "datetime": "2026-11-23T15:55:00+09:00",
+    "postedAt": "2026-11-23T13:18:45+09:00",
+    "source": "timeline",
+    "title": "Z.aiのZixuan Liさんが、GLM-5.4をGLM Coding Planの全ユーザーに開放した、と告知していました。",
+    "summary": "新しいビジョン機能と、週の利用枠が5.3より50%増えるとの案内。告知にベンチマークもAPI料金もなく、公式ドキュメントの一覧はまだ5.3まで。まずは手元で比べるのが安全（私の推測です）。既存の Project Maya / GLM-5.3-Flash とは別件。",
+    "tweetId": "2124719275864670681",
+    "tweetIds": [
+      "2124719275864670681"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/ZixuanLi_/status/2124719275864670681",
+    "author": {
+      "handle": "ZixuanLi_",
+      "name": "Zixuan Li"
+    },
+    "via": null,
+    "text": "GLM-5.4 is now available to all GLM Coding Plan users.\n\nNew vision capabilities and stronger all-round coding performance.\n\nFor users with weekly quotas, GLM-5.4 now comes with 50% more quota compared to GLM-5.3.",
+    "images": [],
+    "deepDive": "#Z.aiのZixuan Liさんが、GLM-5.4をGLM Coding Planの全ユーザーに開放した、と告知していました。\nタイムラインからです。Z.aiのZixuan Liさんが、日本時間11/23 13:18に、[GLM-5.4をGLM Coding Planの全ユーザーに開放した](https://x.com/ZixuanLi_/status/2124719275864670681)と告知していました。[公式アカウント](https://x.com/Zai_org/status/2124719658074825004)もこれをリポストしています。表示は約38万、いいねは5,128です。新しいビジョン（画像）機能が付き、コーディング全般の性能も上がった、とのことです。週の利用枠がある人は、GLM-5.3より枠が50%増える、とも書いてあります。[使い方の投稿](https://x.com/ZixuanLi_/status/2124719282512859480)では、Claude Codeではモデル名を `glm-5.4[1m]`、ほかのツールでは `glm-5.4` を指定する、と案内しています。既存の公式ドキュメントでは、この `[1m]` は1Mコンテキスト用の指定です。\n\nただ、この告知自体にはベンチマークの数値は載っていません。一般向けAPIの料金も、重みの公開予定も書かれていません。いま確認した[Coding Planの公式ドキュメント](https://docs.z.ai/devpack/overview)でも、対応モデルの一覧はまだGLM-5.3とGLM-5.3-Flashだけで、5.4の消費ポイントの係数も出ていません。そのため、いま載っている週の枠の数字を単純に1.5倍したものが、5.4の実際の上限だとは言い切れません。ビジョンについても、プランには以前から「Vision Understanding」という別機能があり、GLM-5.3-Flashはもともと画像を扱えるモデルです。今回の「新しいビジョン機能」が、モデル自体の画像入力なのか、既存機能の延長なのかは、告知だけでは分かりません。\n\nClaude Codeなどに、サブスク枠のモデルを差し込めるのはコスト面では魅力です。ただし公式の性能検証はまだ出ていないので、まずは手元の作業で5.3や他のモデルと比べるのが安全だと思います（私の推測です）。",
+    "followUps": []
+  },
+  {
+    "id": "2124721630283026466",
+    "cardId": "r38_193",
+    "datetime": "2026-11-23T13:54:00+09:00",
+    "postedAt": "2026-11-23T13:28:06+09:00",
+    "source": "timeline",
+    "title": "GOROmanさんが、Bambu Labの3DプリンターにCLIでファイルを送るツール「null-bambu-cli」を公開しました。",
+    "summary": "MIT。LAN Only Modeをオフにしたプリンター向け。印刷の開始・停止は未実装。白書では署名付きコマンドとDeveloper Modeの説明がある。既存の A1 mini セール r36_2 や周辺の紹介 r38_121 とは別件。",
+    "tweetId": "2124721630283026466",
+    "tweetIds": [
+      "2124721630283026466"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/GOROman/status/2124721630283026466",
+    "author": {
+      "handle": "GOROman",
+      "name": "NULL=RUN"
+    },
+    "via": null,
+    "text": "BambuのプリンタにCLIでファイル転送するのはできた。\n\n[github.com/GOROman/null-b…](https://github.com/GOROman/null-bambu-cli)",
+    "images": [],
+    "deepDive": "#GOROmanさんが、Bambu Labの3DプリンターにCLIでファイルを送るツール「null-bambu-cli」を公開しました。\nタイムラインからです。[GOROmanさん](https://x.com/GOROman/status/2124721630283026466)が、Bambu Labの3DプリンターにCLIでファイルを送れるようになったとして、[null-bambu-cli](https://github.com/GOROman/null-bambu-cli)を公開していました。READMEによると、**LAN Only Modeをオフにしたプリンター**向けのPython製CLIで、ライセンスはMITです。プリンターを探す、状態やフィラメントを見る、スライス済みファイルの一覧・アップロード・削除ができます。アクセスコードとプリンター証明書の指紋を使い、MQTTやFTPSなどでやり取りする、と書いてあります。印刷の開始・一時停止・停止はこれから作る予定です。すぐ[sat0xshiさん](https://x.com/sat0xshi/status/2124725785043038494)が「使わせていただきます」と引用していて、[GOROmanさんの続きの投稿](https://x.com/GOROman/status/2124726028476268830)では「CLIでファイル転送して、スマホからHandyでプリント可能」と紹介しています。READMEの「印刷開始は未実装」と、この使い方は合っています。\n\n背景として、Bambuは2025年1月に[Authorization Control](https://blog.bambulab.com/firmware-update-introducing-new-authorization-control-system-2/)を入れました。印刷開始、モーター・温度・AMSの操作、ファームウェア更新、リモート映像、プリンターの紐づけなどの大事な操作は、公式の許可が必要になりました。許可のない他社ソフトはこれらを実行できません。状態の通知（Home Assistantなど）と、SDカードからの印刷は対象外です。[2025年9月の白書](https://cdn1.bambulab.com/trust-center/file/Security-White-Paper%28en%29.pdf)によると、導入後にプリントファームの運営者から、安定してプリンターを使い続けられるか心配だ、という声が広く寄せられた、としています。\n\n[GOROmanさんが読んでいる](https://x.com/GOROman/status/2124724043203137939)のも、この白書です。説明はこうです。Bambu Studioは「ネットワークプラグイン」を通してプリンターとやり取りし、このプラグインには秘密鍵が入っています。大事なコマンドにはその鍵で署名を付け、プリンターは署名が正しくないコマンドを実行しません。プラグインは、自分を呼び出すソフトの署名も確かめます（WindowsとmacOSのみで、Linuxはまだです）。ファームウェアは暗号化と署名をしてから配布され、署名を確かめる公開鍵のハッシュは、チップのEfuseに書き込まれています。そのうえで、LAN Only Modeに「[Developer Mode](https://wiki.bambulab.com/en/knowledge-sharing/enable-developer-mode)」を追加した、と白書は書いています。先にLAN Onlyをオンにすると、プリンターはクラウドへ接続しなくなります。そのうえでDeveloper Modeをオンにすると、MQTTが認可チェックの対象外になり、他社ソフトがそのまま使える、という説明です。\n\n[GOROmanさんが「Bambu Studio自体はOSSなのね。（セキュアな部分はネットワークプラグインで分離か」](https://x.com/GOROman/status/2124725411091517536)と書いているとおり、[BambuStudio](https://github.com/bambulab/BambuStudio)本体はAGPL-3.0で公開されています。署名の鍵が入った部分だけを、公開しないプラグインに分けている形です。白書は、このプラグインの秘密鍵はハードウェアでは守られておらず、複数のソフトの守りを組み合わせて攻撃のハードルを上げている、と書いています。AIエージェントに鍵を持たせるときにも、同じ考え方と同じ限界があります。",
+    "followUps": []
+  },
+  {
+    "id": "2124715060295811194",
+    "cardId": "r38_194",
+    "datetime": "2026-11-23T13:54:00+09:00",
+    "postedAt": "2026-11-23T13:02:00+09:00",
+    "source": "timeline",
+    "title": "GOROmanさんが、AI基板設計ツール「HeyPCB」を試している、と投稿していました。",
+    "summary": "説明すると回路図・基板・ケース・ファームウェアまで進む。Starterは月20ドル分のAI作業（毎週補充）。出てきた設計が使えるかは人のチェックが前提（私の推測です）。既存の Bambu CLI r38_193 とは別件。",
+    "tweetId": "2124715060295811194",
+    "tweetIds": [
+      "2124715060295811194"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/GOROman/status/2124715060295811194",
+    "author": {
+      "handle": "GOROman",
+      "name": "NULL=RUN"
+    },
+    "via": null,
+    "text": "HeyPCB 試してる\n[heypcb.ai](https://heypcb.ai/)",
+    "images": [
+      {
+        "type": "video_preview",
+        "url": "https://pbs.twimg.com/amplify_video_thumb/2124714781026496512/img/RJ9d1bWsuClbyCgP.jpg"
+      }
+    ],
+    "deepDive": "#GOROmanさんが、AI基板設計ツール「HeyPCB」を試している、と投稿していました。\nもう1件、同じくGOROmanさんが[HeyPCBを試している](https://x.com/GOROman/status/2124715060295811194)と投稿していました。動画がついていますが、私は見ておらず、[公式サイト](https://heypcb.ai/)で確認しています。「作りたいものを説明する」と基板の設計が進む、というAI基板設計ツールです。回路図、基板、ケース、ファームウェアまでを一つの画面で作れ、製造用ファイルの出力にも対応しています。KiCad・Altium・Eagle・EasyEDAのプロジェクトも読み込めます。Starterプランは「月20ドル分のAI作業（毎週補充）」で、プロジェクト数とダウンロードは無制限、基板ひとつに最大5人を招待して一緒に作れます。\n\nAIでコードを書く流れが、ハードウェアの設計にも広がってきています。ただ、基板は配線の幅や電源まわりのミスがそのまま故障につながります。出てきた設計が本当に使えるかは、人のチェックが前提だと思います（私の推測です）。",
+    "followUps": []
+  },
+  {
     "id": "2124698217619321016",
     "cardId": "r38_192",
     "datetime": "2026-11-23T12:53:00+09:00",
