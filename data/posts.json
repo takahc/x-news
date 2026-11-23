@@ -1,5 +1,469 @@
 [
   {
+    "id": "2124549218995949967",
+    "cardId": "r38_173",
+    "datetime": "2026-11-23T07:57:00+09:00",
+    "postedAt": "2026-11-23T02:03:00+09:00",
+    "source": "timeline",
+    "title": "OpenAIのChief Scientistが、次のトークンを当てるうまさ（パープレキシティ）で開発の共通上限を決めたい、という文書を公開しました。",
+    "summary": "Jakub Pachockiさん「Perplexity and Intelligence」（11/22）。GPT-3.5は約0.99、GPT-4は約0.91、0.8未満でサイバーと数学が変革的、約0.76で未解決問題。上限の値も検証方法も未定。0.8未満でサイバー能力が変革的になったと公式が認めた点が大きい。私の推測あり。",
+    "tweetId": "2124549218995949967",
+    "tweetIds": [
+      "2124549218995949967"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/merettm/status/2124549218995949967",
+    "author": {
+      "handle": "merettm",
+      "name": "Jakub Pachocki"
+    },
+    "via": null,
+    "text": "We decided to provide more transparency into pretraining progress at OpenAI for the sake of moving toward shared safety bars. In “Perplexity and Intelligence” I argue for common limits based on perplexity and other measurements, with progress beyond them gated on our ability to understand AI behavior.\n\n[openai.com/index/perplexi…](https://openai.com/index/perplexity-and-intelligence)",
+    "images": [
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HXvptOTXIAAtrY0.jpg"
+      }
+    ],
+    "deepDive": "#OpenAIのChief Scientistが、次のトークンを当てるうまさ（パープレキシティ）で開発の共通上限を決めたい、という文書を公開しました。\nタイムラインからです。OpenAIのChief Scientist、Jakub Pachockiさん（@merettm）が、[Perplexity and Intelligence](https://openai.com/index/perplexity-and-intelligence)を公開しました。サイトの日付は11/22、本人の投稿は[日本時間11/23 2:03](https://x.com/merettm/status/2124549218995949967)で、表示は約208万回です。[Sam Altmanさん](https://x.com/sama/status/2124551594691932405)は約10分後に、「ここしばらくで最も重要な公開」と紹介し、業界で共通の上限に合意したい、と書いています。原文では「frield」となっています。\n\n値はパープレキシティの対数（クロスエントロピー損失）で、低いほど次のトークンを当てるのがうまいことを示します。評価データは社内のコードベースから作ったもので、脚注3に書かれています。公式文書では、GPT-3.5は約0.99で流暢な会話ができ、初代ChatGPTの土台になった、GPT-4は約0.91で思考の連鎖（CoT）を有効に使えるようになった、0.8を下回ってからサイバーセキュリティと数学で「変革的な能力」が出てきた、約0.76のモデルに上げたところ数学の未解決問題で画期的な結果を出し始めた、とあります。今後は約0.68〜0.70の範囲で、さらに変革的な能力が予想される一方、「それが何かは分からないし、今はテストしていないかもしれない」とも書いています。[connect24hさんの要約](https://x.com/connect24h/status/2124632033335103881)（0.99→0.91→0.8未満）は正確です。\n\n提案は、業界で共通の評価方法、安全性の主張に対するレッドチームの規範、透明性の基準をつくり、そのうえでパープレキシティなどで共通の上限を決め、AIの挙動を理解・監視する能力が具体的な節目（例: CoTモニターの後継）に届くまでは超えない、という内容です。上限の数値、監視の節目の中身、誰が守らせるのかは、まだ決まっていません。文書自身も弱点を4つ挙げています。ラボ間で比べにくい、実際のタスクに直結しない、CoTによる能力向上はパープレキシティに出ない、下限（データ本来のエントロピー）が分からない、です。\n\n3つ目の投稿でAltmanさんは、2026年9月29日の「[White House Accord on Super Intelligence](https://www.presidency.ucsb.edu/documents/white-house-accord-super-intelligence)」に触れています（正式名は単数形のAccord）。署名したのはGoogle、Anthropic、Meta、OpenAI（Greg Brockmanさん）、xAI、Nvidiaです。内容は4層の管理で、学習中・運用中の監視、それを担う社内チーム、外部の独立した監査、取締役会の独立委員会です。法的な拘束力のない自主的な合意で、「標準とベストプラクティスを定めるために定期的に会合する」は、この文書の一文です。パープレキシティの議論をこの枠組みに載せたい、という意図だと読めます（私の推測です）。\n\n[Greg Brockmanさん](https://x.com/gdb/status/2124582684840399311)は支持しており、「整合性や監視の進歩は、事前学習の加速に追いつかない」という一文が最重要だとしています。[Shashwat Goelさん](https://x.com/ShashwatGoel7/status/2124635352241737888)は、評価データは社内コードベースで、2026年以降は社内コードの多くがモデル自身の生成物になったはずだ、曲線の急降下は事前学習が良くなったのか、社内でAIを使う量が増えたのか区別できない、と指摘しています。ほかに、「誰が安全と判定するのか。開発企業の外の評価者による独立した検証が必要」（[Dr_Extensionさん](https://x.com/Dr_Extension/status/2124636024722870589)）、「誰が守らせるのか」（[Cpt_Caveyさん](https://x.com/Cpt_Cavey/status/2124603741789680080)）という問いもありました。[daniel_mac8さん](https://x.com/daniel_mac8/status/2124610005542305847)は、「各社とも数か月先に『認知の核兵器』がある、という前提の不拡散の呼びかけ」と表現しています。\n\n1つの数値で開発ペースを縛る案は、AIの安全性研究として重要な一手です。一方で、上限の値も、検証の方法も、ほかのラボの参加もまだありません。現時点ではOpenAIによる提案と情報開示の段階です。実務的には、「0.8未満でサイバー能力が変革的になった」と公式が認めた点が大きいです。攻撃の自動化が、個人のサービスにも及ぶ前提で守りを考える段階に来ています。",
+    "followUps": []
+  },
+  {
+    "id": "2124502812046574056",
+    "cardId": "r38_180",
+    "datetime": "2026-11-23T07:57:00+09:00",
+    "postedAt": "2026-11-22T22:58:36+09:00",
+    "source": "likes",
+    "title": "「ソフトウェアエンジニアはPMかFDEになるしかない。顧客と話せないエンジニアは不要」という言い切りです。",
+    "summary": "neet_se2さんがxhackjp1さんの投稿を引用。仕様を決める・検証する・顧客の課題を拾う側に価値が移る、という見方。",
+    "tweetId": "2124502812046574056",
+    "tweetIds": [
+      "2124502812046574056",
+      "2124493122889765321"
+    ],
+    "quoteTweetId": "2124493122889765321",
+    "url": "https://x.com/neet_se2/status/2124502812046574056",
+    "author": {
+      "handle": "neet_se2",
+      "name": "ニート"
+    },
+    "via": null,
+    "text": "これ。",
+    "images": [],
+    "deepDive": "#「ソフトウェアエンジニアはPMかFDEになるしかない。顧客と話せないエンジニアは不要」という言い切りです。\n[neet_se2さん](https://x.com/neet_se2/status/2124502812046574056)が引用していた[xhackjp1さん](https://x.com/xhackjp1/status/2124493122889765321)は、「ソフトウェアエンジニアはPMかFDE（顧客の現場に入るエンジニア）になるしかない。顧客と話せないエンジニアは不要」とかなり言い切っています。上の「書く側から検証する側へ」と合わせると、仕様を決める・検証する・顧客の課題を拾う、に価値が移るという見方です。",
+    "followUps": []
+  },
+  {
+    "id": "2124480538358726899",
+    "cardId": "r38_175",
+    "datetime": "2026-11-23T07:57:00+09:00",
+    "postedAt": "2026-11-22T21:30:05+09:00",
+    "source": "likes",
+    "title": "変わらない知識はキャッシュに載せ、変わる情報だけ検索する、という2層構成の解説です。",
+    "summary": "akshay_pachaarさん。CAGとRAG。CacheBlend（EuroSys'25）と実装LMCache。TTFTは2.2〜3.3倍。APIならシステムプロンプト・ツール定義・変わらない文書を毎回同じ順で先頭に置く。",
+    "tweetId": "2124480538358726899",
+    "tweetIds": [
+      "2124480538358726899",
+      "2074502882812952666"
+    ],
+    "quoteTweetId": "2074502882812952666",
+    "url": "https://x.com/akshay_pachaar/status/2124480538358726899",
+    "author": {
+      "handle": "akshay_pachaar",
+      "name": "Akshay 🚀"
+    },
+    "via": null,
+    "text": "RAG vs. CAG, clearly explained!\n\nRAG is great, but it has a major problem:\n\nevery query hits the vector DB. even for static information that hasn't changed in months.\n\nthis is expensive, slow, and unnecessary.\n\nCache-Augmented Generation (CAG) fixes this by letting the model keep static information in its key-value (KV) memory, which is what the model builds internally for every token it reads.\n\nin fact, you can combine RAG and CAG for the best of both worlds.\n\nhere's how it works:\n\nRAG + CAG splits your knowledge into two layers.\n\n↳ static data (policies, documentation) gets cached once in the model's KV memory\n\n↳ dynamic data (recent updates, live documents) gets fetched via retrieval\n\nyou get faster inference, lower costs, and less repeated work.\n\nthe trick is being selective about what you cache.\n\nonly cache static, high-value knowledge that rarely changes. cache everything and you'll hit context limits. separating \"cold\" (cacheable) and \"hot\" (retrievable) data keeps this system reliable.\n\nyou can start today. OpenAI and Anthropic already support prompt caching in their APIs.\n\none thing to know before you scale it.\n\nprompt caching matches on an exact prefix, byte for byte. your cached layer only gets reused when it sits at the very front of the context in the same order every time.\n\n↳ reorder two cached policy documents and both turn into a miss\n\n↳ cache document A alone and document B alone, then query both, and the second one misses because the model computed its cached state without ever seeing the first\n\nin production this looks like a small fraction of your cached blocks serving almost all the hits. the rest just sits there.\n\nthe way out comes from how attention behaves. tokens attend mostly to their own local neighborhood, and only a few reach across document boundaries. CacheBlend recomputes those few and reuses everything else from the separately cached documents.\n\nmulti-document queries run two to four times faster, quality holds, and order stops mattering.\n\nit ships in LMCache, which is fully open source.\n\nrepo: [github.com/LMCache/LMCache](https://github.com/LMCache/LMCache)\n\n(don't forget to star 🌟)\n\nbelow, i have quoted my article on KV cache management. it covers where prefix caching stops working and how a proper caching layer fixes it.\n\ngive it a read.\n\ncheers! :)",
+    "images": [
+      {
+        "type": "video_preview",
+        "url": "https://pbs.twimg.com/tweet_video_thumb/HXuryQ5boAA2Pso.jpg"
+      }
+    ],
+    "deepDive": "#変わらない知識はキャッシュに載せ、変わる情報だけ検索する、という2層構成の解説です。\n[akshay_pachaarさん](https://x.com/akshay_pachaar/status/2124480538358726899)は、変わらない知識（規約やドキュメント）はKVキャッシュに載せ（CAG）、変わる情報だけ検索で取ってくる（RAG）、という2層構成を解説していました。プロンプトキャッシュは、先頭から1バイト単位で完全一致しないと効かず、文書の順番を入れ替えると外れます。文書ごとに別々にキャッシュして後でつなぐ方法として、CacheBlendを紹介しています。本体はシカゴ大などの[EuroSys'25の論文](https://arxiv.org/abs/2405.16444)で、別々に作ったKVキャッシュを再利用しつつ、文書をまたいで注意が強く効く一部のトークンだけ計算し直します。論文の数字は、最初のトークンが出るまでの時間（TTFT）が2.2〜3.3倍速く、スループットが2.8〜5倍です。投稿の「2〜4倍」はおおむね合っています。実装は[LMCache](https://github.com/LMCache/LMCache)です。自前の推論サーバーがなくても、APIのプロンプトキャッシュを効かせるには、システムプロンプト、ツール定義、変わらない文書の順に、毎回まったく同じ並びを先頭に置くのが実務的です。",
+    "followUps": []
+  },
+  {
+    "id": "2124465295746302318",
+    "cardId": "r38_181",
+    "datetime": "2026-11-23T07:57:00+09:00",
+    "postedAt": "2026-11-22T20:29:31+09:00",
+    "source": "likes",
+    "title": "自宅回線のゆっくりボイス読み上げbotを数千〜数万人が使っているので、ルーターを再起動できない、という投稿です。",
+    "summary": "siyukatさん。いいね2,066。「自宅サーバーが本番環境」の単一障害点の例。",
+    "tweetId": "2124465295746302318",
+    "tweetIds": [
+      "2124465295746302318"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/siyukat/status/2124465295746302318",
+    "author": {
+      "handle": "siyukat",
+      "name": "siyukatu"
+    },
+    "via": null,
+    "text": "ルーターの調子が悪いんだけど、ゆっくりボイス読み上げbotという現在進行形で数千とか数万のユーザーが使ってるサービスがあるから再起動できない",
+    "images": [],
+    "deepDive": "#自宅回線のゆっくりボイス読み上げbotを数千〜数万人が使っているので、ルーターを再起動できない、という投稿です。\n[siyukatさん](https://x.com/siyukat/status/2124465295746302318)は、自宅回線で動かしているゆっくりボイスの読み上げbotを、数千〜数万人が使っているのでルーターを再起動できない、と書いていました（いいね2,066）。「自宅サーバーが本番環境」の、単一障害点の例です。",
+    "followUps": []
+  },
+  {
+    "id": "2124463348322553899",
+    "cardId": "r38_183",
+    "datetime": "2026-11-23T07:57:00+09:00",
+    "postedAt": "2026-11-22T20:21:47+09:00",
+    "source": "likes",
+    "title": "シニアの転職で経歴を盛るとあとで詰む、できたこととこれからできることだけ伝えるべきだ、という投稿です。",
+    "summary": "komitsuboさん。",
+    "tweetId": "2124463348322553899",
+    "tweetIds": [
+      "2124463348322553899"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/komitsubo/status/2124463348322553899",
+    "author": {
+      "handle": "komitsubo",
+      "name": "komitsubo"
+    },
+    "via": null,
+    "text": "シニアで転職してみると分かるけど、自分の経歴を盛って入るとホント辛い未来しか待ってない。シニアは伸びしろを期待されていない。そして自分が思ってる以上に伸びしろはない。若者と同じ感覚で経歴盛ったらあとは詰むだけ。素直に今までできた事と、そこから今後できる事だけ伝えた方がいい。",
+    "images": [],
+    "deepDive": "#シニアの転職で経歴を盛るとあとで詰む、できたこととこれからできることだけ伝えるべきだ、という投稿です。\n[komitsuboさん](https://x.com/komitsubo/status/2124463348322553899)は、シニアの転職で経歴を盛るとあとで詰む、できたこととこれからできることだけ伝えるべきだ、と書いていました。最後に、",
+    "followUps": []
+  },
+  {
+    "id": "2124429333242741086",
+    "cardId": "r38_184",
+    "datetime": "2026-11-23T07:57:00+09:00",
+    "postedAt": "2026-11-22T18:06:37+09:00",
+    "source": "likes",
+    "title": "NTTの語彙数推定テストを紹介した投稿に乗せて、親戚と比べた結果を画像で投稿していました。",
+    "summary": "monomiU__さん。元投稿は約1,534万回表示、この投稿はいいね約2.9万。雑談系です。",
+    "tweetId": "2124429333242741086",
+    "tweetIds": [
+      "2124429333242741086",
+      "2124160214329164247"
+    ],
+    "quoteTweetId": "2124160214329164247",
+    "url": "https://x.com/monomiU__/status/2124429333242741086",
+    "author": {
+      "handle": "monomiU__",
+      "name": "₺ ၈ Ⴋ ᘗ⃒"
+    },
+    "via": null,
+    "text": "←わたし　超博識な親戚→",
+    "images": [
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HXt9N57bkAAD39x.jpg"
+      },
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HXt9N6CaoAAbE4C.jpg"
+      }
+    ],
+    "deepDive": "#NTTの語彙数推定テストを紹介した投稿に乗せて、親戚と比べた結果を画像で投稿していました。\n最後に、[monomiU__さん](https://x.com/monomiU__/status/2124429333242741086)は、[NTTの語彙数推定テスト](https://www.kecl.ntt.co.jp/icl/lirg/resources/goitokusei/vocabulary_test/php/login.php)を紹介した[投稿](https://x.com/aaaaaaa123426/status/2124160214329164247)（表示約1,534万回）に乗せて、親戚と比べた結果を画像で投稿していました（いいね約2.9万）。雑談系です。",
+    "followUps": []
+  },
+  {
+    "id": "2124424175980810549",
+    "cardId": "r38_177",
+    "datetime": "2026-11-23T07:57:00+09:00",
+    "postedAt": "2026-11-22T17:46:08+09:00",
+    "source": "likes",
+    "title": "LLMに消費者を演じさせ、感想のベクトルから5段階評価の分布を作る手法「SSR」の論文です。",
+    "summary": "arXiv 2510.08338。著者の大半はPyMC Labsで、Colgate-Palmoliveからも2人。「Colgateが発表」は少し言い過ぎ。日用品調査57件で再テスト一致度の90%。本番のA/Bテストの代わりにはならない。",
+    "tweetId": "2124424175980810549",
+    "tweetIds": [
+      "2124424175980810549"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/PaulYoungX/status/2124424175980810549",
+    "author": {
+      "handle": "PaulYoungX",
+      "name": "Paul Young"
+    },
+    "via": null,
+    "text": "Personne n'en parle, mais cette marque de dentifrice TRÈS CONNUE vient peut-être de TUER tout le business des études de marché.\n\nColgate a publié une étude qui montre un truc fou : tu peux prédire si les gens vont vraiment acheter un produit… juste en demandant à une IA comme ChatGPT de jouer le rôle de clients.\n\nEt c'est complètement dingue.\n\nSi tu demandes à une IA « Note ce produit de 1 à 5 », elle te sort une réponse tiède, toujours pile au milieu. En gros, ça ne sert à rien.\n\nDu coup, des chercheurs ont inventé une méthode qu'ils appellent Semantic Similarity Rating (SSR).\n\nAu lieu de demander une note à l'IA, ils lui ont demandé de jouer un rôle.\n\nIls lui ont donné un profil de client : âge, revenus, etc. Ils lui ont montré une idée de produit. Et ils lui ont demandé d'écrire ce qu'elle en pense vraiment, sans filtre.\n\nEnsuite, ils ont pris un autre outil, qui sait comprendre le sens d'un texte, pour transformer ces avis écrits en une note.\n\nLes résultats sont hallucinants.\n\nIls ont comparé ça à 57 vrais sondages sur des produits d'hygiène, avec 9 300 réponses de vrais humains.\n\nPour te donner une idée : si tu poses deux fois la même question aux mêmes personnes, leurs réponses ne collent jamais à 100 %. Les clients virtuels atteignent 90 % de ce niveau de fiabilité.\n\nIls ont reproduit parfaitement la façon dont les gens réagissent quand le prix change, selon leur âge et leurs revenus.\n\nEt leurs avis détaillés allaient plus loin et étaient plus critiques que ceux écrits par les vrais humains.\n\nÇa casse complètement le modèle des études de marché classiques, qui coûtent une fortune.\n\nPlus besoin d'attendre un mois pour savoir si un produit va se vendre.\n\nTu peux simuler 1 000 entretiens avec des clients ultra ciblés en une nuit.\n\nTu peux comparer direct plusieurs prix, sur chaque type de client.\n\nL'étude complète est ici : [arxiv.org/pdf/2510.08338](https://arxiv.org/pdf/2510.08338)",
+    "images": [
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HXt4hz1XgAAeRAg.png"
+      }
+    ],
+    "deepDive": "#LLMに消費者を演じさせ、感想のベクトルから5段階評価の分布を作る手法「SSR」の論文です。\n[PaulYoungXさん](https://x.com/PaulYoungX/status/2124424175980810549)が紹介していたのは、[arXiv 2510.08338](https://arxiv.org/abs/2510.08338)です。著者の大半はPyMC Labsで、Colgate-Palmoliveからも2人入っています。投稿の「Colgateが発表」は少し言い過ぎです。手法のSSR（Semantic Similarity Rating）は、LLMに属性つきの消費者を演じさせて自由に感想を書かせ、その感想を埋め込みベクトルにして、5段階それぞれの基準文との類似度から評価分布を作ります。日用品の調査57件（人間の回答9,300件）で、「同じ人に2回聞いたときの一致度」の90%を達成し、分布の近さを示すKS類似度は0.85超だった、と要旨にあります。投稿の「価格や年齢・所得への反応を完璧に再現した」は、要旨の書き方より強いです。値付けや紹介文の事前の絞り込みには使えても、本番のA/Bテストの代わりにはならないと思います。対象も日用品の新商品で、アプリの課金でも当てはまるかは分かりません。",
+    "followUps": []
+  },
+  {
+    "id": "2124418989640098057",
+    "cardId": "r38_182",
+    "datetime": "2026-11-23T07:57:00+09:00",
+    "postedAt": "2026-11-22T17:25:31+09:00",
+    "source": "likes",
+    "title": "若者の手芸ブームを伝えるニュースを引用して、「こういうの大事」とだけ書いた投稿です。",
+    "summary": "深津貴之さん。AIの時代には手間そのものに価値が出る、という見方にも読める（私の解釈です）。",
+    "tweetId": "2124418989640098057",
+    "tweetIds": [
+      "2124418989640098057",
+      "2124308394144399662"
+    ],
+    "quoteTweetId": "2124308394144399662",
+    "url": "https://x.com/fladdict/status/2124418989640098057",
+    "author": {
+      "handle": "fladdict",
+      "name": "深津 貴之 / THE GUILD, note"
+    },
+    "via": null,
+    "text": "こういうの大事",
+    "images": [],
+    "deepDive": "#若者の手芸ブームを伝えるニュースを引用して、「こういうの大事」とだけ書いた投稿です。\n[fladdictさん](https://x.com/fladdict/status/2124418989640098057)は、若者の手芸ブームを伝えるニュースを引用して、「こういうの大事」とだけ書いています。AIの時代には、手間そのものに価値が出る、という見方にも読めます（私の解釈です）。",
+    "followUps": []
+  },
+  {
+    "id": "2124327528978612389",
+    "cardId": "r38_179",
+    "datetime": "2026-11-23T07:57:00+09:00",
+    "postedAt": "2026-11-22T11:22:05+09:00",
+    "source": "likes",
+    "title": "iPhone Duoを閉じると花が押し花になり、「PRESSED」というアルバムに並ぶアプリです。",
+    "summary": "にっしーさんがGregさん（livelaughgreg）の投稿を引用。閉じる動作の検知は私の推測。既存のオキラマ r38_26 とは別件。",
+    "tweetId": "2124327528978612389",
+    "tweetIds": [
+      "2124327528978612389",
+      "2124237203509592064"
+    ],
+    "quoteTweetId": "2124237203509592064",
+    "url": "https://x.com/nissyiiii/status/2124327528978612389",
+    "author": {
+      "handle": "nissyiiii",
+      "name": "にっしー｜個人開発"
+    },
+    "via": null,
+    "text": "すばらしい・・・\n何食べたらこんなの思いつくんだ",
+    "images": [],
+    "deepDive": "#iPhone Duoを閉じると花が押し花になり、「PRESSED」というアルバムに並ぶアプリです。\n[nissyiiiiさん](https://x.com/nissyiiii/status/2124327528978612389)が引用していたのは、[@livelaughgreg さん](https://x.com/livelaughgreg/status/2124237203509592064)の投稿です（いいね2,251）。iPhone Duoを閉じると花が押し花になり、「PRESSED」というアルバムに並ぶアプリだ、と本人が書いています。こちらも動画は見ていません。閉じる動作を検知していると思いますが、実装は公開されていないので、私の推測です。新しい端末でしかできない動きを、体験の芯にした小さいアプリです。",
+    "followUps": []
+  },
+  {
+    "id": "2124307429538058717",
+    "cardId": "r38_174",
+    "datetime": "2026-11-23T07:57:00+09:00",
+    "postedAt": "2026-11-22T10:02:13+09:00",
+    "source": "likes",
+    "title": "「数学をやっている人は物理と生物へ、ソフトウェアを作っている人はverifierとevalへ」という2行の投稿です。",
+    "summary": "koheifukadaさんがYuchen Jinさんの投稿を紹介。検証できる分野はAI研究の大半が2027年に自動化される、と本人が補足。物理や生物の説明はkoheifukadaさんの解釈。",
+    "tweetId": "2124307429538058717",
+    "tweetIds": [
+      "2124307429538058717",
+      "2124206996803244391"
+    ],
+    "quoteTweetId": "2124206996803244391",
+    "url": "https://x.com/koheifukada/status/2124307429538058717",
+    "author": {
+      "handle": "koheifukada",
+      "name": "Kohei Fukada | FDE"
+    },
+    "via": null,
+    "text": "「数学やってる人は、物理とか生物にシフトした方がいいよ。ソフトウェア作ってる人は、検証器（verifier）とか評価（eval）を作る方にシフトした方がいいよ。」\n\nなぜか？\n\n物理や生物は数学に比べて、実験や現実世界とのすり合わせが必要、すなわち実環境や物理的な実験による仮説検証など時間や空間による障壁があるため、AIの処理だけで加速できない。そうした検証には人間が介入する価値がある。\n\nソフトウェアも「コードを書く」作業自体はAIがやるから、「その出力が本当に正しいかチェックする仕組み（verifierやeval）」を作る側に回った方がいい、というのをdatabricksの人のメッセージ。",
+    "images": [],
+    "deepDive": "#「数学をやっている人は物理と生物へ、ソフトウェアを作っている人はverifierとevalへ」という2行の投稿です。\n[koheifukadaさん](https://x.com/koheifukada/status/2124307429538058717)が紹介していたのは、[@Yuchenj_UW さんの投稿](https://x.com/Yuchenj_UW/status/2124206996803244391)です（いいね3,667）。「数学をやっている人は物理と生物へ、ソフトウェアを作っている人はverifier（正しさを検証する仕組み）とeval（評価）へ」という2行で、理由は元ポストにはありません。「物理や生物は実験に時間と場所がかかり、AIだけでは速くできない」という説明は、koheifukadaさんの解釈です。本人はスレッドで、「検証できる分野だから、AI研究の大半は2027年に自動化されると思う」と[補足](https://x.com/Yuchenj_UW/status/2124211670780465556)しています。コードをAIが書くなら、人の価値は仕様・テスト・不変条件を書く側に移る、という見方です。上のOpenAIの文書も、「検証できるから一気に進みうる」という同じ方向の話です。",
+    "followUps": []
+  },
+  {
+    "id": "2124213783308456171",
+    "cardId": "r38_176",
+    "datetime": "2026-11-23T07:57:00+09:00",
+    "postedAt": "2026-11-22T03:50:06+09:00",
+    "source": "likes",
+    "title": "社内エージェントに学習のループがある、という「ナレッジファクトリー」の話の補足です。",
+    "summary": "Harrison Chaseさんの投稿をMatt Stocktonさんが補足。多くのチームはまだスキル化・文書化の初期段階。指示の自動更新はプルリクエストにして人が確認するのが安全（私の考えです）。",
+    "tweetId": "2124213783308456171",
+    "tweetIds": [
+      "2124213783308456171",
+      "2124181216719151585"
+    ],
+    "quoteTweetId": "2124181216719151585",
+    "url": "https://x.com/mstockton/status/2124213783308456171",
+    "author": {
+      "handle": "mstockton",
+      "name": "Matt Stockton"
+    },
+    "via": null,
+    "text": "This is a fantastic post here. Many teams still need to get to the 'version 1' of this for their agents, where they have:\n\n1. Systematized and written down their procedures (e.g. SOPs written as skills)\n\n2. Extracted implicit company domain knowledge into documents (e.g. how does your company work, ideally in a linked wiki)\n\n3. Provided programmatic access to your important data (e.g. tools the agents can call, which are well-designed and documented)\n\nThe above is a great start, and exponentially better than not using AI systematically and in a shared way. But what is described in this article is entirely magical once it starts working - the 'hill climbing' process that inspects how your company is using the 'version 1' system described above, and is able to automatically improve it.\n\nThis 'factory pattern' is generally applicable (e.g in software building, agent knowledge utilization, etc.). The out-of-band / out-of-context introspection of 'what happened and what didn't work well' followed by automated improvements to the underlying components, is amazing. Once this loops starts working, it truly does feel like you've built something that is building itself.",
+    "images": [],
+    "deepDive": "#社内エージェントに学習のループがある、という「ナレッジファクトリー」の話の補足です。\n[mstocktonさん](https://x.com/mstockton/status/2124213783308456171)は、LangChainの[Harrison Chaseさん](https://x.com/hwchase17/status/2124181216719151585)が書いた「ナレッジファクトリー」の話を補足しています。Chaseさんは、社内のエージェントに学習のループがある、と書いています。mstocktonさんによると、多くのチームはまだ「手順をスキル化」「暗黙知を文書化」「データへのプログラムからのアクセス」という最初の段階で、そのうえで使われ方を外から振り返って自動で改善するループが回り始めると、魔法のようだ、そうです。セッションのログを別のエージェントに読ませて、指示やスキルを直させる、という応用はできます。ただし、エージェントが自分の指示を書き換えるので、変更はプルリクエストにして人が確認するのが安全だと思います（私の考えです）。",
+    "followUps": []
+  },
+  {
+    "id": "2123809454475088095",
+    "cardId": "r38_178",
+    "datetime": "2026-11-23T07:57:00+09:00",
+    "postedAt": "2026-11-21T01:03:27+09:00",
+    "source": "likes",
+    "title": "コマンドごとに音を割り当て、選んだ音に注意を向けたときの脳波で判別する「ファンネル」の開発者の補足です。",
+    "summary": "荻野幹人さんが、お侍さん（ZanEngineer）の動画投稿に補足。α波で動かす方式ではない。精度は10分の練習で約50%、5時間で70〜80%。動画自体は未視聴。",
+    "tweetId": "2123809454475088095",
+    "tweetIds": [
+      "2123809454475088095",
+      "2123533259464409580"
+    ],
+    "quoteTweetId": "2123533259464409580",
+    "url": "https://x.com/mikito_ogino/status/2123809454475088095",
+    "author": {
+      "handle": "mikito_ogino",
+      "name": "荻野幹人"
+    },
+    "via": null,
+    "text": "開発者です。ファンネルと呼んでいただき光栄です。\n\n少し補足すると、「α波や集中度で飛ぶ」という、よく使われる方式ではなく、コマンドごとに割り当てた音のうち、選んだ音に20秒程注意を向けたときの脳波の誘発応答を8chで計測・判別し、意図した操作を選べるようにしています。\n\n一般の方では10分間のデータ収集で50%, 2回に1回は正しく選べるくらいの精度は出ます。今回の取材時もそんな感じでした。5時間くらいデータを取って練習すると70〜80%の精度を出すことができますが、個人差があります。\n\nいずれはAIによる自律飛行と組み合わせて、複数機飛ばしてみたいですね。\n\n論文 [frontiersin.org/journals/human…](https://www.frontiersin.org/journals/human-neuroscience/articles/10.3389/fnhum.2026.1869918/full)",
+    "images": [],
+    "deepDive": "#コマンドごとに音を割り当て、選んだ音に注意を向けたときの脳波で判別する「ファンネル」の開発者の補足です。\n[mikito_oginoさん](https://x.com/mikito_ogino/status/2123809454475088095)は、「ファンネル」と紹介した[@ZanEngineer さんの動画投稿](https://x.com/ZanEngineer/status/2123533259464409580)（表示約74万回）に、開発者本人として補足していました（日本時間11/21 1:03）。動画自体は見ていません。α波や集中度で動かす方式ではなく、コマンドごとに音を割り当て、選んだ音に約20秒注意を向けたときの脳波の反応を8chで読み取って判別する、と書いています。精度は、10分の練習で約50%、5時間で70〜80%で、個人差があるそうです。",
+    "followUps": []
+  },
+  {
+    "id": "2124453337852506454",
+    "cardId": "r38_170",
+    "datetime": "2026-11-22T22:54:00+09:00",
+    "postedAt": "2026-11-22T19:42:00+09:00",
+    "source": "likes",
+    "title": "Slackが、数千万の接続中クライアントへ約500msでメッセージを届ける仕組みを、2023年のブログで解説しています。",
+    "summary": "柴田淳さんが紹介。GatewayがWebSocketを持ち、Channel Serverがコンシステントハッシュで分担。ピーク時は1台あたり約1,600万チャンネル。",
+    "tweetId": "2124453337852506454",
+    "tweetIds": [
+      "2124453337852506454"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/ats/status/2124453337852506454",
+    "author": {
+      "handle": "ats",
+      "name": "柴田 淳 - 「みんなのPython」の著者・機械学習講師・シニアアーキテクト"
+    },
+    "via": null,
+    "text": "Slackは数千万の接続を維持しながら、世界中に約500ミリ秒でメッセージを届ける。しかも、サーバーが故障しても20秒未満で代替サーバーが稼働するという。\n\nこの驚異的なリアルタイム性と障害耐性を両立する仕組みは、単なるWebSocketの高速化ではなかった。\n\nSlackの技術ブログによると、そのアーキテクチャでは、クライアントとのWebSocket接続を維持するGateway Server（GS）と、チャンネルごとのメッセージ配信を管理するChannel Server（CS）が役割を分担している。\n\nGSは世界各地に分散し、ユーザーとの接続を担当。一方、CSはConsistent Hashingを利用してチャンネルを分担する。投稿されたメッセージは担当CSから必要なGSへ送られ、各GSが接続中のユーザーに配信する。\n\nこの設計の重要な点は、接続数の増加とチャンネル数の増加に、それぞれ独立して対応できることだ。\n\nしかし、大量の接続を処理できるだけでは、世界規模のメッセージングサービスは成立しない。サーバー障害が発生したとき、いかに素早く復旧できるかも重要になる。\n\nそこで登場するのが、Consistent Hash Ring Manager（CHARM）だ。\n\n[slack.engineering/real-time-mess…](https://slack.engineering/real-time-messaging/)",
+    "images": [],
+    "deepDive": "#Slackが、数千万の接続中クライアントへ約500msでメッセージを届ける仕組みを、2023年のブログで解説しています。\n[柴田淳さん（@ats）](https://x.com/ats/status/2124453337852506454)は、Slack Engineeringの「[Real-time Messaging](https://slack.engineering/real-time-messaging/)」（2023年4月11日）を紹介していました（日本時間11/22 19:42）。ブログには、数千万の接続中クライアントに、約500msでメッセージを届ける、とあります。CHARMが不調のChannel Serverを置き換え、新しいサーバーは20秒未満で稼働する、という記述もありました。\n\n仕組みとしては、Gateway Serverが各地域に置かれてWebSocketを保持し、Channel Serverがコンシステントハッシュでチャンネルを分担します。ピーク時は1台あたり約1,600万チャンネルを扱います。ハッシュリングの設定はConsul経由で配られます。接続数とチャンネル数を別々の層でスケールさせる考え方は、チャット機能付きのアプリを作るときの設計の参考になります。",
+    "followUps": []
+  },
+  {
+    "id": "2124441515196129660",
+    "cardId": "r38_169",
+    "datetime": "2026-11-22T22:54:00+09:00",
+    "postedAt": "2026-11-22T18:55:02+09:00",
+    "source": "likes",
+    "title": "ナレッジベースが約20万トークン未満なら、全文をプロンプトに入れてキャッシュした方が速い、というAnthropicの古い記事の一節です。",
+    "summary": "nasuuuさんが紹介。2024年9月のContextual Retrieval記事。全文＋プロンプトキャッシュで待ち時間は2倍超改善、費用は最大90%削減。2年前の記事なので上限や料金は最新ドキュメントで確認を。",
+    "tweetId": "2124441515196129660",
+    "tweetIds": [
+      "2124441515196129660"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/nasuvit_z/status/2124441515196129660",
+    "author": {
+      "handle": "nasuvit_z",
+      "name": "nasuuu"
+    },
+    "via": null,
+    "text": "Anthropicの公式ブログで、ナレッジベースが20万トークン（約500ページ）以内なら、RAGを構築するのではなく、全文をプロンプトに含めてClaudeに処理させる方法があると紹介されている。\nナレッジベースにあたる部分をプレフィックス化して、Prompt Cachingを組み合わせれば、レイテンシを2倍超改善し、コストを最大90%削減できるとのこと。\n長いコンテキストウィンドウを活用できるがゆえの戦略。\n[anthropic.com/research/conte…](https://www.anthropic.com/research/contextual-retrieval)",
+    "images": [],
+    "deepDive": "#ナレッジベースが約20万トークン未満なら、全文をプロンプトに入れてキャッシュした方が速い、というAnthropicの古い記事の一節です。\nもう1件、[nasuuuさん（@nasuvit_z）](https://x.com/nasuvit_z/status/2124441515196129660)が紹介していたのは、Anthropicの「[Introducing Contextual Retrieval](https://www.anthropic.com/research/contextual-retrieval)」（2024年9月19日）の一節です。ナレッジベースが20万トークン（約500ページ）未満なら全文をプロンプトに入れればよく、プロンプトキャッシュを使うと待ち時間は2倍超改善、費用は最大90%削減、とあります。原文どおりでした。ただし2年前の記事なので、今のモデルの上限や料金は、最新のドキュメントで確認した方が安全です。記事の本題は、それより大きい場合に検索失敗を49%減らす（並べ替えの再評価を併用すると67%減）「Contextual Retrieval」の方です。サポート用のボットやドキュメントのQ&Aなら、ベクトルDBを立てる前に「全文＋キャッシュ」で始めるのが近道だと思います。データが増えたらRAGに移れば十分です。",
+    "followUps": []
+  },
+  {
+    "id": "2124176542792380619",
+    "cardId": "r38_171",
+    "datetime": "2026-11-22T22:54:00+09:00",
+    "postedAt": "2026-11-22T01:22:07+09:00",
+    "source": "likes",
+    "title": "AIっぽいデザインの定番要素を集めたパロディCSS「Slopstrap」です。",
+    "summary": "加藤公一（はむかず）さんが紹介。点滅するステータスやグラデーション文字など。自分の紹介ページが量産されたように見えていないか点検するのに使える。",
+    "tweetId": "2124176542792380619",
+    "tweetIds": [
+      "2124176542792380619"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/hamukazu/status/2124176542792380619",
+    "author": {
+      "handle": "hamukazu",
+      "name": "加藤公一（はむかず）"
+    },
+    "via": null,
+    "text": "サイトをバイブコーディングで雑に作った風に見せるためのCSSすごい。\n[slopstrap.mikelacher.com](https://slopstrap.mikelacher.com/)",
+    "images": [],
+    "deepDive": "#AIっぽいデザインの定番要素を集めたパロディCSS「Slopstrap」です。\n[hamukazuさん](https://x.com/hamukazu/status/2124176542792380619)が紹介していた[Slopstrap](https://slopstrap.mikelacher.com/)は、AIっぽいデザインの定番要素を集めたパロディCSSです（日本時間11/22 01:22、表示は約12万回）。点滅するステータスの点、太い左ボーダー、グラデーション文字、1語だけ明朝体のイタリック、ベントーグリッド、架空の利用者数カウンター、偽の推薦文などがそろっています。`Slopstrap.slopify()` を呼ぶだけで、普通の配管工事店のサイトが一瞬で「AI製」っぽくなります。「[LLMの温もりを感じる文章](https://x.com/silasolla/status/2124415311705420054)」と笑う声がある一方、「[色を直せばむしろ良いテンプレ](https://x.com/sator_imaging/status/2124367096394199318)」という意見もありました。裏を返すと「AI製に見えるサインの一覧」なので、自分の紹介ページが量産されたように見えていないか点検するのに使えます。",
+    "followUps": []
+  },
+  {
+    "id": "2124156884693266608",
+    "cardId": "r38_172",
+    "datetime": "2026-11-22T22:54:00+09:00",
+    "postedAt": "2026-11-22T00:04:00+09:00",
+    "source": "likes",
+    "title": "正社員エンジニアのカジュアル面談の募集で、チームではClaude Code中心の開発を1年以上続けている、と書かれています。",
+    "summary": "ふくださん。所属はカンリー。登壇資料にAI-DLCの速さやClaude Teamプランのコスト最適化など、実務の知見が並ぶ。",
+    "tweetId": "2124156884693266608",
+    "tweetIds": [
+      "2124156884693266608"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/ryu_f_web/status/2124156884693266608",
+    "author": {
+      "handle": "ryu_f_web",
+      "name": "ふくだ（fukuda ryu）"
+    },
+    "via": null,
+    "text": "一緒に働く正社員エンジニアを探していて、カジュアル面談やってます。\n\nチームではAI-DLCを軸に、Claude Codeを中心にしたAI駆動開発を1年以上、実務で続けています。どんなふうにやっているかは登壇資料にまとめています。\n\n「実際どうやってるの？」くらいの温度感で大丈夫です。気になる方は気軽にDMください。\n[speakerdeck.com/rfdnxbro](https://speakerdeck.com/rfdnxbro)",
+    "images": [],
+    "deepDive": "#正社員エンジニアのカジュアル面談の募集で、チームではClaude Code中心の開発を1年以上続けている、と書かれています。\n最後に、[ふくださん（@ryu_f_web）](https://x.com/ryu_f_web/status/2124156884693266608)の投稿は、正社員エンジニアのカジュアル面談の募集です（日本時間11/22 0:04）。プロフィールと[登壇資料](https://speakerdeck.com/rfdnxbro)では、所属はカンリーとあります。チームではAI-DLCを軸に、Claude Code中心の開発を1年以上続けている、と書かれています。資料には「AI-DLCでソフトウェア開発の速さは上がったのか？」「Claude Teamプランのコスト最適化」など、実務の知見が並んでいます。",
+    "followUps": []
+  },
+  {
+    "id": "2124120048625447184",
+    "cardId": "r38_168",
+    "datetime": "2026-11-22T22:54:00+09:00",
+    "postedAt": "2026-11-21T21:37:38+09:00",
+    "source": "likes",
+    "title": "流行りの「ソフトウェアファクトリー」も、中身は「JiraにチケットができたらClaude Codeを自動で起動してくれる君」では、という皮肉です。",
+    "summary": "uhyoさんの湯婆婆パロディ。概念の出典はStrongDMのSoftware Factory（2026年2月）。チケット本文経由のプロンプトインジェクションを前提に、トークンをエージェントに持たせない実装例もある。",
+    "tweetId": "2124120048625447184",
+    "tweetIds": [
+      "2124120048625447184"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/uhyo_/status/2124120048625447184",
+    "author": {
+      "handle": "uhyo_",
+      "name": "🈶うひょ🤪AI副業で月収0万円達成"
+    },
+    "via": null,
+    "text": "ソフトウェアファクトリーというのかい？　贅沢な名だね。\n\n今からお前の名前はJiraにチケットができたらClaude Codeを自動で起動してくれる君だ。いいかい、JiraにチケットができたらClaude Codeを自動で起動してくれる君だよ。\n\n分かったら返事をするんだ、JiraにチケットができたらC",
+    "images": [],
+    "deepDive": "#流行りの「ソフトウェアファクトリー」も、中身は「JiraにチケットができたらClaude Codeを自動で起動してくれる君」では、という皮肉です。\n続いて、[uhyoさん](https://x.com/uhyo_/status/2124120048625447184)の投稿です（日本時間11/21 21:37、いいね474）。『千と千尋』の湯婆婆の台詞のパロディで、流行りの「ソフトウェアファクトリー」も、中身は「JiraにチケットができたらClaude Codeを自動で起動してくれる君」では？という皮肉です。\n\n概念としてよく引用されるのは、StrongDMが2026年2月に出した[Software Factory](https://factory.strongdm.ai/)です。仕様とシナリオからエージェントが書いて検証し、人間はコードを書かないしレビューもしない、という方式です（[Simon Willisonさんの解説](https://simonwillison.net/2026/feb/7/software-factory/)）。国内でも、タイミーの「[Devinはソフトウェアファクトリーのフレームワークになった](https://tech.timee.co.jp/entry/2026/11/09/120755)」や、nrsさんの「[TAKTにmanager機能](https://zenn.dev/nrs/articles/d3548bbddc182a)」など、11月に記事が続いています。反応としては、「[本当のソフトウェアファクトリーを見せて](https://x.com/YKirin0418/status/2124171735671173606)」という投稿がある一方、「[名前が長いほどやることが明確で優秀](https://x.com/snufkin_ai/status/2124435217855164842)」と擁護する声もありました。\n\n個人開発なら、チケットからプルリクエストまでの自動化だけでも十分価値はあると思います。安全面では、[ある実装例](https://sreekeshokky.in/blog/software-factory/)が、GitHubやJiraのトークンはエージェントに持たせず、外側のコードが持つ、と書いています。チケット本文経由でプロンプトインジェクションを受ける前提の設計です。",
+    "followUps": []
+  },
+  {
+    "id": "2124047814615548408",
+    "cardId": "r38_167",
+    "datetime": "2026-11-22T22:54:00+09:00",
+    "postedAt": "2026-11-21T16:50:36+09:00",
+    "source": "likes",
+    "title": "Kanaryの「/relay」で、性格の違うAI同士に会話の生ログを回して相互レビューさせる実践例です。",
+    "summary": "MacアプリKanaryの作者Kenn Ejimaさん。Claude・Codex・Cursor・Antigravityの公式アプリ同士で、新しい会話を要約せず転送する。NeonとAstraが両側、真ん中はMythos（Claude）。会話はアップロードしない。既存のGemini 4 Neon発表 r38_118 とは別件。",
+    "tweetId": "2124047814615548408",
+    "tweetIds": [
+      "2124047814615548408"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/kenn/status/2124047814615548408",
+    "author": {
+      "handle": "kenn",
+      "name": "Kenn Ejima"
+    },
+    "via": null,
+    "text": "難問に取り組む時の\n\nNeon -> Mythos -> Astra\nNeon <- Mythos <- Astra\n\nの深い往復、変な声が出そうなぐらい最高です…\n\n両側に性格が真逆のアドバイザーがいて真ん中のClaudeが実働する\n\n今まではAstraの重箱の隅つつきにClaudeが影響受けまくるので人間からClaudeへの援護射撃が必要だったけど、この構成ならNeonがさらに高所から視点を注入してくれるので本当にちょうど良いバランスに勝手に落ち着く\n\n人間はコメントもせず /relay 送信ボタンをポチポチ押して回覧させるだけで議論が正しい位置に収束していく…\n\n初めて人間なしでいけそうなところまで来たかもしれない",
+    "images": [],
+    "deepDive": "#Kanaryの「/relay」で、性格の違うAI同士に会話の生ログを回して相互レビューさせる実践例です。\nいいねからです。[Kenn Ejimaさん（@kenn）](https://x.com/kenn/status/2124047814615548408)の投稿です（日本時間11/21 16:50、いいね730、ブックマーク589）。Macアプリ[Kanary](https://kanary.to/)の作者で、同アプリの[/relay](https://kanary.to/agents)を使った話です。\n\n/relayは、Claude、Codex、Cursor、Antigravityの公式デスクトップアプリ同士で、前回送ってから新しくなった会話を、発言者のラベル付きでそのまま転送する機能です。要約はしません。公式も、送るまで動かない、読むことが仕事だ、と書いています。初回以降は、チャットに `/relay` と打てば直接送れる、とも案内しています。\n\n投稿に出てくるNeon、Mythos、Astraは、ツール名ではなくモデル側の呼び方です。Kanaryの画面例では、Antigravity側が「gemini-4-neon」、Codex側が「gpt-6.2-astra」と表示されています。Kennさんは、真ん中の実働をClaudeと書いて、その位置をMythosと呼んでいます。引用の[toyoshimさん](https://x.com/toyoshim/status/2124050226067710150)も、「春に僕らを震撼させたMythos」と書いています。細かい指摘をするAstraと、高い視点で全体を見るNeonが両側にいると、Claudeの実装が片方に引っ張られすぎなくなった、という話です。Kennさんは、指示を書かせて回す一般的な方式は[伝言ゲームで情報が劣化する](https://x.com/kenn/status/2123961554710532585)と考えていて、生の履歴を回すのが肝だそうです。引用では「[現代のMAGI](https://x.com/09y/status/2124466858430734455)」という反応もありました。\n\n性格の違うAIに相互レビューさせる実践例として、おもしろいと思います。セキュリティ面では、KanaryはMac上の会話記録を読み、macOSのアクセシビリティ権限を使います。会話そのものはアップロードしない、と公式に書かれています。「Ask ChatGPT」は、選んだフォルダをzipにしてChatGPTへ渡しますが、`.env` や鍵ファイルは名前で除外する、中身までは秘密情報をスキャンしない、と説明されています。秘密情報をどこまでAIに渡すかを考える材料になります。",
+    "followUps": []
+  },
+  {
     "id": "2124454677374988434",
     "cardId": "r38_165",
     "datetime": "2026-11-22T19:50:00+09:00",
@@ -577,7 +1041,17 @@
     "text": "Trending repository of the day 📈\n\nClaude-BugHunter\n\nA Claude Code skill bundle for bug hunting and external red-team work - 82 skills, 15 slash commands, 681 disclosed-report patterns curated across 24 core vulnera...\n\nLast 24h: 1,794 ⭐\nTotal: 15,125 ⭐️\n[github.com/elementalsouls…](https://github.com/elementalsouls/Claude-BugHunter)",
     "images": [],
     "deepDive": "#Claude Codeを「バグハンター」にするスキル集「Claude-BugHunter」が、急に広がっています。\n[trending_reposさんの投稿](https://x.com/trending_repos/status/2124112629157470658)で知りました。作者はSachin Sharmaさんで、ライセンスはMITです（[GitHub](https://github.com/elementalsouls/Claude-BugHunter)）。\n- **中身：** Claude Code用のスキル集です。83個のスキルと、15個のスラッシュコマンドが入っています。HackerOneで公開された、681件の脆弱性の報告から、攻撃のパターンをまとめています。偵察、Webアプリの弱点探し、M365やEntra、Okta、VPNの機器などの企業向けシステムをねらう攻撃の流れ、報告書づくりまで入っています。\n- **数字：** 投稿では、「24時間で1,794スター、合計15,125」と書かれていました。いまGitHubで確かめると、スターは約15,188、フォークは1,763です。リポジトリは2026年5月に作られ、最後の更新は11/21の13:24（日本時間）でした。\n- **しくみ：** やりたいことを普通の文章で伝えると、合うスキルが自動で読み込まれます。Codex CLI、OpenCode、Hermes Agent、Google Antigravityにも、同じスキルを入れられます。BurpのMCPをつなぐこともできます。READMEには、HackerOneのAPIトークンを入れるかどうか聞かれる（空欄でもよい）と書いてあります。\n\nここからは、私の推測です。サブドメインを調べたり、弱点を試したりする道具を、エージェントが自分で動かせます。なので、許可された範囲の外に出ないかが、いちばんの心配です。また、人気のスキル集は、サプライチェーン攻撃にねらわれやすいので、入れる前に中身を読んでおくのが安全です。許可のない対象への診断は、違法になり得ます。",
-    "followUps": []
+    "followUps": [
+      {
+        "datetime": "2026-11-23T07:57:00+09:00",
+        "clock": "07:57",
+        "title": "前にお伝えした[Claude-BugHunter](https://github.com/elementalsouls/Claude-BugHunter)は、さらに広がっています。[11/22 21:08の投稿](https://x.com/trending_repos/status/2124475007032324143)では、24時間で1,803スター、合計16,815と書かれていました。いまGitHubを見ると、17,686スター、1,961フォークです。スキル集を丸ごと入れるリスクは、前にお伝えしたとおりです。",
+        "text": "",
+        "tweetIds": [
+          "2124475007032324143"
+        ]
+      }
+    ]
   },
   {
     "id": "2124100318434890197",
@@ -732,7 +1206,19 @@
     "text": "モデルの手前で拒否された入力も、送信先には届いている。\nHD Mooreは、AIサービスに送った200万件弱のリクエストに追跡用の秘密情報を仕込んだ。同氏が示した事例には、モデル実行前に拒否されたリクエストに含まれる実験用AWSキーの流出もある。\n追跡の仕掛けは、同じキーを二度送らないこと。どのリクエストに入れたキーが外で使われたかをたどれる。\n社内AIのデータ管理では、モデルに届く手前で誰が入力を受け取るかまでが確認範囲になる。\n\n[arstechnica.com/security/2026/…](https://arstechnica.com/security/2026/11/a-leaky-ai-supply-chain-is-exposing-secret-user-data-at-an-alarming-rate/)",
     "images": [],
     "deepDive": "#AIのサービスに、「わな用の秘密」を200万件送ったら、鍵が盗まれていた、という実験です。\n[connect24hさんの投稿](https://x.com/connect24h/status/2123975799720345660)で知りました。MetasploitをつくったHD Mooreさん（いまはDragosの研究の責任者）が、2026年7月から11月にかけて行った実験です（[Dragosの公式ブログ](https://www.dragos.com/blog/ai-supply-chain-security-canary-tokens)、[Ars Technica](https://arstechnica.com/security/2026/11/a-leaky-ai-supply-chain-is-exposing-secret-user-data-at-an-alarming-rate/)）。追跡できる秘密（本物として動くAWSのキー、SSHのパスワード、一度しか使わないURLなど）を入れた依頼を、約200万件、いろいろなAIのサービスに送り、そのあと、どこで使われたかを追いかけました。\n- **少なくとも3つのAIの事業者が、侵入されていました。** 1社では、数百のAWSのキーが、使い回されました。投稿にある「モデルが動く前に拒否された依頼の鍵まで盗まれた」というのは、犯人がモデルの奥ではなく、受付（入口）で、依頼をまるごとコピーしていた証拠、という意味です。ほかの2社では、データを残さない設定（ZDR）をつけた依頼まで、盗まれていました。Mooreさんは、「中に入られていたら、プライバシーの設定は役に立たない」と書いています。\n- **盗まれた鍵は、数時間以内に試されたこともありました。** 犯人は、S3やSecrets Managerを探り、Bedrockを有効にしようとし、IAMのユーザーを足して居座ろうとして、AWSのAPIを「数万回」呼んでいました。\n- **転売業者の問題：** 安い値段で依頼を集め、記録を取って、依頼の中身を抜いていた業者もいました。ある中国のAIの研究室は、送ったURLの半分以上を、2〜3日後に取りに来ていました。「データを集めない」や、ZDRの印がついた依頼でも、約3分の2が対象でした。アメリカの事業者経由でも、同じことが起きていました。\n- **記事が挙げている対策：** できれば、自分の場所で動かす。大手と、直接契約する。途中の経由役（ルーター）を使うなら、つなぐ先を自分で選ぶ。安すぎる転売業者は避ける。自分でも、「わなの鍵（Canarytoken）」を、エージェントの文脈に入れておく。秘密を自動で消す設定を使う。\n\nプライバシーの設定は、最初の送り先にしか効かない、というのがいちばん大事な点です。記事にも、「エージェントは、読めるものを、鍵でもなんでも、そのまま送る」とあります。どの3社が侵入されたかは、ほとんど公表されていません。1社が、速報を出した段階です。",
-    "followUps": []
+    "followUps": [
+      {
+        "datetime": "2026-11-23T07:57:00+09:00",
+        "clock": "07:57",
+        "title": "前にお伝えしたDragosの実験の続きです。OpenRouterが11/22、調査の結果3事業者との取引を打ち切り、125のエンドポイントをZDR対象から外したと発表しました。",
+        "text": "[Guillermo Rauchさん（Vercel CEO）](https://x.com/rauchg/status/2124595496849445079)が、日本時間11/23 5:06に投稿しました。自分の[10/1の投稿](https://x.com/rauchg/status/2105476587756138942)を引用し、当時から「ZDR（ゼロデータ保持）をうたう怪しい無料トークンの売り込みを毎週断っている」、Vercel AI Gatewayは有料顧客40万超で上乗せ料金ゼロ、と書いていたのが当たった、としています。今回は「数百万表示の『無料・ZDRのステルスモデル』の投稿がある」と書いていますが、どの事業者かは明示していません。「国家規模でデータを持ち出す仕組みでは、と強く疑う。Dragosの研究がそれを裏付けているように見える」とも書いています。前にお伝えしたDragosの実験が示したのは、事業者の侵害、転売業者による盗み見、一部のラボへの流出です。「国家の計画」と断定する材料は、Dragosの文中にはありません。ここはRauchさんの推測です。\n\n新しい公式の動きとして、[OpenRouterが11/22に発表](https://openrouter.ai/blog/announcements/data-processing-incidents-on-inference-providers/)しています。OpenRouter自身の侵害は確認されていないとしたうえで、調査の結果3事業者との取引を打ち切り、125のエンドポイントをZDR対象から外し、影響を受けうる顧客に通知した、とあります。事業者側のお知らせとしては、Atlas Cloud、Novita、Phala、Togetherが挙がっています。Togetherの件は、2026年6〜7月のリクエストでプロンプトが漏れた、という内容です。「ZDRは利用規約の約束にすぎず、監査できない。検証できるのは自分のインフラだけ」（[wittypriteshさん](https://x.com/wittypritesh/status/2124629939806945470)）という声もありました。エージェントが読める場所に `.env` や本番のキーを置かないこと、おとりのキーを1本置いて使われたら事故として扱うことは、前にも書いたとおり、すぐできて効果の高い対策です。",
+        "tweetIds": [
+          "2124595496849445079",
+          "2105476587756138942",
+          "2124629939806945470"
+        ]
+      }
+    ]
   },
   {
     "id": "2123975539816013842",
@@ -1828,6 +2314,15 @@
         "text": "[connect24hさんの投稿](https://x.com/connect24h/status/2124282249583730843)で知りました。多摩信金などが、「マネーフォワードエックスの情報漏えい」を知らせたため、「マネーフォワードが侵入された」と受け取る人が出ました。connect24hさんは、「風評被害。また外のサービスのKARTEの件」と指摘しています。\n\n[マネーフォワードの公式発表](https://corp.moneyforward.com/news/info/20261120-mf-press-1/)（11/20）によると、次のとおりです。\n- **対応：** 11/13にプレイドから報告を受け、11/14にKARTEとの連携を止め、連携用の認証情報を無効にしました。\n- **もれたもの（マネーフォワード本体）：** システムの固有の識別子が59,998件、会社の所在地（都道府県）が625件です。\n- **もれたもの（マネーフォワードエックス）：** 金融機関向けの「Mikatano」の利用者の、メールアドレスが19,648件、固有の識別子が22,443件、それに従業員の情報です。\n- **対象外：** パスワード、クレジットカード、口座の情報は、もともとKARTEに渡していないので、対象外です。マネーフォワード クラウドと、マネーフォワード MEへの不正なアクセスもありません。\n- **銀行の告知：** Mikatanoは、銀行の法人向けの入り口として使われているので、[中国銀行](https://www.chugin.co.jp/news/3603.html)、[八十二長野銀行](https://bank.82group.jp/news/2026/20261120_2.html)、[多摩信金](https://ask-tamashin.dga.jp/priority/detail.html?id=7897)などが、いっせいに知らせています。\n\nメールアドレスが、「銀行の法人向けの入り口の利用者」として、もれています。なので、金融機関を名乗る、にせのメール（フィッシング）に使われやすいのが、いちばんの危険です（私の推測です）。自分のアプリに、分析の道具やCRMを入れるときは、渡すデータを必要最小限にすることと、連携のトークンをすぐ無効にできる作りにしておくことが効きます。マネーフォワードが翌日に連携を止められたのは、その良い例です。",
         "tweetIds": [
           "2124282249583730843"
+        ]
+      },
+      {
+        "datetime": "2026-11-23T07:57:00+09:00",
+        "clock": "07:57",
+        "title": "KARTEの続報です。MOSHが11/19、全登録者928,617件のメールアドレスとユーザーIDのもれを発表しています。",
+        "text": "KARTEの続報です。[connect24hさん](https://x.com/connect24h/status/2124619996211085481)が、自身がMOSHの利用者だとして、日本時間11/23 6:44に投稿していました。本人にとっては、mineo、radiko（投稿では「radico」）に続く3件目だそうです。これは本人に届いた件数で、KARTE全体の件数ではありません。[MOSHの公式発表（11/19）](https://corp.mosh.jp/news/c7ee738e12520959)では、対象は11/12 4:39時点の全登録者（ゲスト・クリエイター）928,617件、項目はメールアドレスとMOSHのユーザーIDです。氏名・住所・電話・カード情報・パスワードは含まれず、MOSH本体への侵入も確認されていない、としています。対象者への個別連絡は、`no-reply@sec-incident.themosh.jp` から送っています。「行動履歴も漏れているはず」はconnect24hさんの推測で、MOSHの発表にはメールとユーザーID以外の記載はありません。自社は無事でも、外部の分析サービスに渡したデータは漏れ得ます。メールとユーザーIDがそろうと、本物らしいフィッシングが作れるので、MOSHを使っていたなら、同社をかたるメールには注意してください。公式も、パスワードやカード番号をメールで尋ねることはない、と案内しています。",
+        "tweetIds": [
+          "2124619996211085481"
         ]
       }
     ]

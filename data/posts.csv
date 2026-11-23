@@ -1,4 +1,175 @@
 id,datetime,source,author,url,text,summary
+2124549218995949967,2026-11-23T07:57:00+09:00,timeline,merettm,https://x.com/merettm/status/2124549218995949967,"We decided to provide more transparency into pretraining progress at OpenAI for the sake of moving toward shared safety bars. In “Perplexity and Intelligence” I argue for common limits based on perplexity and other measurements, with progress beyond them gated on our ability to understand AI behavior.
+
+[openai.com/index/perplexi…](https://openai.com/index/perplexity-and-intelligence)",Jakub Pachockiさん「Perplexity and Intelligence」（11/22）。GPT-3.5は約0.99、GPT-4は約0.91、0.8未満でサイバーと数学が変革的、約0.76で未解決問題。上限の値も検証方法も未定。0.8未満でサイバー能力が変革的になったと公式が認めた点が大きい。私の推測あり。
+2124502812046574056,2026-11-23T07:57:00+09:00,likes,neet_se2,https://x.com/neet_se2/status/2124502812046574056,これ。,neet_se2さんがxhackjp1さんの投稿を引用。仕様を決める・検証する・顧客の課題を拾う側に価値が移る、という見方。
+2124480538358726899,2026-11-23T07:57:00+09:00,likes,akshay_pachaar,https://x.com/akshay_pachaar/status/2124480538358726899,"RAG vs. CAG, clearly explained!
+
+RAG is great, but it has a major problem:
+
+every query hits the vector DB. even for static information that hasn't changed in months.
+
+this is expensive, slow, and unnecessary.
+
+Cache-Augmented Generation (CAG) fixes this by letting the model keep static information in its key-value (KV) memory, which is what the model builds internally for every token it reads.
+
+in fact, you can combine RAG and CAG for the best of both worlds.
+
+here's how it works:
+
+RAG + CAG splits your knowledge into two layers.
+
+↳ static data (policies, documentation) gets cached once in the model's KV memory
+
+↳ dynamic data (recent updates, live documents) gets fetched via retrieval
+
+you get faster inference, lower costs, and less repeated work.
+
+the trick is being selective about what you cache.
+
+only cache static, high-value knowledge that rarely changes. cache everything and you'll hit context limits. separating ""cold"" (cacheable) and ""hot"" (retrievable) data keeps this system reliable.
+
+you can start today. OpenAI and Anthropic already support prompt caching in their APIs.
+
+one thing to know before you scale it.
+
+prompt caching matches on an exact prefix, byte for byte. your cached layer only gets reused when it sits at the very front of the context in the same order every time.
+
+↳ reorder two cached policy documents and both turn into a miss
+
+↳ cache document A alone and document B alone, then query both, and the second one misses because the model computed its cached state without ever seeing the first
+
+in production this looks like a small fraction of your cached blocks serving almost all the hits. the rest just sits there.
+
+the way out comes from how attention behaves. tokens attend mostly to their own local neighborhood, and only a few reach across document boundaries. CacheBlend recomputes those few and reuses everything else from the separately cached documents.
+
+multi-document queries run two to four times faster, quality holds, and order stops mattering.
+
+it ships in LMCache, which is fully open source.
+
+repo: [github.com/LMCache/LMCache](https://github.com/LMCache/LMCache)
+
+(don't forget to star 🌟)
+
+below, i have quoted my article on KV cache management. it covers where prefix caching stops working and how a proper caching layer fixes it.
+
+give it a read.
+
+cheers! :)",akshay_pachaarさん。CAGとRAG。CacheBlend（EuroSys'25）と実装LMCache。TTFTは2.2〜3.3倍。APIならシステムプロンプト・ツール定義・変わらない文書を毎回同じ順で先頭に置く。
+2124465295746302318,2026-11-23T07:57:00+09:00,likes,siyukat,https://x.com/siyukat/status/2124465295746302318,ルーターの調子が悪いんだけど、ゆっくりボイス読み上げbotという現在進行形で数千とか数万のユーザーが使ってるサービスがあるから再起動できない,"siyukatさん。いいね2,066。「自宅サーバーが本番環境」の単一障害点の例。"
+2124463348322553899,2026-11-23T07:57:00+09:00,likes,komitsubo,https://x.com/komitsubo/status/2124463348322553899,シニアで転職してみると分かるけど、自分の経歴を盛って入るとホント辛い未来しか待ってない。シニアは伸びしろを期待されていない。そして自分が思ってる以上に伸びしろはない。若者と同じ感覚で経歴盛ったらあとは詰むだけ。素直に今までできた事と、そこから今後できる事だけ伝えた方がいい。,komitsuboさん。
+2124429333242741086,2026-11-23T07:57:00+09:00,likes,monomiU__,https://x.com/monomiU__/status/2124429333242741086,←わたし　超博識な親戚→,"monomiU__さん。元投稿は約1,534万回表示、この投稿はいいね約2.9万。雑談系です。"
+2124424175980810549,2026-11-23T07:57:00+09:00,likes,PaulYoungX,https://x.com/PaulYoungX/status/2124424175980810549,"Personne n'en parle, mais cette marque de dentifrice TRÈS CONNUE vient peut-être de TUER tout le business des études de marché.
+
+Colgate a publié une étude qui montre un truc fou : tu peux prédire si les gens vont vraiment acheter un produit… juste en demandant à une IA comme ChatGPT de jouer le rôle de clients.
+
+Et c'est complètement dingue.
+
+Si tu demandes à une IA « Note ce produit de 1 à 5 », elle te sort une réponse tiède, toujours pile au milieu. En gros, ça ne sert à rien.
+
+Du coup, des chercheurs ont inventé une méthode qu'ils appellent Semantic Similarity Rating (SSR).
+
+Au lieu de demander une note à l'IA, ils lui ont demandé de jouer un rôle.
+
+Ils lui ont donné un profil de client : âge, revenus, etc. Ils lui ont montré une idée de produit. Et ils lui ont demandé d'écrire ce qu'elle en pense vraiment, sans filtre.
+
+Ensuite, ils ont pris un autre outil, qui sait comprendre le sens d'un texte, pour transformer ces avis écrits en une note.
+
+Les résultats sont hallucinants.
+
+Ils ont comparé ça à 57 vrais sondages sur des produits d'hygiène, avec 9 300 réponses de vrais humains.
+
+Pour te donner une idée : si tu poses deux fois la même question aux mêmes personnes, leurs réponses ne collent jamais à 100 %. Les clients virtuels atteignent 90 % de ce niveau de fiabilité.
+
+Ils ont reproduit parfaitement la façon dont les gens réagissent quand le prix change, selon leur âge et leurs revenus.
+
+Et leurs avis détaillés allaient plus loin et étaient plus critiques que ceux écrits par les vrais humains.
+
+Ça casse complètement le modèle des études de marché classiques, qui coûtent une fortune.
+
+Plus besoin d'attendre un mois pour savoir si un produit va se vendre.
+
+Tu peux simuler 1 000 entretiens avec des clients ultra ciblés en une nuit.
+
+Tu peux comparer direct plusieurs prix, sur chaque type de client.
+
+L'étude complète est ici : [arxiv.org/pdf/2510.08338](https://arxiv.org/pdf/2510.08338)",arXiv 2510.08338。著者の大半はPyMC Labsで、Colgate-Palmoliveからも2人。「Colgateが発表」は少し言い過ぎ。日用品調査57件で再テスト一致度の90%。本番のA/Bテストの代わりにはならない。
+2124418989640098057,2026-11-23T07:57:00+09:00,likes,fladdict,https://x.com/fladdict/status/2124418989640098057,こういうの大事,深津貴之さん。AIの時代には手間そのものに価値が出る、という見方にも読める（私の解釈です）。
+2124327528978612389,2026-11-23T07:57:00+09:00,likes,nissyiiii,https://x.com/nissyiiii/status/2124327528978612389,"すばらしい・・・
+何食べたらこんなの思いつくんだ",にっしーさんがGregさん（livelaughgreg）の投稿を引用。閉じる動作の検知は私の推測。既存のオキラマ r38_26 とは別件。
+2124307429538058717,2026-11-23T07:57:00+09:00,likes,koheifukada,https://x.com/koheifukada/status/2124307429538058717,"「数学やってる人は、物理とか生物にシフトした方がいいよ。ソフトウェア作ってる人は、検証器（verifier）とか評価（eval）を作る方にシフトした方がいいよ。」
+
+なぜか？
+
+物理や生物は数学に比べて、実験や現実世界とのすり合わせが必要、すなわち実環境や物理的な実験による仮説検証など時間や空間による障壁があるため、AIの処理だけで加速できない。そうした検証には人間が介入する価値がある。
+
+ソフトウェアも「コードを書く」作業自体はAIがやるから、「その出力が本当に正しいかチェックする仕組み（verifierやeval）」を作る側に回った方がいい、というのをdatabricksの人のメッセージ。",koheifukadaさんがYuchen Jinさんの投稿を紹介。検証できる分野はAI研究の大半が2027年に自動化される、と本人が補足。物理や生物の説明はkoheifukadaさんの解釈。
+2124213783308456171,2026-11-23T07:57:00+09:00,likes,mstockton,https://x.com/mstockton/status/2124213783308456171,"This is a fantastic post here. Many teams still need to get to the 'version 1' of this for their agents, where they have:
+
+1. Systematized and written down their procedures (e.g. SOPs written as skills)
+
+2. Extracted implicit company domain knowledge into documents (e.g. how does your company work, ideally in a linked wiki)
+
+3. Provided programmatic access to your important data (e.g. tools the agents can call, which are well-designed and documented)
+
+The above is a great start, and exponentially better than not using AI systematically and in a shared way. But what is described in this article is entirely magical once it starts working - the 'hill climbing' process that inspects how your company is using the 'version 1' system described above, and is able to automatically improve it.
+
+This 'factory pattern' is generally applicable (e.g in software building, agent knowledge utilization, etc.). The out-of-band / out-of-context introspection of 'what happened and what didn't work well' followed by automated improvements to the underlying components, is amazing. Once this loops starts working, it truly does feel like you've built something that is building itself.",Harrison Chaseさんの投稿をMatt Stocktonさんが補足。多くのチームはまだスキル化・文書化の初期段階。指示の自動更新はプルリクエストにして人が確認するのが安全（私の考えです）。
+2123809454475088095,2026-11-23T07:57:00+09:00,likes,mikito_ogino,https://x.com/mikito_ogino/status/2123809454475088095,"開発者です。ファンネルと呼んでいただき光栄です。
+
+少し補足すると、「α波や集中度で飛ぶ」という、よく使われる方式ではなく、コマンドごとに割り当てた音のうち、選んだ音に20秒程注意を向けたときの脳波の誘発応答を8chで計測・判別し、意図した操作を選べるようにしています。
+
+一般の方では10分間のデータ収集で50%, 2回に1回は正しく選べるくらいの精度は出ます。今回の取材時もそんな感じでした。5時間くらいデータを取って練習すると70〜80%の精度を出すことができますが、個人差があります。
+
+いずれはAIによる自律飛行と組み合わせて、複数機飛ばしてみたいですね。
+
+論文 [frontiersin.org/journals/human…](https://www.frontiersin.org/journals/human-neuroscience/articles/10.3389/fnhum.2026.1869918/full)",荻野幹人さんが、お侍さん（ZanEngineer）の動画投稿に補足。α波で動かす方式ではない。精度は10分の練習で約50%、5時間で70〜80%。動画自体は未視聴。
+2124453337852506454,2026-11-22T22:54:00+09:00,likes,ats,https://x.com/ats/status/2124453337852506454,"Slackは数千万の接続を維持しながら、世界中に約500ミリ秒でメッセージを届ける。しかも、サーバーが故障しても20秒未満で代替サーバーが稼働するという。
+
+この驚異的なリアルタイム性と障害耐性を両立する仕組みは、単なるWebSocketの高速化ではなかった。
+
+Slackの技術ブログによると、そのアーキテクチャでは、クライアントとのWebSocket接続を維持するGateway Server（GS）と、チャンネルごとのメッセージ配信を管理するChannel Server（CS）が役割を分担している。
+
+GSは世界各地に分散し、ユーザーとの接続を担当。一方、CSはConsistent Hashingを利用してチャンネルを分担する。投稿されたメッセージは担当CSから必要なGSへ送られ、各GSが接続中のユーザーに配信する。
+
+この設計の重要な点は、接続数の増加とチャンネル数の増加に、それぞれ独立して対応できることだ。
+
+しかし、大量の接続を処理できるだけでは、世界規模のメッセージングサービスは成立しない。サーバー障害が発生したとき、いかに素早く復旧できるかも重要になる。
+
+そこで登場するのが、Consistent Hash Ring Manager（CHARM）だ。
+
+[slack.engineering/real-time-mess…](https://slack.engineering/real-time-messaging/)","柴田淳さんが紹介。GatewayがWebSocketを持ち、Channel Serverがコンシステントハッシュで分担。ピーク時は1台あたり約1,600万チャンネル。"
+2124441515196129660,2026-11-22T22:54:00+09:00,likes,nasuvit_z,https://x.com/nasuvit_z/status/2124441515196129660,"Anthropicの公式ブログで、ナレッジベースが20万トークン（約500ページ）以内なら、RAGを構築するのではなく、全文をプロンプトに含めてClaudeに処理させる方法があると紹介されている。
+ナレッジベースにあたる部分をプレフィックス化して、Prompt Cachingを組み合わせれば、レイテンシを2倍超改善し、コストを最大90%削減できるとのこと。
+長いコンテキストウィンドウを活用できるがゆえの戦略。
+[anthropic.com/research/conte…](https://www.anthropic.com/research/contextual-retrieval)",nasuuuさんが紹介。2024年9月のContextual Retrieval記事。全文＋プロンプトキャッシュで待ち時間は2倍超改善、費用は最大90%削減。2年前の記事なので上限や料金は最新ドキュメントで確認を。
+2124176542792380619,2026-11-22T22:54:00+09:00,likes,hamukazu,https://x.com/hamukazu/status/2124176542792380619,"サイトをバイブコーディングで雑に作った風に見せるためのCSSすごい。
+[slopstrap.mikelacher.com](https://slopstrap.mikelacher.com/)",加藤公一（はむかず）さんが紹介。点滅するステータスやグラデーション文字など。自分の紹介ページが量産されたように見えていないか点検するのに使える。
+2124156884693266608,2026-11-22T22:54:00+09:00,likes,ryu_f_web,https://x.com/ryu_f_web/status/2124156884693266608,"一緒に働く正社員エンジニアを探していて、カジュアル面談やってます。
+
+チームではAI-DLCを軸に、Claude Codeを中心にしたAI駆動開発を1年以上、実務で続けています。どんなふうにやっているかは登壇資料にまとめています。
+
+「実際どうやってるの？」くらいの温度感で大丈夫です。気になる方は気軽にDMください。
+[speakerdeck.com/rfdnxbro](https://speakerdeck.com/rfdnxbro)",ふくださん。所属はカンリー。登壇資料にAI-DLCの速さやClaude Teamプランのコスト最適化など、実務の知見が並ぶ。
+2124120048625447184,2026-11-22T22:54:00+09:00,likes,uhyo_,https://x.com/uhyo_/status/2124120048625447184,"ソフトウェアファクトリーというのかい？　贅沢な名だね。
+
+今からお前の名前はJiraにチケットができたらClaude Codeを自動で起動してくれる君だ。いいかい、JiraにチケットができたらClaude Codeを自動で起動してくれる君だよ。
+
+分かったら返事をするんだ、JiraにチケットができたらC",uhyoさんの湯婆婆パロディ。概念の出典はStrongDMのSoftware Factory（2026年2月）。チケット本文経由のプロンプトインジェクションを前提に、トークンをエージェントに持たせない実装例もある。
+2124047814615548408,2026-11-22T22:54:00+09:00,likes,kenn,https://x.com/kenn/status/2124047814615548408,"難問に取り組む時の
+
+Neon -> Mythos -> Astra
+Neon <- Mythos <- Astra
+
+の深い往復、変な声が出そうなぐらい最高です…
+
+両側に性格が真逆のアドバイザーがいて真ん中のClaudeが実働する
+
+今まではAstraの重箱の隅つつきにClaudeが影響受けまくるので人間からClaudeへの援護射撃が必要だったけど、この構成ならNeonがさらに高所から視点を注入してくれるので本当にちょうど良いバランスに勝手に落ち着く
+
+人間はコメントもせず /relay 送信ボタンをポチポチ押して回覧させるだけで議論が正しい位置に収束していく…
+
+初めて人間なしでいけそうなところまで来たかもしれない",MacアプリKanaryの作者Kenn Ejimaさん。Claude・Codex・Cursor・Antigravityの公式アプリ同士で、新しい会話を要約せず転送する。NeonとAstraが両側、真ん中はMythos（Claude）。会話はアップロードしない。既存のGemini 4 Neon発表 r38_118 とは別件。
 2124454677374988434,2026-11-22T19:50:00+09:00,timeline,kanetugu2020,https://x.com/kanetugu2020/status/2124454677374988434,"We checked Hakoniwa (rotor vibration fitted from logs + unmodified PX4 on an emulated Pixhawk 6X) against public PX4 logs of an X500 and an S500.
 
 What matched, and what didn't (yaw, another flight), is all in the report.
