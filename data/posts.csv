@@ -1,4 +1,37 @@
 id,datetime,source,author,url,text,summary
+2124698217619321016,2026-11-23T12:53:00+09:00,timeline,GithubProjects,https://x.com/GithubProjects/status/2124698217619321016,"An open-source tool that records what your app does, then checks a piece-by-piece Rust rewrite against it.
+
+Explore it here:
+[osp.fyi/rust-anything](https://osp.fyi/rust-anything)","MIT。機械翻訳ではなく動きの証明。Prettierの例で19倍速いとするが、全部Rustで動いたのは17,224回のうち15,861回。リポジトリは8,085スター、654フォーク。"
+2124694615358120322,2026-11-23T11:55:00+09:00,timeline,koduki,https://x.com/koduki/status/2124694615358120322,[forbesjapan.com/articles/detai…](https://forbesjapan.com/articles/detail/108497) おお、Museで実現してしまってるAIコマースに日本の金融が安全にやるための動きをしてるのは良いねー。ビザマスは前からこの辺を準備してたから、楽しみね,11/18発表。土台はVisa Intelligent Commerce。Forbesの記事は広告（BRANDVOICE）。個人開発の決済にもエージェント購入の設定が出てくるかも（私の推測です）。既存の Poppy r38_81、KYA r38_44、muse1 とは別件。
+2124671645956837805,2026-11-23T10:53:00+09:00,timeline,connect24h,https://x.com/connect24h/status/2124671645956837805,"いいっすね。そのアイデア。採用！
+「怪しい.pyが届いたらブラウザ開かずにcolab run --gpu T4で隔離実行。ローカル汚染ゼロでAIエージェントにマルウェア分類まで丸投げできる…って便利すぎ。
+
+CSIRT視点では「信頼できないコードは絶対にローカルで走らせない」が基本。
+
+Colab CLIのエフェメラル実行（runで自動停止）は、まさにそのための隔離環境にぴったりですわ。セッションを放置するとコストもリスクも膨らむので、必ずcolab stopを忘れずに。便利ツールほど「止める」習慣が大事です。
+
+[github.com/googlecolab/go…](https://github.com/googlecolab/google-colab-cli)",ターミナルからColabのGPU/TPUを操作する公式ツール。マルウェア解析への利用は、アカウントのリスクと通信遮断の不足がある（私の推測です）。本格的な解析には専用サンドボックスのほうが安全。既存の Google AI Pro セール r38_151 とは別件。
+2124659056380158290,2026-11-23T09:56:00+09:00,timeline,koduki,https://x.com/koduki/status/2124659056380158290,[cloud.google.com/blog/products/…](https://cloud.google.com/blog/products/identity-security/how-to-simplify-cloud-access-with-unified-access-policies) これは気になる,11/20、プレビューで追加料金なし。AIエージェントを独立した主体として扱える。本番で使うのは様子を見てからが無難。
+2124655052979863746,2026-11-23T09:56:00+09:00,timeline,connect24h,https://x.com/connect24h/status/2124655052979863746,個情法の話だと思ったら経済安保の話でしたよ。病歴も指紋も位置も「国に言ってから出してね」の時代が来るかもしれん。日本版GDPRではなく「日本版データ輸出管理」みたいなノリ。同意があっても国が止める可能性があるので、「同意取ったからセーフ」で安心している担当者は、今のうちに布団をかぶっておきましょう。注視していく必要がある。,経済安全保障推進法の改正。対象はゲノム・医療・金融の3分野が想定。2027年1月からの通常国会。小規模な個人開発にすぐかかる可能性は低そう（私の推測です）。同意を取ったから大丈夫、とは言えなくなる流れ。
+2124650414280970258,2026-11-23T08:54:00+09:00,timeline,MacopeninSUTABA,https://x.com/MacopeninSUTABA/status/2124650414280970258,"ソラコムのIR資料が勉強になる。
+
+生成AIを全面活用する「アフターAI組織」の実例。従業員は207名から197名に減ったのに、売上高は44.5%増。販管費率は46.6%から38.4%へ改善。浮いた人員は新規事業へ回す。
+
+AIで人を増やさず成長する姿を数字で徹底公開。
+
+こちら👉
+[soracom.com/ja/ir/library](https://soracom.com/ja/ir/library)",通期予想を上方修正。AIの効果は主に販管費の抑制。既存事業をより少ない人数で回し、新規事業へ人を振り向けている。
+2124639311085944921,2026-11-23T08:54:00+09:00,timeline,MacopeninSUTABA,https://x.com/MacopeninSUTABA/status/2124639311085944921,"「Software Factoryの先へ：全社の仕事をAI-NativeにするUbieの内製クラウドエージェント基盤」が有益。
+
+Ubie CTOが、3年間内製してきたクラウドエージェント基盤RemocoとエンジニアリングエージェントUvinの構成と考え方を整理している。
+
+こちら👉
+[zenn.dev/ubie_dev/artic…](https://zenn.dev/ubie_dev/articles/45501469c9c044)",Sandbox-as-a-tool。秘密情報はサンドボックスに置かず、プロキシが注入する。Uvinはpstackがベース（既存の pstack 更新 r38_161 とは別件）。
+2124637892513542318,2026-11-23T08:54:00+09:00,timeline,GOROman,https://x.com/GOROman/status/2124637892513542318,"おもらしニュースつくりました
+アメリカはそんな無いのかな？？
+
+[omorashi.nullevi.app](https://omorashi.nullevi.app/)",非公式のまとめ。おもらしポイント＝流出人数×流出要素スコア。認証なし読み取り専用のMCPとRESTがある。アメリカでは聞かない、は報道の違いによる印象もある（私の推測です）。事実は各社の発表で確認を。
 2124549218995949967,2026-11-23T07:57:00+09:00,timeline,merettm,https://x.com/merettm/status/2124549218995949967,"We decided to provide more transparency into pretraining progress at OpenAI for the sake of moving toward shared safety bars. In “Perplexity and Intelligence” I argue for common limits based on perplexity and other measurements, with progress beyond them gated on our ability to understand AI behavior.
 
 [openai.com/index/perplexi…](https://openai.com/index/perplexity-and-intelligence)",Jakub Pachockiさん「Perplexity and Intelligence」（11/22）。GPT-3.5は約0.99、GPT-4は約0.91、0.8未満でサイバーと数学が変革的、約0.76で未解決問題。上限の値も検証方法も未定。0.8未満でサイバー能力が変革的になったと公式が認めた点が大きい。私の推測あり。
