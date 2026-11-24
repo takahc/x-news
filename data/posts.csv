@@ -1,4 +1,108 @@
 id,datetime,source,author,url,text,summary
+2125143063194661106,2026-11-24T17:50:00+09:00,timeline,connect24h,https://x.com/connect24h/status/2125143063194661106,nginxの脆弱性対応も兼ねられるし、CDNやWAFで代替するのはアリっちゃアリ。AWSさん、相変わらず、マーケティングセンス良い。,カスタムオリジンとVPCオリジンが対象。追加料金はなく、未対応ならHTTP/1.1に戻る。公式はMCPサーバーを呼ぶAIエージェントを理由に挙げている。既定はHTTP/1.1のまま。
+2125137370114818156,2026-11-24T17:50:00+09:00,timeline,GithubProjects,https://x.com/GithubProjects/status/2125137370114818156,"Describe a video or motion graphic to your AI and it renders on your own GPU.
+
+Explore it here:
+[osp.fyi/raea](https://osp.fyi/raea)",shinyobjectz/raea。まだ若いプロジェクト。インストール例に curl | sh があるので、使う前に中身を確認した方がよい（私の見方です）。既存の OpenMotion r38_166 とは別件。
+2125101301923193019,2026-11-24T17:50:00+09:00,likes,isucon_official,https://x.com/isucon_official/status/2125101301923193019,"📣 ISUCON2026 問題解説と講評を公開しました！
+
+写真共有SNS「ISUReal」の作問意図やスコア設計、競技当日のデータ、参加者のAI活用状況など、作問チーム「第n西東京市」による解説をお届けします🚀🚀
+[isucon.net/archives/isuco…](https://isucon.net/archives/isucon2026-problem-review)
+
+#isucon #ISUReal",優勝チームの話は以前お伝えしたとおり。運営は特定のモデルだけが有意に高得点だったわけではなく、差は使い方にあった、としている。既存のISUCON優勝まとめとは別件として、運営の公式解説を収録。
+2125126975689982083,2026-11-24T16:54:00+09:00,timeline,connect24h,https://x.com/connect24h/status/2125126975689982083,"元数学科が一言で：永久は符号を全部プラスにした行列式みたいなもの。効率計算できないから「代数版の難しい問題」。Claudeが超多項式下界を証明したと主張し、Leanで形式化した。
+
+暗号やプロトコルの安全性はこうした計算量仮定に依存するので、進展自体は興味深い。ただし人間未検証。
+CSIRT視点では「形式証明があっても仕様と実装の一致確認が必要」といういつもの原則が、数学にも当てはまる。永久の計算は永久に重いが、永久に信じないのが安全。
+[github.com/anthropics/for…](https://github.com/anthropics/formal-math/tree/main/vp-vnp)",Valiantの1979年の予想で、P vs NP 自体が解けたわけではない。人間の数学者はまだ確認していない。仕様そのものが正しいかの確認は人の仕事として残る（私の見方です）。既存のリーマン予想 Lean 検証 r38_139 とは別件。
+2125095300251680856,2026-11-24T14:52:00+09:00,timeline,GOROman,https://x.com/GOROman/status/2125095300251680856,松屋アプリ同様 やられたんかね,対象は購入履歴、顧客管理用ID、IPアドレス、位置情報。氏名やカード情報は含まれていない。パスワード変更は求めていない。既存の松屋アプリの件と同じ手口だと示す公表情報は見つからない（私の推測です）。別件。
+2125088677294698638,2026-11-24T14:52:00+09:00,likes,QPS_5595,https://x.com/QPS_5595/status/2125088677294698638,"ティアフォー
+2026年11月24日
+公道における自動走行に必要なデータの継続的な収集および自動走行実験について
+[tier4.co.jp/updates/other/…](https://tier4.co.jp/updates/other/2026-11-24)",実験期間は2026年11月24日から2027年3月31日。全国の市区町村に加え高速道路や空港も対象。既存のモデル公開 r26_5 や newmo のドライバー募集 r38_214 とは別件。
+2125062821406994888,2026-11-24T14:52:00+09:00,likes,catnose99,https://x.com/catnose99/status/2125062821406994888,良すぎる,郵便番号を絞り込んでいくサイト zipcode.inuro.dev。「件数的には優先度は高くないけど、面白いから先に作った」とのこと。
+2125060432264401237,2026-11-24T14:52:00+09:00,likes,jikantoki,https://x.com/jikantoki/status/2125060432264401237,"何が凄いって、ここまでカーナビ仕様に全振りしたLinuxで無料配布されているものはさすがに史上初だよな…？
+
+しかも完全日本語対応していてタッチスクリーンで日本語入力ができる
+2 in 1タブレットの皆さんなら普段使いにも丁度いいかもしれない",KDE Plasmaベース。Linux Auto経由のAndroid Autoやワンクリック更新がある。動作はx86-64のみで、Armは不可。
+2124838878943076768,2026-11-24T14:52:00+09:00,likes,Microsoft365Dev,https://x.com/Microsoft365Dev/status/2124838878943076768,"Seven steps to read, or one click to act? 🤔
+
+With Copilot UX components, Microsoft 365 Copilot gives you the action, not just the instructions. Don't read it. Use it.
+
+👉 Get started → [msft.it/6016xyGC4](https://msft.it/6016xyGC4)
+
+#Copilot #Microsoft365",SharePoint Framework 1.24。会話の中に操作できるWeb画面を出せる。意図の解釈はAI、操作はUX、最終判断は人間、という分け方は参考になります（私の見方です）。
+2124729355360403960,2026-11-24T14:52:00+09:00,likes,Rower1216,https://x.com/Rower1216/status/2124729355360403960,"すげえ言語化
+確かに…",何が起きたか、相手に何の手間が増えたか、まだ分かっていないこと、これからどうするか、の4つを先に渡す。障害の報告やお詫びを書くときの型として使えます（私の見方です）。
+2124592914923737566,2026-11-24T14:52:00+09:00,likes,OrenMe,https://x.com/OrenMe/status/2124592914923737566,"Custom Model Routers are now available experimentally in @code 1.147.
+
+The idea is pretty simple, but quite powerful: instead of manually switching models depending on what you're doing, define your own routing rules in plain English.
+
+Quick lookup? Send it to Haiku.
+Everyday coding? GPT-6 Luna.
+Multi-step refactoring or complex planning? Opus.
+
+And you don't even have to write the YAML yourself. Just run /model-router in @GitHubCopilot Chat, describe your preferences, and let the agent generate the configuration.
+
+A few neat things in it:
+
+It's intent-based routing. You describe the kind of work each model should handle using natural language, not a bunch of regex rules or token thresholds.
+
+Model families are supported. You can target opus or gpt-6-luna instead of pinning a specific version. New model releases can flow into your routing strategy without rewriting everything.
+
+Mix Copilot and BYOK. Your routes can include Copilot models and external provider endpoints, with fallback models when something isn't available.
+
+Multiple routers. Keep different profiles for your daily driver, heavy engineering work, audits, etc. Pin them in the model picker and switch when needed.
+
+You can actually see what's happening. Each turn shows which model was selected, and the router details expose the configured routes and context limits.
+
+Under the hood, a decision model (gpt-6-luna-decisions) evaluates your prompt against your routing descriptions and picks the matching model for that turn.
+
+A small but important distinction between the modes:
+
+Auto = GitHub decides which model to use.
+
+Which turned lately into:
+
+Fusion = GitHub manages multi-model orchestration.
+
+Which now progressed into:
+
+Model Routers = You define the strategy and decide which models handle which types of work.
+
+They're separate options in the model picker(Fusion and Routes, auto is gone now i favor of Fusion). And you don't need Fusion to use custom routers. Separate things.
+
+I like this direction - not picking models but defining how we want models to work together across our workflows.
+
+I don't want to spend my day playing musical chairs with model pickers, and from stats I see that when taking the annoyance of model decision from developers the throughput actually goes higher.
+
+To try it:
+
+Enable chat.copilot.modelRouter.enabled in settings.
+
+Open a Copilot Chat or Agents window session.
+
+Run /model-router and describe your routing strategy.
+
+I'm starting to think how far should we take this? Per-task routing is a good start.
+But what about routing based on cost, context consumption, latency, or even the quality of previous results? too micro management?",作業の種類ごとに、どのモデルを使うかを自然言語で決められる、という紹介。設定 chat.copilot.modelRouter.enabled で有効にする。既存のVS Code 1.147カード r38_117 とは別件。
+2125087123070169114,2026-11-24T13:49:00+09:00,timeline,connect24h,https://x.com/connect24h/status/2125087123070169114,"クレジットカード全桁で草。終わってる。＞WELEDA公式オンラインショップ不正アクセスのお知らせ
+
+・クレジットカード名義
+・クレジットカード番号
+・有効期限
+・セキュリティコード","個人情報198,792件、カード情報45,689件。セキュリティコードは入力の時点で抜かれた可能性が高い（私の推測です）。カード入力は決済代行に任せ、改ざん検知を入れておくと安心です（私の見方です）。"
+2125080218302071250,2026-11-24T13:49:00+09:00,timeline,connect24h,https://x.com/connect24h/status/2125080218302071250,"削除APIの認可は、どのレコードが消えたかに表れる。
+Rust製OSSをLean 4で検証するh5i-app-benchの開発中、RustiCalでは、ある利用者の削除操作のあとに別の利用者の予定が取得できなくなるケースが見つかった（GHSA-9cp5-7crm-9cf7）。再現の経緯を追うと、認可のレビューで削除前の権限確認だけを見ていると拾いにくい理由がわかる。
+削除処理を形式検証するなら、「自分の予定を消したあとも、他人の予定は残る」が証明したい性質になる。
+
+[zenn.dev/koukyosyumei/a…](https://zenn.dev/koukyosyumei/articles/31c8fcf4da45b7)",ゴミ箱を通さない削除で所有者を絞り込んでいなかった。v0.16.5で修正済み。AIが書いたコードを見直すときにも、この観点は使えます（私の見方です）。
+2125079431224185066,2026-11-24T13:49:00+09:00,timeline,connect24h,https://x.com/connect24h/status/2125079431224185066,"AIが書いたコードにも、承認とマージの順番待ちがある。
+Anthropicの社内集計では、1日のマージ件数が5月の約2,500件から9月には約3万件に。同社は社内モノレポをGitからScionへ移したと公表した。
+移行の経緯で目を引くのが、CIのチェックアウト。毎回リポジトリ全体を取得する前提だと、通信量は1日600PBを超える試算になる。Scionがこの取得の負荷をどう抑えたかに、移行の理由が見える。
+自社で詰まっている工程は、CI待ち・承認待ち・マージ待ちを分けて測ると見えてくる。
+
+[atmarkit.itmedia.co.jp/ait/articles/2…](https://atmarkit.itmedia.co.jp/ait/articles/2611/24/news020.html)",常にオンラインのエージェントを前提にしたサーバー中心の仕組み。インフラは以前のGitミラーの200分の1になり、チェックアウトは数分から数秒になったとのこと。公式は広く公開するのは難しいとしている。
 2125065386555293722,2026-11-24T12:53:00+09:00,timeline,GithubProjects,https://x.com/GithubProjects/status/2125065386555293722,"OpenComputer is an open-source coding agent that takes tasks in a Slack thread and opens a pull request, on its own computer.",diggerhq/opencomputer、Apache 2.0。「Devinより3.3倍速い」は単純な作業の自社比較なので、そのまま信じるより自分の作業で測った方が安全です（私の見方です）。
 2125062233462047004,2026-11-24T12:53:00+09:00,timeline,raykataoka,https://x.com/raykataoka/status/2125062233462047004,"Leanで数学の証明を確かめる話が続いています。以前から形式検証には着目していました。ゆめみでも、アプリケーション開発向けの形式仕様言語FSLを作っています。生成AIが仕様を書いて、検証して、直すためのAIネイティブな形式言語です。
 [github.com/ymm-oss/fsl](https://github.com/ymm-oss/fsl)",ymm-oss/fsl。Rust製の検証器がZ3を同梱。READMEのおすすめは curl | bash 型なので、中身を確認してから実行する方が無難です（私の見方です）。

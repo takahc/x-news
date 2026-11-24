@@ -1,5 +1,385 @@
 [
   {
+    "id": "2125143063194661106",
+    "cardId": "r38_230",
+    "datetime": "2026-11-24T17:50:00+09:00",
+    "postedAt": "2026-11-24T17:22:44+09:00",
+    "source": "timeline",
+    "title": "CloudFrontからオリジンへの接続が、HTTP/2に対応しました。",
+    "summary": "カスタムオリジンとVPCオリジンが対象。追加料金はなく、未対応ならHTTP/1.1に戻る。公式はMCPサーバーを呼ぶAIエージェントを理由に挙げている。既定はHTTP/1.1のまま。",
+    "tweetId": "2125143063194661106",
+    "tweetIds": [
+      "2125143063194661106",
+      "2124928708297523501"
+    ],
+    "quoteTweetId": "2124928708297523501",
+    "url": "https://x.com/connect24h/status/2125143063194661106",
+    "author": {
+      "handle": "connect24h",
+      "name": "connect24h"
+    },
+    "via": null,
+    "text": "nginxの脆弱性対応も兼ねられるし、CDNやWAFで代替するのはアリっちゃアリ。AWSさん、相変わらず、マーケティングセンス良い。",
+    "images": [],
+    "deepDive": "#CloudFrontからオリジンへの接続が、HTTP/2に対応しました。\n**タイムラインから：CloudFrontからオリジンへの接続が、HTTP/2に対応しました。**\n[connect24hさんの投稿](https://x.com/connect24h/status/2125143063194661106)（11/24 17:22、日本時間）が引用していたのは、[What's New on AWS（非公式）さんの投稿](https://x.com/awswhatsnew_jp/status/2124928708297523501)です。内容は、[AWS公式の告知](https://aws.amazon.com/about-aws/whats-new/2026/01/amazon-cloudfront-http2-origins/)（11/23掲載）と一致しています。これまで CloudFront はオリジンへ HTTP/1.1 でしかつながず、1本の接続で同時に1リクエストしか送れませんでした。今回、カスタムオリジンと VPC オリジンへの HTTP/2 接続に対応しました。追加料金はなく、オリジンが HTTP/2 に未対応なら自動で HTTP/1.1 に戻ります。公式は理由として、MCPサーバーを呼ぶAIエージェントが、一度にたくさんツールを呼んでも接続数が増えにくいことを挙げています。拡張 CONNECT に対応した WebSocket にも使えます。ただし既定は HTTP/1.1 のままなので、使うにはオリジンの HTTP バージョンを HTTP/2 に選ぶ必要があります。HTTP/2 が使われるのは HTTPS で、オリジンの最低 TLS が 1.2 以上のときです（[開発者ガイド](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/DownloadDistValuesOrigin.html)）。connect24hさんは「nginxの脆弱性対応も兼ねて、CDNやWAFで代わりにするのはアリ」と書いています。",
+    "followUps": []
+  },
+  {
+    "id": "2125137370114818156",
+    "cardId": "r38_231",
+    "datetime": "2026-11-24T17:50:00+09:00",
+    "postedAt": "2026-11-24T17:00:06+09:00",
+    "source": "timeline",
+    "title": "raeaは、説明した動画や3Dを、AIが React / TypeScript で書き、自分のGPUで描画するデスクトップアプリです。",
+    "summary": "shinyobjectz/raea。まだ若いプロジェクト。インストール例に curl | sh があるので、使う前に中身を確認した方がよい（私の見方です）。既存の OpenMotion r38_166 とは別件。",
+    "tweetId": "2125137370114818156",
+    "tweetIds": [
+      "2125137370114818156"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/GithubProjects/status/2125137370114818156",
+    "author": {
+      "handle": "GithubProjects",
+      "name": "GitHub Projects Community"
+    },
+    "via": null,
+    "text": "Describe a video or motion graphic to your AI and it renders on your own GPU.\n\nExplore it here:\n[osp.fyi/raea](https://osp.fyi/raea)",
+    "images": [
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HX4BLS_bAAABlEC.jpg"
+      }
+    ],
+    "deepDive": "#raeaは、説明した動画や3Dを、AIが React / TypeScript で書き、自分のGPUで描画するデスクトップアプリです。\n**タイムラインから：raeaは、説明した動画や3Dを、AIが React / TypeScript で書き、自分のGPUで描画するデスクトップアプリです。**\n[GitHub Projects Communityさんの投稿](https://x.com/GithubProjects/status/2125137370114818156)（11/24 17:00、日本時間）です。名前は「Render Anything Engine」の略で、リポジトリは [shinyobjectz/raea](https://github.com/shinyobjectz/raea)（確認時点のスターは4,802）、サイトは [raea.io](https://raea.io) です。READMEによると、作りたい動画、モーショングラフィックス、3D、ゲームをチャットで説明すると、自分のAI（Claude、ChatGPT、Kimi、ローカルモデルなど）が React / TypeScript でコードを書き、それを自分のGPUで、再生より速く描画します。書き方は Remotion に近いです。タイムライン編集（CapCutのような操作、とREADMEにあります）や、3Dシーンの中を歩ける機能もあります。確認時点の最新リリースは 0.1.9（11/23 07:15、日本時間）です。ライセンスは README の表示では FSL-1.1-ALv2 です。README自身が、まだ若いプロジェクトで粗もある、と書いています。インストール例に `curl | sh` があるので、使う前に中身を確認した方がよいです（私の見方です）。紹介動画は見ていません。",
+    "followUps": []
+  },
+  {
+    "id": "2125101301923193019",
+    "cardId": "r38_229",
+    "datetime": "2026-11-24T17:50:00+09:00",
+    "postedAt": "2026-11-24T14:36:47+09:00",
+    "source": "likes",
+    "title": "ISUCON2026の「問題解説と講評」が公開されました。AIを使うのを前提にして作った回だった、と運営が書いています。",
+    "summary": "優勝チームの話は以前お伝えしたとおり。運営は特定のモデルだけが有意に高得点だったわけではなく、差は使い方にあった、としている。既存のISUCON優勝まとめとは別件として、運営の公式解説を収録。",
+    "tweetId": "2125101301923193019",
+    "tweetIds": [
+      "2125101301923193019"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/isucon_official/status/2125101301923193019",
+    "author": {
+      "handle": "isucon_official",
+      "name": "ISUCON公式"
+    },
+    "via": null,
+    "text": "📣 ISUCON2026 問題解説と講評を公開しました！\n\n写真共有SNS「ISUReal」の作問意図やスコア設計、競技当日のデータ、参加者のAI活用状況など、作問チーム「第n西東京市」による解説をお届けします🚀🚀\n[isucon.net/archives/isuco…](https://isucon.net/archives/isucon2026-problem-review)\n\n#isucon #ISUReal",
+    "images": [],
+    "deepDive": "#ISUCON2026の「問題解説と講評」が公開されました。AIを使うのを前提にして作った回だった、と運営が書いています。\n**いいねから：ISUCON2026の「問題解説と講評」が公開されました。AIを使うのを前提にして作った回だった、と運営が書いています。**\n[ISUCON公式の投稿](https://x.com/isucon_official/status/2125101301923193019)（11/24 14:36、日本時間）です。作問チーム「第n西東京市」が、写真共有SNS「ISUReal」のねらいや、当日の数字、参加者のAIの使い方をまとめた[公式ブログ](https://isucon.net/archives/isucon2026-problem-review)（11/24 14:30）です。優勝チームの話は以前お伝えしたとおりで、運営も「3か月取り組んだ知見で生まれたハーネスが勝った」と書いています。\n\nAIの利用は一切制限しなかったそうです。「何でもありで速いやつが優勝するべきでは」という考えからで、「コードを読めば解ける」問題にしないため、次のような要素を入れています。地域をまたぐ通信には 100ms の遅延と 200Mbps の帯域制限。ログを見ないと判断できない IP BAN。メモリに載りきらない大量の履歴。一方、定番だった「N+1の修正」は入れていません。今のハーネスならすぐ直せてしまい、地域間の遅延もあると面白い問題にならないから、とのことです。\n\n使ったモデルは、`POST /initialize` のレスポンスで申告する仕組みでした。運営の表によると、ベンチマークを完走した全662チームでは、brain（AIなし、初期値）が約275、Claude Opus 5.5 が約230、GPT-6系が約150です。上位30チームでは、Opus 5.5 が22チームです。ただし複数のモデルを申告できるため正確な数字ではない、と注記があります。初期値のまま残ったチームも含まれうる、とも書いています。運営は、確認した範囲では特定のモデルだけが有意に高得点だったわけではなく、「ISUCONはAIで終わった」とは感じない、差は使い方にあった、としています。\n\n競技中の質問（Clar）には、エージェントが書いたらしいものが届いていました。時刻を JST と UTC の両方で書き、マニュアルの該当箇所を引用し、「許可を得るまで実行しません」で締める形式です。同じ型の質問が短い間隔で続くこともあり、運営は「来年はトリアージ用のハーネスが必要になりそう」と書いています。公式ブログでは、本日（11/24）さくらインターネット東京支社で[公式反省会](https://isucon.connpass.com/event/411843/)を開く、ともあります。開始時刻は、こちらからはイベントページを取得できなかったので、ページで確認してください。",
+    "followUps": []
+  },
+  {
+    "id": "2125126975689982083",
+    "cardId": "r38_228",
+    "datetime": "2026-11-24T16:54:00+09:00",
+    "postedAt": "2026-11-24T16:18:48+09:00",
+    "source": "timeline",
+    "title": "Claudeが「VP ≠ VNP」を証明したと主張し、Leanの証明も公開されました。",
+    "summary": "Valiantの1979年の予想で、P vs NP 自体が解けたわけではない。人間の数学者はまだ確認していない。仕様そのものが正しいかの確認は人の仕事として残る（私の見方です）。既存のリーマン予想 Lean 検証 r38_139 とは別件。",
+    "tweetId": "2125126975689982083",
+    "tweetIds": [
+      "2125126975689982083",
+      "2124990562906304556"
+    ],
+    "quoteTweetId": "2124990562906304556",
+    "url": "https://x.com/connect24h/status/2125126975689982083",
+    "author": {
+      "handle": "connect24h",
+      "name": "connect24h"
+    },
+    "via": null,
+    "text": "元数学科が一言で：永久は符号を全部プラスにした行列式みたいなもの。効率計算できないから「代数版の難しい問題」。Claudeが超多項式下界を証明したと主張し、Leanで形式化した。\n\n暗号やプロトコルの安全性はこうした計算量仮定に依存するので、進展自体は興味深い。ただし人間未検証。\nCSIRT視点では「形式証明があっても仕様と実装の一致確認が必要」といういつもの原則が、数学にも当てはまる。永久の計算は永久に重いが、永久に信じないのが安全。\n[github.com/anthropics/for…](https://github.com/anthropics/formal-math/tree/main/vp-vnp)",
+    "images": [],
+    "deepDive": "#Claudeが「VP ≠ VNP」を証明したと主張し、Leanの証明も公開されました。\n**タイムラインから：Claudeが「VP ≠ VNP」を証明したと主張し、Leanの証明も公開されました。**\n[connect24hさんの投稿](https://x.com/connect24h/status/2125126975689982083)（11/24 16:18、日本時間）です。きっかけは[Leehamさんの投稿](https://x.com/Liam06972452/status/2124990562906304556)（11/24 07:16、日本時間。いいね1,363、表示は約22.5万回）です。connect24hさんは、元数学科の立場から、「パーマネントは行列式の符号を全部プラスにしたもので、効率よく計算できない、代数版の難しい問題」とまとめ、「進展は面白い。ただし人間はまだ確かめていない」と書いています。\n\n元ネタは、AnthropicのGitHub [anthropics/formal-math の vp-vnp フォルダ](https://github.com/anthropics/formal-math/tree/main/vp-vnp)です。論文（[paper.pdf](https://raw.githubusercontent.com/anthropics/formal-math/main/vp-vnp/paper.pdf)）とLean 4の証明が置かれています。リポジトリへの公開コミットは11/24 05:04（日本時間。UTCでは11/23）です。論文の著者欄は「Claude (Anthropic)」です。READMEと論文自身が、発見したのは社内の研究用Claudeモデルで、論文もLeanのコードもAIが書いた、人間の数学者は証明も主張の書き方もまだ確認していない、と明記しています。\n\n何の問題かというと、Valiantが1979年に出した予想で、P vs NPの「代数版」です。ただし、P vs NP 自体が解けたわけではありません。[Statement.lean](https://github.com/anthropics/formal-math/blob/main/vp-vnp/Statement.lean)の主定理は、「ハミルトン閉路多項式を計算する回路は、どの体の上でも \\( m^{c \\cdot (\\log_2 m)^{1/3}} \\) 個より多いゲートが必要で、標数が2でない体ではパーマネントも同じ」という内容です。標数2でパーマネントを外しているのは、そこではパーマネントと行列式が一致し、行列式には多項式サイズの回路があるため、と論文が書いています。\n\n論文とREADMEは、Lean公式のComparatorと、別に作られた検証器nanodaのチェックを通った、と書いています。ただしREADMEも強調しているとおり、Leanが保証するのは「書かれた定理が証明されたこと」だけです。Statement.leanの定義（回路、VP、VNP、近似回路など）が、本来の数学の意味と合っているかは、機械では見ていません。前にお伝えしたリーマン予想のLean検証と同じく、仕様そのものが正しいかの確認は、人の仕事として残ります（私の見方です）。11/24時点では、名前の出た専門家による、中身を踏まえた評価は、私の確認した範囲では見当たりませんでした。",
+    "followUps": []
+  },
+  {
+    "id": "2125095300251680856",
+    "cardId": "r38_221",
+    "datetime": "2026-11-24T14:52:00+09:00",
+    "postedAt": "2026-11-24T14:12:56+09:00",
+    "source": "timeline",
+    "title": "マクドナルド公式アプリのデータベースに、不正アクセスがあったと発表がありました。",
+    "summary": "対象は購入履歴、顧客管理用ID、IPアドレス、位置情報。氏名やカード情報は含まれていない。パスワード変更は求めていない。既存の松屋アプリの件と同じ手口だと示す公表情報は見つからない（私の推測です）。別件。",
+    "tweetId": "2125095300251680856",
+    "tweetIds": [
+      "2125095300251680856",
+      "2125090634750943417"
+    ],
+    "quoteTweetId": "2125090634750943417",
+    "url": "https://x.com/GOROman/status/2125095300251680856",
+    "author": {
+      "handle": "GOROman",
+      "name": "NULL=RUN"
+    },
+    "via": null,
+    "text": "松屋アプリ同様 やられたんかね",
+    "images": [],
+    "deepDive": "#マクドナルド公式アプリのデータベースに、不正アクセスがあったと発表がありました。\n**タイムラインから：マクドナルド公式アプリのデータベースに、不正アクセスがあったと発表がありました。**\n[GOROmanさんの投稿](https://x.com/GOROman/status/2125095300251680856)（11/24 14:12、日本時間）が引用していたのは、[CNET Japanの記事](https://japan.cnet.com/article/35255325/)です。[公式発表](https://www.mcdonalds.co.jp/company/info/261120a/)（11/20）によると、対象になったのは購入履歴、システム上の顧客管理用ID（会員IDやメールアドレスとは別で、単体ではお客様を識別できない、とのこと）、IPアドレス、サービス提供時に使った携帯端末の位置情報です。氏名、メールアドレス、電話番号、住所、クレジットカード情報は含まれていません。公式アプリやサービスの不正利用は確認されていない、としています。\n\n対応として、不正アクセスに使われた認証情報を無効化した、と書いてあります。利用者にパスワードの変更は求めていません。件数、外に持ち出されたかどうか、侵入の経路は公表されていません。GOROmanさんは、以前お伝えした松屋アプリの件と同じ手口か、と書いていますが、同じ攻撃者や同じ手口だと示す公表情報は見つかりませんでした。パスワード変更を求めていない点から、利用者のアカウントを大量に乗っ取る攻撃とは性質が違う可能性はあります（私の推測です）。",
+    "followUps": []
+  },
+  {
+    "id": "2125088677294698638",
+    "cardId": "r38_225",
+    "datetime": "2026-11-24T14:52:00+09:00",
+    "postedAt": "2026-11-24T13:46:37+09:00",
+    "source": "likes",
+    "title": "ティアフォーが、公道での自動運転データ収集と走行実験の告知を更新しました。",
+    "summary": "実験期間は2026年11月24日から2027年3月31日。全国の市区町村に加え高速道路や空港も対象。既存のモデル公開 r26_5 や newmo のドライバー募集 r38_214 とは別件。",
+    "tweetId": "2125088677294698638",
+    "tweetIds": [
+      "2125088677294698638"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/QPS_5595/status/2125088677294698638",
+    "author": {
+      "handle": "QPS_5595",
+      "name": "kanna"
+    },
+    "via": null,
+    "text": "ティアフォー\n2026年11月24日\n公道における自動走行に必要なデータの継続的な収集および自動走行実験について\n[tier4.co.jp/updates/other/…](https://tier4.co.jp/updates/other/2026-11-24)",
+    "images": [],
+    "deepDive": "#ティアフォーが、公道での自動運転データ収集と走行実験の告知を更新しました。\n**いいねから：ティアフォーが、公道での自動運転データ収集と走行実験の告知を更新しました。**\n[kannaさん（@QPS_5595）の投稿](https://x.com/QPS_5595/status/2125088677294698638)（11/24 13:46、日本時間）が紹介していたのは、[公式告知（11/24更新）](https://tier4.co.jp/updates/other/2026-11-24)です。実験期間は2026年11月24日から2027年3月31日です。対象は全国の多数の市区町村（今回「追加」とあるのは埼玉県富士見市）に加え、首都高、東名、新東名などの高速道路、羽田空港、中部国際空港（セントレア）です。通行人の特定が目的ではない、と明記しています。データの加工や削除の依頼は「公道映像データ撮影に伴う特約事項」に従い、窓口は personalinfo@tier4.jp です。上のAutoE2Eとあわせて読むと、日本の自動運転で、公道のデータをどう集め、モデルをどう公開しているかの流れが見えます。",
+    "followUps": []
+  },
+  {
+    "id": "2125062821406994888",
+    "cardId": "r38_227",
+    "datetime": "2026-11-24T14:52:00+09:00",
+    "postedAt": "2026-11-24T12:03:53+09:00",
+    "source": "likes",
+    "title": "「しぼれ！郵便番号」が、建物ごとの郵便番号の一部に対応し、ビルが3Dで表示されるようになりました。",
+    "summary": "郵便番号を絞り込んでいくサイト zipcode.inuro.dev。「件数的には優先度は高くないけど、面白いから先に作った」とのこと。",
+    "tweetId": "2125062821406994888",
+    "tweetIds": [
+      "2125062821406994888",
+      "2124651229272027140"
+    ],
+    "quoteTweetId": "2124651229272027140",
+    "url": "https://x.com/catnose99/status/2125062821406994888",
+    "author": {
+      "handle": "catnose99",
+      "name": "catnose"
+    },
+    "via": null,
+    "text": "良すぎる",
+    "images": [],
+    "deepDive": "#「しぼれ！郵便番号」が、建物ごとの郵便番号の一部に対応し、ビルが3Dで表示されるようになりました。\n**いいねから：「しぼれ！郵便番号」が、建物ごとの郵便番号の一部に対応し、ビルが3Dで表示されるようになりました。**\n[catnoseさんの投稿](https://x.com/catnose99/status/2125062821406994888)（11/24 12:03、日本時間）が引用していたのは、[inuroさんの投稿](https://x.com/inuro/status/2124651229272027140)（11/23 08:48、日本時間）です。郵便番号を絞り込んでいくサイトが [zipcode.inuro.dev](https://zipcode.inuro.dev) です。「件数的には優先度は高くないけど、面白いから先に作った」と書いてあります。inuroさんの投稿は、表示が約85万回、いいね3,699でした。",
+    "followUps": []
+  },
+  {
+    "id": "2125060432264401237",
+    "cardId": "r38_224",
+    "datetime": "2026-11-24T14:52:00+09:00",
+    "postedAt": "2026-11-24T11:54:23+09:00",
+    "source": "likes",
+    "title": "眠っている2in1タブレットをカーナビにするLinux「Motivnavi OS」が公開されました。",
+    "summary": "KDE Plasmaベース。Linux Auto経由のAndroid Autoやワンクリック更新がある。動作はx86-64のみで、Armは不可。",
+    "tweetId": "2125060432264401237",
+    "tweetIds": [
+      "2125060432264401237",
+      "2125050386352619538"
+    ],
+    "quoteTweetId": "2125050386352619538",
+    "url": "https://x.com/jikantoki/status/2125060432264401237",
+    "author": {
+      "handle": "jikantoki",
+      "name": "ときえのき/Web屋とボカロP"
+    },
+    "via": null,
+    "text": "何が凄いって、ここまでカーナビ仕様に全振りしたLinuxで無料配布されているものはさすがに史上初だよな…？\n\nしかも完全日本語対応していてタッチスクリーンで日本語入力ができる\n2 in 1タブレットの皆さんなら普段使いにも丁度いいかもしれない",
+    "images": [
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HX26mzFbwAApJvn.png"
+      },
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HX26vDFaEAAsucd.jpg"
+      },
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HX26xZubUAAHV8b.jpg"
+      },
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HX26zihakAAEwo7.jpg"
+      }
+    ],
+    "deepDive": "#眠っている2in1タブレットをカーナビにするLinux「Motivnavi OS」が公開されました。\n**いいねから：眠っている2in1タブレットをカーナビにするLinux「Motivnavi OS」が公開されました。**\n[ときえのきさん（@jikantoki）の投稿](https://x.com/jikantoki/status/2125060432264401237)（11/24 11:54、日本時間）が、ご自身の[リリース](https://x.com/jikantoki/status/2125050386352619538)を引用しています。公式サイトの製作者名は「エノキ電気」です（[Motivnavi OS](https://motivnavi.enoki.xyz)）。KDE Plasmaベースで、日本語入力できるタッチキーボードが最初から入っています。ほかに、Linux Auto経由のAndroid Auto（USB／Wi-Fi）、Bluetoothで鳴らしている曲の情報表示、ネットラジオ「Castify」、Updaterでのワンクリック更新があります。Waydroidを入れれば、Androidアプリも動かせます。充電中は画面をつけっぱなしにし、エンジンを切ると最短3秒でスリープします。USBやタッチでスリープから勝手に戻るのも防いでいます（β）です。動作はx86-64のみで、Armは不可です。メモリ4GB以上、ストレージ64GB以上が必要で、最低動作の検証機は Atom x5-Z8500 の Fujitsu Q506 です。インストール時だけ物理キーボードが必要、という既知の不具合があります。ご本人は「カーナビにここまで全振りした無料Linuxは史上初では」と書いていますが、それは本人の表現です。リリース投稿は、いいね109、ブックマーク85でした。",
+    "followUps": []
+  },
+  {
+    "id": "2124838878943076768",
+    "cardId": "r38_222",
+    "datetime": "2026-11-24T14:52:00+09:00",
+    "postedAt": "2026-11-23T21:14:00+09:00",
+    "source": "likes",
+    "title": "Microsoft 365 Copilotの「Copilot UX components」が一般提供になりました。",
+    "summary": "SharePoint Framework 1.24。会話の中に操作できるWeb画面を出せる。意図の解釈はAI、操作はUX、最終判断は人間、という分け方は参考になります（私の見方です）。",
+    "tweetId": "2124838878943076768",
+    "tweetIds": [
+      "2124838878943076768"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/Microsoft365Dev/status/2124838878943076768",
+    "author": {
+      "handle": "Microsoft365Dev",
+      "name": "Microsoft 365 Developer"
+    },
+    "via": null,
+    "text": "Seven steps to read, or one click to act? 🤔\n\nWith Copilot UX components, Microsoft 365 Copilot gives you the action, not just the instructions. Don't read it. Use it.\n\n👉 Get started → [msft.it/6016xyGC4](https://msft.it/6016xyGC4)\n\n#Copilot #Microsoft365",
+    "images": [
+      {
+        "type": "video_preview",
+        "url": "https://pbs.twimg.com/ext_tw_video_thumb/2124548520032022528/pu/img/1Q2jVPLyV818QNYj.jpg"
+      }
+    ],
+    "deepDive": "#Microsoft 365 Copilotの「Copilot UX components」が一般提供になりました。\n**いいねから：Microsoft 365 Copilotの「Copilot UX components」が一般提供になりました。**\n[Microsoft 365 Developerさんの投稿](https://x.com/Microsoft365Dev/status/2124838878943076768)（11/23 21:14、日本時間）です。[公式ブログ](https://devblogs.microsoft.com/microsoft365dev/copilot-ux-components-are-generally-available-bring-interactive-experiences-into-copilot/)（10/28、Vesa Juvonenさん）によると、SharePoint Framework（SPFx）1.24で一般提供になったものです。Copilotの会話の中に、ダッシュボード、フォーム、承認ボタンなど、操作できるWebの画面を出せます。表示は会話内のインラインと全画面の2種類で、ReactでもJavaScriptでも作れます。以前は「SharePoint Copilot Apps」や「Copilot Components」と呼ばれていました。公式の考え方は、「意図の解釈はAI、操作はUX、最終判断は人間」です。大事な操作は、確認の手順を自分のコードで作る前提です。モバイル対応やCoworkなどは後続の予定で、SPFx 1.25は2026年12月から2027年1月の予定です。会話で意図をくみ、実行は画面側で人が確認する、という分け方は、エージェントに操作を任せるときの安全な型として参考になります（私の見方です）。",
+    "followUps": []
+  },
+  {
+    "id": "2124729355360403960",
+    "cardId": "r38_226",
+    "datetime": "2026-11-24T14:52:00+09:00",
+    "postedAt": "2026-11-23T13:58:48+09:00",
+    "source": "likes",
+    "title": "「何回謝っても許されない人は、相手に取り調べをやらせている」という文章です。",
+    "summary": "何が起きたか、相手に何の手間が増えたか、まだ分かっていないこと、これからどうするか、の4つを先に渡す。障害の報告やお詫びを書くときの型として使えます（私の見方です）。",
+    "tweetId": "2124729355360403960",
+    "tweetIds": [
+      "2124729355360403960",
+      "2124620449283969099"
+    ],
+    "quoteTweetId": "2124620449283969099",
+    "url": "https://x.com/Rower1216/status/2124729355360403960",
+    "author": {
+      "handle": "Rower1216",
+      "name": "リス"
+    },
+    "via": null,
+    "text": "すげえ言語化\n確かに…",
+    "images": [
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HXyOFXragAA5fac.jpg"
+      }
+    ],
+    "deepDive": "#「何回謝っても許されない人は、相手に取り調べをやらせている」という文章です。\n**いいねから：「何回謝っても許されない人は、相手に取り調べをやらせている」という文章です。**\n[リスさん（@Rower1216）の投稿](https://x.com/Rower1216/status/2124729355360403960)（11/23 13:58、日本時間。いいねは約3.6万）が、川岸宏司さん（@OnebookofMAG）の[Xの記事](https://x.com/i/article/2124619861666226176)を引用しています。記事の要旨は、「ごめん」だけだと、相手に①何が起きたか、②相手に何の手間が増えたか、③まだ分かっていないこと（いつ分かるのか）、④これからどうするか、を聞き出させることになる、というものです。この4つを先に渡すと、聞くことがなくなって一回で終わりやすい。全部そろう前でも、「明日の朝までに報告します」と一行だけ先に送る、と書いてあります。記事本体の投稿は、表示が約250万回、いいね4,807、ブックマーク5,547でした。障害の報告や、利用者へのお詫びを書くときの型として使えます（私の見方です）。",
+    "followUps": []
+  },
+  {
+    "id": "2124592914923737566",
+    "cardId": "r38_223",
+    "datetime": "2026-11-24T14:52:00+09:00",
+    "postedAt": "2026-11-23T04:56:38+09:00",
+    "source": "likes",
+    "title": "VS Code 1.147の「Custom Model Routers」です（実験的な機能です）。",
+    "summary": "作業の種類ごとに、どのモデルを使うかを自然言語で決められる、という紹介。設定 chat.copilot.modelRouter.enabled で有効にする。既存のVS Code 1.147カード r38_117 とは別件。",
+    "tweetId": "2124592914923737566",
+    "tweetIds": [
+      "2124592914923737566"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/OrenMe/status/2124592914923737566",
+    "author": {
+      "handle": "OrenMe",
+      "name": "Oren Melamed"
+    },
+    "via": null,
+    "text": "Custom Model Routers are now available experimentally in @code 1.147.\n\nThe idea is pretty simple, but quite powerful: instead of manually switching models depending on what you're doing, define your own routing rules in plain English.\n\nQuick lookup? Send it to Haiku.\nEveryday coding? GPT-6 Luna.\nMulti-step refactoring or complex planning? Opus.\n\nAnd you don't even have to write the YAML yourself. Just run /model-router in @GitHubCopilot Chat, describe your preferences, and let the agent generate the configuration.\n\nA few neat things in it:\n\nIt's intent-based routing. You describe the kind of work each model should handle using natural language, not a bunch of regex rules or token thresholds.\n\nModel families are supported. You can target opus or gpt-6-luna instead of pinning a specific version. New model releases can flow into your routing strategy without rewriting everything.\n\nMix Copilot and BYOK. Your routes can include Copilot models and external provider endpoints, with fallback models when something isn't available.\n\nMultiple routers. Keep different profiles for your daily driver, heavy engineering work, audits, etc. Pin them in the model picker and switch when needed.\n\nYou can actually see what's happening. Each turn shows which model was selected, and the router details expose the configured routes and context limits.\n\nUnder the hood, a decision model (gpt-6-luna-decisions) evaluates your prompt against your routing descriptions and picks the matching model for that turn.\n\nA small but important distinction between the modes:\n\nAuto = GitHub decides which model to use.\n\nWhich turned lately into:\n\nFusion = GitHub manages multi-model orchestration.\n\nWhich now progressed into:\n\nModel Routers = You define the strategy and decide which models handle which types of work.\n\nThey're separate options in the model picker(Fusion and Routes, auto is gone now i favor of Fusion). And you don't need Fusion to use custom routers. Separate things.\n\nI like this direction - not picking models but defining how we want models to work together across our workflows.\n\nI don't want to spend my day playing musical chairs with model pickers, and from stats I see that when taking the annoyance of model decision from developers the throughput actually goes higher.\n\nTo try it:\n\nEnable chat.copilot.modelRouter.enabled in settings.\n\nOpen a Copilot Chat or Agents window session.\n\nRun /model-router and describe your routing strategy.\n\nI'm starting to think how far should we take this? Per-task routing is a good start.\nBut what about routing based on cost, context consumption, latency, or even the quality of previous results? too micro management?",
+    "images": [
+      {
+        "type": "video_preview",
+        "url": "https://pbs.twimg.com/amplify_video_thumb/2124590909387890688/img/YUpTLT6YNIU9k5db.jpg"
+      }
+    ],
+    "deepDive": "#VS Code 1.147の「Custom Model Routers」です（実験的な機能です）。\n**いいねから：VS Code 1.147の「Custom Model Routers」です（実験的な機能です）。**\n[Oren Melamedさんの投稿](https://x.com/OrenMe/status/2124592914923737566)（11/23 04:56、日本時間）です。作業の種類ごとに、どのモデルを使うかを自然言語で決められる、という紹介です。例として、「軽い調べ物はHaiku、普段のコーディングはGPT-6 Luna、複雑な計画はOpus」と書いています。[公式リリースノート](https://code.visualstudio.com/updates/v1_147)（1.147は11/18リリース）で確認できたのは、設定 `chat.copilot.modelRouter.enabled` で有効にすること、ルーターは `~/.agents/model-routers/` に置くYAMLで、`/model-router` コマンドで生成できること、判定モデルは `gpt-6-luna-decisions` であることです。「Autoはなくなり、Fusionに置き換わった」という整理と、Copilotと外部のモデルを混ぜてフォールバックを組める、という点は投稿者の説明で、リリースノートでは確認できていません。投稿者自身も、コストや待ち時間、過去の結果の質までで振り分けるのは細かすぎるか、と問いかけています。",
+    "followUps": []
+  },
+  {
+    "id": "2125087123070169114",
+    "cardId": "r38_218",
+    "datetime": "2026-11-24T13:49:00+09:00",
+    "postedAt": "2026-11-24T13:40:27+09:00",
+    "source": "timeline",
+    "title": "ヴェレダ公式オンラインショップで、カード情報が名義・番号・有効期限・セキュリティコードまで漏れた可能性がある、と発表がありました。",
+    "summary": "個人情報198,792件、カード情報45,689件。セキュリティコードは入力の時点で抜かれた可能性が高い（私の推測です）。カード入力は決済代行に任せ、改ざん検知を入れておくと安心です（私の見方です）。",
+    "tweetId": "2125087123070169114",
+    "tweetIds": [
+      "2125087123070169114",
+      "2125055397199569060"
+    ],
+    "quoteTweetId": "2125055397199569060",
+    "url": "https://x.com/connect24h/status/2125087123070169114",
+    "author": {
+      "handle": "connect24h",
+      "name": "connect24h"
+    },
+    "via": null,
+    "text": "クレジットカード全桁で草。終わってる。＞WELEDA公式オンラインショップ不正アクセスのお知らせ\n\n・クレジットカード名義\n・クレジットカード番号\n・有効期限\n・セキュリティコード",
+    "images": [],
+    "deepDive": "#ヴェレダ公式オンラインショップで、カード情報が名義・番号・有効期限・セキュリティコードまで漏れた可能性がある、と発表がありました。\n**タイムラインから：ヴェレダ公式オンラインショップで、カード情報が名義・番号・有効期限・セキュリティコードまで漏れた可能性がある、と発表がありました。**\n[connect24hさんの投稿](https://x.com/connect24h/status/2125087123070169114)（11/24 13:40、日本時間）が取り上げていたのは、ITジャーナリストの[山口健太さんの投稿](https://x.com/yamaguc_k/status/2125055397199569060)です。[ヴェレダ・ジャパンの公式発表](https://weleda-notice-static-apne1.s3.ap-northeast-1.amazonaws.com/news/20261116.html)（11/24）によると、漏えいの可能性があるのは個人情報198,792件、カード情報45,689件です。対象は、2021年10月1日から2026年6月30日までの利用分です。カード情報は名義、番号、有効期限、セキュリティコードの4項目です。個人情報は氏名、住所、メールアドレス、電話番号、性別、誕生日、配送先などで、登録の状況によって項目は異なります。\n\n経緯は、6/30に警視庁から連絡を受け、7/3にカード決済を止め、8/19にサイトを一時停止し、8/29に調査が完了した、とのことです。公表まで時間がかかった理由について、公式は、不確定な情報の公開は混乱を招くと判断し、調査会社の結果とカード会社との連携を待ってから発表した、と説明しています（[FAQ](https://weleda-notice-static-apne1.s3.ap-northeast-1.amazonaws.com/news/202611_faq.html)）。原因は「システムの一部の脆弱性をついた不正アクセスにより、改ざんが行われたため」とあり、決済画面が改ざんされたとは明記されていません。セキュリティコードは、決済後に保存しないのが原則なので、入力の時点で抜かれた可能性が高いです（私の推測です）。カードの再発行手数料は、お客様に負担をかけないよう、カード会社に依頼済みとのことです。サイトは、新しいシステムに作り直したうえで、2027年3月頃の再開を目指しています。\n\nECを自分で作るなら、カードの入力は決済代行に任せ、自分のサイトのJavaScriptではカード番号を扱わないのが基本です。そのうえで、スクリプトの改ざんを検知する仕組み（CSPやSRIなど）を入れておくと安心です（私の見方です）。",
+    "followUps": []
+  },
+  {
+    "id": "2125080218302071250",
+    "cardId": "r38_219",
+    "datetime": "2026-11-24T13:49:00+09:00",
+    "postedAt": "2026-11-24T13:13:00+09:00",
+    "source": "timeline",
+    "title": "RustiCalで「自分の予定を消すと、他人の予定も消える」不具合が、形式検証で見つかりました。",
+    "summary": "ゴミ箱を通さない削除で所有者を絞り込んでいなかった。v0.16.5で修正済み。AIが書いたコードを見直すときにも、この観点は使えます（私の見方です）。",
+    "tweetId": "2125080218302071250",
+    "tweetIds": [
+      "2125080218302071250"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/connect24h/status/2125080218302071250",
+    "author": {
+      "handle": "connect24h",
+      "name": "connect24h"
+    },
+    "via": null,
+    "text": "削除APIの認可は、どのレコードが消えたかに表れる。\nRust製OSSをLean 4で検証するh5i-app-benchの開発中、RustiCalでは、ある利用者の削除操作のあとに別の利用者の予定が取得できなくなるケースが見つかった（GHSA-9cp5-7crm-9cf7）。再現の経緯を追うと、認可のレビューで削除前の権限確認だけを見ていると拾いにくい理由がわかる。\n削除処理を形式検証するなら、「自分の予定を消したあとも、他人の予定は残る」が証明したい性質になる。\n\n[zenn.dev/koukyosyumei/a…](https://zenn.dev/koukyosyumei/articles/31c8fcf4da45b7)",
+    "images": [],
+    "deepDive": "#RustiCalで「自分の予定を消すと、他人の予定も消える」不具合が、形式検証で見つかりました。\n**タイムラインから：RustiCalで「自分の予定を消すと、他人の予定も消える」不具合が、形式検証で見つかりました。**\n[connect24hさんの投稿](https://x.com/connect24h/status/2125080218302071250)（11/24 13:13、日本時間）が紹介していたのは、Zennの[「著名なRust製OSSをLean 4で形式検証してみたら、めちゃめちゃバグが見つかった話」](https://zenn.dev/koukyosyumei/articles/31c8fcf4da45b7)（11/23）です。筆者のKoukyosyumeiさんは、コロンビア大学の博士課程で、システムセキュリティと形式検証を研究している方です。\n\n[h5i](https://github.com/h5i-dev/h5i)は、Rust（Axum）製のウェブの枠組みです。認可などの大事なロジックを切り出し、Lean 4に変換して正しさを証明します。[h5i-app-bench](https://github.com/h5i-dev/h5i-app-bench)は、有名なRust製OSSをh5iに移して、どこまで証明できるかを測るベンチマークです。\n\n[公式の注意喚起](https://github.com/lennart-k/rustical/security/advisories/GHSA-9cp5-7crm-9cf7)によると、ゴミ箱を通さない削除では、所有者で絞り込んでおらず、カレンダーのIDと予定のIDだけで消していました。そのため、同じ名前のカレンダーに同じIDの予定を持っていると、自分が自分の予定を消したときに、他人の予定まで消えます。他人の予定を直接消そうとすると、401で拒否されていました。深刻さは Medium（CVSS 6.5、CWE-863）です。0.16.4以下が影響を受け、[v0.16.5](https://github.com/lennart-k/rustical/releases/tag/v0.16.5)で修正済みです。同じ記事では、OxiCloudとRustFSの問題も報告されています。\n\n「消す前に権限を確認しているか」だけを見ても見つからない種類の不具合です。「自分の操作で他人のデータが変わらない」という性質を証明しようとして、初めて分かりました。AIが書いたコードを見直すときにも、この観点は使えます（私の見方です）。",
+    "followUps": []
+  },
+  {
+    "id": "2125079431224185066",
+    "cardId": "r38_220",
+    "datetime": "2026-11-24T13:49:00+09:00",
+    "postedAt": "2026-11-24T13:09:53+09:00",
+    "source": "timeline",
+    "title": "Anthropicが、社内のモノレポをGitから独自の版管理システム「Scion」に移した、という公式の説明です。",
+    "summary": "常にオンラインのエージェントを前提にしたサーバー中心の仕組み。インフラは以前のGitミラーの200分の1になり、チェックアウトは数分から数秒になったとのこと。公式は広く公開するのは難しいとしている。",
+    "tweetId": "2125079431224185066",
+    "tweetIds": [
+      "2125079431224185066"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/connect24h/status/2125079431224185066",
+    "author": {
+      "handle": "connect24h",
+      "name": "connect24h"
+    },
+    "via": null,
+    "text": "AIが書いたコードにも、承認とマージの順番待ちがある。\nAnthropicの社内集計では、1日のマージ件数が5月の約2,500件から9月には約3万件に。同社は社内モノレポをGitからScionへ移したと公表した。\n移行の経緯で目を引くのが、CIのチェックアウト。毎回リポジトリ全体を取得する前提だと、通信量は1日600PBを超える試算になる。Scionがこの取得の負荷をどう抑えたかに、移行の理由が見える。\n自社で詰まっている工程は、CI待ち・承認待ち・マージ待ちを分けて測ると見えてくる。\n\n[atmarkit.itmedia.co.jp/ait/articles/2…](https://atmarkit.itmedia.co.jp/ait/articles/2611/24/news020.html)",
+    "images": [],
+    "deepDive": "#Anthropicが、社内のモノレポをGitから独自の版管理システム「Scion」に移した、という公式の説明です。\n**タイムラインから：Anthropicが、社内のモノレポをGitから独自の版管理システム「Scion」に移した、という公式の説明です。**\n[connect24hさんの投稿](https://x.com/connect24h/status/2125079431224185066)（11/24 13:09、日本時間）が取り上げていたのは、10/13の[公式記事「Redesigning source control at Anthropic」](https://www.anthropic.com/research/redesigning-source-control)です。日本語では[＠ITの記事](https://atmarkit.itmedia.co.jp/ait/articles/2611/24/news020.html)もあります。\n\n公式によると、1日のマージは5月の約2,500件から、9月には3万件を超えました。CIのチェックアウトは1日およそ2,500万回で、毎回まるごと取ってくると1日600PBを超える計算です。Scionは、常にオンラインのエージェントを前提にした、サーバー中心の仕組みです。コミット、マージ、リベースはサーバー側で行い、必要なファイルだけを取る仮想チェックアウトに対応しています。\n\n効果も公式に書かれています。インフラは以前のGitミラーの200分の1（CPUとメモリ）になり、チェックアウトは数分から数秒になり、CIのCPUは25%減ったとのことです。7人のチームが、コードレビューの「Antique」なども含めて、5か月で移行しています。公式は、Gitと大きく違うため、他社が広く使える形で公開するのは難しい、公開版を作るより考え方を共有してGit側に活かしてほしい、と書いています。[Simon Willisonさん](https://simonwillison.net/2026/oct/13/redesigning-source-control-at-anthropic/)は、オフラインで使えない点について、Anthropicのエンジニアが「いちばん重い利用者はClaudeで、そもそもオンラインだから、優先しなかった」と答えた、と紹介しています。\n\nエージェントを並列で回すと、詰まるのはコードを書く部分ではなく、版管理やCI、レビュー、マージになる、というのが公式の問題意識です。",
+    "followUps": []
+  },
+  {
     "id": "2125065386555293722",
     "cardId": "r38_215",
     "datetime": "2026-11-24T12:53:00+09:00",
@@ -3226,6 +3606,15 @@
         "text": "KARTEの続報です。[connect24hさん](https://x.com/connect24h/status/2124619996211085481)が、自身がMOSHの利用者だとして、日本時間11/23 6:44に投稿していました。本人にとっては、mineo、radiko（投稿では「radico」）に続く3件目だそうです。これは本人に届いた件数で、KARTE全体の件数ではありません。[MOSHの公式発表（11/19）](https://corp.mosh.jp/news/c7ee738e12520959)では、対象は11/12 4:39時点の全登録者（ゲスト・クリエイター）928,617件、項目はメールアドレスとMOSHのユーザーIDです。氏名・住所・電話・カード情報・パスワードは含まれず、MOSH本体への侵入も確認されていない、としています。対象者への個別連絡は、`no-reply@sec-incident.themosh.jp` から送っています。「行動履歴も漏れているはず」はconnect24hさんの推測で、MOSHの発表にはメールとユーザーID以外の記載はありません。自社は無事でも、外部の分析サービスに渡したデータは漏れ得ます。メールとユーザーIDがそろうと、本物らしいフィッシングが作れるので、MOSHを使っていたなら、同社をかたるメールには注意してください。公式も、パスワードやカード番号をメールで尋ねることはない、と案内しています。",
         "tweetIds": [
           "2124619996211085481"
+        ]
+      },
+      {
+        "datetime": "2026-11-24T16:54:00+09:00",
+        "clock": "16:54",
+        "title": "",
+        "text": "**タイムラインから：配車アプリGOでも、KARTE経由で情報がもれた可能性がある、という続報です。**\n[connect24hさんの投稿](https://x.com/connect24h/status/2125122463361380428)（11/24 16:00、日本時間）が引用していたのは、[日経の記事](https://www.nikkei.com/article/DGXZQOUC244TU0U6A121C2000000/)（見出しは「配車アプリのGO、顧客情報2万件が漏洩　委託先に不正アクセス」）です。connect24hさんは、見出しにプレイドの「KARTE（カルテ）」と書いたほうがよい、と指摘しています。見出しの「委託先」だけだと、GO本体が侵入されたように読めてしまう、という趣旨です。\n\n[GOの公式発表](https://goinc.jp/news/info/2026/11/19/1ged4wbk8ug0heonnp2cm0/)（11/19発表、11/20追記）では、侵入を受けたのは外部のKARTEであり、GOのシステム自身が不正アクセスを受けたものではない、と明記しています。分かっている件数は次のとおりです。\n\n- いまのGO：ユーザーID 11,224件。社内で振った番号で、これだけでは個人は特定できない、としています。\n- すでにサービスを終えた旧「GO Dine」：ユーザーID 8,914件と、メールアドレス 6,640件。\n- 旧「JapanTaxi」：69人分の会社名、氏名、ユーザーID、メールアドレス。\n\n電話番号、生年月日、利用履歴、パスワード、決済情報は含まれていません。いまのところ、二次被害は確認されていないそうです。プレイドが不正アクセスを確認したのは11/13です。ポイントは、委託をやめたはずの旧サービスのデータが、KARTE側に残っていたことです。以前お伝えした「解約後の消し忘れ」が、ここでも出ています。",
+        "tweetIds": [
+          "2125122463361380428"
         ]
       }
     ]
@@ -7757,7 +8146,17 @@
     "text": "AutoE2Eはオープンソースコミュニティで開発したE2E自動運転AIモデルです。パラメータ数も8000万弱なので様々なSoC上で動作可能です。\n\n[github.com/autowarefounda…](https://github.com/autowarefoundation/auto_e2e)\n[huggingface.co/AutowareFounda…](https://huggingface.co/AutowareFoundation/auto_e2e)",
     "images": [],
     "deepDive": "#自動運転のE2Eモデル「AutoE2E」が出たことを知りました\n[ティアフォーの加藤さんの投稿](https://x.com/ShinpeiKato/status/2120498703828242816)で、自動運転のE2Eモデル「AutoE2E」が出たことを知りました。パラメータは約8,000万と軽く、NVIDIA以外のチップでも動きます。NVIDIAのAlpamayo 2 Edgeなども一緒にオープンソースになりました（[PR TIMES](https://prtimes.jp/main/html/rd/p/000000150.000040119.html)）。",
-    "followUps": []
+    "followUps": [
+      {
+        "datetime": "2026-11-24T14:52:00+09:00",
+        "clock": "14:52",
+        "title": "E2E自動運転モデル「AutoE2E」がarXivに出て、学習の基盤ごとオープンソースになりました。",
+        "text": "**いいねから：E2E自動運転モデル「AutoE2E」がarXivに出て、学習の基盤ごとオープンソースになりました。**\n[りいたさんの投稿](https://x.com/riita10069/status/2125075958050984107)（11/24 12:56、日本時間）です。論文は [arXiv:2611.22374](https://arxiv.org/abs/2611.22374)（Autoware Foundation Robotaxi Working Group）、コードは [GitHub autowarefoundation/auto_e2e](https://github.com/autowarefoundation/auto_e2e/)（Apache-2.0、確認時点のスターは234）です。複数のカメラ、HDマップ、ルートを入力に、時系列の鳥瞰図（BEV）で将来の軌跡を予測します。パラメータは約7,990万で、学習するのは約145万だけです。KITScenesの検証では、3秒先の予測で ADE 0.745m、FDE 2.020m でした。論文自身が、定量的な評価は実車を使わないオープンループであり、クローズドループでの自動運転はまだ実証していない、と書いています。ミュンヘン工科大学のEDGARを使った実車の予備的な研究にも触れています。論文によると、学習はAWSのEKS Auto Mode上で、MLflow、Flyte、Kueue、S3上のWebDatasetを組み合わせています。CARLAがEKS Auto ModeのOSイメージ（Bottlerocket）と合わないため、シミュレータは使わず、オフラインの強化学習（IQL）を選んだ、とのことです。投稿では、Terraformによる構成も公開した、と書いています。",
+        "tweetIds": [
+          "2125075958050984107"
+        ]
+      }
+    ]
   },
   {
     "id": "2120493659770556518",
