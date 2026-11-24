@@ -1,5 +1,224 @@
 [
   {
+    "id": "2125201709852934598",
+    "cardId": "r38_239",
+    "datetime": "2026-11-24T21:51:00+09:00",
+    "postedAt": "2026-11-24T21:15:46+09:00",
+    "source": "timeline",
+    "title": "Google DeepMindが、難しい文書を「Easy Read」（短い文と絵）に変える道具を、英国の障害者団体Mencapと公開しました。",
+    "summary": "人の専門家が確認・編集・承認することが前提。対象は文書を作る組織。日本の「やさしい日本語」の場面にもこの考え方は使えそう（私の見方です）。",
+    "tweetId": "2125201709852934598",
+    "tweetIds": [
+      "2125201709852934598"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/GoogleDeepMind/status/2125201709852934598",
+    "author": {
+      "handle": "GoogleDeepMind",
+      "name": "Google DeepMind"
+    },
+    "via": null,
+    "text": "We worked with @mencap_charity and people with learning disabilities to build the Easy Read Co-Creator Tool with Gemini.\n\nIt turns complex health, finance and everyday documents into clear words and images in minutes rather than weeks – with human experts reviewing every version. ↓",
+    "images": [
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HX47Ic5W8AAkju3.jpg"
+      },
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HX47hPRXMAA83Ya.jpg"
+      },
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HX47i6oWQAAZp-R.jpg"
+      },
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HX47kNDXcAAhSg0.jpg"
+      },
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HX47lU2WEAAHw2B.jpg"
+      }
+    ],
+    "deepDive": "#Google DeepMindが、難しい文書を「Easy Read」（短い文と絵）に変える道具を、英国の障害者団体Mencapと公開しました。\n**タイムラインから：Google DeepMindが、難しい文書を「Easy Read」（短い文と絵）に変える道具を、英国の障害者団体Mencapと公開しました。**\n[Google DeepMindの投稿](https://x.com/GoogleDeepMind/status/2125201709852934598)（11/24 21:15、日本時間）です。[Mencapの紹介ページ](https://www.mencap.org.uk/what-we-do/accessibility/google-deepmind-easy-read-co-creator-tool)によると、Geminiを使った「Easy Read Co-Creator Tool」で、医療、お金、日常生活まわりの文書を、知的障害のある人にも分かりやすい形にします。当事者の人と一緒に作った、と書かれています。\n\nDeepMindの投稿では、数週間かかっていた作業が数分になり、どの版も人の専門家が確認する、としています。Mencapも、この道具は人の作業の代わりにはならず、人が原文と見比べて確認・編集・承認することが前提だ、と書いています。対象は個人ではなく、いまは文書を作る組織です。アップロードした内容は保存せず、学習にも使わない、とも案内しています。Google.orgは、2027年から2030年にかけて、最大50の組織が使えるようにするための支援として、100万ドルを出すとしています。\n\n全部をAI任せにせず、人の確認を残す作りです。日本の「やさしい日本語」のように、分かりやすく書き直す場面にも、この考え方は使えそうです（私の見方です）。",
+    "followUps": []
+  },
+  {
+    "id": "2125167628666966172",
+    "cardId": "r38_238",
+    "datetime": "2026-11-24T21:51:00+09:00",
+    "postedAt": "2026-11-24T19:00:21+09:00",
+    "source": "likes",
+    "title": "AWS Skill Builderの無料ゲーム「AWS Card Clash」に、セキュリティ専用の島が加わっています。",
+    "summary": "Security Island は実在するセキュリティ構成が15ステージ。11月23日から12月4日（協定世界時）のコンテストでは受験バウチャーが贈られる。",
+    "tweetId": "2125167628666966172",
+    "tweetIds": [
+      "2125167628666966172"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/fjtd_dev/status/2125167628666966172",
+    "author": {
+      "handle": "fjtd_dev",
+      "name": "誰か"
+    },
+    "via": null,
+    "text": "最近これやってる。\n\nAWS Card Clash\n[cardclash.skillbuilder.aws/security-island](https://cardclash.skillbuilder.aws/security-island)",
+    "images": [],
+    "deepDive": "#AWS Skill Builderの無料ゲーム「AWS Card Clash」に、セキュリティ専用の島が加わっています。\n**いいねから：AWS Skill Builderの無料ゲーム「AWS Card Clash」に、セキュリティ専用の島が加わっています。**\n[fjtd_devさんの投稿](https://x.com/fjtd_dev/status/2125167628666966172)（11/24 19:00、日本時間）です。リンク先は新しい[「Security Island」](https://cardclash.skillbuilder.aws/security-island)です。\n\nAWS Card Clashは、アーキテクチャ図の空いた枠に、正しいAWSサービスのカードを置いて完成させる、3Dのカードゲームです。Skill Builderのアカウントがあれば無料で、ウェブとiOS、Androidで遊べます。日本語にも対応しています。\n\nSecurity Islandは、実在するセキュリティ構成が15ステージあります。たとえば、秘密情報を一か所で定期的に更新する構成、決済APIの保護、バックアップのマルウェア検出、生成AI向けのアプリケーション層（レイヤー7）の防御などです。11月23日から12月4日（協定世界時）のコンテストでは、上位の人に AWS Certified AI Practitioner の受験バウチャー（受験料100ドル分）が贈られます。18歳以上が対象で、対象の国は公式ルールに書かれています。\n\nセキュリティの定番構成を、ゲームで一通り見られる点が便利そうです。",
+    "followUps": []
+  },
+  {
+    "id": "2125182006896337127",
+    "cardId": "r38_237",
+    "datetime": "2026-11-24T20:54:00+09:00",
+    "postedAt": "2026-11-24T19:57:29+09:00",
+    "source": "timeline",
+    "title": "ChatGPT Proが、頼んでいないのにKiCadの回路図まで出してきた、という報告です。",
+    "summary": "小型MRIを自作している Yashiro さんの投稿。出てきた回路図が使えるかは、ERCや人の目で確認する必要がある。既存の自作MRIや HeyPCB の話とは別件。",
+    "tweetId": "2125182006896337127",
+    "tweetIds": [
+      "2125182006896337127"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/yashiro_ld/status/2125182006896337127",
+    "author": {
+      "handle": "yashiro_ld",
+      "name": "Yashiro"
+    },
+    "via": null,
+    "text": "最近のChatGPTpro、いきなりKiCADの回路図を作ってくれるてすごい👀(すごいけどここまで頼んでない",
+    "images": [
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HX4pteoaAAAaIAN.jpg"
+      }
+    ],
+    "deepDive": "#ChatGPT Proが、頼んでいないのにKiCadの回路図まで出してきた、という報告です。\n**タイムラインから：ChatGPT Proが、頼んでいないのにKiCadの回路図まで出してきた、という報告です。**\n[Yashiroさん（@yashiro_ld）の投稿](https://x.com/yashiro_ld/status/2125182006896337127)（11/24 19:57、日本時間）です。小型のMRIを自作している方です。\n\n添付の画面は、KiCadの回路図に見えます。図面の題名は「A2 — Six-transistor low-noise front end」で、500 kHz〜2 MHz、3.3 V、50オームと書かれています。日付は2026-11-24、KiCad 9.0.7です。タイトル欄には、「シミュレーションでは確認済み、実機での検証が必要」とあります。6つのトランジスタを並べた、高周波の入力段（フロントエンド）の図です。回路として正しいかどうかは、この画面だけでは判断していません。\n\nLLMにKiCadの回路図ファイル（`.kicad_sch`）を書かせる取り組みも、最近出てきています。たとえば [KiSkill](https://github.com/AvatarSD/KiSkill) は、エージェントが部品をライブラリから探し、書き込む前に形を検査し、電気的ルールチェック（ERC）も回す、とREADMEに書かれています（確認時点のスターは9です）。コードだけでなく、ハードウェアの設計ファイルまでAIが直接書き出す流れは見えますが、出てきた回路図が使えるかは、ERCや人の目で確認する必要があります。",
+    "followUps": []
+  },
+  {
+    "id": "2125181453734654421",
+    "cardId": "r38_236",
+    "datetime": "2026-11-24T20:54:00+09:00",
+    "postedAt": "2026-11-24T19:55:17+09:00",
+    "source": "likes",
+    "title": "nrslibさんが起業し、社名は「株式会社ドットロフト」だと報告しています。",
+    "summary": "AIプロダクトの開発と運用を支援するプラットフォームを目指す一人会社。社名と所在地は法人番号の記録と一致するが、代表者名は今回確認できていない。TAKT のバージョン更新とは別件。",
+    "tweetId": "2125181453734654421",
+    "tweetIds": [
+      "2125181453734654421"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/nrslib/status/2125181453734654421",
+    "author": {
+      "handle": "nrslib",
+      "name": "nrs"
+    },
+    "via": null,
+    "text": "起業しました\n社名は株式会社ドットロフトです\nAIプロダクトをつくっていきます\n\nCEO CTO CAIO CFO CPO COO CMO CIO CDO CISO CSO CRO CHRO CLO CKO CCO\n全部ワイや！！！\nC∞O と呼べ！！",
+    "images": [],
+    "deepDive": "#nrslibさんが起業し、社名は「株式会社ドットロフト」だと報告しています。\n**いいねから：nrslibさんが起業し、社名は「株式会社ドットロフト」だと報告しています。**\n[nrslibさんの投稿](https://x.com/nrslib/status/2125181453734654421)（11/24 19:55、日本時間）です。これまで紹介してきた、AIコーディングエージェントの作業手順をYAMLで定義するツール [TAKT](https://github.com/nrslib/takt) の作者です（確認時点のスターは1,469）。\n\n投稿では、AIプロダクトをつくっていくと書いています。役職名を並べて「全部ワイや！C∞Oと呼べ！」とも書いていて、一人会社であることをネタにしています。プロフィールも、いまは「Founder & CEO @dotloftHQ」になっています。\n\n[続く投稿](https://x.com/nrslib/status/2125183129044533501)では、[PR TIMESの企業ページ](https://prtimes.jp/main/html/searchrlp/company_id/195301)を案内しています。説明文は、「AIプロダクトの開発と運用を支援するプラットフォームを開発している。サービスごとに重複する基盤の開発を減らし、開発者がサービス固有の機能に取り組める環境を整える。AIを活用したサービスの開発者と運営者に、開発から継続的な運用まで必要となる共通の仕組みを提供することを目指す」という内容です。PR TIMESのスタートアップチャレンジに登録するため、そこでフォローを呼びかけてもいます。\n\n同じページの所在地は、千葉県船橋市本町6丁目3番18号です。民間の法人データベースでは、同じ商号の株式会社が2026年11月20日にこの所在地で新規に法人番号（4040001146082）を指定されたと出ています。社名と所在地は一致していますが、代表者名は今回確認できていません。\n\nTAKTのような、エージェント運用のオープンソースが、会社や事業になっていく流れの一例です。",
+    "followUps": []
+  },
+  {
+    "id": "2125171459236794682",
+    "cardId": "r38_235",
+    "datetime": "2026-11-24T19:49:00+09:00",
+    "postedAt": "2026-11-24T19:15:34+09:00",
+    "source": "timeline",
+    "title": "個人開発のアラームアプリ2本で、累計50万ダウンロードに届いたそうです。",
+    "summary": "MVアラーム32.5万、ボカロアラーム17.5万。売上目標は2月時点で達成済み（今は70万前後）。70万は月の売上だと思うが、投稿には明記されていない（私の推測です）。",
+    "tweetId": "2125171459236794682",
+    "tweetIds": [
+      "2125171459236794682",
+      "2007029903255036329"
+    ],
+    "quoteTweetId": "2007029903255036329",
+    "url": "https://x.com/moriya_sys/status/2125171459236794682",
+    "author": {
+      "handle": "moriya_sys",
+      "name": "moriya@個人開発"
+    },
+    "via": null,
+    "text": "今年の目標にしていた累計50万DLに到達しました☺️\n内訳はMVアラーム32.5万DL、ボカロアラーム17.5万DL\n売上目標は2月時点でクリアしてます（現在70万前後）\n来年はもう少し大きい目標を考えます",
+    "images": [],
+    "deepDive": "#個人開発のアラームアプリ2本で、累計50万ダウンロードに届いたそうです。\n**タイムラインから：個人開発のアラームアプリ2本で、累計50万ダウンロードに届いたそうです。**\n[moriya_sysさんの投稿](https://x.com/moriya_sys/status/2125171459236794682)（11/24 19:15、日本時間）です。個人開発のmoriya_sysさん（[Moriya System](https://www.moriya-sys.com/)）が、今年の目標だった累計50万ダウンロードに届いたと書いています。内訳は「MVアラーム」が32.5万、「ボカロアラーム」が17.5万です。\n\n[1月2日の投稿](https://x.com/moriya_sys/status/2007029903255036329)では、「今は累計22万DL、月の売上6.6万円。年末までに累計50万DL、月の売上25万円をめざす」と書いていました。今回は「売上の目標は2月の時点で達成済み（今は70万前後）」とのことです。70万が月の売上なのかどうかは、今回の投稿には書かれていません。1月の目標が月の売上だったので、月の売上だと思いますが、これは私の推測です。\n\n[MVアラーム](https://play.google.com/store/apps/details?hl=ja&id=com.moriya_sys.mv_alarm)は、好きな曲やYouTube動画をアラーム音にできるアプリです。Google Playの評価は4.9、レビューは3,973件です（確認時点）。公式の説明でも、「推しの動画で起きたい」需要を狙っています。サイト側の「ボカロアラーム」は、初音ミクのボイスアラームで、鏡音リンとレンにも対応しています。\n\nレビューには、端末によっては鳴らない、鳴るのが遅れる、という声があります。アプリ自身も、バッテリー最適化の影響で鳴らないことがあると注意書きしています。作者も、省電力機能で遅れることがあると返信しています。アラームアプリは、Androidのバッテリー最適化と付き合い続けることになるようです。\n\n「好きな曲・推しで起きる」という狭いテーマで、年初に目標を数字で公開し、1年で達成した例です。続けて稼ぐ個人開発の、具体的な参考になります。",
+    "followUps": []
+  },
+  {
+    "id": "2125168534078570984",
+    "cardId": "r38_234",
+    "datetime": "2026-11-24T19:49:00+09:00",
+    "postedAt": "2026-11-24T19:03:56+09:00",
+    "source": "timeline",
+    "title": "TAKT v0.77.0で、仕様ファイル（Gherkin・Quint・Alloy）を各タスクのエージェントに渡せるようになりました。",
+    "summary": "ゴールに保存した仕様を各ステップから参照できる。読み取り専用の禁止ルール継承と context_window 指定も追加。既存の TAKT manager / director カードとは別件。Copilot CLI の長時間作業の参考になる（私の見方です）。",
+    "tweetId": "2125168534078570984",
+    "tweetIds": [
+      "2125168534078570984"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/nrslib/status/2125168534078570984",
+    "author": {
+      "handle": "nrslib",
+      "name": "nrs"
+    },
+    "via": null,
+    "text": "🎼 TAKT v0.77.0 リリース\n\n🎵 Codex と OpenCode のコンテキスト容量を指定できるようになりました\n\nruntime profile の 'context_window' に 'auto' または固定値を設定します。\n初期容量を指定して自動拡張する設定も使えます。\n自動選択と拡張には確認済みのモデル上限を使い、上限が分からない場合の 'auto' はプロバイダーの既定値を維持します。\n\n🎵 Codex のレポート出力でも拒否ルールを引き継ぐようになりました\n\n'readonly_permission_base' に既存の権限プロファイルを指定すると、レポート出力や厳格な読み取り専用の処理にも拒否ルールを適用します。\n利用には 'permission_control: codex' が必要です。\nネットワークは無効になり、作業フォルダなどの権限は読み取り専用になります。\n継承元で個別に書き込みを許可したパスには、その許可が残ります。\n\n🎵 ゴールの仕様ファイルを各タスクに渡すようになりました\n\nゴールに保存した Gherkin・Quint・Alloy の仕様を、各タスクの実行時にファイルとして渡します。\n各ステップのエージェントが元の仕様を参照して実装や検証に使えます。\n\n🎵 MCP クライアントからゴール登録案を作成・承認できるようになりました\n\n登録案の一覧や詳細を確認し、承認または却下できます。\n承認時には所有者と更新状況を確認してからゴールを登録します。\n\n🎵 ゴールに登録した統合先ブランチを変更できるようになりました\n\nPR のマージ先を変えたときに、'takt_update_goal_branches' でゴールに保存した統合先も変更できます。\n既存の PR のマージ先は GitHub などのホスティング側で別途変更してください。\n\n🎵 ゴールを取得したときに PR の状態も確認できるようになりました\n\n関連する PR がオープン・マージ済み・クローズのどの状態かを、ゴールの取得結果で確認できます。\n\n🎵 組み込みのレビュー裁定では指摘の採否だけを判断するようになりました\n\n修正方法の選択や影響の調査は後続の修正計画で行います。\n\n🎵 manager の会話に貼り付けた画像をタスクに添付できるようになりました\n\n貼り付けた画像は daemon の再起動後も保持します。\nmanager が保存済み画像のパスをタスクの指示に含めると、その画像を添付ファイルとしてタスクへ渡します。\n\n🎵 manager のタスクごとに実行設定を選べるようになりました\n\n'manager.runtime_assignments' に実行設定（runtime assignment）の候補を指定すると、manager がタスクに合う設定を選びます。\n選んだ設定はリトライやリキューでも引き継ぎます。\n\n🎵 manager の画面更新間隔を変更できるようになりました\n\n設定項目は 'manager.refresh_interval_ms'、環境変数は 'TAKT_MANAGER_REFRESH_INTERVAL_MS' です。\n\n🎵 manager の終了済みゴールを削除できるようになりました\n\nmanager の画面で 'Ctrl+G' を押すと終了済みのゴールを探して削除できます。\nまた、manager に渡す実行中ゴールの情報に終了済みのゴールを含めないようにしました。\n\n🔧 不具合修正\n\n- OpenCode のツール入力を確定前に記録していた問題を修正しました。\n確定した引数を記録するため、結果を実際のファイルやコマンドと対応付けられます。\n- Codex のコンテキスト圧縮後も、完了した応答と裁定の指示・入力への参照を保持するようにしました。\n不要な復帰処理の繰り返しも防ぎます。\n- レポート出力中にコンテキスト圧縮が起きた場合は、新しいセッションで再試行するようにしました。\n- ワークフローの名前と呼び出し位置が同じなら、本文を変更した後も保存済みの記録やレポートを再開時に引き継げるようにしました。\n- Git の表示言語が原因で clone に失敗する問題と、'merge.ff=only' の設定によって同期時の merge に失敗する問題を修正しました。\n- 同じ内容の policy と knowledge をエージェントの指示へ重複して入れないようにしました。",
+    "images": [],
+    "deepDive": "#TAKT v0.77.0で、仕様ファイル（Gherkin・Quint・Alloy）を各タスクのエージェントに渡せるようになりました。\n**タイムラインから：TAKT v0.77.0で、仕様ファイル（Gherkin・Quint・Alloy）を各タスクのエージェントに渡せるようになりました。**\n[nrslibさんの投稿](https://x.com/nrslib/status/2125168534078570984)（11/24 19:03、日本時間）です。これまで何度か紹介してきた、AIコーディングエージェントの作業手順を管理するツール [TAKT](https://github.com/nrslib/takt) の新しいバージョンです。[変更履歴](https://github.com/nrslib/takt/blob/main/docs/CHANGELOG.ja.md)によると、11月24日のリリースです。\n\n「ゴール」に保存した Gherkin・Quint・Alloy の仕様を、各タスクの実行時にファイルとして渡します。ワークフローの各ステップから、元の仕様を見ながら実装や確認ができます。以前お伝えした、nrsさんがQuintで業務ルールを形式仕様として書く話が、ツールの機能になった形です。\n\nあわせて、Codexでレポートを出すときや、厳しく読み取り専用にしたい処理にも、既存の権限設定の禁止ルールを引き継げるようになりました（`readonly_permission_base`）。このときはネットワークが切られ、作業フォルダも読み取り専用になります。ただし作者の投稿によると、継承元で個別に書き込みを許可したパスには、その許可が残ります。利用には `permission_control: codex` が必要です。\n\nCodex と OpenCode では、`context_window` に `auto`、固定の数値、「最初は50万トークンで、必要なら広げる」といった設定を書けます。自動選択と拡張は確認済みのモデル上限を使い、上限が分からないときの `auto` はプロバイダーの既定値のままです。固定値にすると、自動では広がりません。\n\nほかに、単体のMCPクライアントからゴールの登録案を作って承認・却下できるようになりました。manager に貼った画像を、再起動後も残してタスクに添付できるようにもなっています。\n\n長い作業を任せるときに、「仕様を形式的に書いて全ステップで参照させる」「レポート出力は書き込みもネットワークも禁止する」という2つの守りを、設定で入れられるようになった点が目新しいです。Copilot CLIで長時間の自動作業を回すときにも、参考になる作り方だと思います（私の見方です）。",
+    "followUps": []
+  },
+  {
+    "id": "2125159708428533770",
+    "cardId": "r38_233",
+    "datetime": "2026-11-24T18:49:00+09:00",
+    "postedAt": "2026-11-24T18:28:52+09:00",
+    "source": "timeline",
+    "title": "Alibabaの音声対話サービス「Qwen-Audio-Live」のドキュメントが公開されています。",
+    "summary": "会話の秒数課金で、無音や待機も同じ課金。GPT-Liveには standby があり、無音が長いとそちらのほうが安くなることもある（私の見方です）。",
+    "tweetId": "2125159708428533770",
+    "tweetIds": [
+      "2125159708428533770"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/kun432/status/2125159708428533770",
+    "author": {
+      "handle": "kun432",
+      "name": "kun432🇯🇵"
+    },
+    "via": null,
+    "text": "Qwen-Audio-Live とな\n\n[alibabacloud.com/help/ja/model-…](https://www.alibabacloud.com/help/ja/model-studio/qwen-audio-live)",
+    "images": [],
+    "deepDive": "#Alibabaの音声対話サービス「Qwen-Audio-Live」のドキュメントが公開されています。\n**タイムラインから：Alibabaの音声対話サービス「Qwen-Audio-Live」のドキュメントが公開されています。**\n[kun432さんの投稿](https://x.com/kun432/status/2125159708428533770)（11/24 18:28、日本時間）です。[続きの投稿](https://x.com/kun432/status/2125160219353424092)では、OpenAIのGPT-Liveと料金を比べています。\n\n[公式ドキュメント](https://www.alibabacloud.com/help/ja/model-studio/qwen-audio-live)（11/23更新）によると、聞きながら話せる「フロントエンド」の音声モデルが、利用者との会話を続けます。そのあいだに、業務APIを呼んだり考えたりする重い作業を、裏に任せられます。任せ方は2つで、自分のアプリが処理する「Clientモード」と、Model Studioが設定済みのバックエンドモデルを呼ぶ「Responsesモード」です。サンプルのフロントエンドモデルは `qwen-audio-4.0-realtime-preview` で、接続先のサービスは `qwen-audio-3.1-live` です。WebSocketとWebRTCで使えます。\n\n[モデルのページ](https://www.alibabacloud.com/help/en/model-studio/qwen-audio-3-1-live)によると、`qwen-audio-3.1-live` は会話の秒数で課金されます。シンガポールで1秒0.000710ドル（1分あたり約0.043ドル）、北京で1秒0.000471ドルです。接続ごとに最低3秒分がかかり、無音や待機の時間も同じ秒数課金です。バックエンドモデルの分は、トークン量で別に払います。同時に開けるのは5接続までです。\n\n一方、GPT-Liveは[公式の料金](https://developers.openai.com/api/docs/models/gpt-live-1)で、動作中が1分0.05ドル、standbyが1分0.02ドルです。秒単位の課金で、バックエンドは別に請求されます。[ドキュメント](https://developers.openai.com/api/docs/guides/live-conversations#configure-standby)によると、WebRTCで `wake_policy` を `speech` にし、5〜60秒の `idle_timeout_s` を設定すると、黙っているあいだは推論が止まり、安い料金になります。kun432さんの指摘どおり、アクティブな時間だけ比べるとQwenのシンガポール料金のほうが少し安いですが、無音が長い使い方だとGPT-Liveのほうが安くなることもあります。性能の数字は、今回見たモデルのページには出ていません。話しかけを待つことが多いアシスタントならstandbyのあるGPT-Live、話し続ける用途ならQwenが少し安い、という見方もありますが、実際の料金は無音の多さで変わります（私の見方です）。",
+    "followUps": []
+  },
+  {
+    "id": "2125158532656083166",
+    "cardId": "r38_232",
+    "datetime": "2026-11-24T18:49:00+09:00",
+    "postedAt": "2026-11-24T18:24:12+09:00",
+    "source": "timeline",
+    "title": "ISUCON2026で優勝したAIエージェントが、当日書いたコードを公開しました。",
+    "summary": "リポジトリ luvtechno/isucon2026（MIT）。4台がメモリ上のコピーを読み、書き込みは asia2 に集約。アプリは PostgreSQL につながっていない。既存の公式解説 r38_229 や参加記・準備編とは別件。ログイン済みのブラウザをエージェントに触らせるのは鍵を渡すのに近い（私の見方です）。",
+    "tweetId": "2125158532656083166",
+    "tweetIds": [
+      "2125158532656083166"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/kawasy/status/2125158532656083166",
+    "author": {
+      "handle": "kawasy",
+      "name": "Yoshinori Kawasaki"
+    },
+    "via": null,
+    "text": "問題も公開されたので、 ISUCON2026 当日に競技エージェントが書いた1位のコードを公開しました！明後日10/26のイベントで解説します\n[github.com/luvtechno/isuc…](https://github.com/luvtechno/isucon2026)\n\n作問チームの問題解説もあわせてご覧ください\n[isucon.net/archives/isuco…](https://isucon.net/archives/isucon2026-problem-review)\n\n#isucon",
+    "images": [],
+    "deepDive": "#ISUCON2026で優勝したAIエージェントが、当日書いたコードを公開しました。\n**タイムラインから：ISUCON2026で優勝したAIエージェントが、当日書いたコードを公開しました。**\n[kawasyさんの投稿](https://x.com/kawasy/status/2125158532656083166)（11/24 18:24、日本時間）です。リポジトリは [luvtechno/isucon2026](https://github.com/luvtechno/isucon2026)（MIT）です。準備と当日の経過はこれまでお伝えしたので、今回はコードから新しく分かったことだけ書きます。\n\n公開されているのは、競技時間中にエージェントが書いたコードと設定です。[README](https://github.com/luvtechno/isucon2026/blob/main/README.md)によると、当日のgitの履歴19コミットを、出してよい範囲に絞って作り直したそうです。最終スコアは625,857で1位でした。最後のベンチマークのログ（`tmp/result-f5.txt`）も入っています。\n\n最終的な構成は、READMEによると次のとおりです。4台それぞれのアプリが、データのコピーを自分のメモリに持っていて、読み取りはそこから返します。書き込みはすべて asia2 に送られ、asia2 が順番を決めてファイルに記録してから、同じ順番でほかの3台に配ります。アプリは PostgreSQL につながっていません。DBを読むのは、初期データからファイルを作る `packbuild` だけです。nginx も途中で経路から外して止めています。運営が用意した、IPをBANする別プロセスも、判定をアプリの中（`guard.go`）に移して止めています。画像の署名は、`sigbuild` で期限を決めて前もって計算し、表にしています。先ほどお伝えした作問解説のとおり、地域間の遅延などがある問題で、エージェントはDBを捨てて、書き込みを1か所で順番に並べる作りに組み直しています。\n\n投稿には「明後日10/26のイベント」とありますが、READMEでは[解説イベント](https://herp-inc.connpass.com/event/412593/)の日付は11/26です。投稿の書き間違いだと思われます。公開用の最新コミットにも「Co-Authored-By: Claude Opus 5.5」と付いていて、公開の作業もClaudeが手伝ったようです。\n\n`scripts/` には、エージェントが自分で書いたデプロイ・計測・分析のスクリプトがあります。`tools/browser.mjs` は、ログイン済みのブラウザにCDPでつないで競技ポータルを操作するスクリプトです。便利ではありますが、ログイン済みのブラウザをエージェントに触らせるのは、鍵を渡すのに近いです。競技のように、使い捨ての環境だからできたやり方だと思います（私の見方です）。",
+    "followUps": []
+  },
+  {
     "id": "2125143063194661106",
     "cardId": "r38_230",
     "datetime": "2026-11-24T17:50:00+09:00",
@@ -639,7 +858,18 @@
     "text": "you can only prompt what you can imagine\n\ntry the new /reframe skill in pstack - for when you know what you want but are struggling to communicate it. works great with /sharpen!\n\n[x.ai/bot/plugin/971…](https://x.ai/bot/plugin/9717366)",
     "images": [],
     "deepDive": "#pstackに、言いたいことを専門の言葉に置き換える「/reframe」が入りました。\n**タイムラインから：pstackに、言いたいことを専門の言葉に置き換える「/reframe」が入りました。**\n[Lauren Tanさん（@poteto）の投稿](https://x.com/poteto/status/2125029185379008573)（11/24 09:50、日本時間）です。「想像できるものしかプロンプトに書けない」という言葉とともに紹介されていて、いいねは1,000を超えています。\n\n[SKILL.md](https://github.com/cursor/plugins/blob/main/pstack/skills/reframe/SKILL.md)によると、作りたいものの説明と、手元のファイルやコードを読みます。そのうえで、その分野の専門の言葉を8〜12個、作るものへの影響が大きい順に教えてくれます。1つの言葉ごとに、意味、実際にその言葉を使っている事業や論文（リンク付き）、そしてエージェントに何を頼めるようになるかを書きます。同じ形の問題を別の名前で解いた分野を2〜3つ挙げ、何が使えて、どこからはたとえが合わないかも書きます。最後に、説明に書いていないけれど気にした方がいいことを挙げ、説明を新しい言葉で書き直します。\n\n自分で呼んだときだけ動きます（`disable-model-invocation: true`）。リンクは全部開いて確かめ、確かめられない出典は消す決まりです。投稿では、問いをはっきりさせる [/sharpen](https://github.com/cursor/plugins/pull/615) と組み合わせるとよい、と書かれています。[Cursor Marketplace](https://cursor.com/marketplace/skills/reframe) にも載っています。",
-    "followUps": []
+    "followUps": [
+      {
+        "datetime": "2026-11-24T21:51:00+09:00",
+        "clock": "21:51",
+        "title": "uehajさんが、「作るものは変えない。見る枠を替える」と解説しています。説明が何通りかに取れるときは先に問題の候補を2〜3個並べる。スキル自体は実装せず、書き直した説明と頼み文だけを返す。",
+        "text": "**いいねから：uehajさんが、pstackの「/reframe」を詳しく解説しています。**\n[uehajさんの投稿](https://x.com/uehaj/status/2125045492803608783)（11/24 10:55、日本時間）です。元は、今朝お伝えした [Lauren Tanさん（@poteto）の告知](https://x.com/poteto/status/2125029185379008573)です。いまのいいねは3,714、ブックマークは3,066です。\n\n仕組みの骨格は今朝お伝えしたとおりなので、解説で新しく分かったことだけ書きます。uehajさんの要約は、「作るものは変えない。見る枠を替える」です。枠が替わると、AIに頼めることも変わる、とのことです。説明が何通りかに取れるときは、先に問題の候補を2〜3個並べてから、いちばん近いものについて専門用語を教える、と[SKILL.md](https://github.com/cursor/plugins/blob/main/pstack/skills/reframe/SKILL.md)にあります。また、このスキル自体は実装などの作業はせず、書き直した説明と、エージェントへの頼み文だけを返す、とも解説しています。作者は `/sharpen` との組み合わせを勧めていて、uehajさんは、先に `/reframe`、次に `/sharpen` の順が自然だと考えています（作者は順番を書いていない、とも断っています）。",
+        "tweetIds": [
+          "2125045492803608783",
+          "2125029185379008573"
+        ]
+      }
+    ]
   },
   {
     "id": "2125017412735263192",

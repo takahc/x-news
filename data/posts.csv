@@ -1,4 +1,100 @@
 id,datetime,source,author,url,text,summary
+2125201709852934598,2026-11-24T21:51:00+09:00,timeline,GoogleDeepMind,https://x.com/GoogleDeepMind/status/2125201709852934598,"We worked with @mencap_charity and people with learning disabilities to build the Easy Read Co-Creator Tool with Gemini.
+
+It turns complex health, finance and everyday documents into clear words and images in minutes rather than weeks – with human experts reviewing every version. ↓",人の専門家が確認・編集・承認することが前提。対象は文書を作る組織。日本の「やさしい日本語」の場面にもこの考え方は使えそう（私の見方です）。
+2125167628666966172,2026-11-24T21:51:00+09:00,likes,fjtd_dev,https://x.com/fjtd_dev/status/2125167628666966172,"最近これやってる。
+
+AWS Card Clash
+[cardclash.skillbuilder.aws/security-island](https://cardclash.skillbuilder.aws/security-island)",Security Island は実在するセキュリティ構成が15ステージ。11月23日から12月4日（協定世界時）のコンテストでは受験バウチャーが贈られる。
+2125182006896337127,2026-11-24T20:54:00+09:00,timeline,yashiro_ld,https://x.com/yashiro_ld/status/2125182006896337127,最近のChatGPTpro、いきなりKiCADの回路図を作ってくれるてすごい👀(すごいけどここまで頼んでない,小型MRIを自作している Yashiro さんの投稿。出てきた回路図が使えるかは、ERCや人の目で確認する必要がある。既存の自作MRIや HeyPCB の話とは別件。
+2125181453734654421,2026-11-24T20:54:00+09:00,likes,nrslib,https://x.com/nrslib/status/2125181453734654421,"起業しました
+社名は株式会社ドットロフトです
+AIプロダクトをつくっていきます
+
+CEO CTO CAIO CFO CPO COO CMO CIO CDO CISO CSO CRO CHRO CLO CKO CCO
+全部ワイや！！！
+C∞O と呼べ！！",AIプロダクトの開発と運用を支援するプラットフォームを目指す一人会社。社名と所在地は法人番号の記録と一致するが、代表者名は今回確認できていない。TAKT のバージョン更新とは別件。
+2125171459236794682,2026-11-24T19:49:00+09:00,timeline,moriya_sys,https://x.com/moriya_sys/status/2125171459236794682,"今年の目標にしていた累計50万DLに到達しました☺️
+内訳はMVアラーム32.5万DL、ボカロアラーム17.5万DL
+売上目標は2月時点でクリアしてます（現在70万前後）
+来年はもう少し大きい目標を考えます",MVアラーム32.5万、ボカロアラーム17.5万。売上目標は2月時点で達成済み（今は70万前後）。70万は月の売上だと思うが、投稿には明記されていない（私の推測です）。
+2125168534078570984,2026-11-24T19:49:00+09:00,timeline,nrslib,https://x.com/nrslib/status/2125168534078570984,"🎼 TAKT v0.77.0 リリース
+
+🎵 Codex と OpenCode のコンテキスト容量を指定できるようになりました
+
+runtime profile の 'context_window' に 'auto' または固定値を設定します。
+初期容量を指定して自動拡張する設定も使えます。
+自動選択と拡張には確認済みのモデル上限を使い、上限が分からない場合の 'auto' はプロバイダーの既定値を維持します。
+
+🎵 Codex のレポート出力でも拒否ルールを引き継ぐようになりました
+
+'readonly_permission_base' に既存の権限プロファイルを指定すると、レポート出力や厳格な読み取り専用の処理にも拒否ルールを適用します。
+利用には 'permission_control: codex' が必要です。
+ネットワークは無効になり、作業フォルダなどの権限は読み取り専用になります。
+継承元で個別に書き込みを許可したパスには、その許可が残ります。
+
+🎵 ゴールの仕様ファイルを各タスクに渡すようになりました
+
+ゴールに保存した Gherkin・Quint・Alloy の仕様を、各タスクの実行時にファイルとして渡します。
+各ステップのエージェントが元の仕様を参照して実装や検証に使えます。
+
+🎵 MCP クライアントからゴール登録案を作成・承認できるようになりました
+
+登録案の一覧や詳細を確認し、承認または却下できます。
+承認時には所有者と更新状況を確認してからゴールを登録します。
+
+🎵 ゴールに登録した統合先ブランチを変更できるようになりました
+
+PR のマージ先を変えたときに、'takt_update_goal_branches' でゴールに保存した統合先も変更できます。
+既存の PR のマージ先は GitHub などのホスティング側で別途変更してください。
+
+🎵 ゴールを取得したときに PR の状態も確認できるようになりました
+
+関連する PR がオープン・マージ済み・クローズのどの状態かを、ゴールの取得結果で確認できます。
+
+🎵 組み込みのレビュー裁定では指摘の採否だけを判断するようになりました
+
+修正方法の選択や影響の調査は後続の修正計画で行います。
+
+🎵 manager の会話に貼り付けた画像をタスクに添付できるようになりました
+
+貼り付けた画像は daemon の再起動後も保持します。
+manager が保存済み画像のパスをタスクの指示に含めると、その画像を添付ファイルとしてタスクへ渡します。
+
+🎵 manager のタスクごとに実行設定を選べるようになりました
+
+'manager.runtime_assignments' に実行設定（runtime assignment）の候補を指定すると、manager がタスクに合う設定を選びます。
+選んだ設定はリトライやリキューでも引き継ぎます。
+
+🎵 manager の画面更新間隔を変更できるようになりました
+
+設定項目は 'manager.refresh_interval_ms'、環境変数は 'TAKT_MANAGER_REFRESH_INTERVAL_MS' です。
+
+🎵 manager の終了済みゴールを削除できるようになりました
+
+manager の画面で 'Ctrl+G' を押すと終了済みのゴールを探して削除できます。
+また、manager に渡す実行中ゴールの情報に終了済みのゴールを含めないようにしました。
+
+🔧 不具合修正
+
+- OpenCode のツール入力を確定前に記録していた問題を修正しました。
+確定した引数を記録するため、結果を実際のファイルやコマンドと対応付けられます。
+- Codex のコンテキスト圧縮後も、完了した応答と裁定の指示・入力への参照を保持するようにしました。
+不要な復帰処理の繰り返しも防ぎます。
+- レポート出力中にコンテキスト圧縮が起きた場合は、新しいセッションで再試行するようにしました。
+- ワークフローの名前と呼び出し位置が同じなら、本文を変更した後も保存済みの記録やレポートを再開時に引き継げるようにしました。
+- Git の表示言語が原因で clone に失敗する問題と、'merge.ff=only' の設定によって同期時の merge に失敗する問題を修正しました。
+- 同じ内容の policy と knowledge をエージェントの指示へ重複して入れないようにしました。",ゴールに保存した仕様を各ステップから参照できる。読み取り専用の禁止ルール継承と context_window 指定も追加。既存の TAKT manager / director カードとは別件。Copilot CLI の長時間作業の参考になる（私の見方です）。
+2125159708428533770,2026-11-24T18:49:00+09:00,timeline,kun432,https://x.com/kun432/status/2125159708428533770,"Qwen-Audio-Live とな
+
+[alibabacloud.com/help/ja/model-…](https://www.alibabacloud.com/help/ja/model-studio/qwen-audio-live)",会話の秒数課金で、無音や待機も同じ課金。GPT-Liveには standby があり、無音が長いとそちらのほうが安くなることもある（私の見方です）。
+2125158532656083166,2026-11-24T18:49:00+09:00,timeline,kawasy,https://x.com/kawasy/status/2125158532656083166,"問題も公開されたので、 ISUCON2026 当日に競技エージェントが書いた1位のコードを公開しました！明後日10/26のイベントで解説します
+[github.com/luvtechno/isuc…](https://github.com/luvtechno/isucon2026)
+
+作問チームの問題解説もあわせてご覧ください
+[isucon.net/archives/isuco…](https://isucon.net/archives/isucon2026-problem-review)
+
+#isucon",リポジトリ luvtechno/isucon2026（MIT）。4台がメモリ上のコピーを読み、書き込みは asia2 に集約。アプリは PostgreSQL につながっていない。既存の公式解説 r38_229 や参加記・準備編とは別件。ログイン済みのブラウザをエージェントに触らせるのは鍵を渡すのに近い（私の見方です）。
 2125143063194661106,2026-11-24T17:50:00+09:00,timeline,connect24h,https://x.com/connect24h/status/2125143063194661106,nginxの脆弱性対応も兼ねられるし、CDNやWAFで代替するのはアリっちゃアリ。AWSさん、相変わらず、マーケティングセンス良い。,カスタムオリジンとVPCオリジンが対象。追加料金はなく、未対応ならHTTP/1.1に戻る。公式はMCPサーバーを呼ぶAIエージェントを理由に挙げている。既定はHTTP/1.1のまま。
 2125137370114818156,2026-11-24T17:50:00+09:00,timeline,GithubProjects,https://x.com/GithubProjects/status/2125137370114818156,"Describe a video or motion graphic to your AI and it renders on your own GPU.
 
