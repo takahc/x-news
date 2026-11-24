@@ -1,5 +1,141 @@
 [
   {
+    "id": "2125007927098699827",
+    "cardId": "r38_204",
+    "datetime": "2026-11-24T08:50:00+09:00",
+    "postedAt": "2026-11-24T08:25:45+09:00",
+    "source": "timeline",
+    "title": "OpenAIのAIが、Linuxで一般ユーザーから管理者（root）の権限を取れる弱点を948件確かめ、パッチ案も作りました。",
+    "summary": "GPT-6 Cyber。11/4の研究記事の再告知。API費用は約121万ドル。発見から悪用までの平均は7日に縮んだ、という指摘もある。既存の Shirudo r38_202 とは別件。",
+    "tweetId": "2125007927098699827",
+    "tweetIds": [
+      "2125007927098699827"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/OpenAI/status/2125007927098699827",
+    "author": {
+      "handle": "OpenAI",
+      "name": "OpenAI"
+    },
+    "via": null,
+    "text": "In one run, GPT-6 Cyber helped us validate 948 Linux kernel bugs that could grant local root access and generate patches for review.\n\nOur researchers @clintgibler and @ky1ebot share their findings and how they worked with maintainers to get fixes upstream.\n\nRead the research: [openai.com/index/a-thousa…](http://openai.com/index/a-thousand-fewer-paths-to-root/)",
+    "images": [
+      {
+        "type": "video_preview",
+        "url": "https://pbs.twimg.com/amplify_video_thumb/2125002652929196032/img/UOxIg9s51dEH3-gJ.jpg"
+      }
+    ],
+    "deepDive": "#OpenAIのAIが、Linuxで一般ユーザーから管理者（root）の権限を取れる弱点を948件確かめ、パッチ案も作りました。\n**タイムラインから：OpenAIのAIが、Linuxで一般ユーザーから管理者（root）の権限を取れる弱点を948件確かめ、パッチ案も作りました。**\n[OpenAIの投稿](https://x.com/OpenAI/status/2125007927098699827)（11/24 08:25、日本時間）です。紹介の動画が付いています。中身は、11/4の研究記事 [A thousand fewer paths to root](https://openai.com/index/a-thousand-fewer-paths-to-root/) の再告知です。使われたのは [GPT-6 Cyber](https://openai.com/index/introducing-gpt-6-cyber/) で、審査を通った「Daybreak Red」の組織にだけ提供されています。OpenAIは、サイバー分野の危険度を最上位の「Critical」と分類しています。\n\n実行は10月中旬の1回です。監査の対象は5,034か所（約280万行）で、候補2,308件のうち1,724件を、隔離した環境で再現しました。そのうち948件について、一般ユーザーからrootを取れることを確認し、メンテナー向けのパッチ案も作っています。API費用は1,213,430ドル（1件あたり1,279ドル）でした。7月のGPT-5.6 Solでは、166件でした。\n\n気になる点もあります。エージェントが、割り当てられたものとは「別の0-day」でrootを取った例が、早い段階の200件中20件ありました。OpenAIはその後、制約を厳しくし、意図した弱点を使ったかを独立に確かめる仕組みを足しています。公式の教訓は、「結果だけでなく、そこに至る経路も確かめる」です。\n\n10日後の時点で、取り込み済みは61件、取り込み待ちは43件、公開の議論中は299件でした。ただしこの数字は、ほかの人の修正も含みます。OpenAI自身のパッチ案が何件入ったかは、記事からは確認できませんでした。\n\nOpenAI自身も、「弱点を見つけること自体は規模を広げやすくなった一方、優先順位づけと確認がボトルネックだ」と書いています。LinuxカーネルのGreg Kroah-Hartmanさんは、LLMの登場でCVEの修正が約4倍になったとしたうえで、「本当に心配すべきなのは、発見から悪用までの平均が2018年の63日から2026年の7日に縮んだことと、利用者が更新しないことだ」と話しています（[LWN](https://lwn.net/Articles/1096908/)、10月の講演）。OpenAIは、「最新のパッチが当たっていないOSの、権限の低いアカウントは、十分な手段を持つ攻撃者にとっては、実質的にrootと同じとみなすべき」とも書いています。サンドボックスなどの多層防御と、こまめな更新が前提です。\n\n出典：[OpenAIの研究記事](https://openai.com/index/a-thousand-fewer-paths-to-root/) / [GPT-6 Cyber](https://openai.com/index/introducing-gpt-6-cyber/) / [LWN](https://lwn.net/Articles/1096908/)",
+    "followUps": []
+  },
+  {
+    "id": "2125002300074975266",
+    "cardId": "r38_205",
+    "datetime": "2026-11-24T08:50:00+09:00",
+    "postedAt": "2026-11-24T08:03:23+09:00",
+    "source": "timeline",
+    "title": "30年来の「標本圧縮予想」に大きな前進があり、証明を見つけたのはAIのマルチエージェントです。",
+    "summary": "GoogleのCogenticとGemini 4 Carbon。O(d² log² d)まで改善。元の予想 O(d) は未解決。論文にLeanなどの形式検証の記載はない。形式検証の方へ議論が進みそうだ、というのが私の見方です。既存のリーマン予想 Lean 検証 r38_139 とは別件。",
+    "tweetId": "2125002300074975266",
+    "tweetIds": [
+      "2125002300074975266"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/hillbig/status/2125002300074975266",
+    "author": {
+      "handle": "hillbig",
+      "name": "Daisuke Okanohara / 岡野原 大輔"
+    },
+    "via": null,
+    "text": "機械学習の汎化とデータ圧縮を結びつける標本圧縮予想は、統計的学習理論における約30年来の未解決問題であるが、その解決に向けて大きな進展があった。\n\n“Near-Quadratic Sample Compression for All VC Classes”\n\n今回の証明は、AIマルチエージェントシステムによって自律的に発見されたと報告されており、人間の著者は証明の簡素化や説明の改善などを行っている。\n\n標本圧縮問題とは、VC次元がdの二値分類器のクラスを考え、任意の大きさmの学習データが与えられたとき、その中から少数のサンプルだけを選び、元の学習データすべてに正しく答える分類器を再構成できるか、また、そのために何個のサンプルが必要かという問題である。\n\n特に、圧縮後のサンプル数を、元の学習データ数mに依存せず、VC次元dのみによって抑えられるかが重要な問題となる。\n\n例えば、100万個の学習データの中からごく少数のデータだけを残し、それらと少量の補助情報だけを見た別の人が、元の100万個すべてに正しく答える分類器を復元できるか、という問題である。\n\n1990年代には、Freundらによって O(d log m) 個のサンプルによる圧縮が示され、2016年には m に依存しない  2^{O(d)} 個まで改善された。しかし、VC次元 d に対して指数関数的な上界にとどまっていた。\n\n今回の研究では、O(d^2 log^2d) 個のサンプルと O(d log^2d) ビットの補助情報から、元の学習データすべてに一致する分類器を再構成できることが証明された。\n\nこれにより、VC次元に対して多項式サイズの標本圧縮が常に可能であることが示された。ただし、元の標本圧縮予想であるO(d) 個での圧縮が可能かどうかは、依然として未解決である。\n\n今回の証明では、分類器を直接サンプリングして多数決を構成する代わりに、少数の入力点に対する応答によって分類器集合を分割し、各グループの代表分類器を暗黙的に符号化する。これにより、双対クラスのVC次元への指数関数的な依存を回避している。\n\nさらに、ゲーム理論的なミニマックスの議論とエントロピーを組み合わせ、代表分類器の集合が不十分な場合には、入力点を追加することで分類器集合の分割に関するエントロピーを増加させられることを示す。エントロピーにはVC次元によって定まる上限があるため、必要な入力点の総数を抑えることができる。\n\nコメント\n===\n標本圧縮予想は、少ないデータから汎化できるという統計的な性質と、大量のデータを少数の代表例に圧縮できるという情報的な性質が、本質的に同じものなのかという問題に関わっている。\n\n圧縮サイズが小さいほど汎化誤差の上界も小さくなるため、圧縮可能性から汎化保証を導くことができる。\n\n標本圧縮予想は、その逆方向、すなわち、学習可能な問題には必ず少数の代表例による説明が存在すると予想している。\n\n今回の結果は、有限のVC次元を持つ任意の二値分類器クラスについて、VC次元の多項式個のサンプルで圧縮が可能であることを示した。ただし、元の予想であるVC次元に比例するO(d) 個での圧縮が可能かどうかは、依然として未解決である。\n\nなお、今回の結果は圧縮可能性に関する存在定理であり、計算効率のよい圧縮・復元アルゴリズムが得られたわけではない。\n\n一方、今回の証明では、ラベル付きサンプルが O(d＼log d) 個で済むことも特徴である。残りの入力点はラベルなしで、分類器集合を区別するために使われる。\n\nつまり、分類の正解を伝えるラベル情報と、仮説空間の構造を記述する情報が分離されていると捉えることができる。\n\nこの考え方を発展させ、学習に必要な情報をラベル情報と仮説空間の構造情報に分離することで、より効率的な学習・圧縮手法を構築できないだろうか。",
+    "images": [],
+    "deepDive": "#30年来の「標本圧縮予想」に大きな前進があり、証明を見つけたのはAIのマルチエージェントです。\n**タイムラインから：30年来の「標本圧縮予想」に大きな前進があり、証明を見つけたのはAIのマルチエージェントです。**\n[岡野原大輔さんの投稿](https://x.com/hillbig/status/2125002300074975266)（11/24 08:03、日本時間）です。論文は [arXiv:2611.25011](https://arxiv.org/abs/2611.25011) で、著者はGoogleのチームです。1995年にこの予想を立てたManfred Warmuthさん自身も入っています。論文のAI Disclosureによると、証明はGoogleのマルチエージェント基盤 [Cogentic](https://arxiv.org/abs/2609.40324) が、Gemini 4 Carbonを使い、方針のヒントなしで自律的に見つけました。上界は Õ(d¹⁶) から始まり、段階的に O(d² log² d) まで改善されました。費用は、いまのGemini APIの料金で約344ドルです。著者らはその後、証明の簡素化と説明の改善を行い、正しさの責任は自分たちにある、と書いています。\n\n結果は、VC次元が d のクラスなら、サンプル O(d² log² d) 個に圧縮できる、というものです。これまでの最良は、2016年の 2^O(d) でした。1995年の元の予想である O(d) は、まだ未解決です。論文に、Leanなどの形式検証の記載はありませんでした。\n\n[Idan Attiasさん](https://x.com/IdanAttias/status/2124560363567948147)と[Dan Royさん](https://x.com/roydanroy/status/2124883696171762120)は「大きなブレークスルー」と評価しています。一方で[Elliot Glazerさん](https://x.com/ElliotGlazer/status/2124914742213161260)は、CogenticなどGoogleの基盤が発表されても公開されていない、と批判しています。\n\n「AIが証明を見つけ、人間が検証して責任を持つ」形が、数百ドルで実現した例です。ただし、機械的な形式検証ではありません。先のOpenAIの研究も、今後の方向として形式検証を挙げています。AIの出力をどう保証するかの議論は、形式検証の方へ進みそうだ、というのが私の見方です。\n\n出典：[論文](https://arxiv.org/abs/2611.25011) / [Cogentic](https://arxiv.org/abs/2609.40324)",
+    "followUps": []
+  },
+  {
+    "id": "2124980590717911527",
+    "cardId": "r38_202",
+    "datetime": "2026-11-24T07:52:00+09:00",
+    "postedAt": "2026-11-24T06:37:07+09:00",
+    "source": "timeline",
+    "title": "OpenAIとCiscoが、オープンソースのLinuxランタイム「Shirudo（シールド）」を公開しました。",
+    "summary": "エージェントがeBPFで暫定の防御を書き、再起動なしで脆弱な経路だけを止める。BSD-2、まだpre-release。誤ったシールドは可用性の事故になりえる（私の推測です）。",
+    "tweetId": "2124980590717911527",
+    "tweetIds": [
+      "2124980590717911527"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/OpenAI/status/2124980590717911527",
+    "author": {
+      "handle": "OpenAI",
+      "name": "OpenAI"
+    },
+    "via": null,
+    "text": "We’re introducing Shirudo, an open-source Linux runtime allowing agents to defend systems without downtime. It lets agents write dynamic eBPF controls to shield systems from exploits, giving defenders more time to test and roll out patches. Built by @cisco together with OpenAI.\n\nShirudo is a first step toward self-defending infrastructure that can adapt to new threats while keeping services running. Our goal is for defenders to work with AI agents to find affected systems, test and share shields, and deploy them without disrupting workloads.\n\n[openai.com/index/introduc…](https://openai.com/index/introducing-shirudo/)",
+    "images": [
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HX1vOUNXwAESQQN.jpg"
+      }
+    ],
+    "deepDive": "#OpenAIとCiscoが、オープンソースのLinuxランタイム「Shirudo（シールド）」を公開しました。\n**タイムラインから：OpenAIとCiscoが、オープンソースのLinuxランタイム「Shirudo（シールド）」を公開しました。**\n[OpenAIの投稿](https://x.com/OpenAI/status/2124980590717911527)（11/24 06:37、日本時間）です。本格的なパッチを当てるまでの「時間稼ぎ」をする仕組みで、AIエージェントがeBPFで暫定の防御（シールド）を書き、再起動なしで、脆弱なコードの経路だけを止めます。いわば仮想パッチです。公式の対照実験では、Codexが作ったシールドが、稼働中のElasticsearchへの攻撃を再起動なしで遮断しました。中身は、JavaのBase64デコーダに入力チェックを足すものです（[OpenAI](https://openai.com/index/introducing-shirudo)）。\n\n運用側のホストでシールドをビルドして署名し、OCIレジストリ経由で配ります。対象のホストは、カーネルで署名を検証してからロードし、TPMで「何をロードしたか」を記録・証明します。起動時から、BPFのロードは署名済みのローダーに限られます。root権限を取られても、署名鍵がなければ変更できない、という設計です（[GitHub](https://github.com/shirudo-dev/shirudo)）。ライセンスはBSD-2、まだpre-release（正式版の前）です。本番では、独自のカーネルパッチとTPM 2.0が必要です。いまのところスターは173です。\n\n公式は、「デプロイするかどうかはセキュリティチームが決め、オペレーターが承認する」としています。[脅威モデル](https://github.com/shirudo-dev/shirudo/blob/main/Documentation/security/threat-model.rst)は、運用ホストと署名鍵を信頼の前提に置き、Shirudo自身はそれを検査しません。鍵が漏れた場合、その鍵を受け入れるすべてのホストに、任意のローダーが入る、と明記しています。eBPFの検証器が保証するのは「カーネルを壊さない」ことまでで、「正規の通信を止めない」ことまでは保証しません。誤ったシールドは、可用性の事故になりえます（私の推測です）。署名鍵と、エージェントの権限をどう分けるかが、要点になります。\n\nエージェントにカーネル級の権限を渡すのを、署名、人間の承認、TPMの記録で囲む設計例です。小さなVPSに入れるには、まだ重いと思います。一方で、「AIの出力をすぐ実行せず、署名と承認のゲートを通す」という考え方は、自分のエージェント運用にも使えます。\n\n出典：[OpenAI](https://openai.com/index/introducing-shirudo) / [GitHub](https://github.com/shirudo-dev/shirudo) / [脅威モデル](https://github.com/shirudo-dev/shirudo/blob/main/Documentation/security/threat-model.rst)",
+    "followUps": []
+  },
+  {
+    "id": "2124959436640858475",
+    "cardId": "r38_203",
+    "datetime": "2026-11-24T07:52:00+09:00",
+    "postedAt": "2026-11-24T05:13:04+09:00",
+    "source": "timeline",
+    "title": "Claude Ship（beta）が出ました。プルリクエストのレビュー、修正、承認の判断まで、Claudeが担います。",
+    "summary": "Code Review、PR Steward、Approvalsの3部品。ZDR/HIPAA/CMEK環境では使えない。同じ朝にZDRと悪用検知を両立するEFSも公開ベータ。既存の確かめ方ブログ r38_164 や ZDR 実験 r38_137 とは別件。",
+    "tweetId": "2124959436640858475",
+    "tweetIds": [
+      "2124959436640858475"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/ClaudeDevs/status/2124959436640858475",
+    "author": {
+      "handle": "ClaudeDevs",
+      "name": "ClaudeDevs"
+    },
+    "via": null,
+    "text": "Introducing Claude Ship (beta): Claude can review your pull requests, work on fixes, and approve the ones your team's policy allows.\n\nThe goal is to help you ship code as fast as you can write it.",
+    "images": [
+      {
+        "type": "video_preview",
+        "url": "https://pbs.twimg.com/amplify_video_thumb/2124957499291832320/img/5uvC76lCrhP03Rlr.jpg"
+      }
+    ],
+    "deepDive": "#Claude Ship（beta）が出ました。プルリクエストのレビュー、修正、承認の判断まで、Claudeが担います。\n**タイムラインから：Claude Ship（beta）が出ました。プルリクエストのレビュー、修正、承認の判断まで、Claudeが担います。**\n[ClaudeDevsの投稿](https://x.com/ClaudeDevs/status/2124959436640858475)（11/24 05:13、日本時間）です。いいねは約1.17万、表示は約89万回です。3つの部品でできています（[公式記事](https://claude.com/resources/articles/introducing-claude-ship)）。\n\n- **Code Review**（一般提供）\n- **PR Steward**（beta）：CIの失敗やコンフリクトを直します。承認やマージはしません。\n- **Claude Approvals**（beta）：リポジトリに置いた `.claude/approvals.yml` の方針に従い、定型的な変更は自分で承認し、危険な変更には人を求めます。公式は「賢いCODEOWNERS」と書いています。\n\n個人は `/ship` で、PRの作成からレビュー、修正の追跡まで任せられます。マージは自分で行います。Team / Enterpriseでは、管理者がリポジトリ単位で有効にできます。まずは判定だけ表示して止めない、observeモードから始めることが推奨されています。公式によると、社内では6〜9月にマージ数が2倍を超え、差し戻し（revert）の割合は40%超減ったそうです。Enterprise向けに、少なくとも1万ドル分のクレジットがあります（2027/1/15までに申請し、申請から30日以内に使う条件です）。ZDR、HIPAA、顧客管理の暗号鍵（CMEK）を使っている組織では使えません。\n\nリスクも、公式がかなりはっきり書いています（[Approvalsのドキュメント](https://code.claude.com/docs/en/approvals)）。分類器は、「PRの作者が書いた文章で、回答を誘導されうる」と明記されていて、大事な経路では分類器を使わず人を求めるよう推奨されています。`seats: 0` や、Claudeの承認がGitHubの必須承認に数えられる設定だと、人が誰も見ずにマージされうるとされています。方針ファイルや `CODEOWNERS`、`REVIEW.md` などは保護ファイル扱いで、ルールは既定ブランチから読み込まれます。`/ship` の監視モードについては、「ベースブランチや自分のブランチに書き込める人を、全員信頼できる場合だけ使ってください。その人たちは、あなたの権限で、あなたのPC上でプログラムを実行できます」と書かれています（[ドキュメント](https://code.claude.com/docs/en/ship-command)）。\n\n「AIが書いて、AIが承認して、すぐ本番」を避けるには、課金、認証、CI設定のような経路は、人間必須にするのが現実的だと思います。\n\n**同じ朝、Claudeの「ZDR with Enterprise Frontier Safeguards（EFS）」も公開ベータになりました。**\n[Claudeの投稿](https://x.com/claudeai/status/2124929944530587712)（11/24 03:15、日本時間）です。データを残さないこと（ZDR）と、複数のリクエストにまたがる悪用の検知を両立させる仕組みです（[公式記事](https://claude.com/resources/articles/zero-data-retention-with-enterprise-frontier-safeguards)）。9月に発表し、Fortune 100の4分の1を含む100社超と開発してきました。Stripe、Wells Fargo、Salesforceなどが、私的ベータで評価しています。背景には9月の脅威レポートがあります。約50組織を狙った攻撃で、作業を多数のエージェントに分割しており、1リクエストずつ見ると無害に見えるため、従来の単発の分類器では検知できませんでした。\n\n入出力は顧客のS3／GCSに書き込まれ、Anthropic側は速やかに削除します。「Sealed Safety Data」（プロンプト、応答、推論）はAnthropic独自の形式で暗号化されていて、顧客自身も読めず、自動監視だけが読めます。顧客が管理する鍵（CMEK）を無効にすると、約1時間でAnthropicも復号できなくなります。保存期間は最長28日です。検知した場合は「Safety Case」を顧客に送り、そこには入出力そのものは含まれません。顧客は7日以内に調査して回答する必要があり、EFSではAnthropicによる人間のレビューはオフが条件です（[ドキュメント](https://platform.claude.com/docs/en/manage-claude/enterprise-frontier-safeguards/flagged-cases)）。対応は、Claude Platform、Claude Platform on AWS、Amazon Bedrock、Claude on Google Cloudです。Microsoft Foundryは対応予定です。\n\n「保持しない」とは、「Anthropicの設備に置かない」という意味です。Anthropicが復号できるデータは、顧客のバケットに最長28日残ります。バケットへの書き込みが失敗した場合、Claude Platformでは約72時間データを保持してから削除し、24時間の猶予を過ぎるとリクエストを拒否される可能性があります。顧客のバケットへのAnthropicのアクセスは、Claude PlatformではAccess Transparency（アクセス記録）の対象外で、CloudTrailで確認することになります（[ドキュメント](https://platform.claude.com/docs/en/manage-claude/enterprise-frontier-safeguards/customer-owned-storage)）。自社のセキュリティ担当が、従業員の会話記録を読める点も、社内のプライバシーの論点になります。従来のZDRには、複数リクエストにまたがる監視がありませんでした。EFSは「監視が加わる」方向の変化でもあります。対象は企業向けで、「完全に何も残らない」わけではない、という読み方が大切です。\n\n出典：[Claude Ship](https://claude.com/resources/articles/introducing-claude-ship) / [Approvals](https://code.claude.com/docs/en/approvals) / [/ship](https://code.claude.com/docs/en/ship-command) / [EFSの公式記事](https://claude.com/resources/articles/zero-data-retention-with-enterprise-frontier-safeguards) / [ストレージのドキュメント](https://platform.claude.com/docs/en/manage-claude/enterprise-frontier-safeguards/customer-owned-storage) / [Safety Case](https://platform.claude.com/docs/en/manage-claude/enterprise-frontier-safeguards/flagged-cases)",
+    "followUps": []
+  },
+  {
+    "id": "2124856726696710621",
+    "cardId": "r38_201",
+    "datetime": "2026-11-23T22:47:00+09:00",
+    "postedAt": "2026-11-23T22:24:56+09:00",
+    "source": "timeline",
+    "title": "CTFの作問者Yu_212さんが、技術書典21の合同誌に「MT19937で遊ぼう」を寄稿した、と書いていました。",
+    "summary": "筑波大学情報科学類誌WORD編集部の有志。Pythonの random が使うメルセンヌ・ツイスタ。秘密の値には secrets を使うよう、公式ドキュメントにも書かれている。",
+    "tweetId": "2124856726696710621",
+    "tweetIds": [
+      "2124856726696710621",
+      "2123959522440200553"
+    ],
+    "quoteTweetId": "2123959522440200553",
+    "url": "https://x.com/Yu_212_MC/status/2124856726696710621",
+    "author": {
+      "handle": "Yu_212_MC",
+      "name": "Yu"
+    },
+    "via": null,
+    "text": "電子/紙ともにまだオンラインで購入可能なのでぜひ！現地と同価格らしいです\n私が世に出したMT19937の問題は5問あって、すべてこの本を読むことで（その上でめっちゃ頑張ることで）解けるようになるはずです\nたぶん世界で一番MT19937の攻撃手法について詳しく書かれています\n[techbookfest.org/product/h2RYeX…](https://techbookfest.org/product/h2RYeXA262DQW79Je5HKSJ?productVariantID=dsrAmTasms0FgS0CFZ9hkR)",
+    "images": [],
+    "deepDive": "#CTFの作問者Yu_212さんが、技術書典21の合同誌に「MT19937で遊ぼう」を寄稿した、と書いていました。\nタイムラインからです。CTFの作問者である[Yu_212さん](https://x.com/Yu_212_MC/status/2124856726696710621)が、技術書典21の「[卒業文集2026（つくばパソコン倶楽部）](https://techbookfest.org/product/h2RYeXA262DQW79Je5HKSJ?productVariantID=dsrAmTasms0FgS0CFZ9hkR)」に「MT19937で遊ぼう」を寄稿した、と書いていました。筑波大学情報科学類誌WORDの編集部で、2023年度入学の有志による合同誌です。本人は「たぶん世界で一番、MT19937の攻撃手法について詳しく書かれている」としており、自分が作った5問はこの本を読めば（そのうえで頑張れば）解ける、と述べています。問題は[AlpacaHackとDreamhack](https://x.com/Yu_212_MC/status/2124856729007800695)にあります。電子版・紙版とも、いまはオンラインで買えるそうです。紙のセットは、会期終了後の12月24日以降にまとめて発送されます。\n\nMT19937（メルセンヌ・ツイスタ）は、Pythonの `random` などが使う、よく知られた疑似乱数です。セキュリティー用途には向かず、秘密の値には `secrets` を使うよう、[Pythonの公式ドキュメント](https://docs.python.org/3/library/random.html)にも書かれています。同じ本には、「CSSの仕様書を読んでサニタイザのバグを見つけた話」「BPF LoaderをZigで書く」「angrのデコンパイラの仕組み」も入っています。",
+    "followUps": []
+  },
+  {
     "id": "2124839921001316428",
     "cardId": "r38_200",
     "datetime": "2026-11-23T21:49:00+09:00",
@@ -1629,6 +1765,16 @@
           "2105476587756138942",
           "2124629939806945470"
         ]
+      },
+      {
+        "datetime": "2026-11-23T22:47:00+09:00",
+        "clock": "22:47",
+        "title": "",
+        "text": "前にお伝えした、「ZDR（ゼロデータ保持）をうたう推論事業者から、プロンプトが漏れていた」件への、具体的な動きです。VercelがAI Gatewayに、「監査済みZDR（Audited ZDR）」を追加すると発表しました（[公式ブログ](https://vercel.com/blog/introducing-audited-zdr-on-ai-gateway)、[公式の投稿](https://x.com/vercel/status/2124859223783727106)、日本時間11/23 22:34）。CEOのGuillermo Rauchさんは、「本当に信頼できるZDR」と[ひと言添えて](https://x.com/rauchg/status/2124860284863209732)紹介しています。\n\nこれまでのZDRは、契約と自己申告が中心でした。新しい仕組みでは、独立したセキュリティー会社が、事業者のサービング部分のソースコードとインフラ設定を確認したうえで、目印を付けたプロンプトを本番経由（AI Gateway）で流し、ログ、トレース、指標、クラッシュダンプ、プロンプトキャッシュ、不正利用の監視、分析、バックアップ、サポートツール、学習・微調整・評価用データに痕跡が残っていないかを調べます。対象は、プロンプトや応答だけでなく、システムプロンプト、埋め込み、ファイル、画像や音声、ツール呼び出しの中身などです。応答をAI Gatewayに返したあとは、事業者側から消すことも確認します。ZDR指定のリクエストが、レート制限などをきっかけに、非ZDRのエンドポイントへ回されないかも見ます。キャッシュ（KVキャッシュ）を使う場合は、そのリクエストのあいだだけ揮発メモリに置き、ディスクなどの永続的な場所には書かないことが条件です。\n\n合格した事業者は、監査会社の名前で報告書を公開します。範囲、方法、日付、見つかったこと、直したかどうかが入り、例外も開示する、としています。チーム設定をオンにすると、公開済みの監査に合格した事業者だけにルーティングし、切り替え（フェイルオーバー）もその範囲に限ります。最初のパートナーはBaseten、Modal、Waferです。監査は始まっており、報告書は12月8日までに出る予定ですが、いまはまだ公開前です。\n\nあわせて、[カナリア監査](https://vercel.com/changelog/ai-gateway-now-runs-canary-zdr-audits)も始まっています。どこにも存在しない固有のURLを入れたプロンプトを流し、そのURLにアクセスが来たら「誰かがプロンプトを読んだ」と判断する仕組みです。前にお伝えした、おとりの鍵を仕込む発想に近いです。ただし公式も認めているとおり、ディスクに書かれたまま読まれていないデータは見つけられません。監査のあいだの変化を見るための追加の層、という位置づけです。\n\n「規約で約束する」から「第三者が調べて、報告書を公開する」へ一段上がる動きです。ただ、報告書が出るまでは中身を判断できません。中立性が保たれるかは、どの監査会社が担当するか次第だと思います（これは私の見方です）。",
+        "tweetIds": [
+          "2124859223783727106",
+          "2124860284863209732"
+        ]
       }
     ]
   },
@@ -1654,7 +1800,22 @@
     "text": "ほんまかいな。そーかいな。\nLeanが検証するのは、コードに書かれた命題の証明だ。\nAnthropicの数学者Levent Alpögeは、Claudeを使った研究で一般化リーマン予想の証明を得たと主張。公開された証明コードについては、MITの研究者がLeanでの検証通過を報告した。数学界での精査は続いている。\nAIが書いたコードのレビューにも通じる。チェックが通ったら、次に見るのは何をチェックしたか。今回なら、Lean上の定理がどんな仮定を置いているかが気になる。\n検証結果の重みは、コード上の命題が元の予想とどこまで一致するかで決まる。\n\n[alpo.ge/remark.pdf](https://alpo.ge/remark.pdf)",
     "images": [],
     "deepDive": "#Anthropicの数学者が、「Claudeとリーマン予想を証明した」と発表しました。Leanでの検証は、いまのところ通っています。\n[connect24hさんの投稿](https://x.com/connect24h/status/2123975539816013842)で知りました。11/20に、AnthropicのLevent Alpögeさんが、Claudeといっしょに、リーマン予想と、一般化リーマン予想（GRH）の一部を証明したと発表しました。出したのは、4ページのメモと、Leanの証明だけです（[Scientific American](https://www.scientificamerican.com/article/anthropic-mathematician-claims-to-prove-riemann-hypothesis-most-famous-problem-in-all-of-math/)、[The Verge](https://www.theverge.com/ai-artificial-intelligence/1010051/anthropic-riemann-hypothesis-millennium-prize-problem)）。\n- **大きさ：** Leanのファイルが175,187個、約1,740万行あります。人が読める論文はありません。本人も、「読めない『スロップ』を出すのは不適切なので、Leanだけにした」と書いています（[Traictoryのまとめ](https://traictory.com/news/2026-11-21-alpoge-grh-claude-lean-proof)）。\n- **確認の状況：** MITのAndrew Sutherlandさんが、Claude Codeを使って確認しました（[MITの検証のページ](https://math.mit.edu/~drew/grh/)）。すべてのモジュールが、エラーなしでコンパイルでき、5つの主な定理は、標準の3つの公理だけに依存していました。別々に書かれた2つのカーネルも、証明全体を受け入れています。一部の確認は、まだ続いています。「リーマン予想」の定義は、Mathlibにもともとあるものを使っています。なので、こっそり問題を言い換える手口は、使いにくい形です。Scientific Americanは、「ほぼ確実に正しい」という、独立した数学者の見方を伝えています（[記事](https://www.scientificamerican.com/article/the-ai-riemann-hypothesis-proof-is-almost-certainly-true-independent-mathematicians-attest/)）。\n- **残る点：** Kevin Buzzardさんが言うように、まず「Leanに書かれた定理が、本当の定理と同じか」を確かめる必要があります。そして、なぜ成り立つのかを、人が理解するには、時間がかかります。Terence Taoさんも、「消化には時間がかかる」と書いています。\n\n形式検証が、「AIの出力を、人が全部読まなくても信頼する」ための道具として、とても大きな舞台で使われた例です。一方で、「証明は正しいが、誰も中身を理解していない」という状態は、AIの安全性の検証でも、同じことが起きそうです（私の推測です）。",
-    "followUps": []
+    "followUps": [
+      {
+        "datetime": "2026-11-24T07:52:00+09:00",
+        "clock": "07:52",
+        "title": "",
+        "text": "**いいねから：飯塚清太さんが、MetaのAlexandr Wangさんの記事「Superintelligence is Arriving」を和訳して紹介しています。**\n[飯塚清太さんの投稿](https://x.com/IizukaSeita/status/2124773355463340492)（11/23 16:53、日本時間）です。プロフィールは、OrbitSmithを開発中で、元Astroscale、元JAXAです。引用元は、MetaのChief AI OfficerでScale AI創業者の[Wangさん本人の記事](https://x.com/alexandr_wang/status/2124636606959345776)（11/23 07:50、日本時間）で、表示は約1,859万回です。\n\nWangさんの主張は、次の通りです。リーマン予想の証明は「大きな変化の始まり」に見える。AIに残る課題は、もはや知能そのものではなく、分野ごとのノウハウ、実際の仕事へのつなぎ込み、そして実験だ。研究の自動化や、再帰的な自己改良も起こりうる。そのうえで、社会の舵をAIに「引き渡す」ことを当然視してはいけない、としています。「原爆の開発など宿題のようなもの」という強い比喩も、原文にあります。その後の[補足](https://x.com/alexandr_wang/status/2124719968499777546)では、「この道は不可避ではない。リーダーシップがこれまで以上に重要だ」と書いています。競合であるMetaのトップが、Anthropicの成果を超知能到来の根拠にしている点は、立場込みで読んだ方がよいと思います（私の推測です）。\n\nリーマン予想そのもののLean検証は、前にお伝えした通り、いまのところ通っています。その後に出た新しい点です。\n\n[岡野原大輔さん（PFN CEO）](https://x.com/hillbig/status/2124995219213226293)の「1,737万行」は、第三者がミラーを数えた17,374,215行と一致します（[dev.to](https://dev.to/frankchu/grh-proofs-geometry-is-fun-true-in-24-files-2n2b)）。公式の表現は「17 million lines」です。\n\n一方で、証明の中に `def anyGeometry : GeoP := fun _ _ _ => True` がある、という指摘が出ています。[fanofaliensさん](https://x.com/fanofaliens/status/2124406397064679428)（11/22 16:35、日本時間）が最初に広く知らせたもので、実際に24ファイルに出てきます。出どころは、NielsenさんがPhilArchiveに出した、査読なしの「無効だ」とする論文です。その後、コンパイル済みの証明について依存関係を追った検証が出ています（[sounkou-bioinfo](https://github.com/sounkou-bioinfo/rh-claude-alpoge-graphs)）。結論のグラフには入っているが、幾何の条件の中身を読むステップはなく、仮定の束を組み立てる穴埋めで、非零を導く段階はこれに依存していない、という解釈です。ただしこの検証は、作者自身が「AIエージェントによる探索で、分析に使ったモデルは証明を書いた系と同じ系統なので、結果はデータと照合してほしい」と注記しています。公式の確定見解ではありません。\n\n理屈のうえでは、前提を「常にTrue」にすると前提が弱まるだけで、`sorry` や独自の公理のように、偽の定理を通す手段にはなりません。最終的な主張がMathlibの定義と一致することも、複数のチェッカーで確認済みです。いま妥当な読みは、「名前が誤解を招く」問題であって、正しさを覆す材料にはまだなっていない、というところです。Lean側から、この `anyGeometry` への公式な反応は見つけていません。[connect24hさんの「幻想だったのか」](https://x.com/connect24h/status/2124882045499535522)は、言い過ぎだと思います。\n\n[Nature](https://www.nature.com/articles/d41586-026-03812-7)では、Maynardさんが「完全に確認されれば歴史的」、Granvilleさんが公開されたメモを「混乱している（garbled）」と評しています。人が読める論文は、まだありません。\n\n形式検証は、「主張が正しく定式化されているか」と「カーネルが通すか」は確かめます。途中の定義が、名前どおりの意味を持つかまでは保証しません。AIが書いたコードのレビューでも、テストやCIが通っても、意味の確認は別に要る、という教訓になります。\n\n出典：[Wangさんの原文](https://x.com/alexandr_wang/status/2124636606959345776) / [Leanの共同声明](https://leanprover-community.github.io/blog/posts/riemann-hypothesis/) / [MITの検証](https://math.mit.edu/~drew/grh/) / [依存関係の検証](https://github.com/sounkou-bioinfo/rh-claude-alpoge-graphs) / [dev.to](https://dev.to/frankchu/grh-proofs-geometry-is-fun-true-in-24-files-2n2b) / [Nature](https://www.nature.com/articles/d41586-026-03812-7)",
+        "tweetIds": [
+          "2124773355463340492",
+          "2124636606959345776",
+          "2124719968499777546",
+          "2124995219213226293",
+          "2124406397064679428",
+          "2124882045499535522"
+        ]
+      }
+    ]
   },
   {
     "id": "2123956401022378140",

@@ -1,4 +1,60 @@
 id,datetime,source,author,url,text,summary
+2125007927098699827,2026-11-24T08:50:00+09:00,timeline,OpenAI,https://x.com/OpenAI/status/2125007927098699827,"In one run, GPT-6 Cyber helped us validate 948 Linux kernel bugs that could grant local root access and generate patches for review.
+
+Our researchers @clintgibler and @ky1ebot share their findings and how they worked with maintainers to get fixes upstream.
+
+Read the research: [openai.com/index/a-thousa…](http://openai.com/index/a-thousand-fewer-paths-to-root/)",GPT-6 Cyber。11/4の研究記事の再告知。API費用は約121万ドル。発見から悪用までの平均は7日に縮んだ、という指摘もある。既存の Shirudo r38_202 とは別件。
+2125002300074975266,2026-11-24T08:50:00+09:00,timeline,hillbig,https://x.com/hillbig/status/2125002300074975266,"機械学習の汎化とデータ圧縮を結びつける標本圧縮予想は、統計的学習理論における約30年来の未解決問題であるが、その解決に向けて大きな進展があった。
+
+“Near-Quadratic Sample Compression for All VC Classes”
+
+今回の証明は、AIマルチエージェントシステムによって自律的に発見されたと報告されており、人間の著者は証明の簡素化や説明の改善などを行っている。
+
+標本圧縮問題とは、VC次元がdの二値分類器のクラスを考え、任意の大きさmの学習データが与えられたとき、その中から少数のサンプルだけを選び、元の学習データすべてに正しく答える分類器を再構成できるか、また、そのために何個のサンプルが必要かという問題である。
+
+特に、圧縮後のサンプル数を、元の学習データ数mに依存せず、VC次元dのみによって抑えられるかが重要な問題となる。
+
+例えば、100万個の学習データの中からごく少数のデータだけを残し、それらと少量の補助情報だけを見た別の人が、元の100万個すべてに正しく答える分類器を復元できるか、という問題である。
+
+1990年代には、Freundらによって O(d log m) 個のサンプルによる圧縮が示され、2016年には m に依存しない  2^{O(d)} 個まで改善された。しかし、VC次元 d に対して指数関数的な上界にとどまっていた。
+
+今回の研究では、O(d^2 log^2d) 個のサンプルと O(d log^2d) ビットの補助情報から、元の学習データすべてに一致する分類器を再構成できることが証明された。
+
+これにより、VC次元に対して多項式サイズの標本圧縮が常に可能であることが示された。ただし、元の標本圧縮予想であるO(d) 個での圧縮が可能かどうかは、依然として未解決である。
+
+今回の証明では、分類器を直接サンプリングして多数決を構成する代わりに、少数の入力点に対する応答によって分類器集合を分割し、各グループの代表分類器を暗黙的に符号化する。これにより、双対クラスのVC次元への指数関数的な依存を回避している。
+
+さらに、ゲーム理論的なミニマックスの議論とエントロピーを組み合わせ、代表分類器の集合が不十分な場合には、入力点を追加することで分類器集合の分割に関するエントロピーを増加させられることを示す。エントロピーにはVC次元によって定まる上限があるため、必要な入力点の総数を抑えることができる。
+
+コメント
+===
+標本圧縮予想は、少ないデータから汎化できるという統計的な性質と、大量のデータを少数の代表例に圧縮できるという情報的な性質が、本質的に同じものなのかという問題に関わっている。
+
+圧縮サイズが小さいほど汎化誤差の上界も小さくなるため、圧縮可能性から汎化保証を導くことができる。
+
+標本圧縮予想は、その逆方向、すなわち、学習可能な問題には必ず少数の代表例による説明が存在すると予想している。
+
+今回の結果は、有限のVC次元を持つ任意の二値分類器クラスについて、VC次元の多項式個のサンプルで圧縮が可能であることを示した。ただし、元の予想であるVC次元に比例するO(d) 個での圧縮が可能かどうかは、依然として未解決である。
+
+なお、今回の結果は圧縮可能性に関する存在定理であり、計算効率のよい圧縮・復元アルゴリズムが得られたわけではない。
+
+一方、今回の証明では、ラベル付きサンプルが O(d＼log d) 個で済むことも特徴である。残りの入力点はラベルなしで、分類器集合を区別するために使われる。
+
+つまり、分類の正解を伝えるラベル情報と、仮説空間の構造を記述する情報が分離されていると捉えることができる。
+
+この考え方を発展させ、学習に必要な情報をラベル情報と仮説空間の構造情報に分離することで、より効率的な学習・圧縮手法を構築できないだろうか。",GoogleのCogenticとGemini 4 Carbon。O(d² log² d)まで改善。元の予想 O(d) は未解決。論文にLeanなどの形式検証の記載はない。形式検証の方へ議論が進みそうだ、というのが私の見方です。既存のリーマン予想 Lean 検証 r38_139 とは別件。
+2124980590717911527,2026-11-24T07:52:00+09:00,timeline,OpenAI,https://x.com/OpenAI/status/2124980590717911527,"We’re introducing Shirudo, an open-source Linux runtime allowing agents to defend systems without downtime. It lets agents write dynamic eBPF controls to shield systems from exploits, giving defenders more time to test and roll out patches. Built by @cisco together with OpenAI.
+
+Shirudo is a first step toward self-defending infrastructure that can adapt to new threats while keeping services running. Our goal is for defenders to work with AI agents to find affected systems, test and share shields, and deploy them without disrupting workloads.
+
+[openai.com/index/introduc…](https://openai.com/index/introducing-shirudo/)",エージェントがeBPFで暫定の防御を書き、再起動なしで脆弱な経路だけを止める。BSD-2、まだpre-release。誤ったシールドは可用性の事故になりえる（私の推測です）。
+2124959436640858475,2026-11-24T07:52:00+09:00,timeline,ClaudeDevs,https://x.com/ClaudeDevs/status/2124959436640858475,"Introducing Claude Ship (beta): Claude can review your pull requests, work on fixes, and approve the ones your team's policy allows.
+
+The goal is to help you ship code as fast as you can write it.",Code Review、PR Steward、Approvalsの3部品。ZDR/HIPAA/CMEK環境では使えない。同じ朝にZDRと悪用検知を両立するEFSも公開ベータ。既存の確かめ方ブログ r38_164 や ZDR 実験 r38_137 とは別件。
+2124856726696710621,2026-11-23T22:47:00+09:00,timeline,Yu_212_MC,https://x.com/Yu_212_MC/status/2124856726696710621,"電子/紙ともにまだオンラインで購入可能なのでぜひ！現地と同価格らしいです
+私が世に出したMT19937の問題は5問あって、すべてこの本を読むことで（その上でめっちゃ頑張ることで）解けるようになるはずです
+たぶん世界で一番MT19937の攻撃手法について詳しく書かれています
+[techbookfest.org/product/h2RYeX…](https://techbookfest.org/product/h2RYeXA262DQW79Je5HKSJ?productVariantID=dsrAmTasms0FgS0CFZ9hkR)",筑波大学情報科学類誌WORD編集部の有志。Pythonの random が使うメルセンヌ・ツイスタ。秘密の値には secrets を使うよう、公式ドキュメントにも書かれている。
 2124839921001316428,2026-11-23T21:49:00+09:00,timeline,GithubProjects,https://x.com/GithubProjects/status/2124839921001316428,"A personal AI assistant that runs entirely on your own Mac or PC, no cloud.
 
 Linger remembers your mail, chats and meetings and messages you only when something needs you.","Apache 2.0ベース（追加条件あり）。独自推論エンジン PolyStrata。記憶は手元に残るが、エージェントはサンドボックスではなくそのパソコンの権限で動く。配信時点のスターは4,085。"
