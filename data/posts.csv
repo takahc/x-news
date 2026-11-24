@@ -1,4 +1,60 @@
 id,datetime,source,author,url,text,summary
+2125065386555293722,2026-11-24T12:53:00+09:00,timeline,GithubProjects,https://x.com/GithubProjects/status/2125065386555293722,"OpenComputer is an open-source coding agent that takes tasks in a Slack thread and opens a pull request, on its own computer.",diggerhq/opencomputer、Apache 2.0。「Devinより3.3倍速い」は単純な作業の自社比較なので、そのまま信じるより自分の作業で測った方が安全です（私の見方です）。
+2125062233462047004,2026-11-24T12:53:00+09:00,timeline,raykataoka,https://x.com/raykataoka/status/2125062233462047004,"Leanで数学の証明を確かめる話が続いています。以前から形式検証には着目していました。ゆめみでも、アプリケーション開発向けの形式仕様言語FSLを作っています。生成AIが仕様を書いて、検証して、直すためのAIネイティブな形式言語です。
+[github.com/ymm-oss/fsl](https://github.com/ymm-oss/fsl)",ymm-oss/fsl。Rust製の検証器がZ3を同梱。READMEのおすすめは curl | bash 型なので、中身を確認してから実行する方が無難です（私の見方です）。
+2125046221631086970,2026-11-24T12:53:00+09:00,timeline,SakanaAILabs,https://x.com/SakanaAILabs/status/2125046221631086970,"Introducing the Sakana AI Applied Research Lab
+
+Blog: [sakana.ai/applied-resear…](https://sakana.ai/applied-research-lab/)
+
+Today, we are announcing the Sakana AI Applied Research Lab: a research group in Tokyo that applies our research to complex real-world systems, starting with finance and economics. Agentic AI can now build and test models of such systems at scale, but knowing which questions matter still takes human expertise. The Lab will combine the two, building on our work such as EDINET-Bench, CoffeeBench, Shachi and CEDAR.
+
+⎯⎯⎯
+
+Sakana AI、Applied Research Labを設立
+
+ブログ：[sakana.ai/applied-resear…](https://sakana.ai/applied-research-lab/#Japanese)
+
+本日、Sakana AIは新しい研究グループ「Applied Research Lab」の設立を発表します。当社の研究を実世界の複雑なシステムに応用するグループで、まずは金融・経済分野から取り組みます。
+
+エージェント型AIは、こうしたシステムのモデルを大規模に構築・検証できるようになりましたが、どの問いが重要かを見極めるには人間の専門知識が欠かせません。Applied Research Labはこの2つを組み合わせ、EDINET-Bench、CoffeeBench、Shachi、CEDARなどのこれまでの研究を土台に進めていきます。",最初のプログラムはCOFE。EDINET-Bench、CoffeeBench、ShachiとCEDARが土台。エージェントにお金や財務の判断をどこまで任せられるかを測る取り組みです（私の見方です）。既存のSecurity Research Group r38_159 とは別件。
+2125026709317754882,2026-11-24T12:53:00+09:00,likes,newmohq,https://x.com/newmohq/status/2125026709317754882,"【運転経験を、自動運転タクシーの未来につなげる仕事】
+
+タクシー事業者であるnewmoでは、自動運転タクシーの実現に向けて、東京でデータ収集ドライバーを募集しています。
+指定されたルートを安全に走り、走行状況の記録や車両の点検・報告を行う仕事です。
+日々の運転で得た情報を、エンジニアとともに自動運転の開発につなげます。
+
+普通自動車免許と日常的な運転経験をお持ちで、自動運転の開発に興味がある方は、ぜひご覧ください！
+
+東京・大田区／契約社員　（月給35万〜42万円）
+[herp.careers/v1/newmo/H204j…](https://herp.careers/v1/newmo/H204jYrDCAg5)",勤務地は大田区平和島。2028年に限られたエリアでレベル4の商用化が目標。人が運転してデータを集める作業に支えられていることがよく分かる求人です（私の見方です）。
+2125008806249930999,2026-11-24T12:53:00+09:00,likes,UberEng,https://x.com/UberEng/status/2125008806249930999,[x.com/i/article/2120…](https://x.com/i/article/2120222611070500864),自作CLI「aifx」で、違うエージェントでも同じスキルを使える。スキルの配布経路がサプライチェーン攻撃の入口になりうるので、そこを塞ぐ実例として参考になります（私の見方です）。
+2124971275974017387,2026-11-24T12:53:00+09:00,likes,GHchangelog,https://x.com/GHchangelog/status/2124971275974017387,"Issues now support detailed statuses beyond open or closed, helping teams see precise progress and next steps.
+• Statuses update automatically based on PR links & assignments
+
+[github.blog/changelog/2026…](https://github.blog/changelog/2026-11-23-issue-statuses-and-repository-boards-are-in-public-preview)",パブリックプレビュー。open / closed に加え Backlog や Todo などが使える。REST、GraphQL、MCPから読み書きでき、リポジトリ単位のボード表示もある。
+2124902564256964999,2026-11-24T12:53:00+09:00,likes,burkeholland,https://x.com/burkeholland/status/2124902564256964999,"MAI Code 2 delivers 96% of the performance of Opus 5.5 at only 5% of the cost.
+
+Crazy. Using MAI Code 2 exclusively this week. Will report back.
+
+[microsoft.ai/models/mai-cod…](https://microsoft.ai/models/mai-code-2/)",4つのベンチマーク平均。GitHubの価格は100万トークンあたり入力0.50ドル、出力2.50ドルで、2027年5月17日から値上げ。Copilot Pro以上とCopilot CLIで使える。
+2124826663850750190,2026-11-24T12:53:00+09:00,likes,oga_aiichiro,https://x.com/oga_aiichiro/status/2124826663850750190,"あのimozuruで有名な いる科ちゃんとyomiyasuがコラボし、最強のスキルが生まれました！
+
+文章構成はtsuzuri、推敲はyomiyasuで 上流から下流まで全面的にカバーします！試してみてねー！٩( ๑^ ꇴ^)۶
+
+導入にはyomiyasuが入っていることが前提です！",いる科さんの1.0.0。意図→本文→文の役割の順に書き、yomiyasuでの推敲と、前提を知らない別のAIによる通読がある。npxで導入できる。
+2124686904004432242,2026-11-24T12:53:00+09:00,likes,662607015_i_s_t,https://x.com/662607015_i_s_t/status/2124686904004432242,"リアルタイムTeXプレビュー
+↑
+ガチの謎技術なので見るべき",TeXConf 2026の発表。行はTeXに組ませ、ページは自前のページビルダで組み直す。この機能はAI搭載のLaTeXエディターTeX64に入っている。
+2125029185379008573,2026-11-24T10:53:00+09:00,timeline,poteto,https://x.com/poteto/status/2125029185379008573,"you can only prompt what you can imagine
+
+try the new /reframe skill in pstack - for when you know what you want but are struggling to communicate it. works great with /sharpen!
+
+[x.ai/bot/plugin/971…](https://x.ai/bot/plugin/9717366)",専門の言葉を8〜12個、影響の大きい順に教えて説明を書き直す。自分で呼んだときだけ動く。既存のpstack更新 r38_161 とは別件。
+2125017412735263192,2026-11-24T09:50:00+09:00,timeline,karaage0703,https://x.com/karaage0703/status/2125017412735263192,メモ > Docker Sandboxes（sbx）でClaude Codeを権限確認なしでも「より安全に」動かしてみる - uepon日々の備忘録 [uepon.hatenadiary.com/entry/2026/11/…](https://uepon.hatenadiary.com/entry/2026/11/24/005848) #セキュリティ,Dockerの単体CLIで、エージェントを使い捨てのmicroVMに閉じ込める。完全に安全ではなく、成果物はホストで動かす前にレビューした方がよい、というのが記事の結論。
+2124931606054101489,2026-11-24T09:50:00+09:00,likes,github,https://x.com/github/status/2124931606054101489,"GitHub now recognizes ACCESSIBILITY.md files on repo overview pages. Now your project can document its accessibility goals and expectations.
+
+Here's the guidance so you can get started ⬇️
+[github.blog/open-source/ma…](https://github.blog/open-source/maintainers/accessibility-statements-now-have-a-home-on-github/)",リポジトリのトップページに出るコミュニティヘルスファイル。ブログの日付は11/5で、今回の投稿は改めての周知だと思います（私の推測です）。
 2125007927098699827,2026-11-24T08:50:00+09:00,timeline,OpenAI,https://x.com/OpenAI/status/2125007927098699827,"In one run, GPT-6 Cyber helped us validate 948 Linux kernel bugs that could grant local root access and generate patches for review.
 
 Our researchers @clintgibler and @ky1ebot share their findings and how they worked with maintainers to get fixes upstream.

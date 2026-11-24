@@ -1,5 +1,315 @@
 [
   {
+    "id": "2125065386555293722",
+    "cardId": "r38_215",
+    "datetime": "2026-11-24T12:53:00+09:00",
+    "postedAt": "2026-11-24T12:14:04+09:00",
+    "source": "timeline",
+    "title": "Slackで頼むとPRまで作る、オープンソースのAIエージェント「OpenComputer」です。権限をどこまで渡すかを考える材料になります。",
+    "summary": "diggerhq/opencomputer、Apache 2.0。「Devinより3.3倍速い」は単純な作業の自社比較なので、そのまま信じるより自分の作業で測った方が安全です（私の見方です）。",
+    "tweetId": "2125065386555293722",
+    "tweetIds": [
+      "2125065386555293722"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/GithubProjects/status/2125065386555293722",
+    "author": {
+      "handle": "GithubProjects",
+      "name": "GitHub Projects Community"
+    },
+    "via": null,
+    "text": "OpenComputer is an open-source coding agent that takes tasks in a Slack thread and opens a pull request, on its own computer.",
+    "images": [
+      {
+        "type": "video_preview",
+        "url": "https://pbs.twimg.com/amplify_video_thumb/2125065370067492864/img/Njn6rFncTpPrJ2qi.jpg"
+      }
+    ],
+    "deepDive": "#Slackで頼むとPRまで作る、オープンソースのAIエージェント「OpenComputer」です。権限をどこまで渡すかを考える材料になります。\n**タイムラインから：Slackで頼むとPRまで作る、オープンソースのAIエージェント「OpenComputer」です。権限をどこまで渡すかを考える材料になります。**\n[GitHub Projects Communityさんの投稿](https://x.com/GithubProjects/status/2125065386555293722)（11/24 12:14、日本時間）です。プロフィールに「UNOFFICIAL」とあり、GitHubの公式アカウントではありません。紹介されたのは [diggerhq/opencomputer](https://github.com/diggerhq/opencomputer) で、ライセンスは Apache 2.0、確認時点のスターは1,693でした。READMEでは「オープンソースでセルフホストできるDevinの代わり」と説明しています。Slackのスレッドで `@Computer` に頼むと、専用の環境で作業し、途中で指示を足せて、最後はPRとして届きます。\n\nしくみは、VM 1台で「Calvin」というゲートウェイが動き、スレッドごとに Claude Code、Codex、OpenCode のどれかのセッションを立ち上げます。各セッションは rootless の Podman で分けます。VMは外向きの通信だけに絞る運用がすすめられていて、Slackとの中継には Cloudflare Workers / Durable Objects を使います。権限は[公式ドキュメント](https://docs.opencomputer.dev/agents/examples/slack-coder)にあり、エージェントが触れる範囲は GitHub App で選んだリポジトリだけです。指示文には「マージはしない」「認証情報を表示しない、ファイルやGitのURLに書かない」が入っています。一方で、「botにメッセージできる人なら誰でも、そのリポジトリを触らせられる」とも書かれています。\n\n「Devinより3.3倍速い」は[自社の比較](https://opencomputer.dev/blog/cloud-agents-as-fast-as-local/)（10/30）から来ています。中身は「4つのリポジトリで zod を上げてPRを出す」という単純な作業で、中央値は OpenComputer が56秒、Devin が185秒です。同じ表では、OpenComputerの完了は6回中5回です。速さの数字は、そのまま信じるより、自分の作業で測った方が安全です（私の見方です）。",
+    "followUps": []
+  },
+  {
+    "id": "2125062233462047004",
+    "cardId": "r38_216",
+    "datetime": "2026-11-24T12:53:00+09:00",
+    "postedAt": "2026-11-24T12:01:32+09:00",
+    "source": "timeline",
+    "title": "ゆめみ発の形式仕様言語「FSL」です。AIが仕様を書き、検証して直すための道具です。",
+    "summary": "ymm-oss/fsl。Rust製の検証器がZ3を同梱。READMEのおすすめは curl | bash 型なので、中身を確認してから実行する方が無難です（私の見方です）。",
+    "tweetId": "2125062233462047004",
+    "tweetIds": [
+      "2125062233462047004"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/raykataoka/status/2125062233462047004",
+    "author": {
+      "handle": "raykataoka",
+      "name": "片岡（れいっち）＠YUMEMI代表"
+    },
+    "via": null,
+    "text": "Leanで数学の証明を確かめる話が続いています。以前から形式検証には着目していました。ゆめみでも、アプリケーション開発向けの形式仕様言語FSLを作っています。生成AIが仕様を書いて、検証して、直すためのAIネイティブな形式言語です。\n[github.com/ymm-oss/fsl](https://github.com/ymm-oss/fsl)",
+    "images": [],
+    "deepDive": "#ゆめみ発の形式仕様言語「FSL」です。AIが仕様を書き、検証して直すための道具です。\n**タイムラインから：ゆめみ発の形式仕様言語「FSL」です。AIが仕様を書き、検証して直すための道具です。**\n[片岡（れいっち）さんの投稿](https://x.com/raykataoka/status/2125062233462047004)（11/24 12:01、日本時間）です。[ymm-oss/fsl](https://github.com/ymm-oss/fsl) は、生成AIが書いて検証し、直すことを第一の目的にした、アプリ開発向けの形式仕様言語です。検証器の `fslc` は Rust 製で、Z3（SMTソルバー）を同梱しています。有界モデル検査（BMC）と、k-induction による深さ無制限の証明ができます。結果は必ずJSONで返るので、LLMが読んで直しやすい作りです。仕様は「業務（consulting）／要件（requirements）／設計（design）」の3層で書け、詳細化（refinement）でつながっているので、要件のIDが診断結果までたどれます。SLAのような非機能要件も扱え、仕様から結合テストのひな形を作る `fslc testgen` もあります。インストールすると Claude Code 用のスキルも入ります。ライセンスは Apache 2.0 で、リポジトリは2026年6月16日（日本時間）に作られ、確認時点のスターは41でした。READMEのおすすめは `curl | bash` 型なので、中身を確認してから実行するか、同じページにある mise や単体の実行ファイルの入れ方を使う方が無難です（私の見方です）。",
+    "followUps": []
+  },
+  {
+    "id": "2125046221631086970",
+    "cardId": "r38_217",
+    "datetime": "2026-11-24T12:53:00+09:00",
+    "postedAt": "2026-11-24T10:57:55+09:00",
+    "source": "timeline",
+    "title": "Sakana AIが東京に「Applied Research Lab」を設立し、最初のテーマは金融・経済です。",
+    "summary": "最初のプログラムはCOFE。EDINET-Bench、CoffeeBench、ShachiとCEDARが土台。エージェントにお金や財務の判断をどこまで任せられるかを測る取り組みです（私の見方です）。既存のSecurity Research Group r38_159 とは別件。",
+    "tweetId": "2125046221631086970",
+    "tweetIds": [
+      "2125046221631086970"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/SakanaAILabs/status/2125046221631086970",
+    "author": {
+      "handle": "SakanaAILabs",
+      "name": "Sakana AI"
+    },
+    "via": null,
+    "text": "Introducing the Sakana AI Applied Research Lab\n\nBlog: [sakana.ai/applied-resear…](https://sakana.ai/applied-research-lab/)\n\nToday, we are announcing the Sakana AI Applied Research Lab: a research group in Tokyo that applies our research to complex real-world systems, starting with finance and economics. Agentic AI can now build and test models of such systems at scale, but knowing which questions matter still takes human expertise. The Lab will combine the two, building on our work such as EDINET-Bench, CoffeeBench, Shachi and CEDAR.\n\n⎯⎯⎯\n\nSakana AI、Applied Research Labを設立\n\nブログ：[sakana.ai/applied-resear…](https://sakana.ai/applied-research-lab/#Japanese)\n\n本日、Sakana AIは新しい研究グループ「Applied Research Lab」の設立を発表します。当社の研究を実世界の複雑なシステムに応用するグループで、まずは金融・経済分野から取り組みます。\n\nエージェント型AIは、こうしたシステムのモデルを大規模に構築・検証できるようになりましたが、どの問いが重要かを見極めるには人間の専門知識が欠かせません。Applied Research Labはこの2つを組み合わせ、EDINET-Bench、CoffeeBench、Shachi、CEDARなどのこれまでの研究を土台に進めていきます。",
+    "images": [
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HX2uRGmaEAA6-ni.png"
+      }
+    ],
+    "deepDive": "#Sakana AIが東京に「Applied Research Lab」を設立し、最初のテーマは金融・経済です。\n**タイムラインから：Sakana AIが東京に「Applied Research Lab」を設立し、最初のテーマは金融・経済です。**\n[Sakana AIさんの投稿](https://x.com/SakanaAILabs/status/2125046221631086970)（11/24 10:57、日本時間）と[公式ブログ](https://sakana.ai/applied-research-lab/)（11/24）によるものです。最初のプログラムは「Computational Finance and Economics（COFE）」で、市場の価格と、その背後にある実体経済の両方を研究します。方針は、エージェント型AIはモデルを大規模に実装・検証・改良できる一方、「どの問いが重要か」を見極めるのはまだ苦手なので、人間の専門知識と組み合わせる、というものです。土台として、有価証券報告書10年分を使う EDINET-Bench（ICLR 2026。会計不正の検知や業績予測では、最先端のLLMでもロジスティック回帰をわずかに上回る程度）、あずさ監査法人と共同の CoffeeBench（NeurIPS 2026。LLMエージェントが90日間、黒字で事業を回せるかを試す）、Shachi と CEDAR（ALIFE 2026。エージェントベースのシミュレーション）が挙がっています。募集は少人数の学際チームで、今の入口は MTS インターンか Visiting Researcher です。投資家や企業などのパートナーも募っています。エージェントにお金や財務の判断をどこまで任せられるかを、研究として測る取り組みです（私の見方です）。",
+    "followUps": []
+  },
+  {
+    "id": "2125026709317754882",
+    "cardId": "r38_214",
+    "datetime": "2026-11-24T12:53:00+09:00",
+    "postedAt": "2026-11-24T09:40:23+09:00",
+    "source": "likes",
+    "title": "newmoが東京で、自動運転のデータ収集ドライバーを募集しています。月給は35万〜42万円です。",
+    "summary": "勤務地は大田区平和島。2028年に限られたエリアでレベル4の商用化が目標。人が運転してデータを集める作業に支えられていることがよく分かる求人です（私の見方です）。",
+    "tweetId": "2125026709317754882",
+    "tweetIds": [
+      "2125026709317754882"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/newmohq/status/2125026709317754882",
+    "author": {
+      "handle": "newmohq",
+      "name": "newmo タクシー&自動運転で地域をカラフルに"
+    },
+    "via": null,
+    "text": "【運転経験を、自動運転タクシーの未来につなげる仕事】\n\nタクシー事業者であるnewmoでは、自動運転タクシーの実現に向けて、東京でデータ収集ドライバーを募集しています。\n指定されたルートを安全に走り、走行状況の記録や車両の点検・報告を行う仕事です。\n日々の運転で得た情報を、エンジニアとともに自動運転の開発につなげます。\n\n普通自動車免許と日常的な運転経験をお持ちで、自動運転の開発に興味がある方は、ぜひご覧ください！\n\n東京・大田区／契約社員　（月給35万〜42万円）\n[herp.careers/v1/newmo/H204j…](https://herp.careers/v1/newmo/H204jYrDCAg5)",
+    "images": [
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HX2ch0pa4AAD0et.jpg"
+      }
+    ],
+    "deepDive": "#newmoが東京で、自動運転のデータ収集ドライバーを募集しています。月給は35万〜42万円です。\n**いいねから：newmoが東京で、自動運転のデータ収集ドライバーを募集しています。月給は35万〜42万円です。**\n[newmoさんの投稿](https://x.com/newmohq/status/2125026709317754882)（11/24 9:40、日本時間）です。[募集ページ](https://herp.careers/v1/newmo/H204jYrDCAg5)によると、勤務地は大田区平和島です。6か月更新の契約社員で、9時から21時のあいだのシフト制です。仕事は、決められたルートを走ってデータを集めることと、走行前後の点検、記録、報告です。異常があれば、自分で判断せずに報告することが求められています。会社の目標は、2028年に限られたエリアでレベル4の商用化をすることです。シリーズBのファーストクローズで208億円の調達に向けた契約を結び、払込が完了すれば累計調達は407億円になる予定、と書いてあります。End-to-Endの自動運転AIが、人が運転してデータを集める作業に支えられていることがよく分かる求人です（私の見方です）。",
+    "followUps": []
+  },
+  {
+    "id": "2125008806249930999",
+    "cardId": "r38_209",
+    "datetime": "2026-11-24T12:53:00+09:00",
+    "postedAt": "2026-11-24T08:29:14+09:00",
+    "source": "likes",
+    "title": "Uberの社内スキルが1年で5,000個を超え、1か月の実行は100万回を超えた、という運用の話です。",
+    "summary": "自作CLI「aifx」で、違うエージェントでも同じスキルを使える。スキルの配布経路がサプライチェーン攻撃の入口になりうるので、そこを塞ぐ実例として参考になります（私の見方です）。",
+    "tweetId": "2125008806249930999",
+    "tweetIds": [
+      "2125008806249930999"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/UberEng/status/2125008806249930999",
+    "author": {
+      "handle": "UberEng",
+      "name": "Uber Engineering"
+    },
+    "via": null,
+    "text": "[x.com/i/article/2120…](https://x.com/i/article/2120222611070500864)",
+    "images": [],
+    "deepDive": "#Uberの社内スキルが1年で5,000個を超え、1か月の実行は100万回を超えた、という運用の話です。\n**いいねから：Uberの社内スキルが1年で5,000個を超え、1か月の実行は100万回を超えた、という運用の話です。**\n[Uber Engineeringさんの投稿](https://x.com/UberEng/status/2125008806249930999)（11/24 8:29、日本時間）と、同じ内容の[ブログ](https://www.uber.com/us/en/blog/optimizing-ubers-agent-skills/)（11/23）によるものです。自作のCLI「aifx」で、Claude Code、Codex、OpenCodeなど、違うエージェントでも同じスキルを使えるようにしています。スキルは Domain、Core、Always-on（約100個）の3段階に分けて管理しています。\n\n評価セットの目安は、決まった入出力の golden が5%、実際のプロンプトでの軌跡評価が80%、作者による判定が15%です。「100%通る評価は、意味のある変化を見逃しているかもしれない」とも書いてあります。コストでは、MCPを100個以上入れると、ツールの定義だけで5万〜7万トークンを使っていたそうです。そこでCloudflareの Code Mode にならい、決まった手順はスクリプトに移しました。倉庫の問い合わせスキルでは、スキルが無い場合に比べてツールのエラーが6倍だった、とのことです。\n\nセキュリティ面では、スキルやプラグインに含まれる `.mcp.json` をブロックしています。利用の記録には、プロンプト本文やファイルの中身を入れていません。エージェントが不具合を自分で報告する「papercut」は、3か月で数千件集まりました。スキルの配布経路が、サプライチェーン攻撃の入口になりうるので、そこを塞ぐ実例として参考になります（私の見方です）。",
+    "followUps": []
+  },
+  {
+    "id": "2124971275974017387",
+    "cardId": "r38_211",
+    "datetime": "2026-11-24T12:53:00+09:00",
+    "postedAt": "2026-11-24T06:00:06+09:00",
+    "source": "likes",
+    "title": "GitHub Issuesに、細かいステータスが追加されました。エージェントをアサインすると、自動で「In progress」になります。",
+    "summary": "パブリックプレビュー。open / closed に加え Backlog や Todo などが使える。REST、GraphQL、MCPから読み書きでき、リポジトリ単位のボード表示もある。",
+    "tweetId": "2124971275974017387",
+    "tweetIds": [
+      "2124971275974017387"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/GHchangelog/status/2124971275974017387",
+    "author": {
+      "handle": "GHchangelog",
+      "name": "GitHub Changelog"
+    },
+    "via": null,
+    "text": "Issues now support detailed statuses beyond open or closed, helping teams see precise progress and next steps.\n• Statuses update automatically based on PR links & assignments\n\n[github.blog/changelog/2026…](https://github.blog/changelog/2026-11-23-issue-statuses-and-repository-boards-are-in-public-preview)",
+    "images": [],
+    "deepDive": "#GitHub Issuesに、細かいステータスが追加されました。エージェントをアサインすると、自動で「In progress」になります。\n**いいねから：GitHub Issuesに、細かいステータスが追加されました。エージェントをアサインすると、自動で「In progress」になります。**\n[GitHub Changelogの投稿](https://x.com/GHchangelog/status/2124971275974017387)（11/24 6:00、日本時間）です。[公式Changelog](https://github.blog/changelog/2026-11-23-issue-statuses-and-repository-boards-are-in-public-preview)によると、パブリックプレビューです。open / closed に加えて、Backlog、Todo、In progress、In review、Done、Not planned、Duplicate が使えます。ドラフトのPRを紐付けると In progress、レビュー可能になると In review、人をアサインすると Todo、エージェントをアサインすると In progress になります。REST、GraphQL、MCPサーバーからステータスを読み書きでき、Copilotのオートメーションのきっかけにもなります。リポジトリ単位のボード表示も加わりました。",
+    "followUps": []
+  },
+  {
+    "id": "2124902564256964999",
+    "cardId": "r38_210",
+    "datetime": "2026-11-24T12:53:00+09:00",
+    "postedAt": "2026-11-24T01:27:04+09:00",
+    "source": "likes",
+    "title": "MAI Code 2は「Opus 5.5の96%の性能を5%のコストで」と書かれています。ただし、これはキャンペーン価格での比較です。",
+    "summary": "4つのベンチマーク平均。GitHubの価格は100万トークンあたり入力0.50ドル、出力2.50ドルで、2027年5月17日から値上げ。Copilot Pro以上とCopilot CLIで使える。",
+    "tweetId": "2124902564256964999",
+    "tweetIds": [
+      "2124902564256964999"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/burkeholland/status/2124902564256964999",
+    "author": {
+      "handle": "burkeholland",
+      "name": "Burke Holland"
+    },
+    "via": null,
+    "text": "MAI Code 2 delivers 96% of the performance of Opus 5.5 at only 5% of the cost.\n\nCrazy. Using MAI Code 2 exclusively this week. Will report back.\n\n[microsoft.ai/models/mai-cod…](https://microsoft.ai/models/mai-code-2/)",
+    "images": [
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HX0rfMxWAAAnzHQ.jpg"
+      }
+    ],
+    "deepDive": "#MAI Code 2は「Opus 5.5の96%の性能を5%のコストで」と書かれています。ただし、これはキャンペーン価格での比較です。\n**いいねから：MAI Code 2は「Opus 5.5の96%の性能を5%のコストで」と書かれています。ただし、これはキャンペーン価格での比較です。**\n[Burke Hollandさんの投稿](https://x.com/burkeholland/status/2124902564256964999)（11/24 1:27、日本時間）です。[Microsoft AIの発表](https://microsoft.ai/news/introducing-mai-code-2-and-mai-code-2-flash/)（11/17、Ignite）によると、「96%・5%」は、Microsoftが選んだ4つのベンチマーク（DeepSWE 1.1、Terminal Bench 2.1、SWE-Atlas、FrontierCode v1.1）の平均です。コストは、50%オフのキャンペーン価格で計算されています。[GitHubの価格表](https://docs.github.com/en/copilot/reference/copilot-billing/models-and-pricing)では、100万トークンあたり入力0.50ドル、出力2.50ドルです。2027年5月17日からは、入力1.00ドル、出力5.00ドルになります。公式は、基礎科学のような難しい問題や、とても長いエージェント作業向けには、まだ調整していない、とも書いています。MAI Code 2は Copilot Pro 以上で使え、Copilot CLI のモデル選択にも入っています（[Changelog](https://github.blog/changelog/2026-11-17-mai-code-2-and-mai-code-2-flash-in-github-copilot/)）。",
+    "followUps": []
+  },
+  {
+    "id": "2124826663850750190",
+    "cardId": "r38_212",
+    "datetime": "2026-11-24T12:53:00+09:00",
+    "postedAt": "2026-11-23T20:25:28+09:00",
+    "source": "likes",
+    "title": "一文ごとに「執筆意図」をAIに先に書かせる、日本語の執筆スキル「tsuzuri」が出ました。",
+    "summary": "いる科さんの1.0.0。意図→本文→文の役割の順に書き、yomiyasuでの推敲と、前提を知らない別のAIによる通読がある。npxで導入できる。",
+    "tweetId": "2124826663850750190",
+    "tweetIds": [
+      "2124826663850750190",
+      "2124822471941750881"
+    ],
+    "quoteTweetId": "2124822471941750881",
+    "url": "https://x.com/oga_aiichiro/status/2124826663850750190",
+    "author": {
+      "handle": "oga_aiichiro",
+      "name": "大賀 愛一郎 (oga_aiichiro)"
+    },
+    "via": null,
+    "text": "あのimozuruで有名な いる科ちゃんとyomiyasuがコラボし、最強のスキルが生まれました！\n\n文章構成はtsuzuri、推敲はyomiyasuで 上流から下流まで全面的にカバーします！試してみてねー！٩( ๑^ ꇴ^)۶\n\n導入にはyomiyasuが入っていることが前提です！",
+    "images": [],
+    "deepDive": "#一文ごとに「執筆意図」をAIに先に書かせる、日本語の執筆スキル「tsuzuri」が出ました。\n**いいねから：一文ごとに「執筆意図」をAIに先に書かせる、日本語の執筆スキル「tsuzuri」が出ました。**\n[大賀愛一郎さんの投稿](https://x.com/oga_aiichiro/status/2124826663850750190)（11/23 20:25、日本時間）が紹介していたのは、[いる科さんの tsuzuri 1.0.0](https://x.com/iru_cection/status/2124822471941750881)です。[README](https://github.com/MaryCache/tsuzuri)によると、要件定義、設計、一文ずつ（意図→本文→文の役割）の順に書きます。そのあと自己レビュー、校正辞書、[yomiyasu](https://github.com/nanaism/yomiyasu/)での推敲を経て、前提を知らない別のAIに通読させます。閲覧アプリでは、文ごとに意図や役割、差分が見られます。気になる文にコメントすると、AIが新しい版に直します。長い文章から、「消すと言いたいことが失われる核の文」だけを残して読む使い方もあります。導入は `npx skills add MaryCache/tsuzuri` で、Python 3.10以上が必要です。Claude Codeのほか、Codexなどにも対応しています。",
+    "followUps": []
+  },
+  {
+    "id": "2124686904004432242",
+    "cardId": "r38_213",
+    "datetime": "2026-11-24T12:53:00+09:00",
+    "postedAt": "2026-11-23T11:10:07+09:00",
+    "source": "likes",
+    "title": "打った瞬間に、そのページだけが変わる「リアルタイムTeXプレビュー」の仕組みが公開されました。",
+    "summary": "TeXConf 2026の発表。行はTeXに組ませ、ページは自前のページビルダで組み直す。この機能はAI搭載のLaTeXエディターTeX64に入っている。",
+    "tweetId": "2124686904004432242",
+    "tweetIds": [
+      "2124686904004432242",
+      "2124639060199456791"
+    ],
+    "quoteTweetId": "2124639060199456791",
+    "url": "https://x.com/662607015_i_s_t/status/2124686904004432242",
+    "author": {
+      "handle": "662607015_i_s_t",
+      "name": "Alph(その辺の大学生A)"
+    },
+    "via": null,
+    "text": "リアルタイムTeXプレビュー\n↑\nガチの謎技術なので見るべき",
+    "images": [],
+    "deepDive": "#打った瞬間に、そのページだけが変わる「リアルタイムTeXプレビュー」の仕組みが公開されました。\n**いいねから：打った瞬間に、そのページだけが変わる「リアルタイムTeXプレビュー」の仕組みが公開されました。**\n[Alphさんの投稿](https://x.com/662607015_i_s_t/status/2124686904004432242)（11/23 11:10、日本時間）が引用していたのは、[KKTeXさんのTeXConf 2026発表資料](https://x.com/KKTeX_LaTeX3/status/2124639060199456791)です。[発表要旨](https://github.com/KKTeX/TeXConf2026-talk)によると、段落の行分割は `\\par` で決まる局所的な処理で、改ページは後ろのページにも影響する非局所的な処理です。この切り分けが設計の鍵で、「行はTeXに組ませ、ページは自前のページビルダで組み直す」という方針です。打鍵すると、段落ごとにforkしたチェックポイントから組版を再開します。スライドは65枚あり、実演動画は86秒（速さには手を加えていない、との説明）です。この機能は、AI搭載のLaTeXエディター[TeX64](https://tex64.com/ja)（macOS / Windows）に入っています。料金は米ドルで、Free、Basic が月12ドル、Pro が月25ドルです。",
+    "followUps": []
+  },
+  {
+    "id": "2125029185379008573",
+    "cardId": "r38_208",
+    "datetime": "2026-11-24T10:53:00+09:00",
+    "postedAt": "2026-11-24T09:50:13+09:00",
+    "source": "timeline",
+    "title": "pstackに、言いたいことを専門の言葉に置き換える「/reframe」が入りました。",
+    "summary": "専門の言葉を8〜12個、影響の大きい順に教えて説明を書き直す。自分で呼んだときだけ動く。既存のpstack更新 r38_161 とは別件。",
+    "tweetId": "2125029185379008573",
+    "tweetIds": [
+      "2125029185379008573"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/poteto/status/2125029185379008573",
+    "author": {
+      "handle": "poteto",
+      "name": "lauren"
+    },
+    "via": null,
+    "text": "you can only prompt what you can imagine\n\ntry the new /reframe skill in pstack - for when you know what you want but are struggling to communicate it. works great with /sharpen!\n\n[x.ai/bot/plugin/971…](https://x.ai/bot/plugin/9717366)",
+    "images": [],
+    "deepDive": "#pstackに、言いたいことを専門の言葉に置き換える「/reframe」が入りました。\n**タイムラインから：pstackに、言いたいことを専門の言葉に置き換える「/reframe」が入りました。**\n[Lauren Tanさん（@poteto）の投稿](https://x.com/poteto/status/2125029185379008573)（11/24 09:50、日本時間）です。「想像できるものしかプロンプトに書けない」という言葉とともに紹介されていて、いいねは1,000を超えています。\n\n[SKILL.md](https://github.com/cursor/plugins/blob/main/pstack/skills/reframe/SKILL.md)によると、作りたいものの説明と、手元のファイルやコードを読みます。そのうえで、その分野の専門の言葉を8〜12個、作るものへの影響が大きい順に教えてくれます。1つの言葉ごとに、意味、実際にその言葉を使っている事業や論文（リンク付き）、そしてエージェントに何を頼めるようになるかを書きます。同じ形の問題を別の名前で解いた分野を2〜3つ挙げ、何が使えて、どこからはたとえが合わないかも書きます。最後に、説明に書いていないけれど気にした方がいいことを挙げ、説明を新しい言葉で書き直します。\n\n自分で呼んだときだけ動きます（`disable-model-invocation: true`）。リンクは全部開いて確かめ、確かめられない出典は消す決まりです。投稿では、問いをはっきりさせる [/sharpen](https://github.com/cursor/plugins/pull/615) と組み合わせるとよい、と書かれています。[Cursor Marketplace](https://cursor.com/marketplace/skills/reframe) にも載っています。",
+    "followUps": []
+  },
+  {
+    "id": "2125017412735263192",
+    "cardId": "r38_207",
+    "datetime": "2026-11-24T09:50:00+09:00",
+    "postedAt": "2026-11-24T09:03:26+09:00",
+    "source": "timeline",
+    "title": "Docker Sandboxes（sbx）で、コーディングエージェントを「権限確認なし」でも、より安全に動かす方法が紹介されています。",
+    "summary": "Dockerの単体CLIで、エージェントを使い捨てのmicroVMに閉じ込める。完全に安全ではなく、成果物はホストで動かす前にレビューした方がよい、というのが記事の結論。",
+    "tweetId": "2125017412735263192",
+    "tweetIds": [
+      "2125017412735263192"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/karaage0703/status/2125017412735263192",
+    "author": {
+      "handle": "karaage0703",
+      "name": "からあげ"
+    },
+    "via": null,
+    "text": "メモ > Docker Sandboxes（sbx）でClaude Codeを権限確認なしでも「より安全に」動かしてみる - uepon日々の備忘録 [uepon.hatenadiary.com/entry/2026/11/…](https://uepon.hatenadiary.com/entry/2026/11/24/005848) #セキュリティ",
+    "images": [],
+    "deepDive": "#Docker Sandboxes（sbx）で、コーディングエージェントを「権限確認なし」でも、より安全に動かす方法が紹介されています。\n**タイムラインから：Docker Sandboxes（`sbx`）で、コーディングエージェントを「権限確認なし」でも、より安全に動かす方法が紹介されています。**\n[からあげさんの投稿](https://x.com/karaage0703/status/2125017412735263192)（11/24 09:03、日本時間）が取り上げていたのは、[uepon日々の備忘録の記事](https://uepon.hatenadiary.com/entry/2026/11/24/005848)です。Docker の単体 CLI「`sbx`」は、Claude Code、Copilot CLI、Codex などのコーディングエージェントを、使い捨ての microVM に閉じ込めて動かします（[公式ドキュメント](https://docs.docker.com/ai/sandboxes/)）。コンテナではなく microVM なので、カーネルごと分けられます。公式の手順も `sbx` のインストールとログインが前提で、Docker Desktop は不要です。記事によると、権限確認を飛ばす使い方が、最初から有効になっているとのことです。\n\n考え方は、「毎回いいか聞く」代わりに、「エージェントの手が届く範囲を絞る」です。考える部分（LLM）はクラウドのままで、手足だけを部屋に閉じ込める、という整理です。公式ドキュメントでも、使い分けは次の通りです。\n\n- **Direct：** ホストのフォルダーを直接編集します。手軽です。\n- **Clone：** サンドボックス内の clone で作業し、ホスト側で `git fetch` して差分を見てから取り込みます。長時間走らせるのに向いています。\n- **Mountless：** ホストのフォルダーを一切渡しません。素性の分からないリポジトリ向けです。\n\n記事では、読ませるだけの資料は `:ro`（読み取り専用）で渡し、外への通信は `sbx policy allow network github.com` のように必要な宛先だけ許可する、とも書かれています。通信の許可リスト自体は、公式にもあります。\n\nただし、これで完全に安全になるわけではありません。公式の注意喚起では、`sbx cp` が共有ワークスペースの外のホストの場所を読み書きできてしまう問題がありました（[GHSA-82h2-77xp-45m9](https://github.com/advisories/GHSA-82h2-77xp-45m9)）。記事では 0.51.0 までに修正とされています。また、0.50.0 未満では、リポジトリ内のスクリプトや Git の設定を書き換えられたあと、それを悪用されうる問題もありました（[GHSA-vv2q-qr3q-w59x](https://github.com/advisories/GHSA-vv2q-qr3q-w59x)）。筆者がタイトルを「安全に」ではなく「より安全に」としているのは、このためです。公式ドキュメントにも、stdio 型の MCP サーバーはサンドボックスの中ではなくホストで動く、とあります。長時間おまかせで動かすなら Clone モードと通信の許可リストの組み合わせが実用的ですが、出てきた成果物は、ホストで動かす前にレビューした方がよい、というのが記事の結論です。\n\n出典：[公式ドキュメント](https://docs.docker.com/ai/sandboxes/) / [記事](https://uepon.hatenadiary.com/entry/2026/11/24/005848) / [sbx cp の注意喚起](https://github.com/advisories/GHSA-82h2-77xp-45m9) / [0.50.0 未満の注意喚起](https://github.com/advisories/GHSA-vv2q-qr3q-w59x)",
+    "followUps": []
+  },
+  {
+    "id": "2124931606054101489",
+    "cardId": "r38_206",
+    "datetime": "2026-11-24T09:50:00+09:00",
+    "postedAt": "2026-11-24T03:22:28+09:00",
+    "source": "likes",
+    "title": "GitHubが、ACCESSIBILITY.md を正式に認識するようになりました。",
+    "summary": "リポジトリのトップページに出るコミュニティヘルスファイル。ブログの日付は11/5で、今回の投稿は改めての周知だと思います（私の推測です）。",
+    "tweetId": "2124931606054101489",
+    "tweetIds": [
+      "2124931606054101489"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/github/status/2124931606054101489",
+    "author": {
+      "handle": "github",
+      "name": "GitHub"
+    },
+    "via": null,
+    "text": "GitHub now recognizes ACCESSIBILITY.md files on repo overview pages. Now your project can document its accessibility goals and expectations.\n\nHere's the guidance so you can get started ⬇️\n[github.blog/open-source/ma…](https://github.blog/open-source/maintainers/accessibility-statements-now-have-a-home-on-github/)",
+    "images": [],
+    "deepDive": "#GitHubが、ACCESSIBILITY.md を正式に認識するようになりました。\n**いいねから：GitHubが、`ACCESSIBILITY.md` を正式に認識するようになりました。**\n[GitHubの投稿](https://x.com/github/status/2124931606054101489)（11/24 03:22、日本時間）です。リポジトリのルート、`.github/`、`docs/` に置いた `ACCESSIBILITY.md` が、リポジトリのトップページに出るようになりました。Organization の `.github` リポジトリから引き継ぐこともできます。公開リポジトリなら、Insights の Community Standards からひな形を使って追加できます。新しく作るリポジトリには、最初から `accessibility` ラベルも付きます（[GitHub Blog](https://github.blog/open-source/maintainers/accessibility-statements-now-have-a-home-on-github/)）。\n\nCONTRIBUTING、CODE_OF_CONDUCT、SECURITY.md と同じ「コミュニティヘルスファイル」の仲間に入った形です。例として紹介されている GitHub CLI の宣言には、表形式の出力はスクリーンリーダーで追いにくいといった既知の問題と、その回避策のコマンドが書かれています。ブログの日付は11/5なので、機能はそれより前に出ていて、今回の投稿は改めての周知だと思います（私の推測です）。個人開発の公開リポジトリに一枚置いておくコストは、ほぼありません。",
+    "followUps": []
+  },
+  {
     "id": "2125007927098699827",
     "cardId": "r38_204",
     "datetime": "2026-11-24T08:50:00+09:00",
@@ -2317,7 +2627,17 @@
       }
     ],
     "deepDive": "#VS Code 1.147で、AIがエージェントの操作を許可するかを決める機能に、自分のルールを足せるようになりました。\n[Visual Studio Codeの投稿](https://x.com/code/status/2123132578425159819)へのいいねです。\n[リリースノート](https://code.visualstudio.com/updates/v1_147)によるものです。\n- **assisted permissions：** AIの審査役が、エージェントのツールの呼び出しを、1回ずつ確かめます。危なくないものは、自動で許可します。この審査役に、「パッケージを入れる前やpushする前は、必ず確かめて」のような指示を、自分で足せるようになりました。\n- **ほかの新機能：** エージェントへの頼みごとを下書きにしておく機能や、あとで送る予約の機能も入りました。\n- **心配な点：** 許可するかを決めるのもAIなので、それをすり抜けられないかが気になります（私の推測です）。",
-    "followUps": []
+    "followUps": [
+      {
+        "datetime": "2026-11-24T09:50:00+09:00",
+        "clock": "09:50",
+        "title": "",
+        "text": "**いいねから：VS Codeで、ほかのアプリのウィンドウを撮って、印を付けて Copilot に渡せるようになりました（実験的な機能です）。**\n[VS Codeの投稿](https://x.com/code/status/2124879182685491271)（11/23 23:54、日本時間）です。1.147のリリースノートには以前お伝えしていない点として、これが入っています。`chat.appWindowScreenshots.enabled` を有効にすると、Add Context の Screenshot App Window で、ブラウザやシミュレーターのウィンドウを撮ってチャットに添付できます。ショートカットは、macOS が ⌃⌘S、Windows / Linux が Ctrl+Shift+Alt+S です。添付した画像は「Mark Up」で切り抜いたり、矢印や文字を書き込んだりしてから送れます（[リリースノート](https://code.visualstudio.com/updates/v1_147/)、[ドキュメント](https://code.visualstudio.com/docs/chat/copilot-chat-context)）。\n\n公式ドキュメントによると、Insiders では最初からオン、Stable ではオフです。macOS では画面収録の許可を出して、VS Code を再起動する必要があります。画面上のずれを言葉で説明しなくても、印を付けた画像で直してもらえるようになります。",
+        "tweetIds": [
+          "2124879182685491271"
+        ]
+      }
+    ]
   },
   {
     "id": "2123084818909220867",
@@ -11974,6 +12294,15 @@
         "tweetIds": [
           "2124360590026277170",
           "2124359731221299546"
+        ]
+      },
+      {
+        "datetime": "2026-11-24T10:53:00+09:00",
+        "clock": "10:53",
+        "title": "NVIDIAが、ジェンスン・フアンさんをCEOに戻しました。辞めたいきさつはこれまでにお伝えしたので、新しく決まったことだけです。",
+        "text": "**タイムラインから：NVIDIAが、ジェンスン・フアンさんをCEOに戻しました。**\n[connect24hさんのまとめ](https://x.com/connect24h/status/2125036227577721321)（11/24 10:18、日本時間）で知りました。辞めたいきさつはこれまでにお伝えしたので、新しく決まったことだけ書きます。\n\n- **正式な発表：** [NVIDIA公式](https://nvidianews.nvidia.com/news/nvidia-board-reinstates-jensen-huang-as-president-ceo-and-board-director)によると、11/23（米国時間）に、取締役会が全員一致でフアンさんを社長・CEO・取締役に戻しました。すぐに有効です。理由は、本人と何度も話し合ったうえで、「正直さ」と率いる力に納得したから、としています。また、アメリカ政府の上層から意見を聞き、「国の安全への危険はない」と判断したとしています。議長はハーベイ・ジョーンズさんのままです。代わりにCEOをしていたコレット・クレスさんは、CFOの仕事に戻ります。同じ発表で、すでに始まっている社内調査は最後まで続けることと、最高コンプライアンス責任者（CCO）のポストを新しく設けて探すことも書いてあります。調査にはフアンさんも協力する、とのことです。\n- **株価：** [CNBC](https://www.cnbc.com/2026/11/23/nvidia-jensen-huang-ceo.html)によると、その日の終値は31%上がりました。不倫を認めた11/8からは、約33%下がっていました。\n- **決めるまでの流れ：** CNBCによると、先週の終わりに政府の関係者が取締役会に「国の安全の法律への違反はなかった」と伝えたそうです（名前を出さない関係者の話です）。それを受けて土曜に取締役会とフアンさんが話し合い、日曜に復帰が決まったとのことです。株が大きく下がったことも、話を急がせたそうです。トランプ大統領はCNBCに、取締役会と「直接にも間接にも」話していたと述べ、「正しい判断だ」と投稿しました。マスクさんもXで「間違いが正された」と書いています。CNBCによると、辞任のあと数週間、取締役会は復帰を検討していない、という立場を保っていたそうです。\n- **これから：** CNBCによると、フアンさんは12/1に下院の3委員会の非公開の聞き取り、12/3には上院銀行委員会の公開公聴会に出る予定です（復帰より前に決まっていた日程です）。取締役会が政府の意見を受けて判断を変えた形なので、会社の運営（ガバナンス）をめぐる議論は続きそうです（私の見方です）。",
+        "tweetIds": [
+          "2125036227577721321"
         ]
       }
     ],
