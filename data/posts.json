@@ -1,5 +1,316 @@
 [
   {
+    "id": "2125430384104255720",
+    "cardId": "r38_255",
+    "datetime": "2026-11-25T12:51:00+09:00",
+    "postedAt": "2026-11-25T12:24:26+09:00",
+    "source": "timeline",
+    "title": "AWSの「ExtendDB」が1.0になり、DynamoDBと同じ通信の決まりを、AWSの外でも動かせるようになりました。",
+    "summary": "ローカルで DynamoDB 互換を試せる。移行の前に公式の差分一覧を見たほうがよい（私の見方です）。",
+    "tweetId": "2125430384104255720",
+    "tweetIds": [
+      "2125430384104255720"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/publickey/status/2125430384104255720",
+    "author": {
+      "handle": "publickey",
+      "name": "Publickey"
+    },
+    "via": null,
+    "text": "AWS、DynamoDB互換データベースをローカルマシンで構築可能にするオープンソース「ExtendDB」がバージョン1.0に到達\n[publickey1.jp/blog/26/awsdyn…](https://www.publickey1.jp/blog/26/awsdynamodbextenddb10.html)",
+    "images": [],
+    "deepDive": "#AWSの「ExtendDB」が1.0になり、DynamoDBと同じ通信の決まりを、AWSの外でも動かせるようになりました。\n**タイムラインから：AWSの「ExtendDB」が1.0になり、DynamoDBと同じ通信の決まりを、AWSの外でも動かせるようになりました。**\n[Publickeyの投稿](https://x.com/publickey/status/2125430384104255720)（11/25 12:24、日本時間）と、[同日の記事](https://www.publickey1.jp/blog/26/awsdynamodbextenddb10.html)です。[AWS公式の発表](https://aws.amazon.com/about-aws/whats-new/2026/11/aws-extenddb-1-0/)は11/18付で、本番利用向けの最初のリリース、と書いています。AWSがメンテナンスするオープンソースで、ライセンスは Apache 2.0 です（[GitHub](https://github.com/ExtendDB/extenddb)）。いつもの SDK や CLI が、接続先を変えるだけで使えます。\n\nExtendDBは DynamoDB の通信の決まりを受け付ける部分で、実際にデータを保存するのは PostgreSQL・SQLite・MongoDB・Cassandra から選びます。README によると、PostgreSQL は本番向けの Stable、SQLite も単一ノードなら Stable、MongoDB は Beta、Cassandra は Experimental（本番向けではない）です。既定の参照構成は PostgreSQL です。README には「DynamoDB そのものではなく、DynamoDB のソースコードも含まない。一から作り直したもの（クリーンルーム実装）で、AWS のサービスでもない」と書かれています。性能や規模、一部の機能は本物と違い、たとえばグローバルテーブルは実装されていません。1.0 では、1つのカタログに対してサーバーは1台、という前提です。\n\n開発や CI では、`@extenddb/dev`（npm）やコンテナ版 `extenddb/extenddb-dev` を使うと、別のデータベースを用意しなくても、SQLite の上で DynamoDB 互換の環境が立ち上がります。ただし開発モードは平文の HTTP で、何でもできる見本の鍵を最初から入れるので、ループバックだけに閉じる、と README に書かれています。\n\nDynamoDB を使うアプリを、ローカルで試すのが楽になると思います。最初は SQLite や PostgreSQL で動かして、あとから本物の DynamoDB へ移す、といった使い方も考えられますが、差異はあるので、移行の前に公式の差分一覧を見たほうがよさそうです（私の見方です）。",
+    "followUps": []
+  },
+  {
+    "id": "2125430336545001495",
+    "cardId": "r38_256",
+    "datetime": "2026-11-25T12:51:00+09:00",
+    "postedAt": "2026-11-25T12:24:15+09:00",
+    "source": "timeline",
+    "title": "jQuery 4.1 と 3.8 が同時に出ました。3.x 系は、予定されている機能追加としては、これが最後です。",
+    "summary": "4.1 は内部を querySelectorAll に統一するなど。3.8 は見送りのためのリリースで、復活ではない。両方でセレクタ処理の ReDoS を修正。3.x が残る案件は少なくとも 3.8 に上げ、そのうえで 4.x へ（私の見方です）。",
+    "tweetId": "2125430336545001495",
+    "tweetIds": [
+      "2125430336545001495"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/publickey/status/2125430336545001495",
+    "author": {
+      "handle": "publickey",
+      "name": "Publickey"
+    },
+    "via": null,
+    "text": "jQuery 4.1正式版がリリース、内部実装をquerySelectorAllに統一でより高速に。jQuery 3.x系最後となるjQuery 3.8も同時リリース\n[publickey1.jp/blog/26/jquery…](https://www.publickey1.jp/blog/26/jquery_41queryselectoralljquery_3xjquery_38.html)",
+    "images": [],
+    "deepDive": "#jQuery 4.1 と 3.8 が同時に出ました。3.x 系は、予定されている機能追加としては、これが最後です。\n**タイムラインから：jQuery 4.1 と 3.8 が同時に出ました。3.x 系は、予定されている機能追加としては、これが最後です。**\n[Publickeyの投稿](https://x.com/publickey/status/2125430336545001495)（11/25 12:24、日本時間）と、[同日の記事](https://www.publickey1.jp/blog/26/jquery_41queryselectoralljquery_3xjquery_38.html)です。公式は[11/17付のブログ](https://blog.jquery.com/2026/11/17/jquery-4-1-0-and-3-8-0-released-passing-the-torch/)で発表しています。\n\n4.1 では、内部で使っていた `getElementsByTagName` などをすべて `querySelectorAll` に統一して、速くなることが期待されています。リダイレクト後の最終 URL が取れる `jqXHR.responseURL` の追加や、`uniqueSort()` の高速化もあります。3.8 は、ここ数年 3.x 側に溜まっていた修正を出すためのリリースです。公式は「見送りのためのリリースで、復活ではない」と書いていて、今後の 3.x 系には、重大な不具合やセキュリティの修正しか出ません。両方で、セレクタの識別子を処理する正規表現の弱点（極端に長い入力で処理が止まってしまう ReDoS）も直されています。\n\n古い案件で 3.x 系が残っているなら、少なくとも 3.8 に上げて、その弱点を塞いでおくのが安全です。そのうえで、公式の移行ガイドと jQuery Migrate を使って 4.x 系へ移るのがおすすめです（私の見方です）。",
+    "followUps": []
+  },
+  {
+    "id": "2125355657541165248",
+    "cardId": "r38_254",
+    "datetime": "2026-11-25T12:51:00+09:00",
+    "postedAt": "2026-11-25T07:27:30+09:00",
+    "source": "likes",
+    "title": "「いい感じで」をやめると、仕事の言葉が「撮れる」ようになる、という整理です。",
+    "summary": "川岸宏司さんの記事の紹介。気持ち・ほめ・頼みを、撮影できる具体に言い換える。AIエージェントへの指示にも当てはまる（私の見方です）。既存の謝罪の書き方 r38_226（同じ著者の別の記事）とは別件。",
+    "tweetId": "2125355657541165248",
+    "tweetIds": [
+      "2125355657541165248",
+      "2125340302227673167"
+    ],
+    "quoteTweetId": "2125340302227673167",
+    "url": "https://x.com/smark_x/status/2125355657541165248",
+    "author": {
+      "handle": "smark_x",
+      "name": "高橋雅人"
+    },
+    "via": null,
+    "text": "なんちゅー言語化だ、、むかし死ぬほど指示が分かりづらかった上司に見せてやりたい",
+    "images": [
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HX7HtMZaoAEDyX3.jpg"
+      },
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HX7HtMRa4AAJfHx.jpg"
+      },
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HX7HtMXaoAAUnMT.jpg"
+      }
+    ],
+    "deepDive": "#「いい感じで」をやめると、仕事の言葉が「撮れる」ようになる、という整理です。\n**いいねから：「いい感じで」をやめると、仕事の言葉が「撮れる」ようになる、という整理です。**\n[高橋雅人さん（@smark_x）の投稿](https://x.com/smark_x/status/2125355657541165248)（11/25 7:27、日本時間）です。プロフィールには、株式会社DILの取締役で、Xやnoteの顧問事業を約220社に提供している、とあります。「むかし死ぬほど指示が分かりづらかった上司に見せてやりたい」と紹介していて、表示は約41万回、いいね約3,300、ブックマーク約2,800と、かなり保存されています。\n\n元ネタは、同じDILの共同代表COO・川岸宏司さん（@OnebookofMAG）が書いた[Xの記事](https://x.com/OnebookofMAG/status/2125340302227673167)「『いい感じで』を封印すると、仕事の言葉は\"撮れる\"ようになる」です。仕事で使う言葉は「雰囲気が悪い」「いい感じで」「なんか違う」のように、形容詞のままのことが多く、言われた側は何をすればいいか分からない、という指摘です。そこで、言いたいことの種類によって、次の3つに言い換えよう、という提案です。気持ちは体の動きに（「嬉しいです」→「思わず二度見しました」）、ほめ言葉は実際に起きたことに（「プレゼンよかった」→「途中から全員が前のめりになっていた」）、頼みごとはそのまま手を動かせる行動に（「いい感じで」→「冒頭にデータを入れて、結論から書いて」）。見分け方は「その言葉をスマホで撮影できるか」で、撮れないなら、まだ形容詞のまま、と書いています。\n\nこれは、AIエージェントへの指示の書き方にもそのまま当てはまると思います。Copilot CLIに「いい感じに直して」と頼むより、「この関数の戻り値を null にせず、空配列にして」のように、撮れる言葉で書いたほうが、手戻りは減りそうです（私の見方です）。記事の最後は、DILのコミュニティへの案内になっていて、宣伝も兼ねた文章です。",
+    "followUps": []
+  },
+  {
+    "id": "2125240230240473552",
+    "cardId": "r38_252",
+    "datetime": "2026-11-25T11:55:00+09:00",
+    "postedAt": "2026-11-24T23:48:50+09:00",
+    "source": "likes",
+    "title": "GitHub Japanの講演資料は、「書くのは安くなったが、ROIは下がった」という内容です。",
+    "summary": "GitHub Connect Tokyo 2026 の講演資料。エージェント起点のPRは増えたが、レビュー時間・インシデント・QA時間も増えた。「実装は任せて、検証を自動化する」方向はそのまま使える（私の見方です）。同じ送信に含まれた Copilot Evals の CLI 案内（r38_119 への続報）とは別件。",
+    "tweetId": "2125240230240473552",
+    "tweetIds": [
+      "2125240230240473552"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/moulongzhang/status/2125240230240473552",
+    "author": {
+      "handle": "moulongzhang",
+      "name": "William Zhang(張謀隆)"
+    },
+    "via": null,
+    "text": "GitHub Connect Tokyo、メインセッション2の資料を公開しました！\n\nテーマは「2026年のエージェントのROI」\n\n好評だったUniverse / Igniteの新機能を詰め込んだ開発デモは、アーカイブ公開までのお楽しみ👀\n\nご参加ありがとうございました！\n[speakerdeck.com/moulongzhang/2…](https://speakerdeck.com/moulongzhang/20261124-githubconnecttokyo-session2)\n#GitHubConnectTokyo",
+    "images": [],
+    "deepDive": "#GitHub Japanの講演資料は、「書くのは安くなったが、ROIは下がった」という内容です。\n**いいねから：GitHub Japanの講演資料は、「書くのは安くなったが、ROIは下がった」という内容です。**\n同じ流れで、[William Zhangさん（張謀隆さん、GitHub Japan の AI GTM Lead）](https://x.com/moulongzhang/status/2125240230240473552)（11/24 23:48、日本時間）が、GitHub Connect Tokyo 2026 のセッション2「[GitHub Copilot が切り拓くエージェント時代の開発ワークフロー](https://speakerdeck.com/moulongzhang/20261124-githubconnecttokyo-session2)」（全46枚）を公開していました。要点は「書くのは安くなったが、ROI は下がった」です。資料が引用している数字では、Octoverse 2026 によると、エージェント起点の PR は40%超（3月は17%）で、日本の開発者は715万人（世界5位）です。同イベントのキーノートでは、週のコミットが2.36億から12.25億へ、約5倍になった、とあります。一方で、PR のレビュー時間は＋91%、PR あたりのインシデントは＋242.7%、QA にかかる時間は＋300.6%です（Faros／CircleCI の調査。資料は、Faros は相関であって因果ではない、とも注記しています）。「速くなったのは実装という1工程だけで、チームの成果は一番遅い工程で決まる」という主張です。\n\nROI の上げ方は、コストを下げる側では Copilot Fusion にモデル選びを任せる、1タスク＝1セッションにする、`/usage`・`/chronicle` で振り返る、成果を上げる側では Plan → 承認 → Autopilot の流れで、テスト・CodeQL・code review を PR の必須条件にする、と説明されています。まとめの「明日から始める5つのこと」の一つに `/eval` も入っています。個人開発では、自分がレビューのボトルネックになりやすいので、「実装は任せて、検証を自動化する」という方向はそのまま使えると思います（私の見方です）。",
+    "followUps": []
+  },
+  {
+    "id": "2125219720723058993",
+    "cardId": "r38_253",
+    "datetime": "2026-11-25T11:55:00+09:00",
+    "postedAt": "2026-11-24T22:27:20+09:00",
+    "source": "likes",
+    "title": "土日祝の東京メトロが、月2,000円で実質乗り放題になる「休日メトロ放題」です。",
+    "summary": "2023年11月開始のメトポのサービス。対象は本登録したPASMOの、土日祝の東京メトロ運賃で、翌月ポイント還元。週末に2往復する月なら元が取れる計算（私の見方です）。月末までの申し込み。月の途中からは不可。",
+    "tweetId": "2125219720723058993",
+    "tweetIds": [
+      "2125219720723058993"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/osanpo_icochan/status/2125219720723058993",
+    "author": {
+      "handle": "osanpo_icochan",
+      "name": "かも蔵"
+    },
+    "via": null,
+    "text": "「休日メトロ放題」っていう1ヶ月2000円で土日祝日東京メトロ乗り放題になるやつ\nありえないくらい元取れてて神",
+    "images": [
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HX5MEmrbsAAOQrP.jpg"
+      },
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HX5MEmvakAEpnER.jpg"
+      }
+    ],
+    "deepDive": "#土日祝の東京メトロが、月2,000円で実質乗り放題になる「休日メトロ放題」です。\n**いいねから：土日祝の東京メトロが、月2,000円で実質乗り放題になる「休日メトロ放題」です。**\n[かも蔵さん（@osanpo_icochan）の投稿](https://x.com/osanpo_icochan/status/2125219720723058993)（11/24 22:27、日本時間）です。添付の画面では、メトポの2026年10月分に「休日メトロ放題（チャージ）＋17,797pt」と出ています。いいねは約8,600、表示は約94万回です。\n\n公式の条件は、[東京メトロの発表資料（2023年9月）](https://www.tokyometro.jp/news/images_h/metroNews230928_57.pdf)で確認しました。サービス開始は2023年11月で、登録料は月2,000円（税込、クレジットカード払いのみ）です。前月の月末までに、メトポ会員サイトから申し込みます。月の途中からは申し込めません。対象は、メトポに本登録した PASMO で、土日祝の始発から終電までに乗った東京メトロ線の運賃です。いったん普通に運賃を払い、翌月11日に全額がポイントで還元されます（10ポイント＝10円で PASMO にチャージ）。定期券や企画券の区間内は対象外です。他社線に乗り換えた場合は、還元額がメトロ分と異なることがあります。乗った額が2,000円に満たなくても、返金はありません。\n\n週末にメトロで2往復くらいする月なら、元が取れる計算になりそうです（私の見方です）。申し込みを忘れると、翌月は使えないので、月末の申し込みを忘れないほうがよさそうです。",
+    "followUps": []
+  },
+  {
+    "id": "2125402612111720776",
+    "cardId": "r38_250",
+    "datetime": "2026-11-25T10:56:00+09:00",
+    "postedAt": "2026-11-25T10:34:05+09:00",
+    "source": "timeline",
+    "title": "Anthropicが「1個のニューロンを読む」研究を出しました。バックドアの引き金も、重みから探せる、という内容です。",
+    "summary": "Anthropic Fellows の論文。出力への寄与でニューロンを読む。オープンウェイトや他人のLoRAの監査に使えそうだが、API専用モデルでは同じ調べ方はできない（私の見方です）。既存の Goodfire エッセイとは別件（題名は同じだが、比較であって続報ではない）。",
+    "tweetId": "2125402612111720776",
+    "tweetIds": [
+      "2125402612111720776",
+      "2125365268381929637"
+    ],
+    "quoteTweetId": "2125365268381929637",
+    "url": "https://x.com/tszzl/status/2125402612111720776",
+    "author": {
+      "handle": "tszzl",
+      "name": "roon"
+    },
+    "via": null,
+    "text": "total goodfire victory",
+    "images": [],
+    "deepDive": "#Anthropicが「1個のニューロンを読む」研究を出しました。バックドアの引き金も、重みから探せる、という内容です。\n**タイムラインから：Anthropicが「1個のニューロンを読む」研究を出しました。バックドアの引き金も、重みから探せる、という内容です。**\n[roonさん（@tszzl）の引用](https://x.com/tszzl/status/2125402612111720776)（11/25 10:34、日本時間）で見かけました。元は[Anthropicの投稿](https://x.com/AnthropicAI/status/2125365268381929637)（11/25 8:05、いいね約2,400）です。Anthropic Fellowsの Jasmine Shoneさんと Lisa Dunlapさんによる研究で、前にお伝えしたGoodfireの「ニューロンは読める」という流れに近いです。\n\nこれまで、「ニューロンは1つでいろいろな意味を持つので読めない」とされてきました。そこで、ニューロンが「何に反応するか」ではなく、「出力に何を足すか」で見直しています。[Part 1](https://alignment.anthropic.com/2026/neuron-basis-theory/)によると、2つの無関係な概念を同時に足すのは、調べた例の約1%以下でした。意味は、ほとんどの層をまたいでもほぼ変わらない、とも書いています。\n\n[Part 2](https://alignment.anthropic.com/2026/neuron-basis-applications/)の応用です。追加の学習なしで、オープンウェイトのモデルのニューロンを使っています。\n- バックドアを仕込んだモデル74個で、重みだけからニューロンの投票を取りました。引き金の単語の平均54%が、上位50語に入りました。以前のバックドア検出コンペの手法（埋め込みのずれを見る方法）では、ほとんど見つからなかったそうです。\n- 隠れた振る舞いを足したLoRAが58個ある、68個のアダプタで監査ゲームをしました。Claudeの監査役がニューロンを使うと、正しく言い当てたのは75%でした。出力だけを見たときは40%でした。\n- 危険なサイバー知識を「忘れさせた」とされる公開チェックポイント23個のうち、14個は、元のモデルが正解していた問題の多くで、まだ正解を1位にしていました。忘れたのではなく、隠れているだけの可能性がある、と公式は書いています。\n- 概念の検出（AxBench）では、ラベルなしで選んだニューロンのAUROCは0.903でした。同じ選び方をしたSAEの最良は0.888、学習した分類器は0.97で、そちらには届きません。有害な文章の検出でも、キーワード検索などよりは良いが、ラベルで学習した分類器には通常及ばない、と書かれています。\n\nroonさんは「total goodfire victory」と書いています。一方で、[Tigges et al. の「neurons as an interpretable basis」をどこにも引用していないのは不誠実では](https://x.com/tszzl/status/2125406396334403967)とも指摘しています。題名は、前にお伝えしたGoodfireの論文と同じです。配布されたオープンなモデルや、他人が作ったLoRAに何か仕込まれていないかを、追加の学習なしで調べる道具にはなりそうです。ただし公式が試したのはオープンウェイトのモデルなので、重みが公開されていないAPI専用のモデルでは、同じ調べ方はできない、というのが私の見方です。",
+    "followUps": []
+  },
+  {
+    "id": "2125393802554757618",
+    "cardId": "r38_251",
+    "datetime": "2026-11-25T10:56:00+09:00",
+    "postedAt": "2026-11-25T09:59:05+09:00",
+    "source": "timeline",
+    "title": "OpenAIが「行列積の指数はちょうど9/4」で、下限まで証明したと主張しています。",
+    "summary": "n×n の行列積には、どんな体でも少なくとも ⌈n^{9/4}/2⌉ 回の、スカラー以外の乗算か除算がいる、という主張。正しければ ω=2 は成り立たない。Lean での形式化は除算なしの回路に限定。専門家の検証はこれからで、実務の計算がすぐ速くなる話ではない。",
+    "tweetId": "2125393802554757618",
+    "tweetIds": [
+      "2125393802554757618"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/rrwilliams/status/2125393802554757618",
+    "author": {
+      "handle": "rrwilliams",
+      "name": "Ryan Williams @rrwilliams.bsky.social"
+    },
+    "via": null,
+    "text": "Apparently Strassen was right: the matrix mult exponent is (exactly) 2.25\n[github.com/openai/math/tr…](https://github.com/openai/math/tree/main/preprints/The-matrix-multiplication-exponent-is-nine-fourths-November-24-2026)",
+    "images": [],
+    "deepDive": "#OpenAIが「行列積の指数はちょうど9/4」で、下限まで証明したと主張しています。\n**タイムラインから：OpenAIが「行列積の指数はちょうど9/4」で、下限まで証明したと主張しています。**\n[Ryan Williamsさん（@rrwilliams）の投稿](https://x.com/rrwilliams/status/2125393802554757618)（11/25 9:59、日本時間、いいね約500）です。Williamsさんは、MITで計算量理論を研究している方です。「Strassenの言うとおり、指数はちょうど2.25だ」と書いて、[OpenAIのmathリポジトリのプレプリント](https://github.com/openai/math/tree/main/preprints/The-matrix-multiplication-exponent-is-nine-fourths-November-24-2026)（11/24付）を紹介しています。\n\n[README](https://github.com/openai/math/tree/main/preprints/The-matrix-multiplication-exponent-is-nine-fourths-November-24-2026)によると、任意の体で、正方行列の積の指数は \\(9/4\\) だ、としています。10月には上限の \\(\\omega \\le 9/4\\) を[出していました](https://github.com/openai/math/tree/main/preprints/Matrix-Multiplication-Nine-Fourths-October-2-2026)。今回は逆に、これより速くはできない下限を証明した、という主張です。\\(n \\times n\\) の行列積には、どんな体でも少なくとも \\(\\lceil n^{9/4}/2 \\rceil\\) 回の、スカラー以外の乗算か除算がいる、と書いています。これが正しければ、昔からの予想「\\(\\omega=2\\)」は成り立たない、ということになります。\n\nLeanでの形式化もあります。ただしREADMEによると、形式化したのは「除算なしの回路」の場合です。論文の主張（除算あり）より範囲が狭いので、そこは注意が必要です。\n\nOpenAIのSébastien Bubeckさんは、[「下限はこれまでほとんど分かっていなかった。生きているうちに見るとは思わなかった」](https://x.com/SebastienBubeck/status/2125402576145572334)と書いています。さらに、Yin Tat Leeさんたちの既存の結果と組み合わせると、線形計画法も \\(n^{9/4}\\) の時間で解けることになる、とのことです。日本では、森さん（[@Ryuhei_Mori](https://x.com/Ryuhei_Mori/status/2125400226831958317)）が「今までのAIの結果でも一番くらいに驚いた。何よりその結論に」と反応しています。同じリポジトリには、短期間で複数の論文が追加され、[Smaleの第9問題などの主張も並んでいる](https://x.com/imjustnewatai/status/2125401848152793517)という指摘もあります。いずれも、いまは主張の段階です。\n\n人間の専門家による検証は、まだこれからです。実務の計算がすぐ速くなる話ではありません。ただ、理論の天井が分かったという意味では、歴史的な主張です。",
+    "followUps": []
+  },
+  {
+    "id": "2125387934203560416",
+    "cardId": "r38_249",
+    "datetime": "2026-11-25T09:55:00+09:00",
+    "postedAt": "2026-11-25T09:35:45+09:00",
+    "source": "timeline",
+    "title": "Sakana AIが、手元で動かせる30Bモデル「Sakana Namazu Small」を発表しました。",
+    "summary": "Nemotron 3 Nano（30B-A3B）ベースの思考モデル。調査や長文読解は強く、検索なしの知識問題は弱い。検索や手元の資料と組み合わせて使う前提（私の見方です）。既存の Sawara、Applied Research Lab r38_217、Security Research Group r38_159 とは別件。オンプレは12月前半に発表。重み・ライセンス・価格は未公表。GENIAC支援。",
+    "tweetId": "2125387934203560416",
+    "tweetIds": [
+      "2125387934203560416"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/SakanaAILabs/status/2125387934203560416",
+    "author": {
+      "handle": "SakanaAILabs",
+      "name": "Sakana AI"
+    },
+    "via": null,
+    "text": "「Sakana Namazu Small」（30Bモデル）を発表\n\n[sakana.ai/namazu-small/](https://sakana.ai/namazu-small/)\n\nNVIDIA Nemotron 3 Nanoをベースに継続事前学習・事後学習を行い、25ベンチマーク平均で約4倍規模の120Bモデルを上回りました。\n\n長文読解やWeb検索での調査に強く、オンプレミス提供の詳細は12月前半にお知らせします。",
+    "images": [
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HX7k9Z2aoAAHKO_.jpg"
+      }
+    ],
+    "deepDive": "#Sakana AIが、手元で動かせる30Bモデル「Sakana Namazu Small」を発表しました。\n**タイムラインから：Sakana AIが、手元で動かせる30Bモデル「Sakana Namazu Small」を発表しました。**\n[公式の投稿](https://x.com/SakanaAILabs/status/2125387934203560416)（11/25 9:35、日本時間）と、[公式ブログ](https://sakana.ai/namazu-small/)によるものです。NVIDIAのオープンモデル [Nemotron 3 Nano](https://docs.api.nvidia.com/nim/reference/nvidia-nemotron-3-nano-30b-a3b)（総パラメータ300億、実際に動くのは約35億のMoE）の事前学習済みベースに、Sakanaが継続事前学習から事後学習までを自社で行ったモデルです。考えてから答える「思考モデル」として作られています。日常の対話、Web検索を使った調査、長い文書の読解を得意にする、とのことです。オンプレミスでの提供も予定していて、詳しいことは12月前半に発表されます。\n\n25のベンチマークの平均では、同じ規模のNemotron 3 Nanoだけでなく、約4倍の大きさのNemotron 3 Super（120B）も上回りました。特に強いのはWeb検索を使う調査で、BrowseCompは73.5です（Nanoは29.3、Superは36.1）。長い文書を読んで根拠を示して答えるタスクも強く、LLM-jp LongBenchは86.0、FaithEvalは78.3です。一方で、検索なしで自分の知識だけで答えるタスクは伸びていません。SimpleQA Verifiedは6.8、Japanese SimpleQAは8.0で、どちらもNanoより低い数字です。これは公式ブログにも、そのまま書かれています。\n\nデータを外に出さずに、手元で日本語の調査や読解を回したい場面向けのモデル、という位置づけです。知識問題の弱さを見ると、検索や手元の資料と組み合わせて使う前提だと思います（私の見方です）。重みを公開するのか、ライセンスや値段はどうなるのかは、まだ分かりません。12月前半の発表を待つ必要があります。この研究開発には、経済産業省とNEDOのGENIACの支援が入っています。",
+    "followUps": []
+  },
+  {
+    "id": "2125368770172735504",
+    "cardId": "r38_247",
+    "datetime": "2026-11-25T08:54:00+09:00",
+    "postedAt": "2026-11-25T08:19:36+09:00",
+    "source": "timeline",
+    "title": "九州電力送配電に不正アクセスがあり、電力量のデータに加えて、会員情報約2.9万件も漏えいした可能性があります。",
+    "summary": "公式の11/20続報で、11/5発表の電力量側（4,139件）に、会員登録情報29,506件が加わった。この公式発表自体は当ページでは初出。30分値の電力量と会員情報がそろると、ふつうの個人情報より生々しくなり得る（私の見方です）。重なりや侵入経路は未公表。11月末をめどに個別通知。",
+    "tweetId": "2125368770172735504",
+    "tweetIds": [
+      "2125368770172735504"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/connect24h/status/2125368770172735504",
+    "author": {
+      "handle": "connect24h",
+      "name": "connect24h"
+    },
+    "via": null,
+    "text": "これ、他電力向けの送配電システム？あんまり外にて出ているもんじゃないと思うんだが。\n九州電力送配電に不正アクセス、使用電力量や発電電力量が漏えいした可能性 [scan.netsecurity.ne.jp/article/2026/1…](https://scan.netsecurity.ne.jp/article/2026/11/25/56896.html) @ScanNetSecurityより",
+    "images": [],
+    "deepDive": "#九州電力送配電に不正アクセスがあり、電力量のデータに加えて、会員情報約2.9万件も漏えいした可能性があります。\n**タイムラインから：九州電力送配電に不正アクセスがあり、電力量のデータに加えて、会員情報約2.9万件も漏えいした可能性があります。**\n[connect24hさんの投稿](https://x.com/connect24h/status/2125368770172735504)（11/25 8:19、日本時間）は、[ScanNetSecurityの記事](https://scan.netsecurity.ne.jp/article/2026/11/25/56896.html)を紹介しています。記事側は、11/5発表の電力量側を中心に書いています。件数と中身は、公式発表で確認しました。\n\n[公式発表（11/5）](https://www.kyuden.co.jp/td/press/2026/261105.html)によると、10/30にシステムで不自然なエラーを検知し、緊急に止めています。この時点で漏えいの可能性があるとされたのは、使用電力量と売電電力量（月間値と30分値）と、供給地点・受電地点の特定番号、あわせて4,139件です。当時の発表では、氏名、住所、電話、メール、口座情報などの契約情報は含まれていない、とされていました。電力の安定供給に支障はない、とも書かれています。\n\nそのあと[続報（11/20）](https://www.kyuden.co.jp/td/press/2026/261120.html)で、「電力量・料金照会サービス」の会員登録情報29,506件が加わりました。内容は、ログインID、暗号化されたパスワード、氏名、住所、電話、メール、性別、生年月日など、登録されていたものだけです。このうち997件には、口座番号の一部とお客さま番号も含まれます。231件には、電力量と概算料金（1ヶ月未満）も含まれます。対象は、離島のお客さまと、九州本土で売電契約をしているお客さまのうち、会員登録した一部です。10/30以降はシステムをネットワークから切り離しており、これ以上漏えいする可能性はない、と公式は書いています。サービスは止まったままで、対象者には11月末をめどに個別に通知する、とのことです。\n\n30分ごとの電力量は、在宅や生活のリズムが推測できるデータです。続報で住所などの会員情報も加わったので、両方がそろうと、ふつうの個人情報より生々しくなり得ます（私の見方です）。ただし公式は、ふたつの対象がどこまで重なるかは書いていません。侵入経路などの原因も、まだ公表されていません。",
+    "followUps": []
+  },
+  {
+    "id": "2125366410033717675",
+    "cardId": "r38_246",
+    "datetime": "2026-11-25T08:54:00+09:00",
+    "postedAt": "2026-11-25T08:10:14+09:00",
+    "source": "timeline",
+    "title": "T3 Codeが、ClaudeやCodexの認証ファイルを読んで、利用者の識別に使っていた件です。",
+    "summary": "起動時に ~/.codex/auth.json と ~/.claude.json を開き、アカウントIDをソルトなしのSHA-256でハッシュして利用状況の送信に使っていた。PR #42299 が11/25 5:46（日本時間）にマージされ、自前のランダムなIDに切り替え。更新するまで古いIDを送り続けるとの注記あり。「アップロードしていない」より、頼まれずにほかのツールの認証ファイルを開いていたことのほうが重い（私の見方です）。使っているなら更新したうえで T3CODE_TELEMETRY_ENABLED=false。",
+    "tweetId": "2125366410033717675",
+    "tweetIds": [
+      "2125366410033717675",
+      "2125332390239494211"
+    ],
+    "quoteTweetId": "2125332390239494211",
+    "url": "https://x.com/connect24h/status/2125366410033717675",
+    "author": {
+      "handle": "connect24h",
+      "name": "connect24h"
+    },
+    "via": null,
+    "text": "Theoさん、オープンソースCEOとしてお気持表明立派だけど、ハッシュでユーザー識別していた件、GDPR的にアウト寄りです。カリフォルニア法でも「メタデータだから」では逃げらんのよね。識別子や行動データは明確に個人情報の範囲なんですわ。CSIRT目線だと「ファイルをアップロードしてない」は言い訳にならず、「読み取ってハッシュした」時点で処理が始まっているわけですよ。やりたいことは応援しますが、手段とやっちゃいけないことの線引きが曖昧過ぎるのが突っ込まれる原因なのでは。",
+    "images": [],
+    "deepDive": "#T3 Codeが、ClaudeやCodexの認証ファイルを読んで、利用者の識別に使っていた件です。\n**タイムラインから：T3 Codeが、ClaudeやCodexの認証ファイルを読んで、利用者の識別に使っていた件です。**\n[connect24hさんの投稿](https://x.com/connect24h/status/2125366410033717675)（11/25 8:10、日本時間）は、[Theoさん（@theo）の釈明](https://x.com/theo/status/2125332390239494211)（11/25 5:55、いいね約4,100）を引用しています。「ハッシュにしても識別子は個人情報で、読み取ってハッシュにした時点で処理が始まっている」という指摘です。\n\n事実は、公式の[PR #42299](https://github.com/pingdotgg/t3code/pull/42299)で確認できます。T3 Codeは起動時に `~/.codex/auth.json` と `~/.claude.json` を開き、中のアカウントIDをソルトなしのSHA-256でハッシュして、利用状況の送信に使っていました。PRの本文にも、「利用者は、T3 Codeに識別されるためにそれらへサインインしたわけではない」と書かれています。この変更は11/25 5:46（日本時間）にマージされ、いまはT3 Codeが自分で作ったランダムなIDだけを使う、とのことです。ただしPRには、「今のリリースは、更新するまで古いIDを送り続ける」とあります。\n\nTheoさんは、ファイルのアップロードや、プロンプト・応答・ファイルパスの収集は一度もしていない、と説明しています。そのうえで、自分のイベント95,789件（100MB超）を公開しました。一方、[Issue #42283](https://github.com/pingdotgg/t3code/issues/42283)では、以前のサイトにあった「opt-inのみ」という表記が消えたことが問題にされています。設定画面からオプトアウトできるようにする提案も、何度も閉じられていました。\n\n中身が漏れたかどうかより、「ほかのツールの認証ファイルを、頼まれずに開いていた」ことのほうが重い、というのが私の見方です。エージェントや開発ツールに、手元の秘密情報をどこまで見せるか、という論点そのものです。使っているなら、更新したうえで、サーバーを起動する前に環境変数 `T3CODE_TELEMETRY_ENABLED=false` を入れておくのが安全です（[公式の説明](https://github.com/pingdotgg/t3code/blob/main/docs/user/telemetry.md)）。",
+    "followUps": [
+      {
+        "datetime": "2026-11-25T11:55:00+09:00",
+        "clock": "11:55",
+        "title": "",
+        "text": "**タイムラインから：朝お伝えした T3 Code の件の続きです。Theoさんが、その夜にソースを閉じると投稿していました。**\n[connect24hさんの投稿](https://x.com/connect24h/status/2125412095948996634)（11/25 11:11、日本時間）は、「ツールは悪くないが、作者 theo さんの『最終的に儲けたい』姿勢が OSS 勢と相いれないので燃えている」と書いています。ただ、朝お伝えしたとおり、議論の中心は思想の違いというより、ほかのツールの認証ファイルを読んで、識別に使っていたことです。\n\nその前の段階として、Theoさんは 11/25 4:52（日本時間）に、[「Lesson learned. We will close the source of T3 Code tonight.」](https://x.com/theo/status/2125316769858683312) と投稿しています。「You guys are not responsible with open source software.」とも書いています。その約1時間後に、認証ファイルを使わない修正をマージし、長文の説明を出しています。ソースを閉じる、という投稿をあとで取り消したかどうかは、公式の X では確認できませんでした。リポジトリ自体は、その後も公開されたまま修正が入っています。\n\nTheoさんは別の投稿で、「ヘイトキャンペーンのせいで売上が100%以上減った。$0から$0に」と[皮肉で返しています](https://x.com/theo/status/2125376048313606357)。使っているなら、朝お伝えしたとおり、更新したうえで `T3CODE_TELEMETRY_ENABLED=false` を入れておくのが安全です。",
+        "tweetIds": [
+          "2125412095948996634",
+          "2125316769858683312",
+          "2125376048313606357"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "2125289794871963935",
+    "cardId": "r38_248",
+    "datetime": "2026-11-25T08:54:00+09:00",
+    "postedAt": "2026-11-25T03:05:47+09:00",
+    "source": "timeline",
+    "title": "MCPが2周年で、MCPサーバーがSkillsを配れるようになりました。",
+    "summary": "Skills over MCP。人が確認してから破壊的な操作を任せる仕組みがプロトコルの標準に。サーバーから配られる手順書（スキル）が、指示の通り道になるという新しいサプライチェーンの面も出てくる（ここは私の推測です）。",
+    "tweetId": "2125289794871963935",
+    "tweetIds": [
+      "2125289794871963935"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/ClaudeDevs/status/2125289794871963935",
+    "author": {
+      "handle": "ClaudeDevs",
+      "name": "ClaudeDevs"
+    },
+    "via": null,
+    "text": "MCP turns two! What started as a protocol for connecting AI apps to tools and data is evolving to standardize how agents communicate and orchestrate work.\n\nWe’re bringing more of these agentic capabilities to Claude with Skills over MCP and Tasks.",
+    "images": [
+      {
+        "type": "video_preview",
+        "url": "https://pbs.twimg.com/tweet_video_thumb/HX6JrwjXAAEU2N4.jpg"
+      }
+    ],
+    "deepDive": "#MCPが2周年で、MCPサーバーがSkillsを配れるようになりました。\n**タイムラインから：MCPが2周年で、MCPサーバーがSkillsを配れるようになりました。**\n[ClaudeDevsの投稿](https://x.com/ClaudeDevs/status/2125289794871963935)（11/25 3:05、日本時間）と、[公式ブログ](https://claude.com/blog/skills-over-mcp-tasks-and-more)の内容です。\n\nSkills over MCP（パブリックベータ）では、MCPサーバーが、ツールと一緒に、手順書にあたるスキルを配れます。スキルは必要なときだけ読み込まれ、サーバーと一緒に更新されます。例として、Shopify、HubSpot、Atlassianが挙がっています。ClaudeとClaude Codeでは、Pro・Max・Ultraは既定でオン、Teamは管理者が有効にしたとき、Enterpriseは近日対応、とのことです。\n\nTasks（一般提供）では、時間のかかる処理や、エージェントのループをサーバー側で回せます。そのあいだもClaudeは作業を続け、終わったら結果を受け取ります。Elicitation（一般提供）では、お金を使う、データを消すといった操作の前に、サーバーが利用者へ確認を求められます。Supabaseは、有料プロジェクトを作る前と、破壊的なSQLを流す前に確認します。Railwayは、サービスの削除など破壊的な変更の前に確認し、GitHubは、リポジトリを消す前に名前を入力させます。File Uploadsは近日公開で、PDFや表、画像を、会話の文脈を通さずにサーバーへ渡せる、とされています。\n\n規模感として、公式は、SDKが月7億ダウンロード超、Claude向けのコネクタが1万以上、と書いています。どれもMCPのオープンな仕様と拡張として作られているので、対応しているクライアントならClaude以外でも動く、とされています。「エージェントにお金や破壊的な操作を任せる前に、人が確認する」仕組みが、プロトコルの標準になったのは押さえておきたい流れです。一方で、サーバーから配られる手順書（スキル）が、指示の通り道になる、という新しいサプライチェーンの面も出てきます（ここは私の推測です）。",
+    "followUps": []
+  },
+  {
     "id": "2125350726046191635",
     "cardId": "r38_243",
     "datetime": "2026-11-25T07:53:00+09:00",
@@ -3213,7 +3524,17 @@
     "text": "skillsやMCPを評価するためのGitHub Copilot Evalsがプレビューで登場。デモ見た感じだと評価側もプロンプトで入力する方式でお手軽っぽい。Copilotが使える各ツールでプラグイン形式でインストールして利用可能 / [htn.to/49eanC9MEk](https://htn.to/49eanC9MEk)",
     "images": [],
     "deepDive": "#GitHubのCopilotに、自分で作ったスキルやエージェント、MCPのツールを、テストする機能「Copilot Evals」が出ました。\n[Kenta.Kaseさんの投稿](https://x.com/Kesin11/status/2123223376940691814)へのいいねです。\n[Kesin11さんの投稿](https://x.com/Kesin11/status/2123223376940691814)と、[GitHubの公式の告知](https://github.blog/changelog/2026-11-17-github-copilot-evals-is-now-in-public-preview/)によるものです。今は、試しに使える段階です。\n- **しくみ：** 本番に近い仕事をエージェントに渡して、結果だけでなく、途中でどう動いたかも、自動で調べます。\n- **記録と採点：** テストには、Microsoftの[Vally](https://microsoft.github.io/vally/)を使います。どのツールを呼んだかや、どれだけトークンを使ったかを、すべて記録します。そして、合格か、速さはどうか、費用はどうかまで、点数にします。\n- **使い方：** スキルやMCPを直したあとに、同じテストをもう一度動かします。そうすると、前より悪くなっていないかを確かめられます。",
-    "followUps": []
+    "followUps": [
+      {
+        "datetime": "2026-11-25T11:55:00+09:00",
+        "clock": "11:55",
+        "title": "",
+        "text": "**いいねから：前にお伝えした Copilot Evals について、CLI向けの入れ方と、実行時の注意がはっきりしました。あわせて、GitHub Japan の「エージェントのROI」講演資料です。**\n[Waldek Mastykarzさん（DevRel @ Microsoft）の投稿](https://x.com/waldekm/status/2125147412582781064)（11/24 17:40、日本時間）です。`/eval` と打つと、自作の skill・custom agent・MCP ツール向けの評価を書いて実行し、どのチェックがなぜ落ちたかまで見せてくれます。skill を直したら、同じ評価をもう一度回して前回と比べられます。Waldekさんは「モデルやエージェントは数週間ごとに変わるので、同じ評価を回し直せば、そのスキルがまだ役に立っているか分かる」と書いています。\n\n[github/evals のリリース](https://github.com/github/evals/releases)（Plugin 0.24.75）によると、Copilot CLI では `copilot plugin marketplace add github/evals` と `copilot plugin install eval@github-copilot-evals` で入れます。中には `/eval create`・`review`・`improve`・`run`・`compare`・`setup` の6つの skill と、15ツール入りの MCP サーバーが入っています。公式の案内どおり、実行前には毎回承認が必要です。\n\n気になるのは、[公式紹介ページ](https://aka.ms/evals)の承認画面の例です。「Task and grading requests may use tokens/credits; costs are uncapped（コストに上限なし）」「No OS/network sandbox. Tools can change files and access the network; credentials reach child processes（サンドボックスなし。認証情報は子プロセスに渡る）」と書かれています。ページは「説明用のワークフロー例」と断っていますが、評価の実行は、本物のエージェントが本物の権限で動く、という意味です。自作 skill の劣化を見つける回帰テストとしては相性がよい一方で、まずは秘密を置いていない作業ディレクトリや、使い捨て環境で試すのが安全だと思います（私の見方です）。",
+        "tweetIds": [
+          "2125147412582781064"
+        ]
+      }
+    ]
   },
   {
     "id": "2123211461690609922",
@@ -4097,6 +4418,15 @@
         "tweetIds": [
           "2124688803487158612",
           "2124843567466303836"
+        ]
+      },
+      {
+        "datetime": "2026-11-25T09:55:00+09:00",
+        "clock": "09:55",
+        "title": "",
+        "text": "**タイムラインから：楽天証券の情報漏えい第2報で、名前や住所まで漏れたのは約441万件と確定しました。**\n[GOROmanさんの投稿](https://x.com/GOROman/status/2125379545889231359)（11/25 9:02、日本時間）が、[公式の第2報](https://www.rakuten-sec.co.jp/smartphone/info/info20261124-04.html)（11/24）をシェアしていました。件数と項目が、今回はっきりしました。テスト環境に本番データを伏せずに置いていた経緯は、前にお伝えしたとおりです。\n\n氏名、カナ氏名、生年月日、住所、電話番号などが漏れたのは、約441万件です。そのうち約322万口座は口座を持っている人、約119万件は口座を開いていない人の情報です。公式は、申し込みを途中でやめて、あらためて申し込んだ場合など、重複があり得ると注記しています。商品別の預り資産の残高情報は約168万件（保有銘柄や取引情報、「マネーブリッジ」の残高は含まない）、自己申告の資産情報は約271万件、自己申告の年収情報は約1.4万件です。年収と資産は、選んだ区分の番号だけで、詳しい金額は含まれない、と公式は書いています。\n\n第1報のあとに、性別、国籍、FAX番号、入金先口座情報（楽天証券の口座の情報）、口座の開設・受付・解約の状況、口座登録のアンケート、口座の登録状況の7項目も漏れていたことが分かりました。お客様コードとログインIDだけが漏れたのは、約1,198万口座です。第1報では最大約1,125万でした。このログインIDは、楽天IDとは別です。\n\nパスワードと暗証番号など、取引に必要な情報の漏えいは確認されていません。いまのところ、この件による不正なアクセスや不正な取引も確認されていない、と公式は書いています。口座がある人だけでなく、開設を途中でやめた人の名前や住所、電話番号も対象に入っています。楽天証券を名乗る不審な連絡には、注意したほうがよさそうです。",
+        "tweetIds": [
+          "2125379545889231359"
         ]
       }
     ]

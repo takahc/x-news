@@ -1,4 +1,36 @@
 id,datetime,source,author,url,text,summary
+2125430384104255720,2026-11-25T12:51:00+09:00,timeline,publickey,https://x.com/publickey/status/2125430384104255720,"AWS、DynamoDB互換データベースをローカルマシンで構築可能にするオープンソース「ExtendDB」がバージョン1.0に到達
+[publickey1.jp/blog/26/awsdyn…](https://www.publickey1.jp/blog/26/awsdynamodbextenddb10.html)",ローカルで DynamoDB 互換を試せる。移行の前に公式の差分一覧を見たほうがよい（私の見方です）。
+2125430336545001495,2026-11-25T12:51:00+09:00,timeline,publickey,https://x.com/publickey/status/2125430336545001495,"jQuery 4.1正式版がリリース、内部実装をquerySelectorAllに統一でより高速に。jQuery 3.x系最後となるjQuery 3.8も同時リリース
+[publickey1.jp/blog/26/jquery…](https://www.publickey1.jp/blog/26/jquery_41queryselectoralljquery_3xjquery_38.html)",4.1 は内部を querySelectorAll に統一するなど。3.8 は見送りのためのリリースで、復活ではない。両方でセレクタ処理の ReDoS を修正。3.x が残る案件は少なくとも 3.8 に上げ、そのうえで 4.x へ（私の見方です）。
+2125355657541165248,2026-11-25T12:51:00+09:00,likes,smark_x,https://x.com/smark_x/status/2125355657541165248,なんちゅー言語化だ、、むかし死ぬほど指示が分かりづらかった上司に見せてやりたい,川岸宏司さんの記事の紹介。気持ち・ほめ・頼みを、撮影できる具体に言い換える。AIエージェントへの指示にも当てはまる（私の見方です）。既存の謝罪の書き方 r38_226（同じ著者の別の記事）とは別件。
+2125240230240473552,2026-11-25T11:55:00+09:00,likes,moulongzhang,https://x.com/moulongzhang/status/2125240230240473552,"GitHub Connect Tokyo、メインセッション2の資料を公開しました！
+
+テーマは「2026年のエージェントのROI」
+
+好評だったUniverse / Igniteの新機能を詰め込んだ開発デモは、アーカイブ公開までのお楽しみ👀
+
+ご参加ありがとうございました！
+[speakerdeck.com/moulongzhang/2…](https://speakerdeck.com/moulongzhang/20261124-githubconnecttokyo-session2)
+#GitHubConnectTokyo",GitHub Connect Tokyo 2026 の講演資料。エージェント起点のPRは増えたが、レビュー時間・インシデント・QA時間も増えた。「実装は任せて、検証を自動化する」方向はそのまま使える（私の見方です）。同じ送信に含まれた Copilot Evals の CLI 案内（r38_119 への続報）とは別件。
+2125219720723058993,2026-11-25T11:55:00+09:00,likes,osanpo_icochan,https://x.com/osanpo_icochan/status/2125219720723058993,"「休日メトロ放題」っていう1ヶ月2000円で土日祝日東京メトロ乗り放題になるやつ
+ありえないくらい元取れてて神",2023年11月開始のメトポのサービス。対象は本登録したPASMOの、土日祝の東京メトロ運賃で、翌月ポイント還元。週末に2往復する月なら元が取れる計算（私の見方です）。月末までの申し込み。月の途中からは不可。
+2125402612111720776,2026-11-25T10:56:00+09:00,timeline,tszzl,https://x.com/tszzl/status/2125402612111720776,total goodfire victory,Anthropic Fellows の論文。出力への寄与でニューロンを読む。オープンウェイトや他人のLoRAの監査に使えそうだが、API専用モデルでは同じ調べ方はできない（私の見方です）。既存の Goodfire エッセイとは別件（題名は同じだが、比較であって続報ではない）。
+2125393802554757618,2026-11-25T10:56:00+09:00,timeline,rrwilliams,https://x.com/rrwilliams/status/2125393802554757618,"Apparently Strassen was right: the matrix mult exponent is (exactly) 2.25
+[github.com/openai/math/tr…](https://github.com/openai/math/tree/main/preprints/The-matrix-multiplication-exponent-is-nine-fourths-November-24-2026)",n×n の行列積には、どんな体でも少なくとも ⌈n^{9/4}/2⌉ 回の、スカラー以外の乗算か除算がいる、という主張。正しければ ω=2 は成り立たない。Lean での形式化は除算なしの回路に限定。専門家の検証はこれからで、実務の計算がすぐ速くなる話ではない。
+2125387934203560416,2026-11-25T09:55:00+09:00,timeline,SakanaAILabs,https://x.com/SakanaAILabs/status/2125387934203560416,"「Sakana Namazu Small」（30Bモデル）を発表
+
+[sakana.ai/namazu-small/](https://sakana.ai/namazu-small/)
+
+NVIDIA Nemotron 3 Nanoをベースに継続事前学習・事後学習を行い、25ベンチマーク平均で約4倍規模の120Bモデルを上回りました。
+
+長文読解やWeb検索での調査に強く、オンプレミス提供の詳細は12月前半にお知らせします。",Nemotron 3 Nano（30B-A3B）ベースの思考モデル。調査や長文読解は強く、検索なしの知識問題は弱い。検索や手元の資料と組み合わせて使う前提（私の見方です）。既存の Sawara、Applied Research Lab r38_217、Security Research Group r38_159 とは別件。オンプレは12月前半に発表。重み・ライセンス・価格は未公表。GENIAC支援。
+2125368770172735504,2026-11-25T08:54:00+09:00,timeline,connect24h,https://x.com/connect24h/status/2125368770172735504,"これ、他電力向けの送配電システム？あんまり外にて出ているもんじゃないと思うんだが。
+九州電力送配電に不正アクセス、使用電力量や発電電力量が漏えいした可能性 [scan.netsecurity.ne.jp/article/2026/1…](https://scan.netsecurity.ne.jp/article/2026/11/25/56896.html) @ScanNetSecurityより","公式の11/20続報で、11/5発表の電力量側（4,139件）に、会員登録情報29,506件が加わった。この公式発表自体は当ページでは初出。30分値の電力量と会員情報がそろると、ふつうの個人情報より生々しくなり得る（私の見方です）。重なりや侵入経路は未公表。11月末をめどに個別通知。"
+2125366410033717675,2026-11-25T08:54:00+09:00,timeline,connect24h,https://x.com/connect24h/status/2125366410033717675,Theoさん、オープンソースCEOとしてお気持表明立派だけど、ハッシュでユーザー識別していた件、GDPR的にアウト寄りです。カリフォルニア法でも「メタデータだから」では逃げらんのよね。識別子や行動データは明確に個人情報の範囲なんですわ。CSIRT目線だと「ファイルをアップロードしてない」は言い訳にならず、「読み取ってハッシュした」時点で処理が始まっているわけですよ。やりたいことは応援しますが、手段とやっちゃいけないことの線引きが曖昧過ぎるのが突っ込まれる原因なのでは。,起動時に ~/.codex/auth.json と ~/.claude.json を開き、アカウントIDをソルトなしのSHA-256でハッシュして利用状況の送信に使っていた。PR #42299 が11/25 5:46（日本時間）にマージされ、自前のランダムなIDに切り替え。更新するまで古いIDを送り続けるとの注記あり。「アップロードしていない」より、頼まれずにほかのツールの認証ファイルを開いていたことのほうが重い（私の見方です）。使っているなら更新したうえで T3CODE_TELEMETRY_ENABLED=false。
+2125289794871963935,2026-11-25T08:54:00+09:00,timeline,ClaudeDevs,https://x.com/ClaudeDevs/status/2125289794871963935,"MCP turns two! What started as a protocol for connecting AI apps to tools and data is evolving to standardize how agents communicate and orchestrate work.
+
+We’re bringing more of these agentic capabilities to Claude with Skills over MCP and Tasks.",Skills over MCP。人が確認してから破壊的な操作を任せる仕組みがプロトコルの標準に。サーバーから配られる手順書（スキル）が、指示の通り道になるという新しいサプライチェーンの面も出てくる（ここは私の推測です）。
 2125350726046191635,2026-11-25T07:53:00+09:00,timeline,connect24h,https://x.com/connect24h/status/2125350726046191635,"これはしんどい。京王グループへのランサムウェア攻撃で、最大約1,063万人の顧客・取引先情報に漏洩の可能性。
 
 京王電鉄が11月24日に調査結果を公表。
