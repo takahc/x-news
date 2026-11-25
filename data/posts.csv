@@ -1,4 +1,170 @@
 id,datetime,source,author,url,text,summary
+2125350726046191635,2026-11-25T07:53:00+09:00,timeline,connect24h,https://x.com/connect24h/status/2125350726046191635,"これはしんどい。京王グループへのランサムウェア攻撃で、最大約1,063万人の顧客・取引先情報に漏洩の可能性。
+
+京王電鉄が11月24日に調査結果を公表。
+
+■ 漏洩が確認された情報
+・従業員、退職者、扶養家族：約1.2万人
+・採用応募者：約160人
+・賃貸物件契約者など：約150人
+
+■ 漏洩の可能性がある情報
+・顧客、取引先など：約1,063万人
+・採用応募者：約36万人
+・従業員、退職者、扶養家族：約7.7万人
+
+特に注意が必要なのは情報の種類。
+
+・パスポートの写し：約160万件
+・クレジットカード番号：約2万件以上
+・本人確認書類：約4.6万件
+・マイナンバー関連書類：124件
+
+※いずれも漏洩の可能性がある情報に含まれる内訳であり、全件の漏洩が確定したわけではありません。
+
+9月26日に攻撃を検知し、11月24日に個人情報保護委員会へ確報を提出。
+
+対象は鉄道事業だけでなく、ホテル、不動産、百貨店、観光、交通など京王グループの広範な事業に及びます。
+
+現時点で二次被害は確認されていません。
+
+利用歴がある方は、カードの利用明細や京王グループを装った不審なメール・SMSに注意してください。
+
+今回の事案で重要なのは、グループ企業全体にまたがる個人情報管理とランサムウェア対策です。
+
+侵害されたシステムの詳細や初期侵入経路は、今回の公表資料では明らかにされていません。
+
+公式発表（2026年11月24日）
+[keio.co.jp/news/update/ne…](https://www.keio.co.jp/news/update/news_release/news_release2026/pdf/nr20261124_newsrelease.pdf)",11月24日に調査結果を公表。漏洩が確認された従業員などは約1.2万人。投稿の「パスポートの写し約160万件」は、公式では海外宿泊客の「情報」の件数。写しは番号のみで件数は別注記。
+2125347305813692792,2026-11-25T07:53:00+09:00,timeline,hillbig,https://x.com/hillbig/status/2125347305813692792,"最小全域木を決定論的に線形時間で求めるアルゴリズムが、AIを活用した研究によって発見された。
+
+“A Deterministic Linear Time Algorithm for Minimum Spanning Tree”
+
+最小全域木問題は、重み付き無向グラフにおいて、すべての頂点を連結する辺の重みの総和が最小となる木を求める問題であり、グラフアルゴリズムにおける最も基本的な問題の一つである。
+
+頂点数をn、辺数をmとしたとき、乱択アルゴリズムでは1995年に期待計算時間O(m)が達成されていた。
+
+一方、任意の実数の重みを対象とする比較ベースの決定論的アルゴリズムでは、線形時間O(m)は長らく達成されていなかった。
+
+入力を読み込むだけでもΩ(m)の時間が必要であるため、O(m)は漸近的に最適な計算時間である。
+
+今回の証明では、2002年にPettieとRamachandranが示した、最小全域木問題の最適な比較決定木の深さと、決定論的アルゴリズムの計算時間が漸近的に一致するという結果を利用している。そのため、重みの比較回数が O(m)となる決定木の存在を示せばよい。
+
+まず、最小全域木を求める際、ある辺の両端が、その辺よりも軽い辺だけで既に連結されていれば、その辺を最小全域木の候補から除外できる。
+
+今回の手法では、この性質を利用し、少数の辺からなる森を構築することで、大部分の辺を候補から除外する。具体的には、一部の頂点を代表点として選び、各頂点を代表点に接続することで、元の辺を代表点間の辺に射影し、より少ない頂点からなるグラフ上で再帰的に問題を解く。
+
+さらに、取り得る比較結果のパターン数が限定されていることを利用し、少数の比較から各辺の処理方法を近似的に推定する。推定の誤りを許容しつつ、その処理に必要な比較回数も抑えることで、全体の比較回数を線形にできることを証明している。
+
+今回は、AIが一度に最終的な解を発見したのではなく、より弱い結果を段階的に改善することで、最終的な解に到達している。
+
+15個のAIエージェントを動作させ、既存の最良アルゴリズムを漸近的に改善する結果が得られた。その後、得られた結果をもとにさらなる改善を繰り返した。最後に、それまでに得られた一連の研究成果をAIに与えることで、線形時間アルゴリズムの発見に成功した。
+
+著者らによると、証明の主要なアイデアはAIによって生成され、人間は主に探索方針の修正、証明の検証、簡略化、明確化を担当した。
+
+コメント
+===
+今回のアルゴリズムは計算時間の定数因子が非常に大きいと考えられ、実用的な高速化に直結するものではないが、計算量理論上は重要な成果である。
+
+他にも多くの重要な未解決問題に対して、同様のアプローチによる研究が進められていると思われる。今後しばらくは、さまざまな分野で長年の未解決問題が相次いで解決されていくのではないだろうか。",arXiv:2611.31187。Pettie–Ramachandran のアルゴリズムが線形だと示した形。査読前で、Lean などによる形式検証は今回確認できていない。既存の標本圧縮予想 r38_205 とは別件。形式検証でどこまで固められるかが次の見どころ（私の見方です）。
+2125315491522650299,2026-11-25T07:53:00+09:00,timeline,ClaudeDevs,https://x.com/ClaudeDevs/status/2125315491522650299,"You can now install Claude artifacts as desktop apps on Mac and Windows.
+
+Ask Claude to build an artifact, click ""Install as app"", and open it like any other app. It can use your connectors and, if you allow it, send notifications or add a menu bar item.",全プランでベータ。「フルアクセス」は実行とファイル変更をその都度確認しない。他人が作ったアプリは既定の権限のまま使うのが安全（私の見方です）。既存の Claude Ship や GitHub Issue artifacts とは別件。
+2125219624614838745,2026-11-24T22:54:00+09:00,timeline,connect24h,https://x.com/connect24h/status/2125219624614838745,"めっちゃ気持ち悪いんですけど！
+
+突然、身に覚えのないPayPayの認証コードがたった今、SMSで届いたんですよ。
+
+送信元は「050-3199-1197」。
+
+調べてみると、PayPayが正規の認証SMSの送信に使用した実績のある電話番号だった。認証コードの形式も正規のものと一致してましたね。
+
+偽のSMSによるフィッシングではなく、第三者の操作によって正規の認証SMSが発行された可能性があります。
+
+考えられるのは、
+・不正ログインの試行
+・パスワードの再設定
+・新規アカウント登録の試行
+・単純な電話番号の誤入力
+
+ただし、認証SMSが届いたという事実だけでは、パスワードが漏洩しているのか、電話番号だけで認証が試行されたのかは判断できません。
+
+先日、娘がクレジットカードの不正利用被害に遭ったばかりなので、どうしても気になる。もちろん、両者の関連性を示す証拠は何もない。
+
+身に覚えのない認証SMSが届いた場合は、認証コードを第三者に教えず、ログイン端末や決済履歴を確認し、必要に応じてパスワードを変更することをおすすめします。
+
+情報漏洩が相次ぐ昨今、こうした認証通知も見過ごせないですね。
+
+PayPay公式：
+[paypay.ne.jp/help/](https://paypay.ne.jp/help/)",正規の認証SMSが第三者の操作で発行された可能性がある、との指摘。日本の個人の番号に1通だけ届く場合は、誤入力かログインの試行の可能性のほうが高い（私の見方です）。コードは教えず、公式の手順で端末と履歴を確認する。既存の偽アプリによる遠隔操作の件とは別件。
+2125216668460675557,2026-11-24T22:54:00+09:00,timeline,GHCopilotLog,https://x.com/GHCopilotLog/status/2125216668460675557,"🚀✨ Copilot CLI v1.0.115 released!
+
+379 features & enhancements in this release
+
+Top features:
+• Enable structured clarification questions in ACP editors supporting forms ✨
+• Add Gemini 4 Hydrogen to model picker with Extra High reasoning support 🔥
+• Support GPT-6.2 Astra model
+• Manage configured provider models directly from /model
+• MAI-Code-2-Flash added to /model picker under New models
+• Add Ctrl+X then A in /model to add and optionally switch to custom provider models locally
+• Show current model and reasoning effort in footer when resuming a session
+• New and resumed ACP sessions honor image generation setting, enabling image generation by default where supported
+• Allow native extensions to activate lazily when users invoke declared slash commands
+• /sandbox policy now shows GitHub account sandboxed gh commands use
+• Enable Windows sandbox package queries by default; opt-out with sandbox.userPolicy.capabilities = []
+• Allow specific macOS Mach service lookups in sandboxed commands without enabling Keychain access
+
+Enhancements:
+• Add showTimelineTimestamps setting to display start, end, and elapsed durations on timeline items ⏳
+• /worktree new reliably shows worktree creation confirmation after switching session
+• Allow sandboxed Git add and commit ops in repositories with many linked worktrees or large .git dirs
+• SDK connection errors no longer overwrite interactive prompt when using --ui-server
+• /worktree and /move show Git reason on worktree operation failures instead of generic error
+• Keep detached terminals visible and terminal statuses updating in shared sessions
+• /agent wizard retains typed text in description field immediately after submitting agent name
+• Assisted Permissions keeps reviewing later requests after messages or answers of up to 128,000 chars
+• Approving custom tool or memory requests clears queued prompts covered by that approval
+• Assisted Permissions no longer prompts for parallel tool calls already covered by a granted approval
+• Clients using --ui-server can attach to resumed CLI session as soon as server listens
+• Organization-required plugins can install on next attempt after a temporary policy change
+• /delegate explains login needed when not signed in instead of no-op
+• On Unix, canceling shell commands stops orphaned child processes in shell process group
+• Sessions sidebar shows Copilot Fusion sessions as working while choosing model in background
+• Switching from specific model to Copilot Fusion acknowledges requested routing profile correctly
+• Prevent plugin initialization race blocking new sessions or causing resume failures
+• On Windows, clean up Git child processes after parent exit (commands, hooks, language server checks)
+• Keep mention picker visible until empty search finishes for normal Ctrl+Y and Tab resumption
+• Rapid switching from Plan to Autopilot keeps Autopilot confirmation visible before sending prompt
+• /diff shows staged files and latest edits in repositories with no commits
+• Closing session before first prompt skips sessionEnd hooks to avoid premature cleanup
+• /chronicle cost-tips count usage from SDK app sessions before CLI resume
+
+Bug fixes:
+• Fix orphaned background npm Copilot CLI process after stopping during startup
+• Fix plugin initialization race causing new session blocks or resume failures
+• Prevent internal error wrapper in /worktree and /move Git failures by showing Git reason
+• Fix issue with assisted permissions prompting repeatedly for covered tool calls
+• Fix session sidebar displaying incorrect statuses for Copilot Fusion model selection
+• Stop orphaned child processes correctly when canceling shell commands on Unix
+• Fix detached terminals disappearing prematurely in shared sessions
+• Fix UI server client attach only after server listen delay
+• Resolve missing confirmation message reliably after worktree creation
+• Preserve typed text instantly on /agent wizard agent name submission during validation
+
+Misc:
+• Long sessions no longer keep thousands of past session events to reduce memory
+• Update tooling to handle image generation setting defaults in ACP sessions
+• Improved docs for managing sandbox user policies and capabilities
+• Add clearer explanations and user guidance in /delegate command
+• Harden start/stop behavior of npm-installed CLI for stability
+• Improve clarity and telemetry on session resume UX and model routing
+• Continue refining session lifecycle hooks for better extensibility
+
+[github.com/github/copilot…](https://github.com/github/copilot-cli/releases/tag/v1.0.115)
+
+#GitHubCopilotCLI",Gemini 4 Hydrogen、GPT-6.2 Astra、MAI-Code-2-Flash が /model に入る。再開後のクレジット上限や、セッション削除時の MCP OAuth トークン削除など、長時間作業と権限まわりの修正が中心。既存の M365 Copilot CLI r38_113、Copilot SDK r38_114、MAI Code 2 r38_210 とは別件。
+2125146047379030165,2026-11-24T22:54:00+09:00,likes,NGO275,https://x.com/NGO275/status/2125146047379030165,"まだまだ採用しているので、とりあえずでもいいので、連絡いただけると嬉しいです！特にロボットに興味がある学生の方！ロボットを触れる数少ない開発現場です！
+[job-boards.greenhouse.io/omakaserobotic…](https://job-boards.greenhouse.io/omakaserobotics/jobs/6102650004)",ZEALSのロボット事業。セミヒューマノイド「D1」は500万円から、OSとサポートは月20万円から。三井住友海上が対人とサイバーのリスクを保険で引き受けている、という報道。
 2125201709852934598,2026-11-24T21:51:00+09:00,timeline,GoogleDeepMind,https://x.com/GoogleDeepMind/status/2125201709852934598,"We worked with @mencap_charity and people with learning disabilities to build the Easy Read Co-Creator Tool with Gemini.
 
 It turns complex health, finance and everyday documents into clear words and images in minutes rather than weeks – with human experts reviewing every version. ↓",人の専門家が確認・編集・承認することが前提。対象は文書を作る組織。日本の「やさしい日本語」の場面にもこの考え方は使えそう（私の見方です）。
