@@ -1,4 +1,53 @@
 id,datetime,source,author,url,text,summary
+2125509665912242249,2026-11-25T17:50:00+09:00,timeline,tks,https://x.com/tks/status/2125509665912242249,"中国オープンソース大会で会った #MotrixSim が #OpenArm で動いた！
+
+-Mujocoより正確で物理演算反映
+-グラボなしやAMD環境でも速い
+-オープンソース
+#中国オープンソース",「MuJoCo より正確」「グラボなしや AMD の環境でも速い」は投稿者および公式デモの主張で、独自には測っていない。リポジトリ表記は Apache-2.0 だが、シミュレーション本体は別配布のバイナリで、コミュニティ版は学術研究・学習用のみ。収益化するアプリに組み込むなら、ライセンスとランタイムの利用条件が分かれている点がネック。
+2125501002166292634,2026-11-25T17:50:00+09:00,timeline,GithubProjects,https://x.com/GithubProjects/status/2125501002166292634,"An open-source CLI agent that reads a failed CI run, traces the cause, and pushes a fix for review.
+
+Explore it here:
+[osp.fyi/opensre](https://osp.fyi/opensre)",Tracer-Cloud の public alpha、Apache 2.0。修正には GitHub トークンの書き込み権限が要る。README は自前のモデルとうたう一方、公式ドキュメントはホスト型モデルが有効になると明記。手軽な設定のままだと、ビルドログがホスト側に送られる可能性。個人のリポジトリなら、まずは読み取り専用のレポートから試すのが安全。紹介アカウント GithubProjects は非公式。
+2125499113756397776,2026-11-25T17:50:00+09:00,timeline,lumin,https://x.com/lumin/status/2125499113756397776,"CISOに必要な権限：
+・システム停止権
+・ネットワーク遮断権
+・システム公開拒否権
+・セキュリティ検査・監査権
+・セキュリティ予算執行権
+・経営陣への直接報告権
+これらがないCISOは名ばかりCISOです。",システムを止める、ネットワークを遮断する、公開を拒否する、検査・監査する、予算を使う、経営陣に直接報告する、の6つの権限。金融庁のガイドラインなどにも、停止・遮断の判断や直接報告が書かれている。個人開発でも、漏えいに気づいたらすぐ止める・遮断する手順を前もって決めておくのが、この話の実践版。
+2125495424891175217,2026-11-25T16:55:00+09:00,timeline,connect24h,https://x.com/connect24h/status/2125495424891175217,"AIに鍵を見せずに仕事をさせる。その設計を評価するなら、CSIRTは「実行権限から鍵に届かないか」まで確認したいですね。
+
+アドウェイズによる1Password × Claude Codeの検証がめちゃくちゃ、参考になる。機能紹介にとどまらず、権限・承認・監査ログまで実際に確かめています。
+
+・op runで実行時に秘密情報を渡し、コードや.envには参照先だけを書く
+・サービスアカウントは特定Vaultの読み取りに限定し、対象外Vaultの参照と書き込みが拒否されることを確認
+・Environmentsは名前付きパイプを使い、通常のファイルとしてディスクに値を置かない
+・MCPのツール一覧には秘密情報の名前を取得する機能があるが、値を返すツールはない
+
+ここから先の検証が実務的。
+op runの出力マスクは、値を逆順にするとすり抜けた。Claudeが値の表示を拒否したのは、同社が適用していたAI側の組織ポリシー。サービスアカウント経由の実行には承認画面が出ず、MCPの初回承認では作成・更新などの権限にも最初からチェックが入っていた。
+
+監査ログも、CLIによる値の取得は記録されたが、Environmentsの読み取りとMCP経由の操作は「今回の確認では見当たらなかった」としている。製品全体で記録されないと断定せず、検証範囲を明示している点も丁寧。Adwaysエンジニアブログ
+
+自社のCSIRTで試すなら、AIが実行できるコマンド、取得できる鍵、その鍵で操作できる範囲をつなげて見る。事故時に、鍵の取得から利用先の操作までログで追えるか。トークンを失効させたら、どこまで止まるか。
+
+「チャットに鍵が出なかった」の先に、確認したいことが具体的に見えてくる良記事ですね。ちょうど導入を検討しているので非常に参考になります。
+
+[blog.engineer.adways.net/entry/2026/11/…](https://blog.engineer.adways.net/entry/2026/11/25/120000)",op run や Environments、権限の絞り込みは有効だった一方、出力マスクはすり抜け得る。サービスアカウントのトークン経由では承認なし。AI が断ってくれることに頼らず、鍵に届く道を絞り、動ける範囲を狭め、ログで追えるようにする（私の見方です）。既存の tsumiki パスキー案内 r38_30 とは別件。
+2125481615686300059,2026-11-25T15:53:00+09:00,timeline,rauchg,https://x.com/rauchg/status/2125481615686300059,"𝚕𝚜𝚡: Finder in the terminal.
+
+One-shotted with fx and Gemini Nano + DeepSeek subagents⁰.
+
+I instructed fx to use the Kitty graphics protocol¹ and build inline and interactive modes. It implemented CLI Quick Look of its own volition 😁
+
+⁰ DS actually did all the heavy lifting. This was very cheap! I just told it to use DS 1017 fast subagents.
+¹ This allows a CLI to essentially render anything! A full OS, if you will. I will.",自社のコーディングエージェント fx（Apache 2.0、実験段階）に作成させた。Quick Look 風のプレビューは指示していないのに実装された。小さいモデルと安いモデルを役割で分けて組み合わせるやり方は、コストを抑えて長い作業を回すときの参考（私の見方です）。公開リポジトリは未確認。既存の xeet r38_54 とは別件。
+2125465115898290684,2026-11-25T14:54:00+09:00,timeline,ashtom,https://x.com/ashtom/status/2125465115898290684,"In July, we brought Git hosting to India. Today in Bengaluru, we announced the next piece: projects in @GoEntire India region can now use @sarvamai models to review code changes on Trails.",コードの保管、レビュー用エージェントの実行、推論をインド国内で行う、という仕組み。Trails はプルリクエストの代わりになる、エージェント前提の流れ。コードや推論をどこで処理するかが、AI ツールを選ぶ基準の一つになってきている（私の見方です）。
+2125463795212669295,2026-11-25T14:54:00+09:00,timeline,GOROman,https://x.com/GOROman/status/2125463795212669295,タワレコ、会員情報約1100万件流出　「3年以内の退会者」も対象　通販サイト停止続く - ITmedia NEWS [itmedia.co.jp/news/article/2…](https://www.itmedia.co.jp/news/article/2611/25/2000003439/),"11/19に不正アクセスを確認し、サイトは調査のため停止中。ログイン情報約1,021万件、会員情報約278万件、配送先約77万件。クレジットカード情報は含まれない。退会後3年以内の人も対象。ハッシュの方式は未公表。退会後のデータをいつ消すかを決めておく価値は大きい（私の見方です）。"
+2125450074650202611,2026-11-25T13:53:00+09:00,timeline,gorilla0513,https://x.com/gorilla0513/status/2125450074650202611,"なるほどなぁ
+面白い",RISC-V（RV64）の型付きアセンブリ。Lean 版の検査器は健全性を証明済み。すぐに個人開発で使える段階ではなく、対象は RISC-V だけで、ループ不変条件などの注釈も自分で書く必要がある。証明されているのは、彼らの意味論のうえで型検査が健全であること（私の見方です）。ライセンスは Apache 2.0。
 2125430384104255720,2026-11-25T12:51:00+09:00,timeline,publickey,https://x.com/publickey/status/2125430384104255720,"AWS、DynamoDB互換データベースをローカルマシンで構築可能にするオープンソース「ExtendDB」がバージョン1.0に到達
 [publickey1.jp/blog/26/awsdyn…](https://www.publickey1.jp/blog/26/awsdynamodbextenddb10.html)",ローカルで DynamoDB 互換を試せる。移行の前に公式の差分一覧を見たほうがよい（私の見方です）。
 2125430336545001495,2026-11-25T12:51:00+09:00,timeline,publickey,https://x.com/publickey/status/2125430336545001495,"jQuery 4.1正式版がリリース、内部実装をquerySelectorAllに統一でより高速に。jQuery 3.x系最後となるjQuery 3.8も同時リリース
