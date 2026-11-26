@@ -1,4 +1,30 @@
 id,datetime,source,author,url,text,summary
+2125853319931498609,2026-11-26T16:47:00+09:00,timeline,kunihirotanaka,https://x.com/kunihirotanaka/status/2125853319931498609,Backlogが、さくらのクラウド上で、オンプレミスとしての利用ができるようになります‼️,ヌーラボ 11/26 プレス。Backlog オンプレミスの導入支援をさくらのクラウド向けに開始。30日無料トライアルとクーポン。構築・運用はセナネットワークスにも任せられる。有料ユーザーは2026年9月末で160万人。ヌーラボは6月から ISMAP 登録に向けた対応を開始。さくらのクラウドはデジタル庁のガバメントクラウド整備に採択。SaaS が自社運用形も用意する流れの一例（私の見方です）。
+2125835325436264671,2026-11-26T15:53:00+09:00,timeline,connect24h,https://x.com/connect24h/status/2125835325436264671,「サツドラ」顧客情報22万件流出　委託先サイバーエージェントがデータ誤公開、1年以上気づかず - ITmedia NEWS [itmedia.co.jp/news/article/2…](https://www.itmedia.co.jp/news/article/2611/26/2000003469/),ITmedia 報道、サツドラが11/25発表。LINE 公式の友だち登録の一部 22万9026件。メール、性別、生年月日、名、EZOCA 番号、購入金額合計、機種やキャリア、広告識別子。姓、住所、電話、PIN、カード、パスワードは含まず。公開は2025/7/16〜2026/11/18。2026/1/3〜10/31に少なくとも9回取得。委託先の設定ミスと点検不足。本番データを開発環境の公開場所に置かないこと、公開設定の定期点検が教訓（私の見方です）。
+2125830652230869252,2026-11-26T15:53:00+09:00,timeline,GOROman,https://x.com/GOROman/status/2125830652230869252,"Sites でデプロイするとCloudflareになるからその分かね。Manus方式
+
+ChatGPTで作ったWebサイト、公開し続けると追加料金も　2027年2月から課金開始 [ascii.jp/elem/000/004/4…](https://ascii.jp/elem/000/004/454/4454606/) @asciijpeditorsより",ASCII.jp（11/25）、OpenAI 公式案内と一致。ホスティングは2027年1月31日まで無料、2月1日から Plus・Pro・Business の月の枠を超えた分に課金予定。枠は Plus 125、Pro 375、Business 1席あたり125クレジット。DB に 1GiB を1か月置くと約150クレジットで、基本分と合わせ約175になり Plus の枠を超える。GOROmanさんの「裏側が Cloudflare」は公式では確認できず。データベースを使うものは2月までに置き場所を見直したほうがよさそう（私の見方です）。
+2125830463227097189,2026-11-26T15:53:00+09:00,likes,newmohq,https://x.com/newmohq/status/2125830463227097189,"【自動運転の開発現場を見に来ませんか？】
+
+11/30（月）19:00〜21:00に、newmoの新拠点「newmo Autonomy Garage Tokyo」でOpen Garageを開催します！
+自動運転車両の見学や、走行シミュレーターを体験できるイベントです。CTOをはじめとする開発メンバーと、ドリンク片手にL4ロボタクシー開発のリアルを話しませんか？
+会場は東京モノレール「流通センター」駅から徒歩5分です。
+申込締切は明日までです。
+興味のある方は、ぜひお申し込みください👇
+[docs.google.com/forms/d/e/1FAI…](https://docs.google.com/forms/d/e/1FAIpQLSe77cfkTnVHa67UjmH0pKbYrSoyO9o5Be0iePuKhkMnQQfVXw/viewform)",11/30（月）19:00〜21:00、newmo Autonomy Garage Tokyo（流通センター駅徒歩5分）。車両見学やシミュレーター、CTO 曾川景介さんらと話せる。締切は投稿によると11/27まで（時刻は未記載）。会場は2026年5月開設の都内初の自動運転タクシー専用拠点。既存の拠点紹介・Open Garage Vol.2 r18_4 やドライバー募集 r38_214 とは別件。
+2125826401073045809,2026-11-26T14:55:00+09:00,timeline,GithubProjects,https://x.com/GithubProjects/status/2125826401073045809,"gitai is open-source Git hosting where many coding agents land on one branch without queue stalls, via compare-and-swap.
+
+Explore it here:
+[osp.fyi/git-ai](https://osp.fyi/git-ai)",feder-cr/git-ai、MIT。以前お伝えした Anthropic 社内の版管理 Scion（r38_220）の公開設計をもとにした独立の実装で、Anthropic とは関係ないと明記。マージキューは使わず、リベースと compare-and-swap で反映。いまの版は 0.4.2 で、複数マシンや外部ストレージは未検証。本番で使うかはもう少し様子を見たほうがよさそう（私の見方です）。既存の Scion 説明 r38_220 とは別件。
+2125825223442538552,2026-11-26T14:55:00+09:00,timeline,connect24h,https://x.com/connect24h/status/2125825223442538552,AIペネトレーションテスト基盤「Cairn」が大学への攻撃で見つけたゼロデイについてまとめてみた - piyolog [piyolog.hatenadiary.jp/entry/2026/11/…](https://piyolog.hatenadiary.jp/entry/2026/11/24/214547),piyolog のまとめ、元は 11/20 の AWS Security Blog。攻撃者が渡したのは標的 IP と「シェルを取れ」という目標だけ。MONAI Label で未知の脆弱性を見つけ管理者権限を取得。CVE-2026-133968（CVSS 9.8）、11/22 に修正版 0.8.6。活動は 2026年9月8日から約48時間。認証なしで公開している AI・ML ツールは自動攻撃の対象になりやすい（私の見方です）。既存の JPCERT 注意喚起 r38_20 や Unit 42 報告 r34_9（Cairn の言及あり）とは別件。
+2125814588281331879,2026-11-26T14:55:00+09:00,timeline,connect24h,https://x.com/connect24h/status/2125814588281331879,"受信メールの分類なら、AIには読み取り権限で足りる。
+Googleは11月24日、Gmailやドライブなど8サービス向けのGoogle Workspace MCPサーバーと公式CLI「gwscli」の一般提供を発表した。
+たとえば、問い合わせを拾ってドライブの資料を探すところまでAIにつなぎ、返信は担当者が送る。設定例にあるOAuthのサービス別アクセス許可を、こういう具体的な作業に当てはめると、どこまで任せるかが見えてくる。
+Workspaceの導入審査では、読み取り・送信・共有のどこまでエージェントに任せるかが判断の単位になる。
+
+[gihyo.jp/article/2026/1…](https://gihyo.jp/article/2026/11/google-workspace-mcp-and-cli?utm_source=feed)","11/24 公式ブログ。対象は Gmail、ドライブ、ドキュメント、スプレッドシート、スライド、カレンダー、Chat、Tasks の8つ（Keep はこれから）。エージェントは REST を直接呼ばず MCP を使うことが求められ、技術的な強制は 2027年2月1日から。料金は Standard（1プロジェクト・1製品あたり1日5,000リクエスト）と Scaled（課金は 2027年4月1日から）。Gmail やドライブとつなぐなら、早めに MCP 経由へ寄せておくのが安全そう（私の見方です）。"
+2125812933267759435,2026-11-26T13:47:00+09:00,timeline,connect24h,https://x.com/connect24h/status/2125812933267759435,"安くないか？今となっては、この規模をやり切るのはNTTデータさん以外にないでしょうね。
+ゆうちょ銀が勘定系をオープン化へ、2574億円でNTTデータが落札 [xtech.nikkei.com/atcl/nxt/colum…](https://xtech.nikkei.com/atcl/nxt/column/18/03815/112400006/?n_cid=nbpnxt_twbn)",日経クロステック（11/26）。オープン系の勘定系としては日本で最大の投資規模とみられる。現行は富士通のメインフレーム。富士通は販売を2030年度、保守を2035年度に終えると2022年に発表。NTTデータの PITON は地銀共同システム MEJAR としんきん共同センターで採用が決まっているが、ゆうちょで使うかは記事に書かれていない。使うだろうというのは私の推測です。既存資産の移行とオープン系での信頼性に、お金も人も集まる流れに見える（私の見方です）。
 2125782869742428422,2026-11-26T11:52:00+09:00,timeline,GithubProjects,https://x.com/GithubProjects/status/2125782869742428422,An open-source Windows app that installs Linux next to Windows without a USB stick.,Arjun-Ingole/hop、MIT。公式（または案内されたミラー）から ISO を落とし、内蔵ディスクの新しいパーティションにインストーラーを作る。Make room で縮め、Undo で戻せる。CachyOS などは Secure Boot をオフにする必要があり、Kubuntu は非対応。配布の hop.exe はまだコード署名がなく、SmartScreen が警告することがある。必要なのは Windows 10（1803 以降）または 11 の、UEFI かつ GPT。パーティションを触るので、使う前にバックアップを取るのが前提（私の見方です）。
 2125771320059437178,2026-11-26T11:52:00+09:00,timeline,cyber_forecast,https://x.com/cyber_forecast/status/2125771320059437178,"【注意喚起】
 2026年11月25日、不正アプリのインストールへ誘導するフィッシングメールの報告を受けているとして、フィッシング対策協議会が注意喚起をしています。ご確認ください。
