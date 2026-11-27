@@ -1,4 +1,51 @@
 id,datetime,source,author,url,text,summary
+2126091531262312491,2026-11-27T08:52:00+09:00,timeline,raykataoka,https://x.com/raykataoka/status/2126091531262312491,"Anthropicの公式ブログによると、2024年には社内で「APIをGoやRustで書き直したりしない」という一言で話がいったん決着していたそうです。
+
+それが今年、Claudeが中心部分の最初のコードを約1週間で書き、本番で動いている旧APIと結果を比べて差を直しながら、サービスを止めずにRustへ移していました。
+
+手間や学習コストを理由に書き直さないと決めていたなら、どこの会社でも一度見直していいかも
+[anthropic.com/research/migra…](https://www.anthropic.com/research/migrating-api-to-rust)","raykataokaさんが公式記事「Migrating our Messages API to Rust」（11/25）を紹介。2024年にいったん却下されたあと、トラフィック約1,800倍を背景に移行。シャドーイングで本番入力を新旧に流し、モデル呼び出しは1回だけ再生。一般向けは 2026年9月、CPU 約70%減、TTFT 中央値約20%短縮、無停止。テスト合格率約98%でも本番一致は約4分の1、甘いアサーションが100件超。公式告知は約456万表示。長く任せる作業では、旧実装を正解にする比較、テストの監査、指摘のルール化が押さえどころ（私の見方です）。"
+2126089366124511259,2026-11-27T08:52:00+09:00,timeline,MacopeninSUTABA,https://x.com/MacopeninSUTABA/status/2126089366124511259,"BuySell Technologies社のIR資料におけるAI活用が有益。
+
+出張買取の「バイセル」が、どの仕事をどれだけAIに任せたかを公開。お客さんへの確認の電話は95%をAIだけで対応。契約書のチェックは45%。これで来期は人件費を約6億円抑えられる見込み。
+
+こちら👉
+[buysell-technologies.com/ir/settlement/](https://buysell-technologies.com/ir/settlement/)",かずなりさん。BuySell Technologies（7685）の 2026/12 期 3Q 決算資料（11/13）。決裁コール約95%を AI のみ、書類・画像照合約45%、フォローコール約50%。来期の人件費抑制は計約6億円（コール約50名分で約3億＋マーケ「福ちゃん」統合で約3億）。11/4 発表の「3億円規模」はコール部門のみ。意思確認できない案件は社員へ。広告作業時間約6割減、自己査定約40%→約70%。定型は AI、判断が要るものは人、という分担と金額を IR で出した例。件数比例の確認業務は受託や SaaS の題材にもなりそう（私の見方です）。
+2126079283013816431,2026-11-27T07:56:00+09:00,timeline,connect24h,https://x.com/connect24h/status/2126079283013816431,"これはあかんやろ。倫理観どこ。
+Jev のTypesafeaiから。
+0.07ドルで電話・メール・SNS全紐付けフルプロフィールが取れるAPI、攻撃者の偵察コストがコンビニコーヒー1杯分に。
+どこがsafeなの？邪悪だろ。
+
+「誰でも誰でも」が現実になると、標的型フィッシングの下調べがほぼ自動化されるぞ。社員の公開情報を今すぐ棚卸しして、露出を減らせ。
+
+これをローンチしようと思ったぶっ壊れた倫理観が怖いわ、これ。",connect24hさんが Treg（@treg_ai）の告知を引用し批判。告知は「フルプロフィール検索 0.07ドル」「電話番号・SNSの痕跡・個人メール」。公式ページの中心は Apollo 等140社をまとめた営業リード収集で、0.07ドルの内訳や個人電話・個人メールの範囲は公式から確認できず。名簿サービスの寄せ集めの適法性は国や用途で分かれる。日本では不適正取得や第三者提供が論点になりそう（私の推測です）。エージェントに持たせるなら用途とログを先に決める。防御側は公開情報の棚卸しと偽メール前提がよさそう（私の見方です）。
+2125850255405322307,2026-11-27T07:56:00+09:00,likes,kawasy,https://x.com/kawasy/status/2125850255405322307,やってました（突然公開情報になったぞ！？）,"いいね。kawasyさんが、カカクコム CTO の tkyowaさんによる「月額440万円使った価格.comのAIワークフロー設計者の時田さん」への技術メンター（去年から、最近終了）を認めた。11/26 の Findy 主催アーキテクチャConference の裏話。440万円は 6月の講演資料の設計者月額 AI 利用料。プロジェクト DODAI で約960万行を Python / FastAPI / htmx へ作り直し、3層エージェント（サブは71体）と Playwright 比較・決定論的チェッカーで完了を機械判定。保険カテゴリは実行134時間・6,921ドルだが Phase 5 のみの注記あり。長く走る作業でもこの2つを真似できそう（私の見方です）。既存の ISUCON2026 優勝・コード公開 r38_232 などとは別件。"
+2125825869281407050,2026-11-27T07:56:00+09:00,likes,ishida_chatgpt,https://x.com/ishida_chatgpt/status/2125825869281407050,"OpenAIのFDE職
+募集要項が出ておる！！
+
+[openai.com/careers/deploy…](https://openai.com/careers/deployment-lead-(dl%29-fde-tokyo-tokyo-japan/)","いいね。いしださん。Deployment Lead (DL), FDE - Tokyo。導入の前後で効果を測る仮説や KPI、現場の変化を支え、知見を Product / Research に戻す。要件は技術導入の統率 7年以上、AI/LLM 出荷経験、業界知識。東京・週3日出社、転居支援。同じ東京で FDE（5年以上、日英必須）と Manager も出て、アジアで3職位がそろっているのは東京だけ、と Offers FDE。給与は求人票になし。モデル会社でも最後の導入は人が現場に入る形。個人でも「AI＋業界特化の導入支援」は受託の切り口になりそう（私の見方です）。既存の Claude FDE 学習コース r38_286 や FDE 論 r38_180 とは別件。"
+2125561403952316699,2026-11-26T22:49:00+09:00,timeline,ModelScope2022,https://x.com/ModelScope2022/status/2125561403952316699,"Talk to an AI while it gets things done in the background. Sage-Interaction is a 9B open-weight omni model built on MiniCPM-o 4.5, combining full-duplex interaction with agentic task delegation. 🤖 [modelscope.ai/models/Shangha…](https://modelscope.ai/models/Shanghai_AI_Laboratory/Sage-Interaction)
+
+🏆 Leading full-duplex performance: Achieves 80.73 on FD-Bench v1.5, outperforming all compared open and closed models, with 1.29s turn-taking latency on FD-Bench v1.
+
+🛠️ Delegate without interrupting: Offloads complex reasoning and tool-assisted tasks to a backend agent while keeping the conversation going.
+
+🎙️ Natural interaction: Handles interruptions, brief acknowledgments, background speech, and timed reminders.
+
+👁️ Proactive video understanding: Tracks live visual changes and responds to relevant events, leading the reported comparisons on Charades, ProactiveQA, OmniVideoBench, and LVOmniBench.",上海 AI Lab / InternLM。ベース MiniCPM-o 4.5、9B、11/23 公開、Apache 2.0（コードと重み）。音声や映像で会話しつつ重い作業は裏のエージェントに非同期で任せる。裏の LLM は /chat/completions 系なら指定可。FD-Bench v1.5 平均 80.73 で比較対象中最高（ベースは 69.36）。TOR は 84.87 で Doubao-Duplex などより低い。論文は未確認。VRAM は公式未記載、重み約 17.5 GiB なので 24GB 級が目安（私の推測です）。会話内容が裏の API に流れる点に注意（私の見方です）。
+2125927787542569410,2026-11-26T21:55:00+09:00,timeline,connect24h,https://x.com/connect24h/status/2125927787542569410,"またCloudflare がこの領域を押さえにきたぞ。AIに自社サイトを何ページも巡回させるより、検索APIを渡した方が早い。
+
+Cloudflareの「Search for Agents」は、その入口をスイッチひとつで用意する。
+
+有効化するとサイトを自動でクロール・索引化し、自ドメインの /.well-known/search で検索を提供。ページ内にも検索先と使い方を埋め込むので、訪れたAIエージェントが入口を発見できる。
+
+設計がいい。検索側は関連する本文をMarkdownで返し、回答は利用側のAIが作る。すでに会話の文脈を持つAIへ、サイト側が必要な材料を渡す分担。
+
+Freeプランも対象。ただし利用枠があり、AI Searchの料金体系に従う。
+
+製品ドキュメントやFAQで試したい。人向けの導線に加えて、AIが迷わず情報を取れる導線まで、Webサイト側で設計する話になってきた。
+
+[blog.cloudflare.com/search-for-age…](https://blog.cloudflare.com/search-for-agents/)⁠",公式ドキュメント。ダッシュボードでオンにすると AI Search がサイトを索引し、`/.well-known/search` に窓口ができる。返るのは関連本文の Markdown と出典・関連度で、AI の答えは返さない。全プランでベータ、Free も対象。料金と上限は AI Search に従う。「Markdown for Agents」との併用が前提。公開してよい中身だけを索引にすること。個人のドキュメントや FAQ で試しやすく、索引に入れたくないページは先に除外を（私の見方です）。
 2125918382700794277,2026-11-26T20:46:00+09:00,timeline,hikalium,https://x.com/hikalium/status/2125918382700794277,少し前まで、この言明は「積み上げてきた修正と動作実績の歴史なめるなよ」で一蹴されていたのが、LLMのおかげで逆転しつつある可能性ある（もちろんそれは「誰も脆弱性を知らない」から強いわけではなく「同じ攻撃が通用しない実装の多様性」と「自作だからこそ埋められる穴や検証の充実」等が要因）,元はあかずさんの、半分冗談めかした投稿。hikalium さんの見立ては、強くなる理由は「誰も脆弱性を知らないから」ではなく、実装の多様性と、自作だからこそ埋められる穴や検証の充実。裏づけになるデータは示されていない。個人開発では全部を自作するのは現実的ではなく、認証や暗号は実績のあるものを使い、周辺部分で依存を減らすくらいがちょうどよさそう（私の見方です）。
 2125898421240533029,2026-11-26T19:48:00+09:00,timeline,yuki_arano,https://x.com/yuki_arano/status/2125898421240533029,"最近これをやっている。
 

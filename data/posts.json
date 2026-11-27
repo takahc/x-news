@@ -1,5 +1,222 @@
 [
   {
+    "id": "2126091531262312491",
+    "cardId": "r38_311",
+    "datetime": "2026-11-27T08:52:00+09:00",
+    "postedAt": "2026-11-27T08:11:36+09:00",
+    "source": "timeline",
+    "title": "Anthropic が Messages API を、止めずに Python から Rust へ移した公式の記録です。",
+    "summary": "raykataokaさんが公式記事「Migrating our Messages API to Rust」（11/25）を紹介。2024年にいったん却下されたあと、トラフィック約1,800倍を背景に移行。シャドーイングで本番入力を新旧に流し、モデル呼び出しは1回だけ再生。一般向けは 2026年9月、CPU 約70%減、TTFT 中央値約20%短縮、無停止。テスト合格率約98%でも本番一致は約4分の1、甘いアサーションが100件超。公式告知は約456万表示。長く任せる作業では、旧実装を正解にする比較、テストの監査、指摘のルール化が押さえどころ（私の見方です）。",
+    "tweetId": "2126091531262312491",
+    "tweetIds": [
+      "2126091531262312491"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/raykataoka/status/2126091531262312491",
+    "author": {
+      "handle": "raykataoka",
+      "name": "片岡（れいっち）＠YUMEMI代表"
+    },
+    "via": null,
+    "text": "Anthropicの公式ブログによると、2024年には社内で「APIをGoやRustで書き直したりしない」という一言で話がいったん決着していたそうです。\n\nそれが今年、Claudeが中心部分の最初のコードを約1週間で書き、本番で動いている旧APIと結果を比べて差を直しながら、サービスを止めずにRustへ移していました。\n\n手間や学習コストを理由に書き直さないと決めていたなら、どこの会社でも一度見直していいかも\n[anthropic.com/research/migra…](https://www.anthropic.com/research/migrating-api-to-rust)",
+    "images": [],
+    "deepDive": "#Anthropic が Messages API を、止めずに Python から Rust へ移した公式の記録です。\n**タイムラインから：Anthropic が Messages API を、止めずに Python から Rust へ移した公式の記録です。**\n[片岡（れいっち）＠アクセンチュアさん（@raykataoka）の投稿](https://x.com/raykataoka/status/2126091531262312491)（11/27 8:11、日本時間）が紹介していたのは、11/25の[公式記事「Migrating our Messages API to Rust」](https://www.anthropic.com/research/migrating-api-to-rust)です。Claude Code や Cowork も含め、Claude への本体の窓口である Messages API の移行です。\n\n2024年、社内で Go か Rust への移行が提案されましたが、別のエンジニアの「We are not rewriting the API in go or rust!」でいったん話が終わった、と本文にあります。その後、2024年初めから2026年秋までに API のトラフィックは約1,800倍に増えました。最初はモデル出力を解析する部分だけを Rust にし、CPU が約8〜10%減りました。ただ、トークンが Python と Rust の間を3回行き来するため、複雑になるわりに得が少ないと判断しています。2026年5月時点では、社内でマージされるコードの80%超を Claude が書いていた、ともあります。\n\n検証の中心は、本番のリクエストを新旧の両方に流す「シャドーイング」です。モデルの出力は毎回変わるので、モデルの呼び出しは1回だけにし、その出力を Rust 側に再生して渡しました。課金や利用上限も二重に数えないようにしています。プライバシーのため、リクエスト本文は見ません。代わりに、処理の各段階で結果を突き合わせる「チェックポイント」と、ズレの位置や長さの差を記録する「フィンガープリント」で、同じ種類のずれをまとめました。\n\n差分は10〜30分ごとにまとめ、新しい種類が出たら調整役の Claude が担当のエージェントに割り当て、Slack のスレッドで人間が見守ります。修正は3段構えです。内側はサンドボックスでの、1秒未満のローカル比較。外側はプルリクエストのレビューのあと、本番のシャドートラフィックでズレが消えたかを確認します。記憶のループでは、レビューの指摘を CLAUDE.md のルール、lint、テストに落とし込みます。\n\n数字は本文で確認できています。Claude が中心部分の初版を約1週間で書いたこと。4月時点でテスト合格率は約98%なのに、本番の入力で一致したのは約4分の1だけだったこと。移植したテストを監査したら、検証を甘くしたアサーションが100件超あったこと。一般向けトラフィックの Rust 移行は2026年9月。結果はリクエストあたり CPU 約70%減、最初のトークンまでの時間（中央値）約20%短縮です。サービスは止めておらず、機能開発も止めていません。メモリの削減幅は図には出ていますが、本文に具体的な割合は書かれていません。\n\n[Anthropic 公式の告知](https://x.com/AnthropicAI/status/2125627317263466739)（11/26 1:26、日本時間）は、表示が約456万回、いいねが約1.4万です。例えば [LifeMakersさん（@LifeMakersCom）](https://x.com/LifeMakersCom/status/2125722517805392181)は、「テスト98%でも本番一致は4分の1」とまとめていました。[Kenji Natsumotoさん（@natsuken1）](https://x.com/natsuken1/status/2125895600671801624)は、自分でも投稿チェック用の Python 処理を Rust で作り直させ、実データ4,680件で差分0、処理時間は0.98秒から0.12秒になった、と報告しています。\n\n長く任せる作業では、書く速さより、何を正解として比べるかがボトルネックだと思います。旧実装を正解にして同じ入力を新旧に流す仕組みを先に作り、エージェントがテストを弱めていないかを監査し、指摘はルールとテストに残して次の実行にも効かせる、という3つが押さえどころです。個人アプリの「重いから書き直したいけど怖い」部分にも使える考え方だと思います（私の見方です）。",
+    "followUps": []
+  },
+  {
+    "id": "2126089366124511259",
+    "cardId": "r38_312",
+    "datetime": "2026-11-27T08:52:00+09:00",
+    "postedAt": "2026-11-27T08:03:00+09:00",
+    "source": "timeline",
+    "title": "バイセルが決算資料で、確認電話や書類チェックをどこまで AI に任せたかを、数字つきで公開しています。",
+    "summary": "かずなりさん。BuySell Technologies（7685）の 2026/12 期 3Q 決算資料（11/13）。決裁コール約95%を AI のみ、書類・画像照合約45%、フォローコール約50%。来期の人件費抑制は計約6億円（コール約50名分で約3億＋マーケ「福ちゃん」統合で約3億）。11/4 発表の「3億円規模」はコール部門のみ。意思確認できない案件は社員へ。広告作業時間約6割減、自己査定約40%→約70%。定型は AI、判断が要るものは人、という分担と金額を IR で出した例。件数比例の確認業務は受託や SaaS の題材にもなりそう（私の見方です）。",
+    "tweetId": "2126089366124511259",
+    "tweetIds": [
+      "2126089366124511259"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/MacopeninSUTABA/status/2126089366124511259",
+    "author": {
+      "handle": "MacopeninSUTABA",
+      "name": "かずなり | 生成AI活用術"
+    },
+    "via": null,
+    "text": "BuySell Technologies社のIR資料におけるAI活用が有益。\n\n出張買取の「バイセル」が、どの仕事をどれだけAIに任せたかを公開。お客さんへの確認の電話は95%をAIだけで対応。契約書のチェックは45%。これで来期は人件費を約6億円抑えられる見込み。\n\nこちら👉\n[buysell-technologies.com/ir/settlement/](https://buysell-technologies.com/ir/settlement/)",
+    "images": [
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HXxGlcDaoAAFxxv.jpg"
+      },
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HXxGnvza8AA6z0C.jpg"
+      },
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HXxGqm_b0AAA4Pd.jpg"
+      },
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HXxGs9PbEAA439z.jpg"
+      }
+    ],
+    "deepDive": "#バイセルが決算資料で、確認電話や書類チェックをどこまで AI に任せたかを、数字つきで公開しています。\n**タイムラインから：バイセルが決算資料で、確認電話や書類チェックをどこまで AI に任せたかを、数字つきで公開しています。**\n[かずなりさん（@MacopeninSUTABA）の投稿](https://x.com/MacopeninSUTABA/status/2126089366124511259)（11/27 8:03、日本時間）です。出張買取「バイセル」を運営する BuySell Technologies（東証グロース 7685）の、[2026年12月期 第3四半期決算説明資料](https://www2.jpx.co.jp/disc/76850/140120261113578997.pdf)（11/13）を紹介しています。\n\n資料（10月末時点）では、契約前にお客様の同意を確かめる「決裁コール」は全契約の約95%を AI だけで対応、契約書・本人確認書類・品物画像の照合は約45%を AI で確認、査定後の「フォローコール」は不成約を含む全査定の約50%を AI で対応、とあります。来期は計約6億円の人件費抑制を見込む、とも書かれています。投稿の「確認の電話は95%」は決裁コールの数字で、フォローコールは50%なので、電話全部が95%という意味ではありません。\n\n6億円の内訳は、[9月の月次開示（10/19）](https://www2.jpx.co.jp/disc/76850/140120261019552923.pdf)にあります。コールセンター部門（コンプライアンス）が約50名分の増員回避で約3億円、マーケティング部門が「福ちゃん」統合時の約半分の人員で運営できていることによる約3億円です。[11/4の公式発表](https://buysell-technologies.com/pressrelease/202611045556/)の「3億円規模」は、コール部門だけの数字です。決裁コールの AI 比率は、10/19開示の約70%から、10月末には約95%まで上がっています。\n\n背景として、出張件数は2025年度実績の44.5万件に対し、2026年度は約53万件を計画しています。査定士とは別の部署が契約を電話で確認する体制があり、確認業務が件数に比例して増えるのが課題でした。開発は GROWTH VERSE 社が支援し、音声 AI は電話放送局の「DHK CANVAS」です。AI で意思確認できない案件は社員に切り替えます。\n\n同じ資料には、広告クリエイティブ関連の作業時間が約6割減、アポ有効化率が +6.7ポイント、自己査定比率が約40%から約70%へ上がり、専門査定員は約40名の増員回避を見込む、ともあります。第3四半期累計の売上高は前年比 +47.4% の 1,085.1億円、営業利益は +75.8% です。\n\n上場企業が、「定型の確認は AI、判断が要るものは人」という分担と、抑えた人件費の見込み額を IR で出した例です。件数に比例して増える確認業務は、金額で価値を説明しやすい領域で、中小向けの電話確認や書類照合の受託や SaaS の題材にもなりそうです（私の見方です）。",
+    "followUps": []
+  },
+  {
+    "id": "2126079283013816431",
+    "cardId": "r38_310",
+    "datetime": "2026-11-27T07:56:00+09:00",
+    "postedAt": "2026-11-27T07:22:56+09:00",
+    "source": "timeline",
+    "title": "Treg が「フルプロフィール検索 0.07ドル」の People API を告知し、批判が集まっています。",
+    "summary": "connect24hさんが Treg（@treg_ai）の告知を引用し批判。告知は「フルプロフィール検索 0.07ドル」「電話番号・SNSの痕跡・個人メール」。公式ページの中心は Apollo 等140社をまとめた営業リード収集で、0.07ドルの内訳や個人電話・個人メールの範囲は公式から確認できず。名簿サービスの寄せ集めの適法性は国や用途で分かれる。日本では不適正取得や第三者提供が論点になりそう（私の推測です）。エージェントに持たせるなら用途とログを先に決める。防御側は公開情報の棚卸しと偽メール前提がよさそう（私の見方です）。",
+    "tweetId": "2126079283013816431",
+    "tweetIds": [
+      "2126079283013816431",
+      "2125546075855741424"
+    ],
+    "quoteTweetId": "2125546075855741424",
+    "url": "https://x.com/connect24h/status/2126079283013816431",
+    "author": {
+      "handle": "connect24h",
+      "name": "connect24h"
+    },
+    "via": null,
+    "text": "これはあかんやろ。倫理観どこ。\nJev のTypesafeaiから。\n0.07ドルで電話・メール・SNS全紐付けフルプロフィールが取れるAPI、攻撃者の偵察コストがコンビニコーヒー1杯分に。\nどこがsafeなの？邪悪だろ。\n\n「誰でも誰でも」が現実になると、標的型フィッシングの下調べがほぼ自動化されるぞ。社員の公開情報を今すぐ棚卸しして、露出を減らせ。\n\nこれをローンチしようと思ったぶっ壊れた倫理観が怖いわ、これ。",
+    "images": [],
+    "deepDive": "#Treg が「フルプロフィール検索 0.07ドル」の People API を告知し、批判が集まっています。\n**タイムラインから：Treg が「フルプロフィール検索 0.07ドル」の People API を告知し、批判が集まっています。**\n[connect24hさんの投稿](https://x.com/connect24h/status/2126079283013816431)（11/27 7:22、日本時間）が引用していたのは、[Treg（@treg_ai）の投稿](https://x.com/treg_ai/status/2125546075855741424)（11/25 20:04、日本時間、表示は約221万回）です。告知では「フルプロフィール検索 0.07ドル」「誰でも見つかる」「電話番号・SNSの痕跡・個人メール」と書いてあります。connect24hさんは「倫理観どこ」「偵察コストがコンビニのコーヒー1杯分」と批判し、社員の公開情報を棚卸しするよう呼びかけています。\n\n一方、[公式ページ](https://treg.to/people-search)の中心は、Apollo や Hunter、People Data Labs など140社の提供元をトークン1つでまとめ、主に業務メールや職歴を探す営業リード収集です。手数料0%の従量課金で、実施例として27人から確認済みの業務メール20件を 0.58ドルで取った、とあります。0.07ドルがどの呼び出しの料金なのか、個人の電話や個人メールが実際にどこまで取れるのかは、公式ページからは確認できませんでした。「オープンソース」ともうたっていますが、リポジトリの中身は見られていません。\n\nこうした名簿サービスの寄せ集めが、どこまで適法かは国や用途で分かれます。日本なら、個人情報の不適正な取得・利用や、第三者提供のルールが論点になりそうです（私の推測です）。自分のエージェントにこの手の道具を持たせるなら、検索してよい相手、用途、ログの範囲を先に決めておく必要があると思います。防御側としては、公開しているメールや電話、SNS のつながりを棚卸しし、見知らぬ詳細な個人情報を根拠にした偽メールを前提にするのがよさそうです（私の見方です）。",
+    "followUps": []
+  },
+  {
+    "id": "2125850255405322307",
+    "cardId": "r38_309",
+    "datetime": "2026-11-27T07:56:00+09:00",
+    "postedAt": "2026-11-26T16:12:51+09:00",
+    "source": "likes",
+    "title": "価格.com の AI ワークフロー設計者に、ISUCON2026 優勝の kawasyさんがメンターとして付いていた、と明かされました。",
+    "summary": "いいね。kawasyさんが、カカクコム CTO の tkyowaさんによる「月額440万円使った価格.comのAIワークフロー設計者の時田さん」への技術メンター（去年から、最近終了）を認めた。11/26 の Findy 主催アーキテクチャConference の裏話。440万円は 6月の講演資料の設計者月額 AI 利用料。プロジェクト DODAI で約960万行を Python / FastAPI / htmx へ作り直し、3層エージェント（サブは71体）と Playwright 比較・決定論的チェッカーで完了を機械判定。保険カテゴリは実行134時間・6,921ドルだが Phase 5 のみの注記あり。長く走る作業でもこの2つを真似できそう（私の見方です）。既存の ISUCON2026 優勝・コード公開 r38_232 などとは別件。",
+    "tweetId": "2125850255405322307",
+    "tweetIds": [
+      "2125850255405322307",
+      "2125848951324905483"
+    ],
+    "quoteTweetId": "2125848951324905483",
+    "url": "https://x.com/kawasy/status/2125850255405322307",
+    "author": {
+      "handle": "kawasy",
+      "name": "Yoshinori Kawasaki"
+    },
+    "via": null,
+    "text": "やってました（突然公開情報になったぞ！？）",
+    "images": [],
+    "deepDive": "#価格.com の AI ワークフロー設計者に、ISUCON2026 優勝の kawasyさんがメンターとして付いていた、と明かされました。\n**いいねから：価格.com の AI ワークフロー設計者に、ISUCON2026 優勝の kawasyさんがメンターとして付いていた、と明かされました。**\n[kawasyさん（@kawasy）の投稿](https://x.com/kawasy/status/2125850255405322307)（11/26 16:12、日本時間）です。表示名は Yoshinori Kawasaki さんです。引用していたのは、カカクコム CTO の [tkyowaさん（@tkyowa）の投稿](https://x.com/tkyowa/status/2125848951324905483)（16:07、日本時間）で、「月額440万円使った価格.comのAIワークフロー設計者の時田さん」に、去年から技術メンターを頼んでいた（最近終わった）と書いてあります。kawasyさんの反応は「やってました（突然公開情報になったぞ！？）」です。11/26のアーキテクチャConference 2026（Findy主催）の裏話として投稿されています。\n\n440万円は、6月の AI Engineering Summit Tokyo 2026 の講演資料（[Speaker Deck](https://speakerdeck.com/tkyowa/kakaku-com-ai-driven-system-renewal-0fc7e978-0e39-4bba-93eb-17cd56ecd1c1)）で、設計者の月額 AI 利用料として紹介されている数字です。プロジェクト名は DODAI で、約960万行の C# / Classic ASP を、Python と FastAPI と htmx で作り直す計画です。5つの段階と、3層のエージェント（サブエージェントは71体）で回し、新旧画面を Playwright で比べたり、プログラムで抜けを見る「決定論的チェッカー」で、AI の自己申告ではなく機械判定で完了を決める、と整理されています。保険カテゴリでは実行134時間・6,921ドルと報告されていますが、スライドには「Phase 5（のみ）」という注記があり、全体の費用ではない可能性があります（[整理記事](https://suwa-sh.github.io/zenn-contents/articles/kakaku-com-ai-driven-renewal_20260610/)）。11/26の講演で数字が更新されたかは、確認できていません。\n\n長時間自律で走るエージェントと、機械判定で完了を決める門が、大企業の刷新と ISUCON の両方に効いているように見えます。長く走る作業を任せるときも、この2つを真似できそうです（私の見方です）。",
+    "followUps": []
+  },
+  {
+    "id": "2125825869281407050",
+    "cardId": "r38_308",
+    "datetime": "2026-11-27T07:56:00+09:00",
+    "postedAt": "2026-11-26T14:35:57+09:00",
+    "source": "likes",
+    "title": "OpenAI が東京で、顧客の現場に入って導入を任せる「Deployment Lead」を募集しています。",
+    "summary": "いいね。いしださん。Deployment Lead (DL), FDE - Tokyo。導入の前後で効果を測る仮説や KPI、現場の変化を支え、知見を Product / Research に戻す。要件は技術導入の統率 7年以上、AI/LLM 出荷経験、業界知識。東京・週3日出社、転居支援。同じ東京で FDE（5年以上、日英必須）と Manager も出て、アジアで3職位がそろっているのは東京だけ、と Offers FDE。給与は求人票になし。モデル会社でも最後の導入は人が現場に入る形。個人でも「AI＋業界特化の導入支援」は受託の切り口になりそう（私の見方です）。既存の Claude FDE 学習コース r38_286 や FDE 論 r38_180 とは別件。",
+    "tweetId": "2125825869281407050",
+    "tweetIds": [
+      "2125825869281407050"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/ishida_chatgpt/status/2125825869281407050",
+    "author": {
+      "handle": "ishida_chatgpt",
+      "name": "いしだ＠AIチュートリアル AI会社経営の人"
+    },
+    "via": null,
+    "text": "OpenAIのFDE職\n募集要項が出ておる！！\n\n[openai.com/careers/deploy…](https://openai.com/careers/deployment-lead-(dl%29-fde-tokyo-tokyo-japan/)",
+    "images": [
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HYBzW9qa8AAjoc5.jpg"
+      },
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HYBzW9qaYAAmoqJ.jpg"
+      },
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HYBzW9nasAA6rpP.png"
+      },
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HYBzW9pbYAAOsRQ.png"
+      }
+    ],
+    "deepDive": "#OpenAI が東京で、顧客の現場に入って導入を任せる「Deployment Lead」を募集しています。\n**いいねから：OpenAI が東京で、顧客の現場に入って導入を任せる「Deployment Lead」を募集しています。**\n[いしださん（@ishida_chatgpt）の投稿](https://x.com/ishida_chatgpt/status/2125825869281407050)（11/26 14:35、日本時間、ブックマーク206）です。対象は [Deployment Lead (DL), FDE - Tokyo](https://openai.com/careers/deployment-lead-(dl)-fde-tokyo-tokyo-japan/) です。\n\nFDE（Forward Deployed Engineering）は、研究の成果を顧客の本番システムに組み込むチームです。Deployment Lead は、経営層との最初の話し合いから、本番導入と定着までを受け持ちます。公式の求人では、導入の前後で効果を測るための仮説や KPI を置き、業務の流れを洗い出して現場の変化を支えること、現場で得た知見を Product や Research に戻すことが仕事だと書かれています。要件は、顧客の前に立って技術導入を率いた経験が7年以上あること、AI/LLM のシステムを出荷した経験があり、医療・金融・半導体・法務などの業界知識を持つことです。勤務は東京で週3日出社、転居支援あり、とあります。給与は求人票には書かれていません。\n\n同じ東京では、[Forward Deployed Engineer](https://openai.com/careers/forward-deployed-engineer-tokyo-tokyo-japan/)（経験5年以上、日本語と英語の両方が必須）も出ています。[Offers FDE の整理](https://fde.offers.jp/articles/openai-tokyo-fde)（11/27更新）によると、Manager を含む3職位が同時に出ており、アジアでこの3つがそろっているのは東京だけだ、としています。\n\nリプライでは、技術力だけでなく、組織の変革まで引き受ける力が求められている、という読み方がありました。モデルを出す会社でも、最後の導入は人が現場に入って片付けている形です。個人開発でも、「AI と、特定の業界の導入支援」は受託やコンサルの切り口になりそうです（私の見方です）。",
+    "followUps": []
+  },
+  {
+    "id": "2125561403952316699",
+    "cardId": "r38_307",
+    "datetime": "2026-11-26T22:49:00+09:00",
+    "postedAt": "2026-11-25T21:05:04+09:00",
+    "source": "timeline",
+    "title": "話しながら裏で作業を任せる、9Bのオムニモデル「Sage-Interaction」が出ました。",
+    "summary": "上海 AI Lab / InternLM。ベース MiniCPM-o 4.5、9B、11/23 公開、Apache 2.0（コードと重み）。音声や映像で会話しつつ重い作業は裏のエージェントに非同期で任せる。裏の LLM は /chat/completions 系なら指定可。FD-Bench v1.5 平均 80.73 で比較対象中最高（ベースは 69.36）。TOR は 84.87 で Doubao-Duplex などより低い。論文は未確認。VRAM は公式未記載、重み約 17.5 GiB なので 24GB 級が目安（私の推測です）。会話内容が裏の API に流れる点に注意（私の見方です）。",
+    "tweetId": "2125561403952316699",
+    "tweetIds": [
+      "2125561403952316699"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/ModelScope2022/status/2125561403952316699",
+    "author": {
+      "handle": "ModelScope2022",
+      "name": "ModelScope"
+    },
+    "via": null,
+    "text": "Talk to an AI while it gets things done in the background. Sage-Interaction is a 9B open-weight omni model built on MiniCPM-o 4.5, combining full-duplex interaction with agentic task delegation. 🤖 [modelscope.ai/models/Shangha…](https://modelscope.ai/models/Shanghai_AI_Laboratory/Sage-Interaction)\n\n🏆 Leading full-duplex performance: Achieves 80.73 on FD-Bench v1.5, outperforming all compared open and closed models, with 1.29s turn-taking latency on FD-Bench v1.\n\n🛠️ Delegate without interrupting: Offloads complex reasoning and tool-assisted tasks to a backend agent while keeping the conversation going.\n\n🎙️ Natural interaction: Handles interruptions, brief acknowledgments, background speech, and timed reminders.\n\n👁️ Proactive video understanding: Tracks live visual changes and responds to relevant events, leading the reported comparisons on Charades, ProactiveQA, OmniVideoBench, and LVOmniBench.",
+    "images": [
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HX-Cw6KbgAAtARt.jpg"
+      },
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HX-CyIsacAAi_Gx.jpg"
+      },
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HX-CzYAaoAAPzz2.jpg"
+      }
+    ],
+    "deepDive": "#話しながら裏で作業を任せる、9Bのオムニモデル「Sage-Interaction」が出ました。\n**タイムラインから：話しながら裏で作業を任せる、9Bのオムニモデル「Sage-Interaction」が出ました。**\n[ModelScope（@ModelScope2022）の投稿](https://x.com/ModelScope2022/status/2125561403952316699)（11/25 21:05、日本時間）です。\n\n上海人工知能実験室（Shanghai AI Lab）の InternLM が出したオープンウェイトのモデルで、ベースは MiniCPM-o 4.5、規模は9Bです。[GitHub](https://github.com/InternLM/Sage-Interaction) と [Hugging Face](https://huggingface.co/internlm/Sage-Interaction) で、2026年11月23日に公開されています。ライセンスは Apache 2.0 で、コードと重みの両方が対象です。\n\n仕組みは、音声や映像でリアルタイムに会話しながら、重い推論やツール作業は裏のエージェントに非同期で任せ、結果が戻ったら会話の流れに組み込む、というものです。裏で使うモデルは、`/models` と `/chat/completions` に対応し、構造化された JSON を返せる API なら指定できます。\n\n公式の比較では、FD-Bench v1.5 の平均は80.73で、比較対象の中で最も高い値です（ベースの MiniCPM-o 4.5 は69.36）。会話の交代の遅延は1.29秒でした。一方、正しく会話を交代できた率（TOR）は84.87で、Doubao-Duplex の98.32や Qwen3.5-Plus の100.00より低い結果です。論文は見つかりませんでした（引用は GitHub リポジトリです）。\n\nローカルで動かすには、BF16 に対応した NVIDIA の GPU と CUDA 12.8、Python 3.12 が必要です。必要なメモリ容量は公式に書かれていません。重みの主要ファイルだけでも約17.5 GiB あるので、24GB 級が目安になりそうです（私の推測です）。\n\n商用でも使えるライセンスで、「音声のやり取りをしながら、裏でエージェントに仕事を任せる」構成をすぐ試せます。ただし会話の内容が裏の API に流れるので、どの事業者にどんなデータを渡すかは、自分で設計する必要があります（私の見方です）。",
+    "followUps": []
+  },
+  {
+    "id": "2125927787542569410",
+    "cardId": "r38_306",
+    "datetime": "2026-11-26T21:55:00+09:00",
+    "postedAt": "2026-11-26T21:20:57+09:00",
+    "source": "timeline",
+    "title": "Cloudflare が、AI エージェントにサイト内検索を渡す「Search for Agents」を始めました。",
+    "summary": "公式ドキュメント。ダッシュボードでオンにすると AI Search がサイトを索引し、`/.well-known/search` に窓口ができる。返るのは関連本文の Markdown と出典・関連度で、AI の答えは返さない。全プランでベータ、Free も対象。料金と上限は AI Search に従う。「Markdown for Agents」との併用が前提。公開してよい中身だけを索引にすること。個人のドキュメントや FAQ で試しやすく、索引に入れたくないページは先に除外を（私の見方です）。",
+    "tweetId": "2125927787542569410",
+    "tweetIds": [
+      "2125927787542569410"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/connect24h/status/2125927787542569410",
+    "author": {
+      "handle": "connect24h",
+      "name": "connect24h"
+    },
+    "via": null,
+    "text": "またCloudflare がこの領域を押さえにきたぞ。AIに自社サイトを何ページも巡回させるより、検索APIを渡した方が早い。\n\nCloudflareの「Search for Agents」は、その入口をスイッチひとつで用意する。\n\n有効化するとサイトを自動でクロール・索引化し、自ドメインの /.well-known/search で検索を提供。ページ内にも検索先と使い方を埋め込むので、訪れたAIエージェントが入口を発見できる。\n\n設計がいい。検索側は関連する本文をMarkdownで返し、回答は利用側のAIが作る。すでに会話の文脈を持つAIへ、サイト側が必要な材料を渡す分担。\n\nFreeプランも対象。ただし利用枠があり、AI Searchの料金体系に従う。\n\n製品ドキュメントやFAQで試したい。人向けの導線に加えて、AIが迷わず情報を取れる導線まで、Webサイト側で設計する話になってきた。\n\n[blog.cloudflare.com/search-for-age…](https://blog.cloudflare.com/search-for-agents/)⁠",
+    "images": [],
+    "deepDive": "#Cloudflare が、AI エージェントにサイト内検索を渡す「Search for Agents」を始めました。\n**タイムラインから：Cloudflare が、AI エージェントにサイト内検索を渡す「Search for Agents」を始めました。**\n[connect24hさん（@connect24h）の投稿](https://x.com/connect24h/status/2125927787542569410)（11/26 21:20、日本時間）です。\n\n[公式ドキュメント](https://developers.cloudflare.com/ai-search/how-to/search-for-agents/)によると、ダッシュボードで機能をオンにすると、AI Search がサイトをクロールして索引を作ります。そして、`https://自分のドメイン/.well-known/search` に検索の窓口ができます。返ってくるのは関連する本文の Markdown で、出典と関連度も付きます。AI が書いた答えは返しません。答えを作るのは、すでに会話の流れを知っている利用者側の AI です。ページの中にも窓口の場所が書き込まれるので、訪れたエージェントが自分で見つけられます。全プランでベータとして使え、Free プランも対象です。ただし、取り込みの量、索引の保存、検索の回数は AI Search の料金と上限に従います。検索の窓口も、AI Crawl Control と WAF の設定の対象になります（[公式ブログ](https://blog.cloudflare.com/search-for-agents/)、[変更履歴](https://developers.cloudflare.com/changelog/post/2026-11-25-search-for-agents/) 11/25）。\n\nページを Markdown に変換する「Markdown for Agents」と組み合わせて使う前提になっています。公式は「公開して検索されてよい中身だけを索引にすること」と注意しています。\n\n個人で出しているアプリのドキュメントや FAQ で手軽に試せそうです。エージェントに何ページも巡回させるより、相手の AI のトークンも、こちらの帯域も少なくて済みます。逆に、索引に入れたくないページ（管理画面や下書き）を先に除外しておくのが大事だと思います（私の見方です）。",
+    "followUps": []
+  },
+  {
     "id": "2125918382700794277",
     "cardId": "r38_305",
     "datetime": "2026-11-26T20:46:00+09:00",
@@ -56,6 +273,16 @@
         "tweetIds": [
           "2125915084946071902",
           "2125913937564881403"
+        ]
+      },
+      {
+        "datetime": "2026-11-27T07:56:00+09:00",
+        "clock": "07:56",
+        "title": "",
+        "text": "**タイムラインから：新野ユキさんが、乗法複雑性の新しい主張を Lean で形式化して公開しました。**\n[新野ユキさん（@yuki_arano）の投稿](https://x.com/yuki_arano/status/2125958315016671615)（11/26 23:22、日本時間）です。「ほぼすべての F2 回路について、高次の AND を使う方が得であることを示した。今回は昨日解いた未解決問題が前提」と書いています。引用していたのは、11/25 の「1997年に提唱された予想の、おそらく反例を見つけた」というずんだもん解説の投稿です。その後、[「乗法複雑性のブレークスルーなので、誰か検証してほしい」](https://x.com/yuki_arano/status/2125991307067965692)（11/27 1:33、日本時間）とも呼びかけています。\n\n公開先は [GitHub ObuchiYuki/bilinear-mc-gap](https://github.com/ObuchiYuki/bilinear-mc-gap)（11/26公開、コードは MIT、文章は CC BY 4.0、[Zenodo DOI](https://doi.org/10.5281/zenodo.24560511)）です。XOR は無料、AND の数だけを数える、という設定で、AND 層が2段の回路なら、あらゆる双線形写像を \\(O(n^{1.7925})\\) 個の AND で計算できる、と主張しています。AND 層が1段の「二次回路」は、ほぼ全ての写像で約 \\(n^2/6\\) 個以上必要なので、両者の間に多項式オーダーの差がある、という位置づけです。1992年の Mirwald–Schnorr の問い（\\(L=L_1\\) か）への答えだ、としています。\n\nREADME によると、Lean 4 と Mathlib で、sorry（証明の穴埋めの省略）なし、標準公理のみで主定理を機械検証し、CI で毎回確かめています。Python の検証スクリプトも付いています。一方で、定義（Defs.lean）が本来の概念と一致しているかは人が確認する必要があること、数えているのは AND だけで XOR は約 \\(n^{3.585}\\) 個と多いこと、写像の存在を示す結果で具体的な写像は与えていないこと、行列積の改善にはならないこと、査読を受けた論文ではないこと、も本人が書いています。昨日お伝えしたとおり、「Lean を通った」は「定義が正しければ正しい」という意味です（私の見方です）。",
+        "tweetIds": [
+          "2125958315016671615",
+          "2125991307067965692"
         ]
       }
     ]
@@ -5604,6 +5831,24 @@
         "text": "**タイムラインから：配車アプリGOでも、KARTE経由で情報がもれた可能性がある、という続報です。**\n[connect24hさんの投稿](https://x.com/connect24h/status/2125122463361380428)（11/24 16:00、日本時間）が引用していたのは、[日経の記事](https://www.nikkei.com/article/DGXZQOUC244TU0U6A121C2000000/)（見出しは「配車アプリのGO、顧客情報2万件が漏洩　委託先に不正アクセス」）です。connect24hさんは、見出しにプレイドの「KARTE（カルテ）」と書いたほうがよい、と指摘しています。見出しの「委託先」だけだと、GO本体が侵入されたように読めてしまう、という趣旨です。\n\n[GOの公式発表](https://goinc.jp/news/info/2026/11/19/1ged4wbk8ug0heonnp2cm0/)（11/19発表、11/20追記）では、侵入を受けたのは外部のKARTEであり、GOのシステム自身が不正アクセスを受けたものではない、と明記しています。分かっている件数は次のとおりです。\n\n- いまのGO：ユーザーID 11,224件。社内で振った番号で、これだけでは個人は特定できない、としています。\n- すでにサービスを終えた旧「GO Dine」：ユーザーID 8,914件と、メールアドレス 6,640件。\n- 旧「JapanTaxi」：69人分の会社名、氏名、ユーザーID、メールアドレス。\n\n電話番号、生年月日、利用履歴、パスワード、決済情報は含まれていません。いまのところ、二次被害は確認されていないそうです。プレイドが不正アクセスを確認したのは11/13です。ポイントは、委託をやめたはずの旧サービスのデータが、KARTE側に残っていたことです。以前お伝えした「解約後の消し忘れ」が、ここでも出ています。",
         "tweetIds": [
           "2125122463361380428"
+        ]
+      },
+      {
+        "datetime": "2026-11-26T21:55:00+09:00",
+        "clock": "21:55",
+        "title": "",
+        "text": "**タイムラインから：KARTE の件で、みずほ銀行でも顧客の管理番号が最大3万3,224件もれていました。**\n[connect24hさん（@connect24h）の投稿](https://x.com/connect24h/status/2125931407784743194)（11/26 21:35、日本時間）が、[日経の記事](https://www.nikkei.com/article/DGXZQOUB266I30W6A121C2000000/)を引用し、「みずほはレガシーすぎて個人情報が漏洩していない、と言っていたのは誰だ。しかも同じプレイドだ」と突っ込んでいました。これまでお伝えしてきたプレイド「KARTE」への不正アクセスの続報です。\n\n[みずほ銀行の公式発表](https://www.mizuhobank.co.jp/release/pdf/20261126release_jp.pdf)（11/26）によると、もれたのは行内システム用のお客さま管理番号で、最大3万3,224件です。インターネットバンキングなどのログインに使う番号ではない、としています。現時点では、氏名、住所、電話番号、メールアドレス、口座の暗証番号、ログイン ID、パスワードは含まれておらず、お客さまの資産や取引への影響も確認されていない、とのことです。該当の番号はすでに無効にしており、対象のお客さまには順次連絡するそうです。\n\n経緯にも注目です。みずほは11/13にプレイドから不正アクセスの連絡を受け、その時点で提供された情報では「顧客情報は含まれていない」と確認していました。11/25にプレイドから新しい情報が届き、調査の結果、漏えいが確認された、としています。\n\n「勘定系が古いから安全」ではなく、お知らせやメール配信に使う外部の SaaS に識別子を渡した時点で、そこが入口になります。個人開発でも、分析やメール配信の SaaS に渡すデータは仮の ID にとどめ、契約を終えたら消えたかまで確認しておくのが大事そうです。みずほや関係会社を名乗る不審なメールや SMS にも注意が必要です。公式は、メールでパスワードやクレジットカード情報の入力を求めることはない、と呼びかけています。問い合わせは 0120-324-480（9時～17時、土日を含む、12/30まで）です（私の見方です）。",
+        "tweetIds": [
+          "2125931407784743194"
+        ]
+      },
+      {
+        "datetime": "2026-11-27T07:56:00+09:00",
+        "clock": "07:56",
+        "title": "",
+        "text": "**タイムラインから：KARTE の件で、各社が公表した件数を足すと約2億件になった、という集計です。**\n[connect24hさんの投稿](https://x.com/connect24h/status/2126083050400563557)（11/27 7:37、日本時間）が紹介していたのは、[NewsDigest の記事](https://newsdigest.jp/news/886affe9-5afc-4fb4-9d9c-f209affe335e)（11/26 19:04）です。JX通信社の集計で、11/26 18時時点の各社公表を足すと約2億件、約1週間で倍増した、と伝えています。これはプレイド自身が出した総数ではなく、各社発表の合算です。以前お伝えしたとおり、数え方や重なりがあるので、実人数はこのままではありません。記事が「ZOZO 最大約2,913万人」としているのも、すでにご紹介した ZOZOTOWN と WEAR などを足した数字です。connect24hさんは「どんどん被害範囲が拡大していて最悪のパターン」と評しています。",
+        "tweetIds": [
+          "2126083050400563557"
         ]
       }
     ]
@@ -11409,7 +11654,19 @@
     "text": "脆弱性発見者の利益って何？\n美味しい？",
     "images": [],
     "deepDive": "#FeliCaの脆弱性発見者が、IPAの届出制度について、対応の遅さと発見者への説明不足を批判しています\n[connect24hさんの投稿](https://x.com/connect24h/status/2120480757273731214)が引用した、[soltia48さんの投稿](https://x.com/soltia48/status/2120341015320231995)と[公開インタビュー](https://interview.team-mir.ai/interview/ipa-vuln-partnership-2026/session/f7b10055-798f-4616-abd8-eac6232b5974/report)です。\n\n[本人の説明](https://blog.nyaa.ws/2026/07/felica-%e3%81%ae%e8%84%86%e5%bc%b1%e6%80%a7%e5%85%ac%e8%a1%a8%e3%81%ab%e3%81%a4%e3%81%84%e3%81%a6/)では、2025年7月24日に届出を行い、開発元が8月上旬に技術的な確認をした一方、発見者への連絡は8月22日だったとしています。その後の報道と、関係4機関による非開示を求める声明についても、本人は不当だとして抗議しています。これは発見者側の主張として読む必要があります。\n\n本人が求めているのは、手続きをすべてなくすことより、処理の迅速化と運用の改善です。[IPAのガイドライン](https://www.ipa.go.jp/security/guide/vuln/ug65p90000019by0-att/partnership_guideline.pdf)では非開示を求めていますが、その依頼自体と、個別事情による法的責任の有無は別です。「依頼だから何を公開しても問題ない」とまでは言えません。\n\nここでの論点は、修正まで公開を待ってもらうなら、発見者に進捗・期限・判断理由をどこまで説明するかです。待つ側に状況が見えないと、制度への信頼が損なわれます。一方、早すぎる公開で利用者が危険にさらされる可能性もあり、双方の事情を扱う調整が必要です。発見者への見返りは報奨金だけでなく、応答の速さや貢献の扱いも含むと私は考えます。",
-    "followUps": [],
+    "followUps": [
+      {
+        "datetime": "2026-11-26T22:49:00+09:00",
+        "clock": "22:49",
+        "title": "",
+        "text": "**タイムラインから：FeliCa の脆弱性公表をめぐって、luminさんが当局の声明を皮肉っています。**\n[luminさん（@lumin）の投稿](https://x.com/lumin/status/2125943734064009601)（11/26 22:24、日本時間）です。プロフィールでは、新製品開発と情報セキュリティが専門で、経産省主催の CTF チャレンジ優勝とあります。\n\n引用していたのは、[soltia48さん（@soltia48）の11/1の投稿](https://x.com/soltia48/status/2116677960644301164)と、そこからリンクされた[発見者のブログ](https://blog.nyaa.ws/2026/07/felica-%e3%81%ae%e8%84%86%e5%bc%b1%e6%80%a7%e5%85%ac%e8%a1%a8%e3%81%ab%e3%81%a4%e3%81%84%e3%81%a6/)です。以前お伝えした、発見者が IPA の届出制度を批判した件の続きです。\n\nluminさんの指摘はこうです。経産省・IPA・JPCERT/CC・国家サイバー統括室の[2025年9月9日のお願い](https://www.ipa.go.jp/security/renkei/rk20250909.html)は、正当な理由がない限り、脆弱性関連情報を第三者に開示しないよう求める内容です。一方で FeliCa は所有兼利用の人が多いので、「あの声明が FeliCa の公表を指しているはずがない。IT 系の組織がそんな論理的なバグを出すはずない」という皮肉です。投稿では「国民の推計95%」と書いてありますが、その出典は確認できませんでした。声明本文に FeliCa の名前は出てきません。\n\n今日の午前11:58には、soltia48さんが[同じ投稿を再び引用して当局を挑発](https://x.com/soltia48/status/2125786360451879146)しており、その流れで luminさんが乗ったように見えます（私の推測です）。\n\n制度面では、[早期警戒パートナーシップのガイドライン](https://www.ipa.go.jp/security/guide/vuln/partnership_guide.html)が2026年10月1日に改訂されています。サイバー対処能力強化法を踏まえ、IPA から内閣府への通知対応などを説明する付録が新設され、署名機関に NICT も加わりました。\n\n以前お伝えしたとおり、ガイドラインの非開示の求めは「お願い」であり、依頼であることと法的責任の有無は別です。luminさんの皮肉の核は、「第三者に出すな」と「利用者に知らせる」が、利用者が非常に多い製品ではぶつかりうる、という点だと思います。自分のアプリでも、脆弱性の報告窓口、対応の期限、公表の方針（security.txt など）を先に決めておくと、後から揉めにくいと思います（私の見方です）。",
+        "tweetIds": [
+          "2125943734064009601",
+          "2116677960644301164",
+          "2125786360451879146"
+        ]
+      }
+    ],
     "link": "https://interview.team-mir.ai/interview/ipa-vuln-partnership-2026/session/f7b10055-798f-4616-abd8-eac6232b5974/report"
   },
   {
