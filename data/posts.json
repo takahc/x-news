@@ -1,5 +1,103 @@
 [
   {
+    "id": "2126145512063807557",
+    "cardId": "r38_314",
+    "datetime": "2026-11-27T11:52:00+09:00",
+    "postedAt": "2026-11-27T11:46:06+09:00",
+    "source": "timeline",
+    "title": "ブラックフライデーを前に、Museがよく使うコネクタの設定を促しています。",
+    "summary": "GOROmanさんが、a16z パートナーの Olivia Moore さんの投稿を引用。画面の並びは上から Walmart、Expedia、Shop Pay、Link by Stripe。Walmart 側の許可画面では、一定額を超える注文は毎回承認する設定があり、$0、$50、$100、Custom から選べる。Moore さんは、Walmart を先頭に出すことが Amazon が Muse を再び認めるかどうかの交渉に影響するかもしれない、と見ている。この画面以外で、Walmart 連携が米国で広く使えるようになったという公式発表は未確認。コネクタの並び順が、広告枠のように効いていく可能性はありそう（私の見方です）。既存の Amazon-Meta 交渉 r38_287 や muse1（Walmart 受け入れ・Amazon 締め出し）とは別件。",
+    "tweetId": "2126145512063807557",
+    "tweetIds": [
+      "2126145512063807557",
+      "2126021855589093775"
+    ],
+    "quoteTweetId": "2126021855589093775",
+    "url": "https://x.com/GOROman/status/2126145512063807557",
+    "author": {
+      "handle": "GOROman",
+      "name": "NULL=RUN"
+    },
+    "via": null,
+    "text": "Museの方向性が見えてきますね",
+    "images": [],
+    "deepDive": "#ブラックフライデーを前に、Museがよく使うコネクタの設定を促しています。\nタイムラインから、ブラックフライデーを前に、Museがよく使うコネクタの設定を促している、という話です。[GOROmanさん（@GOROman）の投稿](https://x.com/GOROman/status/2126145512063807557)（11/27 11:46、日本時間）は「Museの方向性が見えてきますね」と書いて、[Olivia Mooreさん（@omooretweets）の投稿](https://x.com/omooretweets/status/2126021855589093775)（同日 3:34、日本時間）を引用しています。Mooreさんはa16zのパートナーです。\n\n投稿の画面では、並びが上からWalmart、Expedia、Shop Pay、Link by Stripeです。Walmart側の許可画面まで進んでいて、「一定額を超える注文は毎回承認する」という設定があり、$0、$50、$100、Customから選べます。Mooreさんは、Walmartを先頭に出すことが、AmazonがMuseを再び認めるかどうかの交渉に影響するかもしれない、と見ています。この画面以外で、Walmart連携が米国で広く使えるようになった、という公式の発表は確認していません。コネクタの並び順が、広告枠のように効いていく可能性はありそうです（私の見方です）。",
+    "followUps": []
+  },
+  {
+    "id": "2126135472850411562",
+    "cardId": "r38_315",
+    "datetime": "2026-11-27T11:52:00+09:00",
+    "postedAt": "2026-11-27T11:06:13+09:00",
+    "source": "timeline",
+    "title": "三井ショッピングパークアプリの不正アクセスで、ポイント会員約311万9千人の情報が漏えいしたと発表されています。",
+    "summary": "connect24hさんが ITmedia の記事を紹介。一次情報は三井不動産と三井不動産商業マネジメントの11/26発表。11/18に不正アクセスを確認し、11/19に初報。26日の発表で人数が確定。漏れたのは会員番号、氏名、生年月日、住所、メールアドレス、電話番号、性別。クレジットカード情報とパスワードは含まれない。電話番号と性別は初報からの追加、と ITmedia。侵入経路と手段は特定したとするが中身は非公表。周辺システムへの影響や不正利用は現時点で確認されていない。対象者へは順次連絡し、アプリは安全性確認のうえ再開予定。公式も不審メールに注意するよう呼びかけている。",
+    "tweetId": "2126135472850411562",
+    "tweetIds": [
+      "2126135472850411562"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/connect24h/status/2126135472850411562",
+    "author": {
+      "handle": "connect24h",
+      "name": "connect24h"
+    },
+    "via": null,
+    "text": "三井ショッピングパークアプリがやられた模様\n\n三井ショッピングパーク、約312万会員の個人情報漏えい　アプリに不正アクセス - ITmedia NEWS [itmedia.co.jp/news/article/2…](https://www.itmedia.co.jp/news/article/2611/27/2000003510/)",
+    "images": [],
+    "deepDive": "#三井ショッピングパークアプリの不正アクセスで、ポイント会員約311万9千人の情報が漏えいしたと発表されています。\nタイムラインから、三井ショッピングパークアプリの不正アクセスで、ポイント会員約311万9千人の情報が漏えいしたと発表されています。[connect24hさんの投稿](https://x.com/connect24h/status/2126135472850411562)（11/27 11:06、日本時間）が紹介していたのは、[ITmediaの記事](https://www.itmedia.co.jp/news/article/2611/27/2000003510/)（同日 10:33、日本時間）で、一次情報は[三井不動産と三井不動産商業マネジメントの11/26の発表](https://www.mitsuifudosan.co.jp/corporate/news/2026/1126_03/download/sonota/20261126_03.pdf)です。\n\n11/18にアプリへの不正アクセスを確認し、11/19に会員情報の一部が漏えいしたと初報を出しています。26日の発表で人数が確定し、漏れたのは会員番号、氏名、生年月日、住所、メールアドレス、電話番号、性別です。クレジットカード情報とパスワードは含まれません。ITmediaによると、電話番号と性別は初報からの追加です。両社は侵入経路と手段を特定したとしていますが、中身は公表されていません。周辺システムへの影響や、アプリde支払い・ポイントの不正利用、商品の不正注文は、現時点では確認されていない、とあります。対象の方には順次メールなどで連絡し、アプリは安全性を確認したうえで再開する予定です。公式も、両社を装った不審なメールには注意するよう呼びかけています。",
+    "followUps": []
+  },
+  {
+    "id": "2126134367017980322",
+    "cardId": "r38_316",
+    "datetime": "2026-11-27T11:52:00+09:00",
+    "postedAt": "2026-11-27T11:01:49+09:00",
+    "source": "timeline",
+    "title": "文部科学省の「政府調達情報システム」のサーバーに不正アクセスがあり、情報が漏えいした可能性があります。",
+    "summary": "connect24hさんが 47NEWS を紹介。一次情報は文科省の11/25のお知らせ。検知は10月1日。漏えいした可能性があるのは、事業者の会社名および代表者氏名などが最大16万3,953件、メールアドレスが最大1,778件。読売新聞はメールアドレスは同省職員らのものと報じているが、公式のお知らせ自体には誰のメールかは書かれていない。通信は遮断済みで、不特定多数への公開や不正利用は現時点で確認されていない。個人情報保護委員会へは報告済み。原因は引き続き調査中。入札に参加した法人の情報がまとまって漏れた形なので、取引先を装ったメールに使われるおそれはある（私の推測です）。",
+    "tweetId": "2126134367017980322",
+    "tweetIds": [
+      "2126134367017980322"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/connect24h/status/2126134367017980322",
+    "author": {
+      "handle": "connect24h",
+      "name": "connect24h"
+    },
+    "via": null,
+    "text": "入札関連システム\n\n【速報】文科省に不正アクセス、16万件情報漏えいか #47NEWS [47news.jp/15292138.html?…](https://www.47news.jp/15292138.html?utm_source=twitter) @47news_ｏｆｆｉｃｉａｌより",
+    "images": [],
+    "deepDive": "#文部科学省の「政府調達情報システム」のサーバーに不正アクセスがあり、情報が漏えいした可能性があります。\nタイムラインから、文部科学省の「政府調達情報システム」のサーバーに不正アクセスがあり、情報が漏えいした可能性がある、と発表されています。[connect24hさんの投稿](https://x.com/connect24h/status/2126134367017980322)（11/27 11:01、日本時間）が紹介していたのは[47NEWS](https://www.47news.jp/15292138.html)（11/26 23:32、日本時間）で、一次情報は[文科省の11/25のお知らせ](https://www.mext.go.jp/a_menu/mext_00012.html)です。\n\n検知は10月1日です。漏えいした可能性があるのは、事業者の会社名および代表者氏名などが最大16万3,953件、メールアドレスが最大1,778件です。[読売新聞](https://www.yomiuri.co.jp/national/20261126-GYT1T00268/)（11/26 20:57、日本時間）は、メールアドレスは同省職員らのもの、と報じています。公式のお知らせ自体には、誰のメールアドレスかまでは書かれていません。通信はすでに遮断済みで、不特定多数への公開や不正利用は、現時点では確認されていない、としています。個人情報保護委員会へは報告済みです。原因は、引き続き調べている、とあります。入札に参加した法人の情報がまとまって漏れた形なので、取引先を装ったメールに使われるおそれはあります（私の推測です）。",
+    "followUps": []
+  },
+  {
+    "id": "2126127144212570325",
+    "cardId": "r38_313",
+    "datetime": "2026-11-27T10:54:00+09:00",
+    "postedAt": "2026-11-27T10:33:07+09:00",
+    "source": "timeline",
+    "title": "BitwardenがWindows 11とmacOSのパスキープロバイダーとして正式に統合されました。",
+    "summary": "connect24hさんが窓の杜の記事を引用。公式は11/18のブログ。OS標準のパスキー画面から、Bitwardenの保管庫に保存したパスキーを作り、使い、ウェブサイトへサインインできる。ブラウザー拡張は不要。デスクトップアプリが必要で、Windows 11では Microsoft Store 版に限られる。connect24hさんは「1PasswordがコケたのでBitwarden」と書いており、先日お伝えした1Passwordの事故を指していると思われる。OSが片方だけなら純正でも足りることが多く、OS混在や家族共有ならクロスプラットフォーム型、1社に頼り切りたくないなら KeePass など自分で管理する手もある（私の見方では）。既存の 1Password 事故 r38_278 とは別件。",
+    "tweetId": "2126127144212570325",
+    "tweetIds": [
+      "2126127144212570325",
+      "2125849557888385228"
+    ],
+    "quoteTweetId": "2125849557888385228",
+    "url": "https://x.com/connect24h/status/2126127144212570325",
+    "author": {
+      "handle": "connect24h",
+      "name": "connect24h"
+    },
+    "via": null,
+    "text": "1PaaswordがコケたのでBitwarden、攻めるなぁ。KeePassから移るか",
+    "images": [],
+    "deepDive": "#BitwardenがWindows 11とmacOSのパスキープロバイダーとして正式に統合されました。\nタイムラインから、BitwardenがWindows 11とmacOSのパスキープロバイダーとして正式に統合された、というニュースです。[connect24hさんの投稿](https://x.com/connect24h/status/2126127144212570325)（11/27 10:33、日本時間）が引用していたのは、[窓の杜](https://x.com/madonomori/status/2125849557888385228)（11/26 16:10、日本時間）で、記事は[こちら](https://forest.watch.impress.co.jp/docs/news/2159319.html)です。公式は[11/18のブログ](https://bitwarden.com/blog/integrate-bitwarden-native-passkeys/)です。OS標準のパスキー画面から、Bitwardenの保管庫に保存したパスキーを作り、使い、ウェブサイトへサインインできます。ブラウザー拡張は不要です。使うにはデスクトップアプリが必要で、Windows 11ではMicrosoft Store版に限られます。\n\nconnect24hさんは「1PasswordがコケたのでBitwarden、攻めるなぁ。KeePassから移るか」と書いています。先日お伝えした1Passwordの事故を指していると思われます。私の見方では、OSが片方だけなら純正のパスキー管理でも足りることが多く、OSが混在する、あるいは家族で共有したいなら、Bitwardenのようなクロスプラットフォーム型が向いています。1社に頼り切りたくないなら、KeePassなどを自分で管理する手もあります。",
+    "followUps": []
+  },
+  {
     "id": "2126091531262312491",
     "cardId": "r38_311",
     "datetime": "2026-11-27T08:52:00+09:00",
@@ -2182,7 +2280,20 @@
     "text": "問題も公開されたので、 ISUCON2026 当日に競技エージェントが書いた1位のコードを公開しました！明後日10/26のイベントで解説します\n[github.com/luvtechno/isuc…](https://github.com/luvtechno/isucon2026)\n\n作問チームの問題解説もあわせてご覧ください\n[isucon.net/archives/isuco…](https://isucon.net/archives/isucon2026-problem-review)\n\n#isucon",
     "images": [],
     "deepDive": "#ISUCON2026で優勝したAIエージェントが、当日書いたコードを公開しました。\n**タイムラインから：ISUCON2026で優勝したAIエージェントが、当日書いたコードを公開しました。**\n[kawasyさんの投稿](https://x.com/kawasy/status/2125158532656083166)（11/24 18:24、日本時間）です。リポジトリは [luvtechno/isucon2026](https://github.com/luvtechno/isucon2026)（MIT）です。準備と当日の経過はこれまでお伝えしたので、今回はコードから新しく分かったことだけ書きます。\n\n公開されているのは、競技時間中にエージェントが書いたコードと設定です。[README](https://github.com/luvtechno/isucon2026/blob/main/README.md)によると、当日のgitの履歴19コミットを、出してよい範囲に絞って作り直したそうです。最終スコアは625,857で1位でした。最後のベンチマークのログ（`tmp/result-f5.txt`）も入っています。\n\n最終的な構成は、READMEによると次のとおりです。4台それぞれのアプリが、データのコピーを自分のメモリに持っていて、読み取りはそこから返します。書き込みはすべて asia2 に送られ、asia2 が順番を決めてファイルに記録してから、同じ順番でほかの3台に配ります。アプリは PostgreSQL につながっていません。DBを読むのは、初期データからファイルを作る `packbuild` だけです。nginx も途中で経路から外して止めています。運営が用意した、IPをBANする別プロセスも、判定をアプリの中（`guard.go`）に移して止めています。画像の署名は、`sigbuild` で期限を決めて前もって計算し、表にしています。先ほどお伝えした作問解説のとおり、地域間の遅延などがある問題で、エージェントはDBを捨てて、書き込みを1か所で順番に並べる作りに組み直しています。\n\n投稿には「明後日10/26のイベント」とありますが、READMEでは[解説イベント](https://herp-inc.connpass.com/event/412593/)の日付は11/26です。投稿の書き間違いだと思われます。公開用の最新コミットにも「Co-Authored-By: Claude Opus 5.5」と付いていて、公開の作業もClaudeが手伝ったようです。\n\n`scripts/` には、エージェントが自分で書いたデプロイ・計測・分析のスクリプトがあります。`tools/browser.mjs` は、ログイン済みのブラウザにCDPでつないで競技ポータルを操作するスクリプトです。便利ではありますが、ログイン済みのブラウザをエージェントに触らせるのは、鍵を渡すのに近いです。競技のように、使い捨ての環境だからできたやり方だと思います（私の見方です）。",
-    "followUps": []
+    "followUps": [
+      {
+        "datetime": "2026-11-27T10:54:00+09:00",
+        "clock": "10:54",
+        "title": "",
+        "text": "タイムラインから、11/26のイベント「ISUCON2026 優勝AIエージェント、8時間分の生ログを眺める会」で投影した14枚の資料が公開されています。[kawasyさんの投稿](https://x.com/kawasy/status/2126127843180724535)（11/27 10:35、日本時間）です。資料は「[マルチリージョン構成におけるデータのインメモリ化](https://speakerdeck.com/kawasy/isucon2026-statemachine-replication-for-multi-region-in-memory-data-store-maruchi-rijon-kousei-niokeru-deta-no-in-memorika-e46becf2-a792-4df7-b614-7d36bae5e42e)」で、以前コードからお伝えしたインメモリ構成を、ステートマシン・レプリケーションとして解説しています。複数のサーバーが同じ操作を同じ順で適用して状態を揃える手法です。本来は耐障害性のためですが、今回の目的は、各地域が全データを手元に持って地域をまたがずに読むことです。順序を決める役は本来なら合意で選びますが、今回はasia2に固定しています。ヨーロッパとアメリカはRTT約100ms、同じアジアのasia1は0.4msです。要件は当日マニュアルの「書き込みが成功した後の読み取りには、その結果を反映します。リージョンをまたぐ場合も同じです。」です。\n\nasia2が通し番号と時刻を付け、各台とはTCP1本で配ります。replicaは手元の時計を見ません。書き込みは順序付けの時刻から60ms待って応答し、読み取りは手元が「いま−60ms」に追いつくまで待ちます。前提は「時計のずれ＋replicaの遅れ < 60ms」です。ログイン・ログアウト・BANなど5種類は待たず、手元で先に適用してasia2へ送るだけ、とあります。過去の画像183万枚・13GBはpackにして全台へ事前にコピーし、mmapで読みます。新しい画像の本体は作成元から取りに行き、Entryが運ぶのはID・長さ・CRC・作成元だけです。資料の当日の時系列は、10:35に設計、10:55に4台へデプロイ、12:45にepochの保存、13:50に経路の切断検知と繋ぎ直し、です。\n\n11/26の会場では、[Ryo Nagaokaさん（@ryo_nagaoka）](https://x.com/ryo_nagaoka/status/2125801031141663130)が、終盤は残りの試行回数を見積もって期待スコアが最大になるように収束していた、と書いています。[mtandaさん](https://x.com/mtanda/status/2125797646757773607)は、レプリケーションが行ベースではなくステートメントベースで、画像の取り方がCDNっぽく、待ち方がSpannerっぽい、と見ています。[setmet_dsさん（@Setmet_ds）](https://x.com/Setmet_ds/status/2125796669648511087)は「勝手に他人のQA読みに行くの怖っ」と書いています。既存の分散システムの手法を、エージェントが自分で当てはめた実例だと思います。長時間ランのログを時系列で振り返るやり方は、Copilot CLIの長い作業の振り返りにも使えそうです（私の見方です）。",
+        "tweetIds": [
+          "2126127843180724535",
+          "2125801031141663130",
+          "2125797646757773607",
+          "2125796669648511087"
+        ]
+      }
+    ]
   },
   {
     "id": "2125143063194661106",
@@ -2721,7 +2832,17 @@
     "text": "Issues now support detailed statuses beyond open or closed, helping teams see precise progress and next steps.\n• Statuses update automatically based on PR links & assignments\n\n[github.blog/changelog/2026…](https://github.blog/changelog/2026-11-23-issue-statuses-and-repository-boards-are-in-public-preview)",
     "images": [],
     "deepDive": "#GitHub Issuesに、細かいステータスが追加されました。エージェントをアサインすると、自動で「In progress」になります。\n**いいねから：GitHub Issuesに、細かいステータスが追加されました。エージェントをアサインすると、自動で「In progress」になります。**\n[GitHub Changelogの投稿](https://x.com/GHchangelog/status/2124971275974017387)（11/24 6:00、日本時間）です。[公式Changelog](https://github.blog/changelog/2026-11-23-issue-statuses-and-repository-boards-are-in-public-preview)によると、パブリックプレビューです。open / closed に加えて、Backlog、Todo、In progress、In review、Done、Not planned、Duplicate が使えます。ドラフトのPRを紐付けると In progress、レビュー可能になると In review、人をアサインすると Todo、エージェントをアサインすると In progress になります。REST、GraphQL、MCPサーバーからステータスを読み書きでき、Copilotのオートメーションのきっかけにもなります。リポジトリ単位のボード表示も加わりました。",
-    "followUps": []
+    "followUps": [
+      {
+        "datetime": "2026-11-26T09:48:00+09:00",
+        "clock": "09:48",
+        "title": "",
+        "text": "**いいねから：以前お伝えした GitHub の Issue ステータスとリポジトリボードについて、公式ドキュメントで補足がありました。**\n[Kesin11さん（@Kesin11）の投稿](https://x.com/Kesin11/status/2125742485511217456)（11/26 9:04、日本時間）です。表示名は Kenta.Kase さんで、「ほぼ単一リポジトリ版の Projects」と紹介しています。対象は、11/23の[公式 Changelog](https://github.blog/changelog/2026-11-23-issue-statuses-and-repository-boards-are-in-public-preview/)です。\n\n前回お伝えしたステータスの種類や、人・エージェント・PR に応じた自動更新に加えて、公式には次の点もあります。GitHub Projects 側に同じ名前のステータスがあれば、どちらかを変えると他方も更新されます。また、以前は Priority 以外の Issue fields を出すのに Issue type への対応が必要でしたが、今はサイドバーから種類を問わず追加できます（タイプにピン留めしたものは、これまでどおり最初から表示されます）。ボードは、保存済みビューをボード表示に切り替え、列やスイムレーン、表示項目を設定でき、ドラッグでステータスを更新できます。\n\n注意点として、[公式の Webhook とワークフローの説明](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/issue-status-webhooks-and-workflows)によると、機能が入る前からあった Issue は、誰かがステータスを付けるか、閉じる・再開する・自動更新がかかるまで `status` が `null` です。Done や Not planned、Duplicate を選ぶと Issue は閉じ、作業中のステータスに戻すと再開されます。[Actions のイベント説明](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows)では、`types` を付けていない `issues` トリガーは `status_changed` でも動き、作成・クローズ・再開と同時に余分に1回走る場合があると書かれています。パブリックプレビューなので、リポジトリによってはまだ使えないこともあります。\n\nエージェントに Issue を振ると進み具合がボードで見えやすい一方、既存の Actions が余計に動かないかと、Done 列への移動で Issue が閉じないかは、先に見ておくと安心だと思います（私の見方です）。",
+        "tweetIds": [
+          "2125742485511217456"
+        ]
+      }
+    ]
   },
   {
     "id": "2124902564256964999",
