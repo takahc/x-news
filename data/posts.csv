@@ -1,4 +1,41 @@
 id,datetime,source,author,url,text,summary
+2126270564939796622,2026-11-27T20:49:00+09:00,timeline,lumin,https://x.com/lumin/status/2126270564939796622,来週　Satoki 警報かな。,luminさんが Satokiさん（Ikotas Labs）の「もっとヤバい脆弱性が控えているのでご準備を」を引用して紹介。Ikotas Labs の11/27の発表によると、未修正のマルチコア Linux へ外から TCP で通信するだけで、ログインや認証なしにカーネルがパニックを起こしてホスト全体が止まる可能性がある。IPv4 と IPv6 の両方。同じ不具合は先に Hyunwoo Kim さんが「NoisyTCP」として公表済みで、Satokiさんは独立発見と認めている。直し方は安定版なら 6.12.117、6.18.63、7.3.4 以降。Debian Bookworm の 6.1.192-3 は修正済み。インターネットに直接出している VPS やコンテナのホストなら、直った版へ更新して再起動しておくのがよさそう。Satokiさんの「もっとヤバいのが控えている」は、中身はまだ出ていない。
+2126258762705142035,2026-11-27T19:47:00+09:00,timeline,koduki,https://x.com/koduki/status/2126258762705142035,なにこれ、ヤバい！,紅月さんが、光輝さん（株式会社Spacial代表）の投稿を「なにこれ、ヤバい！」と引用。声でモデルの操作やアプリの説明を頼める、という約3分8秒の動画付きデモ。渡していない情報も話しているので、見た目やファイル名からも判断しているようだ、とのこと。Gemini Live API には会話の途中で関数を呼ぶ仕組みがあり、このデモもそれに近い使い方だと思う（私の推測です）。XREAL AURA は Android XR を載せた有線のXRグラスで、日本の予約は11/2から、国内の発売開始予定は11/27。渡していない情報まで手がかりにして話すのは便利な半面、エージェントに見せる情報の範囲は設計の段階で決めておいた方がよさそう（私の見方です）。
+2126168368843784377,2026-11-27T17:52:00+09:00,likes,figurefig,https://x.com/figurefig/status/2126168368843784377,"@bunakino_game 絶対にP2S
+機能性能もだけど、オープン型はプリント中の有毒ガスが部屋に出続けるよ
+冬は窓全開も難しいし結局自前でエンクロージャー作る羽目になるので2機種を選択できる予算ある人は圧倒的にP2Sです
+フィラメント管理も楽ですよ
+AMSliteはフィラメントむき出しなので湿度対策手間かかりますよ",フィギュアンさん。ぶなきのこさんの「オープン型とカバー付きのどちらがよいか」という相談への返信。オープン型はプリント中のガスが部屋に出続け、冬は窓を全開にしにくいので、結局エンクロージャーを自作する羽目になる、とも書いている。P2S の公式仕様では密閉型で、活性炭に加えて VOC フィルターと粒子状物質フィルターを備え、標準ノズルは焼入スチール。A1 の公式仕様では推奨は PLA、PETG、TPU、PVA で、ABS や ASA などは非推奨。比較記事も、P2S のフィルターは換気の代わりにはならず、長時間の印刷では換気を勧める、と書いている。PLA 中心なら A1 でも足りるが、居室で ABS や ASA を使う予定があるなら P2S の方が無難そう（私の見方です）。
+2126088867354956117,2026-11-27T17:52:00+09:00,likes,ID_JAPAN_AO,https://x.com/ID_JAPAN_AO/status/2126088867354956117,"なにこれ。。。
+
+24KBの「LLM専用OS」が登場　全てアセンブリでLinuxを排し、llama.cppより最大54%高速 @TechnoEdgeJP [techno-edge.net/article/2026/1…](https://www.techno-edge.net/article/2026/11/26/5824.html)","通信の猫さん。TechnoEdge と PC Watch が紹介。一次情報は Alexey Fateev さん（GitHub: alesha-pro）の llm.asm（MIT）。Qwen3-0.6B を動かすベアメタルOS「asm-llm-os.elf」で本体は24,252バイト。ブートからドライバ、推論エンジンまで x86-64 の NASM だけで、C や Rust、libc は使っていない。ディスクドライバがなく、OS とモデルをメモリに載せるのでディスク0GBのVMでも起動する。作者計測では AMD EPYC 7642 上の Linux llama.cpp（Q8_0、CPUのみ）と比べ、4スレッドで+54%、16スレッドで+31%。3部作の第2弾。速くなった分の多くは、OSを消したことそのものより、計算の工夫とメモリの割り当て方によるものに見える（私の見方です）。"
+2125971063763017973,2026-11-27T17:52:00+09:00,likes,GAT_X105B_ST,https://x.com/GAT_X105B_ST/status/2125971063763017973,"え、まじかｗ
+フレキシスポット(flexispot)の99%OFFクーポンでまさかの注文出来てしまったんだがｗ
+
+ありがとうございました、今E7Pro使ってるので入れ替えます！
+@FlexiSpot_JP",うめてんさん。誤配布ではなく、公式プレスリリースにある数量限定クーポン。ブラックフライデー本番（11/27 0:00〜11/30 23:59）のうち11/27と11/30の2日間、各日0:00から利用人数限定で最大99%OFF（1注文あたり割引上限10万円）、先着順。投稿は解禁の12分後なので、直後に枠に入れた人だと思われる（私の推測です）。E7 Pro を入れ替える、と書いている。同じセールで昇降デスクフレーム E7 Pro は11/27が最大の32%OFF、11/30は25%OFF。
+2125859848965534161,2026-11-27T17:52:00+09:00,likes,CrazyShyyt,https://x.com/CrazyShyyt/status/2125859848965534161,"RAG is officially dead 🤯
+
+MIT built an AI that doesn't need RAG.
+
+It’s called MeMo, instead of storing knowledge in a database, you train a small, dedicated Memory model on your documents.
+
+At inference time, your main frontier LLM stays 100% frozen. No vector DB. No chunking. No weight access.
+
+It simply interrogates the Memory model in 3 quick turns, like a detective questioning a witness, to pull exact facts and synthesize the answer.
+
+The results are brutal:
+
+• NarrativeQA (long documents): 53.6% vs. RAG’s 23.2% (more than 2x better).
+• Noise test: Doubled the corpus with fake distractors. RAG tanked -6.2%. MeMo didn't flinch (+0.55%).
+
+And the sleeper advantage? It’s completely plug-and-play.
+
+Train the Memory model once. When they upgraded the main LLM from Qwen2.5-32B to Gemini 3.0 Flash with zero retraining, accuracy jumped +26.7% overnight.
+
+We spent 3 years trying to fix AI memory by building better search engines.
+
+It turns out, the answer was giving the model a second brain.",CrazyShyytさん。論文「MeMo: Memory as a Model」。投稿の「MITが作った」は正確ではなく、著者はシンガポール国立大学、A*STAR、東京大学、Singapore-MIT Alliance、MIT CSAIL など。新しい知識は専用の小さな Memory モデルに学習させ、本体の LLM の重みは触らない。ブログによると NarrativeQA で Gemini 3.0 Flash を本体にしたとき、比較した RAG 最良が23.21%、MeMo は53.58%。「RAG is officially dead」は煽りで、作者自身も学習コスト、更新コスト、容量の上限、英語 QA 中心の評価、遅延を限界として挙げている。推論時は元の文書を読まず重みの中の知識だけを使うので、出典を文書から直接示しにくい点も気になる（私の見方です）。
 2126218288439128190,2026-11-27T16:54:00+09:00,timeline,connect24h,https://x.com/connect24h/status/2126218288439128190,"AIもまたIdPとして権限管理、正しい流れ。
 AIが社員に代わってアプリを操作すると、初動で追う相手が増える。
 Okta Japanは11月19日、Okta for AI AgentsとAgent SSOで、PingやOracleなどXAA対応のIdPを使い続けられる標準サポートを発表した。

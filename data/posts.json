@@ -1,5 +1,174 @@
 [
   {
+    "id": "2126270564939796622",
+    "cardId": "r38_330",
+    "datetime": "2026-11-27T20:49:00+09:00",
+    "postedAt": "2026-11-27T20:03:01+09:00",
+    "source": "timeline",
+    "title": "LinuxカーネルのTCPの穴「TCPanic」（CVE-2026-99288）です。",
+    "summary": "luminさんが Satokiさん（Ikotas Labs）の「もっとヤバい脆弱性が控えているのでご準備を」を引用して紹介。Ikotas Labs の11/27の発表によると、未修正のマルチコア Linux へ外から TCP で通信するだけで、ログインや認証なしにカーネルがパニックを起こしてホスト全体が止まる可能性がある。IPv4 と IPv6 の両方。同じ不具合は先に Hyunwoo Kim さんが「NoisyTCP」として公表済みで、Satokiさんは独立発見と認めている。直し方は安定版なら 6.12.117、6.18.63、7.3.4 以降。Debian Bookworm の 6.1.192-3 は修正済み。インターネットに直接出している VPS やコンテナのホストなら、直った版へ更新して再起動しておくのがよさそう。Satokiさんの「もっとヤバいのが控えている」は、中身はまだ出ていない。",
+    "tweetId": "2126270564939796622",
+    "tweetIds": [
+      "2126270564939796622",
+      "2126249292440772947"
+    ],
+    "quoteTweetId": "2126249292440772947",
+    "url": "https://x.com/lumin/status/2126270564939796622",
+    "author": {
+      "handle": "lumin",
+      "name": "lumin"
+    },
+    "via": null,
+    "text": "来週　Satoki 警報かな。",
+    "images": [],
+    "deepDive": "#LinuxカーネルのTCPの穴「TCPanic」（CVE-2026-99288）です。\nタイムラインから。[luminさん（@lumin）の投稿](https://x.com/lumin/status/2126270564939796622)（11/27 20:03、日本時間）が「来週　Satoki 警報かな」と引用していたのは、[Satokiさん（@satoki00）の投稿](https://x.com/satoki00/status/2126249292440772947)（11/27 18:38、日本時間）の「もっとヤバい脆弱性が控えているのでご準備を」です。その少し前に出ていたのが、LinuxカーネルのTCPの穴「TCPanic」（CVE-2026-99288）です。\n\nSatokiさんはバグハンターで、株式会社Ikotas Labsの代表取締役、一般社団法人BunkyoWesternsの代表理事です。[Ikotas Labsの発表](https://ikotaslabs.com/news/2026-11-27)（11/27）によると、未修正のマルチコアLinuxへ、外からTCPで通信するだけで、ログインや認証なしにカーネルがパニックを起こしてホスト全体が止まる可能性がある、とのことです。インターネット越しでも成立し、コンテナ内のサービスが影響を受けると、同じホストのほかのサービスも止まります。IPv4とIPv6の両方に影響します。前段のロードバランサーがTCPをそこで終えて、後ろには別の接続を張る構成なら、外から届いたパケットを直接処理するのはロードバランサー側です。\n\n原因は、接続情報の検索中に、別の処理がその情報を解放して同じメモリを新しい要求に使い、取り違えてしまう競合です。修正は、取得した接続情報が管理表から外れていれば検索をやり直す、というものです（[linux-cve-announce](https://lists.openwall.net/linux-cve-announce/2026/11/10/4)）。同じ不具合は、先にHyunwoo Kimさん（@v4bel）が「NoisyTCP」として[11/16（日本時間）のoss-security](https://www.openwall.com/lists/oss-security/2026/11/15/2)で公表済みです。Satokiさんは[返信](https://x.com/satoki00/status/2126246974433407270)で「独立発見です」と認め、[別の返信](https://x.com/satoki00/status/2126242262531416283)では、報告する余裕がなかったので、Xにハッシュ値を投稿して発見を証明していた、と書いています。Linux 4.4から潜んでいた問題で、受信処理が複数のCPUに分かれている場合に成立しやすい、と発見者の報告にあります。\n\n直し方は、安定版なら 6.12.117、6.18.63、7.3.4 以降です。メインラインは 7.4-rc2 に入っています。Debian Bookworm のセキュリティ向け 6.1.192-3 は修正済みです（[Debian tracker](https://security-tracker.debian.org/tracker/CVE-2026-99288)）。インターネットに直接出しているVPSやコンテナのホストなら、カーネルの版を確かめて、直った版へ更新して再起動しておくのがよさそうです。Satokiさんの「もっとヤバいのが控えている」は、中身はまだ出ていません。",
+    "followUps": []
+  },
+  {
+    "id": "2126258762705142035",
+    "cardId": "r38_329",
+    "datetime": "2026-11-27T19:47:00+09:00",
+    "postedAt": "2026-11-27T19:16:07+09:00",
+    "source": "timeline",
+    "title": "XREAL AURA向けの3DGSビューワーに、Gemini Liveの音声エージェントを試験的に組み込んだデモです。",
+    "summary": "紅月さんが、光輝さん（株式会社Spacial代表）の投稿を「なにこれ、ヤバい！」と引用。声でモデルの操作やアプリの説明を頼める、という約3分8秒の動画付きデモ。渡していない情報も話しているので、見た目やファイル名からも判断しているようだ、とのこと。Gemini Live API には会話の途中で関数を呼ぶ仕組みがあり、このデモもそれに近い使い方だと思う（私の推測です）。XREAL AURA は Android XR を載せた有線のXRグラスで、日本の予約は11/2から、国内の発売開始予定は11/27。渡していない情報まで手がかりにして話すのは便利な半面、エージェントに見せる情報の範囲は設計の段階で決めておいた方がよさそう（私の見方です）。",
+    "tweetId": "2126258762705142035",
+    "tweetIds": [
+      "2126258762705142035",
+      "2126217266190852422"
+    ],
+    "quoteTweetId": "2126217266190852422",
+    "url": "https://x.com/koduki/status/2126258762705142035",
+    "author": {
+      "handle": "koduki",
+      "name": "紅月さん@技術書典19出すよ！"
+    },
+    "via": null,
+    "text": "なにこれ、ヤバい！",
+    "images": [],
+    "deepDive": "#XREAL AURA向けの3DGSビューワーに、Gemini Liveの音声エージェントを試験的に組み込んだデモです。\nタイムラインから。[紅月さん（@koduki）の投稿](https://x.com/koduki/status/2126258762705142035)（11/27 19:16、日本時間）が「なにこれ、ヤバい！」と引用していたのは、[光輝さん（@koukiwf）の投稿](https://x.com/koukiwf/status/2126217266190852422)（11/27 16:31、日本時間）です。光輝さんはVR/AR/MRの研究者で、株式会社Spacialの代表です。プロフィールでは、空中に出せる完全な3Dホログラムを目標にしている、とあります。\n\nXREAL AURA向けにリリース中の3D Gaussian Splatting（3DGS）ビューワーへ、Gemini Liveを使った音声エージェントを試験的に組み込んだ、というデモです。声でモデルの操作やアプリの説明を頼める、と書いています。約3分8秒の動画付きです。アプリやモデルの説明は渡してあるのに、渡していない情報も話しているので、見た目やファイル名からも判断しているようだ、とのことです。\n\n[続く投稿](https://x.com/koukiwf/status/2126219559908893080)（11/27 16:40、日本時間）では、かなり曖昧な指示でも理解して操作してくれることと、反応がとても速いことを挙げています。できない指示は、そもそも機能として登録していないから呼べない、とも書いていて、操作をあらかじめ登録して呼び出す形だと読めます。[Gemini Live API](https://aistudio.google.com/docs/live-api/tools)には、会話の途中で関数を呼ぶ仕組みがあり、このデモもそれに近い使い方だと思います（私の推測です）。一方で、話しすぎると開発者側のAPI代がかさむ、という問題もある、と本人が書いています。\n\nXREAL AURAは、Android XRを載せた有線のXRグラスです。[Googleの公式ブログ](https://blog.google/intl/ja-jp/products/devices-services/xrealaura/)（11/2）によると、この形では初めての製品で、視野角は70度、本体は95グラム未満、重い処理はケーブルでつないだ別体のコンピュートパック（Snapdragon Reality Elite）が担います。搭載のGeminiは、目の前の景色と画面の両方を理解する、と書かれています。日本の予約は11/2からで、[XREALの発表](https://prtimes.jp/main/html/rd/p/000000312.000070978.html)では、本日11/27が国内の発売開始予定です。\n\n渡していない情報まで手がかりにして話すのは便利な半面、エージェントに見せる情報の範囲は、設計の段階で決めておいた方がよさそうです（私の見方です）。",
+    "followUps": []
+  },
+  {
+    "id": "2126168368843784377",
+    "cardId": "r38_328",
+    "datetime": "2026-11-27T17:52:00+09:00",
+    "postedAt": "2026-11-27T13:16:56+09:00",
+    "source": "likes",
+    "title": "Bambu Labの機種選びで、予算があるなら密閉型のP2S、という意見です。",
+    "summary": "フィギュアンさん。ぶなきのこさんの「オープン型とカバー付きのどちらがよいか」という相談への返信。オープン型はプリント中のガスが部屋に出続け、冬は窓を全開にしにくいので、結局エンクロージャーを自作する羽目になる、とも書いている。P2S の公式仕様では密閉型で、活性炭に加えて VOC フィルターと粒子状物質フィルターを備え、標準ノズルは焼入スチール。A1 の公式仕様では推奨は PLA、PETG、TPU、PVA で、ABS や ASA などは非推奨。比較記事も、P2S のフィルターは換気の代わりにはならず、長時間の印刷では換気を勧める、と書いている。PLA 中心なら A1 でも足りるが、居室で ABS や ASA を使う予定があるなら P2S の方が無難そう（私の見方です）。",
+    "tweetId": "2126168368843784377",
+    "tweetIds": [
+      "2126168368843784377"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/figurefig/status/2126168368843784377",
+    "author": {
+      "handle": "figurefig",
+      "name": "フィギュアン"
+    },
+    "via": null,
+    "text": "@bunakino_game 絶対にP2S\n機能性能もだけど、オープン型はプリント中の有毒ガスが部屋に出続けるよ\n冬は窓全開も難しいし結局自前でエンクロージャー作る羽目になるので2機種を選択できる予算ある人は圧倒的にP2Sです\nフィラメント管理も楽ですよ\nAMSliteはフィラメントむき出しなので湿度対策手間かかりますよ",
+    "images": [
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HYGq3KCaQAAO1HM.jpg"
+      },
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HYGq3KKawAEFW2A.jpg"
+      }
+    ],
+    "deepDive": "#Bambu Labの機種選びで、予算があるなら密閉型のP2S、という意見です。\nいいねからもう一件、Bambu Labの機種選びです。[フィギュアンさん（@figurefig）の投稿](https://x.com/figurefig/status/2126168368843784377)（11/27 13:16、日本時間）は、[ぶなきのこさん](https://x.com/bunakino_game/status/2126085309897248845)の「オープン型とカバー付きのどちらがよいか」という相談への返信で、予算があるなら密閉型のP2S、という意見です。オープン型はプリント中のガスが部屋に出続け、冬は窓を全開にしにくいので、結局エンクロージャーを自作する羽目になる、とも書いています。AMS liteはフィラメントがむき出しで、湿気対策が手間、という指摘もあります。\n\n[P2Sの公式仕様](https://bambulab.com/ja-jp/p2s/specs)では、密閉型で、活性炭に加えてVOCフィルターと粒子状物質フィルターを備え、標準ノズルは焼入スチールです。対応フィラメントにはPA、PCや繊維強化材も含まれます。[A1の公式仕様](https://bambulab.com/en-us/a1/tech-specs)では、推奨はPLA、PETG、TPU、PVAで、ABS、ASA、PC、PAなどは非推奨です。公式のFAQも、A1は開放型で空気の浄化機能がなく、ABSやASAは刺激のあるガスが出るため、換気のよい場所で人から離さない限り使わないよう勧めています（[A1 FAQ](https://wiki.bambulab.com/en/a1/manual/faq)）。比較記事も、P2Sのフィルターは換気の代わりにはならない、長時間の印刷では換気を勧める、と書いています（[おうち3Dプリンター](https://ouchi-3d.com/bambu-p1s-vs-p2s/)）。PLA中心ならA1でも足りますが、居室でABSやASAを使う予定があるなら、P2Sの方が無難そうです（私の見方です）。",
+    "followUps": []
+  },
+  {
+    "id": "2126088867354956117",
+    "cardId": "r38_325",
+    "datetime": "2026-11-27T17:52:00+09:00",
+    "postedAt": "2026-11-27T08:01:01+09:00",
+    "source": "likes",
+    "title": "24KBの、言語モデルを動かすためだけのOSです。",
+    "summary": "通信の猫さん。TechnoEdge と PC Watch が紹介。一次情報は Alexey Fateev さん（GitHub: alesha-pro）の llm.asm（MIT）。Qwen3-0.6B を動かすベアメタルOS「asm-llm-os.elf」で本体は24,252バイト。ブートからドライバ、推論エンジンまで x86-64 の NASM だけで、C や Rust、libc は使っていない。ディスクドライバがなく、OS とモデルをメモリに載せるのでディスク0GBのVMでも起動する。作者計測では AMD EPYC 7642 上の Linux llama.cpp（Q8_0、CPUのみ）と比べ、4スレッドで+54%、16スレッドで+31%。3部作の第2弾。速くなった分の多くは、OSを消したことそのものより、計算の工夫とメモリの割り当て方によるものに見える（私の見方です）。",
+    "tweetId": "2126088867354956117",
+    "tweetIds": [
+      "2126088867354956117"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/ID_JAPAN_AO/status/2126088867354956117",
+    "author": {
+      "handle": "ID_JAPAN_AO",
+      "name": "通信の猫@ID=AO_VTuber"
+    },
+    "via": null,
+    "text": "なにこれ。。。\n\n24KBの「LLM専用OS」が登場　全てアセンブリでLinuxを排し、llama.cppより最大54%高速 @TechnoEdgeJP [techno-edge.net/article/2026/1…](https://www.techno-edge.net/article/2026/11/26/5824.html)",
+    "images": [],
+    "deepDive": "#24KBの、言語モデルを動かすためだけのOSです。\nいいねから、24KBの、言語モデルを動かすためだけのOSです。[通信の猫さん（@ID_JAPAN_AO）の投稿](https://x.com/ID_JAPAN_AO/status/2126088867354956117)（11/27 08:01、日本時間）が紹介していたのは、[TechnoEdge](https://www.techno-edge.net/article/2026/11/26/5824.html)と[PC Watch](https://pc.watch.impress.co.jp/docs/news/2159364.html)の記事で、一次情報はAlexey Fateevさん（GitHub: alesha-pro）の[llm.asm](https://github.com/alesha-pro/llm.asm/)（MITライセンス）です。\n\nQwen3-0.6Bを動かすためのベアメタルOS「asm-llm-os.elf」で、本体は24,252バイトです。ブートからドライバ、推論エンジンまで、すべてx86-64のNASMで書かれていて、CやRust、libcは使っていません。ドライバはシリアル（COM1）、VGAテキスト、PS/2キーボード、時間計測、ACPIによる電源オフだけです。ディスクドライバがなく、OSとモデルをメモリに載せるので、ディスク容量0GBの仮想マシンでも起動します。カーネル起動からプロンプト表示までは74〜94ミリ秒です。動かすにはAVX2、FMA、F16Cに対応したCPUと、モデル約614MiBに加えてKVキャッシュなど約449MiBのメモリが要ります。\n\n作者自身の計測では、AMD EPYC 7642上でLinuxのllama.cpp（Q8_0、CPUのみ）と比べ、4スレッドで78.89対51.08トークン/秒（+54%）、16スレッドで134.94対103.03（+31%）です。同じリポジトリのLinux版エンジン（14,712バイト）でもllama.cppより18〜36%速く、ベアメタル版は2MiBの巨大ページでメモリを割り当てたことで、さらに約10%伸びた、と作者は書いています。数字はすべて作者自身の計測です。\n\n3部作の第2弾で、Linux用の推論エンジンと、Mini-GPTをゼロから学習するプログラム（32,944バイト）もあります。実用というより、「推論に本当に必要なものはどれだけ小さいか」を見せた作品です。速くなった分の多くは、OSを消したことそのものより、計算の工夫とメモリの割り当て方によるものに見えます（私の見方です）。",
+    "followUps": []
+  },
+  {
+    "id": "2125971063763017973",
+    "cardId": "r38_327",
+    "datetime": "2026-11-27T17:52:00+09:00",
+    "postedAt": "2026-11-27T00:12:54+09:00",
+    "source": "likes",
+    "title": "FlexiSpotの「99%OFFクーポン」で本当に注文できた、という投稿です。",
+    "summary": "うめてんさん。誤配布ではなく、公式プレスリリースにある数量限定クーポン。ブラックフライデー本番（11/27 0:00〜11/30 23:59）のうち11/27と11/30の2日間、各日0:00から利用人数限定で最大99%OFF（1注文あたり割引上限10万円）、先着順。投稿は解禁の12分後なので、直後に枠に入れた人だと思われる（私の推測です）。E7 Pro を入れ替える、と書いている。同じセールで昇降デスクフレーム E7 Pro は11/27が最大の32%OFF、11/30は25%OFF。",
+    "tweetId": "2125971063763017973",
+    "tweetIds": [
+      "2125971063763017973"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/GAT_X105B_ST/status/2125971063763017973",
+    "author": {
+      "handle": "GAT_X105B_ST",
+      "name": "うめてん"
+    },
+    "via": null,
+    "text": "え、まじかｗ\nフレキシスポット(flexispot)の99%OFFクーポンでまさかの注文出来てしまったんだがｗ\n\nありがとうございました、今E7Pro使ってるので入れ替えます！\n@FlexiSpot_JP",
+    "images": [
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HYD3ZHDa0AA_Fyp.jpg"
+      },
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HYD3ZHHawAAVDDl.jpg"
+      }
+    ],
+    "deepDive": "#FlexiSpotの「99%OFFクーポン」で本当に注文できた、という投稿です。\nいいねから、FlexiSpotの「99%OFFクーポン」で本当に注文できた、という投稿です。[うめてんさん（@GAT_X105B_ST）の投稿](https://x.com/GAT_X105B_ST/status/2125971063763017973)（11/27 00:12、日本時間）です。誤配布ではなく、[公式のプレスリリース](https://prtimes.jp/main/html/rd/p/000000295.000027524.html)にある数量限定クーポンで、ブラックフライデー本番（11/27 0:00〜11/30 23:59）のうち11/27と11/30の2日間、各日0:00から利用人数限定で最大99%OFF（1注文あたり割引上限10万円）、先着順です。投稿は解禁の12分後なので、直後に枠に入れた人だと思われます（私の推測です）。E7 Proを使っていて、入れ替える、と書いています。同じセールで、昇降デスクフレーム E7 Proは11/27が最大の32%OFFで、日を追うごとに下がり、11/30は25%OFFです。",
+    "followUps": []
+  },
+  {
+    "id": "2125859848965534161",
+    "cardId": "r38_326",
+    "datetime": "2026-11-27T17:52:00+09:00",
+    "postedAt": "2026-11-26T16:50:59+09:00",
+    "source": "likes",
+    "title": "「RAGは死んだ」という煽りとともに紹介されていた、知識を小さな専用モデルに覚えさせる手法です。",
+    "summary": "CrazyShyytさん。論文「MeMo: Memory as a Model」。投稿の「MITが作った」は正確ではなく、著者はシンガポール国立大学、A*STAR、東京大学、Singapore-MIT Alliance、MIT CSAIL など。新しい知識は専用の小さな Memory モデルに学習させ、本体の LLM の重みは触らない。ブログによると NarrativeQA で Gemini 3.0 Flash を本体にしたとき、比較した RAG 最良が23.21%、MeMo は53.58%。「RAG is officially dead」は煽りで、作者自身も学習コスト、更新コスト、容量の上限、英語 QA 中心の評価、遅延を限界として挙げている。推論時は元の文書を読まず重みの中の知識だけを使うので、出典を文書から直接示しにくい点も気になる（私の見方です）。",
+    "tweetId": "2125859848965534161",
+    "tweetIds": [
+      "2125859848965534161"
+    ],
+    "quoteTweetId": null,
+    "url": "https://x.com/CrazyShyyt/status/2125859848965534161",
+    "author": {
+      "handle": "CrazyShyyt",
+      "name": "CrazyShyyt"
+    },
+    "via": null,
+    "text": "RAG is officially dead 🤯\n\nMIT built an AI that doesn't need RAG.\n\nIt’s called MeMo, instead of storing knowledge in a database, you train a small, dedicated Memory model on your documents.\n\nAt inference time, your main frontier LLM stays 100% frozen. No vector DB. No chunking. No weight access.\n\nIt simply interrogates the Memory model in 3 quick turns, like a detective questioning a witness, to pull exact facts and synthesize the answer.\n\nThe results are brutal:\n\n• NarrativeQA (long documents): 53.6% vs. RAG’s 23.2% (more than 2x better).\n• Noise test: Doubled the corpus with fake distractors. RAG tanked -6.2%. MeMo didn't flinch (+0.55%).\n\nAnd the sleeper advantage? It’s completely plug-and-play.\n\nTrain the Memory model once. When they upgraded the main LLM from Qwen2.5-32B to Gemini 3.0 Flash with zero retraining, accuracy jumped +26.7% overnight.\n\nWe spent 3 years trying to fix AI memory by building better search engines.\n\nIt turns out, the answer was giving the model a second brain.",
+    "images": [
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HYCSK4ab0AAZ67i.png"
+      }
+    ],
+    "deepDive": "#「RAGは死んだ」という煽りとともに紹介されていた、知識を小さな専用モデルに覚えさせる手法です。\nいいねから、「RAGは死んだ」という煽りとともに紹介されていた、知識を小さな専用モデルに覚えさせる手法です。[CrazyShyytさんの投稿](https://x.com/CrazyShyyt/status/2125859848965534161)（11/26 16:50、日本時間）が取り上げていたのは、論文「MeMo: Memory as a Model」（[arXiv](https://arxiv.org/abs/2605.15156)、[解説ブログ](https://arunv3rma.github.io/blogs/memo/)）です。投稿の「MITが作った」は正確ではありません。著者はシンガポール国立大学、A*STAR、東京大学、Singapore-MIT Alliance、MIT CSAILなどに所属しています。\n\n新しい知識は専用の小さなMemoryモデルに学習させ、本体のLLM（論文ではExecutive LLM）の重みは一切触りません。推論時は、本体がMemoryモデルに、確認、エンティティの特定、答え探し、という段階を踏んで問い合わせ、答えを組み立てます。学習データは、文書から合成したQ&A（事実、推論で分かる関係、文書をまたぐ手がかりなど）です。ブログによると、長い文書を扱うNarrativeQAでは、Gemini 3.0 Flashを本体にしたとき、比較したRAG手法の最良が23.21%、MeMoは53.58%でした。同じ条件で本体をQwen2.5-32B-InstructからGemini 3.0 Flashに差し替えると、Memoryモデルの再学習なしでNarrativeQAの精度が26.73ポイント上がった、としています。邪魔な文書を同数足すと、比較した検索ベースの手法はBrowseComp-Plusで6.22ポイント下がった一方、MeMoは0.55ポイント上がった、ともあります。\n\n「RAG is officially dead」は煽りです。作者自身も、NarrativeQAの実験ではデータ合成と学習に約72×8枚のH100時間かかること、文書が頻繁に変わると更新のたびにコストが積み上がること、Memoryモデルの容量には上限があること、評価が英語のQA中心で、問い合わせごとに対話が増えるぶん遅延もあることを、限界として挙げています。推論時は元の文書を読まず、重みの中の知識だけを使う作りなので、出典を文書から直接示しにくい、という点も気になります（私の見方です）。",
+    "followUps": []
+  },
+  {
     "id": "2126218288439128190",
     "cardId": "r38_324",
     "datetime": "2026-11-27T16:54:00+09:00",
@@ -574,6 +743,32 @@
         "tweetIds": [
           "2125958315016671615",
           "2125991307067965692"
+        ]
+      },
+      {
+        "datetime": "2026-11-27T18:51:00+09:00",
+        "clock": "18:51",
+        "title": "",
+        "text": "タイムラインから、昨日お伝えした「AIエージェントで未解決問題を解く」流れの続きです。[新野ユキさん（@yuki_arano）の投稿](https://x.com/yuki_arano/status/2126239129205920201)（11/27 17:58、日本時間）で、「タイムラインの、一定の数学的な基礎力のある人が、どんどん未解決問題を解き始めていて嬉しい」と書いています。添付は、その例として挙げた二つの投稿です。\n\n一つは、[YMさん（@ymiyazaki_）の投稿](https://x.com/ymiyazaki_/status/2126225477606236420)（11/27 17:03、日本時間）です。新野さんの投稿に触発され、本当かなと思いつつ試したら、朝食から昼食のあいだにしっかりした未解決問題が解けてしまった、とあります。[続く投稿](https://x.com/ymiyazaki_/status/2126225937301905453)では、ハーバード大学の数学の専門家が昨年に未解決と言っていたものを拡張して解けて、ぼうぜんとしている、とも書いています。問題の中身や検証の有無は、ここでは示されていません。\n\nもう一つは、[たっかーさん（@takka__Q）の投稿](https://x.com/takka__Q/status/2125755813847531718)（11/26 09:57、日本時間）です。コラッツ予想をAIで証明できないか試していたら別の方向に進み、マーラーのZ数の個数評価で、おそらく34年ぶりの進展になる論文ができた、として[プレプリント](https://zenodo.org/records/24538356)（11/25、著者名は Yusuke Takagi、[DOI](https://doi.org/10.5281/zenodo.24538356)）を公開しています。[GitHub](https://github.com/Yusuke-Takagi-Q/z-number-counting)もあります。[続く投稿](https://x.com/takka__Q/status/2125755913202196561)によると、1992年にFlattoが与えた上界 \\(O(X^{0.58496\\ldots})\\)（これは \\(\\log_2(3/2)\\) です）を \\(O(X^{0.57437\\ldots})\\) に改善し、一般化Z数にも使える節約を出した、とのことです。GPT-6.2 Sol、Astra、Opus 5.5で約1日かかった、と書いています。\n\nプレプリントを確認すると、Z数が存在しないこと自体を示したわけではありません。個数の上界の指数を、Flattoの値より小さくした、という主張です。本文では、\\(3/2\\) の場合の実効的な評価は \\(1.12\\times 10^{29} \\times X^{\\log_2(3/2)-2.222\\times 10^{-5}}\\) で、投稿の \\(0.57437\\) は、定数が「実効的でない」（計算で具体的に取れない）別の議論による、より大きい節約（\\(0.01059\\)）に対応します。査読や独立した検証は、これからだと思います。\n\n[別の投稿](https://x.com/yuki_arano/status/2126240463770513828)（11/27 18:03、日本時間）では、新野さんは「私の使っているツルハシは今度無料で配るので待ってて」とも書いています。昨日お伝えしたとおり、こうした主張は形式化されても、定義が元の問題と一致しているかや、査読は別に残ります。研究所だけでなく、個人でも同じレースに乗り始めている、というのが今回の新しい点です。",
+        "tweetIds": [
+          "2126239129205920201",
+          "2126225477606236420",
+          "2126225937301905453",
+          "2125755813847531718",
+          "2125755913202196561",
+          "2126240463770513828"
+        ]
+      },
+      {
+        "datetime": "2026-11-27T20:49:00+09:00",
+        "clock": "20:49",
+        "title": "",
+        "text": "同じ時間帯のタイムラインから、今日お伝えしている「個人がAIで未解決問題に取り組む」流れの続きです。[新野ユキさん（@yuki_arano）の投稿](https://x.com/yuki_arano/status/2126272472865767544)（11/27 20:10、日本時間）が「うちのAIスウォームに import しよう」と引用していたのは、[なゆえんじんさん（@nayuengin）の投稿](https://x.com/nayuengin/status/2126172916190732486)（11/27 13:35、日本時間）です。[続く投稿](https://x.com/yuki_arano/status/2126272932276277631)では、「最先端は数学の学術会議でも大学でもなく、XとGitHubになりつつある」と書いています。\n\n一つ目は、Maximilian Janischさん（@MaximilianJani）の確率論の結果です。[本人の投稿](https://x.com/MaximilianJani/status/2126033809342959752)（11/27 04:22、日本時間）によると、博士課程中の2022年に、共著者のThomas Lehéricyさんと立てた予想を、AIを使って証明した、とのことです。特殊な場合は、2003年にMartin Raičさんが出していて、23年間未解決だった、と書いています。ざっくり言うと、コイン投げのように平均へ集まるとき、結果が少し互いに影響し合っても、正規分布（ベルカーブ）への近似はどこまで正確か、という話です。予想と途中までの結果は2024年に出してあり（[論文](https://doi.org/10.1007/s10959-024-01363-z)）、GPT-6 AstraとClaude Fable 5.2は途中まで、GPT-6.2 Astraで初めて完全な証明が得られた、とのことです。\n\n[GitHub](https://github.com/maximilian-janisch/berry-esseen-dependency-graphs)には論文とLean 4の形式証明があります。検証手順によると、使われた公理はLeanの標準的な3つ（`propext`、`Classical.choice`、`Quot.sound`）だけで、カーネルによる再検査は39,553個の宣言に及んだ、とあります。arXiv版は来週前半に出る予定で、まだ査読前です。\n\n二つ目は、Charles O'Neillさんが[11本の論文をまとめて公開](https://charlesponeill.com/maths-releases/)した、というものです。そのうち1本が、これまで知られていなかった次数4792のアダマール行列の具体的な構成です。\\(HH^{\\mathrm{T}}=4792I\\) になることを、3つの独立したプログラムで確かめた、とあります。構成と探索はGPT-6.2 Astraが、Kishan Kumarさんの公開プログラムを出発点に行った、とのことです。ほかにも、リーマンゼータ関数の6次モーメントの下界の更新などがあり、一部はLeanで証明済みです。正しさの責任はO'Neillさん本人が負う、と明記されています。プログラムと証明書は[GitHub](https://github.com/charlieoneill11/maths-releases)にあります。\n\nアダマール行列の件は数値の検算までで、形式証明ではありません。Janischさんの方も、論文としては査読前なので、そこは割り引いて見るのがよさそうです（私の見方です）。",
+        "tweetIds": [
+          "2126272472865767544",
+          "2126172916190732486",
+          "2126272932276277631",
+          "2126033809342959752"
         ]
       }
     ]
